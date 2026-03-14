@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coreopinion.org/sitemap.xml
