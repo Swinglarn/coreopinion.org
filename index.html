@@ -392,15 +392,15 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
     <p class="page-sub">Longer tests give a more accurate political position. The more questions you answer, the more your results will surprise you.</p>
     <div class="mode-list">
       <div class="mode-card" onclick="startTest('short')">
-        <div class="mode-lhs"><span class="mode-pill pill-s">Short</span><div><div class="mode-name">Quick read</div><div class="mode-desc">8 topics, 2-axis compass</div></div></div>
+        <div class="mode-lhs"><span class="mode-pill pill-s">Short</span><div><div class="mode-name">Quick read</div><div class="mode-desc">10 topics, 2-axis compass</div></div></div>
         <div class="mode-rhs"><div class="mode-n">30</div><div class="mode-unit">questions</div><div class="mode-time">About 6 min</div></div>
       </div>
       <div class="mode-card" onclick="startTest('medium')">
-        <div class="mode-lhs"><span class="mode-pill pill-m">Medium</span><div><div class="mode-name">Full picture</div><div class="mode-desc">12 topics, 2-axis compass</div></div></div>
+        <div class="mode-lhs"><span class="mode-pill pill-m">Medium</span><div><div class="mode-name">Full picture</div><div class="mode-desc">18 topics, 2-axis compass</div></div></div>
         <div class="mode-rhs"><div class="mode-n">60</div><div class="mode-unit">questions</div><div class="mode-time">About 15 min</div></div>
       </div>
       <div class="mode-card" onclick="startTest('long')">
-        <div class="mode-lhs"><span class="mode-pill pill-l">Long</span><div><div class="mode-name">Deep dive</div><div class="mode-desc">16 topics, 3-axis compass</div></div></div>
+        <div class="mode-lhs"><span class="mode-pill pill-l">Long</span><div><div class="mode-name">Deep dive</div><div class="mode-desc">25 topics, 3-axis compass</div></div></div>
         <div class="mode-rhs"><div class="mode-n">100</div><div class="mode-unit">questions</div><div class="mode-time">About 25 min</div></div>
       </div>
     </div>
@@ -1102,6 +1102,126 @@ const BANK = [
          {t:'Only where there is clear and direct harm, not general embarrassment to governments.',e:0,g:0,n:0},
          {t:'Press freedom that only applies when the government approves is not press freedom.',e:0,g:-2,n:1}]}
 
+,
+// ── LABOUR & WORKERS' RIGHTS ─────────────────────────────────────────
+  {id:'lb1',node:'labour',nl:'Work and labour',pair:'lb-a',fr:'pro',type:'sc',
+   ctx:'A delivery company classifies 12,000 drivers as independent contractors rather than employees. They earn below minimum wage after costs, receive no sick pay, and can be deactivated without notice.',
+   q:'What should the law require?',
+   opts:[{t:'Reclassify them as employees with full rights. The contractor label is a legal fiction.',e:-2,g:2,n:-1},
+         {t:'A new category with some protections but not full employment rights.',e:-1,g:1,n:0},
+         {t:'Leave it to the market. Flexibility suits many workers and regulation raises prices.',e:2,g:-1,n:1}]},
+  {id:'lb2',node:'labour',nl:'Work and labour',pair:'lb-a',fr:'con',type:'s',
+   q:'Strong trade unions protect workers in theory but in practice they protect insiders, inflate costs, and make it harder for businesses to adapt to change.',
+   opts:[{t:'Agreed. Union power often serves members at the expense of everyone else.',e:2,g:-1,n:1},
+         {t:'Unions have real problems but the alternative of no collective bargaining is worse.',e:0,g:0,n:0},
+         {t:'Workers without collective power are structurally disadvantaged. Unions are necessary.',e:-2,g:1,n:-1}]},
+  {id:'lb3',node:'labour',nl:'Work and labour',pair:'lb-b',fr:'neutral',type:'sc',
+   ctx:'A country introduces a four-day working week for the same pay across the public sector. Productivity stays the same, sick days fall by 20%, and staff retention improves significantly.',
+   q:'Should this be extended to the private sector?',
+   opts:[{t:'Yes. The evidence supports it and the quality of life benefits are real.',e:-1,g:1,n:-1},
+         {t:'Offer incentives but do not mandate it. Different sectors have different needs.',e:0,g:0,n:0},
+         {t:'No. Businesses should decide their own working arrangements without state interference.',e:2,g:-1,n:1}]},
+  {id:'lb4',node:'labour',nl:'Work and labour',pair:'lb-b',fr:'con',type:'s',
+   q:'It should be straightforward for employers to dismiss underperforming workers. Overly strong dismissal protections harm productivity and discourage hiring.',
+   opts:[{t:'Agreed. Rigid dismissal laws protect the wrong people and hurt the economy.',e:2,g:-1,n:1},
+         {t:'Some balance is needed but current protections in many countries have gone too far.',e:0,g:0,n:0},
+         {t:'Workers need security too. Easy dismissal creates fear and reduces investment in jobs.',e:-2,g:1,n:-1}]},
+
+  // ── SCIENCE & TECHNOLOGY ─────────────────────────────────────────────
+  {id:'sc1',node:'science',nl:'Science and technology',pair:'sc-a',fr:'pro',type:'sc',
+   ctx:'A government agency concludes that a widely used pesticide poses a serious risk to bee populations and human health. The manufacturer disputes the findings. Banning it would cost the agricultural sector 4 billion per year.',
+   q:'What should happen?',
+   opts:[{t:'Ban it immediately. The precautionary principle must apply when health is at risk.',e:-1,g:2,n:-1},
+         {t:'Phase it out over five years with support for affected farmers.',e:0,g:1,n:0},
+         {t:'Wait for a second independent study. One contested finding should not destroy an industry.',e:1,g:-1,n:1}]},
+  {id:'sc2',node:'science',nl:'Science and technology',pair:'sc-a',fr:'con',type:'s',
+   q:'Artificial intelligence regulation is moving faster than understanding. Overregulating AI now will hand a decisive advantage to countries with fewer scruples.',
+   opts:[{t:'Agreed. Moving too fast on AI regulation is as dangerous as moving too slow.',e:1,g:-1,n:1},
+         {t:'The race-to-the-bottom logic can justify never regulating anything. It should be resisted.',e:0,g:0,n:0},
+         {t:'The risks of unregulated AI are severe enough to justify acting now, even imperfectly.',e:-1,g:2,n:-1}]},
+  {id:'sc3',node:'science',nl:'Science and technology',pair:'sc-b',fr:'neutral',type:'sc',
+   ctx:'A biotech company develops gene-editing technology that could eliminate hereditary diseases in embryos. Critics warn it is one step from designer babies.',
+   q:'Should this technology be permitted under strict regulation?',
+   opts:[{t:'Yes. Preventing suffering is a moral good and regulation can manage the risks.',e:-1,g:1,n:-1},
+         {t:'Only for life-threatening conditions, with an independent ethics board overseeing each case.',e:0,g:0,n:0},
+         {t:'No. The line between treatment and enhancement is too blurry to draw safely.',e:0,g:1,n:1}]},
+  {id:'sc4',node:'science',nl:'Science and technology',pair:'sc-b',fr:'con',type:'s',
+   q:'Social media companies bear real responsibility for the mental health damage their platforms cause, particularly in young people, and should face legal liability.',
+   opts:[{t:'Agreed. Designing addictive products that harm children cannot be consequence-free.',e:-1,g:2,n:-1},
+         {t:'They should face some accountability but legal liability for mental health is hard to establish.',e:0,g:0,n:0},
+         {t:'Parents and individuals must take responsibility. Blaming platforms is too convenient.',e:1,g:-1,n:1}]},
+
+  // ── CONSTITUTIONAL & CIVIC ────────────────────────────────────────────
+  {id:'cv1',node:'civic',nl:'Rights and constitution',pair:'cv-a',fr:'pro',type:'sc',
+   ctx:'A government passes emergency legislation giving the executive sweeping powers to act without parliamentary approval during a public health crisis. The measures are initially popular.',
+   q:'Is this acceptable?',
+   opts:[{t:'No. Emergency powers must still have parliamentary and judicial oversight.',e:0,g:-2,n:1},
+         {t:'Temporarily yes, but with a firm sunset clause and regular review.',e:0,g:0,n:0},
+         {t:'Yes. Governing by committee in a fast-moving crisis costs lives.',e:0,g:2,n:-1}]},
+  {id:'cv2',node:'civic',nl:'Rights and constitution',pair:'cv-a',fr:'con',type:'s',
+   q:'Constitutions and bills of rights are too rigid. Elected governments should have the freedom to respond to what citizens need today without being constrained by documents written centuries ago.',
+   opts:[{t:'Agreed. Constitutional entrenchment can frustrate democratic will.',e:0,g:1,n:-1},
+         {t:'Some flexibility is good but core rights need protection from shifting majorities.',e:0,g:0,n:0},
+         {t:'Constitutional limits on power exist precisely to protect minorities from majorities.',e:0,g:-2,n:1}]},
+  {id:'cv3',node:'civic',nl:'Rights and constitution',pair:'cv-b',fr:'neutral',type:'sc',
+   ctx:'A supreme court strikes down a popular law passed by an elected government, ruling it unconstitutional. 72% of the public supported the law.',
+   q:'Is the court right to overrule the democratic majority?',
+   opts:[{t:'Yes. Rights are not subject to majority vote. That is the point of a constitution.',e:0,g:-1,n:1},
+         {t:'The court has a legitimate role but should exercise restraint when majorities are strong.',e:0,g:0,n:0},
+         {t:'No. An unelected court overruling a clear democratic mandate is itself anti-democratic.',e:0,g:1,n:-1}]},
+  {id:'cv4',node:'civic',nl:'Rights and constitution',pair:'cv-b',fr:'con',type:'s',
+   q:'The right to protest, including disruptive protest that inconveniences the public, is an essential feature of a healthy democracy that governments must tolerate.',
+   opts:[{t:'Agreed. The right to disrupt is what gives protest its power.',e:0,g:-2,n:1},
+         {t:'The right to protest yes, but proportionate limits on disruption are reasonable.',e:0,g:0,n:0},
+         {t:'Protest that blocks roads and disrupts daily life goes beyond free expression into coercion.',e:0,g:2,n:-1}]},
+
+  // ── CULTURAL IDENTITY ────────────────────────────────────────────────
+  {id:'cu1',node:'culture',nl:'Culture and identity',pair:'cu-a',fr:'con',type:'sc',
+   ctx:'A government plans to remove several historical statues of figures who were involved in the slave trade. Polls show the country is evenly split on whether this is appropriate.',
+   q:'Should the statues come down?',
+   opts:[{t:'Yes. Public spaces should not celebrate people whose legacy includes mass human suffering.',e:0,g:0,n:-2},
+         {t:'Move them to museums with context rather than removing them entirely.',e:0,g:0,n:0},
+         {t:'No. Removing statues erases history rather than engaging with it.',e:0,g:0,n:2}]},
+  {id:'cu2',node:'culture',nl:'Culture and identity',pair:'cu-a',fr:'pro',type:'s',
+   q:'National identity is a positive force that gives people a sense of belonging and shared purpose. Multiculturalism has weakened this and society is paying the price.',
+   opts:[{t:'Agreed. A coherent national culture is worth protecting.',e:0,g:1,n:2},
+         {t:'National identity has value but it need not come at the expense of diversity.',e:0,g:0,n:0},
+         {t:'Multicultural societies are richer and more resilient, not weaker.',e:0,g:-1,n:-2}]},
+  {id:'cu3',node:'culture',nl:'Culture and identity',pair:'cu-b',fr:'neutral',type:'sc',
+   ctx:'A country's government introduces a points-based integration test for long-term residents, covering language, civic knowledge, and cultural norms. Failure means a visa is not renewed.',
+   q:'Is this a reasonable policy?',
+   opts:[{t:'Yes. Some expectation of integration is fair when living permanently in a country.',e:0,g:1,n:2},
+         {t:'Language and civics maybe, but testing cultural norms is too vague and subjective.',e:0,g:0,n:0},
+         {t:'No. Demanding cultural conformity as a condition of residency is exclusionary.',e:0,g:-1,n:-2}]},
+  {id:'cu4',node:'culture',nl:'Culture and identity',pair:'cu-b',fr:'pro',type:'s',
+   q:'Affirmative action policies that give preference to underrepresented groups in hiring and university admissions are a justified correction to structural inequality.',
+   opts:[{t:'Agreed. Structural disadvantage requires structural remedy.',e:-2,g:1,n:-1},
+         {t:'Targeted support yes, but preference based on group membership creates its own unfairness.',e:0,g:0,n:0},
+         {t:'Decisions about hiring and admissions should be based entirely on individual merit.',e:2,g:-1,n:1}]},
+
+  // ── MILITARY & DEFENCE ───────────────────────────────────────────────
+  {id:'ml1',node:'military',nl:'Defence and security',pair:'ml-a',fr:'pro',type:'sc',
+   ctx:'Your country spends 1.4% of GDP on defence, below the NATO target of 2%. Allies are pressing for an increase. Reaching 2% would cost the equivalent of closing 40 hospitals.',
+   q:'Should your country increase defence spending?',
+   opts:[{t:'Yes. Security is the foundation everything else is built on.',e:0,g:1,n:2},
+         {t:'Yes but gradually and with a clear strategic case, not just to meet an arbitrary target.',e:0,g:0,n:0},
+         {t:'No. Diplomatic and economic tools are more effective than military spending.',e:0,g:-1,n:-2}]},
+  {id:'ml2',node:'military',nl:'Defence and security',pair:'ml-a',fr:'con',type:'s',
+   q:'Military alliances like NATO increase the risk of being drawn into conflicts that have nothing to do with your country's actual security interests.',
+   opts:[{t:'Agreed. Entangling alliances have historically dragged nations into avoidable wars.',e:0,g:-1,n:2},
+         {t:'Alliances carry risks but also provide security guarantees that deter conflict.',e:0,g:0,n:0},
+         {t:'Collective security through alliances has kept the peace in Europe for 80 years.',e:0,g:1,n:-2}]},
+  {id:'ml3',node:'military',nl:'Defence and security',pair:'ml-b',fr:'neutral',type:'sc',
+   ctx:'A neighbouring country invades a smaller nation that is not a formal ally. Your country has the military capacity to intervene but would take casualties and bear significant cost.',
+   q:'Should your country intervene?',
+   opts:[{t:'Yes. Allowing unprovoked invasions to succeed invites further aggression.',e:0,g:1,n:-2},
+         {t:'Provide military and economic support but do not send troops.',e:0,g:0,n:0},
+         {t:'No. It is not our conflict and our citizens should not die for another country's borders.',e:0,g:-1,n:2}]},
+  {id:'ml4',node:'military',nl:'Defence and security',pair:'ml-b',fr:'con',type:'s',
+   q:'Nuclear deterrence remains the most effective guarantor of peace between major powers. Countries that give up nuclear weapons make themselves vulnerable.',
+   opts:[{t:'Agreed. Deterrence works and disarmament is naive given the current world.',e:0,g:1,n:2},
+         {t:'Deterrence has value but the long-term risks of proliferation are too high to ignore.',e:0,g:0,n:0},
+         {t:'Nuclear weapons represent a constant existential risk. Disarmament should be a priority.',e:0,g:-1,n:-2}]}
 ];
 
 // ============================================================
