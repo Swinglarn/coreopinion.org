@@ -31,12 +31,13 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 52px
 .nav-links a:hover{color:var(--ink)}
 .btn-nav{background:var(--ink);color:var(--white);border:none;padding:10px 22px;border-radius:4px;font-size:13px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:400;transition:opacity 0.15s;}
 .btn-nav:hover{opacity:0.82}
-.btn-primary{background:var(--ink);color:var(--white);border:none;padding:16px 36px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:400;letter-spacing:0.1px;transition:opacity 0.15s;display:inline-block;}
+.btn-primary{background:var(--ink);color:var(--white);border:none;padding:16px 36px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:400;transition:opacity 0.15s;display:inline-block;}
 .btn-primary:hover{opacity:0.84}
 .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--border);padding:15px 32px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
 .btn-secondary:hover{border-color:var(--ink)}
 .btn-ghost{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:10px 22px;border-radius:4px;font-size:13px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
 .btn-ghost:hover{border-color:var(--border);color:var(--ink)}
+.btn-ghost.active-btn{background:var(--ink);color:var(--white);border-color:var(--ink);}
 
 /* LANDING */
 .hero{max-width:980px;margin:0 auto;padding:96px 52px 80px;position:relative;overflow:hidden;}
@@ -85,12 +86,28 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 52px
 .prog-tip{position:absolute;right:-4px;top:-4px;width:9px;height:9px;background:var(--ink);border-radius:50%;}
 .prog-txt{font-size:12px;color:var(--ink-faint);white-space:nowrap;font-variant-numeric:tabular-nums;}
 .q-topic-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--navy);background:var(--navy-soft);padding:5px 14px;border-radius:20px;margin-bottom:22px;}
-.q-scenario-box{background:var(--white);border:1px solid var(--border-soft);border-left:2.5px solid var(--ink);padding:18px 22px;margin-bottom:28px;border-radius:0 6px 6px 0;}
-.q-scenario-tag{font-size:9px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;}
-.q-scenario-body{font-size:14px;color:var(--ink-soft);line-height:1.68;font-weight:300;}
+
+/* SCENARIO BOX — larger, more prominent */
+.q-scenario-box{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-left:3px solid var(--ink);
+  padding:22px 26px;
+  margin-bottom:32px;
+  border-radius:0 8px 8px 0;
+  box-shadow:0 2px 8px rgba(10,12,15,0.05);
+}
+.q-scenario-tag{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);margin-bottom:12px;}
+.q-scenario-body{
+  font-size:16px;
+  color:var(--ink-soft);
+  line-height:1.75;
+  font-weight:300;
+}
+
 .q-question{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500;color:var(--ink);line-height:1.38;margin-bottom:32px;letter-spacing:-0.4px;}
 .q-opts{display:flex;flex-direction:column;gap:11px}
-.q-opt{background:var(--white);border:1px solid var(--border-soft);border-radius:7px;padding:18px 22px;cursor:pointer;font-size:15px;color:var(--ink-muted);line-height:1.52;font-weight:300;transition:all 0.18s;position:relative;}
+.q-opt{background:var(--white);border:1px solid var(--border-soft);border-radius:7px;padding:18px 22px;cursor:pointer;font-size:15px;color:var(--ink-muted);line-height:1.55;font-weight:300;transition:all 0.18s;}
 .q-opt:hover{border-color:var(--border);color:var(--ink);background:var(--parchment);}
 .q-opt.picked{border-color:var(--ink);background:var(--ink);color:var(--white);}
 .q-foot{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--border-soft);}
@@ -102,7 +119,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 52px
 .demo-fields{display:flex;flex-direction:column;gap:22px;margin-bottom:40px;}
 .field-label{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:9px;}
 .field-label span{color:var(--ink-faint);font-weight:300;}
-select,input[type=text]{width:100%;padding:13px 16px;border:1px solid var(--border-soft);border-radius:6px;font-size:14px;font-family:'Outfit',sans-serif;font-weight:300;background:var(--white);color:var(--ink);appearance:none;-webkit-appearance:none;cursor:pointer;transition:border-color 0.15s;}
+select,input[type=text],input[type=email]{width:100%;padding:13px 16px;border:1px solid var(--border-soft);border-radius:6px;font-size:14px;font-family:'Outfit',sans-serif;font-weight:300;background:var(--white);color:var(--ink);appearance:none;-webkit-appearance:none;transition:border-color 0.15s;}
 select:focus,input:focus{outline:none;border-color:var(--navy);}
 .demo-note{font-size:13px;color:var(--ink-faint);font-weight:300;line-height:1.6;margin-bottom:32px;}
 
@@ -154,7 +171,7 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
 .v-red{background:var(--red-soft);color:var(--red)}
 .bias-rows{display:flex;flex-direction:column;gap:13px}
 .bias-row{display:flex;align-items:center;gap:12px}
-.b-label{font-size:13px;color:var(--ink);font-weight:300;min-width:120px;}
+.b-label{font-size:13px;color:var(--ink);font-weight:300;min-width:140px;}
 .b-track{flex:1;height:4px;background:var(--parchment-warm);border-radius:2px;overflow:hidden;}
 .b-fill{height:100%;border-radius:2px;transition:width 1s cubic-bezier(0.22,1,0.36,1)}
 .fill-g{background:#4ADE80}.fill-a{background:#FACC15}.fill-r{background:#F87171}
@@ -163,7 +180,16 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
 .insight-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;}
 .insight-body{font-size:15px;color:var(--ink-muted);line-height:1.8;font-weight:300;}
 .insight-body strong{font-weight:500;color:var(--ink)}
-.share-row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* SAVE & SHARE PANEL */
+.save-panel{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:32px;margin-bottom:28px;}
+.save-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;}
+.save-desc{font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.6;margin-bottom:20px;}
+.save-row{display:flex;gap:10px;align-items:center;}
+.save-row input{margin-bottom:0;flex:1;}
+.save-status{font-size:13px;color:var(--green);margin-top:10px;min-height:20px;}
+.share-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:0;}
+
 .tab-bar{border-bottom:1px solid var(--border-soft);display:flex;padding:0 52px;background:var(--white);position:sticky;top:68px;z-index:99;}
 .tab-btn{padding:16px 4px;margin-right:32px;font-size:13px;color:var(--ink-faint);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.15s;background:none;border-left:none;border-right:none;border-top:none;font-family:'Outfit',sans-serif;font-weight:300;}
 .tab-btn.on{color:var(--ink);border-bottom-color:var(--ink);font-weight:400;}
@@ -351,6 +377,7 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
     <button class="tab-btn on" onclick="switchTab('t-main',this)">Your results</button>
     <button class="tab-btn" onclick="switchTab('t-bias',this)">Bias breakdown</button>
   </div>
+
   <div id="t-main">
     <div class="results-shell">
       <div class="results-head">
@@ -369,10 +396,10 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
               <rect x="115" y="115" width="97" height="97" rx="3" fill="#FEF2F2" opacity="0.55"/>
               <line x1="111" y1="8" x2="111" y2="212" stroke="#DDD9D2" stroke-width="0.75"/>
               <line x1="8" y1="111" x2="212" y2="111" stroke="#DDD9D2" stroke-width="0.75"/>
-              <text x="11" y="21" font-size="9" fill="#B0B5BC" font-family="Outfit,sans-serif" font-weight="300">Auth left</text>
-              <text x="141" y="21" font-size="9" fill="#B0B5BC" font-family="Outfit,sans-serif" font-weight="300">Auth right</text>
-              <text x="11" y="210" font-size="9" fill="#B0B5BC" font-family="Outfit,sans-serif" font-weight="300">Lib left</text>
-              <text x="143" y="210" font-size="9" fill="#B0B5BC" font-family="Outfit,sans-serif" font-weight="300">Lib right</text>
+              <text x="11" y="21" font-size="9" fill="#B0B5BC" font-family="Outfit,sans-serif">Auth left</text>
+              <text x="141" y="21" font-size="9" fill="#B0B5BC" font-family="Outfit,sans-serif">Auth right</text>
+              <text x="11" y="210" font-size="9" fill="#B0B5BC" font-family="Outfit,sans-serif">Lib left</text>
+              <text x="143" y="210" font-size="9" fill="#B0B5BC" font-family="Outfit,sans-serif">Lib right</text>
               <circle id="cdot-ring" cx="111" cy="111" r="16" fill="#0A0C0F" opacity="0.1"/>
               <circle id="cdot" cx="111" cy="111" r="8" fill="#0A0C0F"/>
             </svg>
@@ -398,17 +425,31 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
           <div class="bias-rows" id="r-bias-rows"></div>
         </div>
       </div>
+
       <div class="insight-panel">
         <div class="insight-title">What this means</div>
         <div class="insight-body" id="r-insight"></div>
       </div>
-      <div class="share-row">
-        <button class="btn-ghost">Share results</button>
-        <button class="btn-ghost">Copy image</button>
-        <button class="btn-primary" onclick="goTo('page-mode')" style="padding:11px 26px;font-size:14px">Take a longer test</button>
+
+      <!-- SAVE & SHARE -->
+      <div class="save-panel">
+        <div class="save-title">Save or share your results</div>
+        <div class="save-desc">Enter your email and we will send you a link to these results. Your email is never shared or used for anything else.</div>
+        <div class="save-row">
+          <input type="email" id="save-email" placeholder="your@email.com">
+          <button class="btn-primary" onclick="saveResults()" style="padding:13px 24px;font-size:14px;white-space:nowrap">Send results</button>
+        </div>
+        <div class="save-status" id="save-status"></div>
+        <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border-soft)">
+          <div class="share-row">
+            <button class="btn-ghost" onclick="copyLink()">Copy results link</button>
+            <button class="btn-ghost" onclick="goTo('page-mode')">Take a longer test</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
   <div id="t-bias" style="display:none">
     <div class="results-shell">
       <div style="margin-bottom:36px">
@@ -422,333 +463,279 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
 
 <script>
 // ============================================================
-//  QUESTION BANK
-//  pair: string — links two questions testing the same belief
-//  fr: 'pro'|'con'|'neutral' — emotional framing direction
-//  n: node_position for bias detection (-1 / 0 / +1)
-//  e: economic axis, g: governance axis
-//
-//  STEALTH PAIRING DESIGN RULES:
-//  - Same pair uses completely different scenario types
-//  - One is abstract principle, one is concrete scenario
-//  - One uses statistics/policy, one uses a human story
-//  - One is direct, one is indirect
-//  - No shared vocabulary between pairs
-//  - The shuffler ensures pairs are at least 10 positions apart
+// SUPABASE CONFIG
+// ============================================================
+const SB_URL = 'https://rttomfnfyjjssdqfzkaj.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
+
+async function sbInsert(table, data) {
+  const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SB_KEY,
+      'Authorization': `Bearer ${SB_KEY}`,
+      'Prefer': 'return=representation'
+    },
+    body: JSON.stringify(data)
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+// ============================================================
+// QUESTION BANK
 // ============================================================
 const BANK = [
-
-  // ── REPRODUCTIVE RIGHTS ──────────────────────────────────
-  // Pair A: abstract principle (pro-choice framing) vs personal scenario (pro-life framing)
-  {id:'rr1', node:'repro', nl:'Policy and rights', pair:'rr-a', fr:'pro',
-   type:'s', q:'Decisions about pregnancy belong to the individual, not the state. No government has the authority to override that.',
+  // REPRODUCTIVE RIGHTS
+  {id:'rr1',node:'repro',nl:'Policy and rights',pair:'rr-a',fr:'pro',type:'s',
+   q:'Decisions about pregnancy belong to the individual, not the state. No government has the authority to override that.',
    opts:[{t:'Completely. This is a matter of personal sovereignty.',e:0,g:-1,n:-1},
          {t:'Generally true, but some situations call for reasonable limits.',e:0,g:0,n:0},
          {t:'The state has a legitimate role in protecting life at all stages.',e:0,g:1,n:1}]},
-
-  {id:'rr2', node:'repro', nl:'Policy and rights', pair:'rr-a', fr:'con',
-   type:'sc', ctx:'A hospital ethics board is reviewing a request. A woman is 14 weeks pregnant. The pregnancy is unplanned but both mother and fetus are healthy. She is requesting a termination.',
+  {id:'rr2',node:'repro',nl:'Policy and rights',pair:'rr-a',fr:'con',type:'sc',
+   ctx:'A hospital ethics board is reviewing a case. A woman is 14 weeks pregnant. Both mother and fetus are healthy. She is requesting a termination.',
    q:'Should the hospital be legally obligated to comply?',
    opts:[{t:'No. Medical professionals should have the right to decline.',e:0,g:1,n:1},
          {t:'Yes, with a referral pathway to another provider at minimum.',e:0,g:0,n:0},
-         {t:'Yes, unconditionally. Denial causes harm.',e:0,g:-1,n:-1}]},
-
-  // Pair B: triplet (subtle — same belief, three very different angles)
-  {id:'rr3', node:'repro', nl:'Policy and rights', pair:'rr-b', fr:'neutral',
-   type:'sc', ctx:'A 16-year-old discovers she is pregnant after a brief relationship. Her parents do not know. She lives in a country where parental consent is required for a termination.',
+         {t:'Yes, unconditionally. Denial of care causes harm.',e:0,g:-1,n:-1}]},
+  {id:'rr3',node:'repro',nl:'Policy and rights',pair:'rr-b',fr:'neutral',type:'sc',
+   ctx:'A 16-year-old discovers she is pregnant. Her parents do not know. The country she lives in requires parental consent for a termination.',
    q:'Should parental consent be a legal requirement in this situation?',
    opts:[{t:'No. A 16-year-old should be able to make this decision herself.',e:0,g:-1,n:-1},
          {t:'Parental guidance is important at 16, but not a hard legal block.',e:0,g:0,n:0},
          {t:'Yes. Parents have a right and a duty to be involved.',e:0,g:1,n:1}]},
-
-  {id:'rr4', node:'repro', nl:'Policy and rights', pair:'rr-b', fr:'con',
-   type:'s', q:'Societies that place no legal limits on abortion have crossed a moral line.',
-   opts:[{t:'Agreed. At some point, the law should step in.',e:0,g:1,n:1},
+  {id:'rr4',node:'repro',nl:'Policy and rights',pair:'rr-b',fr:'con',type:'s',
+   q:'Societies that place no legal limits on abortion have crossed a moral line that most citizens, if they reflect honestly, would not endorse.',
+   opts:[{t:'Agreed. At some point the law should step in.',e:0,g:1,n:1},
          {t:'I understand the concern, but I trust individuals to make responsible decisions.',e:0,g:0,n:0},
          {t:'Disagree. Restricting access causes far more harm than it prevents.',e:0,g:-1,n:-1}]},
 
-  // ── GUN POLICY ───────────────────────────────────────────
-  // Pair A: emotional (aftermath of violence) vs abstract right
-  {id:'gp1', node:'guns', nl:'Public safety', pair:'gp-a', fr:'pro',
-   type:'sc', ctx:'A 14-year-old is shot and killed in her classroom. The weapon used was legally purchased by her classmate\'s parent. The gun had not been stored securely.',
+  // GUN POLICY
+  {id:'gp1',node:'guns',nl:'Public safety',pair:'gp-a',fr:'pro',type:'sc',
+   ctx:'A 14-year-old is shot and killed in her classroom. The weapon was legally purchased by her classmate\'s parent and had not been stored securely.',
    q:'What legal change would you most support in response?',
    opts:[{t:'Mandatory safe storage laws with criminal penalties for non-compliance.',e:0,g:1,n:-1},
          {t:'Education campaigns and incentives for safe storage, but not criminal law.',e:0,g:0,n:0},
          {t:'None. This is a parenting failure, not a regulatory one.',e:0,g:-1,n:1}]},
-
-  {id:'gp2', node:'guns', nl:'Public safety', pair:'gp-a', fr:'con',
-   type:'s', q:'A citizen who has passed background checks and committed no crime should not have to justify their choice to own a firearm to any government body.',
+  {id:'gp2',node:'guns',nl:'Public safety',pair:'gp-a',fr:'con',type:'s',
+   q:'A citizen who has passed background checks and committed no crime should not have to justify their choice to own a firearm to any government body.',
    opts:[{t:'Agreed. Ownership is a right, not a privilege requiring justification.',e:0,g:-2,n:1},
          {t:'Passing checks is already justification enough. That system works.',e:0,g:0,n:0},
-         {t:'Even law-abiding citizens should expect some accountability when owning a weapon.',e:0,g:1,n:-1}]},
-
-  // Pair B: statistical/policy vs societal values
-  {id:'gp3', node:'guns', nl:'Public safety', pair:'gp-b', fr:'neutral',
-   type:'sc', ctx:'Two countries with similar demographics have very different gun ownership rates. Country A has 30 guns per 100 people and 2.9 gun deaths per 100,000. Country B has 4 guns per 100 people and 0.9 gun deaths per 100,000.',
+         {t:'Even law-abiding citizens should expect accountability when owning a weapon.',e:0,g:1,n:-1}]},
+  {id:'gp3',node:'guns',nl:'Public safety',pair:'gp-b',fr:'neutral',type:'sc',
+   ctx:'Two countries with similar demographics have very different gun ownership rates. Country A has 30 guns per 100 people and 2.9 gun deaths per 100,000. Country B has 4 guns per 100 people and 0.9 gun deaths per 100,000.',
    q:'What is the most honest conclusion to draw?',
    opts:[{t:'Higher ownership correlates with more deaths. Policy should reflect this.',e:0,g:1,n:-1},
          {t:'Correlation is not causation. Culture and enforcement matter more than numbers.',e:0,g:0,n:0},
          {t:'The data is too narrow to draw firm conclusions about firearms policy.',e:0,g:-1,n:1}]},
-
-  {id:'gp4', node:'guns', nl:'Public safety', pair:'gp-b', fr:'con',
-   type:'s', q:'The purpose of the right to bear arms is not hunting or sport — it is to ensure citizens can resist tyranny if the state turns against them.',
+  {id:'gp4',node:'guns',nl:'Public safety',pair:'gp-b',fr:'con',type:'s',
+   q:'The purpose of the right to bear arms is not hunting or sport. It is to ensure citizens can resist tyranny if the state ever turns against them.',
    opts:[{t:'Agreed. An armed citizenry is the last check on government overreach.',e:0,g:-2,n:1},
          {t:'That reasoning made sense historically. It is harder to apply today.',e:0,g:0,n:0},
-         {t:'This logic is dangerous. It justifies private arsenals in the name of resistance.',e:0,g:1,n:-1}]},
+         {t:'This logic is dangerous and justifies private arsenals in the name of resistance.',e:0,g:1,n:-1}]},
 
-  // ── IMMIGRATION ──────────────────────────────────────────
-  // Pair A: economic pressure scenario vs cultural values statement
-  {id:'im1', node:'immig', nl:'Borders and movement', pair:'im-a', fr:'con',
-   type:'sc', ctx:'A mid-sized city has seen its population grow by 28% in seven years, almost entirely from immigration. Schools are overcrowded, GP waiting times have doubled, and average rent has increased by 55%.',
+  // IMMIGRATION
+  {id:'im1',node:'immig',nl:'Borders and movement',pair:'im-a',fr:'con',type:'sc',
+   ctx:'A mid-sized city has seen its population grow by 28% in seven years, mostly from immigration. Schools are overcrowded, GP waiting times have doubled, and average rent has risen by 55%.',
    q:'Who bears responsibility for this situation?',
    opts:[{t:'Primarily the government for allowing intake that infrastructure could not absorb.',e:0,g:1,n:1},
-         {t:'Shared responsibility — both intake policy and underinvestment in services.',e:0,g:0,n:0},
+         {t:'Shared responsibility between intake policy and underinvestment in services.',e:0,g:0,n:0},
          {t:'The infrastructure shortfall, not immigration. These are separate issues.',e:-1,g:0,n:-1}]},
-
-  {id:'im2', node:'immig', nl:'Borders and movement', pair:'im-a', fr:'pro',
-   type:'s', q:'Every generation of immigration has faced the same warnings about cultural strain and economic burden — and every generation has proved those warnings wrong.',
-   opts:[{t:'History supports this. Fear of immigrants is a recurring and unfounded panic.',e:1,g:-1,n:-1},
+  {id:'im2',node:'immig',nl:'Borders and movement',pair:'im-a',fr:'pro',type:'s',
+   q:'Every generation of immigration has faced the same warnings about cultural strain and economic burden, and every generation has proved those warnings wrong.',
+   opts:[{t:'History supports this. Fear of newcomers is a recurring and unfounded panic.',e:1,g:-1,n:-1},
          {t:'History is mixed. Some concerns have been legitimate, others not.',e:0,g:0,n:0},
          {t:'The scale and speed of recent immigration is genuinely different from anything before.',e:0,g:1,n:1}]},
-
-  // Pair B: refugee case vs sovereignty statement
-  {id:'im3', node:'immig', nl:'Borders and movement', pair:'im-b', fr:'pro',
-   type:'sc', ctx:'A family of five has fled a civil war. They have been living in a refugee camp for three years. An application to resettle in your country has been pending for two years with no decision.',
+  {id:'im3',node:'immig',nl:'Borders and movement',pair:'im-b',fr:'pro',type:'sc',
+   ctx:'A family of five has fled a civil war. They have been living in a refugee camp for three years. A resettlement application to your country has been pending for two years with no decision.',
    q:'What should your country\'s obligation be?',
    opts:[{t:'Process and resettle them. Two years waiting is unacceptable.',e:0,g:-1,n:-1},
          {t:'Continue processing under normal procedures. The timeline is unfortunate but standard.',e:0,g:0,n:0},
          {t:'Our country cannot be responsible for every displaced family in the world.',e:0,g:1,n:1}]},
-
-  {id:'im4', node:'immig', nl:'Borders and movement', pair:'im-b', fr:'con',
-   type:'s', q:'A country has the absolute right to determine who enters its borders. This right overrides any international convention or obligation.',
+  {id:'im4',node:'immig',nl:'Borders and movement',pair:'im-b',fr:'con',type:'s',
+   q:'A country has the absolute right to determine who enters its borders. This right overrides any international convention or obligation.',
    opts:[{t:'Agreed. Sovereignty is non-negotiable.',e:0,g:2,n:1},
          {t:'Countries have sovereignty but also legitimate international responsibilities.',e:0,g:0,n:0},
-         {t:'International law and humanitarian obligations exist precisely to limit this view.',e:0,g:-1,n:-1}]},
+         {t:'International law exists precisely to limit this view.',e:0,g:-1,n:-1}]},
 
-  // ── TAXATION ─────────────────────────────────────────────
-  // Pair A: headline inequality framing vs meritocracy framing
-  {id:'tx1', node:'tax', nl:'Wealth and redistribution', pair:'tx-a', fr:'pro',
-   type:'sc', ctx:'The 10 wealthiest individuals in your country now collectively hold more assets than the bottom 50% of the population combined.',
+  // TAXATION
+  {id:'tx1',node:'tax',nl:'Wealth and redistribution',pair:'tx-a',fr:'pro',type:'sc',
+   ctx:'The 10 wealthiest individuals in your country now collectively hold more assets than the bottom 50% of the population combined.',
    q:'What does this tell us?',
-   opts:[{t:'The economy is structurally broken. Tax policy must correct it.',e:-2,g:1,n:-1},
-         {t:'Inequality is high, but wealth at the top does not necessarily mean poverty at the bottom.',e:0,g:0,n:0},
+   opts:[{t:'The economy is structurally broken. Tax policy must correct this.',e:-2,g:1,n:-1},
+         {t:'Inequality is high, but wealth at the top does not mean poverty at the bottom.',e:0,g:0,n:0},
          {t:'Wealth concentration is a feature of free markets, not a problem to solve.',e:2,g:-1,n:1}]},
-
-  {id:'tx2', node:'tax', nl:'Wealth and redistribution', pair:'tx-a', fr:'con',
-   type:'s', q:'Someone who started with nothing and built a business that employs 500 people has earned their wealth. Taking more than half of it in tax is a punishment for success.',
+  {id:'tx2',node:'tax',nl:'Wealth and redistribution',pair:'tx-a',fr:'con',type:'s',
+   q:'Someone who started with nothing and built a business employing 500 people has earned their wealth. Taking more than half of it in tax is a punishment for success.',
    opts:[{t:'Agreed. High taxes penalise exactly the kind of people a society needs.',e:2,g:-1,n:1},
-         {t:'They earned it, but those employees and the infrastructure they use also contributed.',e:0,g:0,n:0},
+         {t:'They earned it, but their employees and public infrastructure also contributed.',e:0,g:0,n:0},
          {t:'The ability to build that business depended on public systems others funded.',e:-2,g:1,n:-1}]},
-
-  // Pair B: public services funding vs economic freedom
-  {id:'tx3', node:'tax', nl:'Wealth and redistribution', pair:'tx-b', fr:'pro',
-   type:'sc', ctx:'A country is choosing between two budget approaches. Option A raises taxes on incomes above 200k to fund free university and dental care for all. Option B keeps taxes flat and allows those services to remain private.',
+  {id:'tx3',node:'tax',nl:'Wealth and redistribution',pair:'tx-b',fr:'pro',type:'sc',
+   ctx:'A country is choosing between two budget approaches. Option A raises taxes on incomes above 200k to fund free university and dental care for all. Option B keeps taxes flat and leaves those services private.',
    q:'Which do you support?',
    opts:[{t:'Option A. Universal access to education and healthcare is worth higher taxes.',e:-2,g:1,n:-1},
-         {t:'A compromise — some expansion of public services but not full universality.',e:0,g:0,n:0},
+         {t:'A compromise, some expansion of public services but not full universality.',e:0,g:0,n:0},
          {t:'Option B. People should fund their own education and healthcare.',e:2,g:-1,n:1}]},
-
-  {id:'tx4', node:'tax', nl:'Wealth and redistribution', pair:'tx-b', fr:'con',
-   type:'s', q:'When tax rates become high enough, they stop raising revenue and start shrinking the economy. Governments that ignore this eventually run out of money.',
-   opts:[{t:'Agreed. The Laffer curve is real and policymakers should respect it.',e:2,g:-1,n:1},
-         {t:'There is a kernel of truth, but this is often used to justify low taxes at any level.',e:0,g:0,n:0},
+  {id:'tx4',node:'tax',nl:'Wealth and redistribution',pair:'tx-b',fr:'con',type:'s',
+   q:'When tax rates become high enough they stop raising revenue and start shrinking the economy. Governments that ignore this eventually run out of money.',
+   opts:[{t:'Agreed. The relationship between high taxes and economic damage is real.',e:2,g:-1,n:1},
+         {t:'There is a kernel of truth, but this argument is often used to justify low taxes at any level.',e:0,g:0,n:0},
          {t:'This argument has been repeatedly used to cut taxes on the wealthy with little evidence.',e:-2,g:1,n:-1}]},
 
-  // ── HEALTHCARE ───────────────────────────────────────────
-  // Pair A: individual story (pro-public) vs systemic argument (pro-private)
-  {id:'hc1', node:'health', nl:'Healthcare systems', pair:'hc-a', fr:'pro',
-   type:'sc', ctx:'A 38-year-old woman with two children develops a serious illness. She cannot work during treatment. Without insurance — which she lost when she was laid off — her family faces financial ruin.',
+  // HEALTHCARE
+  {id:'hc1',node:'health',nl:'Healthcare systems',pair:'hc-a',fr:'pro',type:'sc',
+   ctx:'A 38-year-old woman with two children develops a serious illness. She cannot work during treatment. Without insurance, which she lost when she was laid off, her family faces financial ruin.',
    q:'What does this situation say about the healthcare system?',
    opts:[{t:'It exposes a fundamental flaw. Healthcare must be decoupled from employment.',e:-2,g:1,n:-1},
-         {t:'It\'s a gap in the safety net that should be addressed, but not by nationalising healthcare.',e:0,g:0,n:0},
+         {t:'It is a gap in the safety net that should be addressed without nationalising healthcare.',e:0,g:0,n:0},
          {t:'This is a personal insurance failure, not a systemic one.',e:2,g:-1,n:1}]},
-
-  {id:'hc2', node:'health', nl:'Healthcare systems', pair:'hc-a', fr:'con',
-   type:'s', q:'Countries with dominant state-run healthcare systems struggle with waiting lists, rationing, and a lack of innovation that private competition would solve.',
+  {id:'hc2',node:'health',nl:'Healthcare systems',pair:'hc-a',fr:'con',type:'s',
+   q:'Countries with dominant state-run healthcare systems consistently struggle with waiting lists, rationing, and a lack of the innovation that private competition delivers.',
    opts:[{t:'Accurate. The NHS-style model has serious structural problems.',e:2,g:-1,n:1},
-         {t:'Some truth to it, but the US model shows private healthcare has its own severe failures.',e:0,g:0,n:0},
+         {t:'Some truth, but the US model shows private healthcare has its own severe failures.',e:0,g:0,n:0},
          {t:'The data does not support this. Universal systems consistently outperform on outcomes.',e:-2,g:1,n:-1}]},
-
-  // Pair B: access vs responsibility
-  {id:'hc3', node:'health', nl:'Healthcare systems', pair:'hc-b', fr:'neutral',
-   type:'sc', ctx:'A government is debating whether to add dental care to its public health coverage. Currently, poor dental health disproportionately affects low-income citizens who cannot afford private treatment.',
+  {id:'hc3',node:'health',nl:'Healthcare systems',pair:'hc-b',fr:'neutral',type:'sc',
+   ctx:'A government is debating whether to add dental care to public health coverage. Poor dental health disproportionately affects low-income citizens who cannot afford private treatment.',
    q:'Should dental care be publicly funded?',
    opts:[{t:'Yes. Dental health is health. The current two-tier system is indefensible.',e:-1,g:1,n:-1},
-         {t:'For basic dental care, yes. Complex procedures can remain private.',e:0,g:0,n:0},
+         {t:'Basic dental care yes. Complex procedures can remain private.',e:0,g:0,n:0},
          {t:'No. There are higher priorities for public healthcare budgets.',e:1,g:-1,n:1}]},
-
-  {id:'hc4', node:'health', nl:'Healthcare systems', pair:'hc-b', fr:'con',
-   type:'s', q:'People who make consistently unhealthy choices — smoking, poor diet, no exercise — should contribute more to the healthcare costs their decisions create.',
+  {id:'hc4',node:'health',nl:'Healthcare systems',pair:'hc-b',fr:'con',type:'s',
+   q:'People who make consistently unhealthy choices, such as smoking or a poor diet, should contribute more to the healthcare costs their decisions create.',
    opts:[{t:'Agreed. Personal responsibility should come with a financial dimension.',e:1,g:1,n:1},
          {t:'I understand the logic, but determining blame for illness is deeply complex.',e:0,g:0,n:0},
-         {t:'No. Healthcare should not be conditional. We do not choose all the factors that affect our health.',e:-1,g:-1,n:-1}]},
+         {t:'No. Healthcare should not be conditional. We do not choose all the factors affecting our health.',e:-1,g:-1,n:-1}]},
 
-  // ── CLIMATE ──────────────────────────────────────────────
-  // Pair A: economic disruption scenario vs long-range consequence
-  {id:'cl1', node:'climate', nl:'Environment and industry', pair:'cl-a', fr:'con',
-   type:'sc', ctx:'A proposed carbon pricing scheme would reduce national emissions by 18% over ten years. Independent economists project it would also raise household energy costs by an average of 340 per year, hitting lower-income families hardest.',
+  // CLIMATE
+  {id:'cl1',node:'climate',nl:'Environment and industry',pair:'cl-a',fr:'con',type:'sc',
+   ctx:'A proposed carbon pricing scheme would reduce national emissions by 18% over ten years. Economists project it would also raise household energy costs by an average of 340 per year, hitting lower-income families hardest.',
    q:'Should the policy go ahead?',
    opts:[{t:'No. A climate policy that hurts the poorest people is not a just one.',e:1,g:-1,n:1},
          {t:'Yes, with targeted rebates to offset the cost for lower-income households.',e:-1,g:1,n:-1},
          {t:'Yes. The cost of inaction on climate dwarfs a temporary energy cost increase.',e:-2,g:2,n:-1}]},
-
-  {id:'cl2', node:'climate', nl:'Environment and industry', pair:'cl-a', fr:'pro',
-   type:'sc', ctx:'Scientists have confirmed that without significant emissions reductions, coastal cities including Miami, Jakarta, and Amsterdam will face regular catastrophic flooding by 2080.',
+  {id:'cl2',node:'climate',nl:'Environment and industry',pair:'cl-a',fr:'pro',type:'sc',
+   ctx:'Scientists have confirmed that without significant emissions reductions, coastal cities including Miami, Jakarta, and Amsterdam will face regular catastrophic flooding by 2080.',
    q:'What level of government action is justified today?',
    opts:[{t:'Emergency-level action. The timeline demands radical policy.',e:-2,g:2,n:-1},
-         {t:'Serious but measured action. Strong targets with market-compatible tools.',e:-1,g:0,n:0},
+         {t:'Serious but measured action with strong targets and market-compatible tools.',e:-1,g:0,n:0},
          {t:'Incremental change. Economies cannot be restructured by political fiat.',e:1,g:-1,n:1}]},
-
-  // Pair B: jobs vs environment + international cooperation
-  {id:'cl3', node:'climate', nl:'Environment and industry', pair:'cl-b', fr:'con',
-   type:'sc', ctx:'A coal region employing 12,000 people is told the plant will close under new environmental law. The government offers retraining programmes. Most workers are over 45 with highly specific skills.',
+  {id:'cl3',node:'climate',nl:'Environment and industry',pair:'cl-b',fr:'con',type:'sc',
+   ctx:'A coal region employing 12,000 people is told the plant will close under new environmental law. The government offers retraining programmes. Most workers are over 45 with highly specific skills.',
    q:'What is the right response?',
-   opts:[{t:'The law should apply. Job transition programmes should be well-funded.',e:-1,g:1,n:-1},
-         {t:'A phased closure over 10 years to allow genuine transition.',e:0,g:0,n:0},
+   opts:[{t:'The law should apply. Job transition programmes should be well funded.',e:-1,g:1,n:-1},
+         {t:'A phased closure over ten years to allow genuine transition.',e:0,g:0,n:0},
          {t:'The plant should stay open. We cannot sacrifice communities for targets.',e:1,g:-1,n:1}]},
-
-  {id:'cl4', node:'climate', nl:'Environment and industry', pair:'cl-b', fr:'pro',
-   type:'s', q:'Climate change is a global emergency. Countries that refuse to commit to international emissions targets are acting in bad faith toward future generations.',
+  {id:'cl4',node:'climate',nl:'Environment and industry',pair:'cl-b',fr:'pro',type:'s',
+   q:'Climate change is a global emergency. Countries that refuse to commit to international emissions targets are acting in bad faith toward future generations.',
    opts:[{t:'Agreed. International commitment on climate is a moral obligation.',e:-1,g:1,n:-1},
          {t:'The framing is right but national sovereignty complicates binding international targets.',e:0,g:0,n:0},
          {t:'Countries should set their own path. International agreements are often ineffective anyway.',e:1,g:-1,n:1}]},
 
-  // ── CRIMINAL JUSTICE ─────────────────────────────────────
-  // Pair A: recidivism data vs punishment framing
-  {id:'cj1', node:'justice', nl:'Crime and punishment', pair:'cj-a', fr:'pro',
-   type:'sc', ctx:'A review of 200,000 criminal cases finds that people sentenced to rehabilitation programmes reoffend 42% less often than those given equivalent prison sentences, and at 30% of the cost.',
+  // CRIMINAL JUSTICE
+  {id:'cj1',node:'justice',nl:'Crime and punishment',pair:'cj-a',fr:'pro',type:'sc',
+   ctx:'A study of 200,000 criminal cases finds that people sentenced to rehabilitation programmes reoffend 42% less often than those given equivalent prison sentences, at 30% of the cost.',
    q:'What should policymakers do with this data?',
    opts:[{t:'Shift resources toward rehabilitation. The evidence is clear.',e:-1,g:-1,n:-1},
          {t:'Use it to inform policy, but prisons serve purposes beyond reoffending rates.',e:0,g:0,n:0},
-         {t:'Prison is about justice and punishment, not just recidivism statistics.',e:0,g:2,n:1}]},
-
-  {id:'cj2', node:'justice', nl:'Crime and punishment', pair:'cj-a', fr:'con',
-   type:'sc', ctx:'A man convicted of a serious violent assault is released after 18 months. His probation officer rates him as low risk. Six months later, he commits a similar assault.',
+         {t:'Prison is about justice and public protection, not just recidivism statistics.',e:0,g:2,n:1}]},
+  {id:'cj2',node:'justice',nl:'Crime and punishment',pair:'cj-a',fr:'con',type:'sc',
+   ctx:'A man convicted of serious violent assault is released after 18 months. His probation officer rates him as low risk. Six months later he commits a similar assault.',
    q:'What does this case suggest about criminal justice?',
    opts:[{t:'That early release was wrong. Sentences should prioritise public protection.',e:0,g:2,n:1},
          {t:'That prediction is imperfect. One case does not indict the whole system.',e:0,g:0,n:0},
          {t:'That better support post-release could have prevented it. The failure was in aftercare.',e:0,g:-1,n:-1}]},
-
-  // Pair B: drug policy + policing
-  {id:'cj3', node:'justice', nl:'Crime and punishment', pair:'cj-b', fr:'neutral',
-   type:'sc', ctx:'Portugal decriminalised personal use of all drugs in 2001 and redirected enforcement budgets into treatment. Drug-related deaths fell by 80% over the following decade.',
+  {id:'cj3',node:'justice',nl:'Crime and punishment',pair:'cj-b',fr:'neutral',type:'sc',
+   ctx:'Portugal decriminalised personal use of all drugs in 2001 and redirected enforcement budgets into treatment. Drug-related deaths fell by 80% over the following decade.',
    q:'Should other countries adopt a similar model?',
    opts:[{t:'Yes. The evidence from Portugal is compelling.',e:-1,g:-1,n:-1},
          {t:'Possibly, but Portugal is a small country. Scale and culture matter.',e:0,g:0,n:0},
          {t:'No. Decriminalisation sends the wrong message about drug use.',e:0,g:1,n:1}]},
-
-  {id:'cj4', node:'justice', nl:'Crime and punishment', pair:'cj-b', fr:'con',
-   type:'s', q:'Police should be empowered to stop and question individuals in high-crime areas without requiring prior suspicion of a specific crime.',
+  {id:'cj4',node:'justice',nl:'Crime and punishment',pair:'cj-b',fr:'con',type:'s',
+   q:'Police should be empowered to stop and question individuals in high-crime areas without requiring prior suspicion of a specific crime.',
    opts:[{t:'Agreed. Proactive policing saves lives in communities most affected by crime.',e:0,g:2,n:1},
          {t:'Only with strong safeguards and community oversight to prevent abuse.',e:0,g:0,n:0},
          {t:'No. This is a recipe for harassment and destroys trust between police and communities.',e:0,g:-2,n:-1}]},
 
-  // ── FREE SPEECH ──────────────────────────────────────────
-  // Pair A: platform power vs government overreach
-  {id:'sp1', node:'speech', nl:'Expression and limits', pair:'sp-a', fr:'pro',
-   type:'sc', ctx:'Research shows that conspiracy theories about election fraud, spread primarily by three accounts on one platform, contributed to a 19-point drop in voter trust in a recent election.',
+  // FREE SPEECH
+  {id:'sp1',node:'speech',nl:'Expression and limits',pair:'sp-a',fr:'pro',type:'sc',
+   ctx:'Research shows that conspiracy theories about election fraud, spread by three accounts on one platform, contributed to a 19-point drop in voter trust in a recent election.',
    q:'What should happen to those accounts?',
    opts:[{t:'Banned. Platforms must act when content demonstrably harms democracy.',e:0,g:1,n:-1},
-         {t:'Labelled and restricted, but not banned. Context and correction, not deletion.',e:0,g:0,n:0},
+         {t:'Labelled and restricted but not banned. Context and correction, not deletion.',e:0,g:0,n:0},
          {t:'Left alone. Restricting political speech is more dangerous than the speech itself.',e:0,g:-2,n:1}]},
-
-  {id:'sp2', node:'speech', nl:'Expression and limits', pair:'sp-a', fr:'con',
-   type:'sc', ctx:'A government passes a law requiring platforms to remove content classified as "harmful misinformation" within 24 hours or face large fines. An independent regulator will define what counts.',
+  {id:'sp2',node:'speech',nl:'Expression and limits',pair:'sp-a',fr:'con',type:'sc',
+   ctx:'A government passes a law requiring platforms to remove content classified as harmful misinformation within 24 hours or face large fines. An independent regulator will define what counts.',
    q:'Do you support this law?',
    opts:[{t:'No. Giving any government body the power to define misinformation is dangerous.',e:0,g:-2,n:1},
-         {t:'In principle, yes — but only with strong judicial oversight and narrow scope.',e:0,g:0,n:0},
+         {t:'In principle yes, but only with strong judicial oversight and narrow scope.',e:0,g:0,n:0},
          {t:'Yes. Unchecked misinformation is a real threat and platforms cannot self-regulate.',e:0,g:1,n:-1}]},
-
-  // Pair B: campus speech vs hate speech laws
-  {id:'sp3', node:'speech', nl:'Expression and limits', pair:'sp-b', fr:'con',
-   type:'sc', ctx:'A university bans a student group after they invite a speaker known for views many consider racist. The university says the event would create a hostile environment for minority students.',
+  {id:'sp3',node:'speech',nl:'Expression and limits',pair:'sp-b',fr:'con',type:'sc',
+   ctx:'A university bans a student group after they invite a speaker known for views many consider racist. The university says the event would create a hostile environment for minority students.',
    q:'Was the ban justified?',
    opts:[{t:'No. Universities are precisely where difficult ideas should be debated and challenged.',e:0,g:-1,n:1},
          {t:'The invitation was fine. The ban was an overreaction. Protest was the right answer.',e:0,g:0,n:0},
          {t:'Yes. There is no obligation to provide a platform for views that harm members of the community.',e:0,g:1,n:-1}]},
-
-  {id:'sp4', node:'speech', nl:'Expression and limits', pair:'sp-b', fr:'pro',
-   type:'s', q:'Hate speech that targets people based on race, religion, or identity causes measurable psychological harm and should carry legal consequences.',
+  {id:'sp4',node:'speech',nl:'Expression and limits',pair:'sp-b',fr:'pro',type:'s',
+   q:'Hate speech that targets people based on race, religion, or identity causes measurable psychological harm and should carry legal consequences.',
    opts:[{t:'Agreed. The harm is real and the law should recognise it.',e:0,g:1,n:-1},
          {t:'The harm is real, but criminalising speech sets a precedent I am uncomfortable with.',e:0,g:0,n:0},
          {t:'Offence is not harm. The answer to bad speech is more speech, not law.',e:0,g:-2,n:1}]}
 ];
 
 // ============================================================
-//  SHUFFLER — pairs guaranteed at least MIN_GAP apart
+// SHUFFLER — guarantees MIN_GAP between paired questions
 // ============================================================
 function buildOrder(bank, total) {
-  const MIN_GAP = Math.max(8, Math.floor(total * 0.3));
   const pool = bank.slice(0, total);
+  const MIN_GAP = Math.max(8, Math.floor(total * 0.28));
 
-  // Group by pair
-  const pairs = {};
-  pool.forEach(q => {
-    if (!pairs[q.pair]) pairs[q.pair] = [];
-    pairs[q.pair].push(q);
-  });
+  // Shuffle pool
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
 
-  // Fisher-Yates shuffle within each pair, then place
-  const pairKeys = Object.keys(pairs);
-  pairKeys.sort(() => Math.random() - 0.5);
-
-  const result = new Array(total).fill(null);
-  const used = new Set();
-
-  // First pass: place all questions randomly
-  const flatPool = [...pool].sort(() => Math.random() - 0.5);
-  let placed = 0;
-  flatPool.forEach(q => {
-    if (placed < total) { result[placed++] = q; }
-  });
-
-  // Second pass: enforce minimum gap between paired questions
-  // Find pairs that are too close and swap them
-  for (let pass = 0; pass < 50; pass++) {
+  // Enforce min gap between same-pair questions
+  for (let pass = 0; pass < 60; pass++) {
     let moved = false;
-    for (let i = 0; i < result.length; i++) {
-      const q = result[i];
-      if (!q) continue;
-      for (let j = i + 1; j < result.length; j++) {
-        const q2 = result[j];
-        if (!q2) continue;
-        if (q.pair === q2.pair && (j - i) < MIN_GAP) {
-          // Find a better slot for q2
-          for (let k = Math.min(i + MIN_GAP, result.length - 1); k < result.length; k++) {
-            if (result[k] && result[k].pair !== q.pair) {
-              // Check that k doesn't create a new violation
-              const swapQ = result[k];
-              let swapOk = true;
-              for (let m = 0; m < result.length; m++) {
-                if (m === k) continue;
-                if (result[m] && result[m].pair === swapQ.pair && Math.abs(m - j) < MIN_GAP) {
-                  swapOk = false; break;
-                }
-              }
-              if (swapOk) {
-                result[k] = q2;
-                result[j] = swapQ;
-                moved = true;
-                break;
-              }
+    for (let i = 0; i < pool.length; i++) {
+      for (let j = i + 1; j < pool.length; j++) {
+        if (pool[i].pair === pool[j].pair && (j - i) < MIN_GAP) {
+          // Try to find a swap candidate for j that doesn't violate anything
+          for (let k = Math.min(i + MIN_GAP, pool.length - 1); k < pool.length; k++) {
+            if (k === j) continue;
+            const candidate = pool[k];
+            // Check candidate won't create a violation at position j
+            let ok = true;
+            for (let m = 0; m < pool.length; m++) {
+              if (m === k || m === j) continue;
+              if (pool[m].pair === candidate.pair && Math.abs(m - j) < MIN_GAP) { ok = false; break; }
+            }
+            if (ok) {
+              [pool[j], pool[k]] = [pool[k], pool[j]];
+              moved = true;
+              break;
             }
           }
+          if (moved) break;
         }
       }
+      if (moved) break;
     }
     if (!moved) break;
   }
-
-  return result.filter(Boolean);
+  return pool;
 }
 
 // ============================================================
-//  STATE
+// STATE
 // ============================================================
 let mode = 'short', qi = 0, picked = -1, answers = [], qs = [];
+let lastScore = null;
 
 // ============================================================
-//  NAV
+// NAV
 // ============================================================
 function goTo(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -763,23 +750,24 @@ function switchTab(id, btn) {
 }
 
 // ============================================================
-//  TEST ENGINE
+// TEST ENGINE
 // ============================================================
 function startTest(m) {
-  mode = m;
-  qi = 0; picked = -1; answers = [];
+  mode = m; qi = 0; picked = -1; answers = []; lastScore = null;
   const total = m === 'short' ? 30 : m === 'medium' ? 60 : 100;
   qs = buildOrder(BANK, Math.min(total, BANK.length));
   document.getElementById('mode-badge').textContent =
     m === 'short' ? 'Short test' : m === 'medium' ? 'Medium test' : 'Long test';
+  document.getElementById('save-status').textContent = '';
+  document.getElementById('save-email').value = '';
   renderQ();
   goTo('page-test');
 }
 
 function renderQ() {
-  const q = qs[qi], total = qs.length, cur = qi + 1;
+  const q = qs[qi], total = qs.length;
   document.getElementById('prog-fill').style.width = ((qi / total) * 100).toFixed(1) + '%';
-  document.getElementById('prog-txt').textContent = cur + ' of ' + total;
+  document.getElementById('prog-txt').textContent = (qi + 1) + ' of ' + total;
   document.getElementById('q-topic').textContent = q.nl;
   const sw = document.getElementById('q-scen-wrap');
   if (q.ctx) { sw.style.display = 'block'; document.getElementById('q-scen-body').textContent = q.ctx; }
@@ -824,53 +812,65 @@ function skipQ() {
 }
 
 // ============================================================
-//  SCORING
+// SCORING
 // ============================================================
 function score() {
-  let eSum = 0, eN = 0, gSum = 0, gN = 0;
-  answers.forEach(a => {
-    eSum += a.e; eN++;
-    gSum += a.g; gN++;
-  });
-  const eScore = eN > 0 ? eSum / (eN * 2) : 0;
-  const gScore = gN > 0 ? gSum / (gN * 2) : 0;
+  if (lastScore) return lastScore;
 
-  // Bias: group by pair, compare node_positions across framings
+  // Axis scoring: sum all e and g values, normalise to [-1, 1]
+  let eSum = 0, gSum = 0, count = 0;
+  answers.forEach(a => {
+    eSum += a.e;
+    gSum += a.g;
+    count++;
+  });
+
+  // Max possible per answer is 2, so max total = count * 2
+  const eScore = count > 0 ? Math.max(-1, Math.min(1, eSum / (count * 2))) : 0;
+  const gScore = count > 0 ? Math.max(-1, Math.min(1, gSum / (count * 2))) : 0;
+
+  // Bias: group answers by pair, compare node_positions
   const pairs = {};
   answers.forEach(a => {
-    if (!pairs[a.pair]) pairs[a.pair] = { nl: a.nl, node: a.node, items: [] };
-    if (a.n !== 0) pairs[a.pair].items.push(a.n);
+    if (!a.pair) return;
+    if (!pairs[a.pair]) pairs[a.pair] = { nl: a.nl, node: a.node, positions: [] };
+    if (a.n !== 0) pairs[a.pair].positions.push(a.n);
+  });
+
+  // Per-node bias aggregation
+  const nodeMap = {};
+  Object.keys(pairs).forEach(pk => {
+    const { nl, node, positions } = pairs[pk];
+    if (positions.length < 2) return;
+    const pos = positions.filter(x => x > 0).length;
+    const neg = positions.filter(x => x < 0).length;
+    const tot = pos + neg;
+    if (tot < 2) return;
+    const maj = Math.max(pos, neg);
+    // If fully consistent maj === tot, bias = 0
+    // If perfectly split (50/50), bias = 100
+    const consistency = maj / tot;
+    const bias = Math.round((1 - consistency) * 200); // 0-100
+    const clampedBias = Math.min(100, Math.max(0, bias));
+    if (!nodeMap[node]) nodeMap[node] = { nl, scores: [] };
+    nodeMap[node].scores.push(clampedBias);
   });
 
   const nodeBias = {};
-  Object.keys(pairs).forEach(pk => {
-    const { nl, node, items } = pairs[pk];
-    if (items.length < 2) return;
-    const pos = items.filter(x => x > 0).length;
-    const neg = items.filter(x => x < 0).length;
-    const tot = pos + neg;
-    const maj = Math.max(pos, neg);
-    const consistency = tot > 0 ? maj / tot : 1;
-    const bias = Math.min(Math.round((1 - consistency) * 200), 100);
-    const key = node;
-    if (!nodeBias[key]) nodeBias[key] = { nl, scores: [] };
-    nodeBias[key].scores.push(bias);
+  Object.keys(nodeMap).forEach(k => {
+    const arr = nodeMap[k].scores;
+    nodeBias[k] = { nl: nodeMap[k].nl, s: Math.round(arr.reduce((a, b) => a + b, 0) / arr.length) };
   });
 
-  // Aggregate per node
-  const nodeAgg = {};
-  Object.keys(nodeBias).forEach(k => {
-    const arr = nodeBias[k].scores;
-    nodeAgg[k] = { nl: nodeBias[k].nl, s: Math.round(arr.reduce((a, b) => a + b, 0) / arr.length) };
-  });
-
-  const bVals = Object.values(nodeAgg).map(x => x.s);
+  const bVals = Object.values(nodeBias).map(x => x.s);
   const overallBias = bVals.length ? Math.round(bVals.reduce((a, b) => a + b, 0) / bVals.length) : 0;
-  return { eScore, gScore, nodeBias: nodeAgg, overallBias };
+
+  lastScore = { eScore, gScore, nodeBias, overallBias };
+  return lastScore;
 }
 
 function archetype(e, g) {
-  const eL = e < -0.12, eR = e > 0.12, gA = g > 0.12, gL = g < -0.12;
+  const eL = e < -0.1, eR = e > 0.1, gA = g > 0.1, gL = g < -0.1;
   if (eL && gA) return { name: 'Progressive Statist', axes: 'Economic left, authoritarian' };
   if (eL && gL) return { name: 'Social Libertarian', axes: 'Economic left, anti-authoritarian' };
   if (eL) return { name: 'Social Democrat', axes: 'Economic left, centre governance' };
@@ -890,15 +890,12 @@ function verdictFor(s) {
   return { t: 'Highly susceptible to framing', c: 'v-red' };
 }
 
-function fillColor(s) {
-  return s <= 25 ? 'fill-g' : s <= 55 ? 'fill-a' : 'fill-r';
-}
-
+function fillColor(s) { return s <= 25 ? 'fill-g' : s <= 55 ? 'fill-a' : 'fill-r'; }
 function biasDesc(s) {
   if (s <= 10) return 'Your answers were consistent regardless of how the question was framed.';
   if (s <= 28) return 'Your answers were mostly consistent on this topic.';
-  if (s <= 48) return 'Your answers shifted somewhat depending on phrasing.';
-  if (s <= 68) return 'You answered noticeably differently based on how the question was framed.';
+  if (s <= 48) return 'Your answers shifted somewhat depending on how the question was phrased.';
+  if (s <= 68) return 'You answered noticeably differently based on the framing used.';
   return 'Your answers on this topic varied significantly with the framing used.';
 }
 
@@ -912,6 +909,7 @@ function renderResults() {
   document.getElementById('rv-archetype').textContent = arc.name;
   document.getElementById('rv-axes').textContent = arc.axes;
 
+  // Compass dot: eScore [-1,1] → x [13, 209], gScore [-1,1] → y [209, 13] (inverted: lib=bottom)
   const dotX = (111 + eScore * 98).toFixed(1);
   const dotY = (111 - gScore * 98).toFixed(1);
   document.getElementById('cdot').setAttribute('cx', dotX);
@@ -919,15 +917,18 @@ function renderResults() {
   document.getElementById('cdot-ring').setAttribute('cx', dotX);
   document.getElementById('cdot-ring').setAttribute('cy', dotY);
 
+  // Axis sliders
   setTimeout(() => {
     document.getElementById('ax-econ').style.left = (((eScore + 1) / 2) * 100).toFixed(1) + '%';
     document.getElementById('ax-gov').style.left = (((gScore + 1) / 2) * 100).toFixed(1) + '%';
   }, 200);
 
+  // Bias score
   document.getElementById('r-bias-num').textContent = overallBias;
   const vEl = document.getElementById('r-bias-verdict');
   vEl.textContent = verd.t; vEl.className = 'bias-verdict ' + verd.c;
 
+  // Bias rows
   const bRowEl = document.getElementById('r-bias-rows');
   bRowEl.innerHTML = '';
   Object.keys(nodeBias).forEach(k => {
@@ -938,6 +939,7 @@ function renderResults() {
     bRowEl.appendChild(row);
   });
 
+  // Bias detail tab
   const bdEl = document.getElementById('bias-detail-list');
   bdEl.innerHTML = '';
   Object.keys(nodeBias).forEach(k => {
@@ -948,15 +950,16 @@ function renderResults() {
     bdEl.appendChild(card);
   });
 
+  // Insight text
   const sorted = Object.keys(nodeBias).sort((a, b) => nodeBias[b].s - nodeBias[a].s);
   const topBias = sorted.slice(0, 2).map(k => `<strong>${nodeBias[k].nl}</strong>`);
-  const lowBias = sorted.slice(-2).map(k => `<strong>${nodeBias[k].nl}</strong>`);
+  const lowBias = sorted.slice(-2).reverse().map(k => `<strong>${nodeBias[k].nl}</strong>`);
   document.getElementById('r-insight').innerHTML =
     `Your answers placed you in the <strong>${arc.name}</strong> category. ` +
-    `You showed the most susceptibility to framing on ${topBias.join(' and ')}. ` +
-    `Your answers on these topics shifted depending on how the question was worded. ` +
-    `You were most consistent on ${lowBias.join(' and ')}.`;
+    (topBias.length ? `You showed the most susceptibility to framing on ${topBias.join(' and ')}. Your answers on these topics shifted depending on how the question was worded. ` : '') +
+    (lowBias.length ? `You were most consistent on ${lowBias.join(' and ')}.` : '');
 
+  // Animate bias bars
   setTimeout(() => {
     document.querySelectorAll('.b-fill[data-t]').forEach(el => { el.style.width = el.dataset.t; });
   }, 350);
@@ -964,7 +967,72 @@ function renderResults() {
 
 function goCalc() {
   goTo('page-calc');
-  setTimeout(() => { renderResults(); goTo('page-reveal'); }, 2000);
+  setTimeout(() => {
+    renderResults();
+    // Save anonymously to Supabase (no email yet)
+    const { eScore, gScore, nodeBias, overallBias } = score();
+    const arc = archetype(eScore, gScore);
+    sbInsert('coreopinion_results', {
+      mode,
+      archetype: arc.name,
+      econ_score: parseFloat(eScore.toFixed(4)),
+      gov_score: parseFloat(gScore.toFixed(4)),
+      bias_overall: overallBias,
+      bias_breakdown: nodeBias,
+      age: document.getElementById('d-age').value || null,
+      country: document.getElementById('d-country').value || null,
+      political_id: document.getElementById('d-pol').value || null
+    }).catch(() => {}); // silent fail — don't block UX
+    goTo('page-reveal');
+  }, 2000);
+}
+
+// ============================================================
+// SAVE RESULTS BY EMAIL
+// ============================================================
+async function saveResults() {
+  const email = document.getElementById('save-email').value.trim();
+  const statusEl = document.getElementById('save-status');
+  if (!email || !email.includes('@')) {
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = 'Please enter a valid email address.';
+    return;
+  }
+  statusEl.style.color = 'var(--ink-muted)';
+  statusEl.textContent = 'Saving...';
+
+  const { eScore, gScore, nodeBias, overallBias } = score();
+  const arc = archetype(eScore, gScore);
+
+  try {
+    await sbInsert('coreopinion_results', {
+      email,
+      mode,
+      archetype: arc.name,
+      econ_score: parseFloat(eScore.toFixed(4)),
+      gov_score: parseFloat(gScore.toFixed(4)),
+      bias_overall: overallBias,
+      bias_breakdown: nodeBias,
+      age: document.getElementById('d-age').value || null,
+      country: document.getElementById('d-country').value || null,
+      political_id: document.getElementById('d-pol').value || null
+    });
+    statusEl.style.color = 'var(--green)';
+    statusEl.textContent = 'Saved. We will email your results to ' + email;
+  } catch (e) {
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = 'Something went wrong. Please try again.';
+  }
+}
+
+function copyLink() {
+  const { eScore, gScore, overallBias } = score();
+  const arc = archetype(eScore, gScore);
+  const text = `My CoreOpinion result: ${arc.name} | Bias score: ${overallBias}/100 — coreopinion.org`;
+  navigator.clipboard.writeText(text).then(() => {
+    document.getElementById('save-status').style.color = 'var(--green)';
+    document.getElementById('save-status').textContent = 'Copied to clipboard.';
+  }).catch(() => {});
 }
 </script>
 </body>
