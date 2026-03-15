@@ -1236,26 +1236,75 @@ const BANK = [
 // SHUFFLER — guarantees MIN_GAP between paired questions
 // ============================================================
 function buildOrder(bank, total) {
-  const pool = bank.slice(0, total);
-  const MIN_GAP = Math.max(8, Math.floor(total * 0.28));
-
-  // Shuffle pool
-  for (let i = pool.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [pool[i], pool[j]] = [pool[j], pool[i]];
+  // For shorter tests, score each question by its axis strength so we
+  // preferentially pick questions that will actually differentiate results.
+  // A question where all options have e=0 is useless for the economic axis.
+  function axisStrength(q) {
+    const eMax = Math.max(...q.opts.map(o => Math.abs(o.e)));
+    const gMax = Math.max(...q.opts.map(o => Math.abs(o.g)));
+    return eMax + gMax;
   }
 
-  // Enforce min gap between same-pair questions
+  // Sort bank by strength descending, shuffle within strength tiers
+  const sorted = [...bank].sort((a, b) => {
+    const diff = axisStrength(b) - axisStrength(a);
+    if (diff !== 0) return diff;
+    return Math.random() - 0.5; // random within same strength
+  });
+
+  // For short/medium tests, weight toward stronger questions:
+  // short (30): top 60% of bank by strength, then random from rest
+  // medium (60): top 80% of bank by strength, then random from rest
+  // long (100): full bank
+  let candidates;
+  if (total <= 30) {
+    // Take all "strong" questions (strength >= 2) plus enough others to reach total
+    const strong = sorted.filter(q => axisStrength(q) >= 2);
+    const others = sorted.filter(q => axisStrength(q) < 2);
+    // Shuffle each tier
+    for (let i = strong.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [strong[i], strong[j]] = [strong[j], strong[i]];
+    }
+    for (let i = others.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [others[i], others[j]] = [others[j], others[i]];
+    }
+    candidates = [...strong, ...others].slice(0, total);
+  } else if (total <= 60) {
+    // Take all strong + medium questions, shuffle, slice
+    const strong = sorted.filter(q => axisStrength(q) >= 1);
+    const others = sorted.filter(q => axisStrength(q) < 1);
+    for (let i = strong.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [strong[i], strong[j]] = [strong[j], strong[i]];
+    }
+    for (let i = others.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [others[i], others[j]] = [others[j], others[i]];
+    }
+    candidates = [...strong, ...others].slice(0, total);
+  } else {
+    // Full bank, just shuffle
+    candidates = [...bank];
+    for (let i = candidates.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
+    }
+  }
+
+  const pool = candidates;
+  const MIN_GAP = Math.max(6, Math.floor(total * 0.25));
+
+  // Enforce min gap between paired questions
   for (let pass = 0; pass < 60; pass++) {
     let moved = false;
     for (let i = 0; i < pool.length; i++) {
       for (let j = i + 1; j < pool.length; j++) {
         if (pool[i].pair === pool[j].pair && (j - i) < MIN_GAP) {
-          // Try to find a swap candidate for j that doesn't violate anything
           for (let k = Math.min(i + MIN_GAP, pool.length - 1); k < pool.length; k++) {
             if (k === j) continue;
             const candidate = pool[k];
-            // Check candidate won't create a violation at position j
             let ok = true;
             for (let m = 0; m < pool.length; m++) {
               if (m === k || m === j) continue;
@@ -1375,17 +1424,27 @@ function prevQ() {
 function score() {
   if (lastScore) return lastScore;
 
-  // Axis scoring: sum all e and g values, normalise to [-1, 1]
-  let eSum = 0, gSum = 0, count = 0;
+  // Axis scoring: normalise against the max possible score for each answered question
+  // This prevents questions with e=0 from diluting the economic axis score
+  let eSum = 0, gSum = 0, eMaxTotal = 0, gMaxTotal = 0;
   answers.forEach(a => {
     eSum += a.e;
     gSum += a.g;
-    count++;
+    // Find max possible magnitude for this question on each axis
+    const q = qs.find(q => q.id === a.id);
+    if (q) {
+      const eMax = Math.max(...q.opts.map(o => Math.abs(o.e)));
+      const gMax = Math.max(...q.opts.map(o => Math.abs(o.g)));
+      eMaxTotal += eMax;
+      gMaxTotal += gMax;
+    } else {
+      eMaxTotal += 2;
+      gMaxTotal += 2;
+    }
   });
 
-  // Max possible per answer is 2, so max total = count * 2
-  const eScore = count > 0 ? Math.max(-1, Math.min(1, eSum / (count * 2))) : 0;
-  const gScore = count > 0 ? Math.max(-1, Math.min(1, gSum / (count * 2))) : 0;
+  const eScore = eMaxTotal > 0 ? Math.max(-1, Math.min(1, eSum / eMaxTotal)) : 0;
+  const gScore = gMaxTotal > 0 ? Math.max(-1, Math.min(1, gSum / gMaxTotal)) : 0;
 
   // Bias: group answers by pair, compare node_positions
   const pairs = {};
@@ -1428,7 +1487,7 @@ function score() {
 }
 
 function archetype(e, g) {
-  const eL = e < -0.1, eR = e > 0.1, gA = g > 0.1, gL = g < -0.1;
+  const eL = e < -0.05, eR = e > 0.05, gA = g > 0.05, gL = g < -0.05;
   if (eL && gA) return { name: 'Progressive Statist', axes: 'Economic left, authoritarian' };
   if (eL && gL) return { name: 'Social Libertarian', axes: 'Economic left, anti-authoritarian' };
   if (eL) return { name: 'Social Democrat', axes: 'Economic left, centre governance' };
