@@ -525,7 +525,7 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
   <div id="t-main">
     <div class="results-shell">
       <div class="results-head">
-        <div class="archetype-tag">Your political identity</div>
+        <div class="archetype-tag">Your position on the compass</div>
         <div class="archetype-name" id="r-name">Social Libertarian</div>
         <div class="archetype-axes" id="r-axes">Economic left, anti-authoritarian</div>
       </div>
@@ -539,15 +539,6 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
               <rect x="195" y="10" width="175" height="175" rx="6" fill="#F5A623" opacity="0.12"/>
               <rect x="10" y="195" width="175" height="175" rx="6" fill="#3DBF82" opacity="0.12"/>
               <rect x="195" y="195" width="175" height="175" rx="6" fill="#E85D6B" opacity="0.12"/>
-              <!-- Extreme zone rings (outer 25% of each quadrant) -->
-              <rect x="10" y="10" width="44" height="44" rx="3" fill="#4B8EF1" opacity="0.18"/>
-              <rect x="141" y="10" width="44" height="44" rx="3" fill="#F5A623" opacity="0.18"/>
-              <rect x="326" y="10" width="44" height="44" rx="3" fill="#F5A623" opacity="0.18"/>
-              <rect x="10" y="141" width="44" height="44" rx="3" fill="#4B8EF1" opacity="0.18"/>
-              <rect x="326" y="141" width="44" height="44" rx="3" fill="#E85D6B" opacity="0.18"/>
-              <rect x="10" y="326" width="44" height="44" rx="3" fill="#3DBF82" opacity="0.18"/>
-              <rect x="326" y="326" width="44" height="44" rx="3" fill="#E85D6B" opacity="0.18"/>
-              <rect x="141" y="326" width="44" height="44" rx="3" fill="#3DBF82" opacity="0.18"/>
               <!-- Axis lines -->
               <line x1="190" y1="10" x2="190" y2="370" stroke="#B0B5BC" stroke-width="1.2"/>
               <line x1="10" y1="190" x2="370" y2="190" stroke="#B0B5BC" stroke-width="1.2"/>
@@ -561,11 +552,7 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
               <text x="280" y="36" font-size="11" fill="#C07018" font-family="Outfit,sans-serif" font-weight="500" text-anchor="middle" opacity="0.8">Auth right</text>
               <text x="100" y="362" font-size="11" fill="#2A8A5A" font-family="Outfit,sans-serif" font-weight="500" text-anchor="middle" opacity="0.8">Lib left</text>
               <text x="280" y="362" font-size="11" fill="#C0334A" font-family="Outfit,sans-serif" font-weight="500" text-anchor="middle" opacity="0.8">Lib right</text>
-              <!-- Extreme labels at corners -->
-              <text x="32" y="24" font-size="9" fill="#6B7280" font-family="Outfit,sans-serif" text-anchor="middle">extreme</text>
-              <text x="348" y="24" font-size="9" fill="#6B7280" font-family="Outfit,sans-serif" text-anchor="middle">extreme</text>
-              <text x="32" y="375" font-size="9" fill="#6B7280" font-family="Outfit,sans-serif" text-anchor="middle">extreme</text>
-              <text x="348" y="375" font-size="9" fill="#6B7280" font-family="Outfit,sans-serif" text-anchor="middle">extreme</text>
+
               <!-- Dot -->
               <circle id="cdot-ring" cx="190" cy="190" r="22" fill="#1E4D8C" opacity="0.15"/>
               <circle id="cdot" cx="190" cy="190" r="11" fill="#1E4D8C"/>
@@ -1587,15 +1574,60 @@ function score() {
 
 function archetype(e, g) {
   const eL = e < -0.05, eR = e > 0.05, gA = g > 0.05, gL = g < -0.05;
-  if (eL && gA) return { name: 'Progressive Statist', axes: 'Economic left, authoritarian' };
-  if (eL && gL) return { name: 'Social Libertarian', axes: 'Economic left, anti-authoritarian' };
-  if (eL) return { name: 'Social Democrat', axes: 'Economic left, centre governance' };
-  if (eR && gA) return { name: 'Conservative Nationalist', axes: 'Economic right, authoritarian' };
-  if (eR && gL) return { name: 'Classical Liberal', axes: 'Economic right, anti-authoritarian' };
-  if (eR) return { name: 'Conservative', axes: 'Economic right, centre governance' };
-  if (gA) return { name: 'Technocratic Centrist', axes: 'Economic centre, authoritarian' };
-  if (gL) return { name: 'Libertarian', axes: 'Economic centre, anti-authoritarian' };
-  return { name: 'Centrist', axes: 'Balanced across all axes' };
+  if (eL && gA) return {
+    name: 'Auth left',
+    axes: 'Economic left, authoritarian',
+    ideology: 'You favour state control over both the economy and social life. You believe strong government is necessary to redistribute wealth, enforce equality, and protect collective interests — even if that limits individual freedoms.',
+    example: 'Politicians in this tradition include Bernie Sanders on economic policy, and historically figures like Clement Attlee, who nationalised industries and built the NHS while running a disciplined, top-down government.'
+  };
+  if (eL && gL) return {
+    name: 'Lib left',
+    axes: 'Economic left, libertarian',
+    ideology: 'You want a fairer economy but not at the cost of personal freedom. You support redistribution, workers\' rights, and public services, while opposing surveillance, censorship, and state overreach into private life.',
+    example: 'This quadrant is home to figures like Noam Chomsky, the late Tony Benn, and in modern politics Alexandria Ocasio-Cortez — people who combine economic progressivism with a strong commitment to civil liberties.'
+  };
+  if (eL) return {
+    name: 'Left',
+    axes: 'Economic left, centre governance',
+    ideology: 'You lean toward collective economic solutions — public services, redistribution, workers\' rights — without taking strong positions on how much authority the state should have in everyday life.',
+    example: 'Much of mainstream centre-left politics sits here. Think Keir Starmer, Olof Palme, or the Democratic mainstream in the United States — pragmatic left-leaning economics without ideological extremes.'
+  };
+  if (eR && gA) return {
+    name: 'Auth right',
+    axes: 'Economic right, authoritarian',
+    ideology: 'You believe in free markets and private enterprise, combined with strong national authority, social order, and traditional values. The state should stay out of the economy but play a firm role in culture and security.',
+    example: 'This is the tradition of figures like Viktor Orban, Marine Le Pen, and historically Margaret Thatcher on economics combined with a strong national identity and law-and-order politics.'
+  };
+  if (eR && gL) return {
+    name: 'Lib right',
+    axes: 'Economic right, libertarian',
+    ideology: 'You want maximum freedom in both economic and personal life. Low taxes, minimal regulation, free markets, and limited government — the state should protect property and enforce contracts, and little else.',
+    example: 'Classic figures here include Milton Friedman, Friedrich Hayek, and in contemporary politics Ron Paul. Libertarian-leaning conservatives who want the state to shrink across the board.'
+  };
+  if (eR) return {
+    name: 'Right',
+    axes: 'Economic right, centre governance',
+    ideology: 'You support free markets, lower taxes, and individual responsibility, without taking extreme positions on state authority. You believe prosperity comes from economic freedom, not government management.',
+    example: 'The traditional home of mainstream conservative parties — think David Cameron, Angela Merkel, or Australia\'s John Howard. Centre-right economic policy without the authoritarian edge.'
+  };
+  if (gA) return {
+    name: 'Authoritarian centre',
+    axes: 'Economic centre, authoritarian',
+    ideology: 'You hold moderate economic views but believe strongly in order, authority, and the state\'s right to govern firmly. You are not ideologically left or right on the economy, but you trust institutions and strong leadership.',
+    example: 'This position is associated with technocratic leaders and centrist strongmen — figures like Emmanuel Macron in his more dirigiste moments, or Lee Kuan Yew, who built Singapore through firm central authority and pragmatic economics.'
+  };
+  if (gL) return {
+    name: 'Libertarian centre',
+    axes: 'Economic centre, libertarian',
+    ideology: 'You hold no strong economic ideology but place a very high value on individual freedom. You resist government overreach in personal life, support civil liberties, and are sceptical of authority for its own sake.',
+    example: 'This is the natural home of classical liberals and civil libertarians — think Nick Clegg, the ACLU, or politicians who champion free speech and personal rights above both market ideology and social conservatism.'
+  };
+  return {
+    name: 'Centre',
+    axes: 'Balanced across all axes',
+    ideology: 'Your answers did not strongly favour any single direction on the political compass. You may hold genuinely mixed views, weigh issues individually rather than ideologically, or find yourself unconvinced by the extremes on both sides.',
+    example: 'The centre is less defined by ideology than by pragmatism. Leaders like Angela Merkel, Tony Blair in his centrist phase, or New Zealand\'s Jacinda Ardern have occupied this space at various points — governing through compromise rather than conviction.'
+  };
 }
 
 function verdictFor(s) {
@@ -1672,24 +1704,39 @@ function renderResults() {
   const topBias = highBiasNodes.slice(0, 2).map(k => `<strong>${nodeBias[k].nl}</strong>`);
   const lowBias = sorted.slice(-2).reverse().map(k => `<strong>${nodeBias[k].nl}</strong>`);
 
-  let insightText = `Your answers placed you in the <strong>${arc.name}</strong> category. `;
+  // Build ideology + example section
+  const ideologyText = arc.ideology || '';
+  const exampleText = arc.example || '';
 
+  // Build bias section
+  let biasText = '';
   if (overallBias === 0) {
-    insightText += `Your answers were completely consistent across every topic regardless of how the questions were framed. That level of logical consistency is uncommon. Most people shift at least slightly when the wording changes. Your political beliefs appear to be firmly held and resistant to framing effects.`;
+    biasText = `Your answers were completely consistent across every topic regardless of how the questions were framed. That level of logical consistency is uncommon. Most people shift at least slightly when the wording changes.`;
   } else if (overallBias <= 15) {
-    const bestNode = sorted[sorted.length - 1];
-    insightText += `Your answers were highly consistent across almost every topic. Very few people answer this test without any framing influence at all. You came close. `;
-    if (topBias.length) insightText += `The only slight movement was on ${topBias[0]}, but even there the inconsistency was minimal.`;
+    biasText = `Your answers were highly consistent across almost every topic. Very few people answer this test without any framing influence at all. You came close.`;
+    if (topBias.length) biasText += ` The only slight movement was on ${topBias[0]}, but even there the inconsistency was minimal.`;
   } else {
     if (topBias.length) {
-      insightText += `You showed the most susceptibility to framing on ${topBias.join(' and ')}. Your answers on these topics shifted depending on how the question was worded. `;
+      biasText += `You showed the most susceptibility to framing on ${topBias.join(' and ')}. Your answers on these topics shifted depending on how the question was worded. `;
     }
     if (lowBias.length) {
-      insightText += `You were most consistent on ${lowBias.join(' and ')}.`;
+      biasText += `You were most consistent on ${lowBias.join(' and ')}.`;
     }
   }
 
-  document.getElementById('r-insight').innerHTML = insightText;
+  document.getElementById('r-insight').innerHTML =
+    `<div style="margin-bottom:20px">
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px">What this position means</div>
+      <p style="font-size:15px;color:var(--ink-muted);line-height:1.8;font-weight:300">${ideologyText}</p>
+    </div>
+    <div style="margin-bottom:20px;padding:18px 22px;background:var(--parchment);border-radius:6px;border-left:2px solid #2A5DB0">
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#2A5DB0;margin-bottom:10px">Who shares this position</div>
+      <p style="font-size:14px;color:var(--ink-soft);line-height:1.75;font-weight:300">${exampleText}</p>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px">Your framing bias</div>
+      <p style="font-size:15px;color:var(--ink-muted);line-height:1.8;font-weight:300">${biasText}</p>
+    </div>`;
 
   // Animate bias bars
   setTimeout(() => {
