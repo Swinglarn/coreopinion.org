@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Political Compass Test 2026 | CoreOpinion</title>
+<meta name="description" content="Where do you stand in American politics? 40 scenario-based questions on US issues. See your alignment with the Democratic, Republican, Libertarian, and Green parties.">
+<meta name="keywords" content="US political test, American political compass, Democrat Republican test, political alignment quiz, US political quiz 2026, where do I stand American politics, libertarian democrat republican quiz">
+<meta name="author" content="CoreOpinion">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://coreopinion.org/us">
+<meta name="theme-color" content="#F9F8F6">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coreopinion.org/us">
+<meta property="og:title" content="US Political Compass Test 2026 | CoreOpinion">
+<meta property="og:description" content="40 scenario-based questions on American politics. Find your position on the compass and see how closely you align with each major US party.">
+<meta property="og:site_name" content="CoreOpinion">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="US Political Compass Test 2026 | CoreOpinion">
+<meta name="twitter:description" content="Where do you stand in American politics? Take the scenario-based US test and see your party alignment percentages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A0C0F;--ink-soft:#3D4147;--ink-muted:#7A7F88;--ink-faint:#B0B5BC;
+  --parchment:#F9F8F6;--parchment-warm:#F3F1EE;--white:#FFFFFF;
+  --navy:#1E4D8C;--navy-soft:#E8EFF9;
+  --gold:#B8923A;--gold-soft:#F5ECD8;
+  --border:#DDD9D2;--border-soft:#EAE7E1;
+  --green:#2D6A4F;--green-soft:#E8F5EE;
+  --amber:#92620A;--amber-soft:#FDF3E0;
+  --red:#9B2335;--red-soft:#FBE8EB;
+  --dem:#2563a8;--dem-soft:#EEF4FB;
+  --rep:#C0392B;--rep-soft:#FAEAEA;
+  --lib:#F5A623;--lib-soft:#FEF3DC;
+  --grn:#2D8A4F;--grn-soft:#E4F5EB;
+  --ind:#7A7F88;--ind-soft:#F0F0F0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--parchment);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;font-weight:300;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.4;}
+.page{display:none}
+.page.active{display:block;animation:rise 0.4s cubic-bezier(0.22,1,0.36,1)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;border-bottom:1px solid var(--border-soft);background:rgba(249,248,246,0.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);cursor:pointer;letter-spacing:-0.5px;line-height:1;text-decoration:none;}
+.logo span{color:#2A5DB0}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-size:15px;color:var(--ink-muted);text-decoration:none;cursor:pointer;font-weight:400;transition:color 0.15s;}
+.nav-links a:hover{color:var(--ink)}
+.flag-badge{font-size:13px;color:var(--ink-muted);display:flex;align-items:center;gap:8px;font-weight:400;}
+.flag-badge .flag{font-size:20px;line-height:1}
+
+.btn-primary{background:var(--ink);color:var(--white);border:none;padding:16px 36px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:400;transition:opacity 0.15s;display:inline-block;}
+.btn-primary:hover{opacity:0.84}
+.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--border);padding:15px 32px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
+.btn-secondary:hover{border-color:var(--ink)}
+.btn-ghost{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:10px 22px;border-radius:4px;font-size:13px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
+.btn-ghost:hover{border-color:var(--border);color:var(--ink)}
+.btn-back{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:11px 22px;border-radius:4px;font-size:14px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
+.btn-back:hover{border-color:var(--border);color:var(--ink)}
+.btn-back:disabled{opacity:0.28;cursor:default;}
+
+/* LANDING */
+.hero{max-width:980px;margin:0 auto;padding:88px 52px 72px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;right:-20px;top:10px;font-family:'Cormorant Garamond',serif;font-size:260px;font-weight:700;color:rgba(10,12,15,0.022);line-height:1;pointer-events:none;letter-spacing:-8px;user-select:none;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:28px;}
+.eyebrow::before{content:'';display:block;width:28px;height:1px;background:#2A5DB0}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:70px;font-weight:600;line-height:1.05;color:var(--ink);margin-bottom:24px;letter-spacing:-2px;max-width:700px;}
+.hero h1 em{font-style:italic;color:#2A5DB0}
+.hero-sub{font-size:17px;color:var(--ink-muted);line-height:1.72;max-width:500px;margin-bottom:44px;font-weight:300;}
+.hero-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+
+.party-strip{border-top:1px solid var(--border-soft);display:grid;grid-template-columns:repeat(5,1fr);max-width:980px;margin:0 auto;}
+.party-cell{padding:32px 28px;border-right:1px solid var(--border-soft);display:flex;flex-direction:column;gap:10px;}
+.party-cell:last-child{border-right:none}
+.party-dot{width:28px;height:6px;border-radius:3px;margin-bottom:4px;}
+.party-name{font-size:14px;font-weight:500;color:var(--ink);}
+.party-desc{font-size:12px;color:var(--ink-muted);font-weight:300;line-height:1.5;}
+
+.info-section{max-width:980px;margin:0 auto;padding:64px 52px;border-top:1px solid var(--border-soft);display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.info-block h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--ink);margin-bottom:14px;letter-spacing:-0.5px;}
+.info-block p{font-size:15px;color:var(--ink-muted);line-height:1.75;font-weight:300;}
+
+/* QUESTION */
+.q-shell{max-width:720px;margin:0 auto;padding:52px;}
+.prog-row{display:flex;align-items:center;gap:18px;margin-bottom:56px;}
+.prog-track{flex:1;height:1px;background:var(--border-soft);position:relative;overflow:visible;}
+.prog-fill{height:1px;background:var(--ink);transition:width 0.5s cubic-bezier(0.22,1,0.36,1);}
+.prog-tip{position:absolute;right:-4px;top:-4px;width:9px;height:9px;background:var(--ink);border-radius:50%;}
+.prog-txt{font-size:12px;color:var(--ink-faint);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.q-topic-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#2A5DB0;background:var(--navy-soft);padding:5px 14px;border-radius:20px;margin-bottom:22px;}
+.q-scenario-box{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--ink);padding:22px 26px;margin-bottom:32px;border-radius:0 8px 8px 0;box-shadow:0 2px 8px rgba(10,12,15,0.05);}
+.q-scenario-tag{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:12px;}
+.q-scenario-body{font-size:16px;color:var(--ink-soft);line-height:1.75;font-weight:300;}
+.q-question{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500;color:var(--ink);line-height:1.38;margin-bottom:32px;letter-spacing:-0.4px;}
+.q-opts{display:flex;flex-direction:column;gap:11px}
+.q-opt{background:var(--white);border:1px solid var(--border);border-radius:7px;padding:18px 22px;cursor:pointer;font-size:15px;color:var(--ink-soft);line-height:1.55;font-weight:400;transition:all 0.18s;}
+.q-opt:hover{border-color:var(--ink);color:var(--ink);background:var(--parchment);}
+.q-opt.picked{border-color:var(--ink);background:var(--ink);color:var(--white);}
+.q-foot{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--border-soft);}
+.btn-skip{background:none;border:none;font-size:13px;color:var(--ink-faint);cursor:pointer;font-family:'Outfit',sans-serif;padding:0;transition:color 0.15s;}
+.btn-skip:hover{color:var(--ink-muted)}
+
+/* DEMO */
+.demo-outer{max-width:580px;margin:0 auto;padding:72px 52px;}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--ink);margin-bottom:12px;letter-spacing:-1.2px;}
+.page-sub{font-size:15px;color:var(--ink-muted);margin-bottom:44px;font-weight:300;line-height:1.65;}
+.demo-fields{display:flex;flex-direction:column;gap:22px;margin-bottom:40px;}
+.field-label{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:9px;}
+.field-label span{color:var(--ink-faint);font-weight:300;}
+select,input[type=email]{width:100%;padding:13px 16px;border:1px solid var(--border-soft);border-radius:6px;font-size:14px;font-family:'Outfit',sans-serif;font-weight:300;background:var(--white);color:var(--ink);appearance:none;-webkit-appearance:none;transition:border-color 0.15s;}
+select:focus,input:focus{outline:none;border-color:var(--navy);}
+.demo-note{font-size:13px;color:var(--ink-faint);font-weight:300;line-height:1.6;margin-bottom:32px;}
+
+/* CALCULATING */
+.calc-shell{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 72px);padding:52px;text-align:center;}
+.spin-ring{width:48px;height:48px;border:1.5px solid var(--border-soft);border-top-color:var(--ink);border-radius:50%;animation:spin 1.1s linear infinite;margin:0 auto 36px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.calc-h{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--ink);margin-bottom:12px;letter-spacing:-0.5px;}
+.calc-p{font-size:15px;color:var(--ink-muted);font-weight:300}
+
+/* RESULTS */
+.results-shell{max-width:860px;margin:0 auto;padding:60px 52px;}
+.results-head{margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--border-soft);}
+.result-eyebrow{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;}
+.result-headline{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;color:var(--ink);letter-spacing:-2px;line-height:1;margin-bottom:12px;}
+.result-sub{font-size:16px;color:var(--ink-muted);font-weight:300;}
+
+/* Party alignment bars */
+.party-results{display:flex;flex-direction:column;gap:0;margin-bottom:36px;background:var(--white);border:1px solid var(--border-soft);border-radius:10px;overflow:hidden;}
+.party-row{display:flex;align-items:center;gap:20px;padding:22px 28px;border-bottom:1px solid var(--border-soft);}
+.party-row:last-child{border-bottom:none}
+.party-row-rank{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--ink-faint);min-width:24px;}
+.party-row-info{min-width:160px;}
+.party-row-name{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:2px;}
+.party-row-sub{font-size:12px;color:var(--ink-muted);font-weight:300;}
+.party-row-bar-wrap{flex:1;height:8px;background:var(--parchment-warm);border-radius:4px;overflow:hidden;}
+.party-row-bar{height:100%;border-radius:4px;transition:width 1.2s cubic-bezier(0.22,1,0.36,1);}
+.party-row-pct{font-size:16px;font-weight:500;color:var(--ink);min-width:44px;text-align:right;font-variant-numeric:tabular-nums;}
+.party-row.top-match{background:var(--parchment);}
+.party-row.top-match .party-row-rank{color:var(--ink);}
+
+.bar-dem{background:var(--dem)}
+.bar-rep{background:var(--rep)}
+.bar-lib{background:var(--lib)}
+.bar-grn{background:var(--grn)}
+.bar-ind{background:var(--ind)}
+
+/* Compass */
+.results-grid{display:grid;grid-template-columns:55fr 45fr;gap:24px;margin-bottom:28px;}
+.res-card{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;}
+.res-card-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:20px;}
+.compass-wrap{display:flex;justify-content:center;margin-bottom:24px;}
+.axis-block{margin-top:4px}
+.axis-item{margin-bottom:18px}
+.axis-item:last-child{margin-bottom:0}
+.axis-row-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-faint);margin-bottom:7px;}
+.axis-track{width:100%;height:5px;background:var(--parchment-warm);border-radius:3px;position:relative;}
+.axis-marker{position:absolute;width:13px;height:13px;background:var(--ink);border:2.5px solid var(--white);border-radius:50%;top:-4px;transform:translateX(-50%);transition:left 0.9s cubic-bezier(0.22,1,0.36,1);box-shadow:0 1px 4px rgba(0,0,0,0.2);}
+.axis-name{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:8px;}
+
+/* Insight */
+.insight-panel{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;}
+
+/* Save */
+.save-panel{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;}
+.save-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;}
+.save-desc{font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.6;margin-bottom:20px;}
+.save-row{display:flex;gap:10px;align-items:center;}
+.save-row input{margin-bottom:0;flex:1;}
+.save-status{font-size:13px;color:var(--green);margin-top:10px;min-height:20px;}
+.share-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;padding-top:20px;border-top:1px solid var(--border-soft);}
+
+/* Mobile */
+@media(max-width:768px){
+  nav{padding:0 20px;height:64px;}
+  .logo{font-size:22px;}
+  .nav-links{gap:16px;}
+  .nav-links a{font-size:13px;}
+  .hero{padding:52px 20px 44px;}
+  .hero h1{font-size:44px;letter-spacing:-1.2px;}
+  .hero-sub{font-size:15px;}
+  .hero-cta{flex-direction:column;align-items:flex-start;}
+  .btn-primary,.btn-secondary{width:100%;text-align:center;}
+  .party-strip{grid-template-columns:1fr 1fr;border-top:none;}
+  .party-cell{padding:20px;border-right:none;border-top:1px solid var(--border-soft);}
+  .info-section{grid-template-columns:1fr;gap:36px;padding:44px 20px;}
+  .q-shell{padding:28px 20px;}
+  .q-question{font-size:21px;}
+  .q-opt{font-size:14px;padding:15px 16px;}
+  .demo-outer{padding:40px 20px;}
+  .results-shell{padding:32px 20px;}
+  .result-headline{font-size:36px;}
+  .results-grid{grid-template-columns:1fr;}
+  .party-row{padding:16px 18px;gap:12px;}
+  .party-row-info{min-width:120px;}
+  .party-row-name{font-size:13px;}
+  .save-row{flex-direction:column;}
+  .share-row{flex-direction:column;}
+}
+@media(max-width:420px){
+  .hero h1{font-size:34px;}
+  .result-headline{font-size:28px;}
+}
+</style>
+</head>
+<body>
+
+<!-- LANDING -->
+<div class="page active" id="page-landing">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links">
+      <a href="/">General test</a>
+      <a onclick="goTo('page-landing')">US test</a>
+    </div>
+    <div class="flag-badge"><span class="flag">🇺🇸</span> United States</div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-bg">US</div>
+    <div class="eyebrow">United States political test</div>
+    <h1>Where do you stand<br>in <em>American</em> politics?</h1>
+    <p class="hero-sub">40 scenario-based questions on the issues that define US politics right now. See your position on the compass and how closely you align with each major party.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="startTest()">Start the test</button>
+      <button class="btn-secondary" onclick="goTo('page-landing')">How it works</button>
+    </div>
+  </div>
+
+  <div class="party-strip">
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--dem)"></div>
+      <div class="party-name">Democrat</div>
+      <div class="party-desc">Progressive to centre-left. Public services, civil rights, climate action.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--rep)"></div>
+      <div class="party-name">Republican</div>
+      <div class="party-desc">Conservative. Lower taxes, strong borders, traditional values, Second Amendment.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--lib)"></div>
+      <div class="party-name">Libertarian</div>
+      <div class="party-desc">Maximum freedom, minimum government in all areas of life.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--grn)"></div>
+      <div class="party-name">Green</div>
+      <div class="party-desc">Environmental justice, social equity, anti-corporate politics.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--ind)"></div>
+      <div class="party-name">Independent</div>
+      <div class="party-desc">Neither left nor right. Pragmatic, issue-by-issue thinking.</div>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <div class="info-block">
+      <h3>Scenario-based, not a survey</h3>
+      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
+    </div>
+    <div class="info-block">
+      <h3>Party alignment, not party loyalty</h3>
+      <p>The result shows how closely your answers match each party's platform across all issues, not just the ones you feel strongly about. You might find you align with a party you didn't expect, or that you're genuinely split between two.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUESTION -->
+<div class="page" id="page-test">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div></div>
+    <div class="flag-badge"><span class="flag">🇺🇸</span> US test</div>
+  </nav>
+  <div class="q-shell">
+    <div class="prog-row">
+      <div class="prog-track">
+        <div class="prog-fill" id="prog-fill" style="width:0%"></div>
+        <div class="prog-tip"></div>
+      </div>
+      <span class="prog-txt" id="prog-txt">1 of 40</span>
+    </div>
+    <div class="q-topic-tag" id="q-topic"></div>
+    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
+      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-body" id="q-scen-body"></div>
+    </div>
+    <div class="q-question" id="q-text"></div>
+    <div class="q-opts" id="q-opts"></div>
+    <div class="q-foot">
+      <button class="btn-skip" onclick="skipQ()">Skip</button>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="btn-back" onclick="prevQ()" id="btn-back">Back</button>
+        <button class="btn-primary" onclick="nextQ()" style="padding:12px 30px;font-size:14px">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DEMOGRAPHICS -->
+<div class="page" id="page-demo">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="demo-outer">
+    <div class="page-title">Almost there.</div>
+    <p class="page-sub">A few quick questions before your results. Everything is anonymous.</p>
+    <div class="demo-fields">
+      <div>
+        <div class="field-label">Age</div>
+        <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
+      </div>
+      <div>
+        <div class="field-label">State <span>(optional)</span></div>
+        <select id="d-state"><option value="">Select...</option><option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option><option>Washington D.C.</option></select>
+      </div>
+      <div>
+        <div class="field-label">How do you currently identify? <span>(optional)</span></div>
+        <select id="d-party"><option value="">Prefer not to say</option><option>Democrat</option><option>Republican</option><option>Libertarian</option><option>Green</option><option>Independent</option><option>No party affiliation</option></select>
+      </div>
+    </div>
+    <p class="demo-note">This is never linked to your answers. It helps us understand who takes the test.</p>
+    <button class="btn-primary" onclick="goCalc()">See my results</button>
+  </div>
+</div>
+
+<!-- CALCULATING -->
+<div class="page" id="page-calc">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="calc-shell">
+    <div class="spin-ring"></div>
+    <div class="calc-h">Mapping your answers</div>
+    <p class="calc-p">This will only take a moment.</p>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="page" id="page-results">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links"><a onclick="startTest()">Retake</a><a href="/">General test</a></div>
+    <div class="flag-badge"><span class="flag">🇺🇸</span> US test</div>
+  </nav>
+  <div class="results-shell">
+    <div class="results-head">
+      <div class="result-eyebrow">Your US political alignment</div>
+      <div class="result-headline" id="r-top-party">Democrat</div>
+      <div class="result-sub" id="r-top-desc">Your answers most closely align with the Democratic Party platform.</div>
+    </div>
+
+    <!-- Party alignment bars -->
+    <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Party alignment</div>
+    <div class="party-results" id="party-results"></div>
+
+    <!-- Compass + axis -->
+    <div class="results-grid">
+      <div class="res-card">
+        <div class="res-card-title">Political compass position</div>
+        <div class="compass-wrap">
+          <svg width="340" height="340" viewBox="0 0 340 340">
+            <rect x="10" y="10" width="155" height="155" rx="5" fill="#4B8EF1" opacity="0.11"/>
+            <rect x="175" y="10" width="155" height="155" rx="5" fill="#F5A623" opacity="0.11"/>
+            <rect x="10" y="175" width="155" height="155" rx="5" fill="#3DBF82" opacity="0.11"/>
+            <rect x="175" y="175" width="155" height="155" rx="5" fill="#E85D6B" opacity="0.11"/>
+            <line x1="170" y1="10" x2="170" y2="330" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="10" y1="170" x2="330" y2="170" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="90" y1="10" x2="90" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="250" y1="10" x2="250" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="90" x2="330" y2="90" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="250" x2="330" y2="250" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <text x="90" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
+            <text x="90" y="338" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
+            <text x="8" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 174)">Left</text>
+            <text x="336" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 336 174)">Right</text>
+            <circle id="cdot-ring" cx="170" cy="170" r="20" fill="#1E4D8C" opacity="0.15"/>
+            <circle id="cdot" cx="170" cy="170" r="10" fill="#1E4D8C"/>
+          </svg>
+        </div>
+        <div class="axis-block">
+          <div class="axis-item">
+            <div class="axis-name">Economic</div>
+            <div class="axis-row-labels"><span>Left</span><span>Right</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-econ" style="left:50%"></div></div>
+          </div>
+          <div class="axis-item">
+            <div class="axis-name">Governance</div>
+            <div class="axis-row-labels"><span>Libertarian</span><span>Authoritarian</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-gov" style="left:50%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-card">
+        <div class="res-card-title">What this means</div>
+        <div id="r-insight" style="font-size:14px;color:var(--ink-muted);line-height:1.8;font-weight:300;"></div>
+      </div>
+    </div>
+
+    <!-- Save -->
+    <div class="save-panel">
+      <div class="save-title">Save your results</div>
+      <div class="save-desc">Enter your email and we will send you a link to these results. Never shared.</div>
+      <div class="save-row">
+        <input type="email" id="save-email" placeholder="your@email.com">
+        <button class="btn-primary" onclick="saveResults()" style="padding:13px 24px;font-size:14px;white-space:nowrap">Send results</button>
+      </div>
+      <div class="save-status" id="save-status"></div>
+      <div class="share-row">
+        <button class="btn-ghost" onclick="copyLink()">Copy results link</button>
+        <button class="btn-ghost" onclick="startTest()">Retake test</button>
+        <a href="/" style="text-decoration:none"><button class="btn-ghost">Take general test</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const SB_URL = 'https://rttomfnfyjjssdqfzkaj.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
+
+async function sbInsert(table, data) {
+  const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
+    method:'POST',
+    headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':`Bearer ${SB_KEY}`,'Prefer':'return=representation'},
+    body:JSON.stringify(data)
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+// ============================================================
+// US QUESTION BANK
+// Each option has: t (text), e (economic -2 to +2), g (governance -2 to +2)
+// AND party scores: dem, rep, lib, grn (-2 to +2 how much this answer aligns with that party)
+// ============================================================
+const BANK = [
+
+  // HEALTHCARE
+  {id:'hc1',nl:'Healthcare',pair:'hc-a',fr:'pro',type:'sc',
+   ctx:'He worked his whole life. Lost his job at 58. Lost his insurance with it. Stage 3 cancer. The bill is 400,000 dollars.',
+   q:'Should this man go bankrupt or die because he lost his job?',
+   opts:[
+     {t:'No. Universal healthcare is the only answer. Medicare for All.',e:-2,g:2,dem:2,rep:-2,lib:-2,grn:2},
+     {t:'No. Expand the ACA and protect people in his situation.',e:-1,g:1,dem:2,rep:-1,lib:-1,grn:1},
+     {t:'The ACA is enough. He should have kept his coverage through COBRA.',e:1,g:0,dem:-1,rep:1,lib:0,grn:-1},
+     {t:'This is a personal failure. The government should not run healthcare.',e:2,g:-1,dem:-2,rep:2,lib:1,grn:-2}
+   ]},
+
+  {id:'hc2',nl:'Healthcare',pair:'hc-a',fr:'con',type:'s',
+   q:'Government-run healthcare would destroy medical innovation and give Washington bureaucrats control over your care.',
+   opts:[
+     {t:'Agreed. The private market drives the best healthcare in the world.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-2},
+     {t:'Innovation matters but leaving millions uninsured is an unacceptable trade-off.',e:-1,g:1,dem:2,rep:-1,lib:-1,grn:2},
+     {t:'Single-payer countries outperform the US on outcomes and cost. The argument is wrong.',e:-2,g:1,dem:2,rep:-2,lib:-1,grn:2}
+   ]},
+
+  {id:'hc3',nl:'Healthcare',pair:'hc-b',fr:'neutral',type:'s',
+   q:'Prescription drug prices in the United States are several times higher than in any other wealthy country. The government should be allowed to negotiate them.',
+   opts:[
+     {t:'Yes. Americans should not pay ten times what Europeans pay for the same pill.',e:-1,g:1,dem:2,rep:-1,lib:-1,grn:2},
+     {t:'Only with care. Price controls reduce incentives to develop new drugs.',e:1,g:0,dem:-1,rep:1,lib:1,grn:-1},
+     {t:'No. Government price-setting distorts the market and will ultimately cost lives.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-2}
+   ]},
+
+  // GUNS
+  {id:'gn1',nl:'Gun policy',pair:'gn-a',fr:'pro',type:'sc',
+   ctx:'Uvalde. Sandy Hook. Parkland. The United States averages more than one mass shooting per day.',
+   q:'This is a uniquely American problem. It requires uniquely American action.',
+   opts:[
+     {t:'Yes. Assault weapons bans, universal background checks, red flag laws. Now.',e:0,g:2,dem:2,rep:-2,lib:-2,grn:2},
+     {t:'More enforcement of existing laws and better mental health support.',e:0,g:0,dem:0,rep:1,lib:0,grn:0},
+     {t:'The Second Amendment protects this right. More guns, not fewer, is the answer.',e:0,g:-1,dem:-2,rep:2,lib:2,grn:-2}
+   ]},
+
+  {id:'gn2',nl:'Gun policy',pair:'gn-a',fr:'con',type:'s',
+   q:'The Second Amendment is not about hunting. It is the one right that protects all the others.',
+   opts:[
+     {t:'Agreed. An armed citizenry is the final check on government tyranny.',e:0,g:-2,dem:-2,rep:2,lib:2,grn:-2},
+     {t:'The principle has merit but AR-15s and bump stocks go beyond what the founders intended.',e:0,g:0,dem:1,rep:0,lib:0,grn:0},
+     {t:'This interpretation is a modern invention. Reasonable regulation is constitutional.',e:0,g:1,dem:2,rep:-2,lib:-1,grn:2}
+   ]},
+
+  {id:'gn3',nl:'Gun policy',pair:'gn-b',fr:'neutral',type:'sc',
+   ctx:'Universal background check bill. 90% of Americans support it in polls. It has failed in the Senate for fifteen years.',
+   q:'If 90% of the public supports a law and Congress will not pass it, something is broken.',
+   opts:[
+     {t:'Yes. The gun lobby has captured Congress. Campaign finance is the problem.',e:-1,g:1,dem:2,rep:-2,lib:-1,grn:2},
+     {t:'The filibuster and Senate structure protect minority rights. That is a feature.',e:0,g:0,dem:-1,rep:1,lib:1,grn:-1},
+     {t:'Background checks already exist. The bill is a step toward a national gun registry.',e:0,g:-1,dem:-2,rep:2,lib:1,grn:-2}
+   ]},
+
+  // IMMIGRATION
+  {id:'im1',nl:'Immigration',pair:'im-a',fr:'con',type:'sc',
+   ctx:'The southern border. Record crossing numbers. Overwhelmed border towns. An immigration court backlog of 3 million cases.',
+   q:'The border is not secure. The administration has failed and people are suffering for it.',
+   opts:[
+     {t:'Agreed. We need a wall, more agents, and mass deportations.',e:0,g:2,dem:-2,rep:2,lib:-1,grn:-2},
+     {t:'The system is broken but mass deportation is cruel. Fix the laws, increase processing.',e:0,g:0,dem:1,rep:0,lib:0,grn:1},
+     {t:'Open borders is the only humane and economically rational position.',e:1,g:-2,dem:-1,rep:-2,lib:2,grn:1}
+   ]},
+
+  {id:'im2',nl:'Immigration',pair:'im-a',fr:'pro',type:'sc',
+   ctx:'11 million undocumented people. Most have lived here for over a decade. Many have American children.',
+   q:'You cannot deport a country. These people are Americans in every way that matters.',
+   opts:[
+     {t:'Yes. A path to citizenship is the only realistic and humane answer.',e:0,g:-1,dem:2,rep:-2,lib:0,grn:2},
+     {t:'Earned legal status, not citizenship. They broke the law.',e:0,g:1,dem:-1,rep:1,lib:0,grn:-1},
+     {t:'No amnesty. Deport them and secure the border.',e:0,g:2,dem:-2,rep:2,lib:-1,grn:-2}
+   ]},
+
+  {id:'im3',nl:'Immigration',pair:'im-b',fr:'neutral',type:'s',
+   q:'DACA recipients were brought here as children. They know no other country. Deporting them would be an injustice.',
+   opts:[
+     {t:'Yes. Give them citizenship. They are Americans.',e:0,g:-1,dem:2,rep:-2,lib:1,grn:2},
+     {t:'Permanent legal status but not citizenship. There are proper channels.',e:0,g:0,dem:1,rep:0,lib:0,grn:0},
+     {t:'The law is the law. DACA was unconstitutional overreach from the start.',e:0,g:1,dem:-2,rep:2,lib:-1,grn:-1}
+   ]},
+
+  // ECONOMY & TAXES
+  {id:'tx1',nl:'Taxes and economy',pair:'tx-a',fr:'pro',type:'sc',
+   ctx:'The United States has the highest wealth inequality among developed nations. Billionaires paid an effective tax rate lower than their secretaries.',
+   q:'The tax code is rigged for the rich. A wealth tax is long overdue.',
+   opts:[
+     {t:'Yes. Extreme wealth should be taxed to fund schools, healthcare, and infrastructure.',e:-2,g:2,dem:2,rep:-2,lib:-2,grn:2},
+     {t:'Close the loopholes. The rich should pay the rates the law intends.',e:-1,g:1,dem:2,rep:-1,lib:-1,grn:1},
+     {t:'Low taxes on the wealthy drive investment and job creation. Raising them is self-defeating.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-2}
+   ]},
+
+  {id:'tx2',nl:'Taxes and economy',pair:'tx-a',fr:'con',type:'s',
+   q:'The 2017 tax cuts worked. The economy grew, unemployment fell, and workers saw real wage gains.',
+   opts:[
+     {t:'Yes. Lower corporate taxes create jobs and growth.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-2},
+     {t:'The economy grew, but the gains went almost entirely to the top. That is not a success.',e:-1,g:0,dem:2,rep:-2,lib:0,grn:2},
+     {t:'The cuts added two trillion to the deficit. Future generations will pay for them.',e:-2,g:1,dem:2,rep:-2,lib:-1,grn:2}
+   ]},
+
+  {id:'tx3',nl:'Taxes and economy',pair:'tx-b',fr:'neutral',type:'s',
+   q:'Raising the federal minimum wage to 15 dollars an hour would hurt small businesses and cost jobs.',
+   opts:[
+     {t:'Agreed. Small businesses cannot afford it and workers will be cut.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-1},
+     {t:'The evidence on job losses is mixed. Workers earning more also spend more.',e:0,g:0,dem:1,rep:0,lib:0,grn:1},
+     {t:'No. Minimum wage workers are subsidising corporate profits. Raise it higher.',e:-2,g:1,dem:2,rep:-2,lib:-2,grn:2}
+   ]},
+
+  // CLIMATE
+  {id:'cl1',nl:'Climate and energy',pair:'cl-a',fr:'pro',type:'sc',
+   ctx:'2023 was the hottest year ever recorded. The western US burns every summer. Hurricanes have become catastrophic.',
+   q:'This is a national emergency and the US must lead a radical response.',
+   opts:[
+     {t:'Yes. A Green New Deal, net-zero by 2035, and end to fossil fuel subsidies.',e:-2,g:2,dem:2,rep:-2,lib:-1,grn:2},
+     {t:'Serious action yes, but through market incentives not government mandates.',e:-1,g:0,dem:1,rep:0,lib:1,grn:1},
+     {t:'Climate policy kills energy jobs and raises prices. Go slow.',e:1,g:-1,dem:-2,rep:2,lib:0,grn:-2},
+     {t:'The US should withdraw from climate agreements and prioritise energy independence.',e:2,g:0,dem:-2,rep:2,lib:1,grn:-2}
+   ]},
+
+  {id:'cl2',nl:'Climate and energy',pair:'cl-a',fr:'con',type:'s',
+   q:'US military spending dwarfs every other nation. It is bloated, misallocated, and largely serves the defence industry.',
+   opts:[
+     {t:'Agreed. Energy independence protects American jobs and global influence.',e:2,g:1,dem:-2,rep:2,lib:0,grn:-2},
+     {t:'Energy independence matters but can be achieved through renewables as well.',e:-1,g:0,dem:2,rep:-1,lib:0,grn:2},
+     {t:'No. Doubling down on fossil fuels is a bet on American decline.',e:-2,g:0,dem:2,rep:-2,lib:-1,grn:2}
+   ]},
+
+  // ABORTION
+  {id:'ab1',nl:'Abortion rights',pair:'ab-a',fr:'pro',type:'sc',
+   ctx:'Dobbs. Thirteen states now have near-total abortion bans. Women are being prosecuted. Doctors are fleeing.',
+   q:'Overturning Roe was a catastrophic mistake and federal protection must be restored.',
+   opts:[
+     {t:'Yes. Abortion access is a constitutional right. Congress must act.',e:0,g:-1,dem:2,rep:-2,lib:1,grn:2},
+     {t:'The states should decide. That is how federalism works.',e:0,g:1,dem:-2,rep:2,lib:0,grn:-2},
+     {t:'I support protecting life from conception. Dobbs was correct.',e:0,g:2,dem:-2,rep:2,lib:-1,grn:-2}
+   ]},
+
+  {id:'ab2',nl:'Abortion rights',pair:'ab-a',fr:'con',type:'s',
+   q:'Abortion is the taking of a human life and the law should reflect that.',
+   opts:[
+     {t:'Yes. Life begins at conception and deserves legal protection.',e:0,g:2,dem:-2,rep:2,lib:-1,grn:-1},
+     {t:'I believe life begins at conception but do not think the law should impose that view.',e:0,g:0,dem:0,rep:0,lib:1,grn:0},
+     {t:'No. A fetus is not a person and the choice belongs entirely to the pregnant person.',e:0,g:-2,dem:2,rep:-2,lib:2,grn:2}
+   ]},
+
+  // STUDENT DEBT
+  {id:'sd1',nl:'Student debt and education',pair:'sd-a',fr:'pro',type:'sc',
+   ctx:'45 million Americans hold 1.7 trillion dollars in student loan debt. Many owe more than they borrowed decades ago.',
+   q:'You promised them an education would pay off. It did not. Cancel the debt.',
+   opts:[
+     {t:'Yes. Cancel it all. A college education should be free in the wealthiest country on earth.',e:-2,g:2,dem:2,rep:-2,lib:-1,grn:2},
+     {t:'Targeted relief for the most burdened. Not a blanket cancellation for everyone.',e:-1,g:1,dem:1,rep:-1,lib:-1,grn:1},
+     {t:'You signed the loan. Pay it back. This is unfair to people who chose not to go to college.',e:2,g:-1,dem:-2,rep:2,lib:1,grn:-2}
+   ]},
+
+  {id:'sd2',nl:'Student debt and education',pair:'sd-a',fr:'con',type:'s',
+   q:'Student loan cancellation is a handout to the college-educated at the expense of tradespeople and workers who chose not to attend.',
+   opts:[
+     {t:'Yes. It is regressive and fundamentally unfair.',e:2,g:-1,dem:-2,rep:2,lib:1,grn:-1},
+     {t:'The cost sharing is imperfect but the debt crisis causes real harm to millions.',e:-1,g:1,dem:2,rep:-1,lib:-1,grn:2},
+     {t:'Make college free for everyone going forward. That is the fairer solution.',e:-2,g:2,dem:2,rep:-2,lib:-2,grn:2}
+   ]},
+
+  // RACE AND SOCIAL JUSTICE
+  {id:'rj1',nl:'Race and justice',pair:'rj-a',fr:'pro',type:'sc',
+   ctx:'Black Americans are incarcerated at five times the rate of white Americans. They are twice as likely to be killed by police.',
+   q:'These are not accidents. They are the products of systemic racism that policy must address.',
+   opts:[
+     {t:'Yes. Policing reform, criminal justice reform, and investment in Black communities.',e:-2,g:0,dem:2,rep:-2,lib:-1,grn:2},
+     {t:'Reform is needed but the systemic racism framing is contested and divisive.',e:0,g:0,dem:-1,rep:1,lib:0,grn:-1},
+     {t:'The disparities reflect individual choices and crime rates, not systemic bias.',e:2,g:1,dem:-2,rep:2,lib:0,grn:-2}
+   ]},
+
+  {id:'rj2',nl:'Race and justice',pair:'rj-a',fr:'con',type:'s',
+   q:'Defunding the police would devastate the communities that rely on policing most. Crime would surge.',
+   opts:[
+     {t:'Agreed. More police, more funding, stronger law and order.',e:0,g:2,dem:-1,rep:2,lib:-1,grn:-2},
+     {t:'Nobody serious is proposing abolition. Reform and accountability is the real debate.',e:0,g:0,dem:2,rep:-1,lib:0,grn:1},
+     {t:'Reimagining public safety through community investment makes more sense than more policing.',e:0,g:-1,dem:1,rep:-2,lib:1,grn:2}
+   ]},
+
+  // VOTING AND DEMOCRACY
+  {id:'vt1',nl:'Voting and democracy',pair:'vt-a',fr:'pro',type:'s',
+   q:'Republican-led states have made it harder to vote, targeting communities of colour. This is voter suppression.',
+   opts:[
+     {t:'Yes. Automatic voter registration and federal voting rights protection are necessary.',e:-1,g:-1,dem:2,rep:-2,lib:1,grn:2},
+     {t:'Voter ID laws are reasonable. Every vote cast should be a legal one.',e:0,g:1,dem:-1,rep:2,lib:0,grn:-1},
+     {t:'Voting should require effort. Not everyone who is eligible should vote.',e:0,g:2,dem:-2,rep:2,lib:-1,grn:-2}
+   ]},
+
+  {id:'vt2',nl:'Voting and democracy',pair:'vt-a',fr:'con',type:'s',
+   q:'The 2020 election was stolen. The evidence was suppressed by the media and the courts.',
+   opts:[
+     {t:'Yes. Widespread fraud changed the outcome.',e:0,g:2,dem:-2,rep:1,lib:-2,grn:-2},
+     {t:'No. Sixty courts, Republican officials, and independent auditors found no fraud.',e:0,g:-2,dem:2,rep:-2,lib:2,grn:2},
+     {t:'There were legitimate questions about process but not evidence of outcome-changing fraud.',e:0,g:0,dem:0,rep:0,lib:0,grn:0}
+   ]},
+
+  // FOREIGN POLICY
+  {id:'fp1',nl:'Foreign policy',pair:'fp-a',fr:'pro',type:'sc',
+   ctx:'Ukraine. Two years of war. Over 200 billion in US aid committed. The conflict shows no sign of ending.',
+   q:'Continuing to fund Ukraine is the right choice. Abandoning them would be a betrayal.',
+   opts:[
+     {t:'Yes. Stopping Russian aggression now is cheaper than dealing with it later.',e:0,g:1,dem:2,rep:-1,lib:-2,grn:-1},
+     {t:'We should push for negotiations. This war cannot be won militarily.',e:0,g:0,dem:-1,rep:0,lib:1,grn:1},
+     {t:'This is not our war. America first means Europe funds its own defence.',e:0,g:-1,dem:-2,rep:1,lib:2,grn:0}
+   ]},
+
+  {id:'fp2',nl:'Foreign policy',pair:'fp-a',fr:'con',type:'s',
+   q:'America\'s military spending dwarfs every other nation. It is bloated, misallocated, and largely serves the defence industry.',
+   opts:[
+     {t:'Yes. Cut the defence budget and invest in domestic priorities.',e:-2,g:-1,dem:1,rep:-2,lib:1,grn:2},
+     {t:'The military budget should be scrutinised but global commitments require real spending.',e:0,g:0,dem:0,rep:0,lib:0,grn:0},
+     {t:'American military strength is the foundation of the global order. Cut it at your peril.',e:1,g:1,dem:-1,rep:2,lib:-1,grn:-2}
+   ]},
+
+  // SOCIAL ISSUES
+  {id:'si1',nl:'Social and cultural issues',pair:'si-a',fr:'pro',type:'sc',
+   ctx:'Multiple states have passed laws restricting gender-affirming care for transgender youth, including those with parental consent.',
+   q:'The government has no right to tell parents they cannot provide medical care their child needs.',
+   opts:[
+     {t:'Agreed. These laws are cruel and unconstitutional. Trans kids deserve support.',e:0,g:-2,dem:2,rep:-2,lib:2,grn:2},
+     {t:'Children cannot consent to these decisions. Parental rights do not override child welfare concerns.',e:0,g:1,dem:-1,rep:1,lib:-1,grn:-1},
+     {t:'These treatments are experimental. States are right to protect children from them.',e:0,g:2,dem:-2,rep:2,lib:-2,grn:-2}
+   ]},
+
+  {id:'si2',nl:'Social and cultural issues',pair:'si-a',fr:'con',type:'s',
+   q:'The promotion of transgender identity in schools is ideological indoctrination of children.',
+   opts:[
+     {t:'Yes. Schools should not be in the business of gender ideology.',e:0,g:2,dem:-2,rep:2,lib:-1,grn:-2},
+     {t:'Age-appropriate, factual information about different people is not indoctrination.',e:0,g:-1,dem:2,rep:-2,lib:1,grn:2},
+     {t:'Protecting trans kids from bullying and erasure is a basic duty of schools.',e:0,g:-2,dem:2,rep:-2,lib:1,grn:2}
+   ]},
+
+  // GOVERNMENT AND INSTITUTIONS
+  {id:'gi1',nl:'Government and institutions',pair:'gi-a',fr:'pro',type:'s',
+   q:'The federal government is too large, too expensive, and deeply intrusive in everyday life.',
+   opts:[
+     {t:'Yes. Slash spending, shrink agencies, and return power to the states.',e:2,g:-2,dem:-2,rep:2,lib:2,grn:-1},
+     {t:'Some functions have grown beyond their mandate but dismantling them would cause real harm.',e:0,g:0,dem:1,rep:0,lib:0,grn:0},
+     {t:'Government investment in education, healthcare, and infrastructure built the American middle class.',e:-2,g:1,dem:2,rep:-2,lib:-2,grn:2}
+   ]},
+
+  {id:'gi2',nl:'Government and institutions',pair:'gi-a',fr:'con',type:'sc',
+   ctx:'The executive branch has used emergency powers to bypass Congress on immigration, student loans, and environmental rules.',
+   q:'Presidential overreach, from either party, is a threat to constitutional government.',
+   opts:[
+     {t:'Yes. Congress must reassert its authority. The imperial presidency must end.',e:0,g:-2,dem:0,rep:0,lib:2,grn:1},
+     {t:'When Congress is gridlocked, executive action is sometimes the only way to govern.',e:0,g:1,dem:1,rep:-1,lib:-1,grn:0},
+     {t:'The president needs these powers to cut through bureaucratic obstruction.',e:0,g:2,dem:-1,rep:1,lib:-2,grn:-1}
+   ]},
+
+  // SOCIAL SECURITY AND MEDICARE
+  {id:'ss1',nl:'Social Security and Medicare',pair:'ss-a',fr:'pro',type:'s',
+   q:'Social Security and Medicare are promises made to working Americans. Cutting them is a betrayal.',
+   opts:[
+     {t:'Yes. These programmes are sacred commitments. Protect and expand them.',e:-2,g:1,dem:2,rep:-2,lib:-2,grn:2},
+     {t:'They need reform to remain solvent, but cuts to benefits are off the table.',e:0,g:0,dem:1,rep:0,lib:-1,grn:1},
+     {t:'They are unsustainable. Raise the retirement age and means-test benefits.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-2}
+   ]},
+
+  {id:'ss2',nl:'Social Security and Medicare',pair:'ss-a',fr:'con',type:'s',
+   q:'Allowing younger workers to invest their Social Security contributions privately would produce far better returns.',
+   opts:[
+     {t:'Yes. Personal accounts would give workers real ownership of their retirement.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-2},
+     {t:'2008 showed what happens when retirement savings hit the stock market. No.',e:-2,g:1,dem:2,rep:-2,lib:-2,grn:2},
+     {t:'A hybrid approach could work but wholesale privatisation is too risky.',e:0,g:0,dem:0,rep:0,lib:1,grn:0}
+   ]},
+
+  // TRADE
+  {id:'tr1',nl:'Trade and jobs',pair:'tr-a',fr:'pro',type:'sc',
+   ctx:'China has taken millions of American manufacturing jobs through currency manipulation, subsidies, and intellectual property theft.',
+   q:'Trade with China as usual is not free trade. It is surrender.',
+   opts:[
+     {t:'Yes. Tariffs and a decoupling strategy are necessary for American workers.',e:0,g:1,dem:0,rep:2,lib:-1,grn:0},
+     {t:'Tariffs hurt American consumers. Compete through innovation, not protectionism.',e:2,g:-1,dem:0,rep:-1,lib:2,grn:-1},
+     {t:'Multilateral pressure through allies is more effective than unilateral tariffs.',e:-1,g:0,dem:2,rep:-1,lib:0,grn:1}
+   ]},
+
+  // EDUCATION
+  {id:'ed1',nl:'Education',pair:'ed-a',fr:'pro',type:'s',
+   q:'Public schools are underfunded and failing. The federal government must invest far more in education.',
+   opts:[
+     {t:'Yes. Equal funding for every school, regardless of zip code.',e:-2,g:2,dem:2,rep:-1,lib:-1,grn:2},
+     {t:'More money is not always the answer. School choice and accountability matter more.',e:1,g:0,dem:-1,rep:2,lib:1,grn:-1},
+     {t:'Education should be left entirely to states and local communities.',e:2,g:-2,dem:-2,rep:1,lib:2,grn:-2}
+   ]},
+
+  {id:'ed2',nl:'Education',pair:'ed-a',fr:'con',type:'s',
+   q:'Parents should be able to use public school funding to send their child to any school, public, private, or religious.',
+   opts:[
+     {t:'Yes. School choice empowers parents and creates competition that raises all schools.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-2},
+     {t:'Vouchers drain public schools and subsidise religious education. Keep funding public.',e:-2,g:1,dem:2,rep:-2,lib:-1,grn:2},
+     {t:'Charter schools are fine. Vouchers for private religious schools cross a line.',e:0,g:0,dem:1,rep:0,lib:1,grn:0}
+   ]},
+
+  // CONSTITUTION AND COURTS
+  {id:'co1',nl:'Courts and Constitution',pair:'co-a',fr:'pro',type:'s',
+   q:'The Supreme Court has become a political institution. Its legitimacy is in crisis and it needs structural reform.',
+   opts:[
+     {t:'Yes. Expand the court, impose term limits, and add enforceable ethics rules.',e:-1,g:2,dem:2,rep:-2,lib:0,grn:2},
+     {t:'Ethics reform yes. Packing the court would make the crisis worse.',e:0,g:0,dem:0,rep:0,lib:0,grn:0},
+     {t:'The court is working as intended. Reform demands are sour grapes from losing sides.',e:0,g:-1,dem:-2,rep:2,lib:-1,grn:-2}
+   ]},
+
+  {id:'co2',nl:'Courts and Constitution',pair:'co-a',fr:'con',type:'s',
+   q:'The Constitution says what it says. Judges who interpret it based on modern sensibilities are rewriting it without democratic consent.',
+   opts:[
+     {t:'Agreed. Originalism is the only legitimate method of constitutional interpretation.',e:0,g:1,dem:-2,rep:2,lib:1,grn:-2},
+     {t:'Interpretation has always evolved. A living constitution reflects lived reality.',e:0,g:-1,dem:2,rep:-2,lib:0,grn:2},
+     {t:'Both approaches have merit and are used selectively by both sides.',e:0,g:0,dem:0,rep:0,lib:0,grn:0}
+   ]},
+
+  // BIG TECH
+  {id:'bt1',nl:'Big Tech',pair:'bt-a',fr:'pro',type:'sc',
+   ctx:'Amazon, Google, Apple, and Meta have combined market caps exceeding the GDP of most countries.',
+   q:'No company should be allowed to accumulate this much power. Break them up.',
+   opts:[
+     {t:'Yes. Antitrust law exists for this. Use it.',e:-2,g:2,dem:2,rep:-1,lib:-2,grn:2},
+     {t:'Target specific anti-competitive practices. Breaking them up bluntly is too crude.',e:-1,g:1,dem:1,rep:0,lib:-1,grn:1},
+     {t:'Their size reflects innovation and consumer choice. Leave the market alone.',e:2,g:-2,dem:-2,rep:1,lib:2,grn:-2}
+   ]},
+
+  // FINAL QUESTIONS - broader positioning
+  {id:'br1',nl:'Role of government',pair:'br-a',fr:'neutral',type:'s',
+   q:'The federal government should guarantee every American a job, healthcare, housing, and education.',
+   opts:[
+     {t:'Yes. These are rights, not privileges.',e:-2,g:2,dem:2,rep:-2,lib:-2,grn:2},
+     {t:'Healthcare and education at minimum. A job guarantee is too far.',e:-1,g:1,dem:1,rep:-1,lib:-1,grn:1},
+     {t:'No. A government that guarantees everything controls everything.',e:2,g:-2,dem:-2,rep:2,lib:2,grn:-2}
+   ]},
+
+  {id:'br2',nl:'Role of government',pair:'br-a',fr:'neutral',type:'s',
+   q:'America is a great country. Its best days are behind it.',
+   opts:[
+     {t:'No. American greatness comes from constant renewal and willingness to change.',e:-1,g:0,dem:2,rep:-1,lib:0,grn:1},
+     {t:'We can be great again by returning to the values and policies that made us strong.',e:0,g:1,dem:-1,rep:2,lib:-1,grn:-1},
+     {t:'Greatness is a myth used to resist change. Face the problems honestly.',e:-1,g:-1,dem:1,rep:-2,lib:1,grn:2}
+   ]},
+
+  {id:'br3',nl:'Individual rights',pair:'br-b',fr:'neutral',type:'s',
+   q:'The greatest threats to American freedom come from within — government overreach, surveillance, and the erosion of civil liberties.',
+   opts:[
+     {t:'Yes. The Patriot Act, NSA surveillance, and the war on drugs are the real threats.',e:-1,g:-2,dem:1,rep:-1,lib:2,grn:1},
+     {t:'External threats are real too. Balancing security and liberty is genuinely hard.',e:0,g:0,dem:0,rep:1,lib:0,grn:0},
+     {t:'Threats from China, Russia, and terrorism require strong internal security.',e:1,g:2,dem:-1,rep:2,lib:-2,grn:-1}
+   ]},
+
+  {id:'br4',nl:'Individual rights',pair:'br-b',fr:'neutral',type:'s',
+   q:'Corporations have too much influence over American politics, the economy, and daily life.',
+   opts:[
+     {t:'Yes. Citizens United was a catastrophe. Public financing, strict lobbying limits.',e:-2,g:2,dem:2,rep:-2,lib:-1,grn:2},
+     {t:'Corporate influence is a real problem but heavy-handed regulation creates its own abuses.',e:0,g:0,dem:0,rep:0,lib:0,grn:0},
+     {t:'Corporate freedom is economic freedom. Government is a bigger threat than any company.',e:2,g:-2,dem:-2,rep:1,lib:2,grn:-2}
+   ]}
+];
+
+// ============================================================
+// SHUFFLER with strength weighting
+// ============================================================
+function buildOrder(bank) {
+  function strength(q) {
+    return Math.max(
+      ...q.opts.flatMap(o => [Math.abs(o.e), Math.abs(o.g),
+        Math.abs(o.dem), Math.abs(o.rep), Math.abs(o.lib), Math.abs(o.grn)])
+    );
+  }
+  const sorted = [...bank].sort((a,b) => strength(b) - strength(a) + (Math.random()-0.5)*0.5);
+  const MIN_GAP = Math.max(6, Math.floor(bank.length * 0.25));
+  for (let pass = 0; pass < 60; pass++) {
+    let moved = false;
+    for (let i = 0; i < sorted.length; i++) {
+      for (let j = i+1; j < sorted.length; j++) {
+        if (sorted[i].pair === sorted[j].pair && (j-i) < MIN_GAP) {
+          for (let k = Math.min(i+MIN_GAP, sorted.length-1); k < sorted.length; k++) {
+            if (k===j) continue;
+            let ok = true;
+            for (let m = 0; m < sorted.length; m++) {
+              if (m===k||m===j) continue;
+              if (sorted[m].pair === sorted[k].pair && Math.abs(m-j) < MIN_GAP) { ok=false; break; }
+            }
+            if (ok) { [sorted[j],sorted[k]] = [sorted[k],sorted[j]]; moved=true; break; }
+          }
+          if (moved) break;
+        }
+      }
+      if (moved) break;
+    }
+    if (!moved) break;
+  }
+  return sorted;
+}
+
+// ============================================================
+// STATE
+// ============================================================
+let qi = 0, picked = -1, answers = [], qs = [];
+
+function goTo(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function startTest() {
+  qi = 0; picked = -1; answers = [];
+  qs = buildOrder(BANK);
+  document.getElementById('save-status').textContent = '';
+  document.getElementById('save-email').value = '';
+  renderQ();
+  goTo('page-test');
+}
+
+function renderQ() {
+  const q = qs[qi], total = qs.length;
+  document.getElementById('prog-fill').style.width = ((qi/total)*100).toFixed(1)+'%';
+  document.getElementById('prog-txt').textContent = (qi+1)+' of '+total;
+  document.getElementById('q-topic').textContent = q.nl;
+  const sw = document.getElementById('q-scen-wrap');
+  if (q.ctx) { sw.style.display='block'; document.getElementById('q-scen-body').textContent=q.ctx; }
+  else { sw.style.display='none'; }
+  document.getElementById('q-text').textContent = q.q;
+  const container = document.getElementById('q-opts');
+  container.innerHTML = '';
+  q.opts.forEach((o,i) => {
+    const d = document.createElement('div');
+    d.className = 'q-opt';
+    d.textContent = o.t;
+    d.onclick = () => pickOpt(i,d);
+    container.appendChild(d);
+  });
+  const prev = answers.find(a => a.id===q.id);
+  if (prev) { picked=prev.pick; container.children[prev.pick].classList.add('picked'); }
+  else { picked=-1; }
+  const bb = document.getElementById('btn-back');
+  if (bb) bb.disabled = (qi===0);
+}
+
+function pickOpt(i,el) {
+  document.querySelectorAll('.q-opt').forEach(o => o.classList.remove('picked'));
+  el.classList.add('picked'); picked=i;
+}
+
+function nextQ() {
+  const q = qs[qi];
+  if (picked >= 0) {
+    answers = answers.filter(a => a.id !== q.id);
+    answers.push({id:q.id, pick:picked, ...q.opts[picked]});
+  }
+  picked=-1; qi++;
+  if (qi >= qs.length) { goTo('page-demo'); return; }
+  renderQ();
+}
+
+function prevQ() {
+  if (qi<=0) return;
+  qi--; renderQ();
+}
+
+function skipQ() {
+  picked=-1; qi++;
+  if (qi >= qs.length) { goTo('page-demo'); return; }
+  renderQ();
+}
+
+// ============================================================
+// SCORING
+// ============================================================
+function score() {
+  // Axis scores
+  let eSum=0, gSum=0, eMaxT=0, gMaxT=0;
+  const partyTotals = {dem:0,rep:0,lib:0,grn:0,ind:0};
+  const partyMaxes  = {dem:0,rep:0,lib:0,grn:0,ind:0};
+
+  answers.forEach(a => {
+    const q = qs.find(q => q.id===a.id);
+    if (!q) return;
+
+    eSum += a.e; gSum += a.g;
+    eMaxT += Math.max(...q.opts.map(o => Math.abs(o.e)));
+    gMaxT += Math.max(...q.opts.map(o => Math.abs(o.g)));
+
+    ['dem','rep','lib','grn'].forEach(p => {
+      partyTotals[p] += (a[p]||0);
+      partyMaxes[p]  += Math.max(...q.opts.map(o => Math.abs(o[p]||0)));
+    });
+  });
+
+  const eScore = eMaxT > 0 ? Math.max(-1, Math.min(1, eSum/eMaxT)) : 0;
+  const gScore = gMaxT > 0 ? Math.max(-1, Math.min(1, gSum/gMaxT)) : 0;
+
+  // Convert party sums to 0-100 alignment percentages
+  // partyTotals can be negative (strong disagreement) or positive (strong agreement)
+  // Normalise: score/maxPossible maps to [-1,1], then shift to [0,100]
+  const partyScores = {};
+  ['dem','rep','lib','grn'].forEach(p => {
+    const raw = partyMaxes[p] > 0 ? partyTotals[p]/partyMaxes[p] : 0;
+    partyScores[p] = Math.round(((raw + 1) / 2) * 100);
+  });
+
+  // Independent score = how close to centre of econ/gov compass
+  const distFromCentre = Math.sqrt(eScore*eScore + gScore*gScore);
+  partyScores.ind = Math.round(Math.max(0, (1 - distFromCentre*1.5)) * 100);
+
+  return { eScore, gScore, partyScores };
+}
+
+const PARTY_META = {
+  dem: { name:'Democrat', color:'var(--dem)', barClass:'bar-dem',
+         desc:'Your answers most closely match the Democratic Party platform. You tend to favour government intervention to reduce inequality, protect civil rights, and address climate change.' },
+  rep: { name:'Republican', color:'var(--rep)', barClass:'bar-rep',
+         desc:'Your answers most closely match the Republican Party platform. You tend to favour lower taxes, strong borders, traditional values, and a powerful national defence.' },
+  lib: { name:'Libertarian', color:'var(--lib)', barClass:'bar-lib',
+         desc:'Your answers most closely match the Libertarian Party platform. You want maximum freedom in both economic and personal life, with minimal government intervention in either.' },
+  grn: { name:'Green', color:'var(--grn)', barClass:'bar-grn',
+         desc:'Your answers most closely match the Green Party platform. You prioritise environmental justice, corporate accountability, and a fundamental restructuring of the economy.' },
+  ind: { name:'Independent', color:'var(--ind)', barClass:'bar-ind',
+         desc:'Your answers do not strongly align with any single party. You hold mixed views that draw from multiple traditions, typical of the roughly 40% of Americans who identify as independents.' }
+};
+
+function renderResults() {
+  const { eScore, gScore, partyScores } = score();
+
+  // Sort parties by alignment
+  const ranked = Object.entries(partyScores).sort((a,b) => b[1]-a[1]);
+  const topParty = ranked[0][0];
+  const meta = PARTY_META[topParty];
+
+  document.getElementById('r-top-party').textContent = meta.name;
+  document.getElementById('r-top-desc').textContent = meta.desc;
+
+  // Party bars
+  const container = document.getElementById('party-results');
+  container.innerHTML = '';
+  ranked.forEach(([party, pct], i) => {
+    const m = PARTY_META[party];
+    const row = document.createElement('div');
+    row.className = 'party-row' + (i===0?' top-match':'');
+    row.innerHTML = `
+      <div class="party-row-rank">${i+1}</div>
+      <div class="party-row-info"><div class="party-row-name">${m.name}</div><div class="party-row-sub">${pct}% alignment</div></div>
+      <div class="party-row-bar-wrap"><div class="party-row-bar ${m.barClass}" style="width:0%" data-w="${pct}%"></div></div>
+      <div class="party-row-pct">${pct}%</div>
+    `;
+    container.appendChild(row);
+  });
+
+  // Compass dot (340x340, centre=170, range=152 each side)
+  const dotX = (170 + eScore*152).toFixed(1);
+  const dotY = (170 - gScore*152).toFixed(1);
+  document.getElementById('cdot').setAttribute('cx', dotX);
+  document.getElementById('cdot').setAttribute('cy', dotY);
+  document.getElementById('cdot-ring').setAttribute('cx', dotX);
+  document.getElementById('cdot-ring').setAttribute('cy', dotY);
+
+  setTimeout(() => {
+    document.getElementById('ax-econ').style.left = (((eScore+1)/2)*100).toFixed(1)+'%';
+    document.getElementById('ax-gov').style.left = (((gScore+1)/2)*100).toFixed(1)+'%';
+    document.querySelectorAll('.party-row-bar[data-w]').forEach(el => { el.style.width = el.dataset.w; });
+  }, 200);
+
+  // Gap to second place
+  const gap = ranked[0][1] - ranked[1][1];
+  const gapText = gap < 8 ? `Your result is close — only ${gap} points separates you from ${PARTY_META[ranked[1][0]].name}. You may genuinely straddle both traditions.`
+    : gap < 20 ? `You align meaningfully with ${PARTY_META[ranked[1][0]].name} too, scoring ${ranked[1][1]}%.`
+    : `Your alignment with ${meta.name} is clear, with ${gap} points separating you from the next closest party.`;
+
+  document.getElementById('r-insight').innerHTML = `
+    <p style="margin-bottom:14px">${meta.desc}</p>
+    <p>${gapText}</p>
+  `;
+}
+
+function goCalc() {
+  goTo('page-calc');
+  setTimeout(() => { renderResults(); goTo('page-results'); }, 1800);
+}
+
+// ============================================================
+// SAVE
+// ============================================================
+async function saveResults() {
+  const email = document.getElementById('save-email').value.trim();
+  const statusEl = document.getElementById('save-status');
+  if (!email || !email.includes('@')) {
+    statusEl.style.color='var(--red)'; statusEl.textContent='Please enter a valid email.'; return;
+  }
+  statusEl.style.color='var(--ink-muted)'; statusEl.textContent='Saving...';
+  const { partyScores } = score();
+  try {
+    await sbInsert('coreopinion_results', {
+      email, mode:'us',
+      archetype: Object.entries(partyScores).sort((a,b)=>b[1]-a[1])[0][0],
+      bias_breakdown: partyScores,
+      age: document.getElementById('d-age').value||null,
+      country: 'United States',
+      political_id: document.getElementById('d-party').value||null
+    });
+    statusEl.style.color='var(--green)'; statusEl.textContent='Saved. We will email your results to '+email;
+  } catch(e) {
+    statusEl.style.color='var(--red)'; statusEl.textContent='Something went wrong. Please try again.';
+  }
+}
+
+function copyLink() {
+  const {partyScores} = score();
+  const top = Object.entries(partyScores).sort((a,b)=>b[1]-a[1])[0];
+  const text = `My US political alignment: ${PARTY_META[top[0]].name} ${top[1]}% | coreopinion.org/us`;
+  navigator.clipboard.writeText(text).then(() => {
+    document.getElementById('save-status').style.color='var(--green)';
+    document.getElementById('save-status').textContent='Copied to clipboard.';
+  });
+}
+</script>
+</body>
+</html>
