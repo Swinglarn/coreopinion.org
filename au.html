@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Australian Political Compass Test 2026 | CoreOpinion</title>
+<meta name="description" content="Where do you stand in Australian politics? 40 scenario-based questions on Australian issues. See your alignment with Labor, Liberal, Nationals, Greens, and more.">
+<meta name="keywords" content="Australian political test, Australia political compass, Labor Liberal test, political alignment quiz Australia, where do I stand Australian politics 2026, Albanese Dutton quiz, Australian election quiz">
+<meta name="author" content="CoreOpinion">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://coreopinion.org/au">
+<meta name="theme-color" content="#F9F8F6">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coreopinion.org/au">
+<meta property="og:title" content="Australian Political Compass Test 2026 | CoreOpinion">
+<meta property="og:description" content="40 scenario-based questions on Australian politics. Find your position on the compass and see your alignment with Labor, Liberal, Greens, and more.">
+<meta property="og:site_name" content="CoreOpinion">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Australian Political Compass Test 2026 | CoreOpinion">
+<meta name="twitter:description" content="Scenario-based Australian political quiz. Full party alignment across Labor, Liberal, Nationals, Greens, and Teals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A0C0F;--ink-soft:#3D4147;--ink-muted:#7A7F88;--ink-faint:#B0B5BC;
+  --parchment:#F9F8F6;--parchment-warm:#F3F1EE;--white:#FFFFFF;
+  --navy:#1E4D8C;--navy-soft:#E8EFF9;
+  --border:#DDD9D2;--border-soft:#EAE7E1;
+  --green:#2D6A4F;
+  --alp:#CC0000;--alp-soft:#FAEAEA;
+  --lib:#003DA5;--lib-soft:#E5ECFA;
+  --nat:#006400;--nat-soft:#E5F5E4;
+  --grn:#008000;--grn-soft:#E5F5E4;
+  --teal:#008080;--teal-soft:#E5F5F5;
+  --onation:#FF6600;--onation-soft:#FEF0E5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--parchment);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;font-weight:300;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.4;}
+.page{display:none}.page.active{display:block;animation:rise 0.4s cubic-bezier(0.22,1,0.36,1)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;border-bottom:1px solid var(--border-soft);background:rgba(249,248,246,0.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);cursor:pointer;letter-spacing:-0.5px;line-height:1;text-decoration:none;}
+.logo span{color:#2A5DB0}
+.nav-links{display:flex;gap:22px}.nav-links a{font-size:13px;color:var(--ink-muted);text-decoration:none;cursor:pointer;font-weight:400;transition:color 0.15s;}.nav-links a:hover{color:var(--ink)}
+.flag-badge{font-size:13px;color:var(--ink-muted);display:flex;align-items:center;gap:8px;}.flag-badge .flag{font-size:20px}
+.btn-primary{background:var(--ink);color:var(--white);border:none;padding:16px 36px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:400;transition:opacity 0.15s;display:inline-block;}.btn-primary:hover{opacity:0.84}
+.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--border);padding:15px 32px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;}
+.btn-ghost{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:10px 22px;border-radius:4px;font-size:13px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}.btn-ghost:hover{border-color:var(--border);color:var(--ink)}
+.btn-back{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:11px 22px;border-radius:4px;font-size:14px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}.btn-back:disabled{opacity:0.28;cursor:default;}
+.hero{max-width:980px;margin:0 auto;padding:88px 52px 72px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;right:-20px;top:10px;font-family:'Cormorant Garamond',serif;font-size:260px;font-weight:700;color:rgba(10,12,15,0.022);line-height:1;pointer-events:none;letter-spacing:-8px;user-select:none;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:28px;}.eyebrow::before{content:'';display:block;width:28px;height:1px;background:#2A5DB0}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:70px;font-weight:600;line-height:1.05;color:var(--ink);margin-bottom:24px;letter-spacing:-2px;max-width:700px;}.hero h1 em{font-style:italic;color:#2A5DB0}
+.hero-sub{font-size:17px;color:var(--ink-muted);line-height:1.72;max-width:500px;margin-bottom:44px;font-weight:300;}
+.hero-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.party-strip{border-top:1px solid var(--border-soft);display:grid;grid-template-columns:repeat(5,1fr);max-width:980px;margin:0 auto;}
+.party-cell{padding:24px 20px;border-right:1px solid var(--border-soft);display:flex;flex-direction:column;gap:8px;}.party-cell:last-child{border-right:none}
+.party-dot{width:28px;height:6px;border-radius:3px;}.party-name{font-size:13px;font-weight:500;color:var(--ink);}.party-desc{font-size:11px;color:var(--ink-muted);font-weight:300;line-height:1.5;}
+.info-section{max-width:980px;margin:0 auto;padding:60px 52px;border-top:1px solid var(--border-soft);display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+.info-block h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--ink);margin-bottom:14px;letter-spacing:-0.5px;}
+.info-block p{font-size:15px;color:var(--ink-muted);line-height:1.75;font-weight:300;}
+.q-shell{max-width:720px;margin:0 auto;padding:52px;}
+.prog-row{display:flex;align-items:center;gap:18px;margin-bottom:56px;}
+.prog-track{flex:1;height:1px;background:var(--border-soft);position:relative;overflow:visible;}
+.prog-fill{height:1px;background:var(--ink);transition:width 0.5s cubic-bezier(0.22,1,0.36,1);}
+.prog-tip{position:absolute;right:-4px;top:-4px;width:9px;height:9px;background:var(--ink);border-radius:50%;}
+.prog-txt{font-size:12px;color:var(--ink-faint);white-space:nowrap;}
+.q-topic-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#2A5DB0;background:var(--navy-soft);padding:5px 14px;border-radius:20px;margin-bottom:22px;}
+.q-scenario-box{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--ink);padding:22px 26px;margin-bottom:32px;border-radius:0 8px 8px 0;box-shadow:0 2px 8px rgba(10,12,15,0.05);}
+.q-scenario-tag{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:12px;}
+.q-scenario-body{font-size:16px;color:var(--ink-soft);line-height:1.75;font-weight:300;}
+.q-question{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500;color:var(--ink);line-height:1.38;margin-bottom:32px;letter-spacing:-0.4px;}
+.q-opts{display:flex;flex-direction:column;gap:11px}
+.q-opt{background:var(--white);border:1px solid var(--border);border-radius:7px;padding:18px 22px;cursor:pointer;font-size:15px;color:var(--ink-soft);line-height:1.55;font-weight:400;transition:all 0.18s;}.q-opt:hover{border-color:var(--ink);color:var(--ink);background:var(--parchment);}.q-opt.picked{border-color:var(--ink);background:var(--ink);color:var(--white);}
+.q-foot{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--border-soft);}
+.btn-skip{background:none;border:none;font-size:13px;color:var(--ink-faint);cursor:pointer;font-family:'Outfit',sans-serif;padding:0;}
+.demo-outer{max-width:580px;margin:0 auto;padding:72px 52px;}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--ink);margin-bottom:12px;letter-spacing:-1.2px;}
+.page-sub{font-size:15px;color:var(--ink-muted);margin-bottom:44px;font-weight:300;line-height:1.65;}
+.demo-fields{display:flex;flex-direction:column;gap:22px;margin-bottom:40px;}
+.field-label{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:9px;}.field-label span{color:var(--ink-faint);font-weight:300;}
+select,input[type=email]{width:100%;padding:13px 16px;border:1px solid var(--border-soft);border-radius:6px;font-size:14px;font-family:'Outfit',sans-serif;font-weight:300;background:var(--white);color:var(--ink);appearance:none;-webkit-appearance:none;transition:border-color 0.15s;}
+select:focus,input:focus{outline:none;border-color:var(--navy);}
+.demo-note{font-size:13px;color:var(--ink-faint);font-weight:300;line-height:1.6;margin-bottom:32px;}
+.calc-shell{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 72px);padding:52px;text-align:center;}
+.spin-ring{width:48px;height:48px;border:1.5px solid var(--border-soft);border-top-color:var(--ink);border-radius:50%;animation:spin 1.1s linear infinite;margin:0 auto 36px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.calc-h{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--ink);margin-bottom:12px;letter-spacing:-0.5px;}
+.calc-p{font-size:15px;color:var(--ink-muted);font-weight:300}
+.results-shell{max-width:860px;margin:0 auto;padding:60px 52px;}
+.results-head{margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--border-soft);}
+.result-eyebrow{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;}
+.result-headline{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;color:var(--ink);letter-spacing:-2px;line-height:1;margin-bottom:12px;}
+.result-sub{font-size:16px;color:var(--ink-muted);font-weight:300;}
+.party-results{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--border-soft);border-radius:10px;overflow:hidden;margin-bottom:36px;}
+.party-row{display:flex;align-items:center;gap:20px;padding:20px 28px;border-bottom:1px solid var(--border-soft);}.party-row:last-child{border-bottom:none}
+.party-row.top-match{background:var(--parchment);}
+.party-row-rank{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--ink-faint);min-width:24px;}.party-row.top-match .party-row-rank{color:var(--ink);}
+.party-row-info{min-width:180px;}.party-row-name{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:2px;}.party-row-sub{font-size:12px;color:var(--ink-muted);font-weight:300;}
+.party-row-bar-wrap{flex:1;height:8px;background:var(--parchment-warm);border-radius:4px;overflow:hidden;}
+.party-row-bar{height:100%;border-radius:4px;transition:width 1.2s cubic-bezier(0.22,1,0.36,1);}
+.party-row-pct{font-size:16px;font-weight:500;color:var(--ink);min-width:44px;text-align:right;font-variant-numeric:tabular-nums;}
+.results-grid{display:grid;grid-template-columns:55fr 45fr;gap:24px;margin-bottom:28px;}
+.res-card{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;}
+.res-card-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:20px;}
+.compass-wrap{display:flex;justify-content:center;margin-bottom:24px;}
+.axis-item{margin-bottom:18px}.axis-item:last-child{margin-bottom:0}
+.axis-row-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-faint);margin-bottom:7px;}
+.axis-track{width:100%;height:5px;background:var(--parchment-warm);border-radius:3px;position:relative;}
+.axis-marker{position:absolute;width:13px;height:13px;background:var(--ink);border:2.5px solid var(--white);border-radius:50%;top:-4px;transform:translateX(-50%);transition:left 0.9s cubic-bezier(0.22,1,0.36,1);box-shadow:0 1px 4px rgba(0,0,0,0.2);}
+.axis-name{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:8px;}
+.save-panel{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;}
+.save-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;}
+.save-desc{font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.6;margin-bottom:20px;}
+.save-row{display:flex;gap:10px;align-items:center;}.save-row input{margin-bottom:0;flex:1;}
+.save-status{font-size:13px;margin-top:10px;min-height:20px;}
+.share-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;padding-top:20px;border-top:1px solid var(--border-soft);}
+@media(max-width:768px){
+  nav{padding:0 20px;height:64px;}.logo{font-size:22px;}.nav-links{gap:12px;}.nav-links a{font-size:12px;}
+  .hero{padding:52px 20px 44px;}.hero h1{font-size:40px;letter-spacing:-1px;}.hero-sub{font-size:15px;}
+  .hero-cta{flex-direction:column;align-items:flex-start;}.btn-primary,.btn-secondary{width:100%;text-align:center;}
+  .party-strip{grid-template-columns:1fr 1fr;border-top:none;}.party-cell{padding:14px;border-right:none;border-top:1px solid var(--border-soft);}
+  .info-section{grid-template-columns:1fr;gap:32px;padding:40px 20px;}
+  .q-shell{padding:28px 20px;}.q-question{font-size:21px;}.q-opt{font-size:14px;padding:15px 16px;}
+  .demo-outer{padding:40px 20px;}.results-shell{padding:32px 20px;}.result-headline{font-size:34px;}
+  .results-grid{grid-template-columns:1fr;}.party-row{padding:14px 16px;gap:12px;}.party-row-info{min-width:120px;}
+  .save-row{flex-direction:column;}.share-row{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+<!-- LANDING -->
+<div class="page active" id="page-landing">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links">
+      <a href="/">General</a><a href="/us">US</a><a href="/uk">UK</a><a href="/ca">Canada</a><a onclick="goTo('page-landing')">Australia</a>
+    </div>
+    <div class="flag-badge"><span class="flag">🇦🇺</span> Australia</div>
+  </nav>
+  <div class="hero">
+    <div class="hero-bg">AU</div>
+    <div class="eyebrow">Australian political test</div>
+    <h1>Where do you stand in <em>Australian</em> politics?</h1>
+    <p class="hero-sub">40 scenario-based questions on the issues defining Australia right now. Cost of living, housing, climate, Indigenous rights, AUKUS and more. Find your full party alignment.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="startTest()">Start the test</button>
+      <button class="btn-secondary">How it works</button>
+    </div>
+  </div>
+  <div class="party-strip">
+    <div class="party-cell"><div class="party-dot" style="background:#CC0000"></div><div class="party-name">Labor</div><div class="party-desc">Centre-left. Albanese. Workers rights, Medicare, clean energy transition.</div></div>
+    <div class="party-cell"><div class="party-dot" style="background:#003DA5"></div><div class="party-name">Liberal</div><div class="party-desc">Centre-right. Dutton. Lower taxes, smaller government, strong borders.</div></div>
+    <div class="party-cell"><div class="party-dot" style="background:#006400"></div><div class="party-name">Nationals</div><div class="party-desc">Rural conservatives. Regional infrastructure, farming, resource industries.</div></div>
+    <div class="party-cell"><div class="party-dot" style="background:#008000"></div><div class="party-name">Greens</div><div class="party-desc">Left. Climate emergency, no new coal or gas, renters rights, wealth taxes.</div></div>
+    <div class="party-cell"><div class="party-dot" style="background:#008080"></div><div class="party-name">Teal Independents</div><div class="party-desc">Urban centrists. Integrity, climate action, moderate economics.</div></div>
+  </div>
+  <div class="info-section">
+    <div class="info-block">
+      <h3>Compulsory voting, genuine competition</h3>
+      <p>Every eligible Australian must vote. The 2025 election returned Labor under Albanese with a strengthened majority as the Liberal Party suffered historic losses. The Greens and Teal independents reshaped the centre. Where you land on the new map may not be where you expect.</p>
+    </div>
+    <div class="info-block">
+      <h3>More than two choices</h3>
+      <p>Australian preferential voting means minor parties and independents hold real power. The Teal independents represent a new kind of politics. The Greens hold the balance in the Senate. Your result maps views across all five groupings.</p>
+    </div>
+  </div>
+</div>
+<!-- QUESTION -->
+<div class="page" id="page-test">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div class="flag-badge"><span class="flag">🇦🇺</span> Australia</div></nav>
+  <div class="q-shell">
+    <div class="prog-row">
+      <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div><div class="prog-tip"></div></div>
+      <span class="prog-txt" id="prog-txt">1 of 40</span>
+    </div>
+    <div class="q-topic-tag" id="q-topic"></div>
+    <div class="q-scenario-box" id="q-scen-wrap" style="display:none"><div class="q-scenario-tag">Scenario</div><div class="q-scenario-body" id="q-scen-body"></div></div>
+    <div class="q-question" id="q-text"></div>
+    <div class="q-opts" id="q-opts"></div>
+    <div class="q-foot">
+      <button class="btn-skip" onclick="skipQ()">Skip</button>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="btn-back" onclick="prevQ()" id="btn-back">Back</button>
+        <button class="btn-primary" onclick="nextQ()" style="padding:12px 30px;font-size:14px">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- DEMO -->
+<div class="page" id="page-demo">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="demo-outer">
+    <div class="page-title">Almost there.</div>
+    <p class="page-sub">A few quick questions. Everything is anonymous.</p>
+    <div class="demo-fields">
+      <div><div class="field-label">Age</div><select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select></div>
+      <div><div class="field-label">State or territory <span>(optional)</span></div>
+        <select id="d-state"><option value="">Select...</option><option>New South Wales</option><option>Victoria</option><option>Queensland</option><option>Western Australia</option><option>South Australia</option><option>Tasmania</option><option>Australian Capital Territory</option><option>Northern Territory</option></select></div>
+      <div><div class="field-label">How do you currently identify? <span>(optional)</span></div>
+        <select id="d-party"><option value="">Prefer not to say</option><option>Labor</option><option>Liberal</option><option>National</option><option>Greens</option><option>Teal independent</option><option>One Nation</option><option>Other</option><option>None</option></select></div>
+    </div>
+    <p class="demo-note">Never linked to your answers.</p>
+    <button class="btn-primary" onclick="goCalc()">See my results</button>
+  </div>
+</div>
+<!-- CALCULATING -->
+<div class="page" id="page-calc">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="calc-shell"><div class="spin-ring"></div><div class="calc-h">Mapping your answers</div><p class="calc-p">This will only take a moment.</p></div>
+</div>
+<!-- RESULTS -->
+<div class="page" id="page-results">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links"><a onclick="startTest()">Retake</a><a href="/">General</a><a href="/us">US</a><a href="/uk">UK</a><a href="/ca">Canada</a></div>
+    <div class="flag-badge"><span class="flag">🇦🇺</span> Australia</div>
+  </nav>
+  <div class="results-shell">
+    <div class="results-head">
+      <div class="result-eyebrow">Your Australian political alignment</div>
+      <div class="result-headline" id="r-top-party">Labor</div>
+      <div class="result-sub" id="r-top-desc">Your answers most closely align with the Labor Party.</div>
+    </div>
+    <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Party alignment</div>
+    <div class="party-results" id="party-results"></div>
+    <div class="results-grid">
+      <div class="res-card">
+        <div class="res-card-title">Political compass position</div>
+        <div class="compass-wrap">
+          <svg width="300" height="300" viewBox="0 0 300 300">
+            <rect x="10" y="10" width="135" height="135" rx="5" fill="#4B8EF1" opacity="0.11"/>
+            <rect x="155" y="10" width="135" height="135" rx="5" fill="#F5A623" opacity="0.11"/>
+            <rect x="10" y="155" width="135" height="135" rx="5" fill="#3DBF82" opacity="0.11"/>
+            <rect x="155" y="155" width="135" height="135" rx="5" fill="#E85D6B" opacity="0.11"/>
+            <line x1="150" y1="10" x2="150" y2="290" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="10" y1="150" x2="290" y2="150" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="80" y1="10" x2="80" y2="290" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="220" y1="10" x2="220" y2="290" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="80" x2="290" y2="80" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="220" x2="290" y2="220" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <text x="80" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
+            <text x="80" y="298" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
+            <text x="8" y="154" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 154)">Left</text>
+            <text x="296" y="154" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 296 154)">Right</text>
+            <circle id="cdot-ring" cx="150" cy="150" r="18" fill="#1E4D8C" opacity="0.15"/>
+            <circle id="cdot" cx="150" cy="150" r="9" fill="#1E4D8C"/>
+          </svg>
+        </div>
+        <div>
+          <div class="axis-item"><div class="axis-name">Economic</div><div class="axis-row-labels"><span>Left</span><span>Right</span></div><div class="axis-track"><div class="axis-marker" id="ax-econ" style="left:50%"></div></div></div>
+          <div class="axis-item"><div class="axis-name">Governance</div><div class="axis-row-labels"><span>Libertarian</span><span>Authoritarian</span></div><div class="axis-track"><div class="axis-marker" id="ax-gov" style="left:50%"></div></div></div>
+        </div>
+      </div>
+      <div class="res-card"><div class="res-card-title">What this means</div><div id="r-insight" style="font-size:14px;color:var(--ink-muted);line-height:1.8;font-weight:300;"></div></div>
+    </div>
+    <div class="save-panel">
+      <div class="save-title">Save your results</div>
+      <div class="save-desc">Enter your email and we will send you a link. Never shared.</div>
+      <div class="save-row"><input type="email" id="save-email" placeholder="your@email.com"><button class="btn-primary" onclick="saveResults()" style="padding:13px 24px;font-size:14px;white-space:nowrap">Send results</button></div>
+      <div class="save-status" id="save-status"></div>
+      <div class="share-row"><button class="btn-ghost" onclick="copyLink()">Copy results link</button><button class="btn-ghost" onclick="startTest()">Retake</button><a href="/" style="text-decoration:none"><button class="btn-ghost">General test</button></a></div>
+    </div>
+  </div>
+</div>
+<script>
+const SB_URL='https://rttomfnfyjjssdqfzkaj.supabase.co';
+const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
+async function sbInsert(table,data){const res=await fetch(`${SB_URL}/rest/v1/${table}`,{method:'POST',headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':`Bearer ${SB_KEY}`,'Prefer':'return=representation'},body:JSON.stringify(data)});if(!res.ok)throw new Error(await res.text());return res.json();}
+
+// Party scores: alp, lib, nat, grn, teal
+const BANK=[
+  // COST OF LIVING
+  {id:'cl1',nl:'Cost of living',pair:'cl-a',fr:'pro',type:'sc',
+   ctx:'Inflation hit 7.8% in 2022. Mortgage repayments doubled for many homeowners. Real wages fell for two consecutive years.',
+   q:'Ordinary Australians are being squeezed while corporate profits hit records. The government must act.',
+   opts:[
+     {t:'Yes. Windfall taxes, energy price caps, and stronger wage growth.',e:-2,g:2,alp:2,lib:-2,nat:-1,grn:2,teal:0},
+     {t:'Target relief at those who need it most without distorting markets.',e:-1,g:1,alp:1,lib:0,nat:0,grn:1,teal:2},
+     {t:'Cut taxes and regulation so businesses can bring prices down.',e:2,g:-1,alp:-2,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+  {id:'cl2',nl:'Cost of living',pair:'cl-a',fr:'con',type:'s',
+   q:'Government spending is driving inflation. Cutting the budget deficit is the most effective way to reduce cost of living pressures.',
+   opts:[
+     {t:'Yes. Fiscal discipline is the foundation of economic stability.',e:2,g:0,alp:-2,lib:2,nat:1,grn:-2,teal:0},
+     {t:'The deficit contributed but supply chain issues and corporate pricing matter too.',e:0,g:0,alp:0,lib:0,nat:0,grn:0,teal:1},
+     {t:'No. Cutting spending during a cost of living crisis takes money out of struggling households.',e:-2,g:1,alp:2,lib:-2,nat:-1,grn:2,teal:-1}
+   ]},
+
+  // HOUSING
+  {id:'hs1',nl:'Housing',pair:'hs-a',fr:'pro',type:'sc',
+   ctx:'Sydney median house price: 1.4 million dollars. Melbourne: 950,000. Rental vacancy rates are at historic lows. Young Australians are being locked out permanently.',
+   q:'The housing crisis is a failure of government policy over decades. Emergency action is needed.',
+   opts:[
+     {t:'Yes. Build social housing, reform negative gearing, and end foreign speculation.',e:-2,g:2,alp:1,lib:-2,nat:-1,grn:2,teal:1},
+     {t:'Supply reform and zoning changes, not redistribution, is the answer.',e:1,g:-1,alp:-1,lib:2,nat:1,grn:-1,teal:1},
+     {t:'Both supply and targeted demand reform. The market alone will not fix this.',e:-1,g:1,alp:1,lib:0,nat:0,grn:1,teal:2}
+   ]},
+  {id:'hs2',nl:'Housing',pair:'hs-a',fr:'con',type:'s',
+   q:'Negative gearing allows investors to reduce taxable income on loss-making properties. Removing it would reduce housing supply and hurt renters.',
+   opts:[
+     {t:'Yes. Negative gearing supports investment that ultimately increases supply.',e:2,g:0,alp:-1,lib:2,nat:1,grn:-2,teal:-1},
+     {t:'Grandfathering existing arrangements while ending it for new purchases is fairer.',e:-1,g:0,alp:1,lib:-1,nat:0,grn:1,teal:1},
+     {t:'No. It inflates prices and transfers wealth from renters to investors. It must go.',e:-2,g:1,alp:1,lib:-2,nat:-1,grn:2,teal:0}
+   ]},
+
+  // CLIMATE
+  {id:'en1',nl:'Climate and energy',pair:'en-a',fr:'pro',type:'sc',
+   ctx:'Australia is one of the highest per capita emitters in the world and one of the largest coal and gas exporters. The Great Barrier Reef is experiencing mass bleaching events.',
+   q:'Australia is burning its future to prop up industries that have no long-term future. The coal and gas era must end.',
+   opts:[
+     {t:'Yes. No new coal or gas approvals. Accelerate the transition to renewables.',e:-2,g:2,alp:0,lib:-2,nat:-2,grn:2,teal:1},
+     {t:'Managed transition with proper support for affected workers and communities.',e:-1,g:1,alp:2,lib:-1,nat:-1,grn:1,teal:1},
+     {t:'Coal and gas support hundreds of thousands of jobs and billions in exports. We need them.',e:2,g:0,alp:-1,lib:2,nat:2,grn:-2,teal:-1}
+   ]},
+  {id:'en2',nl:'Climate and energy',pair:'en-a',fr:'con',type:'s',
+   q:'Australia should not sacrifice jobs and economic growth for climate targets when China and India are still building coal plants.',
+   opts:[
+     {t:'Yes. Unilateral action puts us at a disadvantage without solving anything.',e:1,g:0,alp:-2,lib:2,nat:2,grn:-2,teal:-1},
+     {t:'The comparison is used to justify inaction. Australia can lead and profit from the transition.',e:-1,g:0,alp:2,lib:-1,nat:-1,grn:2,teal:1},
+     {t:'No. Climate physics does not care about our share of emissions. Act now.',e:-2,g:1,alp:1,lib:-2,nat:-2,grn:2,teal:1}
+   ]},
+
+  // INDIGENOUS VOICE
+  {id:'iv1',nl:'Indigenous affairs',pair:'iv-a',fr:'pro',type:'sc',
+   ctx:'The 2023 Voice referendum was defeated. 60.3% of Australians voted No. The gap in life expectancy, incarceration, and health outcomes between Indigenous and non-Indigenous Australians remains stark.',
+   q:'The referendum result does not end the obligation. Australia must find another path to meaningful Indigenous representation and closing the gap.',
+   opts:[
+     {t:'Yes. Legislated Voice mechanisms, treaty, and truth-telling must continue.',e:-1,g:0,alp:2,lib:-1,nat:-1,grn:2,teal:2},
+     {t:'Practical programs focused on health, housing, and education deliver more than symbolic structures.',e:0,g:0,alp:0,lib:1,nat:1,grn:0,teal:0},
+     {t:'The people have spoken. Move on and stop re-litigating the referendum.',e:0,g:1,alp:-2,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+  {id:'iv2',nl:'Indigenous affairs',pair:'iv-a',fr:'con',type:'s',
+   q:'A treaty with First Nations peoples would be a significant step toward genuine reconciliation and should be a national priority.',
+   opts:[
+     {t:'Yes. Treaty is the foundation of a just relationship between First Nations and the state.',e:-1,g:-1,alp:1,lib:-2,nat:-2,grn:2,teal:1},
+     {t:'State-based processes are making progress. A national treaty needs broader support first.',e:0,g:0,alp:1,lib:-1,nat:0,grn:0,teal:1},
+     {t:'No. A treaty implies a separate sovereignty that is incompatible with the Australian constitution.',e:0,g:1,alp:-1,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+
+  // AUKUS AND DEFENCE
+  {id:'au1',nl:'Defence and AUKUS',pair:'au-a',fr:'pro',type:'sc',
+   ctx:'Australia committed to purchasing nuclear-powered submarines under AUKUS at a cost of up to 368 billion dollars. The subs may not be delivered until the 2040s.',
+   q:'Spending 368 billion on submarines while hospitals and schools struggle for funding is a catastrophic misallocation of national resources.',
+   opts:[
+     {t:'Yes. AUKUS locks Australia into American strategic interests at enormous cost.',e:-1,g:-1,alp:-1,lib:-1,nat:-1,grn:2,teal:0},
+     {t:'The cost is real but the strategic environment demands it. China is not a theoretical threat.',e:0,g:1,alp:1,lib:2,nat:2,grn:-2,teal:1},
+     {t:'Australia must maintain genuine strategic independence, not dependence on the US.',e:0,g:-1,alp:0,lib:-1,nat:-1,grn:1,teal:1}
+   ]},
+  {id:'au2',nl:'Defence and AUKUS',pair:'au-a',fr:'con',type:'s',
+   q:'Australia faces genuine security risks in the Indo-Pacific. Investing in defence capability now is cheaper than the alternative.',
+   opts:[
+     {t:'Yes. The strategic environment requires hard choices on defence spending.',e:1,g:1,alp:1,lib:2,nat:2,grn:-2,teal:1},
+     {t:'Diplomacy and regional engagement must be the primary tool, not military hardware.',e:-1,g:-1,alp:1,lib:-1,nat:-1,grn:2,teal:0},
+     {t:'Meaningful defence requires independence from US strategic goals, not dependence.',e:0,g:0,alp:0,lib:-1,nat:-1,grn:1,teal:1}
+   ]},
+
+  // HEALTHCARE
+  {id:'hc1',nl:'Healthcare and Medicare',pair:'hc-a',fr:'pro',type:'s',
+   q:'Medicare is under strain. Bulk billing rates are falling. Millions of Australians cannot afford GP care. The government must invest heavily to restore universal access.',
+   opts:[
+     {t:'Yes. Bulk billing incentives, more GPs, and proper Medicare funding.',e:-2,g:2,alp:2,lib:-1,nat:0,grn:2,teal:1},
+     {t:'Target bulk billing incentives at disadvantaged areas and vulnerable groups.',e:-1,g:1,alp:1,lib:0,nat:1,grn:1,teal:2},
+     {t:'Allow more market-based solutions. Competition will improve access and quality.',e:2,g:-1,alp:-2,lib:2,nat:0,grn:-2,teal:-1}
+   ]},
+  {id:'hc2',nl:'Healthcare and Medicare',pair:'hc-a',fr:'con',type:'s',
+   q:'The NDIS has blown out to over 50 billion dollars annually. Without reform it will consume resources needed for other services.',
+   opts:[
+     {t:'Yes. The program needs tighter eligibility and stronger oversight.',e:1,g:1,alp:0,lib:2,nat:1,grn:-1,teal:0},
+     {t:'Costs must be managed but cuts must not come at the expense of participants who depend on it.',e:0,g:0,alp:1,lib:0,nat:0,grn:1,teal:1},
+     {t:'No. The NDIS is working. Its costs reflect unmet need that previously went unaddressed.',e:-2,g:0,alp:1,lib:-2,nat:-1,grn:2,teal:0}
+   ]},
+
+  // IMMIGRATION
+  {id:'im1',nl:'Immigration',pair:'im-a',fr:'con',type:'sc',
+   ctx:'Australia took in 740,000 migrants in 2023. Infrastructure, housing, and services have not kept pace.',
+   q:'Australia grew too fast. Immigration must be cut sharply to let the country absorb what it has taken on.',
+   opts:[
+     {t:'Yes. Numbers must come down significantly for at least two years.',e:0,g:1,alp:-1,lib:1,nat:1,grn:-1,teal:0},
+     {t:'Cuts to temporary workers and international students, but skilled migration should continue.',e:0,g:0,alp:0,lib:1,nat:0,grn:0,teal:1},
+     {t:'No. Immigration is essential for an ageing population and growing economy.',e:-1,g:-1,alp:1,lib:0,nat:-1,grn:0,teal:0}
+   ]},
+  {id:'im2',nl:'Immigration',pair:'im-a',fr:'pro',type:'s',
+   q:'Australia was built by immigration and its multicultural society is one of its greatest strengths.',
+   opts:[
+     {t:'Yes. Diversity and immigration are core to the Australian story.',e:-1,g:-1,alp:2,lib:0,nat:-1,grn:2,teal:1},
+     {t:'Immigration has been valuable but must be managed in line with capacity.',e:0,g:0,alp:0,lib:1,nat:0,grn:0,teal:1},
+     {t:'Multiculturalism has been taken too far. Social cohesion requires integration.',e:1,g:1,alp:-1,lib:1,nat:1,grn:-2,teal:-1}
+   ]},
+
+  // ECONOMIC POLICY
+  {id:'tx1',nl:'Tax and economy',pair:'tx-a',fr:'pro',type:'s',
+   q:'Australia needs a serious wealth tax on assets above 5 million dollars. The concentration of wealth at the top is incompatible with a fair society.',
+   opts:[
+     {t:'Yes. Tax wealth more and use it to fund housing, health, and education.',e:-2,g:2,alp:1,lib:-2,nat:-1,grn:2,teal:0},
+     {t:'Close loopholes and ensure the wealthy pay the rates the law intends first.',e:-1,g:1,alp:1,lib:-1,nat:0,grn:1,teal:2},
+     {t:'No. Wealth taxes drive capital offshore and punish success.',e:2,g:-1,alp:-1,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+  {id:'tx2',nl:'Tax and economy',pair:'tx-a',fr:'con',type:'s',
+   q:'Stage three tax cuts benefiting higher earners were the right economic policy. Incentivising high earners drives productivity.',
+   opts:[
+     {t:'Yes. Reward and incentivise those who contribute most.',e:2,g:0,alp:-1,lib:2,nat:1,grn:-2,teal:0},
+     {t:'Modified stage three targeting middle earners was a sensible compromise.',e:0,g:0,alp:1,lib:0,nat:0,grn:0,teal:1},
+     {t:'No. Tax cuts for the wealthy during a cost of living crisis were indefensible.',e:-2,g:1,alp:1,lib:-2,nat:-1,grn:2,teal:0}
+   ]},
+
+  // WORKERS RIGHTS
+  {id:'wr1',nl:'Workers rights',pair:'wr-a',fr:'pro',type:'s',
+   q:'The right to disconnect from work outside of hours should be a legal protection for all Australian workers.',
+   opts:[
+     {t:'Yes. Unpaid overtime and after-hours contact are exploitation.',e:-1,g:1,alp:2,lib:-1,nat:-1,grn:2,teal:1},
+     {t:'The law goes too far but cultural norms around work need to change.',e:0,g:0,alp:1,lib:0,nat:0,grn:1,teal:1},
+     {t:'No. It is regulatory overreach that will harm small businesses and flexibility.',e:1,g:-1,alp:-1,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+  {id:'wr2',nl:'Workers rights',pair:'wr-a',fr:'con',type:'s',
+   q:'Multi-employer bargaining undermines the ability of small businesses to manage their own pay arrangements and will destroy jobs.',
+   opts:[
+     {t:'Yes. Individual enterprise bargaining is the right framework for most businesses.',e:2,g:0,alp:-2,lib:2,nat:1,grn:-2,teal:0},
+     {t:'Industry-wide bargaining can work for some sectors but must be carefully designed.',e:0,g:0,alp:1,lib:-1,nat:0,grn:0,teal:1},
+     {t:'No. Workers bargaining collectively across industries is how wages actually rise.',e:-2,g:1,alp:2,lib:-2,nat:-1,grn:2,teal:0}
+   ]},
+
+  // ENVIRONMENT
+  {id:'nv1',nl:'Nature and environment',pair:'nv-a',fr:'pro',type:'sc',
+   ctx:'Australia has one of the worst species extinction records of any country. Deforestation, invasive species, and climate change are accelerating biodiversity collapse.',
+   q:'Australia is sleepwalking toward ecological catastrophe and must treat nature loss as an emergency alongside climate.',
+   opts:[
+     {t:'Yes. Nature positive laws, stronger protections, and end land clearing.',e:-2,g:2,alp:1,lib:-2,nat:-2,grn:2,teal:1},
+     {t:'Balance conservation with farming and regional economic needs.',e:0,g:0,alp:0,lib:0,nat:1,grn:0,teal:0},
+     {t:'Landholders and farmers should have the right to manage their own land.',e:2,g:-1,alp:-1,lib:1,nat:2,grn:-2,teal:-1}
+   ]},
+  {id:'nv2',nl:'Nature and environment',pair:'nv-a',fr:'con',type:'s',
+   q:'Environmental regulations blocking development and mining are costing Australia billions in investment and thousands of jobs.',
+   opts:[
+     {t:'Yes. The approval system is too slow and too restrictive.',e:1,g:-1,alp:-1,lib:2,nat:2,grn:-2,teal:-1},
+     {t:'Streamline the process without lowering the environmental standards.',e:0,g:0,alp:0,lib:1,nat:1,grn:-1,teal:1},
+     {t:'No. Environmental assessment exists because development causes real, lasting harm.',e:-2,g:1,alp:1,lib:-2,nat:-2,grn:2,teal:0}
+   ]},
+
+  // DEMOCRATIC INTEGRITY
+  {id:'di1',nl:'Political integrity',pair:'di-a',fr:'pro',type:'s',
+   q:'Australia needs a strong federal integrity commission with real powers to investigate politicians and public servants.',
+   opts:[
+     {t:'Yes. The weak version Labor delivered does not go nearly far enough.',e:0,g:-2,alp:0,lib:-2,nat:-2,grn:2,teal:2},
+     {t:'A meaningful integrity body with proper independence is essential.',e:0,g:-1,alp:1,lib:-1,nat:-1,grn:2,teal:2},
+     {t:'The existing oversight mechanisms are sufficient if properly resourced.',e:0,g:1,alp:-1,lib:1,nat:1,grn:-1,teal:-1}
+   ]},
+  {id:'di2',nl:'Political integrity',pair:'di-a',fr:'con',type:'s',
+   q:'Political donations from property developers to local councils are a form of legalised corruption that must be banned nationwide.',
+   opts:[
+     {t:'Yes. Developer donations corrupt planning decisions and must be prohibited.',e:0,g:1,alp:1,lib:-1,nat:-1,grn:2,teal:2},
+     {t:'Disclosure requirements and donation caps are sufficient safeguards.',e:0,g:0,alp:0,lib:0,nat:0,grn:0,teal:1},
+     {t:'No. Political donations are a form of democratic participation.',e:0,g:-1,alp:-1,lib:1,nat:0,grn:-2,teal:-1}
+   ]},
+
+  // EDUCATION
+  {id:'ed1',nl:'Education',pair:'ed-a',fr:'pro',type:'sc',
+   ctx:'Australia has among the highest private school funding rates in the OECD. Public school students are increasingly disadvantaged by funding disparities.',
+   q:'Channelling public money into elite private schools while public schools deteriorate is an indefensible policy choice.',
+   opts:[
+     {t:'Yes. Needs-based funding must redirect money from wealthy private schools.',e:-2,g:1,alp:2,lib:-2,nat:-1,grn:2,teal:1},
+     {t:'Funding reform should increase public school funding without cuts to private.',e:-1,g:0,alp:1,lib:0,nat:0,grn:1,teal:1},
+     {t:'No. Parents choosing to invest in their children deserve public support too.',e:2,g:-1,alp:-1,lib:2,nat:1,grn:-2,teal:0}
+   ]},
+  {id:'ed2',nl:'Education',pair:'ed-a',fr:'con',type:'s',
+   q:'University degrees are oversold. More pathways into trades and vocational education would serve Australia better.',
+   opts:[
+     {t:'Yes. The status gap between university and TAFE is damaging and must close.',e:0,g:0,alp:1,lib:1,nat:2,grn:0,teal:1},
+     {t:'Both paths matter. The problem is HECS debt making university an unfair burden.',e:-1,g:0,alp:1,lib:-1,nat:0,grn:1,teal:1},
+     {t:'University should be free. The argument against it protects class advantage.',e:-2,g:1,alp:0,lib:-2,nat:-1,grn:2,teal:0}
+   ]},
+
+  // MEDIA
+  {id:'md1',nl:'Media and tech',pair:'md-a',fr:'neutral',type:'s',
+   q:'The News Media Bargaining Code requiring tech giants to pay Australian news publishers was the right approach to saving quality journalism.',
+   opts:[
+     {t:'Yes. Tech platforms profit from journalism without funding it.',e:-1,g:1,alp:1,lib:0,nat:0,grn:1,teal:1},
+     {t:'The principle is right but the execution allowed Murdoch-owned papers to capture most of the money.',e:0,g:0,alp:0,lib:0,nat:0,grn:0,teal:0},
+     {t:'No. Government should not pick media winners or force businesses to fund competitors.',e:1,g:-1,alp:-1,lib:1,nat:1,grn:-1,teal:0}
+   ]},
+  {id:'md2',nl:'Media and tech',pair:'md-a',fr:'con',type:'s',
+   q:'News Corp controls too much of the Australian media and uses its dominance to push conservative politics at the expense of public interest journalism.',
+   opts:[
+     {t:'Yes. Media concentration at this level is a threat to democracy.',e:-1,g:1,alp:2,lib:-2,nat:-1,grn:2,teal:1},
+     {t:'Media diversity is important but the ABC provides a significant public interest counterweight.',e:0,g:0,alp:1,lib:-1,nat:0,grn:1,teal:1},
+     {t:'No. News Corp operates in a competitive market and its readers choose its products.',e:1,g:-1,alp:-1,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+
+  // REPUBLIC
+  {id:'re1',nl:'Republic and identity',pair:'re-a',fr:'pro',type:'s',
+   q:'Australia should become a republic with an Australian as head of state. Retaining the British monarchy is an anachronism.',
+   opts:[
+     {t:'Yes. An Australian head of state is an obvious necessity for a confident nation.',e:0,g:-1,alp:2,lib:-1,nat:-1,grn:2,teal:2},
+     {t:'Eventually yes, but there are more pressing priorities right now.',e:0,g:0,alp:1,lib:0,nat:0,grn:1,teal:1},
+     {t:'No. The constitutional monarchy has served Australia well and change carries risk.',e:0,g:1,alp:-1,lib:2,nat:1,grn:-1,teal:-1}
+   ]},
+  {id:'re2',nl:'Republic and identity',pair:'re-a',fr:'con',type:'s',
+   q:'Australia Day on January 26 should remain unchanged. Changing the date reopens wounds rather than healing them.',
+   opts:[
+     {t:'Yes. Australia Day marks nationhood. The date should stay.',e:0,g:1,alp:-1,lib:2,nat:2,grn:-2,teal:-1},
+     {t:'Move it to a date all Australians can celebrate without it being a day of mourning.',e:0,g:-1,alp:1,lib:-1,nat:-1,grn:2,teal:1},
+     {t:'The conversation should be led by First Nations peoples, not settled by parliament.',e:0,g:-1,alp:1,lib:-2,nat:-2,grn:2,teal:1}
+   ]},
+
+  // ECONOMIC ROLE OF STATE
+  {id:'rg1',nl:'Role of government',pair:'rg-a',fr:'neutral',type:'s',
+   q:'The federal government should take a larger role in strategic industries like clean energy, advanced manufacturing, and critical minerals.',
+   opts:[
+     {t:'Yes. Industrial strategy is how nations build future prosperity.',e:-1,g:1,alp:2,lib:-2,nat:0,grn:1,teal:1},
+     {t:'Government should set the rules and incentives but not pick and fund winners.',e:1,g:0,alp:-1,lib:1,nat:1,grn:-1,teal:1},
+     {t:'No. Government investment crowds out private capital and distorts markets.',e:2,g:-1,alp:-2,lib:2,nat:0,grn:-2,teal:-1}
+   ]},
+  {id:'rg2',nl:'Role of government',pair:'rg-a',fr:'neutral',type:'s',
+   q:'Inequality in Australia has grown to a level that threatens social cohesion and demands a serious redistributive response.',
+   opts:[
+     {t:'Yes. Wealth taxes, higher top rates, and strong public services.',e:-2,g:2,alp:2,lib:-2,nat:-1,grn:2,teal:1},
+     {t:'Target support at those who need it without punishing wealth creation.',e:0,g:0,alp:0,lib:1,nat:0,grn:0,teal:1},
+     {t:'No. Inequality reflects different choices. Redistribution punishes success.',e:2,g:-1,alp:-2,lib:2,nat:1,grn:-2,teal:-1}
+   ]}
+];
+
+function buildOrder(bank){
+  function strength(q){return Math.max(...q.opts.flatMap(o=>[Math.abs(o.e),Math.abs(o.g),Math.abs(o.alp),Math.abs(o.lib),Math.abs(o.nat),Math.abs(o.grn),Math.abs(o.teal)]));}
+  const s=[...bank].sort((a,b)=>strength(b)-strength(a)+(Math.random()-0.5)*0.5);
+  const G=Math.max(6,Math.floor(bank.length*0.25));
+  for(let p=0;p<60;p++){let m=false;for(let i=0;i<s.length;i++){for(let j=i+1;j<s.length;j++){if(s[i].pair===s[j].pair&&(j-i)<G){for(let k=Math.min(i+G,s.length-1);k<s.length;k++){if(k===j)continue;let ok=true;for(let n=0;n<s.length;n++){if(n===k||n===j)continue;if(s[n].pair===s[k].pair&&Math.abs(n-j)<G){ok=false;break;}}if(ok){[s[j],s[k]]=[s[k],s[j]];m=true;break;}}if(m)break;}}if(m)break;}if(!m)break;}
+  return s;
+}
+let qi=0,picked=-1,answers=[],qs=[];
+function goTo(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function startTest(){qi=0;picked=-1;answers=[];qs=buildOrder(BANK);document.getElementById('save-status').textContent='';document.getElementById('save-email').value='';renderQ();goTo('page-test');}
+function renderQ(){
+  const q=qs[qi],total=qs.length;
+  document.getElementById('prog-fill').style.width=((qi/total)*100).toFixed(1)+'%';
+  document.getElementById('prog-txt').textContent=(qi+1)+' of '+total;
+  document.getElementById('q-topic').textContent=q.nl;
+  const sw=document.getElementById('q-scen-wrap');
+  if(q.ctx){sw.style.display='block';document.getElementById('q-scen-body').textContent=q.ctx;}else{sw.style.display='none';}
+  document.getElementById('q-text').textContent=q.q;
+  const c=document.getElementById('q-opts');c.innerHTML='';
+  q.opts.forEach((o,i)=>{const d=document.createElement('div');d.className='q-opt';d.textContent=o.t;d.onclick=()=>pickOpt(i,d);c.appendChild(d);});
+  const prev=answers.find(a=>a.id===q.id);
+  if(prev){picked=prev.pick;c.children[prev.pick].classList.add('picked');}else{picked=-1;}
+  const bb=document.getElementById('btn-back');if(bb)bb.disabled=(qi===0);
+}
+function pickOpt(i,el){document.querySelectorAll('.q-opt').forEach(o=>o.classList.remove('picked'));el.classList.add('picked');picked=i;}
+function nextQ(){const q=qs[qi];if(picked>=0){answers=answers.filter(a=>a.id!==q.id);answers.push({id:q.id,pick:picked,...q.opts[picked]});}picked=-1;qi++;if(qi>=qs.length){goTo('page-demo');return;}renderQ();}
+function prevQ(){if(qi<=0)return;qi--;renderQ();}
+function skipQ(){picked=-1;qi++;if(qi>=qs.length){goTo('page-demo');return;}renderQ();}
+
+function score(){
+  let eSum=0,gSum=0,eMaxT=0,gMaxT=0;
+  const pT={alp:0,lib:0,nat:0,grn:0,teal:0},pM={alp:0,lib:0,nat:0,grn:0,teal:0};
+  answers.forEach(a=>{
+    const q=qs.find(q=>q.id===a.id);if(!q)return;
+    eSum+=a.e;gSum+=a.g;
+    eMaxT+=Math.max(...q.opts.map(o=>Math.abs(o.e)));
+    gMaxT+=Math.max(...q.opts.map(o=>Math.abs(o.g)));
+    ['alp','lib','nat','grn','teal'].forEach(p=>{pT[p]+=(a[p]||0);pM[p]+=Math.max(...q.opts.map(o=>Math.abs(o[p]||0)));});
+  });
+  const eScore=eMaxT>0?Math.max(-1,Math.min(1,eSum/eMaxT)):0;
+  const gScore=gMaxT>0?Math.max(-1,Math.min(1,gSum/gMaxT)):0;
+  const pScores={};
+  ['alp','lib','nat','grn','teal'].forEach(p=>{const raw=pM[p]>0?pT[p]/pM[p]:0;pScores[p]=Math.round(((raw+1)/2)*100);});
+  return{eScore,gScore,pScores};
+}
+
+const PMETA={
+  alp:{name:'Labor',color:'#CC0000',desc:'Your answers most closely match the Australian Labor Party. You favour workers rights, Medicare, clean energy transition, and a stronger role for government in reducing inequality.'},
+  lib:{name:'Liberal',color:'#003DA5',desc:'Your answers most closely match the Liberal Party. You favour lower taxes, smaller government, strong borders, and a market-led approach to the economy.'},
+  nat:{name:'Nationals',color:'#006400',desc:'Your answers most closely match the Nationals. You prioritise regional Australia, farming communities, resource industries, and scepticism of city-centric climate policy.'},
+  grn:{name:'Greens',color:'#008000',desc:'Your answers most closely match the Greens. You support treating climate as an emergency, ending fossil fuel extraction, wealth taxes, and strong renters rights.'},
+  teal:{name:'Teal Independents',color:'#007777',desc:'Your answers most closely match the Teal independents. You support strong integrity reforms, climate action, and pragmatic centrist economics, outside the major party blocs.'}
+};
+
+function renderResults(){
+  const{eScore,gScore,pScores}=score();
+  const ranked=Object.entries(pScores).sort((a,b)=>b[1]-a[1]);
+  const topKey=ranked[0][0];const meta=PMETA[topKey];
+  document.getElementById('r-top-party').textContent=meta.name;
+  document.getElementById('r-top-desc').textContent=meta.desc;
+  const c=document.getElementById('party-results');c.innerHTML='';
+  ranked.forEach(([party,pct],i)=>{
+    const m=PMETA[party];const row=document.createElement('div');row.className='party-row'+(i===0?' top-match':'');
+    row.innerHTML=`<div class="party-row-rank">${i+1}</div><div class="party-row-info"><div class="party-row-name">${m.name}</div><div class="party-row-sub">${pct}% alignment</div></div><div class="party-row-bar-wrap"><div class="party-row-bar" style="width:0%;background:${m.color}" data-w="${pct}%"></div></div><div class="party-row-pct">${pct}%</div>`;
+    c.appendChild(row);
+  });
+  const dotX=(150+eScore*132).toFixed(1);const dotY=(150-gScore*132).toFixed(1);
+  document.getElementById('cdot').setAttribute('cx',dotX);document.getElementById('cdot').setAttribute('cy',dotY);
+  document.getElementById('cdot-ring').setAttribute('cx',dotX);document.getElementById('cdot-ring').setAttribute('cy',dotY);
+  setTimeout(()=>{
+    document.getElementById('ax-econ').style.left=(((eScore+1)/2)*100).toFixed(1)+'%';
+    document.getElementById('ax-gov').style.left=(((gScore+1)/2)*100).toFixed(1)+'%';
+    document.querySelectorAll('.party-row-bar[data-w]').forEach(el=>{el.style.width=el.dataset.w;});
+  },200);
+  const gap=ranked[0][1]-ranked[1][1];
+  const gapText=gap<8?`Only ${gap} points separates you from ${PMETA[ranked[1][0]].name}. You hold views across both traditions.`:gap<20?`You also align with ${PMETA[ranked[1][0]].name} at ${ranked[1][1]}%.`:`Your alignment with ${meta.name} is clear, ${gap} points ahead of ${PMETA[ranked[1][0]].name}.`;
+  document.getElementById('r-insight').innerHTML=`<p style="margin-bottom:14px">${meta.desc}</p><p>${gapText}</p>`;
+}
+function goCalc(){goTo('page-calc');setTimeout(()=>{renderResults();goTo('page-results');},1800);}
+async function saveResults(){
+  const email=document.getElementById('save-email').value.trim();
+  const s=document.getElementById('save-status');
+  if(!email||!email.includes('@')){s.style.color='#9B2335';s.textContent='Please enter a valid email.';return;}
+  s.style.color='var(--ink-muted)';s.textContent='Saving...';
+  const{pScores}=score();
+  try{await sbInsert('coreopinion_results',{email,mode:'au',archetype:Object.entries(pScores).sort((a,b)=>b[1]-a[1])[0][0],bias_breakdown:pScores,age:document.getElementById('d-age').value||null,country:'Australia',political_id:document.getElementById('d-party').value||null});s.style.color='#2D6A4F';s.textContent='Saved. We will email your results to '+email;}
+  catch(e){s.style.color='#9B2335';s.textContent='Something went wrong. Please try again.';}
+}
+function copyLink(){const{pScores}=score();const top=Object.entries(pScores).sort((a,b)=>b[1]-a[1])[0,
+
+  // FOREIGN POLICY
+  {id:'fp1',nl:'Foreign policy',pair:'fp-a',fr:'pro',type:'s',
+   q:'Australia must reduce its dependence on the United States and develop a genuinely independent foreign policy suited to the Asia-Pacific.',
+   opts:[
+     {t:'Yes. Over-reliance on the US creates strategic risk and limits our options.',e:0,g:-1,alp:0,lib:-2,nat:-1,grn:2,teal:1},
+     {t:'The US alliance is fundamental but Australia should engage more actively with Asia.',e:0,g:0,alp:1,lib:0,nat:0,grn:0,teal:1},
+     {t:'No. The ANZUS alliance is our most important strategic asset. We should deepen it.',e:0,g:1,alp:-1,lib:2,nat:1,grn:-2,teal:0}
+   ]},
+  {id:'fp2',nl:'Foreign policy',pair:'fp-a',fr:'con',type:'s',
+   q:'Australia should use trade as leverage to pressure China on human rights, including in Xinjiang and Hong Kong.',
+   opts:[
+     {t:'Yes. Moral clarity must sometimes come at economic cost.',e:0,g:1,alp:0,lib:1,nat:-1,grn:2,teal:1},
+     {t:'Quiet diplomacy achieves more than public confrontation in this relationship.',e:0,g:0,alp:1,lib:0,nat:0,grn:-1,teal:0},
+     {t:'No. Trade relationships should be managed separately from human rights diplomacy.',e:0,g:0,alp:0,lib:0,nat:1,grn:-2,teal:0}
+   ]},
+
+  // RENTAL RIGHTS
+  {id:'rr1',nl:'Renters rights',pair:'rr-a',fr:'pro',type:'sc',
+   ctx:'Australia has some of the weakest tenancy protections in the OECD. No-cause evictions, minimal notice periods, and rent increases of 30-50% are routine.',
+   q:'Renters are being treated as second-class citizens. A national framework for stable, long-term tenancies is overdue.',
+   opts:[
+     {t:'Yes. End no-cause evictions, cap rent increases, and mandate minimum lease terms.',e:-2,g:2,alp:2,lib:-2,nat:-1,grn:2,teal:1},
+     {t:'State-by-state improvements are underway. Federal intervention may not improve outcomes.',e:0,g:0,alp:0,lib:0,nat:0,grn:0,teal:1},
+     {t:'No. Rental regulations reduce supply by discouraging investment.',e:2,g:-1,alp:-1,lib:2,nat:0,grn:-2,teal:-1}
+   ]},
+  {id:'rr2',nl:'Renters rights',pair:'rr-a',fr:'con',type:'s',
+   q:'Rent controls cause housing shortages by discouraging new investment. They help current renters at the expense of future ones.',
+   opts:[
+     {t:'Yes. The economic evidence is clear that rent controls reduce supply.',e:2,g:-1,alp:-1,lib:2,nat:1,grn:-2,teal:0},
+     {t:'Emergency rent freezes in crisis conditions are justified even if imperfect long-term.',e:0,g:0,alp:1,lib:-1,nat:0,grn:1,teal:0},
+     {t:'No. The housing shortage was created by policy failure. Blaming tenants protections is wrong.',e:-2,g:1,alp:2,lib:-2,nat:-1,grn:2,teal:0}
+   ]},
+
+  // ENERGY TRANSITION
+  {id:'et1',nl:'Energy transition',pair:'et-a',fr:'pro',type:'s',
+   q:'Australia should set a target of 100% renewable electricity by 2030, not just 82%.',
+   opts:[
+     {t:'Yes. 82% is insufficient. Grid reliability can be achieved with storage.',e:-2,g:1,alp:0,lib:-2,nat:-2,grn:2,teal:1},
+     {t:'82% is ambitious and achievable. Targeting 100% risks grid stability.',e:-1,g:0,alp:1,lib:-1,nat:-1,grn:0,teal:1},
+     {t:'No. Renewable targets are already causing blackouts and bill spikes.',e:1,g:0,alp:-2,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+  {id:'et2',nl:'Energy transition',pair:'et-a',fr:'con',type:'s',
+   q:'Nuclear power should be part of the solution to the energy transition.',
+   opts:[
+     {t:'Yes. Nuclear provides reliable low-carbon baseload that renewables cannot.',e:1,g:0,alp:-2,lib:2,nat:1,grn:-2,teal:-1},
+     {t:'The economics do not stack up in Australia and the timeline is too slow.',e:-1,g:0,alp:1,lib:-1,nat:-1,grn:0,teal:1},
+     {t:'No. Nuclear is expensive, slow, and we do not need it. Renewables are cheaper.',e:-2,g:0,alp:2,lib:-2,nat:-1,grn:2,teal:1}
+   ]},
+
+  // MIGRATION SYSTEM
+  {id:'ms1',nl:'Migration system',pair:'ms-a',fr:'neutral',type:'s',
+   q:'The points-based migration system should prioritise skills and economic contribution over family reunification.',
+   opts:[
+     {t:'Yes. Skilled migration drives economic growth and productivity.',e:1,g:0,alp:0,lib:2,nat:0,grn:-1,teal:1},
+     {t:'Both matter. Family reunification supports social cohesion and worker wellbeing.',e:0,g:0,alp:1,lib:0,nat:0,grn:1,teal:0},
+     {t:'No. Skills-first migration undervalues community and treats people as economic units.',e:-1,g:0,alp:0,lib:-1,nat:-1,grn:1,teal:0}
+   ]},
+  {id:'ms2',nl:'Migration system',pair:'ms-a',fr:'neutral',type:'s',
+   q:'The Pacific Labour Scheme is an example of Australia using migration for geopolitical influence rather than genuine development partnership.',
+   opts:[
+     {t:'Yes. Workers are being used as diplomatic tools and paid below domestic rates.',e:-1,g:0,alp:-1,lib:-1,nat:-1,grn:2,teal:0},
+     {t:'The program has flaws but it genuinely transfers remittances to Pacific nations.',e:0,g:0,alp:1,lib:0,nat:0,grn:0,teal:0},
+     {t:'No. The Pacific Labour Scheme creates real opportunities and strengthens regional ties.',e:0,g:0,alp:1,lib:1,nat:1,grn:-1,teal:0}
+   ]},
+
+  // COST OF LIVING ADDITIONAL
+  {id:'cs1',nl:'Social security',pair:'cs-a',fr:'pro',type:'s',
+   q:'JobSeeker is set below the poverty line and forces people into destitution. It must be raised significantly.',
+   opts:[
+     {t:'Yes. No one in a wealthy country should be forced into poverty by the safety net.',e:-2,g:2,alp:1,lib:-2,nat:-1,grn:2,teal:1},
+     {t:'Raise it, but with strong mutual obligations and pathways back to work.',e:-1,g:1,alp:0,lib:0,nat:0,grn:1,teal:1},
+     {t:'The rate is set to incentivise job-seeking. Raising it reduces that incentive.',e:1,g:0,alp:-1,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+  {id:'cs2',nl:'Social security',pair:'cs-a',fr:'con',type:'s',
+   q:'Robodebt caused real harm to hundreds of thousands of welfare recipients. Those responsible in government should face consequences.',
+   opts:[
+     {t:'Yes. This was a systemic injustice and accountability is essential.',e:0,g:-1,alp:2,lib:-2,nat:-1,grn:2,teal:2},
+     {t:'The royal commission and compensation addressed it. Move forward.',e:0,g:0,alp:0,lib:0,nat:0,grn:0,teal:0},
+     {t:'The political class is using Robodebt to relitigate welfare reform debate.',e:0,g:1,alp:-2,lib:1,nat:0,grn:-2,teal:-1}
+   ]}
+];navigator.clipboard.writeText(`My Australian political alignment: ${PMETA[top[0]].name} ${top[1]}% | coreopinion.org/au`).then(()=>{document.getElementById('save-status').style.color='#2D6A4F';document.getElementById('save-status').textContent='Copied to clipboard.';});}
+</script>
+</body>
+</html>
