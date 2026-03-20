@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Political Compass Test 2026 | CoreOpinion</title>
+<meta name="description" content="Where do you stand in British politics? 40 scenario-based questions on UK issues. See your alignment with Labour, Conservative, Lib Dems, Reform UK, Green and more.">
+<meta name="keywords" content="UK political test, British political compass, Labour Conservative test, political alignment quiz UK, where do I stand British politics, Reform UK Labour Conservative quiz 2026, UK election quiz">
+<meta name="author" content="CoreOpinion">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://coreopinion.org/uk">
+<meta name="theme-color" content="#F9F8F6">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coreopinion.org/uk">
+<meta property="og:title" content="UK Political Compass Test 2026 | CoreOpinion">
+<meta property="og:description" content="40 scenario-based questions on British politics. Find your position on the compass and see how closely you align with each major UK party.">
+<meta property="og:site_name" content="CoreOpinion">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UK Political Compass Test 2026 | CoreOpinion">
+<meta name="twitter:description" content="Where do you stand in British politics? Scenario-based questions and full party alignment results including Reform UK, Labour, Conservatives and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A0C0F;--ink-soft:#3D4147;--ink-muted:#7A7F88;--ink-faint:#B0B5BC;
+  --parchment:#F9F8F6;--parchment-warm:#F3F1EE;--white:#FFFFFF;
+  --navy:#1E4D8C;--navy-soft:#E8EFF9;
+  --border:#DDD9D2;--border-soft:#EAE7E1;
+  --green:#2D6A4F;--green-soft:#E8F5EE;
+  --red:#9B2335;--red-soft:#FBE8EB;
+  --lab:#E4003B;--lab-soft:#FDEAF0;
+  --con:#003087;--con-soft:#E5EBF5;
+  --lib:#FAA61A;--lib-soft:#FEF5E3;
+  --ref:#12B6CF;--ref-soft:#E3F8FB;
+  --grn:#02A95B;--grn-soft:#E3F7EE;
+  --snp:#FDF38E;--snp-dark:#6B6100;--snp-soft:#FEFCE8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--parchment);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;font-weight:300;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.4;}
+.page{display:none}
+.page.active{display:block;animation:rise 0.4s cubic-bezier(0.22,1,0.36,1)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;border-bottom:1px solid var(--border-soft);background:rgba(249,248,246,0.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);cursor:pointer;letter-spacing:-0.5px;line-height:1;text-decoration:none;}
+.logo span{color:#2A5DB0}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:15px;color:var(--ink-muted);text-decoration:none;cursor:pointer;font-weight:400;transition:color 0.15s;}
+.nav-links a:hover{color:var(--ink)}
+.flag-badge{font-size:13px;color:var(--ink-muted);display:flex;align-items:center;gap:8px;font-weight:400;}
+.flag-badge .flag{font-size:20px;line-height:1}
+.btn-primary{background:var(--ink);color:var(--white);border:none;padding:16px 36px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:400;transition:opacity 0.15s;display:inline-block;}
+.btn-primary:hover{opacity:0.84}
+.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--border);padding:15px 32px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
+.btn-secondary:hover{border-color:var(--ink)}
+.btn-ghost{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:10px 22px;border-radius:4px;font-size:13px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
+.btn-ghost:hover{border-color:var(--border);color:var(--ink)}
+.btn-back{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:11px 22px;border-radius:4px;font-size:14px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
+.btn-back:hover{border-color:var(--border);color:var(--ink)}
+.btn-back:disabled{opacity:0.28;cursor:default;}
+/* LANDING */
+.hero{max-width:980px;margin:0 auto;padding:88px 52px 72px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;right:-20px;top:10px;font-family:'Cormorant Garamond',serif;font-size:260px;font-weight:700;color:rgba(10,12,15,0.022);line-height:1;pointer-events:none;letter-spacing:-8px;user-select:none;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:28px;}
+.eyebrow::before{content:'';display:block;width:28px;height:1px;background:#2A5DB0}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:70px;font-weight:600;line-height:1.05;color:var(--ink);margin-bottom:24px;letter-spacing:-2px;max-width:700px;}
+.hero h1 em{font-style:italic;color:#2A5DB0}
+.hero-sub{font-size:17px;color:var(--ink-muted);line-height:1.72;max-width:500px;margin-bottom:44px;font-weight:300;}
+.hero-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.party-strip{border-top:1px solid var(--border-soft);display:grid;grid-template-columns:repeat(6,1fr);max-width:980px;margin:0 auto;}
+.party-cell{padding:26px 20px;border-right:1px solid var(--border-soft);display:flex;flex-direction:column;gap:8px;}
+.party-cell:last-child{border-right:none}
+.party-dot{width:28px;height:6px;border-radius:3px;}
+.party-name{font-size:13px;font-weight:500;color:var(--ink);}
+.party-desc{font-size:11px;color:var(--ink-muted);font-weight:300;line-height:1.5;}
+.info-section{max-width:980px;margin:0 auto;padding:60px 52px;border-top:1px solid var(--border-soft);display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.info-block h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--ink);margin-bottom:14px;letter-spacing:-0.5px;}
+.info-block p{font-size:15px;color:var(--ink-muted);line-height:1.75;font-weight:300;}
+/* QUESTION */
+.q-shell{max-width:720px;margin:0 auto;padding:52px;}
+.prog-row{display:flex;align-items:center;gap:18px;margin-bottom:56px;}
+.prog-track{flex:1;height:1px;background:var(--border-soft);position:relative;overflow:visible;}
+.prog-fill{height:1px;background:var(--ink);transition:width 0.5s cubic-bezier(0.22,1,0.36,1);}
+.prog-tip{position:absolute;right:-4px;top:-4px;width:9px;height:9px;background:var(--ink);border-radius:50%;}
+.prog-txt{font-size:12px;color:var(--ink-faint);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.q-topic-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#2A5DB0;background:var(--navy-soft);padding:5px 14px;border-radius:20px;margin-bottom:22px;}
+.q-scenario-box{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--ink);padding:22px 26px;margin-bottom:32px;border-radius:0 8px 8px 0;box-shadow:0 2px 8px rgba(10,12,15,0.05);}
+.q-scenario-tag{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:12px;}
+.q-scenario-body{font-size:16px;color:var(--ink-soft);line-height:1.75;font-weight:300;}
+.q-question{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500;color:var(--ink);line-height:1.38;margin-bottom:32px;letter-spacing:-0.4px;}
+.q-opts{display:flex;flex-direction:column;gap:11px}
+.q-opt{background:var(--white);border:1px solid var(--border);border-radius:7px;padding:18px 22px;cursor:pointer;font-size:15px;color:var(--ink-soft);line-height:1.55;font-weight:400;transition:all 0.18s;}
+.q-opt:hover{border-color:var(--ink);color:var(--ink);background:var(--parchment);}
+.q-opt.picked{border-color:var(--ink);background:var(--ink);color:var(--white);}
+.q-foot{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--border-soft);}
+.btn-skip{background:none;border:none;font-size:13px;color:var(--ink-faint);cursor:pointer;font-family:'Outfit',sans-serif;padding:0;}
+/* DEMO */
+.demo-outer{max-width:580px;margin:0 auto;padding:72px 52px;}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--ink);margin-bottom:12px;letter-spacing:-1.2px;}
+.page-sub{font-size:15px;color:var(--ink-muted);margin-bottom:44px;font-weight:300;line-height:1.65;}
+.demo-fields{display:flex;flex-direction:column;gap:22px;margin-bottom:40px;}
+.field-label{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:9px;}
+.field-label span{color:var(--ink-faint);font-weight:300;}
+select,input[type=email]{width:100%;padding:13px 16px;border:1px solid var(--border-soft);border-radius:6px;font-size:14px;font-family:'Outfit',sans-serif;font-weight:300;background:var(--white);color:var(--ink);appearance:none;-webkit-appearance:none;transition:border-color 0.15s;}
+select:focus,input:focus{outline:none;border-color:var(--navy);}
+.demo-note{font-size:13px;color:var(--ink-faint);font-weight:300;line-height:1.6;margin-bottom:32px;}
+/* CALCULATING */
+.calc-shell{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 72px);padding:52px;text-align:center;}
+.spin-ring{width:48px;height:48px;border:1.5px solid var(--border-soft);border-top-color:var(--ink);border-radius:50%;animation:spin 1.1s linear infinite;margin:0 auto 36px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.calc-h{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--ink);margin-bottom:12px;letter-spacing:-0.5px;}
+.calc-p{font-size:15px;color:var(--ink-muted);font-weight:300}
+/* RESULTS */
+.results-shell{max-width:860px;margin:0 auto;padding:60px 52px;}
+.results-head{margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--border-soft);}
+.result-eyebrow{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;}
+.result-headline{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;color:var(--ink);letter-spacing:-2px;line-height:1;margin-bottom:12px;}
+.result-sub{font-size:16px;color:var(--ink-muted);font-weight:300;}
+.party-results{display:flex;flex-direction:column;gap:0;margin-bottom:36px;background:var(--white);border:1px solid var(--border-soft);border-radius:10px;overflow:hidden;}
+.party-row{display:flex;align-items:center;gap:20px;padding:20px 28px;border-bottom:1px solid var(--border-soft);}
+.party-row:last-child{border-bottom:none}
+.party-row.top-match{background:var(--parchment);}
+.party-row-rank{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--ink-faint);min-width:24px;}
+.party-row.top-match .party-row-rank{color:var(--ink);}
+.party-row-info{min-width:180px;}
+.party-row-name{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:2px;}
+.party-row-sub{font-size:12px;color:var(--ink-muted);font-weight:300;}
+.party-row-bar-wrap{flex:1;height:8px;background:var(--parchment-warm);border-radius:4px;overflow:hidden;}
+.party-row-bar{height:100%;border-radius:4px;transition:width 1.2s cubic-bezier(0.22,1,0.36,1);}
+.party-row-pct{font-size:16px;font-weight:500;color:var(--ink);min-width:44px;text-align:right;font-variant-numeric:tabular-nums;}
+.results-grid{display:grid;grid-template-columns:55fr 45fr;gap:24px;margin-bottom:28px;}
+.res-card{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;}
+.res-card-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:20px;}
+.compass-wrap{display:flex;justify-content:center;margin-bottom:24px;}
+.axis-block{margin-top:4px}
+.axis-item{margin-bottom:18px}
+.axis-item:last-child{margin-bottom:0}
+.axis-row-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-faint);margin-bottom:7px;}
+.axis-track{width:100%;height:5px;background:var(--parchment-warm);border-radius:3px;position:relative;}
+.axis-marker{position:absolute;width:13px;height:13px;background:var(--ink);border:2.5px solid var(--white);border-radius:50%;top:-4px;transform:translateX(-50%);transition:left 0.9s cubic-bezier(0.22,1,0.36,1);box-shadow:0 1px 4px rgba(0,0,0,0.2);}
+.axis-name{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:8px;}
+.save-panel{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;}
+.save-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;}
+.save-desc{font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.6;margin-bottom:20px;}
+.save-row{display:flex;gap:10px;align-items:center;}
+.save-row input{margin-bottom:0;flex:1;}
+.save-status{font-size:13px;color:var(--green);margin-top:10px;min-height:20px;}
+.share-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;padding-top:20px;border-top:1px solid var(--border-soft);}
+@media(max-width:768px){
+  nav{padding:0 20px;height:64px;}
+  .logo{font-size:22px;}
+  .nav-links{gap:14px;}
+  .nav-links a{font-size:13px;}
+  .hero{padding:52px 20px 44px;}
+  .hero h1{font-size:44px;letter-spacing:-1.2px;}
+  .hero-sub{font-size:15px;}
+  .hero-cta{flex-direction:column;align-items:flex-start;}
+  .btn-primary,.btn-secondary{width:100%;text-align:center;}
+  .party-strip{grid-template-columns:1fr 1fr 1fr;border-top:none;}
+  .party-cell{padding:16px;border-right:none;border-top:1px solid var(--border-soft);}
+  .info-section{grid-template-columns:1fr;gap:32px;padding:40px 20px;}
+  .q-shell{padding:28px 20px;}
+  .q-question{font-size:21px;}
+  .q-opt{font-size:14px;padding:15px 16px;}
+  .demo-outer{padding:40px 20px;}
+  .results-shell{padding:32px 20px;}
+  .result-headline{font-size:34px;}
+  .results-grid{grid-template-columns:1fr;}
+  .party-row{padding:14px 16px;gap:12px;}
+  .party-row-info{min-width:130px;}
+  .save-row{flex-direction:column;}
+  .share-row{flex-direction:column;}
+}
+@media(max-width:420px){
+  .hero h1{font-size:34px;}
+  .result-headline{font-size:28px;}
+  .party-strip{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- LANDING -->
+<div class="page active" id="page-landing">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links">
+      <a href="/">General test</a>
+      <a href="/us">US test</a>
+      <a onclick="goTo('page-landing')">UK test</a>
+    </div>
+    <div class="flag-badge"><span class="flag">🇬🇧</span> United Kingdom</div>
+  </nav>
+  <div class="hero">
+    <div class="hero-bg">UK</div>
+    <div class="eyebrow">United Kingdom political test</div>
+    <h1>Where do you stand in <em>British</em> politics?</h1>
+    <p class="hero-sub">40 scenario-based questions on the issues defining UK politics right now. See your position on the compass and your alignment with every major party.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="startTest()">Start the test</button>
+      <button class="btn-secondary">How it works</button>
+    </div>
+  </div>
+  <div class="party-strip">
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--lab)"></div>
+      <div class="party-name">Labour</div>
+      <div class="party-desc">Centre-left. Public services, workers rights, net zero.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--con)"></div>
+      <div class="party-name">Conservative</div>
+      <div class="party-desc">Centre-right. Low taxes, small state, strong defence.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--lib)"></div>
+      <div class="party-name">Lib Dems</div>
+      <div class="party-desc">Liberal centrists. Civil liberties, proportional representation.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--ref)"></div>
+      <div class="party-name">Reform UK</div>
+      <div class="party-desc">Right-populist. Immigration, anti-establishment, NHS reform.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--grn)"></div>
+      <div class="party-name">Green</div>
+      <div class="party-desc">Environmentalist left. Climate, social justice, wealth taxes.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--snp-dark)"></div>
+      <div class="party-name">SNP</div>
+      <div class="party-desc">Scottish independence, centre-left, pro-EU.</div>
+    </div>
+  </div>
+  <div class="info-section">
+    <div class="info-block">
+      <h3>The most fractured parliament in a generation</h3>
+      <p>The 2024 election returned Labour with a historic majority on just 34% of the vote. Reform UK won 14% but few seats. The Conservatives collapsed. Where you land on the new political map may surprise you.</p>
+    </div>
+    <div class="info-block">
+      <h3>Six parties, not two</h3>
+      <p>Unlike American politics, the UK has genuine multi-party competition. Your result shows alignment across all six major parties, including Reform UK, the Greens, and the SNP, giving you a far more precise picture of where you actually stand.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUESTION -->
+<div class="page" id="page-test">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div></div>
+    <div class="flag-badge"><span class="flag">🇬🇧</span> UK test</div>
+  </nav>
+  <div class="q-shell">
+    <div class="prog-row">
+      <div class="prog-track">
+        <div class="prog-fill" id="prog-fill" style="width:0%"></div>
+        <div class="prog-tip"></div>
+      </div>
+      <span class="prog-txt" id="prog-txt">1 of 40</span>
+    </div>
+    <div class="q-topic-tag" id="q-topic"></div>
+    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
+      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-body" id="q-scen-body"></div>
+    </div>
+    <div class="q-question" id="q-text"></div>
+    <div class="q-opts" id="q-opts"></div>
+    <div class="q-foot">
+      <button class="btn-skip" onclick="skipQ()">Skip</button>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="btn-back" onclick="prevQ()" id="btn-back">Back</button>
+        <button class="btn-primary" onclick="nextQ()" style="padding:12px 30px;font-size:14px">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DEMOGRAPHICS -->
+<div class="page" id="page-demo">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="demo-outer">
+    <div class="page-title">Almost there.</div>
+    <p class="page-sub">A few quick questions. Everything is anonymous.</p>
+    <div class="demo-fields">
+      <div>
+        <div class="field-label">Age</div>
+        <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
+      </div>
+      <div>
+        <div class="field-label">Nation <span>(optional)</span></div>
+        <select id="d-nation"><option value="">Select...</option><option>England</option><option>Scotland</option><option>Wales</option><option>Northern Ireland</option></select>
+      </div>
+      <div>
+        <div class="field-label">How do you currently identify? <span>(optional)</span></div>
+        <select id="d-party"><option value="">Prefer not to say</option><option>Labour</option><option>Conservative</option><option>Liberal Democrat</option><option>Reform UK</option><option>Green</option><option>SNP</option><option>Plaid Cymru</option><option>Other</option><option>None</option></select>
+      </div>
+    </div>
+    <p class="demo-note">Never linked to your answers. Helps us understand who takes the test.</p>
+    <button class="btn-primary" onclick="goCalc()">See my results</button>
+  </div>
+</div>
+
+<!-- CALCULATING -->
+<div class="page" id="page-calc">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="calc-shell">
+    <div class="spin-ring"></div>
+    <div class="calc-h">Mapping your answers</div>
+    <p class="calc-p">This will only take a moment.</p>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="page" id="page-results">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links"><a onclick="startTest()">Retake</a><a href="/">General test</a><a href="/us">US test</a></div>
+    <div class="flag-badge"><span class="flag">🇬🇧</span> UK test</div>
+  </nav>
+  <div class="results-shell">
+    <div class="results-head">
+      <div class="result-eyebrow">Your UK political alignment</div>
+      <div class="result-headline" id="r-top-party">Labour</div>
+      <div class="result-sub" id="r-top-desc">Your answers most closely align with the Labour Party.</div>
+    </div>
+    <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Party alignment</div>
+    <div class="party-results" id="party-results"></div>
+    <div class="results-grid">
+      <div class="res-card">
+        <div class="res-card-title">Political compass position</div>
+        <div class="compass-wrap">
+          <svg width="300" height="300" viewBox="0 0 300 300">
+            <rect x="10" y="10" width="135" height="135" rx="5" fill="#4B8EF1" opacity="0.11"/>
+            <rect x="155" y="10" width="135" height="135" rx="5" fill="#F5A623" opacity="0.11"/>
+            <rect x="10" y="155" width="135" height="135" rx="5" fill="#3DBF82" opacity="0.11"/>
+            <rect x="155" y="155" width="135" height="135" rx="5" fill="#E85D6B" opacity="0.11"/>
+            <line x1="150" y1="10" x2="150" y2="290" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="10" y1="150" x2="290" y2="150" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="80" y1="10" x2="80" y2="290" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="220" y1="10" x2="220" y2="290" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="80" x2="290" y2="80" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="220" x2="290" y2="220" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <text x="80" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
+            <text x="80" y="298" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
+            <text x="8" y="154" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 154)">Left</text>
+            <text x="296" y="154" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 296 154)">Right</text>
+            <circle id="cdot-ring" cx="150" cy="150" r="18" fill="#1E4D8C" opacity="0.15"/>
+            <circle id="cdot" cx="150" cy="150" r="9" fill="#1E4D8C"/>
+          </svg>
+        </div>
+        <div class="axis-block">
+          <div class="axis-item">
+            <div class="axis-name">Economic</div>
+            <div class="axis-row-labels"><span>Left</span><span>Right</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-econ" style="left:50%"></div></div>
+          </div>
+          <div class="axis-item">
+            <div class="axis-name">Governance</div>
+            <div class="axis-row-labels"><span>Libertarian</span><span>Authoritarian</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-gov" style="left:50%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="res-card">
+        <div class="res-card-title">What this means</div>
+        <div id="r-insight" style="font-size:14px;color:var(--ink-muted);line-height:1.8;font-weight:300;"></div>
+      </div>
+    </div>
+    <div class="save-panel">
+      <div class="save-title">Save your results</div>
+      <div class="save-desc">Enter your email and we will send you a link. Never shared.</div>
+      <div class="save-row">
+        <input type="email" id="save-email" placeholder="your@email.com">
+        <button class="btn-primary" onclick="saveResults()" style="padding:13px 24px;font-size:14px;white-space:nowrap">Send results</button>
+      </div>
+      <div class="save-status" id="save-status"></div>
+      <div class="share-row">
+        <button class="btn-ghost" onclick="copyLink()">Copy results link</button>
+        <button class="btn-ghost" onclick="startTest()">Retake</button>
+        <a href="/" style="text-decoration:none"><button class="btn-ghost">General test</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const SB_URL = 'https://rttomfnfyjjssdqfzkaj.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
+async function sbInsert(table, data) {
+  const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
+    method:'POST',
+    headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':`Bearer ${SB_KEY}`,'Prefer':'return=representation'},
+    body:JSON.stringify(data)
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+// ============================================================
+// UK QUESTION BANK
+// Party scores: lab, con, lib, ref, grn, snp
+// e = economic axis, g = governance axis
+// ============================================================
+const BANK = [
+
+  // NHS
+  {id:'nh1',nl:'NHS and healthcare',pair:'nh-a',fr:'pro',type:'sc',
+   ctx:'Record waiting lists. 7.5 million people waiting for treatment. A and E corridors full. GPs impossible to get.',
+   q:'The NHS is collapsing under the weight of underfunding. It needs a massive injection of public money now.',
+   opts:[
+     {t:'Yes. Tax and invest. The NHS is a national treasure and it is dying.',e:-2,g:2,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2},
+     {t:'More money yes, but structural reform is equally necessary.',e:-1,g:1,lab:1,con:0,lib:2,ref:0,grn:1,snp:1},
+     {t:'The problem is inefficiency, not funding. Reform before more cash.',e:1,g:0,lab:-1,con:1,lib:0,ref:1,grn:-1,snp:0},
+     {t:'The NHS model is broken. Allow private provision and insurance to fill the gaps.',e:2,g:-1,lab:-2,con:2,lib:-1,ref:2,grn:-2,snp:-2}
+   ]},
+
+  {id:'nh2',nl:'NHS and healthcare',pair:'nh-a',fr:'con',type:'s',
+   q:'The NHS wastes billions on management, consultants, and bureaucracy. No amount of new money will fix it without root-and-branch reform.',
+   opts:[
+     {t:'Yes. The management layer is bloated and must be cut.',e:1,g:0,lab:-1,con:2,lib:0,ref:2,grn:-1,snp:0},
+     {t:'There is waste, but the same argument is used to justify any cut.',e:0,g:0,lab:1,con:0,lib:1,ref:-1,grn:1,snp:1},
+     {t:'No. The NHS needs more staff, not fewer managers.',e:-2,g:1,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2}
+   ]},
+
+  {id:'nh3',nl:'NHS and healthcare',pair:'nh-b',fr:'neutral',type:'s',
+   q:'People who can afford private healthcare should be encouraged to use it, freeing up NHS capacity for those who cannot.',
+   opts:[
+     {t:'Yes. A mixed system serves everyone better.',e:2,g:0,lab:-1,con:2,lib:1,ref:2,grn:-2,snp:-1},
+     {t:'As a temporary measure while the NHS recovers, perhaps. Not as a long-term model.',e:0,g:0,lab:0,con:1,lib:0,ref:1,grn:0,snp:0},
+     {t:'No. Two-tier healthcare is a slippery slope to dismantling the NHS entirely.',e:-2,g:1,lab:2,con:-2,lib:0,ref:-2,grn:2,snp:2}
+   ]},
+
+  // IMMIGRATION
+  {id:'im1',nl:'Immigration',pair:'im-a',fr:'con',type:'sc',
+   ctx:'Net migration hit 900,000 in 2023. Housing costs are soaring. Schools are stretched. Public services are under pressure.',
+   q:'Mass immigration has been allowed to run out of control and ordinary people are paying the price.',
+   opts:[
+     {t:'Yes. Numbers must come down sharply and quickly.',e:0,g:2,lab:0,con:1,lib:-2,ref:2,grn:-2,snp:-1},
+     {t:'The headline number is misleading. Most are students and care workers the country needs.',e:-1,g:-1,lab:1,con:-1,lib:2,ref:-2,grn:2,snp:2},
+     {t:'Immigration is not the problem. Chronic underinvestment in public services is.',e:-2,g:-1,lab:1,con:-2,lib:1,ref:-2,grn:2,snp:1}
+   ]},
+
+  {id:'im2',nl:'Immigration',pair:'im-a',fr:'pro',type:'sc',
+   ctx:'The NHS employs over 100,000 workers from India and other countries. Social care would collapse without overseas staff.',
+   q:'Britain depends on immigration to function. Cutting it would cause serious harm.',
+   opts:[
+     {t:'Yes. We should be grateful, not hostile.',e:-1,g:-1,lab:2,con:-1,lib:2,ref:-2,grn:2,snp:2},
+     {t:'We should train our own people rather than importing labour indefinitely.',e:0,g:1,lab:0,con:1,lib:0,ref:2,grn:0,snp:0},
+     {t:'Managed migration is fine. Uncontrolled mass migration is different.',e:0,g:1,lab:0,con:1,lib:0,ref:1,grn:0,snp:0}
+   ]},
+
+  {id:'im3',nl:'Immigration',pair:'im-b',fr:'con',type:'s',
+   q:'Asylum seekers who arrive in the UK by small boat across the Channel should be removed to a safe third country.',
+   opts:[
+     {t:'Yes. Illegal entry must have consequences or the system collapses.',e:0,g:2,lab:-1,con:2,lib:-2,ref:2,grn:-2,snp:-2},
+     {t:'The Rwanda scheme was cruel and unworkable. Legal safe routes are the answer.',e:0,g:-1,lab:1,con:-1,lib:2,ref:-2,grn:2,snp:2},
+     {t:'People seeking asylum are exercising a legal right. Criminalising them is wrong.',e:0,g:-2,lab:1,con:-2,lib:2,ref:-2,grn:2,snp:2}
+   ]},
+
+  {id:'im4',nl:'Immigration',pair:'im-b',fr:'neutral',type:'s',
+   q:'Britain has a legal and moral obligation to accept refugees from war and persecution, regardless of how they arrived.',
+   opts:[
+     {t:'Yes. The mode of arrival does not cancel the obligation.',e:0,g:-2,lab:1,con:-1,lib:2,ref:-2,grn:2,snp:2},
+     {t:'We have obligations, but they are not unlimited and must be managed.',e:0,g:0,lab:0,con:1,lib:0,ref:0,grn:0,snp:0},
+     {t:'No. International obligations must be balanced against national capacity.',e:0,g:2,lab:-1,con:2,lib:-1,ref:2,grn:-1,snp:-1}
+   ]},
+
+  // COST OF LIVING
+  {id:'cl1',nl:'Cost of living',pair:'cl-a',fr:'pro',type:'sc',
+   ctx:'Energy bills have doubled. Grocery prices are up 25% since 2021. Food bank use has tripled. Real wages are below 2008 levels.',
+   q:'This is not bad luck. It is the result of political choices and corporate greed.',
+   opts:[
+     {t:'Yes. Windfall taxes, price caps, and a proper living wage.',e:-2,g:2,lab:2,con:-2,lib:1,ref:-1,grn:2,snp:2},
+     {t:'Some intervention is right but markets generally correct themselves.',e:0,g:0,lab:0,con:1,lib:0,ref:0,grn:0,snp:0},
+     {t:'Intervention makes it worse. Cut taxes and regulation so businesses can cut prices.',e:2,g:-1,lab:-2,con:2,lib:0,ref:2,grn:-2,snp:-1}
+   ]},
+
+  {id:'cl2',nl:'Cost of living',pair:'cl-a',fr:'con',type:'s',
+   q:'Raising the minimum wage too fast kills jobs for the young and low-skilled people it is meant to help.',
+   opts:[
+     {t:'Yes. Businesses cannot absorb rapid increases and workers suffer.',e:2,g:0,lab:-2,con:2,lib:0,ref:1,grn:-2,snp:-1},
+     {t:'The evidence from the past decade shows this fear is overblown.',e:-1,g:0,lab:2,con:-1,lib:1,ref:-1,grn:2,snp:1},
+     {t:'No. Workers kept on poverty wages subsidise corporate profits.',e:-2,g:1,lab:2,con:-2,lib:1,ref:-1,grn:2,snp:2}
+   ]},
+
+  // HOUSING
+  {id:'hs1',nl:'Housing',pair:'hs-a',fr:'pro',type:'sc',
+   ctx:'Average house price: 9 times average salary in England. 1.2 million people on social housing waiting lists. Generation Rent cannot buy.',
+   q:'The housing crisis is the defining injustice of our time and requires emergency government action.',
+   opts:[
+     {t:'Yes. Build hundreds of thousands of social homes and end Right to Buy.',e:-2,g:2,lab:2,con:-1,lib:1,ref:-1,grn:2,snp:2},
+     {t:'Reform planning to allow private housebuilding. Let the market solve it.',e:2,g:-1,lab:-1,con:2,lib:1,ref:1,grn:-1,snp:0},
+     {t:'Both. Reform planning AND build social housing simultaneously.',e:-1,g:1,lab:1,con:0,lib:2,ref:0,grn:1,snp:1}
+   ]},
+
+  {id:'hs2',nl:'Housing',pair:'hs-a',fr:'con',type:'s',
+   q:'Landlords provide a vital service. Rent controls and punitive taxes will drive them out and make the housing crisis worse.',
+   opts:[
+     {t:'Yes. Landlords respond to incentives and driving them out shrinks supply.',e:2,g:-1,lab:-1,con:2,lib:0,ref:2,grn:-2,snp:-1},
+     {t:'Good landlords are fine. The sector needs regulation, not abolition.',e:0,g:0,lab:0,con:0,lib:1,ref:0,grn:0,snp:0},
+     {t:'No. Private landlordism at this scale is extracting wealth from renters. It needs curbing.',e:-2,g:1,lab:2,con:-2,lib:0,ref:-2,grn:2,snp:2}
+   ]},
+
+  // TAXATION AND PUBLIC SPENDING
+  {id:'tx1',nl:'Tax and spending',pair:'tx-a',fr:'pro',type:'sc',
+   ctx:'The UK has the highest tax burden in 70 years. Public services are still deteriorating.',
+   q:'We are taxed more than ever and getting less than ever. Something is fundamentally broken.',
+   opts:[
+     {t:'Yes. The money is being wasted. Cut tax and cut the state.',e:2,g:-2,lab:-2,con:2,lib:0,ref:2,grn:-2,snp:-1},
+     {t:'Tax is high because of 14 years of underinvestment creating crises that cost more.',e:-2,g:1,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2},
+     {t:'Tax rises were necessary. Spending reform is needed alongside them.',e:-1,g:0,lab:1,con:0,lib:1,ref:0,grn:1,snp:1}
+   ]},
+
+  {id:'tx2',nl:'Tax and spending',pair:'tx-a',fr:'con',type:'s',
+   q:'Britain has some of the highest inheritance taxes in the world. Taxing wealth people have already paid tax on once is double punishment.',
+   opts:[
+     {t:'Yes. Inheritance tax hits ordinary families and should be scrapped or dramatically cut.',e:2,g:-1,lab:-1,con:2,lib:0,ref:2,grn:-2,snp:0},
+     {t:'The threshold should protect family homes but very large estates should pay their share.',e:0,g:0,lab:0,con:0,lib:1,ref:0,grn:0,snp:0},
+     {t:'No. Inherited wealth entrenches inequality. Inheritance tax is the right response.',e:-2,g:1,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:1}
+   ]},
+
+  {id:'tx3',nl:'Tax and spending',pair:'tx-b',fr:'neutral',type:'s',
+   q:'The wealthy do not pay enough tax. A proper wealth tax on assets above 10 million pounds would raise billions without harming most people.',
+   opts:[
+     {t:'Yes. Extreme wealth should be taxed to fund public services.',e:-2,g:2,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2},
+     {t:'A wealth tax is administratively difficult and the rich will find ways around it.',e:0,g:0,lab:0,con:1,lib:0,ref:1,grn:0,snp:0},
+     {t:'No. Wealth taxes destroy investment and drive capital offshore.',e:2,g:-1,lab:-1,con:2,lib:0,ref:2,grn:-2,snp:-1}
+   ]},
+
+  // CLIMATE AND ENERGY
+  {id:'en1',nl:'Climate and energy',pair:'en-a',fr:'pro',type:'sc',
+   ctx:'The UK committed to net zero by 2050. The previous government delayed several climate targets. Extreme weather events are increasing.',
+   q:'Net zero is not a political choice. It is a survival necessity and Britain must lead.',
+   opts:[
+     {t:'Yes. Accelerate the transition. Green investment creates jobs and energy security.',e:-2,g:2,lab:2,con:-1,lib:2,ref:-2,grn:2,snp:2},
+     {t:'The target is right but the transition must not destroy working-class livelihoods.',e:-1,g:1,lab:1,con:0,lib:1,ref:-1,grn:1,snp:1},
+     {t:'Net zero by 2050 is unaffordable and will cost ordinary families dearly.',e:1,g:-1,lab:-2,con:1,lib:-1,ref:2,grn:-2,snp:-1}
+   ]},
+
+  {id:'en2',nl:'Climate and energy',pair:'en-a',fr:'con',type:'s',
+   q:'Blocking new North Sea oil and gas licences while importing fossil fuels from abroad is both economically illiterate and environmentally pointless.',
+   opts:[
+     {t:'Yes. Domestic production makes sense while we transition.',e:1,g:0,lab:-1,con:2,lib:-1,ref:2,grn:-2,snp:0},
+     {t:'The jobs argument has merit but long-term we must stop extracting fossil fuels.',e:0,g:0,lab:0,con:0,lib:0,ref:0,grn:-1,snp:0},
+     {t:'No. New oil fields lock in decades of emissions. The argument for them is a fossil fuel lobby talking point.',e:-2,g:1,lab:1,con:-2,lib:1,ref:-2,grn:2,snp:1}
+   ]},
+
+  // EDUCATION
+  {id:'ed1',nl:'Education',pair:'ed-a',fr:'pro',type:'sc',
+   ctx:'Private school pupils are 7 times more likely to attend Oxbridge than state school pupils. Private schools receive 1.8 billion in VAT exemptions.',
+   q:'Private schools buy advantage at public expense. Their tax breaks should end.',
+   opts:[
+     {t:'Yes. Remove all charitable status and VAT exemptions for private schools.',e:-2,g:2,lab:2,con:-2,lib:0,ref:-1,grn:2,snp:2},
+     {t:'Remove the tax breaks but do not seek to abolish private education itself.',e:-1,g:1,lab:1,con:-1,lib:1,ref:-1,grn:1,snp:1},
+     {t:'No. Parents who pay twice, through taxes and fees, deserve recognition not punishment.',e:2,g:-1,lab:-2,con:2,lib:0,ref:1,grn:-2,snp:-1}
+   ]},
+
+  {id:'ed2',nl:'Education',pair:'ed-a',fr:'con',type:'s',
+   q:'University has been oversold. Too many young people leave with debts and degrees that do not lead to jobs. Apprenticeships and vocational routes deserve equal esteem.',
+   opts:[
+     {t:'Yes. We have pushed too many people into universities that are not right for them.',e:1,g:0,lab:0,con:2,lib:0,ref:2,grn:0,snp:0},
+     {t:'Both paths matter. The problem is the debt, not the education.',e:-1,g:0,lab:1,con:0,lib:1,ref:0,grn:1,snp:1},
+     {t:'University should be free. The argument against it is a class argument dressed as economics.',e:-2,g:1,lab:1,con:-2,lib:1,ref:-2,grn:2,snp:2}
+   ]},
+
+  // WORKERS RIGHTS
+  {id:'wr1',nl:'Workers rights',pair:'wr-a',fr:'pro',type:'sc',
+   ctx:'The UK has some of the weakest workers rights in Europe. Zero-hours contracts, fire and rehire, minimum wage enforcement all rank poorly.',
+   q:'British workers have been stripped of protections that Europeans take for granted. It is time to restore them.',
+   opts:[
+     {t:'Yes. Day one rights, banning zero-hours contracts, proper sick pay.',e:-2,g:2,lab:2,con:-2,lib:1,ref:-1,grn:2,snp:2},
+     {t:'Some reforms are overdue but the flexibility of the UK labour market is also a strength.',e:0,g:0,lab:0,con:0,lib:1,ref:0,grn:0,snp:1},
+     {t:'Flexible labour markets attract investment. Over-regulation destroys jobs.',e:2,g:-1,lab:-2,con:2,lib:-1,ref:2,grn:-2,snp:-1}
+   ]},
+
+  {id:'wr2',nl:'Workers rights',pair:'wr-a',fr:'con',type:'s',
+   q:'Trade unions have too much power and Labour is in their pocket. Strike action costs the economy billions and holds the public hostage.',
+   opts:[
+     {t:'Yes. Unions protect their own at the expense of everyone else.',e:1,g:1,lab:-2,con:2,lib:-1,ref:2,grn:-2,snp:-1},
+     {t:'The right to strike is fundamental. But some essential services need better protection.',e:0,g:0,lab:0,con:0,lib:0,ref:-1,grn:0,snp:0},
+     {t:'No. Workers striking for decent pay and conditions is democracy in action.',e:-2,g:-1,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2}
+   ]},
+
+  // POLICING AND CRIME
+  {id:'pc1',nl:'Crime and policing',pair:'pc-a',fr:'con',type:'s',
+   q:'Knife crime is out of control in British cities. Softer sentencing and police cuts have consequences.',
+   opts:[
+     {t:'Yes. Longer sentences, more police, stop and search.',e:0,g:2,lab:-1,con:2,lib:-1,ref:2,grn:-2,snp:-1},
+     {t:'The causes are poverty and cuts to youth services. Address those.',e:0,g:-1,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2},
+     {t:'Both deterrence and prevention are needed. One without the other fails.',e:0,g:0,lab:1,con:0,lib:1,ref:0,grn:0,snp:1}
+   ]},
+
+  {id:'pc2',nl:'Crime and policing',pair:'pc-a',fr:'pro',type:'s',
+   q:'Stop and search disproportionately targets young Black men and damages community trust in the police. It must be constrained.',
+   opts:[
+     {t:'Yes. The evidence of racial disparity is clear and reforms are needed.',e:0,g:-2,lab:2,con:-1,lib:2,ref:-2,grn:2,snp:2},
+     {t:'With proper oversight it can be effective. Abolishing it entirely would be wrong.',e:0,g:0,lab:0,con:1,lib:0,ref:1,grn:0,snp:0},
+     {t:'No. Stop and search saves lives and its restriction is ideological, not evidential.',e:0,g:2,lab:-1,con:2,lib:-1,ref:2,grn:-2,snp:-1}
+   ]},
+
+  // CONSTITUTIONAL
+  {id:'co1',nl:'Constitution and democracy',pair:'co-a',fr:'pro',type:'s',
+   q:'First past the post is a relic that lets governments win landslide majorities on a third of the vote. Britain needs proportional representation.',
+   opts:[
+     {t:'Yes. PR would produce fairer results and more genuine coalition-building.',e:0,g:-2,lab:0,con:-2,lib:2,ref:1,grn:2,snp:2},
+     {t:'FPTP produces strong governments. PR produces weak coalitions and instability.',e:0,g:1,lab:-1,con:2,lib:-2,ref:-1,grn:-1,snp:-1},
+     {t:'The system needs reform, but PR alone does not solve the problem of bad politics.',e:0,g:0,lab:0,con:0,lib:1,ref:0,grn:1,snp:1}
+   ]},
+
+  {id:'co2',nl:'Constitution and democracy',pair:'co-a',fr:'con',type:'s',
+   q:'The House of Lords is an embarrassment. Unelected peers with no mandate making law is indefensible in a modern democracy.',
+   opts:[
+     {t:'Yes. Abolish it or replace it with an elected chamber.',e:-1,g:-2,lab:2,con:-2,lib:2,ref:1,grn:2,snp:2},
+     {t:'Reform it. Remove the hereditary peers and cap its size. But keep its expertise.',e:0,g:0,lab:0,con:0,lib:1,ref:0,grn:0,snp:0},
+     {t:'Appointed expertise provides a useful check on elected politicians. Keep it roughly as is.',e:0,g:1,lab:-1,con:2,lib:-1,ref:-1,grn:-1,snp:-1}
+   ]},
+
+  // SCOTLAND AND THE UNION
+  {id:'sc1',nl:'Scotland and the Union',pair:'sc-a',fr:'neutral',type:'s',
+   q:'Scotland should have the right to hold a second independence referendum if its parliament votes for one.',
+   opts:[
+     {t:'Yes. It is a fundamental democratic right.',e:0,g:-2,lab:-1,con:-2,lib:0,ref:-2,grn:0,snp:2},
+     {t:'Only with agreement between both governments and with clear criteria for what constitutes a settled question.',e:0,g:0,lab:0,con:-1,lib:1,ref:-1,grn:1,snp:0},
+     {t:'No. The 2014 vote settled this for a generation. The constitution cannot be relitigated every decade.',e:0,g:1,lab:0,con:2,lib:-1,ref:1,grn:-1,snp:-2}
+   ]},
+
+  {id:'sc2',nl:'Scotland and the Union',pair:'sc-a',fr:'con',type:'s',
+   q:'Devolution has gone too far. England subsidises Scotland, Wales, and Northern Ireland while English voters have less democratic power than any other part of the UK.',
+   opts:[
+     {t:'Yes. England needs its own parliament and the Barnett formula must go.',e:0,g:1,lab:-1,con:1,lib:-1,ref:2,grn:-1,snp:-2},
+     {t:'The funding formula needs updating but full English devolution risks breaking the Union.',e:0,g:0,lab:0,con:0,lib:0,ref:0,grn:0,snp:-1},
+     {t:'No. Devolution strengthens the UK by giving nations ownership of their own affairs.',e:0,g:-1,lab:1,con:-1,lib:2,ref:-2,grn:1,snp:2}
+   ]},
+
+  // FOREIGN POLICY
+  {id:'fp1',nl:'Foreign policy and defence',pair:'fp-a',fr:'pro',type:'sc',
+   ctx:'UK defence spending is 2.3% of GDP. The government has pledged to raise it to 2.5% by 2027 and then 3%.',
+   q:'In a more dangerous world, spending more on defence is not a luxury. It is a necessity.',
+   opts:[
+     {t:'Yes. NATO commitments and Russian aggression require serious investment.',e:0,g:1,lab:0,con:2,lib:0,ref:1,grn:-2,snp:-1},
+     {t:'Spend smarter, not just more. Reform how the military operates first.',e:0,g:0,lab:0,con:0,lib:0,ref:0,grn:0,snp:0},
+     {t:'No. 3% of GDP on defence means 3% not spent on schools, hospitals, and homes.',e:-1,g:-1,lab:0,con:-2,lib:0,ref:-1,grn:2,snp:1}
+   ]},
+
+  {id:'fp2',nl:'Foreign policy and defence',pair:'fp-a',fr:'con',type:'s',
+   q:'Britain should use its veto at the UN Security Council more aggressively to protect national interests, even if that means blocking resolutions others support.',
+   opts:[
+     {t:'Yes. Britain must be willing to act in its own interests.',e:0,g:1,lab:-1,con:2,lib:-2,ref:2,grn:-2,snp:-2},
+     {t:'The veto is a last resort. Cooperation through multilateral institutions is usually better.',e:0,g:0,lab:1,con:0,lib:2,ref:-1,grn:1,snp:2},
+     {t:'The UN Security Council is outdated. Britain should invest in reforming it.',e:0,g:-1,lab:0,con:-1,lib:1,ref:-1,grn:1,snp:1}
+   ]},
+
+  // BREXIT AND EUROPE
+  {id:'br1',nl:'Brexit and Europe',pair:'br-a',fr:'con',type:'s',
+   q:'Brexit was the right decision. Britain is better off making its own laws, controlling its own borders, and signing its own trade deals.',
+   opts:[
+     {t:'Yes. Whatever the short-term disruption, sovereignty was worth it.',e:1,g:1,lab:-1,con:2,lib:-2,ref:2,grn:-1,snp:-2},
+     {t:'Brexit was the wrong decision but it happened. Pragmatic reset with the EU is now the priority.',e:-1,g:0,lab:1,con:-1,lib:1,ref:-1,grn:0,snp:0},
+     {t:'No. Brexit has damaged the economy, weakened security ties, and isolated Britain.',e:-2,g:-1,lab:0,con:-2,lib:2,ref:-2,grn:1,snp:2}
+   ]},
+
+  {id:'br2',nl:'Brexit and Europe',pair:'br-a',fr:'pro',type:'s',
+   q:'Britain should rejoin the EU single market, even if that means accepting freedom of movement again.',
+   opts:[
+     {t:'Yes. The economic benefits outweigh the political costs.',e:-2,g:-1,lab:0,con:-2,lib:2,ref:-2,grn:1,snp:2},
+     {t:'A closer trading relationship yes, but full single market membership goes too far for now.',e:-1,g:0,lab:1,con:-1,lib:1,ref:-1,grn:0,snp:1},
+     {t:'No. We voted to control our own borders. That must not be reversed.',e:1,g:1,lab:-1,con:2,lib:-2,ref:2,grn:-1,snp:-1}
+   ]},
+
+  // WELFARE
+  {id:'wl1',nl:'Benefits and welfare',pair:'wl-a',fr:'pro',type:'sc',
+   ctx:'The two-child benefit cap means families with three or more children receive no additional support. 250,000 children are in poverty as a direct result.',
+   q:'Punishing children for being born into large families is not welfare reform. It is cruelty.',
+   opts:[
+     {t:'Yes. Scrap the two-child cap immediately.',e:-2,g:1,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2},
+     {t:'The principle of capping benefits is defensible. The threshold can be debated.',e:0,g:0,lab:-1,con:1,lib:0,ref:1,grn:-1,snp:0},
+     {t:'Unlimited child benefit creates perverse incentives. The cap should stay.',e:2,g:0,lab:-2,con:2,lib:-1,ref:1,grn:-2,snp:-1}
+   ]},
+
+  {id:'wl2',nl:'Benefits and welfare',pair:'wl-a',fr:'con',type:'s',
+   q:'The welfare bill is unsustainable. Too many working-age people are on long-term sickness benefits and the system is being gamed.',
+   opts:[
+     {t:'Yes. The system needs tightening and fraud and abuse must be tackled.',e:1,g:1,lab:-1,con:2,lib:0,ref:2,grn:-2,snp:0},
+     {t:'Most people on sickness benefits are genuinely unable to work. Punishing them is wrong.',e:-2,g:-1,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2},
+     {t:'Reform is needed but the problem is lack of NHS treatment and support, not fraud.',e:-1,g:0,lab:1,con:-1,lib:1,ref:-1,grn:1,snp:1}
+   ]},
+
+  // NET ZERO VS COST
+  {id:'nz1',nl:'Net zero and industry',pair:'nz-a',fr:'con',type:'sc',
+   ctx:'The UK has among the highest domestic energy prices in Europe. Energy-intensive industries are relocating abroad.',
+   q:'Green levies and net zero targets are hollowing out British industry and exporting jobs and emissions.',
+   opts:[
+     {t:'Yes. Pause the green agenda until energy prices come down.',e:1,g:-1,lab:-1,con:1,lib:-1,ref:2,grn:-2,snp:-1},
+     {t:'Energy transition costs are real but the answer is industrial strategy, not retreat.',e:-1,g:1,lab:1,con:0,lib:1,ref:-1,grn:1,snp:1},
+     {t:'No. The long-term cost of not acting on climate dwarfs any short-term industrial pain.',e:-2,g:1,lab:1,con:-1,lib:1,ref:-2,grn:2,snp:1}
+   ]},
+
+  // SOCIAL ISSUES
+  {id:'si1',nl:'Social and cultural issues',pair:'si-a',fr:'pro',type:'sc',
+   ctx:'The UK has some of the highest drug-related death rates in Europe. Scotland has the worst rate in the developed world.',
+   q:'Drug laws have failed. Decriminalisation and a public health approach is the only honest response.',
+   opts:[
+     {t:'Yes. Portugal shows this works. Treat addiction as a health issue, not a crime.',e:-1,g:-2,lab:1,con:-2,lib:2,ref:-2,grn:2,snp:2},
+     {t:'The evidence for decriminalisation is compelling but full legalisation goes too far.',e:0,g:-1,lab:0,con:-1,lib:1,ref:-1,grn:1,snp:1},
+     {t:'No. Decriminalisation sends the wrong message and increases use.',e:0,g:2,lab:-1,con:2,lib:-2,ref:2,grn:-2,snp:-1}
+   ]},
+
+  {id:'si2',nl:'Social and cultural issues',pair:'si-a',fr:'con',type:'s',
+   q:'Britain has lost confidence in its own history and culture. We should teach our children to be proud of their country, not ashamed of it.',
+   opts:[
+     {t:'Yes. Patriotism and teaching national history positively is not racism.',e:0,g:1,lab:-1,con:2,lib:-1,ref:2,grn:-2,snp:-1},
+     {t:'Pride in country and honest history are not opposites. We can have both.',e:0,g:0,lab:0,con:0,lib:0,ref:0,grn:0,snp:0},
+     {t:'No. An honest reckoning with empire and history is what real national confidence looks like.',e:0,g:-1,lab:1,con:-2,lib:1,ref:-2,grn:2,snp:2}
+   ]},
+
+  // FINAL BROAD QUESTIONS
+  {id:'br3',nl:'Role of the state',pair:'br-b',fr:'neutral',type:'s',
+   q:'The state is too big, too expensive, and too involved in British life. Cutting it back would make people more free and more prosperous.',
+   opts:[
+     {t:'Yes. A leaner state, lower taxes, and more individual responsibility.',e:2,g:-2,lab:-2,con:2,lib:0,ref:2,grn:-2,snp:-1},
+     {t:'The state does too much in some areas and too little in others. Smarter, not smaller.',e:0,g:0,lab:0,con:0,lib:0,ref:0,grn:0,snp:0},
+     {t:'No. The state builds the infrastructure, education, and healthcare that makes prosperity possible.',e:-2,g:2,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2}
+   ]},
+
+  {id:'br4',nl:'Role of the state',pair:'br-b',fr:'neutral',type:'s',
+   q:'The gap between the richest and poorest in Britain is a moral scandal that demands urgent government action.',
+   opts:[
+     {t:'Yes. Wealth taxes, higher top rates, and stronger public services.',e:-2,g:2,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2},
+     {t:'Inequality matters, but growth and opportunity are better solutions than redistribution alone.',e:0,g:0,lab:0,con:0,lib:1,ref:0,grn:0,snp:1},
+     {t:'No. Inequality reflects different efforts and outcomes. Forced equality stifles ambition.',e:2,g:-1,lab:-2,con:2,lib:-1,ref:2,grn:-2,snp:-1}
+   ]}
+];
+
+// ============================================================
+// SHUFFLER
+// ============================================================
+function buildOrder(bank) {
+  function strength(q) {
+    return Math.max(...q.opts.flatMap(o =>
+      [Math.abs(o.e), Math.abs(o.g),
+       Math.abs(o.lab), Math.abs(o.con), Math.abs(o.lib),
+       Math.abs(o.ref), Math.abs(o.grn), Math.abs(o.snp)]
+    ));
+  }
+  const sorted = [...bank].sort((a,b) => strength(b)-strength(a)+(Math.random()-0.5)*0.5);
+  const MIN_GAP = Math.max(6, Math.floor(bank.length*0.25));
+  for (let pass=0; pass<60; pass++) {
+    let moved=false;
+    for (let i=0; i<sorted.length; i++) {
+      for (let j=i+1; j<sorted.length; j++) {
+        if (sorted[i].pair===sorted[j].pair && (j-i)<MIN_GAP) {
+          for (let k=Math.min(i+MIN_GAP,sorted.length-1); k<sorted.length; k++) {
+            if (k===j) continue;
+            let ok=true;
+            for (let m=0; m<sorted.length; m++) {
+              if (m===k||m===j) continue;
+              if (sorted[m].pair===sorted[k].pair && Math.abs(m-j)<MIN_GAP) {ok=false;break;}
+            }
+            if (ok) {[sorted[j],sorted[k]]=[sorted[k],sorted[j]];moved=true;break;}
+          }
+          if (moved) break;
+        }
+      }
+      if (moved) break;
+    }
+    if (!moved) break;
+  }
+  return sorted;
+}
+
+// STATE
+let qi=0, picked=-1, answers=[], qs=[];
+
+function goTo(id) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function startTest() {
+  qi=0; picked=-1; answers=[];
+  qs=buildOrder(BANK);
+  document.getElementById('save-status').textContent='';
+  document.getElementById('save-email').value='';
+  renderQ();
+  goTo('page-test');
+}
+
+function renderQ() {
+  const q=qs[qi], total=qs.length;
+  document.getElementById('prog-fill').style.width=((qi/total)*100).toFixed(1)+'%';
+  document.getElementById('prog-txt').textContent=(qi+1)+' of '+total;
+  document.getElementById('q-topic').textContent=q.nl;
+  const sw=document.getElementById('q-scen-wrap');
+  if (q.ctx) {sw.style.display='block';document.getElementById('q-scen-body').textContent=q.ctx;}
+  else {sw.style.display='none';}
+  document.getElementById('q-text').textContent=q.q;
+  const container=document.getElementById('q-opts');
+  container.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const d=document.createElement('div');
+    d.className='q-opt'; d.textContent=o.t;
+    d.onclick=()=>pickOpt(i,d);
+    container.appendChild(d);
+  });
+  const prev=answers.find(a=>a.id===q.id);
+  if (prev) {picked=prev.pick;container.children[prev.pick].classList.add('picked');}
+  else {picked=-1;}
+  const bb=document.getElementById('btn-back');
+  if (bb) bb.disabled=(qi===0);
+}
+
+function pickOpt(i,el) {
+  document.querySelectorAll('.q-opt').forEach(o=>o.classList.remove('picked'));
+  el.classList.add('picked'); picked=i;
+}
+
+function nextQ() {
+  const q=qs[qi];
+  if (picked>=0) {
+    answers=answers.filter(a=>a.id!==q.id);
+    answers.push({id:q.id, pick:picked, ...q.opts[picked]});
+  }
+  picked=-1; qi++;
+  if (qi>=qs.length) {goTo('page-demo');return;}
+  renderQ();
+}
+
+function prevQ() {if (qi<=0) return; qi--; renderQ();}
+function skipQ() {picked=-1; qi++; if (qi>=qs.length){goTo('page-demo');return;} renderQ();}
+
+// SCORING
+function score() {
+  let eSum=0,gSum=0,eMaxT=0,gMaxT=0;
+  const pTotals={lab:0,con:0,lib:0,ref:0,grn:0,snp:0};
+  const pMaxes ={lab:0,con:0,lib:0,ref:0,grn:0,snp:0};
+
+  answers.forEach(a=>{
+    const q=qs.find(q=>q.id===a.id); if(!q) return;
+    eSum+=a.e; gSum+=a.g;
+    eMaxT+=Math.max(...q.opts.map(o=>Math.abs(o.e)));
+    gMaxT+=Math.max(...q.opts.map(o=>Math.abs(o.g)));
+    ['lab','con','lib','ref','grn','snp'].forEach(p=>{
+      pTotals[p]+=(a[p]||0);
+      pMaxes[p]+=Math.max(...q.opts.map(o=>Math.abs(o[p]||0)));
+    });
+  });
+
+  const eScore=eMaxT>0?Math.max(-1,Math.min(1,eSum/eMaxT)):0;
+  const gScore=gMaxT>0?Math.max(-1,Math.min(1,gSum/gMaxT)):0;
+
+  const pScores={};
+  ['lab','con','lib','ref','grn','snp'].forEach(p=>{
+    const raw=pMaxes[p]>0?pTotals[p]/pMaxes[p]:0;
+    pScores[p]=Math.round(((raw+1)/2)*100);
+  });
+
+  return {eScore,gScore,pScores};
+}
+
+const PARTY_META = {
+  lab:{name:'Labour',color:'var(--lab)',barClass:'bar-lab',
+       desc:'Your answers most closely match the Labour Party. You tend to support public services, workers rights, and government intervention to reduce inequality.'},
+  con:{name:'Conservative',color:'var(--con)',barClass:'bar-con',
+       desc:'Your answers most closely match the Conservative Party. You tend to favour lower taxes, a smaller state, and traditional institutions.'},
+  lib:{name:'Liberal Democrats',color:'var(--lib)',barClass:'bar-lib',
+       desc:'Your answers most closely match the Liberal Democrats. You favour individual freedom, strong public services, and closer ties with Europe.'},
+  ref:{name:'Reform UK',color:'var(--ref)',barClass:'bar-ref',
+       desc:'Your answers most closely match Reform UK. You want radical cuts to immigration, NHS reform, and a rejection of the mainstream political consensus.'},
+  grn:{name:'Green Party',color:'var(--grn)',barClass:'bar-grn',
+       desc:'Your answers most closely match the Green Party. You prioritise environmental action, wealth redistribution, and systemic economic change.'},
+  snp:{name:'SNP',color:'var(--snp-dark)',barClass:'bar-snp',
+       desc:'Your answers most closely match the SNP. You support Scottish independence, centre-left economics, and a closer relationship with Europe.'}
+};
+
+// Party bar colours via CSS
+const barColors={lab:'#E4003B',con:'#003087',lib:'#FAA61A',ref:'#12B6CF',grn:'#02A95B',snp:'#6B6100'};
+
+function renderResults() {
+  const {eScore,gScore,pScores}=score();
+  const ranked=Object.entries(pScores).sort((a,b)=>b[1]-a[1]);
+  const topKey=ranked[0][0];
+  const meta=PARTY_META[topKey];
+
+  document.getElementById('r-top-party').textContent=meta.name;
+  document.getElementById('r-top-desc').textContent=meta.desc;
+
+  const container=document.getElementById('party-results');
+  container.innerHTML='';
+  ranked.forEach(([party,pct],i)=>{
+    const m=PARTY_META[party];
+    const row=document.createElement('div');
+    row.className='party-row'+(i===0?' top-match':'');
+    row.innerHTML=`
+      <div class="party-row-rank">${i+1}</div>
+      <div class="party-row-info"><div class="party-row-name">${m.name}</div><div class="party-row-sub">${pct}% alignment</div></div>
+      <div class="party-row-bar-wrap"><div class="party-row-bar" style="width:0%;background:${barColors[party]}" data-w="${pct}%"></div></div>
+      <div class="party-row-pct">${pct}%</div>`;
+    container.appendChild(row);
+  });
+
+  // Compass (300x300, centre=150, range=132)
+  const dotX=(150+eScore*132).toFixed(1);
+  const dotY=(150-gScore*132).toFixed(1);
+  document.getElementById('cdot').setAttribute('cx',dotX);
+  document.getElementById('cdot').setAttribute('cy',dotY);
+  document.getElementById('cdot-ring').setAttribute('cx',dotX);
+  document.getElementById('cdot-ring').setAttribute('cy',dotY);
+
+  setTimeout(()=>{
+    document.getElementById('ax-econ').style.left=(((eScore+1)/2)*100).toFixed(1)+'%';
+    document.getElementById('ax-gov').style.left=(((gScore+1)/2)*100).toFixed(1)+'%';
+    document.querySelectorAll('.party-row-bar[data-w]').forEach(el=>{el.style.width=el.dataset.w;});
+  },200);
+
+  const gap=ranked[0][1]-ranked[1][1];
+  const gapText=gap<8
+    ?`Your result is close. Only ${gap} points separates you from ${PARTY_META[ranked[1][0]].name}. You may hold views that genuinely straddle both traditions.`
+    :gap<20
+    ?`You align meaningfully with ${PARTY_META[ranked[1][0]].name} too, at ${ranked[1][1]}%.`
+    :`Your alignment with ${meta.name} is clear, with ${gap} points between you and the next closest party.`;
+
+  document.getElementById('r-insight').innerHTML=
+    `<p style="margin-bottom:14px">${meta.desc}</p><p>${gapText}</p>`;
+}
+
+function goCalc() {
+  goTo('page-calc');
+  setTimeout(()=>{renderResults();goTo('page-results');},1800);
+}
+
+async function saveResults() {
+  const email=document.getElementById('save-email').value.trim();
+  const statusEl=document.getElementById('save-status');
+  if (!email||!email.includes('@')){statusEl.style.color='#9B2335';statusEl.textContent='Please enter a valid email.';return;}
+  statusEl.style.color='var(--ink-muted)';statusEl.textContent='Saving...';
+  const {pScores}=score();
+  try {
+    await sbInsert('coreopinion_results',{
+      email,mode:'uk',
+      archetype:Object.entries(pScores).sort((a,b)=>b[1]-a[1])[0][0],
+      bias_breakdown:pScores,
+      age:document.getElementById('d-age').value||null,
+      country:'United Kingdom',
+      political_id:document.getElementById('d-party').value||null
+    });
+    statusEl.style.color='#2D6A4F';statusEl.textContent='Saved. We will email your results to '+email;
+  } catch(e) {
+    statusEl.style.color='#9B2335';statusEl.textContent='Something went wrong. Please try again.';
+  }
+}
+
+function copyLink() {
+  const {pScores}=score();
+  const top=Object.entries(pScores).sort((a,b)=>b[1]-a[1])[0,
+// TRANSPORT
+  {id:'tr1',nl:'Transport and infrastructure',pair:'tr-a',fr:'pro',type:'sc',
+   ctx:'HS2 was cancelled north of Birmingham. Rail fares are among the highest in Europe. The north-south divide in infrastructure investment is stark.',
+   q:'Decades of underinvestment in northern transport has deliberately held back entire regions.',
+   opts:[
+     {t:'Yes. Proper public investment in rail and roads outside London is overdue.',e:-2,g:2,lab:2,con:-1,lib:1,ref:1,grn:1,snp:1},
+     {t:'HS2 was a vanity project. Targeted regional investment is better than grand national schemes.',e:0,g:0,lab:0,con:0,lib:0,ref:1,grn:0,snp:1},
+     {t:'The market should drive infrastructure. State megaprojects always overrun and underdeliver.',e:2,g:-1,lab:-2,con:1,lib:-1,ref:2,grn:-2,snp:-1}
+   ]},
+
+  // AI AND TECH
+  {id:'ai1',nl:'Technology and AI',pair:'ai-a',fr:'neutral',type:'s',
+   q:'Britain should regulate artificial intelligence firmly before the technology outpaces any ability to control it.',
+   opts:[
+     {t:'Yes. Proactive regulation is essential before the harms materialise.',e:-1,g:2,lab:1,con:-1,lib:2,ref:-1,grn:2,snp:1},
+     {t:'Light regulation that does not stifle innovation. The US and China will not wait.',e:1,g:0,lab:0,con:2,lib:0,ref:1,grn:0,snp:0},
+     {t:'Government cannot regulate what it does not understand. Let industry self-regulate.',e:2,g:-2,lab:-2,con:1,lib:-1,ref:1,grn:-2,snp:-1}
+   ]},
+
+  // MONARCHY
+  {id:'mo1',nl:'Monarchy and tradition',pair:'mo-a',fr:'con',type:'s',
+   q:'The monarchy is a unifying national institution that provides continuity and soft power Britain could not otherwise afford.',
+   opts:[
+     {t:'Yes. The Royal Family earns Britain far more than it costs.',e:0,g:1,lab:0,con:2,lib:0,ref:2,grn:-2,snp:-1},
+     {t:'Reform it significantly, but do not abolish it. Tradition has value.',e:0,g:0,lab:0,con:1,lib:1,ref:0,grn:0,snp:0},
+     {t:'No. An unelected hereditary head of state is indefensible in a modern democracy.',e:0,g:-2,lab:1,con:-2,lib:1,ref:-1,grn:2,snp:2}
+   ]}
+];
+  const text=`My UK political alignment: ${PARTY_META[top[0]].name} ${top[1]}% | coreopinion.org/uk`;
+  navigator.clipboard.writeText(text).then(()=>{
+    document.getElementById('save-status').style.color='#2D6A4F';
+    document.getElementById('save-status').textContent='Copied to clipboard.';
+  });
+}
+</script>
+</body>
+</html>
