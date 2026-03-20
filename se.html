@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+  renderDisagreements(topKey, meta.name, ranked[0][1]);
+  document.getElementById('disagree-party-name').textContent = meta.name;<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -131,7 +133,7 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
     <div class="nav-links">
       <a href="/">General</a><a href="/us">US</a><a href="/uk">UK</a><a href="/ca">Canada</a><a href="/au">Australia</a><a onclick="goTo('page-landing')">Sweden</a>
     </div>
-    <div class="flag-badge"><span class="flag">🇸🇪</span> Sverige</div>
+    <div style="display:flex;align-items:center;gap:12px"><button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">Svenska</button><div class="flag-badge"><span class="flag">🇸🇪</span> <span id="lang-label">Sweden</span></div></div>
   </nav>
   <div class="hero">
     <div class="hero-bg">SE</div>
@@ -525,7 +527,7 @@ let qi=0,picked=-1,answers=[],qs=[];
 function goTo(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
 function startTest(){qi=0;picked=-1;answers=[];qs=buildOrder(BANK);document.getElementById('save-status').textContent='';document.getElementById('save-email').value='';renderQ();goTo('page-test');}
 function renderQ(){
-  const q=qs[qi],total=qs.length;
+  const q=getQuestion(qs[qi]),total=qs.length;
   document.getElementById('prog-fill').style.width=((qi/total)*100).toFixed(1)+'%';
   document.getElementById('prog-txt').textContent=(qi+1)+' of '+total;
   document.getElementById('q-topic').textContent=q.nl;
@@ -688,6 +690,165 @@ function copyLink(){const{pScores}=score();const top=Object.entries(pScores).sor
      {t:'Civic education is important but imposing a single national narrative is exclusionary.',e:0,g:-1,s:0,m:-1,sd:-2,c:0,v:1,mp:2,l:0,kd:-1}
    ]}
 ];navigator.clipboard.writeText(`My Swedish political alignment: ${PMETA[top[0]].name} ${top[1]}% | coreopinion.org/se`).then(()=>{document.getElementById('save-status').style.color='#2D6A4F';document.getElementById('save-status').textContent='Copied to clipboard.';});}
+
+// ── SWEDISH LANGUAGE SUPPORT ────────────────────────────────────────────
+let currentLang = 'en';
+
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'sv' : 'en';
+  document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'Svenska' : 'English';
+  document.getElementById('lang-label').textContent = currentLang === 'en' ? 'Sweden' : 'Sverige';
+  applyLang();
+  if (document.getElementById('page-test').classList.contains('active')) renderQ();
+}
+
+function t(en, sv) { return currentLang === 'sv' ? sv : en; }
+
+function applyLang() {
+  // Landing page
+  const isEn = currentLang === 'en';
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) heroTitle.innerHTML = isEn
+    ? 'Where do you stand in <em>Swedish</em> politics?'
+    : 'Var står du i <em>svensk</em> politik?';
+  const heroSub = document.querySelector('.hero-sub');
+  if (heroSub) heroSub.textContent = isEn
+    ? '40 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties.'
+    : '40 scenariobaserade frågor om det som definierar Sverige just nu. Brottslighet, migration, välfärd, NATO, bostäder och mer. Se din likhet med alla åtta riksdagspartier.';
+  const startBtn = document.querySelector('.btn-primary');
+  if (startBtn) startBtn.textContent = isEn ? 'Start the test' : 'Starta testet';
+  // Question page
+  const skipBtn = document.querySelector('.btn-skip');
+  if (skipBtn) skipBtn.textContent = isEn ? 'Skip' : 'Hoppa över';
+  const backBtn = document.getElementById('btn-back');
+  if (backBtn) backBtn.textContent = isEn ? 'Back' : 'Tillbaka';
+  const nextBtn = document.querySelector('.q-foot .btn-primary');
+  if (nextBtn) nextBtn.textContent = isEn ? 'Next' : 'Nästa';
+  // Demo page
+  const demoTitle = document.querySelector('.page-title');
+  if (demoTitle) demoTitle.textContent = isEn ? 'Almost there.' : 'Snart klart.';
+  const demoSub = document.querySelector('.page-sub');
+  if (demoSub) demoSub.textContent = isEn ? 'A few quick questions. Everything is anonymous.' : 'Några snabba frågor. Allt är anonymt.';
+  const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
+  if (seeResultsBtn) seeResultsBtn.textContent = isEn ? 'See my results' : 'Visa mina resultat';
+}
+
+// Swedish question translations
+const SE_QUESTIONS = {
+  im1: {
+    q: 'Sverige tog in alldeles för många människor för snabbt. Konsekvenserna betalas fortfarande idag.',
+    ctx: 'Sverige tog emot över 160 000 asylsökande under 2015 ensam. Integrationen har varit ojämn. Gängvåldet har ökat kraftigt i vissa områden.',
+    opts: ['Ja. Invandringen måste minskas kraftigt och integrationskraven måste skärpas.', 'Antalet var högt men felet låg i integrationspolitiken, inte i siffrorna i sig.', 'Nej. Sverige har gynnats av invandring. Misslyckandets narrativ drivs av fördomar.']
+  },
+  im2: { q: 'Tillfälligt uppehållstillstånd bör göras permanent för flyktingar som har byggt upp sina liv i Sverige, oavsett förhållanden i hemlandet.', opts: ['Ja. Att tvinga tillbaka människor de flydde från är grymt och kontraproduktivt.', 'Villkorat på integrationsmilstolpar, ja.', 'Nej. Tillfällig status måste betyda tillfällig. Annars tappar systemet sin trovärdighet.'] },
+  im3: { q: 'Sverige bör betala människor för att återvända till sina ursprungsländer om de är villiga att frivilligt lämna.', opts: ['Ja. Frivilliga återvändandeprogram sparar pengar och minskar sociala spänningar.', 'Som en sista utväg med verkliga skyddsåtgärder existerar sådana program på andra håll.', 'Nej. Att betala människor att lämna är oförenligt med mänsklig värdighet.'] },
+  im4: { q: 'Språkkrav, medborgarskapstest och integrationskontrakt är rimliga krav som respekterar både nyanlända och värdsamhället.', opts: ['Ja. Integrationsskyldigheter är ett tecken på att man tar nyanlända på allvar.', 'Frivilliga program fungerar bättre än tvingande sådana.', 'Stöd och möjligheter integrerar människor bättre än kontrakt och test.'] },
+  cr1: { q: 'Gängvåldet är en nationell kris som kräver ett fundamentalt hårdare svar.', ctx: 'Sverige hade mer än 400 skjutningar 2023. Gängrelaterade explosioner nådde rekordnivåer. Flera europeiska länder varnar nu sina medborgare för att resa till vissa svenska städer.', opts: ['Ja. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.', 'Brottsbekämpning spelar roll men grundorsakerna ligger i fattigdom, segregation och utanförskap.', 'Både hårdare ingripanden nu och långsiktig investering i inkludering.'] },
+  cr2: { q: 'Att kriminalisera gängtillhörighet, snarare än bara kriminella handlingar, är nödvändigt för att bryta våldsens cirkel.', opts: ['Ja. Gängstrukturer måste brytas upp och tillhörighet i sig göras olaglig.', 'Enbart med mycket snäva definitioner för att undvika kriminalisering av association.', 'Nej. Kriminalisering av tillhörighet utan kriminella handlingar strider mot grundläggande rättsprinciper.'] },
+  wl1: { q: 'Den svenska välfärdsstaten är grunden för ett framgångsrikt samhälle. Nedskärningar i den är ideologiska, inte ekonomiska.', opts: ['Ja. Välfärdsstaten är det som gör Sverige fungerande. Skydda och stärk den.', 'Välfärdsstaten är nödvändig men behöver reformeras för att förbli hållbar.', 'Välfärdsstaten har vuxit sig för stor och tränger undan individuellt ansvar.'] },
+  wl2: { q: 'Människor som aldrig har betalat in i det svenska välfärdssystemet bör inte få samma förmåner som de som bidragit i decennier.', opts: ['Ja. Bidrag bör avgöras av vad man bidragit med.', 'Behov måste också räknas, men vissa bidragsrelaterade element är rimliga.', 'Nej. Behov, inte bidragshistorik, måste ligga till grund för ett rättvist system.'] },
+  hc1: { q: 'Sjukvårdsbristen kräver mer offentliga investeringar, inte privata alternativ.', ctx: 'Sverige har bland de längsta sjukvårdsköerna i EU. 90-dagarsgarantin bryts rutinmässigt. Regionala ojämlikheter i vårdkvalitet är betydande.', opts: ['Ja. Offentlig sjukvård måste finansieras och bemannas ordentligt.', 'Privata vårdgivare vid sidan av offentliga kan minska köer utan att hota jämlikheten.', 'Mer finansiering och bättre organisation av det offentliga systemet är det enda riktiga svaret.'] },
+  hc2: { q: 'Vinstdrivna vård-bolag suger ut pengar från patientvård till aktieägare. De bör inte tillåtas verka inom det offentliga systemet.', opts: ['Ja. Vinstuttag från vård är oförenligt med jämlik vård.', 'Viss privat verksamhet är effektiv om den regleras och kvalitetsgranskas ordentligt.', 'Nej. Konkurrens driver kvalitet och effektivitet.'] },
+  ed1: { q: 'Friskoleformen har ökat segregationen och undergrävt likvärdig utbildning. Den behöver backas.', ctx: 'PISA-resultaten visar att svenska skolprestationer har sjunkit markant. Segregationen mellan skolor är bland de sämsta i OECD. Det fria skolvalet har kommit under intensiv granskning.', opts: ['Ja. Vinstdrivna friskolor har misslyckats och bör avvecklas.', 'Reglera friskolor hårt men behåll inslaget av valfrihet.', 'Nej. Friskolor ger föräldrar valfrihet och konkurrens som höjer standarden.'] },
+  ed2: { q: 'Lärare behöver mer auktoritet i klassrummet. Elevers störande beteende underminerar inlärningsmiljön.', opts: ['Ja. Lärarauktoritet och tydlig disciplin är nödvändigt för lärande.', 'Mer stöd till lärare ja, men att rama in det som disciplin missar de djupare orsakerna.', 'Traumainformerat, resursstärkt undervisande är effektivare än disciplinramar.'] },
+  tx1: { q: 'Sverige borde återinföra en förmögenhetsskatt på tillgångar över 3 miljoner kronor. Avskaffandet 2007 var en gåva till de rika.', opts: ['Ja. Förmögenhetsskatter minskar ojämlikhet och finansierar offentliga tjänster.', 'Stäng kryphål och höj kapitalvinstskatter innan nya skatter läggs till.', 'Nej. Förmögenhetsskatten drev kapital ut ur Sverige. Den bör inte återkomma.'] },
+  tx2: { q: 'Sverige har bland världens högsta skatter. Att sänka dem skulle öka tillväxten och förbättra konkurrenskraften.', opts: ['Ja. Höga skatter skadar investeringar, entreprenörskap och attraherar färre högpresterande.', 'Riktade sänkningar i arbetsrelaterade skatter är rimliga men breda sänkningar försvagar service.', 'Nej. Höga skatter finansierar de förstklassiga offentliga tjänster som gör Sverige konkurrenskraftigt.'] },
+  en1: { q: 'Att försvaga klimatreglering i konkurrenskraftens namn är ett svek mot framtida generationer.', ctx: 'Sverige har åtagit sig att nå netto noll till 2045. Den nuvarande regeringen lättade på vissa miljöregler för att stimulera investeringar och energisäkerhet.', opts: ['Ja. Klimatåtaganden får inte bytas mot kortsiktiga ekonomiska vinster.', 'Viss regulatorisk flexibilitet är rimlig så länge nettonollmålet hålls.', 'Konkurrenskraft och energisäkerhet är legitima frågor som måste balanseras.'] },
+  en2: { q: 'Sverige borde bygga ut kärnkraften. Det är säkert, koldioxidsnålt och landet har haft energibrist utan det.', opts: ['Ja. Kärnkraft är den mest tillförlitliga koldioxidsnåla baslasten.', 'Nya reaktortyper förtjänar övervägande, men kostnaderna och tidslinjerna är osäkra.', 'Nej. Förnybar energi plus lagring är snabbare, billigare och säkrare.'] },
+  na1: { q: 'Sverige hade rätt att gå med i NATO. Den ryska invasionen av Ukraina gjorde säkerhetsargumentet ofrånkomligt.', opts: ['Ja. NATO-medlemskapet är grunden för svensk säkerhet.', 'Beslutet var förståeligt men Sverige bör upprätthålla maximal strategisk självständighet inom NATO.', 'NATO-medlemskapet gör Sverige till ett mål och avslutar 200 år av neutralitet.'] },
+  na2: { q: 'Sverige bör öka försvarsutgifterna till 2,5 procent av BNP för att uppfylla NATO-åtaganden och avskräcka rysk aggression.', opts: ['Ja. Decennier av underinvestering i försvaret måste nu korrigeras.', 'Ett trovärdigt försvar kräver investeringar men nivån måste balanseras mot sociala behov.', 'Militärutgifter konkurrerar med välfärd, sjukvård och skolor. Diplomati måste komma först.'] },
+  hs1: { q: 'Bostadsmarknaden sviker en hel generation. Staten måste bygga massivt.', ctx: 'Stockholm har en av Europas längsta bostadsköer, ofta 10 till 20 år för en hyresrätt. Unga är utestängda. Priserna har stigit kraftigt.', opts: ['Ja. Storskaligt allmännyggande är den enda verkliga lösningen.', 'Reformera hyresregleringen så att privata byggare har incitament att bygga.', 'Båda byggincitament och länge försenad hyresreform behövs.'] },
+  hs2: { q: 'Hyresreglering håller boende prisvärt för dem som har det, men hindrar byggandet av nya hyresrätter.', opts: ['Ja. Avreglera hyror och investeringar i nya bostäder kommer att följa.', 'Partiell avreglering av nybyggnation med skydd för befintliga hyresgäster är rätt balans.', 'Nej. Avreglering skulle pressa ut lägre inkomsttagare från hyresmarknaden helt.'] },
+  wr1: { q: 'Den svenska modellen med starka fackförbund och kollektiva förhandlingar är det effektivaste sättet att sätta rättvisa löner utan statlig inblandning.', opts: ['Ja. Modellen fungerar och måste försvaras.', 'Modellen är värdefull men sjunkande facklig anslutning innebär att den behöver uppdateras.', 'Statliga minimilöner och individuella kontrakt kan ersätta kollektiva modeller.'] },
+  wr2: { q: 'Sverige bör införa en officiell minimilön satt av lag snarare än att lämna löner helt till kollektiva förhandlingar.', opts: ['Ja. En lagstiftad golv skyddar arbetstagare i branscher med svag facklig täckning.', 'Kollektivavtalsmodellen fungerar. En lagstadgad minimilön skulle underminera den.', 'Nej. Den svenska modellen är mer flexibel och ger bättre utfall än lagstadgade minimilöner.'] },
+  in1: { q: 'Segregationen har tillåtits stelna till permanenta undre klasser. Integrationspolitiken har misslyckats grundligt.', ctx: 'Områden i Göteborg, Malmö och Stockholm där integrationen misslyckats upplever ihållande arbetslöshet, skolmisslyckanden och överrepresentation i brottsstatistiken.', opts: ['Ja. Misslyckandet kräver ett fundamentalt annorlunda tillvägagångssätt, inklusive bosättningsspridning.', 'Investeringar i skolor, jobb och service i eftersatta områden är rätt svar.', 'Både bättre stöd i eftersatta områden och spridningsmekanismer behövs.'] },
+  in2: { q: 'Staten måste göra mer för att säkerställa att flyktingar och invandrare har verklig tillgång till arbetsmarknaden inom det första året efter ankomst.', opts: ['Ja. Tidig anställning är det effektivaste integrationsverktyget.', 'Språk- och kompetensutbildning först, sedan anställning. Att skynda på processen slår tillbaka.', 'Om integration är så svår måste antalet minskas tills vi klarar av det ordentligt.'] },
+  eu1: { q: 'Sverige bör stödja fördjupad EU-integration, inklusive en gemensam försvarspolitik och mer beslut med kvalificerad majoritet.', opts: ['Ja. Ett starkare EU gynnar alla medlemsstater, särskilt de mindre.', 'Samarbete i specifika frågor ja. Federala ambitioner går för långt.', 'Nej. Nationell suveränitet och mellanstatlighet måste förbli grunden för EU.'] },
+  eu2: { q: 'Sverige bör öka det bilaterala biståndet och utvecklingsstödet, även under en period av stram finanspolitik.', opts: ['Ja. Utvecklingsbistånd är en moralisk skyldighet och bygger långsiktig stabilitet.', 'Behåll nuvarande nivåer men säkerställ effektivitet snarare än att bara öka utgifterna.', 'Nej. Sverige måste prioritera sina egna medborgare under en period av finansiellt tryck.'] },
+  gs1: { q: 'Sverige bör upprätthålla sin status som ett av världens mest progressiva länder när det gäller jämställdhet, HBTQ-rättigheter och social liberalism.', opts: ['Ja. Att skydda och förstärka dessa rättigheter är central del av den svenska identiteten.', 'Rättigheter bör skyddas men staten bör inte vara föreskrivande om sociala normer.', 'Förändringen har gått för snabbt och skadat den sociala sammanhållningen.'] },
+  gs2: { q: 'Föräldraledigheten bör som standard delas lika mellan föräldrar snarare än att låta familjer välja egna upplägg.', opts: ['Ja. Lika ledighet förändrar arbetsplatsens normer och är värt lagstiftning.', 'Starka incitament att dela ja, men det slutliga valet bör vara familjens.', 'Nej. Familjer bör bestämma utan att regeringen dikterar hur man uppfostrar barn.'] },
+  rg1: { q: 'Den svenska modellen med en stor, aktiv stat som tillhandahåller universella tjänster är den effektivaste sociala ordningen som någonsin konstruerats.', opts: ['Ja. Modellen levererar jämlikhet och trygghet på en nivå som inget annat land matchar.', 'Modellen har styrkor men kräver löpande modernisering för att förbli effektiv.', 'Modellen har blivit för paternalistisk och kväverhuvudstade initiativ.'] },
+  rg2: { q: 'Ojämlikheten i Sverige har ökat markant sedan 1990-talet. Att vända den trenden bör vara en primär politisk prioritet.', opts: ['Det egalitära prägeln på Sverige urgröps och måste återställas.', 'Ojämlikheten har ökat men möjligheter och rörlighet är viktigare än statistiska skillnader.', 'Viss ojämlikhet återspeglar olika bidrag. Tvingad jämlikhet minskar drivkraften.'] },
+  ec1: { q: 'Vinstdrivna äldrevårdsföretag har misslyckats. Staten måste återta ansvaret.', ctx: 'Sverige har upplevt allvarliga skandaler inom privatiserad äldreomsorg. Underbemanning och dåliga förhållanden i vissa hem ledde till betydande covid-dödsfall.', opts: ['Ja. Omsorg om äldre är för viktigt att överlåta till marknaden.', 'Bättre reglering och transparens kan reparera privat vård utan förstatligande.', 'Nej. Konkurrens driver kvalitet. Dålig vård bör hanteras genom inspektion.'] },
+  ec2: { q: 'Sverige spenderar mycket på äldre men pengarna förvaltas dåligt. Reform och effektivitet måste komma före mer finansiering.', opts: ['Ja. Mer pengar utan ansvarsskyldighet förändrar ingenting.', 'Viss reform behövs men kronisk underfinansiering är det primära problemet.', 'Nej. Problemet är marknadisering, inte underfinansiering. Kommunalisera igen.'] },
+  dj1: { q: 'Sveriges strikta narkotikapolitik kriminaliserar användare och orsakar skada. En hälsobaserad approach med avkriminalisering skulle ge bättre utfall.', opts: ['Ja. Portugal visar att det fungerar. Kriminalisering förvärrar narkotikaproblemen.', 'Behandling och skadereducering ja, men full avkriminalisering är ett steg för långt.', 'Nej. Strikta narkotikalagar sänder rätt signal och skyddar samhället.'] },
+  dj2: { q: 'Straffen för gängrelaterade vapen- och narkotikabrott måste ökas dramatiskt för att avskräcka kriminellt beteende.', opts: ['Ja. Hårdare straff är ett nödvändigt avskräckningselement.', 'Viss ökning ja, men bevis visar att avskräckningseffekten är begränsad. Rehabilitering måste vara central.', 'Nej. Strafflängd minskar inte brott. Förebyggande arbete och sociala investeringar gör det.'] },
+  np1: { q: 'Sverige bör snabbspåra tillstånd för nya kärnkraftverk på befintliga platser.', opts: ['Ja. Nya reaktorer är avgörande för energisäkerhet och den gröna omställningen.', 'Värt att utforska vid sidan av förnybart som del av en diversifierad energistrategi.', 'Nej. Investeringar i förnybart och lagring är snabbare och billigare.'] },
+  np2: { q: 'Sverige måste kraftigt öka sin vindkraftskapacitet. Lokalt motstånd mot vindkraftparker bör inte blockera energiomställningen.', opts: ['Ja. Nationella energimål måste åsidosätta lokalt nimby-motstånd.', 'Meningsfull konsultation men med tydligare regler som förhindrar oändliga förseningar.', 'Nej. Lokalsamhällen måste ha genuint inflytande över vad som byggs i deras område.'] },
+  md1: { q: 'Public service-media som SVT och SR är avgörande för demokratin och måste skyddas från politisk påverkan.', opts: ['Ja. Oberoende public service-media är en hörnsten i demokratin.', 'Public service är värdefull men måste reformeras för att förbli relevant och trovärdig.', 'SVT och SR har en vänsterliberal bias och bör minskas eller reformeras i grunden.'] },
+  md2: { q: 'Spridningen av desinformation och konspirationsteorier online är ett verkligt hot mot demokratin som kräver aktiv statlig respons.', opts: ['Ja. Plattformsreglering och investering i mediekunnighet är nödvändigt.', 'Medieutbildning ja. Statlig reglering av yttrandefrihet är farlig.', 'Nej. Staten som definierar sanning är farligare än desinformationen i sig.'] },
+  ni1: { q: 'Sverige har alltför snabbt övergett sina nationella kulturella traditioner i mångkulturalismens namn.', opts: ['Ja. Nationell identitet och kulturell kontinuitet har verkligt värde och förtjänar skydd.', 'Viss oro är legitim men svensk kultur har alltid anpassats och absorberat nya influenser.', 'Nej. Svensk identitet var alltid mångkulturell. Nostalgин gäller ett land som aldrig riktigt existerade.'] },
+  ni2: { q: 'Sverige bör formellt undervisa om svensk historia, kultur och demokratiska värderingar i skolan som grund för medborgerlig identitet.', opts: ['Ja. Medborgarutbildning är grunden för en sammanhållen demokrati.', 'Ja, men det måste vara kritiskt och inkludera perspektiv från dem som kommit senare.', 'Medborgarutbildning är viktig men att påtvinga ett enda nationellt narrativ är exkluderande.'] },
+};
+
+function getQuestion(q) {
+  if (currentLang === 'en') return q;
+  const sv = SE_QUESTIONS[q.id];
+  if (!sv) return q;
+  return {
+    ...q,
+    q: sv.q || q.q,
+    ctx: sv.ctx || q.ctx,
+    opts: q.opts.map((o, i) => ({...o, t: (sv.opts && sv.opts[i]) ? sv.opts[i] : o.t}))
+  };
+}
+
+
+function buildDisagreements(topParty) {
+  const disagree = [];
+  answers.forEach(a => {
+    const q = qs.find(q => q.id === a.id);
+    if (!q) return;
+    // Find best option for topParty
+    let bestScore = -Infinity, bestOpt = null;
+    q.opts.forEach(o => {
+      const ps = o[topParty] || 0;
+      if (ps > bestScore) { bestScore = ps; bestOpt = o; }
+    });
+    const userScore = a[topParty] || 0;
+    const gap = bestScore - userScore;
+    if (gap >= 2 && bestOpt && bestOpt.t !== a.t) {
+      disagree.push({
+        topic: q.nl,
+        question: q.q,
+        userAnswer: a.t,
+        partyAnswer: bestOpt.t,
+        gap
+      });
+    }
+  });
+  return disagree.sort((a, b) => b.gap - a.gap).slice(0, 5);
+}
+
+function renderDisagreements(topParty, partyName, topPct) {
+  const el = document.getElementById('disagree-section');
+  if (!el) return;
+  if (topPct >= 100) { el.style.display = 'none'; return; }
+  const items = buildDisagreements(topParty);
+  if (!items.length) { el.style.display = 'none'; return; }
+  el.style.display = 'block';
+  const list = document.getElementById('disagree-list');
+  list.innerHTML = '';
+  items.forEach(item => {
+    const card = document.createElement('div');
+    card.style.cssText = 'border:1px solid var(--border-soft);border-radius:8px;padding:18px 22px;background:var(--white);margin-bottom:12px;';
+    card.innerHTML = `
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px">${item.topic}</div>
+      <div style="font-size:14px;color:var(--ink);font-weight:400;margin-bottom:14px;font-family:'Cormorant Garamond',serif;font-size:16px">${item.question}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="padding:12px 14px;background:var(--parchment-warm);border-radius:6px;border-left:3px solid #B0B5BC">
+          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px">Your answer</div>
+          <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">${item.userAnswer}</div>
+        </div>
+        <div style="padding:12px 14px;background:var(--navy-soft);border-radius:6px;border-left:3px solid #2A5DB0">
+          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:6px">${partyName} position</div>
+          <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">${item.partyAnswer}</div>
+        </div>
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
 </script>
 </body>
 </html>
