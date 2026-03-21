@@ -929,7 +929,51 @@ function copyLink(){
 }
 
 function buildDisagreements(topParty) {
-  const disagree = [];
+  const disagree = [,
+{id:'ex1',nl:'Canada-US sovereignty',pair:'ex-a',fr:'pro',type:'s',
+   q:'Donald Trump called Canada the 51st state. Any Canadian politician who does not treat that as a declaration of economic war is not fit for office.',
+   opts:[
+     {t:'Yes. Canada must respond with full force — retaliatory tariffs, economic diversification, and a rejection of dependence.',e:-1,g:1,lib:2,con:-1,ndp:1,grn:1,blq:2,ppc:-2},
+     {t:'No. Hardline nationalism in response to Trump plays into his hands. Smart negotiation wins more than gestures.',e:1,g:-1,lib:-1,con:1,ndp:-1,grn:-1,blq:-1,ppc:1}
+   ]},
+  {id:'ex2',nl:'Canada-US sovereignty',pair:'ex-a',fr:'con',type:'s',
+   q:'Canada and the United States are deeply integrated economies. Treating our largest trading partner as an enemy would devastate Canadian workers.',
+   opts:[
+     {t:'Yes. The economic relationship must be protected even when the politics are ugly.',e:1,g:0,lib:-1,con:2,ndp:-1,grn:-1,blq:-1,ppc:2},
+     {t:'No. Dependence on one country is the vulnerability. Build new markets now before the next crisis.',e:-1,g:0,lib:1,con:-1,ndp:1,grn:1,blq:2,ppc:-1}
+   ]},
+  {id:'ex3',nl:'Healthcare crisis',pair:'ex-b',fr:'pro',type:'sc',
+   ctx:'6 million Canadians have no family doctor. Emergency rooms are overwhelmed. Doctors and nurses are burning out and leaving.',
+   q:'This is not a resource shortage. It is a political failure that has been building for 30 years.',
+   opts:[
+     {t:'Yes. Fund it properly, train more doctors, and stop letting the system collapse.',e:-2,g:2,lib:1,con:-2,ndp:2,grn:2,blq:1,ppc:-2},
+     {t:'No. More money without structural reform just feeds a broken system.',e:1,g:-1,lib:-1,con:2,ndp:-1,grn:-1,blq:0,ppc:1}
+   ]},
+  {id:'ex4',nl:'Healthcare crisis',pair:'ex-b',fr:'con',type:'s',
+   q:'Allowing more private clinics would cut wait times immediately. Refusing to consider it while people suffer is ideological stubbornness.',
+   opts:[
+     {t:'Yes. Private clinics alongside a strong public system would help everyone.',e:2,g:-1,lib:-1,con:2,ndp:-2,grn:-2,blq:-1,ppc:2},
+     {t:'No. Private clinics pull doctors from the public system and make wait times worse for those who cannot pay.',e:-2,g:1,lib:1,con:-2,ndp:2,grn:2,blq:1,ppc:-2}
+   ]},
+  {id:'ex5',nl:'Reconciliation',pair:'ex-c',fr:'neutral',type:'s',
+   q:'Canada has apologised to Indigenous peoples many times and changed very little. Words without action are an insult.',
+   opts:[
+     {t:'Yes. Full implementation of TRC Calls to Action, not another commission, not another apology.',e:-1,g:0,lib:1,con:-1,ndp:2,grn:2,blq:0,ppc:-2},
+     {t:'No. The calls to action are being implemented gradually. Real change takes time.',e:0,g:0,lib:0,con:1,ndp:-1,grn:-1,blq:0,ppc:0}
+   ]}
+,
+{id:'id1',nl:'National and cultural identity',pair:'ident-a',fr:'pro',type:'s',
+   q:'Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.',
+   opts:[{t:'Yes. Pride in your own culture and heritage is natural and healthy.',e:0,g:1,lib:-1,con:2,ndp:-1,grn:-2,blq:1,ppc:2},
+         {t:'Pride is fine but claims of superiority over others make me uncomfortable.',e:0,g:0,lib:1,con:0,ndp:1,grn:0,blq:0,ppc:-1},
+         {t:'No. Ranking cultures above each other is where dangerous thinking begins.',e:0,g:-1,lib:1,con:-2,ndp:2,grn:2,blq:-1,ppc:-2}]},
+
+  {id:'id2',nl:'National and cultural identity',pair:'ident-a',fr:'con',type:'s',
+   q:'People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.',
+   opts:[{t:'Yes. Acknowledging inherited wrongs is part of being honest about who we are.',e:0,g:-1,lib:1,con:-2,ndp:2,grn:2,blq:0,ppc:-2},
+         {t:'We should acknowledge history honestly without demanding personal shame.',e:0,g:0,lib:1,con:0,ndp:0,grn:0,blq:0,ppc:-1},
+         {t:'No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.',e:0,g:1,lib:-1,con:2,ndp:-2,grn:-2,blq:0,ppc:2}]}
+];
   answers.forEach(a => {
     const q = qs.find(q => q.id === a.id);
     if (!q) return;

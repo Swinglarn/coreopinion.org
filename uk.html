@@ -1079,7 +1079,51 @@ function copyLink() {
 }
 
 function buildDisagreements(topParty) {
-  const disagree = [];
+  const disagree = [,
+{id:'ex1',nl:'Cost of living',pair:'ex-a',fr:'pro',type:'sc',
+   ctx:'Energy bills doubled in two years. Food bank use tripled. CEO pay at the top FTSE 100 companies rose 16%.',
+   q:'They got richer while everyone else got poorer. This did not happen by accident.',
+   opts:[
+     {t:'Yes. Windfall taxes, price caps, and a proper crackdown on profiteering.',e:-2,g:2,lab:2,con:-2,lib:0,ref:-1,grn:2,snp:2},
+     {t:'No. Prices rose because of global shocks. Punishing companies for market forces is wrong.',e:2,g:-1,lab:-2,con:2,lib:0,ref:2,grn:-2,snp:-1}
+   ]},
+  {id:'ex2',nl:'Cost of living',pair:'ex-a',fr:'con',type:'s',
+   q:'The best way to bring down prices is to cut business taxes and red tape so companies can invest and compete.',
+   opts:[
+     {t:'Yes. Deregulation and tax cuts create the growth that lifts everyone.',e:2,g:-2,lab:-2,con:2,lib:0,ref:2,grn:-2,snp:-1},
+     {t:'No. That logic gave us a decade of stagnant wages and crumbling public services.',e:-2,g:1,lab:2,con:-2,lib:1,ref:-2,grn:2,snp:2}
+   ]},
+  {id:'ex3',nl:'Law and order',pair:'ex-b',fr:'con',type:'s',
+   q:'Sentencing in Britain has become a joke. Criminals know they will serve half their sentence and face no real consequences.',
+   opts:[
+     {t:'Yes. End automatic early release and make punishment mean something again.',e:0,g:2,lab:-1,con:2,lib:-1,ref:2,grn:-2,snp:-1},
+     {t:'No. Longer sentences cost billions and do not reduce reoffending. Rehabilitation works. Prison does not.',e:0,g:-1,lab:1,con:-2,lib:1,ref:-2,grn:2,snp:1}
+   ]},
+  {id:'ex4',nl:'Law and order',pair:'ex-b',fr:'pro',type:'s',
+   q:'Most people in prison are there for poverty-related offences. Locking them up is expensive, pointless, and cruel.',
+   opts:[
+     {t:'Yes. Community sentences, treatment, and support deliver better outcomes at a fraction of the cost.',e:-1,g:-1,lab:1,con:-2,lib:1,ref:-2,grn:2,snp:2},
+     {t:'No. Prison exists to protect the public and punish wrongdoing. That is its purpose.',e:0,g:2,lab:-1,con:2,lib:-1,ref:2,grn:-2,snp:-1}
+   ]},
+  {id:'ex5',nl:'Press and power',pair:'ex-c',fr:'neutral',type:'s',
+   q:'Three billionaires own most of the national press and their papers have backed every policy that kept their taxes low. That is not a free press.',
+   opts:[
+     {t:'Yes. Media concentration at this scale is a direct threat to democracy.',e:-2,g:2,lab:2,con:-2,lib:1,ref:-1,grn:2,snp:2},
+     {t:'No. People can seek multiple sources. Government intervention in media ownership is more dangerous than concentrated ownership.',e:2,g:-1,lab:-1,con:2,lib:0,ref:1,grn:-2,snp:-1}
+   ]}
+,
+{id:'id1',nl:'National and cultural identity',pair:'ident-a',fr:'pro',type:'s',
+   q:'Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.',
+   opts:[{t:'Yes. Pride in your own culture and heritage is natural and healthy.',e:0,g:1,lab:-1,con:1,lib:-1,ref:2,grn:-2,snp:0},
+         {t:'Pride is fine but claims of superiority over others make me uncomfortable.',e:0,g:0,lab:1,con:0,lib:1,ref:-1,grn:0,snp:1},
+         {t:'No. Ranking cultures above each other is where dangerous thinking begins.',e:0,g:-1,lab:1,con:-1,lib:2,ref:-2,grn:2,snp:1}]},
+
+  {id:'id2',nl:'National and cultural identity',pair:'ident-a',fr:'con',type:'s',
+   q:'People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.',
+   opts:[{t:'Yes. Acknowledging inherited wrongs is part of being honest about who we are.',e:0,g:-1,lab:2,con:-1,lib:1,ref:-2,grn:2,snp:2},
+         {t:'We should acknowledge history honestly without demanding personal shame.',e:0,g:0,lab:0,con:1,lib:1,ref:-1,grn:0,snp:0},
+         {t:'No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.',e:0,g:1,lab:-1,con:1,lib:-1,ref:2,grn:-2,snp:-1}]}
+];
   answers.forEach(a => {
     const q = qs.find(q => q.id === a.id);
     if (!q) return;

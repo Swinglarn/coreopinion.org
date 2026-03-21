@@ -1,6 +1,4 @@
-
-  renderDisagreements(topKey, meta.name, ranked[0][1]);
-  document.getElementById('disagree-party-name').textContent = meta.name;<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -306,7 +304,7 @@ const BANK=[
    ctx:'Sweden had more than 400 shootings in 2023. Gang-related explosions reached record levels. Several European countries now warn their citizens about travelling to certain Swedish cities.',
    q:'The gang violence crisis is a national emergency that requires a fundamentally tougher response.',
    opts:[
-     {t:'Yes. Tougher sentencing, more police, and faster deportation of convicted criminals.',e:0,g:2,s:0,m:2,sd:2,c:-1,v:-2,mp:-2,l:-1,kd:2},
+     {t:'Yes. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.',e:0,g:2,s:0,m:2,sd:2,c:-1,v:-2,mp:-2,l:-1,kd:2},
      {t:'Enforcement matters but the root causes lie in poverty, segregation, and exclusion.',e:-1,g:0,s:2,m:-1,sd:-1,c:0,v:2,mp:2,l:0,kd:0},
      {t:'Both tougher enforcement now and long-term investment in inclusion.',e:0,g:1,s:1,m:1,sd:1,c:0,v:0,mp:0,l:1,kd:1}
    ]},
@@ -356,7 +354,7 @@ const BANK=[
    ctx:'PISA results show Swedish school performance has declined significantly. Segregation between schools is among the worst in the OECD. The free school system has come under intense scrutiny.',
    q:'The free school reform has increased segregation and undermined equal education. It needs to be reversed.',
    opts:[
-     {t:'Yes. Profit-driven free schools have failed and should be abolished.',e:-2,g:2,s:2,m:-2,sd:-1,c:-2,v:2,mp:2,l:-1,kd:-1},
+     {t:'Yes. Vinstdrivna friskolor har misslyckats and should be abolished.',e:-2,g:2,s:2,m:-2,sd:-1,c:-2,v:2,mp:2,l:-1,kd:-1},
      {t:'Reform free schools strictly but keep the freedom of choice element.',e:0,g:0,s:-1,m:1,sd:0,c:1,v:-1,mp:-1,l:1,kd:0},
      {t:'No. Free schools offer parents choice and competition that raises standards.',e:2,g:-1,s:-2,m:2,sd:1,c:2,v:-2,mp:-2,l:1,kd:1}
    ]},
@@ -429,7 +427,7 @@ const BANK=[
   {id:'hs2',nl:'Housing',pair:'hs-a',fr:'con',type:'s',
    q:'Rent regulation keeps housing affordable for those who have it but prevents the construction of new rental housing.',
    opts:[
-     {t:'Yes. Deregulate rents and investment in new housing will follow.',e:2,g:-1,s:-2,m:2,sd:0,c:2,v:-2,mp:-2,l:1,kd:0},
+     {t:'Yes. Avreglera hyror så att fler vill bygga nya hyresrätter.',e:2,g:-1,s:-2,m:2,sd:0,c:2,v:-2,mp:-2,l:1,kd:0},
      {t:'Partial deregulation of new builds while protecting existing tenants is the right balance.',e:0,g:0,s:0,m:1,sd:0,c:1,v:-1,mp:-1,l:1,kd:1},
      {t:'No. Deregulation would price out lower earners from rental housing entirely.',e:-2,g:1,s:2,m:-2,sd:-1,c:-1,v:2,mp:2,l:-1,kd:-1}
    ]},
@@ -591,7 +589,10 @@ function renderResults(){
   setTimeout(()=>{
     document.getElementById('ax-econ').style.left=(((eScore+1)/2)*100).toFixed(1)+'%';
     document.getElementById('ax-gov').style.left=(((gScore+1)/2)*100).toFixed(1)+'%';
-    document.querySelectorAll('.party-row-bar[data-w]').forEach(el=>{el.style.width=el.dataset.w;});
+    document.querySelectorAll('.party-row-bar[data-w]').forEach(el=>{el.style.width=el.dataset.w;
+  renderDisagreements(topKey, meta.name, ranked[0][1]);
+  document.getElementById('disagree-party-name').textContent = meta.name;
+});
   },200);
   const gap=ranked[0][1]-ranked[1][1];
   const gapText=gap<8?`Only ${gap} points separates you from ${PMETA[ranked[1][0]].name}. Your views span both traditions.`:gap<20?`You also align with ${PMETA[ranked[1][0]].name} at ${ranked[1][1]}%.`:`Your alignment with ${meta.name} is clear, ${gap} points ahead of ${PMETA[ranked[1][0]].name}.`;
@@ -740,45 +741,68 @@ const SE_QUESTIONS = {
     ctx: 'Sverige tog emot över 160 000 asylsökande under 2015 ensam. Integrationen har varit ojämn. Gängvåldet har ökat kraftigt i vissa områden.',
     opts: ['Ja. Invandringen måste minskas kraftigt och integrationskraven måste skärpas.', 'Antalet var högt men felet låg i integrationspolitiken, inte i siffrorna i sig.', 'Nej. Sverige har gynnats av invandring. Misslyckandets narrativ drivs av fördomar.']
   },
-  im2: { q: 'Tillfälligt uppehållstillstånd bör göras permanent för flyktingar som har byggt upp sina liv i Sverige, oavsett förhållanden i hemlandet.', opts: ['Ja. Att tvinga tillbaka människor de flydde från är grymt och kontraproduktivt.', 'Villkorat på integrationsmilstolpar, ja.', 'Nej. Tillfällig status måste betyda tillfällig. Annars tappar systemet sin trovärdighet.'] },
-  im3: { q: 'Sverige bör betala människor för att återvända till sina ursprungsländer om de är villiga att frivilligt lämna.', opts: ['Ja. Frivilliga återvändandeprogram sparar pengar och minskar sociala spänningar.', 'Som en sista utväg med verkliga skyddsåtgärder existerar sådana program på andra håll.', 'Nej. Att betala människor att lämna är oförenligt med mänsklig värdighet.'] },
-  im4: { q: 'Språkkrav, medborgarskapstest och integrationskontrakt är rimliga krav som respekterar både nyanlända och värdsamhället.', opts: ['Ja. Integrationsskyldigheter är ett tecken på att man tar nyanlända på allvar.', 'Frivilliga program fungerar bättre än tvingande sådana.', 'Stöd och möjligheter integrerar människor bättre än kontrakt och test.'] },
-  cr1: { q: 'Gängvåldet är en nationell kris som kräver ett fundamentalt hårdare svar.', ctx: 'Sverige hade mer än 400 skjutningar 2023. Gängrelaterade explosioner nådde rekordnivåer. Flera europeiska länder varnar nu sina medborgare för att resa till vissa svenska städer.', opts: ['Ja. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.', 'Brottsbekämpning spelar roll men grundorsakerna ligger i fattigdom, segregation och utanförskap.', 'Både hårdare ingripanden nu och långsiktig investering i inkludering.'] },
-  cr2: { q: 'Att kriminalisera gängtillhörighet, snarare än bara kriminella handlingar, är nödvändigt för att bryta våldsens cirkel.', opts: ['Ja. Gängstrukturer måste brytas upp och tillhörighet i sig göras olaglig.', 'Enbart med mycket snäva definitioner för att undvika kriminalisering av association.', 'Nej. Kriminalisering av tillhörighet utan kriminella handlingar strider mot grundläggande rättsprinciper.'] },
-  wl1: { q: 'Den svenska välfärdsstaten är grunden för ett framgångsrikt samhälle. Nedskärningar i den är ideologiska, inte ekonomiska.', opts: ['Ja. Välfärdsstaten är det som gör Sverige fungerande. Skydda och stärk den.', 'Välfärdsstaten är nödvändig men behöver reformeras för att förbli hållbar.', 'Välfärdsstaten har vuxit sig för stor och tränger undan individuellt ansvar.'] },
-  wl2: { q: 'Människor som aldrig har betalat in i det svenska välfärdssystemet bör inte få samma förmåner som de som bidragit i decennier.', opts: ['Ja. Bidrag bör avgöras av vad man bidragit med.', 'Behov måste också räknas, men vissa bidragsrelaterade element är rimliga.', 'Nej. Behov, inte bidragshistorik, måste ligga till grund för ett rättvist system.'] },
+  im2: { q: 'Flyktingar som bott i Sverige i flera år och byggt sina liv här bör få stanna permanent.', opts: ['Ja. Att skicka tillbaka folk till länder de flydde från är grymt.', 'Ja, om de uppfyller rimliga krav på integration.', 'Nej. Tillfälligt ska betyda tillfälligt. Annars tror ingen på systemet.'] },
+  im3: { q: 'Sverige bör erbjuda pengar till dem som vill åka hem frivilligt.', opts: ['Ja. Frivilligt återvändande kostar mindre och minskar konflikter.', 'Som en sista utväg med verkliga skyddsåtgärder existerar sådana program på andra håll.', 'Nej. Att betala folk för att lämna kränker deras värdighet.'] },
+  im4: { q: 'Krav på svenska, samhällskunskapstest och integrationsavtal är rimligt för alla som bor här.', opts: ['Ja. Integrationsskyldigheter är ett tecken på att man tar nyanlända på allvar.', 'Frivilliga program fungerar bättre än tvång.', 'Jobb, bostäder och stöd integrerar folk bättre än papper och test.'] },
+  cr1: { q: 'Gängvåldet är en nationell kris som kräver ett fundamentalt hårdare svar.', ctx: 'Sverige hade mer än 400 skjutningar 2023. Gängrelaterade explosioner nådde rekordnivåer. Flera europeiska länder varnar nu sina medborgare för att resa till vissa svenska städer.', opts: ['Ja. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.', 'Polisarbete behövs men grundproblemet är fattigdom och segregation.', 'Både hårdare ingripanden nu och långsiktig investering i inkludering.'] },
+  cr2: { q: 'Det måste bli olagligt att tillhöra ett gäng, inte bara att begå brott.', opts: ['Ja. Gängstrukturer måste brytas upp och tillhörighet i sig göras olaglig.', 'Bara med tydliga regler så att vanliga föreningar inte drabbas.', 'Nej. Att straffa folk för att tillhöra en grupp, utan att de gjort något brott, strider mot lagen.'] },
+  wl1: { q: 'Den svenska välfärden är det som gör Sverige bra. Nedskärningar är ett politiskt val, inte ett ekonomiskt måste.', opts: ['Ja. Välfärdsstaten är det som gör Sverige fungerande. Skydda och stärk den.', 'Välfärden är nödvändig men måste reformeras för att hålla på sikt.', 'Staten gör för mycket och tar bort folks ansvar för sina egna liv.'] },
+  wl2: { q: 'Människor som aldrig har betalat in i det svenska välfärdssystemet bör inte få samma förmåner som de som bidragit i decennier.', opts: ['Ja. Du ska ha betalat in för att få ut. Enkel princip.', 'Behov måste också räknas, men vissa bidragsrelaterade element är rimliga.', 'Nej. Behov, inte hur länge du jobbat, ska avgöra vad du får.'] },
   hc1: { q: 'Sjukvårdsbristen kräver mer offentliga investeringar, inte privata alternativ.', ctx: 'Sverige har bland de längsta sjukvårdsköerna i EU. 90-dagarsgarantin bryts rutinmässigt. Regionala ojämlikheter i vårdkvalitet är betydande.', opts: ['Ja. Offentlig sjukvård måste finansieras och bemannas ordentligt.', 'Privata vårdgivare vid sidan av offentliga kan minska köer utan att hota jämlikheten.', 'Mer finansiering och bättre organisation av det offentliga systemet är det enda riktiga svaret.'] },
-  hc2: { q: 'Vinstdrivna vård-bolag suger ut pengar från patientvård till aktieägare. De bör inte tillåtas verka inom det offentliga systemet.', opts: ['Ja. Vinstuttag från vård är oförenligt med jämlik vård.', 'Viss privat verksamhet är effektiv om den regleras och kvalitetsgranskas ordentligt.', 'Nej. Konkurrens driver kvalitet och effektivitet.'] },
+  hc2: { q: 'Vinstdrivna vård-bolag suger ut pengar från patientvård till aktieägare. De bör inte tillåtas verka inom det offentliga systemet.', opts: ['Ja. Vinstuttag från vård är fel när man driver sjukvård för att tjäna pengar.', 'Viss privat verksamhet är effektiv om den regleras och kvalitetsgranskas ordentligt.', 'Nej. Konkurrens driver kvalitet och effektivitet.'] },
   ed1: { q: 'Friskoleformen har ökat segregationen och undergrävt likvärdig utbildning. Den behöver backas.', ctx: 'PISA-resultaten visar att svenska skolprestationer har sjunkit markant. Segregationen mellan skolor är bland de sämsta i OECD. Det fria skolvalet har kommit under intensiv granskning.', opts: ['Ja. Vinstdrivna friskolor har misslyckats och bör avvecklas.', 'Reglera friskolor hårt men behåll inslaget av valfrihet.', 'Nej. Friskolor ger föräldrar valfrihet och konkurrens som höjer standarden.'] },
-  ed2: { q: 'Lärare behöver mer auktoritet i klassrummet. Elevers störande beteende underminerar inlärningsmiljön.', opts: ['Ja. Lärarauktoritet och tydlig disciplin är nödvändigt för lärande.', 'Mer stöd till lärare ja, men att rama in det som disciplin missar de djupare orsakerna.', 'Traumainformerat, resursstärkt undervisande är effektivare än disciplinramar.'] },
+  ed2: { q: 'Lärare behöver mer respekt och auktoritet. Störande elever förstör för alla andra.', opts: ['Ja. Lärarauktoritet och tydlig disciplin är nödvändigt för lärande.', 'Mer stöd till lärare ja, men att rama in det som disciplin missar de djupare orsakerna.', 'Stöd och resurser till utsatta elever gör mer nytta än disciplinregler.'] },
   tx1: { q: 'Sverige borde återinföra en förmögenhetsskatt på tillgångar över 3 miljoner kronor. Avskaffandet 2007 var en gåva till de rika.', opts: ['Ja. Förmögenhetsskatter minskar ojämlikhet och finansierar offentliga tjänster.', 'Stäng kryphål och höj kapitalvinstskatter innan nya skatter läggs till.', 'Nej. Förmögenhetsskatten drev kapital ut ur Sverige. Den bör inte återkomma.'] },
-  tx2: { q: 'Sverige har bland världens högsta skatter. Att sänka dem skulle öka tillväxten och förbättra konkurrenskraften.', opts: ['Ja. Höga skatter skadar investeringar, entreprenörskap och attraherar färre högpresterande.', 'Riktade sänkningar i arbetsrelaterade skatter är rimliga men breda sänkningar försvagar service.', 'Nej. Höga skatter finansierar de förstklassiga offentliga tjänster som gör Sverige konkurrenskraftigt.'] },
+  tx2: { q: 'Sverige har bland världens högsta skatter. Att sänka dem skulle öka tillväxten och förbättra konkurrenskraften.', opts: ['Ja. Höga skatter skadar investeringar, entreprenörskap och attraherar färre högpresterande.', 'Riktade sänkningar i arbetsrelaterade skatter är rimliga men breda sänkningar försvagar service.', 'Nej. Höga skatter finansierar de bra skolor, sjukvård och infrastruktur som gör Sverige konkurrenskraftigt.'] },
   en1: { q: 'Att försvaga klimatreglering i konkurrenskraftens namn är ett svek mot framtida generationer.', ctx: 'Sverige har åtagit sig att nå netto noll till 2045. Den nuvarande regeringen lättade på vissa miljöregler för att stimulera investeringar och energisäkerhet.', opts: ['Ja. Klimatåtaganden får inte bytas mot kortsiktiga ekonomiska vinster.', 'Viss regulatorisk flexibilitet är rimlig så länge nettonollmålet hålls.', 'Konkurrenskraft och energisäkerhet är legitima frågor som måste balanseras.'] },
   en2: { q: 'Sverige borde bygga ut kärnkraften. Det är säkert, koldioxidsnålt och landet har haft energibrist utan det.', opts: ['Ja. Kärnkraft är den mest tillförlitliga koldioxidsnåla baslasten.', 'Nya reaktortyper förtjänar övervägande, men kostnaderna och tidslinjerna är osäkra.', 'Nej. Förnybar energi plus lagring är snabbare, billigare och säkrare.'] },
   na1: { q: 'Sverige hade rätt att gå med i NATO. Den ryska invasionen av Ukraina gjorde säkerhetsargumentet ofrånkomligt.', opts: ['Ja. NATO-medlemskapet är grunden för svensk säkerhet.', 'Beslutet var förståeligt men Sverige bör upprätthålla maximal strategisk självständighet inom NATO.', 'NATO-medlemskapet gör Sverige till ett mål och avslutar 200 år av neutralitet.'] },
   na2: { q: 'Sverige bör öka försvarsutgifterna till 2,5 procent av BNP för att uppfylla NATO-åtaganden och avskräcka rysk aggression.', opts: ['Ja. Decennier av underinvestering i försvaret måste nu korrigeras.', 'Ett trovärdigt försvar kräver investeringar men nivån måste balanseras mot sociala behov.', 'Militärutgifter konkurrerar med välfärd, sjukvård och skolor. Diplomati måste komma först.'] },
   hs1: { q: 'Bostadsmarknaden sviker en hel generation. Staten måste bygga massivt.', ctx: 'Stockholm har en av Europas längsta bostadsköer, ofta 10 till 20 år för en hyresrätt. Unga är utestängda. Priserna har stigit kraftigt.', opts: ['Ja. Storskaligt allmännyggande är den enda verkliga lösningen.', 'Reformera hyresregleringen så att privata byggare har incitament att bygga.', 'Båda byggincitament och länge försenad hyresreform behövs.'] },
-  hs2: { q: 'Hyresreglering håller boende prisvärt för dem som har det, men hindrar byggandet av nya hyresrätter.', opts: ['Ja. Avreglera hyror och investeringar i nya bostäder kommer att följa.', 'Partiell avreglering av nybyggnation med skydd för befintliga hyresgäster är rätt balans.', 'Nej. Avreglering skulle pressa ut lägre inkomsttagare från hyresmarknaden helt.'] },
-  wr1: { q: 'Den svenska modellen med starka fackförbund och kollektiva förhandlingar är det effektivaste sättet att sätta rättvisa löner utan statlig inblandning.', opts: ['Ja. Modellen fungerar och måste försvaras.', 'Modellen är värdefull men sjunkande facklig anslutning innebär att den behöver uppdateras.', 'Statliga minimilöner och individuella kontrakt kan ersätta kollektiva modeller.'] },
-  wr2: { q: 'Sverige bör införa en officiell minimilön satt av lag snarare än att lämna löner helt till kollektiva förhandlingar.', opts: ['Ja. En lagstiftad golv skyddar arbetstagare i branscher med svag facklig täckning.', 'Kollektivavtalsmodellen fungerar. En lagstadgad minimilön skulle underminera den.', 'Nej. Den svenska modellen är mer flexibel och ger bättre utfall än lagstadgade minimilöner.'] },
+  hs2: { q: 'Hyresreglering håller boende prisvärt för dem som har det, men hindrar byggandet av nya hyresrätter.', opts: ['Ja. Avreglera hyror och investeringar i nya bostäder kommer att följa.', 'Avreglera hyror för nya lägenheter, men skydda dem som redan bor kvar.', 'Nej. Avreglering skulle pressa ut lägre inkomsttagare från hyresmarknaden helt.'] },
+  wr1: { q: 'Starka fack och kollektivavtal är det bästa sättet att sätta rättvisa löner utan att staten lägger sig i.', opts: ['Ja. Modellen fungerar och måste försvaras.', 'Modellen är värdefull men sjunkande facklig anslutning innebär att den behöver uppdateras.', 'Staten kan sätta en lägsta lön och folk kan förhandla själva istället.'] },
+  wr2: { q: 'Sverige bör införa en officiell minimilön satt av lag snarare än att lämna löner helt till kollektiva förhandlingar.', opts: ['Ja. En lagstadgad minimilön skyddar dem som jobbar i branscher utan starkt fack.', 'Kollektivavtalen fungerar. En lagstadgad minimilön gräver under dem.', 'Nej. Den svenska modellen ger bättre löner och villkor än vad lagen kan garantera.'] },
   in1: { q: 'Segregationen har tillåtits stelna till permanenta undre klasser. Integrationspolitiken har misslyckats grundligt.', ctx: 'Områden i Göteborg, Malmö och Stockholm där integrationen misslyckats upplever ihållande arbetslöshet, skolmisslyckanden och överrepresentation i brottsstatistiken.', opts: ['Ja. Misslyckandet kräver ett fundamentalt annorlunda tillvägagångssätt, inklusive bosättningsspridning.', 'Investeringar i skolor, jobb och service i eftersatta områden är rätt svar.', 'Både bättre stöd i eftersatta områden och spridningsmekanismer behövs.'] },
   in2: { q: 'Staten måste göra mer för att säkerställa att flyktingar och invandrare har verklig tillgång till arbetsmarknaden inom det första året efter ankomst.', opts: ['Ja. Tidig anställning är det effektivaste integrationsverktyget.', 'Språk- och kompetensutbildning först, sedan anställning. Att skynda på processen slår tillbaka.', 'Om integration är så svår måste antalet minskas tills vi klarar av det ordentligt.'] },
   eu1: { q: 'Sverige bör stödja fördjupad EU-integration, inklusive en gemensam försvarspolitik och mer beslut med kvalificerad majoritet.', opts: ['Ja. Ett starkare EU gynnar alla medlemsstater, särskilt de mindre.', 'Samarbete i specifika frågor ja. Federala ambitioner går för långt.', 'Nej. Nationell suveränitet och mellanstatlighet måste förbli grunden för EU.'] },
   eu2: { q: 'Sverige bör öka det bilaterala biståndet och utvecklingsstödet, även under en period av stram finanspolitik.', opts: ['Ja. Utvecklingsbistånd är en moralisk skyldighet och bygger långsiktig stabilitet.', 'Behåll nuvarande nivåer men säkerställ effektivitet snarare än att bara öka utgifterna.', 'Nej. Sverige måste prioritera sina egna medborgare under en period av finansiellt tryck.'] },
   gs1: { q: 'Sverige bör upprätthålla sin status som ett av världens mest progressiva länder när det gäller jämställdhet, HBTQ-rättigheter och social liberalism.', opts: ['Ja. Att skydda och förstärka dessa rättigheter är central del av den svenska identiteten.', 'Rättigheter bör skyddas men staten bör inte vara föreskrivande om sociala normer.', 'Förändringen har gått för snabbt och skadat den sociala sammanhållningen.'] },
   gs2: { q: 'Föräldraledigheten bör som standard delas lika mellan föräldrar snarare än att låta familjer välja egna upplägg.', opts: ['Ja. Lika ledighet förändrar arbetsplatsens normer och är värt lagstiftning.', 'Starka incitament att dela ja, men det slutliga valet bör vara familjens.', 'Nej. Familjer bör bestämma utan att regeringen dikterar hur man uppfostrar barn.'] },
-  rg1: { q: 'Den svenska modellen med en stor, aktiv stat som tillhandahåller universella tjänster är den effektivaste sociala ordningen som någonsin konstruerats.', opts: ['Ja. Modellen levererar jämlikhet och trygghet på en nivå som inget annat land matchar.', 'Modellen har styrkor men kräver löpande modernisering för att förbli effektiv.', 'Modellen har blivit för paternalistisk och kväverhuvudstade initiativ.'] },
+  rg1: { q: 'Den svenska modellen med en stor, aktiv stat som tillhandahåller universella tjänster är den effektivaste sociala ordningen som någonsin konstruerats.', opts: ['Ja. Modellen levererar jämlikhet och trygghet som inget annat land i världen kan matcha.', 'Modellen har styrkor men kräver löpande modernisering för att förbli effektiv.', 'Staten lägger sig i för mycket och hindrar folk från att ta egna initiativ.'] },
   rg2: { q: 'Ojämlikheten i Sverige har ökat markant sedan 1990-talet. Att vända den trenden bör vara en primär politisk prioritet.', opts: ['Det egalitära prägeln på Sverige urgröps och måste återställas.', 'Ojämlikheten har ökat men möjligheter och rörlighet är viktigare än statistiska skillnader.', 'Viss ojämlikhet återspeglar olika bidrag. Tvingad jämlikhet minskar drivkraften.'] },
   ec1: { q: 'Vinstdrivna äldrevårdsföretag har misslyckats. Staten måste återta ansvaret.', ctx: 'Sverige har upplevt allvarliga skandaler inom privatiserad äldreomsorg. Underbemanning och dåliga förhållanden i vissa hem ledde till betydande covid-dödsfall.', opts: ['Ja. Omsorg om äldre är för viktigt att överlåta till marknaden.', 'Bättre reglering och transparens kan reparera privat vård utan förstatligande.', 'Nej. Konkurrens driver kvalitet. Dålig vård bör hanteras genom inspektion.'] },
   ec2: { q: 'Sverige spenderar mycket på äldre men pengarna förvaltas dåligt. Reform och effektivitet måste komma före mer finansiering.', opts: ['Ja. Mer pengar utan ansvarsskyldighet förändrar ingenting.', 'Viss reform behövs men kronisk underfinansiering är det primära problemet.', 'Nej. Problemet är marknadisering, inte underfinansiering. Kommunalisera igen.'] },
   dj1: { q: 'Sveriges strikta narkotikapolitik kriminaliserar användare och orsakar skada. En hälsobaserad approach med avkriminalisering skulle ge bättre utfall.', opts: ['Ja. Portugal visar att det fungerar. Kriminalisering förvärrar narkotikaproblemen.', 'Behandling och skadereducering ja, men full avkriminalisering är ett steg för långt.', 'Nej. Strikta narkotikalagar sänder rätt signal och skyddar samhället.'] },
   dj2: { q: 'Straffen för gängrelaterade vapen- och narkotikabrott måste ökas dramatiskt för att avskräcka kriminellt beteende.', opts: ['Ja. Hårdare straff är ett nödvändigt avskräckningselement.', 'Viss ökning ja, men bevis visar att avskräckningseffekten är begränsad. Rehabilitering måste vara central.', 'Nej. Strafflängd minskar inte brott. Förebyggande arbete och sociala investeringar gör det.'] },
-  np1: { q: 'Sverige bör snabbspåra tillstånd för nya kärnkraftverk på befintliga platser.', opts: ['Ja. Nya reaktorer är avgörande för energisäkerhet och den gröna omställningen.', 'Värt att utforska vid sidan av förnybart som del av en diversifierad energistrategi.', 'Nej. Investeringar i förnybart och lagring är snabbare och billigare.'] },
-  np2: { q: 'Sverige måste kraftigt öka sin vindkraftskapacitet. Lokalt motstånd mot vindkraftparker bör inte blockera energiomställningen.', opts: ['Ja. Nationella energimål måste åsidosätta lokalt nimby-motstånd.', 'Meningsfull konsultation men med tydligare regler som förhindrar oändliga förseningar.', 'Nej. Lokalsamhällen måste ha genuint inflytande över vad som byggs i deras område.'] },
-  md1: { q: 'Public service-media som SVT och SR är avgörande för demokratin och måste skyddas från politisk påverkan.', opts: ['Ja. Oberoende public service-media är en hörnsten i demokratin.', 'Public service är värdefull men måste reformeras för att förbli relevant och trovärdig.', 'SVT och SR har en vänsterliberal bias och bör minskas eller reformeras i grunden.'] },
-  md2: { q: 'Spridningen av desinformation och konspirationsteorier online är ett verkligt hot mot demokratin som kräver aktiv statlig respons.', opts: ['Ja. Plattformsreglering och investering i mediekunnighet är nödvändigt.', 'Medieutbildning ja. Statlig reglering av yttrandefrihet är farlig.', 'Nej. Staten som definierar sanning är farligare än desinformationen i sig.'] },
-  ni1: { q: 'Sverige har alltför snabbt övergett sina nationella kulturella traditioner i mångkulturalismens namn.', opts: ['Ja. Nationell identitet och kulturell kontinuitet har verkligt värde och förtjänar skydd.', 'Viss oro är legitim men svensk kultur har alltid anpassats och absorberat nya influenser.', 'Nej. Svensk identitet var alltid mångkulturell. Nostalgин gäller ett land som aldrig riktigt existerade.'] },
+  np1: { q: 'Sverige bör snabbspåra tillstånd för nya kärnkraftverk på befintliga platser.', opts: ['Ja. Nya reaktorer är avgörande för energisäkerhet och den gröna omställningen.', 'Värt att utforska vid sidan av förnybart som del av en diversifierad energistrategi.', 'Nej. Vindkraft och solenergi med batteri är snabbare, billigare och säkrare.'] },
+  np2: { q: 'Sverige måste kraftigt öka sin vindkraftskapacitet. Lokalt motstånd mot vindkraftparker bör inte blockera energiomställningen.', opts: ['Ja. Nationella energimål måste väga tyngre än lokalt motstånd.', 'Lokalt inflytande ja, men inte rätt att blockera för evigt.', 'Nej. Lokalsamhällen måste ha genuint inflytande över vad som byggs i deras område.'] },
+  md1: { q: 'SVT och SR är viktiga för demokratin och måste skyddas från politiker.', opts: ['Ja. Oberoende public service är grundläggande för demokratin.', 'Public service är värdefull men måste reformeras för att förbli relevant och trovärdig.', 'SVT och SR lutar åt vänster och bör antingen reformeras grundligt eller minskas.'] },
+  md2: { q: 'Lögner och konspirationsteorier online är ett verkligt hot mot demokratin.', opts: ['Ja. Plattformsreglering och undervisning i källkritik är nödvändigt.', 'Medieutbildning ja. Staten som bestämmer vad som är sant är farligare än lögner.', 'Nej. Om staten bestämmer vad som är sant har vi ett större problem.'] },
+  ni1: { q: 'Sverige har alltför snabbt övergett sina nationella kulturella traditioner i mångkulturalismens namn.', opts: ['Ja. Nationell identitet och kulturell kontinuitet har verkligt värde och förtjänar skydd.', 'Viss oro är legitim men svensk kultur har alltid anpassats och absorberat nya influenser.', 'Nej. Svensk identitet var alltid mångkulturell. Nostalgin gäller ett land som aldrig riktigt existerade.'] },
   ni2: { q: 'Sverige bör formellt undervisa om svensk historia, kultur och demokratiska värderingar i skolan som grund för medborgerlig identitet.', opts: ['Ja. Medborgarutbildning är grunden för en sammanhållen demokrati.', 'Ja, men det måste vara kritiskt och inkludera perspektiv från dem som kommit senare.', 'Medborgarutbildning är viktig men att påtvinga ett enda nationellt narrativ är exkluderande.'] },
+  ex1: {
+    q: 'Det är inte ett polisproblem. Det är ett samhällsproblem som vi blundat för i 20 år.',
+    ctx: 'Sverige har fler dödsskjutningar per capita än nästan alla länder i EU. Barn dör i korseld.',
+    opts: ['Ja. Fattigdom och utanförskap skapade detta. Vi måste ta itu med grundorsakerna.', 'Nej. Polisen måste slå hårt mot gängen nu. Sociala förklaringar är inte ursäkter.']
+  },
+  ex2: {
+    q: 'Hårdare straff stoppar inte gängbrott. Forskningen visar det. Att tro något annat väljer hämd framför resultat.',
+    opts: ['Sant. Satsa på förebyggande arbete istället.', 'Fel. Utan riktiga konsekvenser rekryterar gängen fritt.']
+  },
+  ex3: {
+    q: 'Det här är ett systemfel skapat av att vi styckat ut sjukvården på vinstbolag.',
+    ctx: 'Köerna är bland de längsta i EU. En garantin som sällan hålls. Läkare slutar för att de är utbrända.',
+    opts: ['Ja. Ta bort vinstintresset ur vård och omsorg.', 'Nej. Problemet är byråkrati, inte vinstintresse. Konkurrens driver kvalitet.']
+  },
+  ex4: {
+    q: 'Sverige lägger mer på sjukvård än de flesta EU-länder men får sämre resultat. Mer pengar utan reform löser ingenting.',
+    opts: ['Sant. Reformera systemen innan vi ökar pengarna.', 'Fel. Sverige har skurit ned i 30 år. Problemet är underfinansiering.']
+  },
+  ex5: {
+    q: 'Vi har skapat ett system där du måste vara rik för att ha en trygg bostad. Det är ett politiskt val.',
+    ctx: 'En vanlig 30-åring i Stockholm har inte råd att köpa bostad. Bostadskön kan ta 20 år.',
+    opts: ['Sant. Bygg fler allmännyttiga bostäder och stoppa systemet som gynnar de rika.', 'Fel. Problemet är regler och planmonopol som stoppar byggandet. Låt marknaden bygga.']
+  }
 };
 
 function getQuestion(q) {
@@ -795,7 +819,53 @@ function getQuestion(q) {
 
 
 function buildDisagreements(topParty) {
-  const disagree = [];
+  const disagree = [,
+{id:'ex1',nl:'Gängvåld och brott',pair:'ex-a',fr:'con',type:'sc',
+   ctx:'Sverige har fler dödsskjutningar per capita än nästan alla andra länder i EU. Barn dör i korseld.',
+   q:'Det är inte ett polisproblem. Det är ett samhällsproblem som vi blundat för i 20 år.',
+   opts:[
+     {t:'Ja. Fattigdom, segregation och utanförskap skapade detta. Vi måste ta itu med grundorsakerna.',e:-1,g:-1,s:2,m:-1,sd:-1,c:-1,v:2,mp:2,l:0,kd:0},
+     {t:'Nej. Polisen måste ha befogenhet och resurser att slå hårt mot gängen nu. Sociala förklaringar är inte ursäkter.',e:0,g:2,s:-1,m:2,sd:2,c:0,v:-2,mp:-2,l:0,kd:2}
+   ]},
+  {id:'ex2',nl:'Gängvåld och brott',pair:'ex-a',fr:'pro',type:'s',
+   q:'Hårdare straff stoppar inte gängbrottslighet. Det visar forskningen. Att låtsas annat är att prioritera hämd framför resultat.',
+   opts:[
+     {t:'Sant. Satsa på rehabilitering och förebyggande arbete istället.',e:0,g:-1,s:1,m:-1,sd:-2,c:0,v:2,mp:2,l:1,kd:-1},
+     {t:'Fel. Utan verkliga konsekvenser rekryterar gängen fritt. Hårdare straff är en nödvändighet.',e:0,g:2,s:-1,m:2,sd:2,c:0,v:-2,mp:-2,l:-1,kd:2}
+   ]},
+  {id:'ex3',nl:'Sjukvård och välfärd',pair:'ex-b',fr:'pro',type:'sc',
+   ctx:'Vårdköerna är bland de längsta i EU. En 90-dagarsgaranti som sällan hålls. Läkare slutar för att de är utbrända.',
+   q:'Det här är inte brist på pengar. Det är ett systemfel som skapats av att vi styckat ut sjukvården på vinstdrivna bolag.',
+   opts:[
+     {t:'Ja. Återkommunalisera äldrevård och primärvård. Ta bort vinstintresset ur omsorgen.',e:-2,g:2,s:2,m:-2,sd:0,c:-2,v:2,mp:2,l:-1,kd:0},
+     {t:'Nej. Problemet är byråkrati och ineffektivitet, inte vinstintresse. Konkurrens driver kvalitet.',e:2,g:-1,s:-2,m:2,sd:0,c:2,v:-2,mp:-2,l:1,kd:1}
+   ]},
+  {id:'ex4',nl:'Sjukvård och välfärd',pair:'ex-b',fr:'con',type:'s',
+   q:'Sverige lägger mer på sjukvård per invånare än de flesta EU-länder men får sämre resultat. Mer pengar utan reform löser ingenting.',
+   opts:[
+     {t:'Sant. Systemen måste reformeras innan vi ökar anslagen.',e:1,g:1,s:-1,m:2,sd:1,c:1,v:-1,mp:-1,l:1,kd:1},
+     {t:'Fel. Sverige har skurit i välfärden i 30 år. Problemet är underfinansiering, inte ineffektivitet.',e:-2,g:1,s:2,m:-2,sd:-1,c:-1,v:2,mp:2,l:-1,kd:0}
+   ]},
+  {id:'ex5',nl:'Bostäder',pair:'ex-c',fr:'neutral',type:'sc',
+   ctx:'En genomsnittlig 30-åring i Stockholm har inte råd att köpa en bostad. Bostadskön kan ta 20 år.',
+   q:'Vi har skapat ett system där du måste vara rik för att ha en trygg bostad. Det är ett politiskt val, inte ett naturligt tillstånd.',
+   opts:[
+     {t:'Sant. Bygg fler allmännyttiga bostäder och avskaffa systemet som gynnar de som redan äger.',e:-2,g:2,s:2,m:-1,sd:0,c:-1,v:2,mp:2,l:-1,kd:0},
+     {t:'Fel. Problemet är hyresreglering och planmonopol som stoppar byggandet. Avreglera och låt marknaden bygga.',e:2,g:-1,s:-2,m:2,sd:0,c:2,v:-2,mp:-2,l:1,kd:0}
+   ]}
+,
+{id:'id1',nl:'National and cultural identity',pair:'ident-a',fr:'pro',type:'s',
+   q:'Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.',
+   opts:[{t:'Yes. Pride in your own culture and heritage is natural and healthy.',e:0,g:1,s:0,m:1,sd:2,c:-1,v:-2,mp:-2,l:-1,kd:1},
+         {t:'Pride is fine but claims of superiority over others make me uncomfortable.',e:0,g:0,s:1,m:0,sd:-1,c:1,v:0,mp:0,l:1,kd:0},
+         {t:'No. Ranking cultures above each other is where dangerous thinking begins.',e:0,g:-1,s:1,m:-1,sd:-2,c:1,v:2,mp:2,l:1,kd:-1}]},
+
+  {id:'id2',nl:'National and cultural identity',pair:'ident-a',fr:'con',type:'s',
+   q:'People alive today should carry a sense of shame for what their nation or culture did in the past -- slavery, genocide, colonialism.',
+   opts:[{t:'Yes. Acknowledging inherited wrongs is part of being honest about who we are.',e:0,g:-1,s:1,m:-1,sd:-2,c:0,v:2,mp:2,l:1,kd:-1},
+         {t:'We should acknowledge history honestly without demanding personal shame.',e:0,g:0,s:0,m:1,sd:0,c:1,v:0,mp:0,l:1,kd:0},
+         {t:'No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.',e:0,g:1,s:-1,m:1,sd:2,c:-1,v:-2,mp:-2,l:-1,kd:1}]}
+];
   answers.forEach(a => {
     const q = qs.find(q => q.id === a.id);
     if (!q) return;

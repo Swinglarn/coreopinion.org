@@ -1690,7 +1690,19 @@ function renderResults() {
   const bdEl = document.getElementById('bias-detail-list');
   bdEl.innerHTML = '';
   Object.keys(nodeBias).forEach(k => {
-    const { s, nl } = nodeBias[k];
+    const { s, nl } = nodeBias[k,
+{id:'id1',node:'culture',nl:'Culture and identity',pair:'ident-a',fr:'pro',type:'s',
+   q:'Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.',
+   opts:[{t:'Yes. Pride in your own culture and heritage is natural and healthy.',e:0,g:1,n:2},
+         {t:'Pride is fine but claims of superiority over others make me uncomfortable.',e:0,g:0,n:0},
+         {t:'No. Ranking cultures above each other is where dangerous thinking begins.',e:0,g:-1,n:-2}]},
+
+  {id:'id2',node:'culture',nl:'Culture and identity',pair:'ident-a',fr:'con',type:'s',
+   q:'People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.',
+   opts:[{t:'Yes. Acknowledging inherited wrongs is part of being honest about who we are.',e:0,g:-1,n:-2},
+         {t:'We should acknowledge history honestly without demanding personal shame.',e:0,g:0,n:0},
+         {t:'No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.',e:0,g:1,n:2}]}
+];
     const card = document.createElement('div');
     card.className = 'bias-detail-card';
     card.innerHTML = `<div><div class="bdc-name">${nl}</div><div class="bdc-desc">${biasDesc(s)}</div></div><div><div class="bdc-score">${s}%</div><div class="bdc-unit">inconsistency</div></div>`;

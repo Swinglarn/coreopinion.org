@@ -780,7 +780,52 @@ function copyLink(){const{pScores}=score();const top=Object.entries(pScores).sor
 ];navigator.clipboard.writeText(`My Australian political alignment: ${PMETA[top[0]].name} ${top[1]}% | coreopinion.org/au`).then(()=>{document.getElementById('save-status').style.color='#2D6A4F';document.getElementById('save-status').textContent='Copied to clipboard.';});}
 
 function buildDisagreements(topParty) {
-  const disagree = [];
+  const disagree = [,
+{id:'ex1',nl:'Climate emergency',pair:'ex-a',fr:'pro',type:'sc',
+   ctx:'Australia is on fire every summer. The Great Barrier Reef is bleaching. Flood damage has cost billions. Scientists have been warning about this for 40 years.',
+   q:'We knew this was coming and did nothing. That is not misfortune. That is criminal negligence.',
+   opts:[
+     {t:'Yes. The fossil fuel lobby captured our politics and we are paying with our coastlines.',e:-2,g:2,alp:1,lib:-2,nat:-2,grn:2,teal:1},
+     {t:'No. Climate policy must balance the economy. Destroying jobs for symbolic targets helps no one.',e:1,g:-1,alp:-1,lib:2,nat:2,grn:-2,teal:-1}
+   ]},
+  {id:'ex2',nl:'Climate emergency',pair:'ex-a',fr:'con',type:'s',
+   q:'Australian coal and gas keep the lights on in Asia and bring billions into this country. Shutting them down while demand exists is economic self-harm.',
+   opts:[
+     {t:'Yes. Someone will supply the market. Better us with higher standards than coal from elsewhere.',e:1,g:0,alp:-1,lib:2,nat:2,grn:-2,teal:-1},
+     {t:'No. The demand will not exist in 20 years. Building new fossil fuel infrastructure now is betting on a losing hand.',e:-2,g:1,alp:1,lib:-2,nat:-2,grn:2,teal:1}
+   ]},
+  {id:'ex3',nl:'Cost of living',pair:'ex-b',fr:'pro',type:'sc',
+   ctx:'Four major banks posted combined profits of 30 billion dollars last year. Average mortgage repayments doubled in two years.',
+   q:'Banks are extracting billions from people who cannot afford their mortgages. That is not the market working. That is the market failing.',
+   opts:[
+     {t:'Yes. Windfall taxes on bank profits, mandatory hardship provisions, and real competition.',e:-2,g:2,alp:2,lib:-2,nat:-1,grn:2,teal:0},
+     {t:'No. Bank profits reflect risk. Intervening in lending markets makes credit harder to get, not easier.',e:2,g:-1,alp:-2,lib:2,nat:1,grn:-2,teal:-1}
+   ]},
+  {id:'ex4',nl:'Cost of living',pair:'ex-b',fr:'con',type:'s',
+   q:'Raising wages faster than productivity forces businesses to cut jobs or raise prices. Workers end up worse off.',
+   opts:[
+     {t:'Yes. Wages must reflect what the economy can sustain, not what politicians promise.',e:2,g:-1,alp:-2,lib:2,nat:1,grn:-2,teal:0},
+     {t:'No. Wages have been held down for a decade while profits soared. Workers are owed this.',e:-2,g:1,alp:2,lib:-2,nat:-1,grn:2,teal:1}
+   ]},
+  {id:'ex5',nl:'Rule of law',pair:'ex-c',fr:'neutral',type:'s',
+   q:'Robodebt destroyed lives. The people who approved it knew it was illegal. Not one of them has faced criminal charges.',
+   opts:[
+     {t:'Yes. Accountability for government wrongdoing must mean real consequences, not just apologies.',e:0,g:-1,alp:2,lib:-2,nat:-1,grn:2,teal:2},
+     {t:'No. The royal commission, compensation, and political defeat were the accountability. Move forward.',e:0,g:1,alp:-1,lib:1,nat:0,grn:-1,teal:-1}
+   ]}
+,
+{id:'id1',nl:'National and cultural identity',pair:'ident-a',fr:'pro',type:'s',
+   q:'Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.',
+   opts:[{t:'Yes. Pride in your own culture and heritage is natural and healthy.',e:0,g:1,alp:0,lib:1,nat:2,grn:-2,teal:-1},
+         {t:'Pride is fine but claims of superiority over others make me uncomfortable.',e:0,g:0,alp:1,lib:0,nat:0,grn:0,teal:1},
+         {t:'No. Ranking cultures above each other is where dangerous thinking begins.',e:0,g:-1,alp:1,lib:-1,nat:-2,grn:2,teal:1}]},
+
+  {id:'id2',nl:'National and cultural identity',pair:'ident-a',fr:'con',type:'s',
+   q:'People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.',
+   opts:[{t:'Yes. Acknowledging inherited wrongs is part of being honest about who we are.',e:0,g:-1,alp:2,lib:-1,nat:-2,grn:2,teal:1},
+         {t:'We should acknowledge history honestly without demanding personal shame.',e:0,g:0,alp:1,lib:0,nat:-1,grn:0,teal:1},
+         {t:'No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.',e:0,g:1,alp:-1,lib:1,nat:2,grn:-2,teal:-1}]}
+];
   answers.forEach(a => {
     const q = qs.find(q => q.id === a.id);
     if (!q) return;

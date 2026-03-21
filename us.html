@@ -1,30 +1,4 @@
-
-
-// Render bias score
-  const biasVerdicts = [
-    [0,  0,  'No detectable bias', 'Your answers were completely consistent regardless of how questions were framed. That level of logical consistency is rare.'],
-    [1,  15, 'Very low bias', 'Your answers were highly consistent. The framing of a question had almost no influence on your position.'],
-    [16, 35, 'Low bias', 'Minor framing effects. Your positions are mostly stable but shifted slightly depending on how a question was worded.'],
-    [36, 60, 'Moderate bias', 'You showed noticeable framing sensitivity on several topics. Your views shifted depending on whether the question pushed you toward or against a position.'],
-    [61, 80, 'High bias', 'Framing had a significant influence on many of your answers. The same policy question, worded differently, often produced different responses.'],
-    [81, 100,'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
-  ];
-  const bv = biasVerdicts.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || biasVerdicts[0];
-  document.getElementById('bias-num').textContent = overallBias + '%';
-  document.getElementById('bias-verdict').textContent = bv[2];
-  document.getElementById('bias-explain').textContent = bv[3];
-
-  const biasRowsEl = document.getElementById('bias-rows');
-  biasRowsEl.innerHTML = '';
-  const sortedTopics = Object.entries(topicBiasAgg).sort((a,b) => b[1]-a[1]);
-  sortedTopics.forEach(([topic, score]) => {
-    const color = score < 20 ? '#2D9B5F' : score < 50 ? '#E8A020' : '#C0392B';
-    const row = document.createElement('div');
-    row.style.cssText = 'display:flex;align-items:center;gap:16px';
-    row.innerHTML = `<div style="font-size:13px;color:var(--ink-soft);min-width:200px;font-weight:300">${topic}</div><div style="flex:1;height:6px;background:var(--parchment-warm);border-radius:3px;overflow:hidden"><div style="height:100%;width:0%;background:${color};border-radius:3px;transition:width 1.1s cubic-bezier(0.22,1,0.36,1)" data-w="${score}%"></div></div><div style="font-size:13px;color:var(--ink-muted);min-width:36px;text-align:right;font-variant-numeric:tabular-nums">${score}%</div>`;
-    biasRowsEl.appendChild(row);
-  });
-  setTimeout(() => document.querySelectorAll('#bias-rows [data-w]').forEach(el => {el.style.width=el.dataset.w;}), 250);<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -992,7 +966,38 @@ function score() {
   const distFromCentre = Math.sqrt(eScore*eScore + gScore*gScore);
   partyScores.ind = Math.round(Math.max(0, (1 - distFromCentre*1.5)) * 100);
 
-  return { eScore, gScore, partyScores };
+  // ── FRAMING BIAS SCORE ──────────────────────────────────────────
+  const pairMap = {};
+  answers.forEach(a => {
+    if (!a.pair) return;
+    const pos = a.e !== 0 ? a.e : (a.g !== 0 ? -a.g : 0);
+    if (!pairMap[a.pair]) pairMap[a.pair] = { nl: a.nl, positions: [] };
+    if (pos !== 0) pairMap[a.pair].positions.push(pos);
+  });
+  const topicBias = {};
+  Object.keys(pairMap).forEach(pk => {
+    const { nl, positions } = pairMap[pk];
+    if (positions.length < 2) return;
+    const posCount = positions.filter(x => x > 0).length;
+    const negCount = positions.filter(x => x < 0).length;
+    const tot = posCount + negCount;
+    if (tot < 2) return;
+    const maj = Math.max(posCount, negCount);
+    const bScore = Math.min(100, Math.max(0, Math.round((1 - maj / tot) * 200)));
+    if (!topicBias[nl]) topicBias[nl] = [];
+    topicBias[nl].push(bScore);
+  });
+  const biasValues = Object.values(topicBias).map(arr =>
+    Math.round(arr.reduce((a, b) => a + b, 0) / arr.length)
+  );
+  const overallBias = biasValues.length
+    ? Math.round(biasValues.reduce((a, b) => a + b, 0) / biasValues.length)
+    : 0;
+  const topicBiasAgg = {};
+  Object.keys(topicBias).forEach(k => {
+    topicBiasAgg[k] = Math.round(topicBias[k].reduce((a,b)=>a+b,0)/topicBias[k].length);
+  });
+  return { eScore, gScore, partyScores, overallBias, topicBiasAgg };
 }
 
 const PARTY_META = {
@@ -1009,7 +1014,7 @@ const PARTY_META = {
 };
 
 function renderResults() {
-  const { eScore, gScore, partyScores } = score();
+  const { eScore, gScore, partyScores, overallBias, topicBiasAgg } = score();
 
   // Sort parties by alignment
   const ranked = Object.entries(partyScores).sort((a,b) => b[1]-a[1]);
@@ -1060,6 +1065,32 @@ function renderResults() {
     <p>${gapText}</p>
   `;
 
+
+// Render bias score
+  const biasVerdicts = [
+    [0,  0,  'No detectable bias', 'Your answers were completely consistent regardless of how questions were framed. That level of logical consistency is rare.'],
+    [1,  15, 'Very low bias', 'Your answers were highly consistent. The framing of a question had almost no influence on your position.'],
+    [16, 35, 'Low bias', 'Minor framing effects. Your positions are mostly stable but shifted slightly depending on how a question was worded.'],
+    [36, 60, 'Moderate bias', 'You showed noticeable framing sensitivity on several topics. Your views shifted depending on whether the question pushed you toward or against a position.'],
+    [61, 80, 'High bias', 'Framing had a significant influence on many of your answers. The same policy question, worded differently, often produced different responses.'],
+    [81, 100,'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
+  ];
+  const bv = biasVerdicts.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || biasVerdicts[0];
+  document.getElementById('bias-num').textContent = overallBias + '%';
+  document.getElementById('bias-verdict').textContent = bv[2];
+  document.getElementById('bias-explain').textContent = bv[3];
+
+  const biasRowsEl = document.getElementById('bias-rows');
+  biasRowsEl.innerHTML = '';
+  const sortedTopics = Object.entries(topicBiasAgg).sort((a,b) => b[1]-a[1]);
+  sortedTopics.forEach(([topic, score]) => {
+    const color = score < 20 ? '#2D9B5F' : score < 50 ? '#E8A020' : '#C0392B';
+    const row = document.createElement('div');
+    row.style.cssText = 'display:flex;align-items:center;gap:16px';
+    row.innerHTML = `<div style="font-size:13px;color:var(--ink-soft);min-width:200px;font-weight:300">${topic}</div><div style="flex:1;height:6px;background:var(--parchment-warm);border-radius:3px;overflow:hidden"><div style="height:100%;width:0%;background:${color};border-radius:3px;transition:width 1.1s cubic-bezier(0.22,1,0.36,1)" data-w="${score}%"></div></div><div style="font-size:13px;color:var(--ink-muted);min-width:36px;text-align:right;font-variant-numeric:tabular-nums">${score}%</div>`;
+    biasRowsEl.appendChild(row);
+  });
+  setTimeout(() => document.querySelectorAll('#bias-rows [data-w]').forEach(el => {el.style.width=el.dataset.w;}), 250);
   renderDisagreements(topParty, meta.name, ranked[0][1]);
   document.getElementById('disagree-party-name').textContent = meta.name;}
 
@@ -1105,7 +1136,50 @@ function copyLink() {
 }
 
 function buildDisagreements(topParty) {
-  const disagree = [];
+  const disagree = [,
+{id:'ex1',nl:'Economy and inequality',pair:'ex-a',fr:'pro',type:'s',
+   q:'America has more billionaires than any country on earth. That is not success. That is a system rigged in their favour.',
+   opts:[
+     {t:'Yes. Extreme wealth at this scale is a political failure, not an achievement.',e:-2,g:2,dem:2,rep:-2,lib:-1,grn:2},
+     {t:'No. Wealth at the top does not take from the bottom. Growth benefits everyone.',e:2,g:-2,dem:-2,rep:2,lib:2,grn:-2}
+   ]},
+  {id:'ex2',nl:'Economy and inequality',pair:'ex-a',fr:'con',type:'s',
+   q:'Taxing the rich to fund government programmes punishes success and drives away the people who create jobs.',
+   opts:[
+     {t:'Yes. Capital flees high-tax environments. You cannot build prosperity by punishing it.',e:2,g:-1,dem:-2,rep:2,lib:2,grn:-2},
+     {t:'No. The wealthy built their fortunes on public infrastructure. They owe more back.',e:-2,g:1,dem:2,rep:-2,lib:-1,grn:2}
+   ]},
+  {id:'ex3',nl:'Criminal justice',pair:'ex-b',fr:'pro',type:'s',
+   q:'The American prison system locks up more people than any country on earth. That is not justice. It is industrial punishment.',
+   opts:[
+     {t:'Yes. Mass incarceration is a moral catastrophe and must be dismantled.',e:-1,g:-2,dem:2,rep:-2,lib:2,grn:2},
+     {t:'No. High incarceration reflects high crime rates. Public safety is not negotiable.',e:0,g:2,dem:-2,rep:2,lib:-1,grn:-2}
+   ]},
+  {id:'ex4',nl:'Criminal justice',pair:'ex-b',fr:'con',type:'s',
+   q:'Violent crime surged in cities that cut police funding. Defunding the police was a catastrophic mistake.',
+   opts:[
+     {t:'Yes. The experiment failed and communities of colour paid the price.',e:0,g:2,dem:-1,rep:2,lib:-1,grn:-2},
+     {t:'No. Underfunding mental health, housing, and schools created the conditions. More cops is not the answer.',e:0,g:-1,dem:1,rep:-2,lib:1,grn:2}
+   ]},
+  {id:'ex5',nl:'Civil liberties',pair:'ex-c',fr:'neutral',type:'s',
+   q:'The government has no right to monitor its own citizens without a court order. Mass surveillance must end.',
+   opts:[
+     {t:'Yes. A government that watches everyone trusts no one.',e:0,g:-2,dem:1,rep:-1,lib:2,grn:2},
+     {t:'No. Security services need broad access. Terrorism does not wait for warrants.',e:0,g:2,dem:-1,rep:1,lib:-2,grn:-2}
+   ]}
+,
+{id:'id1',nl:'National and cultural identity',pair:'ident-a',fr:'pro',type:'s',
+   q:'Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.',
+   opts:[{t:'Yes. Pride in your own culture and heritage is natural and healthy.',e:0,g:1,dem:-1,rep:2,lib:1,grn:-1},
+         {t:'Pride is fine but claims of superiority over others make me uncomfortable.',e:0,g:0,dem:1,rep:0,lib:1,grn:0},
+         {t:'No. Ranking cultures above each other is where dangerous thinking begins.',e:0,g:-1,dem:1,rep:-2,lib:0,grn:2}]},
+
+  {id:'id2',nl:'National and cultural identity',pair:'ident-a',fr:'con',type:'s',
+   q:'People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.',
+   opts:[{t:'Yes. Acknowledging inherited wrongs is part of being honest about who we are.',e:0,g:-1,dem:2,rep:-2,lib:-1,grn:2},
+         {t:'We should acknowledge history honestly without demanding personal shame.',e:0,g:0,dem:1,rep:0,lib:1,grn:0},
+         {t:'No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.',e:0,g:1,dem:-2,rep:2,lib:1,grn:-2}]}
+];
   answers.forEach(a => {
     const q = qs.find(q => q.id === a.id);
     if (!q) return;
