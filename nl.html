@@ -41,7 +41,13 @@
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <div class="flag-badge"><span class="flag">🇳🇱</span> Netherlands</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">English</button>
+      <div class="flag-badge">
+        <span class="flag">🇳🇱</span>
+        <span id="lang-label">Nederland</span>
+      </div>
+    </div>
   </nav>
 
   <div class="hero">
@@ -304,6 +310,614 @@
 </div>
 
 <script>
+let currentLang = 'nl';
+    
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'nl' : 'en';
+  document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'Nederlands' : 'English';
+  document.getElementById('lang-label').textContent = currentLang === 'en' ? 'Netherlands' : 'Nederland';
+  
+  // Set in window scope for the engine.js to pick up
+  window.currentLang = currentLang;
+  
+  applyLang();
+  
+  if (document.getElementById('page-test').classList.contains('active')) renderQ();
+}
+
+function t(en, local) { return currentLang === 'en' ? en : local; }
+
+function getQuestion(q) {
+  if (currentLang === 'en') return q;
+  const localQ = LOCAL_QUESTIONS[q.id];
+  if (!localQ) return q;
+  return {
+    ...q,
+    q: localQ.q || q.q,
+    ctx: localQ.ctx || q.ctx,
+    opts: q.opts.map((o, i) => ({
+      ...o,
+      t: (localQ.opts && localQ.opts[i]) ? localQ.opts[i] : o.t
+    }))
+  };
+}
+
+// Bind function to window scope for engine.js integration
+window.getQuestion = getQuestion;
+window.currentLang = currentLang;
+
+function applyLang() {
+  const isEn = currentLang === 'en';
+  
+  // Translate Hero Title & Sub
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) {
+    if (isEn) {
+      heroTitle.innerHTML = "Where do you stand in<br><em>Dutch</em> politics?";
+    } else {
+      heroTitle.innerHTML = "Waar sta jij in de<br><em>Nederlandse</em> politiek?";
+    }
+  }
+  
+  const heroSub = document.querySelector('.hero-sub');
+  if (heroSub) {
+    if (isEn) {
+      heroSub.textContent = "47 scenario-based questions on the issues defining Netherlands right now. Immigration, climate, housing, government reform, and cost of living.";
+    } else {
+      heroSub.textContent = "47 realistische scenario-vragen over de belangrijkste thema\'s van de Nederlandse politiek. Zie je positie op de boussole en je aansluiting met de grote partijen.";
+    }
+  }
+
+  // Start & Control Buttons
+  const startBtn = document.querySelector('.hero-cta .btn-primary');
+  if (startBtn) startBtn.textContent = isEn ? 'Start the test' : "Start de test";
+  
+  const skipBtn = document.querySelector('.btn-skip');
+  if (skipBtn) skipBtn.textContent = isEn ? 'Skip' : "Overslaan";
+  
+  const backBtn = document.getElementById('btn-back');
+  if (backBtn) backBtn.textContent = isEn ? 'Back' : "Terug";
+  
+  const nextBtn = document.querySelector('.q-foot .btn-primary');
+  if (nextBtn) nextBtn.textContent = isEn ? 'Next' : "Volgende";
+
+  // Demographics Titles
+  const demoTitle = document.querySelector('#page-demo .page-title');
+  if (demoTitle) demoTitle.textContent = isEn ? 'Almost there.' : "Bijna klaar.";
+  
+  const demoSub = document.querySelector('#page-demo .page-sub');
+  if (demoSub) demoSub.textContent = isEn 
+    ? 'A few quick questions before your results. Everything is anonymous.' 
+    : "Een paar korte vragen voor je resultaten. Alles is anoniem.";
+    
+  const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
+  if (seeResultsBtn) seeResultsBtn.textContent = isEn ? 'See my results' : "Bekijk mijn resultaten";
+
+  // Demographics Field Labels
+  const lblAge = document.getElementById('d-age')?.previousElementSibling;
+  if (lblAge) lblAge.textContent = isEn ? 'Age' : "Leeftijd";
+  
+  const lblCountry = document.getElementById('d-country')?.previousElementSibling || document.getElementById('d-county')?.previousElementSibling;
+  if (lblCountry) lblCountry.innerHTML = isEn ? 'Region <span>(optional)</span>' : "Provincie <span>(optioneel)</span>";
+  
+  const lblParty = document.getElementById('d-party')?.previousElementSibling;
+  if (lblParty) lblParty.innerHTML = isEn ? 'How do you currently identify? <span>(optional)</span>' : "Hoe identificeer je jezelf politiek? <span>(optioneel)</span>";
+  
+  const lblGender = document.getElementById('d-gender')?.previousElementSibling;
+  if (lblGender) lblGender.innerHTML = isEn ? 'Gender <span>(optional)</span>' : "Geslacht <span>(optioneel)</span>";
+  
+  const lblNat = document.getElementById('d-nationality')?.previousElementSibling;
+  if (lblNat) lblNat.innerHTML = isEn ? 'Nationality <span>(optional)</span>' : "Nationaliteit <span>(optioneel)</span>";
+
+  // Demographics Select Options
+  const optSelect = isEn ? 'Select...' : "Selecteer...";
+  const optPreferNot = isEn ? 'Prefer not to say' : "Liever niet zeggen";
+
+  // Update options inside selects
+  const ageSelect = document.getElementById('d-age');
+  if (ageSelect) {
+    ageSelect.options[0].textContent = optSelect;
+    const ageTexts = isEn 
+      ? ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 or older']
+      : ['Onder 18', '18 tot 24', '25 tot 34', '35 tot 44', '45 tot 54', '55 tot 64', '65 of ouder'];
+    for (let i = 1; i < ageSelect.options.length; i++) {
+      if (ageTexts[i-1]) ageSelect.options[i].textContent = ageTexts[i-1];
+    }
+  }
+
+  const genderSelect = document.getElementById('d-gender');
+  if (genderSelect) {
+    genderSelect.options[0].textContent = optSelect;
+    const genTexts = isEn 
+      ? ['Male', 'Female', 'Other', 'Prefer not to say']
+      : ['Man', 'Vrouw', 'Anders', 'Liever niet zeggen'];
+    for (let i = 1; i < genderSelect.options.length; i++) {
+      if (genTexts[i-1]) genderSelect.options[i].textContent = genTexts[i-1];
+    }
+  }
+
+  const partySelect = document.getElementById('d-party');
+  if (partySelect) {
+    partySelect.options[0].textContent = optPreferNot;
+    const lastOpt = partySelect.options[partySelect.options.length - 1];
+    if (lastOpt) {
+      if (isEn) {
+        lastOpt.textContent = 'Independent / Other';
+      } else {
+        lastOpt.textContent = "Onafhankelijk / Anders";
+      }
+    }
+  }
+
+  const countrySelect = document.getElementById('d-country') || document.getElementById('d-county');
+  if (countrySelect) countrySelect.options[0].textContent = optSelect;
+
+  const natSelect = document.getElementById('d-nationality');
+  if (natSelect) {
+    natSelect.options[0].textContent = optSelect;
+    const natNames = {
+      'United States': isEn ? 'United States' : "Verenigde Staten",
+      'United Kingdom': isEn ? 'United Kingdom' : "Verenigd Koninkrijk",
+      'Canada': isEn ? 'Canada' : "Canada",
+      'Australia': isEn ? 'Australia' : "Australië",
+      'Sweden': isEn ? 'Sweden' : "Zweden",
+      'Germany': isEn ? 'Germany' : "Duitsland",
+      'France': isEn ? 'France' : "Frankrijk",
+      'Ireland': isEn ? 'Ireland' : "Ierland",
+      'Netherlands': isEn ? 'Netherlands' : "Nederland",
+      'Other': isEn ? 'Other' : "Anders"
+    };
+    for (let i = 1; i < natSelect.options.length; i++) {
+      const opt = natSelect.options[i];
+      const enVal = opt.getAttribute('data-en') || opt.value || opt.textContent;
+      if (!opt.getAttribute('data-en')) opt.setAttribute('data-en', enVal);
+      if (natNames[enVal]) opt.textContent = natNames[enVal];
+    }
+  }
+
+  // Demographics Note and Consent
+  const demoNote = document.querySelector('.demo-note');
+  if (demoNote) demoNote.textContent = isEn 
+    ? 'This is never linked to your answers. It helps us understand who takes the test.' 
+    : "Dit wordt nooit aan je antwoorden gekoppeld. Het helpt ons te begrijpen wie de test doet.";
+  
+  const lblConsent = document.querySelector('label[for="d-consent"]');
+  if (lblConsent) {
+    if (isEn) {
+      lblConsent.innerHTML = '<strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.';
+    } else {
+      lblConsent.innerHTML = "<strong>Toestemming voor onderzoek:</strong> Ik sta CoreOpinion toe om mijn anonieme antwoorden en demografische gegevens op te slaan voor onderzoek, statistieken en openbare peilingsdashboards.";
+    }
+  }
+
+  // Calculating page
+  const calcTitle = document.querySelector('.calc-h');
+  if (calcTitle) calcTitle.textContent = isEn ? 'Mapping your answers' : "Je antwoorden worden geanalyseerd";
+  
+  const calcSub = document.querySelector('.calc-p');
+  if (calcSub) calcSub.textContent = isEn ? 'This will only take a moment.' : "Dit duurt slechts een moment.";
+
+  // Results Dashboard titles
+  const rEyebrow = document.querySelector('.result-eyebrow');
+  if (rEyebrow) rEyebrow.textContent = isEn 
+    ? 'Your Netherlands political alignment' 
+    : "Jouw politieke overeenkomst in Nederland";
+
+  // Save Panel titles
+  const saveTitle = document.querySelector('.save-title');
+  if (saveTitle) saveTitle.textContent = isEn ? 'Save your results' : "Sla je resultaten op";
+  
+  const saveDesc = document.querySelector('.save-desc');
+  if (saveDesc) saveDesc.textContent = isEn 
+    ? 'Enter your email and we will send you a link to these results. Never shared.' 
+    : "Vul je e-mailadres in en we sturen je een link naar deze resultaten. Nooit gedeeld.";
+    
+  const sendBtn = document.querySelector('.save-row .btn-primary');
+  if (sendBtn) sendBtn.textContent = isEn ? 'Send results' : "Verzend resultaten";
+
+  // Action Buttons
+  const copyBtn = document.querySelector('.share-row button:nth-child(1)');
+  if (copyBtn) copyBtn.textContent = isEn ? 'Copy results link' : "Kopieer resultaten-link";
+  
+  const retakeBtn = document.querySelector('.share-row button:nth-child(2)');
+  if (retakeBtn) retakeBtn.textContent = isEn ? 'Retake' : "Opnieuw doen";
+  
+  const genBtn = document.querySelector('.share-row a button');
+  if (genBtn) genBtn.textContent = isEn ? 'General test' : "Algemene test";
+}
+
+const LOCAL_QUESTIONS = {
+  "hc1": {
+    "q": "Moet deze man failliet gaan of sterven omdat hij zijn baan heeft verloren?",
+    "ctx": "Hij heeft zijn hele leven gewerkt. Verloor zijn baan op 58-jarige leeftijd. Verloor daarmee ook zijn zorgverzekering. Stadium 3 kanker. De rekening is 400.000 dollar.",
+    "opts": [
+      "Nee. Universele gezondheidszorg is het enige antwoord. Medicare voor iedereen.",
+      "Nee. Breid overheidssteun uit en bescherm mensen in zijn situatie.",
+      "Het huidige stelsel is voldoende. Hij had zijn dekking zelf moeten voortzetten.",
+      "Dit is een persoonlijk falen. De overheid moet de gezondheidszorg niet beheren."
+    ]
+  },
+  "hc2": {
+    "q": "Door de overheid beheerde gezondheidszorg zou medische innovatie vernietigen, de kwaliteit van zorg verminderen en leiden tot rantsoenering.",
+    "opts": [
+      "Ja. De vrije markt stimuleert de beste medische innovatie.",
+      "Er zijn reële risico's, maar basisregels zouden deze kunnen voorkomen.",
+      "Nee. Andere ontwikkelde landen betalen de helft minder voor betere resultaten onder universele systemen."
+    ]
+  },
+  "hc3": {
+    "q": "Medische schulden moeten wettelijk anders worden behandeld dan consumentenschulden, met strikte limieten op rente en incasso's.",
+    "opts": [
+      "Ja. Niemand kiest ervoor om ziek te zijn. Het is een noodzaak, geen luxe aankoop.",
+      "Sommige beschermingsmaatregelen zijn zinvol, maar schuldeisers moeten kunnen incasseren.",
+      "Nee. Contracten moeten gelijkelijk worden nageleefd. Uitzonderingen schaden de kredietmarkten."
+    ]
+  },
+  "gn1": {
+    "q": "De grondwet is geen zelfmoordpact. We moeten aanvalswapens verbieden om onze kinderen te beschermen.",
+    "ctx": "Sinds Columbine hebben meer dan 350.000 scholieren te maken gehad met vuurwapengeweld op school. Actieve schutter-oefeningen zijn nu standaard.",
+    "opts": [
+      "Ja. Dit zijn oorlogswapens en horen niet thuis in onze straten.",
+      "Verboden op aanvalswapens zijn complex. Achtergrondcontroles en meldwetten zijn effectiever.",
+      "Nee. Richt je op geestelijke gezondheidszorg en schoolveiligheid. Straf wetgetrouwe burgers niet."
+    ]
+  },
+  "gn2": {
+    "q": "Het verbieden van specifieke typen vuurwapens ontwapent alleen wetgetrouwe burgers, waardoor ze weerloos zijn tegen criminelen die de wet negeren.",
+    "opts": [
+      "Ja. Alleen een goede burger met een wapen stopt een slechte burger met een wapen.",
+      "Zelfverdediging is een recht, maar sommige beperkingen op magazijnen met grote capaciteit zijn redelijk.",
+      "Nee. Landen met strenge wapenwetten hebben een fractie van onze moordcijfers."
+    ]
+  },
+  "gn3": {
+    "q": "We moeten een verplichte wachttijd van 10 dagen invoeren voor alle vuurwapenaankopen om impulsieve daden van geweld te voorkomen.",
+    "ctx": "Ongeveer 48.000 Amerikanen stierven in 2022 aan vuurwapengerelateerd letsel. Meer dan de helft betrof zelfmoord.",
+    "opts": [
+      "Ja. Een afkoelperiode is een verstandige maatregel die levens redt.",
+      "Wachttijden zouden alleen moeten gelden voor eerste kopers of jonge volwassenen.",
+      "Nee. Uitgesteld recht is ontzegd recht. Slachtoffers van stalking hebben direct bescherming nodig."
+    ]
+  },
+  "im1": {
+    "q": "Een land zonder grenzen is geen land. We moeten de grens beveiligen en illegalen uitzetten.",
+    "ctx": "Miljoenen ongedocumenteerde immigranten leven in het land. Grensoverschrijdingen hebben historische hoogten bereikt. Gemeentelijke middelen zijn uitgeput.",
+    "opts": [
+      "Ja. Wet en orde moeten worden hersteld. Grensbeveiliging is nationale veiligheid.",
+      "Beveilig de grens, maar bied een pad naar legalisering voor degenen die hier al zijn.",
+      "Richt je op humane verwerking, grondoorzaken en het uitbreiden van legale paden."
+    ]
+  },
+  "im2": {
+    "q": "Gezinnen uit elkaar scheuren door massadeportaties is moreel verwerpelijk. We hebben een weg naar het staatsburgerschap nodig.",
+    "ctx": "Ongedocumenteerde immigranten betalen miljarden aan belasting, oogsten ons voedsel, verzorgen ouderen en bouwen huizen.",
+    "opts": [
+      "Ja. Dit zijn onze buren en collega's. Ze verdienen waardigheid en een legale status.",
+      "Bied een legale status en werkvergunningen, maar naturalisatie moet een streng proces zijn.",
+      "Nee. Het belonen van wetsovertreding moedigt illegale immigratie aan. Deportaties zijn noodzakelijk."
+    ]
+  },
+  "im3": {
+    "q": "Het land moet het aantal visa voor hoogopgeleide werknemers (H-1B) aanzienlijk verhogen om wereldwijd toptalent aan te trekken.",
+    "opts": [
+      "Ja. Kennismigratie stimuleert innovatie en schept binnenlandse banen.",
+      "Een matige verhoging is prima, maar we moeten eigen werknemers beschermen tegen loondumping.",
+      "Nee. Bedrijven moeten investeren in het opleiden van eigen mensen in plaats van goedkope krachten te importeren."
+    ]
+  },
+  "tx1": {
+    "q": "Extreme vermogensongelijkheid is een bedreiging voor de democratie. We moeten een vermogensbelasting invoeren op vermogens boven 50 miljoen dollar.",
+    "ctx": "De drie rijkste personen bezitten meer vermogen dan de gehele armere helft van de bevolking samen.",
+    "opts": [
+      "Ja. Miljardairs zouden niet mogen bestaan in een samenleving met dakloze kinderen.",
+      "Vermogensbelasting is grondwettelijk complex. Verhoog in plaats daarvan het topschijftarief van de inkomstenbelasting.",
+      "Nee. Gedwongen herverdeling is diefstal. Rijkdom wordt gecreëerd, niet gestolen."
+    ]
+  },
+  "tx2": {
+    "q": "Het belasten van kapitaal en hoge inkomens drijft investeringen naar het buitenland, verlaagt de productiviteit en schaadt de werknemers.",
+    "opts": [
+      "Ja. Lagere belastingen stimuleren investeringen, bedrijfsgroei en werkgelegenheid.",
+      "Sommige belastingen zijn nodig, maar hoge marginale tarieven verstoren economische beslissingen.",
+      "Nee. Trickle-down economics is een bewezen leugen. Groei moet van de vraagzijde komen."
+    ]
+  },
+  "tx3": {
+    "q": "Het tarief van de vennootschapsbelasting moet worden teruggebracht naar 35% om te zorgen dat grote bedrijven hun eerlijke deel betalen.",
+    "opts": [
+      "Ja. Multinationals boeken recordwinsten terwijl ze historisch lage belastingtarieven betalen.",
+      "Een gematigd tarief rond 25-28% is een concurrerend compromis.",
+      "Nee. Een hoog tarief maakt onze bedrijven onconcurrerend en wordt doorberekend aan de consument."
+    ]
+  },
+  "cl1": {
+    "q": "We verkeren in een klimaatcrisis. De overheid moet fossiele brandstoffen snel afbouwen und investeren in een Green New Deal.",
+    "ctx": "Het afgelopen jaar was het warmste ooit gemeten. Bosbranden, droogtes en overstromingen kosten de economie miljarden.",
+    "opts": [
+      "Ja. De transitie naar hernieuwbare energie is de morele en economische plicht van deze tijd.",
+      "Fossiele brandstoffen abrupt afbouwen zou de economie ruïneren. Subsidieer in plaats daarvan groene tech.",
+      "Nee. Nationale energie-onafhankelijkheid vereist olie, gas en kolen. De Green New Deal is een socialistische fantasie."
+    ]
+  },
+  "cl2": {
+    "q": "Eenijdige verboden op fossiele brandstoffen vernietigen goedbetaalde banen en maken ons afhankelijk van buitenlandse rivalen zoals China voor zonnepanelen en accu's.",
+    "opts": [
+      "Ja. Meer boren garandeert goedkope energie als motor van de economie.",
+      "We moeten alle energie-opties benutten, inclusief kernenergie en schoon aardgas.",
+      "Nee. De transitie is onvermijdelijk. Voorop lopen hiermee schept de banen van de toekomst."
+    ]
+  },
+  "ab1": {
+    "q": "Abortus is gezondheidszorg. Het parlement moet nationale wetgeving aannemen om abortusrechten in het hele land vast te leggen.",
+    "ctx": "Sinds het Hooggerechtshof het historische abortusrecht heeft teruggedraaid, hebben veel staten abortus vrijwel verboden, waardoor vrouwen duizenden kilometers moeten reizen.",
+    "opts": [
+      "Ja. Reproductieve vrijheid is een fundamenteel mensenrecht.",
+      "Steun abortusrechten, maar met standaardlimieten op late abortussen.",
+      "Nee. De kwestie hoort thuis bij de deelstaten, in overeenstemming met de Grondwet.",
+      "Nee. Abortus beëindigt een menselijk leven en moet in het hele land verboden worden."
+    ]
+  },
+  "ab2": {
+    "q": "De uitspraak van het Hof heeft de kwestie van abortus terecht teruggelegd bij het democratische proces in elke deelstaat.",
+    "opts": [
+      "Ja. De Grondwet noemt abortus niet. Staten hebben het recht om ongeboren leven te beschermen.",
+      "Staten moeten beslissen, maar verboden moeten uitzonderingen hebben voor verkrachting, incest en gevaar voor het leven.",
+      "Nee. Mensenrechten mogen niet afhangen van geografische grenzen of lokale parlementen."
+    ]
+  },
+  "sd1": {
+    "q": "Hoger onderwijs is een publiek goed. De overheid moet studieschulden kwijtschelden en openbare universiteiten collegegeldvrij maken.",
+    "ctx": "Miljoenen burgers dragen een zware last aan studieschulden. Een hele generatie stelt het kopen van een huis of het starten van een bedrijf uit.",
+    "opts": [
+      "Ja. Gratis onderwijs is een investering in onze gezamenlijke toekomst.",
+      "Scheld schulden kwijt voor studenten met lage inkomens en hervorm de rente, maar volledige gratis toegang is te duur.",
+      "Nee. Dit is een enorme overdracht van rijkdom van de werkende klasse naar de hoogopgeleide elite."
+    ]
+  },
+  "sd2": {
+    "q": "Het kwijtschelden van studieschulden is diep onrechtvaardig tegenover de miljoenen kiezers die hard hebben gewerkt om hun lening af te betalen, of die ervoor hebben gekozen niet te gaan studeren.",
+    "opts": [
+      "Ja. Je tekent een contract, je betaalt het terug. Persoonlijke verantwoordelijkheid telt.",
+      "Het systeem heeft gebreken, maar algehele kwijtschelding is het verkeerde middel.",
+      "Nee. De studiekosten zijn geëxplodeerd. De leencontracten waren misleidend."
+    ]
+  },
+  "rj1": {
+    "q": "Systemisch racisme is reëel. We moeten de politie structureel hervormen, gekwalificeerde immuniteit beëindigen en investeren in achtergestelde gemeenschappen.",
+    "ctx": "Minderheden worden statistisch gezien veel vaker opgesloten en onevenredig vaak geconfronteerd met politie en justitie.",
+    "opts": [
+      "Ja. Het strafrechtsysteem kent raciale ongelijkheden en vereist radicale hervormingen.",
+      "Hervorm de politie, maar verlaag het budget of de bezetting van de wetshandhaving niet.",
+      "Nee. Systemisch racisme is een verdeeldheid zaaiend narratief. Het probleem ligt bij criminaliteit en gezinsuitval."
+    ]
+  },
+  "rj2": {
+    "q": "De voortdurende focus op etnische scheidslijnen door de politiek en media ondermijnt de sociale cohesie en verdeelt het land.",
+    "opts": [
+      "Ja. We moeten mensen beoordelen op hun karakter, niet op hun afkomst.",
+      "Etnische verschillen zijn reëel, maar de focus moet liggen op verbindende economische oplossingen.",
+      "Nee. Het ontkennen van de geschiedenis wist het verleden niet uit. We moeten systemisch racisme benoemen om het af te breken."
+    ]
+  },
+  "vt1": {
+    "q": "We moeten nationale normen invoeren voor automatische kiezersregistratie, stemmen per brief uitbreiden en van de verkiezingsdag een nationale feestdag maken.",
+    "opts": [
+      "Ja. Stemmen is een recht. We moeten deelname voor elke burger zo makkelijk mogelijk maken.",
+      "Een nationale feestdag ja, maar registratieregels moeten bij de deelstaten blijven.",
+      "Nee. We hebben strengere kiezersidentificatie nodig om de integriteit van verkiezingen te waarborgen."
+    ]
+  },
+  "vt2": {
+    "q": "Het versoepelen van kiezersregistratie en uitbreiden van stemmen per brief opent de deur voor fraude und ondermijnt het vertrouwen in verkiezingen.",
+    "opts": [
+      "Ja. Elke stem moet geverifieerd worden. Identificatieplicht beschermt de democratie.",
+      "Integriteit is belangrijk, maar regels mogen niet gebruikt worden om groepen het stemmen te bemoeilijken.",
+      "Nee. Kiezersfraude is vrijwel non-existent. Deze wetten zijn bedoeld om minderheden van het stemmen te houden."
+    ]
+  },
+  "fp1": {
+    "q": "We moeten kracht uitstralen. Een sterk leger is de enige garantie voor wereldwijde stabiliteit en de bescherming van democratische waarden.",
+    "ctx": "Het land heeft honderden militaire bases wereldwijd en geeft meer uit aan defensie dan de volgende tien landen samen.",
+    "opts": [
+      "Ja. Vrede door sterkte. We moeten onze bondgenoten steunen.",
+      "Verdedig onze bondgenoten, maar vermijd dure buitenlandse interventies en 'nation-building'.",
+      "Nee. Het militair-industrieel complex slurpt middelen op die nodig zijn voor binnenlandse behoeften."
+    ]
+  },
+  "fp2": {
+    "q": "We moeten ophouden met het uitgeven van miljarden aan buitenlandse oorlogen en ons in plaats daarvan richten op het opbouwen van onze eigen gemeenschappen.",
+    "opts": [
+      "Ja. Eigen volk eerst. Onze prioriteit moet liggen bij binnenlandse stabiliteit en werkgelegenheid.",
+      "Een evenwichtige aanpak. We moeten wereldwijd betrokken blijven om onze eigen belangen te beschermen.",
+      "Nee. Isolationisme is een gevaarlijke illusie. Mondiale stabiliteit is cruciaal voor onze economie."
+    ]
+  },
+  "si1": {
+    "q": "Gendertrajecten zijn een kwestie van medische vrijheid. De politiek heeft geen recht om dit te verbieden.",
+    "ctx": "Transgender jongeren kampen met hoge percentages depressie. Medische verenigingen steunen deze zorg als noodzakelijk.",
+    "opts": [
+      "Ja. Beslissingen moeten genomen worden door patiënten, gezinnen en artsen, niet door politici.",
+      "Zorg ja, maar sommige leeftijdsgrenzen voor onomkeerbare chirurgische ingrepen zijn redelijk.",
+      "Nee. We moeten kinderen beschermen tegen experimentele ingrepen en traditionele waarden verdedigen."
+    ]
+  },
+  "si2": {
+    "q": "Minderjarigen toestemming geven voor onomkeerbare gendertransities is een medische fout die de staat moet verbieden.",
+    "opts": [
+      "Ja. Kinderen missen de rijpheid om in te stemmen met keuzes die hun hele leven beïnvloeden.",
+      "Strikte medische beoordeling is nodig, maar algehele verboden gaan te ver.",
+      "Nee. Medische keuzes horen bij gezinnen en artsen thuis."
+    ]
+  },
+  "gi1": {
+    "q": "De staat moet sociale media streng reguleren om desinformatie, online haat en buitenlandse verkiezingsinmenging te bestrijden.",
+    "opts": [
+      "Ja. Ongereguleerde techmonopolies schaden de democratie en de volksgezondheid.",
+      "Desinformatie is een gevaar, maar overheidsregulering brengt het risico van politieke censuur met zich mee.",
+      "Nee. De vrijheid van meningsuiting beschermt alle meningen. Vrij debat is het enige medicijn."
+    ]
+  },
+  "gi2": {
+    "q": "Druk van de overheid op sociale media om bepaalde meningen te onderdrukken is staatscensuur via de achterdeur.",
+    "ctx": "Er zijn rapporten dat overheidsinstanties samenwerken met platforms om inhoud over pandemieën of verkiezingen te labelen of te dempen.",
+    "opts": [
+      "Ja. Overheidsdruk op private platforms om inhoud te modereren schendt de vrije meningsuiting.",
+      "Platforms moeten hun eigen regels handhaven, maar communicatie met de staat moet transparant zijn.",
+      "Nee. De staat heeft de plicht om platforms te waarschuwen tegen desinformatiecampagnes of veiligheidsrisico's."
+    ]
+  },
+  "ss1": {
+    "q": "We moeten de pensioenkassen veiligstellen door de premiegrens af te schaffen, zodat hoge inkomens over hun hele salaris bijdragen.",
+    "opts": [
+      "Ja. Rijken moeten premies betalen over hun gehele inkomen, net als gemiddelde werknemers.",
+      "Verhoog de grens, maar pas ook de pensioenleeftijd aan voor toekomstige generaties.",
+      "Nee. We moeten overstappen op individuele opbouwrekeningen en pensioen aan de markt overlaten."
+    ]
+  },
+  "ss2": {
+    "q": "Het uitbreiden van openbare sociale voorzieningen terwijl de staatsschuld groeit is budgettair onverantwoord.",
+    "opts": [
+      "Ja. We moeten bezuinigen en private opbouw stimuleren om staatsfaillissement te voorkomen.",
+      "Deze regelingen moeten worden hervormd, maar het sociale vangnet moet intact blijven.",
+      "Nee. Deze voorzieningen zijn beloften waar burgers voor betaald hebben. Bezuinig liever op defensie."
+    ]
+  },
+  "tr1": {
+    "q": "Vrijhandel was een enorme overdracht van rijkdom van werknemers naar multinationals. We moeten onze industrieën beschermen.",
+    "ctx": "Veertig jaar lang werden industriebanen verplaatst naar lagelonenlanden. Hele regio's verpauperden, terwijl concerns recordwinsten boekten.",
+    "opts": [
+      "Ja. Importtarieven en industriebeleid zijn nodig om de middenklasse weer op te bouwen.",
+      "Gerichte tarieven alleen op strategische sectoren (zoals microchips). Brede tarieven schaden consumenten.",
+      "Nee. Protectionisme verhoogt de prijzen en leidt tot handelsoorlogen die iedereen armer maken."
+    ]
+  },
+  "ed1": {
+    "q": "De financiering van scholen moet strikt op basis van behoefte gebeuren, waarbij middelen van rijke wijken naar scholen in arme wijken gaan.",
+    "opts": [
+      "Ja. Elk kind verdient dezelfde start in het leven, ongeacht de postcode.",
+      "Behoeftefinanciering ja, maar bestraf districten die er zelf voor kiezen meer in scholen te steken niet.",
+      "Nee. Schoolvouchers moeten ouders de vrijheid geven hun kind naar elke school te sturen, openbaar of privé."
+    ]
+  },
+  "ed2": {
+    "q": "Schoolvouchers onttrekken broodnodige middelen aan het openbaar onderwijs en vergroten de sociale ongelijkheid.",
+    "opts": [
+      "Ja. Publiek geld hoort in openbare scholen. Vouchersystemen creëren ongelijkheid.",
+      "Vouchers hebben waarde, maar moeten beperkt blijven tot arme studenten op zwakke scholen.",
+      "Nee. Concurrentie verbetert alle scholen. Ouders moeten vrij kunnen kiezen."
+    ]
+  },
+  "co1": {
+    "q": "Het Hooggerechtshof is een partijpolitiek orgaan geworden. We moeten termijnlimieten en een bindende gedragscode invoeren.",
+    "opts": [
+      "Ja. Levenslange benoemingen zonder ethische verantwoording bedreigen de legitimiteit.",
+      "Een bindende gedragscode ja, maar termijnlimieten verzwakken de onafhankelijkheid van de rechtspraak.",
+      "Nee. Het systeem heeft zich bewezen. De regels veranderen is louter politiek opportunisme."
+    ]
+  },
+  "co2": {
+    "q": "De Grondwet is een levend document dat moet worden geïnterpreteerd in het licht van moderne waarden en sociale vooruitgang.",
+    "opts": [
+      "Ja. De opstellers konden de moderne wereld niet voorzien. Een letterlijke lezing is anachronistisch.",
+      "De interpretatie moet meebewegen, maar constitutionele basisprincipes moeten stabiel blijven.",
+      "Nee. De oorspronkelijke bedoeling is de enige garantie van de wet. Wijzigingen vereisen een amendement."
+    ]
+  },
+  "bt1": {
+    "q": "Techmonopolies zoals Google, Meta en Amazon zijn te groot geworden en moeten via de antitrustwetgeving worden opgesplitst.",
+    "ctx": "Een handvol techgiganten controleert de moderne informatiestroom en bezit het digitale publieke domein.",
+    "opts": [
+      "Ja. Splits ze op. Ze verstikken concurrentie, misbruiken onze data en beheersen het debat.",
+      "Regulering en privacywetgeving zijn beter. Opsplitsing schaadt onze technologische dominantie.",
+      "Nee. Ze zijn succesvol omdat ze uitstekende diensten leveren. Laat de markt beslissen."
+    ]
+  },
+  "br1": {
+    "q": "De overheid is te groot, te duur en grijpt te ver in. Een kleinere overheid zou de vrijheid en productiviteit vergroten.",
+    "opts": [
+      "Ja. Bezuinig op uitgaven, verlaag belastingen, schrap regels, vertrouw op de eigen verantwoordelijkheid.",
+      "Sommige zaken zijn te groot, maar kernprogramma's en sociale hulp zijn precies goed.",
+      "Nee. De overheid legt de basis voor welvaart. Bezuinigen hierop raakt de bevolking direct."
+    ]
+  },
+  "br2": {
+    "q": "De kloof tussen de rijksten en de rest van de bevolking is gegroeid tot een niveau dat de sociale cohesie bedreigt.",
+    "opts": [
+      "Ja. Progressieve belastingen, sterkere sociale programma's en vermogensbelasting zijn nodig.",
+      "Verschillen zijn er, maar gelijke kansen en groei zijn belangrijker dan herverdeling.",
+      "Verschillen weerspiegelen inzet. Gedwongen gelijkheid remt initiatief en ambitie."
+    ]
+  },
+  "br3": {
+    "q": "De grootste bedreigingen voor de vrijheid komen van binnenuit – overheidscontrole en inbreuk op burgerrechten.",
+    "opts": [
+      "Ja. Massasurveillance en noodwetgeving zijn de werkelijke gevaren.",
+      "Externe bedreigingen zijn reëel. De balans tussen veiligheid en vrijheid is moeilijk.",
+      "Internationale dreigingen vereisen een sterke binnenlandse veiligheid en inlichtingendiensten."
+    ]
+  },
+  "br4": {
+    "q": "Grote bedrijven hebben te veel invloed gekregen op de politiek, de economie en het dagelijks leven.",
+    "opts": [
+      "Ja. We moeten lobbyen drastisch inperken en de verkiezingsfinanciering hervormen.",
+      "De invloed van grote bedrijven is een probleem, maar overmatige regelgeving remt het mkb.",
+      "Economische vrijheid is de basis van welvaart. De staat is een grotere bedreiging dan welk bedrijf ook."
+    ]
+  },
+  "ex1": {
+    "q": "Dat het land zoveel miljardairs telt, is geen succes, maar het teken van een systeem dat in hun voordeel is gemanipuleerd.",
+    "opts": [
+      "Ja. Extreme rijkdom op deze schaal is een falen van overheidsbeleid.",
+      "Nee. De rijkdom aan de top neemt niets weg van de onderkant. Groei komt iedereen ten goede."
+    ]
+  },
+  "ex2": {
+    "q": "Het belasten van de rijken om publieke programma's te financieren bestraft succes en verdrijft banen.",
+    "opts": [
+      "Ja. Kapitaal ontvlucht gebieden met hoge belastingen. Je bouwt geen welvaart op door succes te bestraffen.",
+      "Nee. De rijksten hebben hun fortuin gebouwd op onze publieke infrastructuur. Ze moeten terugbetalen."
+    ]
+  },
+  "ex3": {
+    "q": "Het gevangenissysteem sluit onevenredig veel mensen op. Dit is geen rechtvaardigheid, maar massale bestraffing.",
+    "opts": [
+      "Ja. Massa-opsluiting is een ramp en vereist een fundamentele koerswijziging.",
+      "Nee. De gevangenispopulatie weerspiegelt de criminaliteit. Openbare veiligheid is niet onderhandelbaar."
+    ]
+  },
+  "ex4": {
+    "q": "De criminaliteit steeg in steden die bezuinigden op de politie. Bezuinigen op de politie was een verhängnisvolle Fehler.",
+    "opts": [
+      "Ja. Het experiment is mislukt en de kwetsbaarste wijken hebben de prijs betaald.",
+      "Nee. Het gebrek aan budget voor welzijn, huisvesting en scholen is het probleem, niet te weinig agenten."
+    ]
+  },
+  "ex5": {
+    "q": "De staat heeft geen recht om zijn burgers zonder gerechtelijk bevel te bespioneren. Massasurveillance moet stoppen.",
+    "opts": [
+      "Ja. Een overheid die iedereen in de gaten houdt, vertrouwt niemand.",
+      "Nee. Veiligheidsdiensten hebben brede toegang nodig. Terrorisme wacht niet op bevelen."
+    ]
+  },
+  "id1": {
+    "q": "Elke cultuur heeft prestaties geleverd om trots op te zijn. Ik ben trots op de mijne en excuseer me er niet voor.",
+    "opts": [
+      "Ja. Trots op de eigen cultuur en herkomst is natuurlijk en gezond.",
+      "Trots is prima, maar beweringen over culturele superioriteit maken me ongemakkelijk.",
+      "Nee. Culturen rangschikken of superieur verklaren is waar gevaarlijk denken begint."
+    ]
+  },
+  "id2": {
+    "q": "Mensen die nu leven zouden zich moeten schamen voor de historische misdaden van hun natie (slavernij, kolonialisme, massamoorden).",
+    "opts": [
+      "Ja. Het erkennen van geërfde schuld hoort bij een eerlijke en oprechte omgang met jezelf.",
+      "We moeten de geschiedenis eerlijk erkennen, zonder persoonlijke schaamte te eisen.",
+      "Nee. Je kunt niet schuldig zijn aan daden die je niet hebt gepleegd. Collectieve schuld is onrechtvaardig."
+    ]
+  }
+};
+
+
 const SB_URL = 'https://rttomfnfyjjssdqfzkaj.supabase.co';
 const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
 
@@ -2463,54 +3077,102 @@ const BANK = [
 
 const PARTY_META = {
   "pvv": {
-    "name": "PVV",
+    "name": {
+      "nl": "PVV",
+      "en": "PVV"
+    },
     "color": "#002D62",
     "barClass": "bar-pvv",
-    "desc": "Je antwoorden komen het meest overeen met de PVV. Je pleit voor een asielstop, strenge wetshandhaving, stopzetting van klimaatmaatregelen, en een sterke focus op de eigen nationale identiteit."
+    "desc": {
+      "nl": "Je antwoorden komen het meest overeen met de PVV. Je pleit voor een asielstop, strenge wetshandhaving, stopzetting van klimaatmaatregelen, en behoud van de nationale identiteit.",
+      "en": "Your answers most closely match the PVV (Party for Freedom). You advocate for an asylum freeze, strict law enforcement, halting climate spending, and preserving national identity."
+    }
   },
   "glp": {
-    "name": "GL-PvdA",
+    "name": {
+      "nl": "GL-PvdA",
+      "en": "GL-PvdA"
+    },
     "color": "#E60000",
     "barClass": "bar-glp",
-    "desc": "Je antwoorden komen het meest overeen met GroenLinks-PvdA. Je steunt een ambitieus klimaatbeleid, inkomensherverdeling via rijksbelastingen, en substantiële investeringen in openbare voorzieningen."
+    "desc": {
+      "nl": "Je antwoorden komen het meest overeen met GroenLinks-PvdA. Je steunt een ambitieus klimaatbeleid, inkomensherverdeling via belastingen, en investeringen in openbare voorzieningen.",
+      "en": "Your answers most closely match GreenLeft-Labour (GL-PvdA). You support ambitious climate action, income redistribution through taxes, and major investments in public utilities."
+    }
   },
   "vvd": {
-    "name": "VVD",
+    "name": {
+      "nl": "VVD",
+      "en": "VVD"
+    },
     "color": "#FF6600",
     "barClass": "bar-vvd",
-    "desc": "Je antwoorden komen het meest overeen met de VVD. Je bent voorstander van lagere lasten voor bedrijven, economische vrijheid, kernenergie, en een selectief immigratiebeleid."
+    "desc": {
+      "nl": "Je antwoorden komen het meest overeen met de VVD. Je bent voorstander van lagere lasten voor bedrijven, economische vrijheid, kernenergie, en een selectief immigratiebeleid.",
+      "en": "Your answers most closely match the VVD (People's Party for Freedom and Democracy). You favor lower taxes on businesses, economic freedom, nuclear energy, and selective immigration."
+    }
   },
   "nsc": {
-    "name": "NSC",
+    "name": {
+      "nl": "NSC",
+      "en": "NSC"
+    },
     "color": "#00A3A0",
     "barClass": "bar-nsc",
-    "desc": "Je antwoorden komen het meest overeen met Nieuw Sociaal Contract. Je stelt goed bestuur, bestaanszekerheid en constitutionele toetsing centraal, met een gematigd conservatieve inslag."
+    "desc": {
+      "nl": "Je antwoorden komen het meest overeen met Nieuw Sociaal Contract. Je stelt goed bestuur, bestaanszekerheid en constitutionele toetsing centraal.",
+      "en": "Your answers most closely match New Social Contract (NSC). You place good governance, social security, and constitutional review at the center of your political agenda."
+    }
   },
   "d66": {
-    "name": "D66",
+    "name": {
+      "nl": "D66",
+      "en": "D66"
+    },
     "color": "#00AE41",
     "barClass": "bar-d66",
-    "desc": "Je antwoorden komen het meest overeen met D66. Je bent progressief op het gebied van persoonlijke vrijheden (euthanasie, ethische kwesties), pro-klimaatactie en een overtuigd voorstander van Europese federatie."
+    "desc": {
+      "nl": "Je antwoorden komen het meest overeen met D66. Je bent progressief op het gebied van persoonlijke vrijheden (euthanasie), pro-klimaatactie en voorstander van Europese federatie.",
+      "en": "Your answers most closely match Democrats 66 (D66). You are progressive on personal freedoms (like euthanasia), pro-climate action, and support European federalism."
+    }
   },
   "bbb": {
-    "name": "BBB",
+    "name": {
+      "nl": "BBB",
+      "en": "BBB"
+    },
     "color": "#9ACD32",
     "barClass": "bar-bbb",
-    "desc": "Je antwoorden komen het meest overeen met de BoerBurgerBeweging. Je komt op voor het platteland, verzet je tegen strenge stikstofregels en steunt een nuchter, rechtser economisch beleid."
+    "desc": {
+      "nl": "Je antwoorden komen het meest overeen met de BoerBurgerBeweging. Je komt op voor het platteland, verzet je tegen strenge stikstofregels en steunt een nuchter, rechtser economisch beleid.",
+      "en": "Your answers most closely match the BoerBurgerBeweging (BBB). You stand up for rural areas, oppose strict nitrogen regulations, and support a pragmatic, right-leaning economic policy."
+    }
   },
   "cda": {
-    "name": "CDA",
+    "name": {
+      "nl": "CDA",
+      "en": "CDA"
+    },
     "color": "#007C5C",
     "barClass": "bar-cda",
-    "desc": "Je antwoorden komen het meest overeen met het CDA. Je staat voor een fatsoenlijke samenleving, ondersteuning van het gezin en het maatschappelijk middenveld, en verantwoord begrotingsbeleid."
+    "desc": {
+      "nl": "Je antwoorden komen het meest overeen met het CDA. Je staat voor een fatsoenlijke samenleving, ondersteuning van het gezin en het maatschappelijk middenveld.",
+      "en": "Your answers most closely match the CDA (Christian Democratic Appeal). You support a civil society, strengthening families, and local community initiatives."
+    }
   },
   "ind": {
-    "name": "Onafhankelijk",
+    "name": {
+      "nl": "Onafhankelijk",
+      "en": "Independent"
+    },
     "color": "#7A7F88",
     "barClass": "bar-ind",
-    "desc": "Je antwoorden wijzen niet op een sterke voorkeur voor één partij. Je standpunten zijn gematigd en verdeeld over verschillende stromingen."
+    "desc": {
+      "nl": "Je antwoorden wijzen niet op een sterke voorkeur voor één partij. Je standpunten zijn gematigd en verdeeld over verschillende stromingen.",
+      "en": "Your answers do not show a strong preference for any single party. You hold moderate, mixed views typical of independent thinkers."
+    }
   }
-};
+}};
 </script>
 <script src="/engine.js"></script>
 </body>

@@ -137,14 +137,22 @@ window.renderQ = function() {
     return;
   }
 
-  const q = qs[qi];
+  const rawQ = qs[qi];
+  const q = (typeof window.getQuestion === 'function') ? window.getQuestion(rawQ) : rawQ;
   const total = qs.length;
 
   // Render progress bar
   const pFill = document.getElementById('prog-fill');
   if (pFill) pFill.style.width = ((qi / total) * 100).toFixed(1) + '%';
   const pTxt = document.getElementById('prog-txt');
-  if (pTxt) pTxt.textContent = `${qi + 1} of ${total}`;
+  if (pTxt) {
+    const lang = window.currentLang || 'en';
+    const ofText = lang === 'de' ? 'von'
+                 : lang === 'fr' ? 'sur'
+                 : lang === 'nl' ? 'van'
+                 : 'of';
+    pTxt.textContent = `${qi + 1} ${ofText} ${total}`;
+  }
 
   // Topic badge
   const qTopic = document.getElementById('q-topic');
@@ -398,6 +406,7 @@ window.renderResults = function() {
   let topPartyKey = '';
   let meta = null;
   let ranked = [];
+  const lang = window.currentLang || 'en';
 
   // --- Render Party Matches if Country-specific ---
   if (hasParties) {
@@ -405,10 +414,13 @@ window.renderResults = function() {
     topPartyKey = ranked[0][0];
     meta = PARTY_META[topPartyKey];
 
+    const topPartyName = (typeof meta.name === 'object') ? meta.name[lang] : meta.name;
+    const topPartyDesc = (typeof meta.desc === 'object') ? meta.desc[lang] : meta.desc;
+
     const hTopParty = document.getElementById('r-top-party');
-    if (hTopParty) hTopParty.textContent = meta.name;
+    if (hTopParty) hTopParty.textContent = topPartyName;
     const hTopDesc = document.getElementById('r-top-desc');
-    if (hTopDesc) hTopDesc.textContent = meta.desc;
+    if (hTopDesc) hTopDesc.textContent = topPartyDesc;
 
     // Build party alignment bars
     const pContainer = document.getElementById('party-results');
@@ -421,12 +433,19 @@ window.renderResults = function() {
         
         // Custom inline styling fallback for dynamic countries
         const barColor = m.color || '#B0B5BC';
+        const mName = (typeof m.name === 'object') ? m.name[lang] : m.name;
         
+        const alignmentText = lang === 'de' ? 'Übereinstimmung'
+                            : lang === 'fr' ? 'd\'alignement'
+                            : lang === 'nl' ? 'overeenkomst'
+                            : lang === 'sv' ? 'matchning'
+                            : 'alignment';
+
         row.innerHTML = `
           <div class="party-row-rank">${idx + 1}</div>
           <div class="party-row-info">
-            <div class="party-row-name">${m.name}</div>
-            <div class="party-row-sub">${pct}% alignment</div>
+            <div class="party-row-name">${mName}</div>
+            <div class="party-row-sub">${pct}% ${alignmentText}</div>
           </div>
           <div class="party-row-bar-wrap">
             <div class="party-row-bar ${m.barClass || ''}" style="width:0%; background:${barColor}" data-w="${pct}%"></div>
@@ -441,15 +460,52 @@ window.renderResults = function() {
     const rInsight = document.getElementById('r-insight');
     if (rInsight) {
       const gap = ranked[0][1] - ranked[1][1];
-      const gapText = gap < 8 
-        ? `Your result is close — only ${gap} points separates you from ${PARTY_META[ranked[1][0]].name}. You may genuinely straddle both traditions.`
-        : gap < 20 
-        ? `You align meaningfully with ${PARTY_META[ranked[1][0]].name} too, scoring ${ranked[1][1]}%.`
-        : `Your alignment with ${meta.name} is clear, with ${gap} points separating you from the next closest party.`;
+      const nextPartyName = (typeof PARTY_META[ranked[1][0]].name === 'object')
+        ? PARTY_META[ranked[1][0]].name[lang]
+        : PARTY_META[ranked[1][0]].name;
+
+      let gapText = '';
+      if (lang === 'de') {
+        gapText = gap < 8
+          ? `Dein Ergebnis ist knapp — nur ${gap} Punkte trennen dich von der ${nextPartyName}. Du stehst möglicherweise zwischen beiden Traditionen.`
+          : gap < 20
+          ? `Du weist auch eine deutliche Übereinstimmung mit der ${nextPartyName} auf (${ranked[1][1]}%).`
+          : `Deine Übereinstimmung mit der ${topPartyName} ist eindeutig, mit ${gap} Punkten Vorsprung vor der nächsten Partei.`;
+      } else if (lang === 'fr') {
+        gapText = gap < 8
+          ? `Votre résultat est serré — seulement ${gap} points vous séparent de ${nextPartyName}. Vous chevauchez probablement les deux sensibilités.`
+          : gap < 20
+          ? `Vous vous alignez également de manière significative avec ${nextPartyName}, avec un score de ${ranked[1][1]}%.`
+          : `Votre alignement avec ${topPartyName} est clair, avec ${gap} points d'écart avec le parti suivant.`;
+      } else if (lang === 'nl') {
+        gapText = gap < 8
+          ? `Je resultaat ligt dicht bij elkaar — slechts ${gap} punten scheiden je van ${nextPartyName}. Je staat mogelijk tussen beide tradities in.`
+          : gap < 20
+          ? `Je hebt ook een duidelijke overeenkomst met ${nextPartyName} (${ranked[1][1]}%).`
+          : `Je overeenkomst met ${topPartyName} is duidelijk, met ${gap} punten voorsprong op de volgende partij.`;
+      } else if (lang === 'sv') {
+        gapText = gap < 8
+          ? `Ditt resultat är jämnt — endast ${gap} poäng skiljer dig från ${nextPartyName}. Du står möjligen mellan båda traditionerna.`
+          : gap < 20
+          ? `Du har också en tydlig överensstämmelse med ${nextPartyName} (${ranked[1][1]}%).`
+          : `Din överensstämmelse med ${topPartyName} är tydlig, med ${gap} poängs marginal till nästa parti.`;
+      } else { // default 'en'
+        gapText = gap < 8 
+          ? `Your result is close — only ${gap} points separates you from ${nextPartyName}. You may genuinely straddle both traditions.`
+          : gap < 20 
+          ? `You align meaningfully with ${nextPartyName} too, scoring ${ranked[1][1]}%.`
+          : `Your alignment with ${topPartyName} is clear, with ${gap} points separating you from the next closest party.`;
+      }
+
+      const platformInsightHeader = lang === 'de' ? 'Parteiplattform-Einblick'
+                                  : lang === 'fr' ? 'Aperçu du programme'
+                                  : lang === 'nl' ? 'Partijstandpunt Inzicht'
+                                  : lang === 'sv' ? 'Partiprofil Insikt'
+                                  : 'Platform Insight';
 
       rInsight.innerHTML = `
-        <p style="margin-bottom:14px; font-weight:500; color:var(--ink)">${meta.name} Platform Insight</p>
-        <p style="margin-bottom:14px">${meta.desc}</p>
+        <p style="margin-bottom:14px; font-weight:500; color:var(--ink)">${topPartyName} ${platformInsightHeader}</p>
+        <p style="margin-bottom:14px">${topPartyDesc}</p>
         <p style="font-weight:300; line-height:1.6; color:var(--ink-soft);">${gapText}</p>
       `;
     }
@@ -499,16 +555,72 @@ window.renderResults = function() {
   }, 200);
 
   // --- Render Framing Bias Panel ---
-  const biasVerdicts = [
-    [0, 0, 'No detectable bias', 'Your answers were completely consistent regardless of how questions were framed. That level of logical consistency is rare.'],
-    [1, 15, 'Very low bias', 'Your answers were highly consistent. The framing of a question had almost no influence on your position.'],
-    [16, 35, 'Low bias', 'Minor framing effects. Your positions are mostly stable but shifted slightly depending on how a question was worded.'],
-    [36, 60, 'Moderate bias', 'You showed noticeable framing sensitivity on several topics. Your views shifted depending on whether the question pushed you toward or against a position.'],
-    [61, 80, 'High bias', 'Framing had a significant influence on many of your answers. The same policy question, worded differently, often produced different responses.'],
-    [81, 100, 'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
-  ];
+  const lang = window.currentLang || 'en';
   
-  const bv = biasVerdicts.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || biasVerdicts[0];
+  let verdictTitle = '';
+  let verdictDesc = '';
+  
+  if (lang === 'de') {
+    const vDe = [
+      [0, 0, 'Keine spürbare Verzerrung', 'Deine Antworten waren völlig konsistent, unabhängig davon, wie die Fragen formuliert waren. Ein so hohes Maß an logischer Konsistenz ist selten.'],
+      [1, 15, 'Sehr geringe Verzerrung', 'Deine Antworten waren hochgradig konsistent. Die Formulierung einer Frage hatte fast keinen Einfluss auf deine Position.'],
+      [16, 35, 'Geringe Verzerrung', 'Geringe Formulierungseffekte. Deine Positionen sind meist stabil, verschoben sich jedoch leicht je nach Wortlaut der Frage.'],
+      [36, 60, 'Mäßige Verzerrung', 'Du hast bei mehreren Themen eine spürbare Empfindlichkeit gegenüber der Formulierung gezeigt. Deine Ansichten verschoben sich je nachdem, ob die Frage dich in eine bestimmte Richtung drängte.'],
+      [61, 80, 'Hohe Verzerrung', 'Die Formulierung hatte einen erheblichen Einfluss auf viele deiner Antworten. Dieselbe politische Frage erzeugte anders formuliert oft unterschiedliche Reaktionen.'],
+      [81, 100, 'Sehr hohe Verzerrung', 'Deine Antworten wurden stark davon geprägt, wie Fragen formuliert waren, und weniger von konsistenten Grundwerten.']
+    ];
+    const bv = vDe.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || vDe[0];
+    verdictTitle = bv[2];
+    verdictDesc = bv[3];
+  } else if (lang === 'fr') {
+    const vFr = [
+      [0, 0, 'Aucun biais détectable', 'Vos réponses étaient totalement cohérentes, quelle que soit la formulation des questions. Un tel niveau de cohérence logique est rare.'],
+      [1, 15, 'Biais très faible', 'Vos réponses étaient très cohérentes. La formulation d\'une question n\'a eu presque aucune influence sur votre position.'],
+      [16, 35, 'Biais faible', 'Effets mineurs de formulation. Vos positions sont généralement stables mais ont légèrement varié selon le choix des mots.'],
+      [36, 60, 'Biais modéré', 'Vous avez montré une sensibilité notable à la formulation sur plusieurs sujets. Vos opinions ont changé selon que la question vous poussait ou non dans une direction.'],
+      [61, 80, 'Biais élevé', 'La formulation a eu une influence significative sur beaucoup de vos réponses. La même question de politique publique a produit des réponses différentes selon sa formulation.'],
+      [81, 100, 'Biais très élevé', 'Vos réponses ont été fortement façonnées par la manière dont les questions étaient présentées plutôt que par des valeurs sous-jacentes cohérentes.']
+    ];
+    const bv = vFr.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || vFr[0];
+    verdictTitle = bv[2];
+    verdictDesc = bv[3];
+  } else if (lang === 'nl') {
+    const vNl = [
+      [0, 0, 'Geen aantoonbare beïnvloeding', 'Je antwoorden waren volledig consistent, ongeacht hoe de vragen geformuleerd waren. Die mate van logische consistentie is zeldzaam.'],
+      [1, 15, 'Zeer lage beïnvloeding', 'Je antwoorden waren zeer consistent. De formulering van de vraag had bijna geen invloed op je standpunt.'],
+      [16, 35, 'Lage beïnvloeding', 'Geringe formuleringseffecten. Je standpunten zijn meestal stabiel, maar verschoven licht afhankelijk van de verwoording.'],
+      [36, 60, 'Matige beïnvloeding', 'Je toonde merkbare gevoeligheid voor de formulering bij verschillende onderwerpen. Je meningen verschoven afhankelijk van of de vraag sturend was.'],
+      [61, 80, 'Hoge beïnvloeding', 'De formulering had een aanzienlijke invloed op veel van je antwoorden. Dezelfde beleidsvraag leidde anders verwoord vaak tot andere antwoorden.'],
+      [81, 100, 'Zeer hoge beïnvloeding', 'Je antwoorden werden sterk bepaald door de manier waarop vragen gesteld werden, in plaats van door consistente onderliggende waarden.']
+    ];
+    const bv = vNl.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || vNl[0];
+    verdictTitle = bv[2];
+    verdictDesc = bv[3];
+  } else if (lang === 'sv') {
+    const vSv = [
+      [0, 0, 'Ingen märkbar partiskhet', 'Dina svar var helt konsekventa oavsett hur frågorna var formulerade. Den nivån av logisk konsekvens är sällsynt.'],
+      [1, 15, 'Mycket låg partiskhet', 'Dina svar var mycket konsekventa. Formuleringen av en fråga hade nästan ingen inverkan på din ställning.'],
+      [16, 35, 'Låg partiskhet', 'Mindre formuleringseffekter. Dina ställningstaganden är mestadels stabila men skiftade något beroende på hur en fråga var utformad.'],
+      [36, 60, 'Måttlig partiskhet', 'Du visade märkbar känslighet för formuleringar på flera ämnen. Dina åsikter skiftade beroende på om frågan tryckte dig för eller emot en ståndpunkt.'],
+      [61, 80, 'Hög partiskhet', 'Formuleringen hade en betydande inverkan på many av dina svar. Samma politiska fråga, formulerad annorlunda, gav ofta olika svar.'],
+      [81, 100, 'Mycket hög partiskhet', 'Dina svar var starkt präglade av hur frågorna var utformade snarare än av konsekventa underliggande värderingar.']
+    ];
+    const bv = vSv.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || vSv[0];
+    verdictTitle = bv[2];
+    verdictDesc = bv[3];
+  } else {
+    const biasVerdicts = [
+      [0, 0, 'No detectable bias', 'Your answers were completely consistent regardless of how questions were framed. That level of logical consistency is rare.'],
+      [1, 15, 'Very low bias', 'Your answers were highly consistent. The framing of a question had almost no influence on your position.'],
+      [16, 35, 'Low bias', 'Minor framing effects. Your positions are mostly stable but shifted slightly depending on how a question was worded.'],
+      [36, 60, 'Moderate bias', 'You showed noticeable framing sensitivity on several topics. Your views shifted depending on whether the question pushed you toward or against a position.'],
+      [61, 80, 'High bias', 'Framing had a significant influence on many of your answers. The same policy question, worded differently, often produced different responses.'],
+      [81, 100, 'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
+    ];
+    const bv = biasVerdicts.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || biasVerdicts[0];
+    verdictTitle = bv[2];
+    verdictDesc = bv[3];
+  }
   
   // Set bias text in UI
   const bNum = document.getElementById('bias-num') || document.getElementById('r-bias-num');
@@ -517,16 +629,23 @@ window.renderResults = function() {
   
   if (bNum) bNum.textContent = overallBias + '%';
   if (bVerdict) {
-    bVerdict.textContent = bv[2];
+    bVerdict.textContent = verdictTitle;
     bVerdict.className = 'bias-verdict ' + (overallBias < 20 ? 'v-green' : overallBias < 60 ? 'v-amber' : 'v-red');
   }
-  if (bExplain) bExplain.textContent = bv[3];
+  if (bExplain) bExplain.textContent = verdictDesc;
 
   // Renders bias rows with cursor triggers and "Inspect 🔍" links
   const biasRowsEl = document.getElementById('bias-rows') || document.getElementById('r-bias-rows');
   if (biasRowsEl) {
     biasRowsEl.innerHTML = '';
     const sortedTopics = Object.entries(topicBiasAgg).sort((a, b) => b[1] - a[1]);
+    
+    const inspectLabel = lang === 'de' ? 'Ansehen 🔍'
+                       : lang === 'fr' ? 'Inspecter 🔍'
+                       : lang === 'nl' ? 'Inspecteren 🔍'
+                       : lang === 'sv' ? 'Inspektera 🔍'
+                       : 'Inspect 🔍';
+                       
     sortedTopics.forEach(([topic, scoreVal]) => {
       const color = scoreVal < 20 ? '#2D9B5F' : scoreVal < 50 ? '#E8A020' : '#C0392B';
       const row = document.createElement('div');
@@ -538,7 +657,7 @@ window.renderResults = function() {
           <div style="height:100%;width:0%;background:${color};border-radius:3px;transition:width 1.1s cubic-bezier(0.22,1,0.36,1)" data-w="${scoreVal}%"></div>
         </div>
         <div style="font-size:13px;color:var(--ink-muted);min-width:36px;text-align:right;font-variant-numeric:tabular-nums;font-weight:400">${scoreVal}%</div>
-        <div style="font-size:11px;color:var(--ink-faint);min-width:48px;text-align:right;font-weight:300;">Inspect 🔍</div>
+        <div style="font-size:11px;color:var(--ink-faint);min-width:48px;text-align:right;font-weight:300;">${inspectLabel}</div>
       `;
       row.onmouseenter = () => { row.style.background = 'var(--parchment-warm)'; };
       row.onmouseleave = () => { row.style.background = 'transparent'; };
@@ -583,7 +702,66 @@ window.showBiasFaceoff = function(topic) {
     }
   });
 
-  let html = `<div style="font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink);margin-bottom:16px;">🔍 Cognitive Framing Face-off: ${topic}</div>`;
+  const lang = window.currentLang || 'en';
+
+  let faceoffHeader = 'Cognitive Framing Face-off';
+  let comparisonLabel = 'Pair Comparison';
+  let shiftDetected = 'Framing Shift Detected';
+  let consistentStance = 'Consistent Stance';
+  let framePro = 'Support / Autonomy-framed';
+  let frameCon = 'Critical / Consequence-framed';
+  let frameNeutral = 'Neutral Framing';
+  let yourChoice = 'Your choice';
+  let skippedText = 'Skipped';
+  let noPairsText = 'No framing contrasts completed for this topic yet.';
+
+  if (lang === 'de') {
+    faceoffHeader = 'Framing-Vergleich';
+    comparisonLabel = 'Paarweiser Vergleich';
+    shiftDetected = 'Formulierungs-Effekt';
+    consistentStance = 'Konsistente Haltung';
+    framePro = 'Positiv / Gewinne-fokussiert';
+    frameCon = 'Kritisch / Verlust-fokussiert';
+    frameNeutral = 'Neutrale Formulierung';
+    yourChoice = 'Deine Antwort';
+    skippedText = 'Übersprungen';
+    noPairsText = 'Für dieses Thema wurden noch keine Framing-Vergleiche durchgeführt.';
+  } else if (lang === 'fr') {
+    faceoffHeader = 'Comparatif d\'effets de cadrage';
+    comparisonLabel = 'Comparaison de paires';
+    shiftDetected = 'Sensibilité au cadrage';
+    consistentStance = 'Position cohérente';
+    framePro = 'Cadrage positif (Autonomie)';
+    frameCon = 'Cadrage négatif (Conséquences)';
+    frameNeutral = 'Cadrage neutre';
+    yourChoice = 'Votre choix';
+    skippedText = 'Ignoré';
+    noPairsText = 'Aucune comparaison de cadrage effectuée pour ce sujet.';
+  } else if (lang === 'nl') {
+    faceoffHeader = 'Beïnvloedingsanalyse';
+    comparisonLabel = 'Paarvergelijking';
+    shiftDetected = 'Formuleringseffect';
+    consistentStance = 'Consistente houding';
+    framePro = 'Positief geformuleerd';
+    frameCon = 'Kritisch geformuleerd';
+    frameNeutral = 'Neutrale formulering';
+    yourChoice = 'Jouw keuze';
+    skippedText = 'Overgeslagen';
+    noPairsText = 'Nog geen formuleringseffecten getest voor dit onderwerp.';
+  } else if (lang === 'sv') {
+    faceoffHeader = 'Formuleringsjämförelse';
+    comparisonLabel = 'Parjämförelse';
+    shiftDetected = 'Formuleringseffekt';
+    consistentStance = 'Konsekvent ståndpunkt';
+    framePro = 'Positivt formulerad';
+    frameCon = 'Kritiskt formulerad';
+    frameNeutral = 'Neutral formulering';
+    yourChoice = 'Ditt val';
+    skippedText = 'Överhoppad';
+    noPairsText = 'Inga parjämförelser gjorda för detta ämne än.';
+  }
+
+  let html = `<div style="font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink);margin-bottom:16px;">🔍 ${faceoffHeader}: ${topic}</div>`;
   let hasPairs = false;
 
   Object.entries(pairs).forEach(([pairId, qsInPair]) => {
@@ -616,21 +794,23 @@ window.showBiasFaceoff = function(topic) {
     html += `
       <div style="background:var(--parchment);border:1px solid ${isInconsistent ? 'var(--amber)' : 'var(--border-soft)'};border-left:4px solid ${isInconsistent ? 'var(--amber)' : 'var(--green)'};border-radius:6px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.02);">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-          <span style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-muted);">Pair Comparison: ${pairId.toUpperCase()}</span>
+          <span style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-muted);">${comparisonLabel}: ${pairId.toUpperCase()}</span>
           <span style="font-size:10px;font-weight:500;padding:4px 8px;border-radius:3px;${isInconsistent ? 'background:var(--amber-soft);color:var(--amber);' : 'background:var(--green-soft);color:var(--green);'}">
-            ${isInconsistent ? 'Framing Shift Detected' : 'Consistent Stance'}
+            ${isInconsistent ? shiftDetected : consistentStance}
           </span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
     `;
 
-    qsInPair.forEach((q, idx) => {
+    qsInPair.forEach((rawQ, idx) => {
+      const q = (typeof window.getQuestion === 'function') ? window.getQuestion(rawQ) : rawQ;
       const ans = pairAnswers.find(a => a.id === q.id);
       const isPro = q.fr === 'pro';
       const isCon = q.fr === 'con';
       
       const frameColor = isPro ? 'var(--navy)' : isCon ? 'var(--red)' : 'var(--ink-muted)';
-      const frameText = isPro ? 'Support / Autonomy-framed' : isCon ? 'Critical / Consequence-framed' : 'Neutral Framing';
+      const frameText = isPro ? framePro : isCon ? frameCon : frameNeutral;
+      const ansText = ans ? (q.opts[ans.pick] ? q.opts[ans.pick].t : ans.t) : skippedText;
 
       html += `
         <div style="display:flex;flex-direction:column;justify-content:space-between;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px;">
@@ -643,24 +823,44 @@ window.showBiasFaceoff = function(topic) {
             <div style="font-size:14px;color:var(--ink);font-weight:400;margin-bottom:12px;line-height:1.4;">${q.q}</div>
           </div>
           <div style="background:var(--parchment-warm);border-top:1px solid var(--border-soft);padding:10px 12px;margin:-16px -16px -16px;margin-top:16px;border-radius:0 0 6px 6px;">
-            <div style="font-size:8px;color:var(--ink-faint);text-transform:uppercase;margin-bottom:2px;font-weight:500;">Your choice</div>
-            <div style="font-size:12px;color:var(--ink-soft);font-weight:400;">${ans ? ans.t : 'Skipped'}</div>
+            <div style="font-size:8px;color:var(--ink-faint);text-transform:uppercase;margin-bottom:2px;font-weight:500;">${yourChoice}</div>
+            <div style="font-size:12px;color:var(--ink-soft);font-weight:400;">${ansText}</div>
           </div>
         </div>
       `;
     });
 
+    let insightDe = isInconsistent
+      ? `💡 <strong>Kognitive Analyse:</strong> Die Formulierung oder Kontextdetails dieser Fragen haben deine Perspektive verschoben. Deine Wahl änderte sich je nachdem, ob ein positiver Aspekt oder negative Konsequenzen im Fokus standen. Dies deutet darauf hin, dass deine Überzeugungen in diesem Bereich kontextabhängig sind.`
+      : `✅ <strong>Kognitive Analyse:</strong> Deine Werte blieben fest. Ob positive Formulierung oder kritische Betrachtung, du hast identische Positionen beibehalten. Dies beweist hohe logische Konsistenz und Unempfindlichkeit gegenüber sprachlichen Framing-Effekten.`;
+
+    let insightFr = isInconsistent
+      ? `💡 <strong>Analyse cognitive:</strong> Les mots ou les détails de scénarios dans ces questions ont réussi à décaler votre point de vue. Votre choix a changé selon le cadrage. Cela suggère que vos convictions dans ce domaine dépendent fortement du contexte.`
+      : `✅ <strong>Analyse cognitive:</strong> Vos valeurs sont restées fermes. Quel que soit le cadrage, vous avez maintenu des positions idéologiques identiques. Cela démontre une cohérence interne élevée.`;
+
+    let insightNl = isInconsistent
+      ? `💡 <strong>Cognitieve analyse:</strong> De bewoording of scenario-details in deze vragen hebben je perspectief verschoven. Je keuze veranderde afhankelijk van de formulering. Dit suggereert dat je overtuigingen op dit gebied contextgevoelig zijn.`
+      : `✅ <strong>Cognitieve analyse:</strong> Je waarden bleven standvastig. Ongeacht het type formulering behield je identieke posities. Dit getuigt van een hoge interne logische consistentie.`;
+
+    let insightSv = isInconsistent
+      ? `💡 <strong>Kognitiv analys:</strong> Formuleringen eller scenariodetaljerna i dessa frågor lyckades förskjuta ditt perspektiv. Ditt val ändrades beroende på vinklingen. Detta tyder på att dina åsikter här är kontextberoende.`
+      : `✅ <strong>Kognitiv analys:</strong> Dina värderingar stod fast. Oavsett om vinklingen var positiv eller kritisk behöll du identiska ståndpunkter. Detta visar på hög logisk konsekvens.`;
+
+    let insightEn = isInconsistent
+      ? `💡 <strong>Cognitive Analysis:</strong> The emotional wording or scenario details in these questions successfully shifted your perspective. By swapping between an autonomous support frame and a systemic consequence frame, your choice was altered. This suggests that your beliefs in this area are contextually dependent rather than absolute, responding strongly to whatever specific narrative lens is highlighted.`
+      : `✅ <strong>Cognitive Analysis:</strong> Your values held firm. Whether presented with positive support framing or critical framing, you maintained identical ideological positions. This demonstrates high internal logical consistency and resistance to rhetorical framing.`;
+
+    const dynamicAnalysis = lang === 'de' ? insightDe
+                          : lang === 'fr' ? insightFr
+                          : lang === 'nl' ? insightNl
+                          : lang === 'sv' ? insightSv
+                          : insightEn;
+
     html += `
         </div>
-        ${isInconsistent ? `
-          <div style="font-size:12px;color:var(--amber);margin-top:14px;padding-top:10px;border-top:1px dashed var(--border-soft);font-weight:300;line-height:1.5;">
-            💡 <strong>Cognitive Analysis:</strong> The emotional wording or scenario details in these questions successfully shifted your perspective. By swapping between an autonomous support frame and a systemic consequence frame, your choice was altered. This suggests that your beliefs in this area are contextually dependent rather than absolute, responding strongly to whatever specific narrative lens is highlighted.
-          </div>
-        ` : `
-          <div style="font-size:12px;color:var(--green);margin-top:14px;padding-top:10px;border-top:1px dashed var(--border-soft);font-weight:300;line-height:1.5;">
-            ✅ <strong>Cognitive Analysis:</strong> Your values held firm. Whether presented with positive support framing or critical framing, you maintained identical ideological positions. This demonstrates high internal logical consistency and resistance to rhetorical framing.
-          </div>
-        `}
+        <div style="font-size:12px;margin-top:14px;padding-top:10px;border-top:1px dashed var(--border-soft);font-weight:300;line-height:1.5;">
+          ${dynamicAnalysis}
+        </div>
       </div>
     `;
   });
@@ -840,8 +1040,10 @@ window.copyLink = function() {
 window.buildDisagreements = function(topParty) {
   const disagree = [];
   answers.forEach(a => {
-    const q = qs.find(q => q.id === a.id);
-    if (!q) return;
+    const rawQ = qs.find(q => q.id === a.id);
+    if (!rawQ) return;
+    const q = (typeof window.getQuestion === 'function') ? window.getQuestion(rawQ) : rawQ;
+    
     // Find best option for topParty
     let bestScore = -Infinity, bestOpt = null;
     q.opts.forEach(o => {
@@ -850,11 +1052,11 @@ window.buildDisagreements = function(topParty) {
     });
     const userScore = a[topParty] || 0;
     const gap = bestScore - userScore;
-    if (gap >= 2 && bestOpt && bestOpt.t !== a.t) {
+    if (gap >= 2 && bestOpt && bestOpt.t !== (q.opts[a.pick] ? q.opts[a.pick].t : a.t)) {
       disagree.push({
         topic: q.nl,
         question: q.q,
-        userAnswer: a.t,
+        userAnswer: q.opts[a.pick] ? q.opts[a.pick].t : a.t,
         partyAnswer: bestOpt.t,
         gap
       });
@@ -870,6 +1072,36 @@ window.renderDisagreements = function(topParty, partyName, topPct) {
   const items = window.buildDisagreements(topParty);
   if (!items.length) { el.style.display = 'none'; return; }
   el.style.display = 'block';
+  
+  const lang = window.currentLang || 'en';
+  
+  const labelEl = el.querySelector('div[style*="letter-spacing:2px"]');
+  if (labelEl) {
+    if (lang === 'de') {
+      labelEl.innerHTML = `Hier weichst du von der <span id="disagree-party-name">${partyName}</span> ab`;
+    } else if (lang === 'fr') {
+      labelEl.innerHTML = `Où vous différez de <span id="disagree-party-name">${partyName}</span>`;
+    } else if (lang === 'nl') {
+      labelEl.innerHTML = `Waar je afwijkt van <span id="disagree-party-name">${partyName}</span>`;
+    } else if (lang === 'sv') {
+      labelEl.innerHTML = `Där du inte håller med <span id="disagree-party-name">${partyName}</span>`;
+    } else {
+      labelEl.innerHTML = `Where you disagree with <span id="disagree-party-name">${partyName}</span>`;
+    }
+  }
+
+  const yourAnswerHeader = lang === 'de' ? 'Deine Antwort'
+                         : lang === 'fr' ? 'Votre choix'
+                         : lang === 'nl' ? 'Jouw antwoord'
+                         : lang === 'sv' ? 'Ditt svar'
+                         : 'Your answer';
+
+  const partyPositionHeader = lang === 'de' ? `Position der ${partyName}`
+                            : lang === 'fr' ? `Position de ${partyName}`
+                            : lang === 'nl' ? `Standpunt ${partyName}`
+                            : lang === 'sv' ? `${partyName} ståndpunkt`
+                            : `${partyName} position`;
+
   const list = document.getElementById('disagree-list');
   list.innerHTML = '';
   items.forEach(item => {
@@ -880,11 +1112,11 @@ window.renderDisagreements = function(topParty, partyName, topPct) {
       <div style="font-size:14px;color:var(--ink);font-weight:400;margin-bottom:14px;font-family:'Cormorant Garamond',serif;font-size:16px">${item.question}</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
         <div style="padding:12px 14px;background:var(--parchment-warm);border-radius:6px;border-left:3px solid #B0B5BC">
-          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px">Your answer</div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px">${yourAnswerHeader}</div>
           <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">${item.userAnswer}</div>
         </div>
         <div style="padding:12px 14px;background:var(--navy-soft);border-radius:6px;border-left:3px solid #2A5DB0">
-          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:6px">${partyName} position</div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:6px">${partyPositionHeader}</div>
           <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">${item.partyAnswer}</div>
         </div>
       </div>`;

@@ -40,7 +40,7 @@
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <div style="display:flex;align-items:center;gap:12px"><button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">Svenska</button><div class="flag-badge"><span class="flag">🇸🇪</span> <span id="lang-label">Sweden</span></div></div>
+    <div style="display:flex;align-items:center;gap:12px"><button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">English</button><div class="flag-badge"><span class="flag">🇸🇪</span> <span id="lang-label">Sverige</span></div></div>
   </nav>
   <div class="hero">
     <div class="hero-bg">SE</div>
@@ -532,27 +532,87 @@ function score(){
   return{eScore,gScore,pScores};
 }
 
-const PMETA={
-  s:{name:'Socialdemokraterna',color:'#CC0000',desc:'Your answers most closely match the Social Democrats. You support a strong welfare state, workers rights, and public services funded by progressive taxation.'},
-  m:{name:'Moderaterna',color:'#52BDEC',desc:'Your answers most closely match the Moderates. You favour lower taxes, law and order, market solutions to public services, and fiscal discipline.'},
-  sd:{name:'Sverigedemokraterna',color:'#006AA7',desc:'Your answers most closely match the Sweden Democrats. You support sharp cuts to immigration, tougher law enforcement, and a culturally defined national identity.'},
-  c:{name:'Centerpartiet',color:'#009933',desc:'Your answers most closely match the Centre Party. You favour rural Sweden, a liberal market economy, open immigration policy, and EU integration.'},
-  v:{name:'Vansterpartiet',color:'#DA2213',desc:'Your answers most closely match the Left Party. You support wealth redistribution, feminist policy, opposing privatisation, and a strong public sector.'},
-  mp:{name:'Miljopartiet',color:'#53A045',desc:'Your answers most closely match the Green Party. You prioritise climate action, biodiversity, open borders, and progressive social policy.'},
-  l:{name:'Liberalerna',color:'#6EBBF6',desc:'Your answers most closely match the Liberals. You support strong public education, individual rights, EU federalism, and classical liberal values.'},
-  kd:{name:'Kristdemokraterna',color:'#231977',desc:'Your answers most closely match the Christian Democrats. You value family policy, welfare reform, traditional social values, and Christian democratic principles.'}
-};
+const PMETA = {
+  "s": {
+    "name": "Socialdemokraterna",
+    "color": "#CC0000",
+    "desc": {
+      "en": "Your answers most closely match the Social Democrats. You support a strong welfare state, workers rights, and public services funded by progressive taxation.",
+      "sv": "Dina svar stämmer bäst överens med Socialdemokraternas program. Du stöder en stark välfärdsstat, arbetstagares rättigheter och offentliga tjänster finansierade av progressiv skatt."
+    }
+  },
+  "m": {
+    "name": "Moderaterna",
+    "color": "#52BDEC",
+    "desc": {
+      "en": "Your answers most closely match the Moderates. You favour lower taxes, law and order, market solutions to public services, and fiscal discipline.",
+      "sv": "Dina svar stämmer bäst överens med Moderaternas program. Du föredrar lägre skatter, lag och ordning, marknadslösningar för offentliga tjänster och finanspolitisk disciplin."
+    }
+  },
+  "sd": {
+    "name": "Sverigedemokraterna",
+    "color": "#006AA7",
+    "desc": {
+      "en": "Your answers most closely match the Sweden Democrats. You support sharp cuts to immigration, tougher law enforcement, and a culturally defined national identity.",
+      "sv": "Dina svar stämmer bäst överens med Sverigedemokraternas program. Du stöder kraftiga nedskärningar av invandringen, hårdare brottsbekämpning och en kulturellt definierad nationell identitet."
+    }
+  },
+  "c": {
+    "name": "Centerpartiet",
+    "color": "#009933",
+    "desc": {
+      "en": "Your answers most closely match the Centre Party. You favour rural Sweden, a liberal market economy, open immigration policy, and EU integration.",
+      "sv": "Dina svar stämmer bäst överens med Centerpartiets program. Du värnar om landsbygden, en liberal marknadsekonomi, en öppen invandringspolitik och EU-integration."
+    }
+  },
+  "v": {
+    "name": "Vansterpartiet",
+    "color": "#DA2213",
+    "desc": {
+      "en": "Your answers most closely match the Left Party. You support wealth redistribution, feminist policy, opposing privatisation, and a strong public sector.",
+      "sv": "Dina svar stämmer bäst överens med Vänsterpartiets program. Du stöder omfördelning av rikedom, feministisk politik, motstånd mot privatiseringar och en stark offentlig sektor."
+    }
+  },
+  "mp": {
+    "name": "Miljopartiet",
+    "color": "#53A045",
+    "desc": {
+      "en": "Your answers most closely match the Green Party. You prioritise climate action, biodiversity, open borders, and progressive social policy.",
+      "sv": "Dina svar stämmer bäst överens med Miljöpartiets program. Du prioriterar klimatåtgärder, biologisk mångfald, öppna gränser och en progressiv socialpolitik."
+    }
+  },
+  "l": {
+    "name": "Liberalerna",
+    "color": "#6EBBF6",
+    "desc": {
+      "en": "Your answers most closely match the Liberals. You support strong public education, individual rights, EU federalism, and classical liberal values.",
+      "sv": "Dina svar stämmer bäst överens med Liberalernas program. Du stöder en stark offentlig skola, individuella rättigheter, EU-federalism och klassiska liberala värden."
+    }
+  },
+  "kd": {
+    "name": "Kristdemokraterna",
+    "color": "#231977",
+    "desc": {
+      "en": "Your answers most closely match the Christian Democrats. You value family policy, welfare reform, traditional social values, and Christian democratic principles.",
+      "sv": "Dina svar stämmer bäst överens med Kristdemokraternas program. Du värdesätter familjepolitik, välfärdsreformer, traditionella sociala värden och kristdemokratiska principer."
+    }
+  }
+}};
 
 function renderResults(){
   const{eScore,gScore,pScores}=score();
   const ranked=Object.entries(pScores).sort((a,b)=>b[1]-a[1]);
   const topKey=ranked[0][0];const meta=PMETA[topKey];
-  document.getElementById('r-top-party').textContent=meta.name;
-  document.getElementById('r-top-desc').textContent=meta.desc;
+  const topPartyName = meta.name;
+  const topPartyDesc = (typeof meta.desc === 'object') ? meta.desc[currentLang] : meta.desc;
+  document.getElementById('r-top-party').textContent=topPartyName;
+  document.getElementById('r-top-desc').textContent=topPartyDesc;
   const c=document.getElementById('party-results');c.innerHTML='';
   ranked.forEach(([party,pct],i)=>{
     const m=PMETA[party];const row=document.createElement('div');row.className='party-row'+(i===0?' top-match':'');
-    row.innerHTML=`<div class="party-row-rank">${i+1}</div><div class="party-row-info"><div class="party-row-name">${m.name}</div><div class="party-row-sub">${pct}% alignment</div></div><div class="party-row-bar-wrap"><div class="party-row-bar" style="width:0%;background:${m.color}" data-w="${pct}%"></div></div><div class="party-row-pct">${pct}%</div>`;
+    const mName = m.name;
+    const alignmentText = currentLang === 'sv' ? 'överensstämmelse' : 'alignment';
+    row.innerHTML=`<div class="party-row-rank">${i+1}</div><div class="party-row-info"><div class="party-row-name">${mName}</div><div class="party-row-sub">${pct}% ${alignmentText}</div></div><div class="party-row-bar-wrap"><div class="party-row-bar" style="width:0%;background:${m.color}" data-w="${pct}%"></div></div><div class="party-row-pct">${pct}%</div>`;
     c.appendChild(row);
   });
   const dotX=(150+eScore*132).toFixed(1);const dotY=(150-gScore*132).toFixed(1);
@@ -561,14 +621,30 @@ function renderResults(){
   setTimeout(()=>{
     document.getElementById('ax-econ').style.left=(((eScore+1)/2)*100).toFixed(1)+'%';
     document.getElementById('ax-gov').style.left=(((gScore+1)/2)*100).toFixed(1)+'%';
-    document.querySelectorAll('.party-row-bar[data-w]').forEach(el=>{el.style.width=el.dataset.w;
-  renderDisagreements(topKey, meta.name, ranked[0][1]);
-  document.getElementById('disagree-party-name').textContent = meta.name;
-});
+    document.querySelectorAll('.party-row-bar[data-w]').forEach(el=>{el.style.width=el.dataset.w;});
+    renderDisagreements(topKey, topPartyName, ranked[0][1]);
+    document.getElementById('disagree-party-name').textContent = topPartyName;
   },200);
   const gap=ranked[0][1]-ranked[1][1];
-  const gapText=gap<8?`Only ${gap} points separates you from ${PMETA[ranked[1][0]].name}. Your views span both traditions.`:gap<20?`You also align with ${PMETA[ranked[1][0]].name} at ${ranked[1][1]}%.`:`Your alignment with ${meta.name} is clear, ${gap} points ahead of ${PMETA[ranked[1][0]].name}.`;
-  document.getElementById('r-insight').innerHTML=`<p style="margin-bottom:14px">${meta.desc}</p><p>${gapText}</p>`;
+  const isEn = currentLang === 'en';
+  const gapText = isEn
+    ? (gap < 8
+      ? `Only ${gap} points separates you from ${PMETA[ranked[1][0]].name}. Your views span both traditions.`
+      : gap < 20
+        ? `You also align with ${PMETA[ranked[1][0]].name} at ${ranked[1][1]}%.`
+        : `Your alignment with ${topPartyName} is clear, ${gap} points ahead of ${PMETA[ranked[1][0]].name}.`)
+    : (gap < 8
+      ? `Endast ${gap} procentenheter skiljer dig från ${PMETA[ranked[1][0]].name}. Dina åsikter spänner över båda traditionerna.`
+      : gap < 20
+        ? `Du ligger även nära ${PMETA[ranked[1][0]].name} på ${ranked[1][1]}%.`
+        : `Din koppling till ${topPartyName} är tydlig, med ${gap} procentenheter mer än för ${PMETA[ranked[1][0]].name}.`);
+
+  const platformInsightHeader = isEn ? 'Platform Insight' : 'Partiprofil Insikt';
+  document.getElementById('r-insight').innerHTML=`
+    <p style="margin-bottom:14px; font-weight:500; color:var(--ink)">${topPartyName} ${platformInsightHeader}</p>
+    <p style="margin-bottom:14px">${topPartyDesc}</p>
+    <p style="font-weight:300; line-height:1.6; color:var(--ink-soft);">${gapText}</p>
+  `;
 }
 function goCalc(){goTo('page-calc');setTimeout(()=>{renderResults();goTo('page-results');},1800);}
 async function saveResults(){
@@ -730,17 +806,43 @@ function renderDisagreements(topParty, partyName, topPct) {
   items.forEach(item => {
     const card = document.createElement('div');
     card.style.cssText = 'border:1px solid var(--border-soft);border-radius:8px;padding:18px 22px;background:var(--white);margin-bottom:12px;';
+    const topicText = currentLang === 'sv' ? (
+      item.topic === 'Immigration' ? 'Invandring' :
+      item.topic === 'Crime and justice' ? 'Brott & Straff' :
+      item.topic === 'Welfare' ? 'Välfärd' :
+      item.topic === 'Healthcare' ? 'Sjukvård' :
+      item.topic === 'Education' ? 'Skola' :
+      item.topic === 'Taxes' ? 'Skatter' :
+      item.topic === 'Climate and energy' ? 'Klimat & Energi' :
+      item.topic === 'Defense' ? 'Försvar' :
+      item.topic === 'Housing' ? 'Bostäder' :
+      item.topic === 'Labor' ? 'Arbetsmarknad' :
+      item.topic === 'European Union' ? 'Europeiska Unionen' :
+      item.topic === 'Social values' ? 'Sociala värderingar' :
+      item.topic === 'State role' ? 'Statens roll' :
+      item.topic === 'Drug policy' ? 'Narkotikapolitik' :
+      item.topic === 'Media and democracy' ? 'Medier & Demokrati' :
+      item.topic === 'National identity' ? 'Nationell identitet' :
+      item.topic === 'Gängvåld och brott' ? 'Gängvåld & Brott' :
+      item.topic === 'Sjukvård och välfärd' ? 'Sjukvård & Välfärd' :
+      item.topic === 'Bostäder' ? 'Bostäder' :
+      item.topic === 'National and cultural identity' ? 'Nationell identitet' :
+      item.topic
+    ) : item.topic;
+    const yourAnswerLabel = currentLang === 'sv' ? 'Ditt svar' : 'Your answer';
+    const partyPositionLabel = currentLang === 'sv' ? `${partyName}s ståndpunkt` : `${partyName} position`;
+
     card.innerHTML = `
-      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px">${item.topic}</div>
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px">${topicText}</div>
       <div style="font-size:14px;color:var(--ink);font-weight:400;margin-bottom:14px;font-family:'Cormorant Garamond',serif;font-size:16px">${item.question}</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
         <div style="padding:12px 14px;background:var(--parchment-warm);border-radius:6px;border-left:3px solid #B0B5BC">
-          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px">Your answer</div>
-          <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">${item.userAnswer}</div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px">${yourAnswerLabel}</div>
+          <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">   ${item.userAnswer}</div>
         </div>
         <div style="padding:12px 14px;background:var(--navy-soft);border-radius:6px;border-left:3px solid #2A5DB0">
-          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:6px">${partyName} position</div>
-          <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">${item.partyAnswer}</div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:6px">${partyPositionLabel}</div>
+          <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">   ${item.partyAnswer}</div>
         </div>
       </div>`;
     list.appendChild(card);
@@ -773,7 +875,7 @@ function buildDisagreements(topParty) {
 }
 
 // ── SWEDISH LANGUAGE SUPPORT ────────────────────────────────────────────
-let currentLang = 'en';
+let currentLang = 'sv';
 
 function toggleLang() {
   currentLang = currentLang === 'en' ? 'sv' : 'en';
@@ -787,28 +889,177 @@ function t(en, sv) { return currentLang === 'sv' ? sv : en; }
 
 function applyLang() {
   const isEn = currentLang === 'en';
+  
+  // Translate Hero Title & Sub
   const heroTitle = document.querySelector('.hero h1');
   if (heroTitle) heroTitle.innerHTML = isEn
     ? 'Where do you stand in <em>Swedish</em> politics?'
     : 'Var står du i <em>svensk</em> politik?';
+    
   const heroSub = document.querySelector('.hero-sub');
   if (heroSub) heroSub.textContent = isEn
     ? '47 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties.'
     : '47 scenariobaserade frågor om det som definierar Sverige just nu. Brottslighet, migration, välfärd, NATO, bostäder och mer. Se din likhet med alla åtta riksdagspartier.';
+    
   const startBtn = document.querySelector('.btn-primary');
   if (startBtn) startBtn.textContent = isEn ? 'Start the test' : 'Starta testet';
+  
   const skipBtn = document.querySelector('.btn-skip');
   if (skipBtn) skipBtn.textContent = isEn ? 'Skip' : 'Hoppa över';
+  
   const backBtn = document.getElementById('btn-back');
   if (backBtn) backBtn.textContent = isEn ? 'Back' : 'Tillbaka';
+  
   const nextBtn = document.querySelector('.q-foot .btn-primary');
   if (nextBtn) nextBtn.textContent = isEn ? 'Next' : 'Nästa';
-  const demoTitle = document.querySelector('.page-title');
+  
+  const demoTitle = document.querySelector('#page-demo .page-title');
   if (demoTitle) demoTitle.textContent = isEn ? 'Almost there.' : 'Snart klart.';
-  const demoSub = document.querySelector('.page-sub');
-  if (demoSub) demoSub.textContent = isEn ? 'A few quick questions. Everything is anonymous.' : 'Några snabba frågor. Allt är genomskinligt.';
+  
+  const demoSub = document.querySelector('#page-demo .page-sub');
+  if (demoSub) demoSub.textContent = isEn 
+    ? 'A few quick questions. Everything is anonymous.' 
+    : 'Några snabba frågor. Allt är anonymt.';
+    
   const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
   if (seeResultsBtn) seeResultsBtn.textContent = isEn ? 'See my results' : 'Visa mina resultat';
+
+  // Demographics Field Labels
+  const lblAge = document.getElementById('d-age')?.previousElementSibling;
+  if (lblAge) lblAge.textContent = isEn ? 'Age' : 'Ålder';
+  
+  const lblCounty = document.getElementById('d-county')?.previousElementSibling;
+  if (lblCounty) lblCounty.innerHTML = isEn ? 'County <span>(optional)</span>' : 'Län <span>(valfritt)</span>';
+  
+  const lblParty = document.getElementById('d-party')?.previousElementSibling;
+  if (lblParty) lblParty.innerHTML = isEn ? 'How do you currently identify? <span>(optional)</span>' : 'Vilket parti identifierar du dig med? <span>(valfritt)</span>';
+  
+  const lblGender = document.getElementById('d-gender')?.previousElementSibling;
+  if (lblGender) lblGender.innerHTML = isEn ? 'Gender <span>(optional)</span>' : 'Kön <span>(valfritt)</span>';
+  
+  const lblNat = document.getElementById('d-nationality')?.previousElementSibling;
+  if (lblNat) lblNat.innerHTML = isEn ? 'Nationality <span>(optional)</span>' : 'Nationalitet <span>(valfritt)</span>';
+
+  // Demographics Select Options
+  const optSelect = isEn ? 'Select...' : 'Välj...';
+  const optPreferNot = isEn ? 'Prefer not to say' : 'Vill ej uppge';
+
+  // Update options inside selects
+  const ageSelect = document.getElementById('d-age');
+  if (ageSelect) {
+    ageSelect.options[0].textContent = optSelect;
+    const ageTexts = isEn 
+      ? ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 or older']
+      : ['Under 18', '18 till 24', '25 till 34', '35 till 44', '45 till 54', '55 till 64', '65 eller äldre'];
+    for (let i = 1; i < ageSelect.options.length; i++) {
+      if (ageTexts[i-1]) ageSelect.options[i].textContent = ageTexts[i-1];
+    }
+  }
+
+  const genderSelect = document.getElementById('d-gender');
+  if (genderSelect) {
+    genderSelect.options[0].textContent = optSelect;
+    const genTexts = isEn 
+      ? ['Male', 'Female', 'Other', 'Prefer not to say']
+      : ['Man', 'Kvinna', 'Annat', 'Vill ej uppge'];
+    for (let i = 1; i < genderSelect.options.length; i++) {
+      if (genTexts[i-1]) genderSelect.options[i].textContent = genTexts[i-1];
+    }
+  }
+
+  const partySelect = document.getElementById('d-party');
+  if (partySelect) {
+    partySelect.options[0].textContent = optPreferNot;
+    const optNone = partySelect.options[partySelect.options.length - 2];
+    if (optNone) optNone.textContent = isEn ? 'None' : 'Inget';
+    const lastOpt = partySelect.options[partySelect.options.length - 1];
+    if (lastOpt) lastOpt.textContent = isEn ? 'Other' : 'Annat';
+  }
+
+  const countySelect = document.getElementById('d-county');
+  if (countySelect) countySelect.options[0].textContent = optSelect;
+
+  const natSelect = document.getElementById('d-nationality');
+  if (natSelect) {
+    natSelect.options[0].textContent = optSelect;
+    const natNames = {
+      'United States': isEn ? 'United States' : 'USA',
+      'United Kingdom': isEn ? 'United Kingdom' : 'Storbritannien',
+      'Canada': isEn ? 'Canada' : 'Kanada',
+      'Australia': isEn ? 'Australia' : 'Australien',
+      'Sweden': isEn ? 'Sweden' : 'Sverige',
+      'Germany': isEn ? 'Germany' : 'Tyskland',
+      'France': isEn ? 'France' : 'Frankrike',
+      'Ireland': isEn ? 'Ireland' : 'Irland',
+      'Netherlands': isEn ? 'Netherlands' : 'Nederländerna',
+      'Other': isEn ? 'Other' : 'Annat'
+    };
+    for (let i = 1; i < natSelect.options.length; i++) {
+      const opt = natSelect.options[i];
+      const enVal = opt.getAttribute('data-en') || opt.value || opt.textContent;
+      if (!opt.getAttribute('data-en')) opt.setAttribute('data-en', enVal);
+      if (natNames[enVal]) opt.textContent = natNames[enVal];
+    }
+  }
+
+  // Demographics Note and Consent
+  const demoNote = document.querySelector('.demo-note');
+  if (demoNote) demoNote.textContent = isEn 
+    ? 'This is never linked to your answers. It helps us understand who takes the test.' 
+    : 'Detta kopplas aldrig till dina svar. Det hjälper oss att förstå vilka som gör testet.';
+  
+  const lblConsent = document.querySelector('label[for="d-consent"]');
+  if (lblConsent) {
+    if (isEn) {
+      lblConsent.innerHTML = '<strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.';
+    } else {
+      lblConsent.innerHTML = '<strong>Samtycke till forskning:</strong> Jag tillåter CoreOpinion att spara mina anonyma svar och demografi för forskning, statistik och offentliga opinionsmätningar.';
+    }
+  }
+
+  // Calculating page
+  const calcTitle = document.querySelector('.calc-h');
+  if (calcTitle) calcTitle.textContent = isEn ? 'Mapping your answers' : 'Analyserar dina svar';
+  
+  const calcSub = document.querySelector('.calc-p');
+  if (calcSub) calcSub.textContent = isEn ? 'This will only take a moment.' : 'Detta tar bara ett ögonblick.';
+
+  // Results Dashboard titles
+  const rEyebrow = document.querySelector('.result-eyebrow');
+  if (rEyebrow) rEyebrow.textContent = isEn 
+    ? 'Your Sweden political alignment' 
+    : 'Din politiska överensstämmelse i Sverige';
+
+  // Disagreements header
+  const disTitle = document.querySelector('#disagree-section div[style*="letter-spacing:2px"]');
+  if (disTitle) {
+    const pName = document.getElementById('disagree-party-name')?.textContent || '';
+    disTitle.innerHTML = isEn 
+      ? `Where you disagree with <span id="disagree-party-name">${pName}</span>`
+      : `Där du inte håller med <span id="disagree-party-name">${pName}</span>`;
+  }
+
+  // Save Panel titles
+  const saveTitle = document.querySelector('.save-title');
+  if (saveTitle) saveTitle.textContent = isEn ? 'Save your results' : 'Spara dina resultat';
+  
+  const saveDesc = document.querySelector('.save-desc');
+  if (saveDesc) saveDesc.textContent = isEn 
+    ? 'Enter your email and we will send you a link to these results. Never shared.' 
+    : 'Ange din e-post så skickar vi en länk till dina resultat. Delas aldrig.';
+    
+  const sendBtn = document.querySelector('.save-row .btn-primary');
+  if (sendBtn) sendBtn.textContent = isEn ? 'Send results' : 'Skicka resultat';
+
+  // Action Buttons
+  const copyBtn = document.querySelector('.share-row button:nth-child(1)');
+  if (copyBtn) copyBtn.textContent = isEn ? 'Copy results link' : 'Kopiera resultatlänk';
+  
+  const retakeBtn = document.querySelector('.share-row button:nth-child(2)');
+  if (retakeBtn) retakeBtn.textContent = isEn ? 'Retake' : 'Gör om testet';
+  
+  const genBtn = document.querySelector('.share-row a button');
+  if (genBtn) genBtn.textContent = isEn ? 'General test' : 'Allmänt test';
 }
 
 const SE_QUESTIONS = {

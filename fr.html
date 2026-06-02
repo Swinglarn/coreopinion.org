@@ -41,7 +41,13 @@
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <div class="flag-badge"><span class="flag">🇫🇷</span> France</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">English</button>
+      <div class="flag-badge">
+        <span class="flag">🇫🇷</span>
+        <span id="lang-label">France</span>
+      </div>
+    </div>
   </nav>
 
   <div class="hero">
@@ -309,6 +315,614 @@
 </div>
 
 <script>
+let currentLang = 'fr';
+    
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'fr' : 'en';
+  document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'Français' : 'English';
+  document.getElementById('lang-label').textContent = currentLang === 'en' ? 'France' : 'France';
+  
+  // Set in window scope for the engine.js to pick up
+  window.currentLang = currentLang;
+  
+  applyLang();
+  
+  if (document.getElementById('page-test').classList.contains('active')) renderQ();
+}
+
+function t(en, local) { return currentLang === 'en' ? en : local; }
+
+function getQuestion(q) {
+  if (currentLang === 'en') return q;
+  const localQ = LOCAL_QUESTIONS[q.id];
+  if (!localQ) return q;
+  return {
+    ...q,
+    q: localQ.q || q.q,
+    ctx: localQ.ctx || q.ctx,
+    opts: q.opts.map((o, i) => ({
+      ...o,
+      t: (localQ.opts && localQ.opts[i]) ? localQ.opts[i] : o.t
+    }))
+  };
+}
+
+// Bind function to window scope for engine.js integration
+window.getQuestion = getQuestion;
+window.currentLang = currentLang;
+
+function applyLang() {
+  const isEn = currentLang === 'en';
+  
+  // Translate Hero Title & Sub
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) {
+    if (isEn) {
+      heroTitle.innerHTML = "Where do you stand in<br><em>French</em> politics?";
+    } else {
+      heroTitle.innerHTML = "Où vous situez-vous dans la<br>politique <em>française</em>?";
+    }
+  }
+  
+  const heroSub = document.querySelector('.hero-sub');
+  if (heroSub) {
+    if (isEn) {
+      heroSub.textContent = "47 scenario-based questions on the issues defining France right now. Economy, secularism, borders, retirement, and EU. See your alignment across all parties.";
+    } else {
+      heroSub.textContent = "47 questions concrètes basées sur des scénarios réels qui définissent la politique française actuelle. Découvrez votre position sur l\'échiquier et votre alignement avec chaque parti.";
+    }
+  }
+
+  // Start & Control Buttons
+  const startBtn = document.querySelector('.hero-cta .btn-primary');
+  if (startBtn) startBtn.textContent = isEn ? 'Start the test' : "Démarrer le test";
+  
+  const skipBtn = document.querySelector('.btn-skip');
+  if (skipBtn) skipBtn.textContent = isEn ? 'Skip' : "Ignorer";
+  
+  const backBtn = document.getElementById('btn-back');
+  if (backBtn) backBtn.textContent = isEn ? 'Back' : "Retour";
+  
+  const nextBtn = document.querySelector('.q-foot .btn-primary');
+  if (nextBtn) nextBtn.textContent = isEn ? 'Next' : "Suivant";
+
+  // Demographics Titles
+  const demoTitle = document.querySelector('#page-demo .page-title');
+  if (demoTitle) demoTitle.textContent = isEn ? 'Almost there.' : "Presque fini.";
+  
+  const demoSub = document.querySelector('#page-demo .page-sub');
+  if (demoSub) demoSub.textContent = isEn 
+    ? 'A few quick questions before your results. Everything is anonymous.' 
+    : "Quelques questions rapides avant vos résultats. Tout est anonyme.";
+    
+  const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
+  if (seeResultsBtn) seeResultsBtn.textContent = isEn ? 'See my results' : "Voir mes résultats";
+
+  // Demographics Field Labels
+  const lblAge = document.getElementById('d-age')?.previousElementSibling;
+  if (lblAge) lblAge.textContent = isEn ? 'Age' : "Âge";
+  
+  const lblCountry = document.getElementById('d-country')?.previousElementSibling || document.getElementById('d-county')?.previousElementSibling;
+  if (lblCountry) lblCountry.innerHTML = isEn ? 'Region <span>(optional)</span>' : "Région <span>(optionnel)</span>";
+  
+  const lblParty = document.getElementById('d-party')?.previousElementSibling;
+  if (lblParty) lblParty.innerHTML = isEn ? 'How do you currently identify? <span>(optional)</span>' : "Comment vous identifiez-vous ? <span>(optionnel)</span>";
+  
+  const lblGender = document.getElementById('d-gender')?.previousElementSibling;
+  if (lblGender) lblGender.innerHTML = isEn ? 'Gender <span>(optional)</span>' : "Genre <span>(optionnel)</span>";
+  
+  const lblNat = document.getElementById('d-nationality')?.previousElementSibling;
+  if (lblNat) lblNat.innerHTML = isEn ? 'Nationality <span>(optional)</span>' : "Nationalité <span>(optionnel)</span>";
+
+  // Demographics Select Options
+  const optSelect = isEn ? 'Select...' : "Sélectionner...";
+  const optPreferNot = isEn ? 'Prefer not to say' : "Préfère ne pas dire";
+
+  // Update options inside selects
+  const ageSelect = document.getElementById('d-age');
+  if (ageSelect) {
+    ageSelect.options[0].textContent = optSelect;
+    const ageTexts = isEn 
+      ? ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 or older']
+      : ['Moins de 18 ans', '18 à 24 ans', '25 à 34 ans', '35 à 44 ans', '45 à 54 ans', '55 à 64 ans', '65 ans ou plus'];
+    for (let i = 1; i < ageSelect.options.length; i++) {
+      if (ageTexts[i-1]) ageSelect.options[i].textContent = ageTexts[i-1];
+    }
+  }
+
+  const genderSelect = document.getElementById('d-gender');
+  if (genderSelect) {
+    genderSelect.options[0].textContent = optSelect;
+    const genTexts = isEn 
+      ? ['Male', 'Female', 'Other', 'Prefer not to say']
+      : ['Homme', 'Femme', 'Autre', 'Préfère ne pas dire'];
+    for (let i = 1; i < genderSelect.options.length; i++) {
+      if (genTexts[i-1]) genderSelect.options[i].textContent = genTexts[i-1];
+    }
+  }
+
+  const partySelect = document.getElementById('d-party');
+  if (partySelect) {
+    partySelect.options[0].textContent = optPreferNot;
+    const lastOpt = partySelect.options[partySelect.options.length - 1];
+    if (lastOpt) {
+      if (isEn) {
+        lastOpt.textContent = 'Independent / Other';
+      } else {
+        lastOpt.textContent = "Indépendant / Autre";
+      }
+    }
+  }
+
+  const countrySelect = document.getElementById('d-country') || document.getElementById('d-county');
+  if (countrySelect) countrySelect.options[0].textContent = optSelect;
+
+  const natSelect = document.getElementById('d-nationality');
+  if (natSelect) {
+    natSelect.options[0].textContent = optSelect;
+    const natNames = {
+      'United States': isEn ? 'United States' : "États-Unis",
+      'United Kingdom': isEn ? 'United Kingdom' : "Royaume-Uni",
+      'Canada': isEn ? 'Canada' : "Canada",
+      'Australia': isEn ? 'Australia' : "Australie",
+      'Sweden': isEn ? 'Sweden' : "Suède",
+      'Germany': isEn ? 'Germany' : "Allemagne",
+      'France': isEn ? 'France' : "France",
+      'Ireland': isEn ? 'Ireland' : "Irlande",
+      'Netherlands': isEn ? 'Netherlands' : "Pays-Bas",
+      'Other': isEn ? 'Other' : "Autre"
+    };
+    for (let i = 1; i < natSelect.options.length; i++) {
+      const opt = natSelect.options[i];
+      const enVal = opt.getAttribute('data-en') || opt.value || opt.textContent;
+      if (!opt.getAttribute('data-en')) opt.setAttribute('data-en', enVal);
+      if (natNames[enVal]) opt.textContent = natNames[enVal];
+    }
+  }
+
+  // Demographics Note and Consent
+  const demoNote = document.querySelector('.demo-note');
+  if (demoNote) demoNote.textContent = isEn 
+    ? 'This is never linked to your answers. It helps us understand who takes the test.' 
+    : "Ceci n\'est jamais lié à vos réponses. Cela nous aide à comprendre qui passe le test.";
+  
+  const lblConsent = document.querySelector('label[for="d-consent"]');
+  if (lblConsent) {
+    if (isEn) {
+      lblConsent.innerHTML = '<strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.';
+    } else {
+      lblConsent.innerHTML = "<strong>Consentement de recherche :</strong> J\'autorise CoreOpinion à enregistrer mes réponses anonymes et mes données démographiques à des fins de recherche, de statistiques et de tableaux de bord publics.";
+    }
+  }
+
+  // Calculating page
+  const calcTitle = document.querySelector('.calc-h');
+  if (calcTitle) calcTitle.textContent = isEn ? 'Mapping your answers' : "Analyse de vos réponses";
+  
+  const calcSub = document.querySelector('.calc-p');
+  if (calcSub) calcSub.textContent = isEn ? 'This will only take a moment.' : "Cela ne prendra qu\'un instant.";
+
+  // Results Dashboard titles
+  const rEyebrow = document.querySelector('.result-eyebrow');
+  if (rEyebrow) rEyebrow.textContent = isEn 
+    ? 'Your France political alignment' 
+    : "Votre alignement politique en France";
+
+  // Save Panel titles
+  const saveTitle = document.querySelector('.save-title');
+  if (saveTitle) saveTitle.textContent = isEn ? 'Save your results' : "Enregistrer vos résultats";
+  
+  const saveDesc = document.querySelector('.save-desc');
+  if (saveDesc) saveDesc.textContent = isEn 
+    ? 'Enter your email and we will send you a link to these results. Never shared.' 
+    : "Entrez votre e-mail et nous vous enverrons un lien vers ces résultats. Jamais partagé.";
+    
+  const sendBtn = document.querySelector('.save-row .btn-primary');
+  if (sendBtn) sendBtn.textContent = isEn ? 'Send results' : "Envoyer les résultats";
+
+  // Action Buttons
+  const copyBtn = document.querySelector('.share-row button:nth-child(1)');
+  if (copyBtn) copyBtn.textContent = isEn ? 'Copy results link' : "Copier le lien des résultats";
+  
+  const retakeBtn = document.querySelector('.share-row button:nth-child(2)');
+  if (retakeBtn) retakeBtn.textContent = isEn ? 'Retake' : "Recommencer";
+  
+  const genBtn = document.querySelector('.share-row a button');
+  if (genBtn) genBtn.textContent = isEn ? 'General test' : "Test général";
+}
+
+const LOCAL_QUESTIONS = {
+  "hc1": {
+    "q": "Cet homme devrait-il faire faillite ou mourir parce qu'il a perdu son emploi ?",
+    "ctx": "Il a travaillé toute sa vie. A perdu son emploi à 58 ans. A perdu son assurance maladie en même temps. Cancer de stade 3. La facture s'élève à 400 000 dollars.",
+    "opts": [
+      "Non. L'assurance maladie universelle est la seule réponse. Medicare pour tous.",
+      "Non. Élargir les aides publiques et protéger les personnes dans sa situation.",
+      "Le système existant suffit. Il aurait dû conserver sa couverture par ses propres moyens.",
+      "C'est un échec individuel. L'État ne devrait pas gérer la santé."
+    ]
+  },
+  "hc2": {
+    "q": "Un système de santé géré par l'État détruirait l'innovation médicale, réduirait la qualité des soins et entraînerait un rationnement.",
+    "opts": [
+      "Oui. Le marché libre stimule la meilleure innovation en matière de santé.",
+      "Il y a des risques réels, mais des réglementations de base pourraient les prévenir.",
+      "Non. D'autres nations développées paient moitié moins pour de meilleurs résultats avec des systèmes universels."
+    ]
+  },
+  "hc3": {
+    "q": "La dette médicale devrait être traitée différemment de la dette de consommation par la loi, avec des limites strictes sur les intérêts et le recouvrement.",
+    "opts": [
+      "Oui. Personne ne choisit d'être malade. C'est une nécessité, pas un achat de confort.",
+      "Certaines protections ont du sens, mais les créanciers doivent pouvoir recouvrer leurs fonds.",
+      "Non. Les contrats doivent être appliqués de manière égale. Les exceptions nuisent aux marchés du crédit."
+    ]
+  },
+  "gn1": {
+    "q": "La Constitution n'est pas un pacte de suicide. Nous devons interdire les armes d'assaut pour protéger nos enfants.",
+    "ctx": "Depuis Columbine, plus de 350 000 élèves ont été confrontés à la violence armée à l'école. Les exercices d'alerte intrusion font désormais partie de l'enfance.",
+    "opts": [
+      "Oui. Ce sont des armes de guerre qui n'ont rien à faire dans nos rues.",
+      "Ces interdictions sont complexes. Les contrôles d'antécédents et les lois de signalement sont plus efficaces.",
+      "Non. Concentrons-nous sur la santé mentale et la sécurité scolaire. Ne punissons pas les citoyens respectueux des lois."
+    ]
+  },
+  "gn2": {
+    "q": "Interdire des types d'armes spécifiques ne fait que désarmer les citoyens respectueux des lois, les laissant sans défense face aux criminels qui les ignorent.",
+    "opts": [
+      "Oui. Seul un homme bon avec une arme peut arrêter un homme mauvais avec une arme.",
+      "L'autodéfense est un droit, mais certaines restrictions sur les chargeurs haute capacité sont raisonnables.",
+      "Non. Les pays dotés de lois strictes sur les armes ont une fraction de nos taux d'homicide."
+    ]
+  },
+  "gn3": {
+    "q": "Nous devrions imposer un délai d'attente obligatoire de 10 jours pour tous les achats d'armes afin de prévenir les actes de violence impulsifs.",
+    "ctx": "Environ 48 000 Américains sont morts par arme à feu en 2022. Plus de la moitié étaient des suicides.",
+    "opts": [
+      "Oui. Un délai de réflexion est une mesure de bon sens qui sauve des vies.",
+      "Les délais d'attente ne devraient s'appliquer qu'aux premiers acheteurs ou aux jeunes adultes.",
+      "Non. Un droit différé est un droit refusé. Les victimes de harcèlement ont besoin de protection immédiate."
+    ]
+  },
+  "im1": {
+    "q": "Un pays sans frontières n'est pas un pays. Nous devons sécuriser la frontière et expulser ceux qui sont entrés illégalement.",
+    "ctx": "Des millions d'immigrants clandestins vivent dans le pays. Les passages de frontières ont atteint des sommets. Les ressources municipales sont débordées.",
+    "opts": [
+      "Oui. La loi et l'ordre doivent être restaurés. La sécurité des frontières est la sécurité nationale.",
+      "Sécuriser la frontière, mais offrir une voie de régularisation à ceux qui sont déjà ici.",
+      "Se concentrer sur le traitement humanitaire, les causes profondes et l'élargissement des voies légales."
+    ]
+  },
+  "im2": {
+    "q": "Séparer des familles par des expulsions massives est une abomination morale. Nous avons besoin d'une voie vers la citoyenneté.",
+    "ctx": "Les immigrants clandestins paient des milliards de taxes, récoltent la nourriture, soignent les aînés et construisent les maisons.",
+    "opts": [
+      "Oui. Ce sont nos voisins et collègues. Ils méritent la dignité et un statut légal.",
+      "Fournir un statut légal et des permis de travail, mais la citoyenneté doit être un processus strict.",
+      "Non. Récompenser l'illégalité encourage l'immigration clandestine. Les expulsions sont nécessaires."
+    ]
+  },
+  "im3": {
+    "q": "Le pays devrait augmenter considérablement le nombre de visas pour professionnels hautement qualifiés (H-1B) pour attirer les meilleurs talents mondiaux.",
+    "opts": [
+      "Oui. L'immigration qualifiée favorise l'innovation et crée des emplois nationaux.",
+      "Une augmentation modérée est correcte, mais nous devons protéger les travailleurs nationaux du dumping salarial.",
+      "Non. Les entreprises devraient investir dans la formation locale plutôt que d'importer de la main-d'œuvre bon marché."
+    ]
+  },
+  "tx1": {
+    "q": "L'inégalité extrême des richesses menace la démocratie. Nous devons instaurer un impôt sur la fortune pour les fortunes supérieures à 50 millions de dollars.",
+    "ctx": "Les trois personnes les plus riches possèdent plus de richesses que la moitié inférieure de toute la population combinée.",
+    "opts": [
+      "Oui. Les milliardaires ne devraient pas exister dans une société avec des enfants sans abri.",
+      "L'impôt sur la fortune est constitutionnellement complexe. Rehaussez plutôt la tranche supérieure de l'impôt sur le revenu.",
+      "Non. La redistribution forcée est un vol. La richesse se crée, elle ne se vole pas."
+    ]
+  },
+  "tx2": {
+    "q": "Taxer le capital et les hauts revenus ne fait que déplacer les investissements à l'étranger, réduit la productivité et nuit aux travailleurs.",
+    "opts": [
+      "Oui. Des impôts plus bas stimulent l'investissement, la croissance des entreprises et l'emploi.",
+      "Certains impôts sont nécessaires, mais des taux marginaux élevés faussent les décisions économiques.",
+      "Non. La théorie du ruissellement est un mensonge avéré. La croissance tirée par la demande est la seule réalité."
+    ]
+  },
+  "tx3": {
+    "q": "Le taux de l'impôt sur les sociétés devrait être ramené à 35 % pour garantir que les grandes entreprises paient leur juste share.",
+    "opts": [
+      "Oui. Les multinationales dégagent des profits records tout en payant des taux historiquement bas.",
+      "Un taux modéré autour de 25-28 % est un compromis compétitif.",
+      "Non. Un taux élevé rend nos entreprises non compétitives et se répercute sur les consommateurs."
+    ]
+  },
+  "cl1": {
+    "q": "Nous sommes en état d'urgence climatique. L'État doit éliminer rapidement les combustibles fossiles et investir dans un grand plan vert.",
+    "ctx": "L'année dernière a été la plus chaude jamais enregistrée. Les incendies, sécheresses et inondations coûtent des milliards à l'économie.",
+    "opts": [
+      "Oui. La transition vers les énergies renouvelables est l'impératif moral et économique de notre époque.",
+      "Éliminer brutalement les fossiles dévasterait l'économie. Subventionnez plutôt les technologies vertes.",
+      "Non. L'indépendance énergétique requiert du pétrole, du gaz et du charbon. Le plan vert est un fantasme socialiste."
+    ]
+  },
+  "cl2": {
+    "q": "Les interdictions unilatérales des énergies fossiles détruisent des emplois industriels bien payés et nous rendent dépendants de rivaux étrangers comme la Chine pour le solaire et les batteries.",
+    "opts": [
+      "Oui. Forer davantage garantit une énergie bon marché comme moteur de l'économie.",
+      "We should pursue all energy options, including nuclear and clean natural gas.",
+      "Non. La transition est inévitable. La mener permet de créer les emplois industriels de demain."
+    ]
+  },
+  "ab1": {
+    "q": "L'avortement fait partie des soins de santé. Le Parlement doit voter une loi fédérale pour garantir l'accès à l'avortement à l'échelle nationale.",
+    "ctx": "Depuis l'annulation de la jurisprudence historique par la Cour suprême, de nombreux États ont interdit l'avortement, forçant les femmes à voyager sur des milliers de kilomètres.",
+    "opts": [
+      "Oui. La liberté reproductive est un droit humain fondamental.",
+      "Soutenir l'accès, mais avec des limites standard sur les avortements tardifs.",
+      "Non. La question relève de la compétence des États, conformément à la Constitution.",
+      "Non. L'avortement supprime une vie humaine et doit être interdit sur tout le territoire."
+    ]
+  },
+  "ab2": {
+    "q": "L'arrêt de la Cour a correctement renvoyé la question de l'avortement au processus démocratique de chaque État.",
+    "opts": [
+      "Oui. La Constitution ne mentionne pas l'avortement. Les États ont le droit de protéger la vie à naître.",
+      "Les États devraient décider, mais les interdictions doivent avoir des exceptions pour viol, inceste et danger vital.",
+      "Non. Les droits humains ne devraient pas dépendre des frontières géographiques ou des assemblées locales."
+    ]
+  },
+  "sd1": {
+    "q": "L'enseignement supérieur est un bien public. L'État devrait annuler la dette étudiante et rendre les universités publiques gratuites.",
+    "ctx": "Des millions de citoyens portent le fardeau de prêts étudiants. Une génération entière retarde l'achat d'un logement ou la création d'entreprise sous ce poids.",
+    "opts": [
+      "Oui. L'éducation gratuite est un investissement dans notre avenir collectif.",
+      "Annuler la dette des étudiants modestes et réformer les taux d'intérêt, mais la gratuité totale est trop coûteuse.",
+      "Non. C'est un transfert massif de richesse de la classe ouvrière vers les élites éduquées."
+    ]
+  },
+  "sd2": {
+    "q": "Pardonner la dette étudiante est profondément injuste pour les millions d'actifs qui ont travaillé pour rembourser leurs prêts ou ont choisi de ne pas faire d'études.",
+    "opts": [
+      "Oui. Vous signez un contrat, vous le remboursez. La responsabilité individuelle est primordiale.",
+      "Le système a des failles, mais l'annulation pure et simple est le mauvais outil.",
+      "Non. Le coût de l'université a explosé. Les contrats de prêt étaient abusifs."
+    ]
+  },
+  "rj1": {
+    "q": "Le racisme systémique est réel. Nous devons réformer structurellement la police, mettre fin à l'immunité qualifiée et investir dans les communautés défavorisées.",
+    "ctx": "Les minorités sont statistiquement incarcérées à des taux nettement plus élevés et touchées de manière disproportionnée par la police et le système judiciaire.",
+    "opts": [
+      "Oui. Le système de justice pénale présente des inégalités raciales et nécessite une réforme radicale.",
+      "Réformer la police, mais ne pas réduire les effectifs ou le budget des forces de l'ordre.",
+      "Non. Le racisme systémique est un récit clivant. Le problème réside dans la criminalité et la rupture familiale."
+    ]
+  },
+  "rj2": {
+    "q": "La focalisation constante sur les divisions ethniques par la politique et les médias sape la cohésion sociale et divise le pays.",
+    "opts": [
+      "Oui. Nous devrions juger les gens sur leur caractère, non sur leur origine.",
+      "Les écarts économiques sont réels, mais le discours devrait se concentrer sur des solutions économiques unificatrices.",
+      "Non. Nier l'histoire n'efface pas son héritage. Nous devons nommer le racisme systémique pour le démanteler."
+    ]
+  },
+  "vt1": {
+    "q": "Nous devrions établir des normes nationales pour l'inscription automatique sur les listes électorales, élargir le vote par correspondance et faire du jour du scrutin un jour férié.",
+    "opts": [
+      "Oui. Voter est un droit. Nous devrions faciliter au maximum la participation de chaque citoyen.",
+      "Un jour férié oui, mais les règles électorales doivent rester du ressort des États locaux.",
+      "Non. Nous avons besoin de lois d'identification des électeurs plus strictes pour garantir l'intégrité du scrutin."
+    ]
+  },
+  "vt2": {
+    "q": "Assouplir les règles d'inscription électorale et élargir le vote par correspondance ouvrent la voie aux fraudes et sapent la confiance des électeurs.",
+    "opts": [
+      "Oui. Chaque vote doit être vérifié. L'obligation d'identité protège la démocratie.",
+      "L'intégrité est importante, mais les règles ne doivent pas être utilisées pour restreindre l'accès au vote.",
+      "Non. La fraude électorale est quasi inexistante. Ces lois visent à réduire la participation des minorités."
+    ]
+  },
+  "fp1": {
+    "q": "Nous devons projeter notre force. Une armée puissante est le seul garant de la stabilité mondiale et de la protection des valeurs démocratiques.",
+    "ctx": "Le pays maintient des centaines de bases militaires à l'étranger et dépense plus pour sa défense que les dix nations suivantes combinées.",
+    "opts": [
+      "Oui. La paix par la force. Nous devons soutenir fermement nos alliés.",
+      "Défendre nos alliés, mais éviter les interventions étrangères coûteuses et la reconstruction d'États.",
+      "Non. Le complexe militaro-industriel siphonne des ressources indispensables aux besoins intérieurs."
+    ]
+  },
+  "fp2": {
+    "q": "Nous devrions cesser de dépenser des milliards dans des conflits étrangers et nous concentrer sur la reconstruction de nos propres communautés.",
+    "opts": [
+      "Oui. Les nôtres d'abord. Notre priorité doit être la stabilité et le travailleur national.",
+      "Une approche équilibrée. Nous devons rester engagés à l'international pour protéger nos propres intérêts.",
+      "Non. L'isolationnisme est une illusion dangereuse. La stabilité mondiale garantit aussi notre économie."
+    ]
+  },
+  "si1": {
+    "q": "Les parcours de transition sont une question de liberté médicale. L'État n'a aucun droit de les interdire.",
+    "ctx": "Les jeunes transgenres font face à des taux élevés d'anxiété. Les associations médicales soutiennent ces soins comme nécessaires.",
+    "opts": [
+      "Oui. Les décisions doivent être prises par les patients, les familles et les médecins, pas les politiques.",
+      "Les soins oui, mais des limites d'âge pour les procédures chirurgicales irréversibles sont raisonnables.",
+      "Non. Nous devons protéger les enfants des chirurgies expérimentales et défendre les valeurs traditionnelles."
+    ]
+  },
+  "si2": {
+    "q": "Autoriser des mineurs à subir des procédures de transition irréversibles est une faute professionnelle médicale que l'État doit proscrire.",
+    "opts": [
+      "Oui. Les enfants n'ont pas la maturité pour consentir à des choix qui engagent toute leur vie.",
+      "Une évaluation médicale stricte est requise, mais les interdictions totales vont trop loin.",
+      "Non. Les choix médicaux appartiennent aux familles et aux médecins."
+    ]
+  },
+  "gi1": {
+    "q": "L'État devrait réglementer strictement les réseaux sociaux pour lutter contre la désinformation, la haine en ligne et l'ingérence étrangère.",
+    "opts": [
+      "Oui. Les monopoles non réglementés de la tech nuisent à la démocratie et à la santé publique.",
+      "La désinformation est un danger, mais la réglementation étatique porte un risque de censure politique.",
+      "Non. La liberté d'expression protège toutes les opinions. Le libre débat est le seul remède efficace."
+    ]
+  },
+  "gi2": {
+    "q": "Les pressions de l'État sur les plateformes pour supprimer certains contenus constituent une censure d'État dissimulée.",
+    "ctx": "Certains rapports indiquent que les agences gouvernementales travaillent avec les plateformes pour signaler des contenus sur les pandémies ou les élections.",
+    "opts": [
+      "Oui. Les pressions étatiques pour faire modérer les opinions violent le principe de libre expression.",
+      "Les plateformes doivent appliquer leurs propres règles, mais la communication avec l'État doit être transparente.",
+      "Non. L'État a le devoir d'alerter les plateformes contre les campagnes de désinformation ou les menaces de sécurité."
+    ]
+  },
+  "ss1": {
+    "q": "Nous devrions sécuriser les caisses de retraite en supprimant le plafond de cotisation, afin que les hauts revenus contribuent sur tout leur salaire.",
+    "opts": [
+      "Oui. Les riches doivent cotiser sur l'ensemble de leurs revenus, tout comme les classes populaires.",
+      "Rehausser le plafond, mais aussi repousser l'âge de départ à la retraite pour les générations futures.",
+      "Non. Nous devrions nous orienter vers des comptes de capitalisation individuels gérés par le marché."
+    ]
+  },
+  "ss2": {
+    "q": "Étendre les programmes sociaux publics alors que la dette nationale augmente est irresponsable sur le plan budgétaire.",
+    "opts": [
+      "Oui. Nous devons réduire les dépenses et encourager la capitalisation privée pour éviter la faillite publique.",
+      "Ces programmes doivent être réformés, mais le filet de sécurité sociale doit rester intact.",
+      "Non. Ces programmes sont des promesses pour lesquelles les citoyens ont cotisé. Coupez plutôt dans les budgets militaires."
+    ]
+  },
+  "tr1": {
+    "q": "Le libre-échange a constitué un transfert massif de richesses des travailleurs vers les multinationales. Nous devons protéger nos industries.",
+    "ctx": "Pendant quarante ans, les emplois industriels ont été délocalisés. Des régions entières se sont dépeuplées pendant que les grands groupes affichaient des bénéfices records.",
+    "opts": [
+      "Oui. Les taxes douanières et la politique industrielle sont nécessaires pour rebâtir la classe moyenne.",
+      "Des taxes ciblées uniquement sur les secteurs stratégiques (comme les puces). Des taxes larges nuisent aux consommateurs.",
+      "Non. Le protectionnisme augmente les prix et mène à des guerres commerciales qui appauvrissent tout le monde."
+    ]
+  },
+  "ed1": {
+    "q": "Le financement des écoles devrait se faire strictement en fonction des besoins, en réorientant les fonds des zones aisées vers les quartiers défavorisés.",
+    "opts": [
+      "Oui. Chaque enfant mérite le même départ dans la vie, quel que soit son code postal.",
+      "Un financement sur les besoins oui, mais ne pénalisez pas les zones qui choisissent d'investir plus dans leurs écoles.",
+      "Non. Les chèques éducation devraient permettre d'envoyer son enfant dans n'importe quelle école, publique ou privée."
+    ]
+  },
+  "ed2": {
+    "q": "Les chèques éducation privent les écoles publiques de ressources indispensables et aggravent l'inégalité sociale.",
+    "opts": [
+      "Oui. L'argent public doit aller aux écoles publiques. Ces dispositifs créent des inégalités.",
+      "Ces chèques ont une utilité, mais doivent être limités aux élèves modestes d'écoles en difficulté.",
+      "Non. La concurrence améliore tous les établissements. Les parents doivent être libres de choisir."
+    ]
+  },
+  "co1": {
+    "q": "La Cour suprême est devenue un organe politique partisan. Nous devrions fixer une limite d'âge ou de mandat et des règles d'éthique contraignantes.",
+    "opts": [
+      "Oui. Des mandats à vie sans contrôle éthique menacent la légitimité démocratique.",
+      "Des règles éthiques contraignantes oui, mais les limites de mandat affaiblissent l'indépendance judiciaire.",
+      "Non. Le système a fait ses preuves. Changer les règles n'est qu'une manœuvre partisane d'opportunité."
+    ]
+  },
+  "co2": {
+    "q": "La Constitution est un texte vivant qui doit s'interpréter à la lumière des valeurs modernes et du progrès social.",
+    "opts": [
+      "Oui. Les rédacteurs ne pouvaient pas prévoir le monde moderne. Une lecture littérale est anachronique.",
+      "L'interprétation doit s'adapter, mais les principes constitutionnels fondamentaux doivent rester stables.",
+      "Non. L'intention d'origine est la seule garantie de la loi. Pour modifier la Constitution, votez un amendement."
+    ]
+  },
+  "bt1": {
+    "q": "Les géants de la tech comme Google, Meta et Amazon sont devenus trop puissants et doivent être démantelés sous les lois antitrust.",
+    "ctx": "Une poignée de conglomérats contrôle le flux d'informations moderne et s'approprie l'espace public numérique.",
+    "opts": [
+      "Oui. Démantelez-les. Ils étouffent la concurrence, pillent nos données et orientent le débat.",
+      "Les lois sur les données et la régulation sont plus adaptées. Les démanteler nuit à notre souveraineté technologique.",
+      "Non. Ils réussissent parce qu'ils offrent d'excellents services. Laissez faire le marché."
+    ]
+  },
+  "br1": {
+    "q": "L'État est trop lourd, trop coûteux et trop intrusif. Un État plus modeste favoriserait la liberté et la croissance.",
+    "opts": [
+      "Oui. Réduisez les dépenses, baissez les taxes, supprimez les normes, faites confiance à la responsabilité des citoyens.",
+      "Certains aspects sont trop grands, mais les programmes fondamentaux et l'aide sociale sont à la bonne taille.",
+      "Non. L'État pose les bases de la prospérité commune. Le réduire fragilise directement la population."
+    ]
+  },
+  "br2": {
+    "q": "L'écart entre les plus riches et le reste de la population atteint des niveaux qui menacent la cohésion sociale et la mobilité.",
+    "opts": [
+      "Oui. Une fiscalité progressive, des aides sociales renforcées et un impôt sur la fortune sont nécessaires.",
+      "Les écarts existent, mais l'égalité des chances et la croissance comptent plus que la redistribution.",
+      "Les écarts reflètent le mérite. L'égalitarisme forcé bride l'initiative individuelle."
+    ]
+  },
+  "br3": {
+    "q": "Les plus grandes menaces pour la liberté viennent de l'intérieur – surveillance de masse et recul des libertés publiques.",
+    "opts": [
+      "Oui. La surveillance de masse et les lois d'exception sont les vrais dangers.",
+      "Les menaces extérieures sont réelles. L'équilibre entre sécurité et libertés est difficile.",
+      "Les menaces internationales exigent une sécurité intérieure forte et des services de renseignement."
+    ]
+  },
+  "br4": {
+    "q": "Les grandes entreprises ont acquis une influence démesurée sur la vie politique, l'économie et le quotidien.",
+    "opts": [
+      "Oui. Il faut limiter drastiquement le lobbying et réformer le financement des campagnes.",
+      "L'influence des grands groupes est un problème, mais une réglementation excessive crée d'autres abus.",
+      "La liberté économique est essentielle. L'État reste une plus grande menace que n'importe quelle entreprise."
+    ]
+  },
+  "ex1": {
+    "q": "Le fait que le pays compte autant de milliardaires n'est pas une réussite, c'est le signe d'un système biaisé à leur profit.",
+    "opts": [
+      "Oui. L'accumulation de richesses à cette échelle témoigne d'une faillite des politiques publiques.",
+      "Non. La fortune des uns ne retire rien aux autres. La croissance profite à tous."
+    ]
+  },
+  "ex2": {
+    "q": "Taxer les riches pour financer des programmes publics décourage les créateurs de richesse et détruit des emplois.",
+    "opts": [
+      "Oui. Le capital fuit les zones à forte fiscalité. On ne bâtit pas la prospérité en la pénalisant.",
+      "Non. Les plus fortunés ont bâti leur succès sur nos infrastructures publiques. Ils doivent contribuer en retour."
+    ]
+  },
+  "ex3": {
+    "q": "Le système carcéral enferme une part excessive de la population. Ce n'est pas de la justice, c'est de la punition de masse.",
+    "opts": [
+      "Oui. L'incarcération de masse est un désastre humain et social et nécessite une refonte globale.",
+      "Non. La population carcérale reflète la criminalité. La sécurité publique n'est pas négociable."
+    ]
+  },
+  "ex4": {
+    "q": "La criminalité a augmenté dans les métropoles qui ont baissé le budget de la police. Baisser le budget de la police était une erreur dramatique.",
+    "opts": [
+      "Oui. L'expérience a échoué et ce sont les quartiers populaires qui en ont payé le prix.",
+      "Non. Le manque de budget pour le social, le logement et les écoles est le problème, pas le nombre de policiers."
+    ]
+  },
+  "ex5": {
+    "q": "L'État n'a aucun droit d'espionner ses citoyens sans mandat judiciaire. La surveillance de masse doit cesser.",
+    "opts": [
+      "Oui. Un gouvernement qui surveille tout le monde ne fait confiance à personne.",
+      "Non. Les services de sécurité ont besoin d'accès larges. Le terrorisme n'attend pas les mandats."
+    ]
+  },
+  "id1": {
+    "q": "Chaque culture a produit des choses dont on peut être fier. Je suis fier de la mienne et je ne m'en excuse pas.",
+    "opts": [
+      "Oui. La fierté de sa culture et de son héritage est naturelle et saine.",
+      "La fierté est légitime, mais les revendications de supériorité culturelle me mettent mal à l'aise.",
+      "Non. Classer les cultures ou les juger supérieures est le point de départ de dérives dangereuses."
+    ]
+  },
+  "id2": {
+    "q": "Les générations actuelles devraient porter une part de honte pour les crimes historiques de leur nation (esclavage, colonialisme, massacres).",
+    "opts": [
+      "Oui. Reconnaître les fautes héritées fait partie d'un rapport lucide et honnête à soi.",
+      "Il faut enseigner l'histoire avec lucidité sans exiger pour autant de honte personnelle.",
+      "Non. On ne peut être coupable d'actes qu'on n'a pas commis. La culpabilité collective est injuste."
+    ]
+  }
+};
+
+
 const SB_URL = 'https://rttomfnfyjjssdqfzkaj.supabase.co';
 const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
 
@@ -2330,48 +2944,90 @@ const BANK = [
 
 const PARTY_META = {
   "ren": {
-    "name": "Renaissance",
+    "name": {
+      "fr": "Renaissance",
+      "en": "Renaissance"
+    },
     "color": "#00C6FF",
     "barClass": "bar-ren",
-    "desc": "Vos réponses correspondent le plus à Renaissance. Vous soutenez une économie libérale et pro-entreprise, des réformes structurelles (comme l'âge de la retraite), et une intégration européenne approfondie."
+    "desc": {
+      "fr": "Vos réponses correspondent le plus à Renaissance. Vous soutenez une économie libérale et pro-entreprise, des réformes structurelles (comme l'âge de la retraite), et une intégration européenne approfondie.",
+      "en": "Your answers most closely match Renaissance. You support a liberal, pro-business economic policy, structural reforms (like retirement age changes), and deep EU integration."
+    }
   },
   "rn": {
-    "name": "Rassemblement National",
+    "name": {
+      "fr": "Rassemblement National",
+      "en": "National Rally (RN)"
+    },
     "color": "#0D2040",
     "barClass": "bar-rn",
-    "desc": "Vos réponses correspondent le plus au Rassemblement National. Vous défendez la préférence nationale pour l'emploi et le logement, le contrôle strict des frontières, et des mesures de soutien au pouvoir d'achat."
+    "desc": {
+      "fr": "Vos réponses correspondent le plus au Rassemblement National. Vous défendez la préférence nationale pour l'emploi et le logement, le contrôle strict des frontières, et des mesures de protectionnisme.",
+      "en": "Your answers most closely match the National Rally (RN). You advocate for national preference in jobs and housing, strict border controls, and protectionist economic measures."
+    }
   },
   "lfi": {
-    "name": "La France Insoumise",
+    "name": {
+      "fr": "La France Insoumise",
+      "en": "France Unbowed (LFI)"
+    },
     "color": "#E30613",
     "barClass": "bar-lfi",
-    "desc": "Vos réponses correspondent le plus à La France Insoumise. Vous préconisez une forte taxation des superprofits, le retour de la retraite à 60 ans, la justice sociale active, et la planification écologique globale."
+    "desc": {
+      "fr": "Vos réponses correspondent le plus à La France Insoumise. Vous préconisez une forte taxation des superprofits, le retour de la retraite à 60 ans, la justice sociale active, et la planification écologique.",
+      "en": "Your answers most closely match France Unbowed (LFI). You advocate for high taxes on superprofits, retirement at 60, active social justice, and ecological planning."
+    }
   },
   "lr": {
-    "name": "Les Républicains",
+    "name": {
+      "fr": "Les Républicains",
+      "en": "The Republicans (LR)"
+    },
     "color": "#002E63",
     "barClass": "bar-lr",
-    "desc": "Vos réponses correspondent le plus aux Républicains. Vous privilégiez la rigueur budgétaire, la baisse de la dépense publique, la fermeté sur la sécurité et l'immigration, et la défense des valeurs gaullistes traditionnelles."
+    "desc": {
+      "fr": "Vos réponses correspondent le plus aux Républicains. Vous privilégiez la rigueur budgétaire, la baisse de la dépense publique, la fermeté sur la sécurité et l'immigration, et les valeurs traditionnelles.",
+      "en": "Your answers most closely match The Republicans (LR). You prioritize fiscal restraint, cuts in public spending, firmness on security and immigration, and traditional Gaullist values."
+    }
   },
   "ps": {
-    "name": "Parti Socialiste",
+    "name": {
+      "fr": "Parti Socialiste",
+      "en": "Socialist Party (PS)"
+    },
     "color": "#E61B73",
     "barClass": "bar-ps",
-    "desc": "Vos réponses correspondent le plus au Parti Socialiste. Vous êtes partisan d'un modèle social-démocrate associant des services publics forts, une fiscalité progressive et une transition écologique juste."
+    "desc": {
+      "fr": "Vos réponses correspondent le plus au Parti Socialiste. Vous êtes partisan d'un modèle social-démocrate associant des services publics forts, une fiscalité progressive et une transition écologique juste.",
+      "en": "Your answers most closely match the Socialist Party (PS). You favor a social-democratic model combining strong public services, progressive taxation, and a just ecological transition."
+    }
   },
   "grn": {
-    "name": "Les Écologistes",
+    "name": {
+      "fr": "Les Écologistes",
+      "en": "The Greens"
+    },
     "color": "#2A8A4F",
     "barClass": "bar-grn",
-    "desc": "Vos réponses correspondent le plus aux Écologistes (EELV). Vous accordez une priorité absolue à la sortie rapide du nucléaire et des fossiles, à la biodiversité, et à la justice sociale globale."
+    "desc": {
+      "fr": "Vos réponses correspondent le plus aux Écologistes (EELV). Vous accordez une priorité absolue à la sortie rapide des fossiles et du nucléaire, à la biodiversité, et à la justice sociale globale.",
+      "en": "Your answers most closely match The Ecologists (Greens). You give absolute priority to phasing out fossil fuels and nuclear energy, protecting biodiversity, and global social justice."
+    }
   },
   "ind": {
-    "name": "Indépendant",
+    "name": {
+      "fr": "Indépendant",
+      "en": "Independent"
+    },
     "color": "#7A7F88",
     "barClass": "bar-ind",
-    "desc": "Vos réponses ne correspondent fortement à aucun parti. Vous avez des opinions nuancées qui empruntent à plusieurs familles politiques."
+    "desc": {
+      "fr": "Vos réponses ne correspondent fortement à aucun parti. Vous avez des opinions nuancées qui empruntent à plusieurs familles politiques.",
+      "en": "Your answers do not align strongly with a single party. You hold moderate, mixed views drawing from multiple political traditions."
+    }
   }
-};
+}};
 </script>
 <script src="/engine.js"></script>
 </body>

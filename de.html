@@ -41,7 +41,13 @@
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <div class="flag-badge"><span class="flag">🇩🇪</span> Germany</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">English</button>
+      <div class="flag-badge">
+        <span class="flag">🇩🇪</span>
+        <span id="lang-label">Deutschland</span>
+      </div>
+    </div>
   </nav>
 
   <div class="hero">
@@ -309,6 +315,614 @@
 </div>
 
 <script>
+let currentLang = 'de';
+    
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'de' : 'en';
+  document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'Deutsch' : 'English';
+  document.getElementById('lang-label').textContent = currentLang === 'en' ? 'Germany' : 'Deutschland';
+  
+  // Set in window scope for the engine.js to pick up
+  window.currentLang = currentLang;
+  
+  applyLang();
+  
+  if (document.getElementById('page-test').classList.contains('active')) renderQ();
+}
+
+function t(en, local) { return currentLang === 'en' ? en : local; }
+
+function getQuestion(q) {
+  if (currentLang === 'en') return q;
+  const localQ = LOCAL_QUESTIONS[q.id];
+  if (!localQ) return q;
+  return {
+    ...q,
+    q: localQ.q || q.q,
+    ctx: localQ.ctx || q.ctx,
+    opts: q.opts.map((o, i) => ({
+      ...o,
+      t: (localQ.opts && localQ.opts[i]) ? localQ.opts[i] : o.t
+    }))
+  };
+}
+
+// Bind function to window scope for engine.js integration
+window.getQuestion = getQuestion;
+window.currentLang = currentLang;
+
+function applyLang() {
+  const isEn = currentLang === 'en';
+  
+  // Translate Hero Title & Sub
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) {
+    if (isEn) {
+      heroTitle.innerHTML = "Where do you stand in<br><em>German</em> politics?";
+    } else {
+      heroTitle.innerHTML = "Wo stehst du in der<br><em>deutschen</em> Politik?";
+    }
+  }
+  
+  const heroSub = document.querySelector('.hero-sub');
+  if (heroSub) {
+    if (isEn) {
+      heroSub.textContent = "47 scenario-based questions on the issues defining Germany right now. Crime, immigration, welfare, debt brakes, and energy. See your alignment across all parties.";
+    } else {
+      heroSub.textContent = "47 praxisnahe Szenario-Fragen zu den drängenden Themen der Bundespolitik. Ermittle deine Position auf dem Kompass und sieh die Übereinstimmung mit allen großen Parteien.";
+    }
+  }
+
+  // Start & Control Buttons
+  const startBtn = document.querySelector('.hero-cta .btn-primary');
+  if (startBtn) startBtn.textContent = isEn ? 'Start the test' : "Test starten";
+  
+  const skipBtn = document.querySelector('.btn-skip');
+  if (skipBtn) skipBtn.textContent = isEn ? 'Skip' : "Überspringen";
+  
+  const backBtn = document.getElementById('btn-back');
+  if (backBtn) backBtn.textContent = isEn ? 'Back' : "Zurück";
+  
+  const nextBtn = document.querySelector('.q-foot .btn-primary');
+  if (nextBtn) nextBtn.textContent = isEn ? 'Next' : "Weiter";
+
+  // Demographics Titles
+  const demoTitle = document.querySelector('#page-demo .page-title');
+  if (demoTitle) demoTitle.textContent = isEn ? 'Almost there.' : "Fast geschafft.";
+  
+  const demoSub = document.querySelector('#page-demo .page-sub');
+  if (demoSub) demoSub.textContent = isEn 
+    ? 'A few quick questions before your results. Everything is anonymous.' 
+    : "Einige kurze Fragen vor deinen Ergebnissen. Alles ist vollkommen anonym.";
+    
+  const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
+  if (seeResultsBtn) seeResultsBtn.textContent = isEn ? 'See my results' : "Ergebnisse ansehen";
+
+  // Demographics Field Labels
+  const lblAge = document.getElementById('d-age')?.previousElementSibling;
+  if (lblAge) lblAge.textContent = isEn ? 'Age' : "Alter";
+  
+  const lblCountry = document.getElementById('d-country')?.previousElementSibling || document.getElementById('d-county')?.previousElementSibling;
+  if (lblCountry) lblCountry.innerHTML = isEn ? 'Region <span>(optional)</span>' : "Region <span>(optional)</span>";
+  
+  const lblParty = document.getElementById('d-party')?.previousElementSibling;
+  if (lblParty) lblParty.innerHTML = isEn ? 'How do you currently identify? <span>(optional)</span>' : "Wie identifizierst du dich politisch? <span>(optional)</span>";
+  
+  const lblGender = document.getElementById('d-gender')?.previousElementSibling;
+  if (lblGender) lblGender.innerHTML = isEn ? 'Gender <span>(optional)</span>' : "Geschlecht <span>(optional)</span>";
+  
+  const lblNat = document.getElementById('d-nationality')?.previousElementSibling;
+  if (lblNat) lblNat.innerHTML = isEn ? 'Nationality <span>(optional)</span>' : "Nationalität <span>(optional)</span>";
+
+  // Demographics Select Options
+  const optSelect = isEn ? 'Select...' : "Auswählen...";
+  const optPreferNot = isEn ? 'Prefer not to say' : "Lieber nicht sagen";
+
+  // Update options inside selects
+  const ageSelect = document.getElementById('d-age');
+  if (ageSelect) {
+    ageSelect.options[0].textContent = optSelect;
+    const ageTexts = isEn 
+      ? ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 or older']
+      : ['Unter 18', '18 bis 24', '25 bis 34', '35 bis 44', '45 bis 54', '55 bis 64', '65 oder älter'];
+    for (let i = 1; i < ageSelect.options.length; i++) {
+      if (ageTexts[i-1]) ageSelect.options[i].textContent = ageTexts[i-1];
+    }
+  }
+
+  const genderSelect = document.getElementById('d-gender');
+  if (genderSelect) {
+    genderSelect.options[0].textContent = optSelect;
+    const genTexts = isEn 
+      ? ['Male', 'Female', 'Other', 'Prefer not to say']
+      : ['Männlich', 'Weiblich', 'Sonstiges', 'Lieber nicht sagen'];
+    for (let i = 1; i < genderSelect.options.length; i++) {
+      if (genTexts[i-1]) genderSelect.options[i].textContent = genTexts[i-1];
+    }
+  }
+
+  const partySelect = document.getElementById('d-party');
+  if (partySelect) {
+    partySelect.options[0].textContent = optPreferNot;
+    const lastOpt = partySelect.options[partySelect.options.length - 1];
+    if (lastOpt) {
+      if (isEn) {
+        lastOpt.textContent = 'Independent / Other';
+      } else {
+        lastOpt.textContent = "Unabhängig / Sonstige";
+      }
+    }
+  }
+
+  const countrySelect = document.getElementById('d-country') || document.getElementById('d-county');
+  if (countrySelect) countrySelect.options[0].textContent = optSelect;
+
+  const natSelect = document.getElementById('d-nationality');
+  if (natSelect) {
+    natSelect.options[0].textContent = optSelect;
+    const natNames = {
+      'United States': isEn ? 'United States' : "Vereinigte Staaten",
+      'United Kingdom': isEn ? 'United Kingdom' : "Vereinigtes Königreich",
+      'Canada': isEn ? 'Canada' : "Kanada",
+      'Australia': isEn ? 'Australia' : "Australien",
+      'Sweden': isEn ? 'Sweden' : "Schweden",
+      'Germany': isEn ? 'Germany' : "Deutschland",
+      'France': isEn ? 'France' : "Frankreich",
+      'Ireland': isEn ? 'Ireland' : "Irland",
+      'Netherlands': isEn ? 'Netherlands' : "Niederlande",
+      'Other': isEn ? 'Other' : "Sonstige"
+    };
+    for (let i = 1; i < natSelect.options.length; i++) {
+      const opt = natSelect.options[i];
+      const enVal = opt.getAttribute('data-en') || opt.value || opt.textContent;
+      if (!opt.getAttribute('data-en')) opt.setAttribute('data-en', enVal);
+      if (natNames[enVal]) opt.textContent = natNames[enVal];
+    }
+  }
+
+  // Demographics Note and Consent
+  const demoNote = document.querySelector('.demo-note');
+  if (demoNote) demoNote.textContent = isEn 
+    ? 'This is never linked to your answers. It helps us understand who takes the test.' 
+    : "Dies wird niemals mit deinen Antworten verknüpft. Es hilft uns zu verstehen, wer an dem Test teilnimmt.";
+  
+  const lblConsent = document.querySelector('label[for="d-consent"]');
+  if (lblConsent) {
+    if (isEn) {
+      lblConsent.innerHTML = '<strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.';
+    } else {
+      lblConsent.innerHTML = "<strong>Einwilligung zur Forschung:</strong> Ich gestatte CoreOpinion, meine anonymen Antworten und demografischen Daten für Forschung, Statistiken und öffentliche Wahl-Dashboards zu speichern.";
+    }
+  }
+
+  // Calculating page
+  const calcTitle = document.querySelector('.calc-h');
+  if (calcTitle) calcTitle.textContent = isEn ? 'Mapping your answers' : "Antworten werden ausgewertet";
+  
+  const calcSub = document.querySelector('.calc-p');
+  if (calcSub) calcSub.textContent = isEn ? 'This will only take a moment.' : "Dies wird nur einen Moment dauern.";
+
+  // Results Dashboard titles
+  const rEyebrow = document.querySelector('.result-eyebrow');
+  if (rEyebrow) rEyebrow.textContent = isEn 
+    ? 'Your Germany political alignment' 
+    : "Deine politische Übereinstimmung in Deutschland";
+
+  // Save Panel titles
+  const saveTitle = document.querySelector('.save-title');
+  if (saveTitle) saveTitle.textContent = isEn ? 'Save your results' : "Ergebnisse speichern";
+  
+  const saveDesc = document.querySelector('.save-desc');
+  if (saveDesc) saveDesc.textContent = isEn 
+    ? 'Enter your email and we will send you a link to these results. Never shared.' 
+    : "Gib deine E-Mail ein und wir senden dir einen Link zu diesen Ergebnissen. Niemals weitergegeben.";
+    
+  const sendBtn = document.querySelector('.save-row .btn-primary');
+  if (sendBtn) sendBtn.textContent = isEn ? 'Send results' : "Ergebnisse senden";
+
+  // Action Buttons
+  const copyBtn = document.querySelector('.share-row button:nth-child(1)');
+  if (copyBtn) copyBtn.textContent = isEn ? 'Copy results link' : "Ergebnis-Link kopieren";
+  
+  const retakeBtn = document.querySelector('.share-row button:nth-child(2)');
+  if (retakeBtn) retakeBtn.textContent = isEn ? 'Retake' : "Wiederholen";
+  
+  const genBtn = document.querySelector('.share-row a button');
+  if (genBtn) genBtn.textContent = isEn ? 'General test' : "Allgemeiner Test";
+}
+
+const LOCAL_QUESTIONS = {
+  "hc1": {
+    "q": "Sollte dieser Mann bankrottgehen oder sterben, weil er seinen Job verloren hat?",
+    "ctx": "Er hat sein ganzes Leben gearbeitet. Verlor seinen Job mit 58 Jahren und damit seine Krankenversicherung. Krebs im Stadium 3. Die Rechnung beträgt 400.000 Dollar.",
+    "opts": [
+      "Nein. Eine universelle Gesundheitsversorgung ist die einzige Antwort. Medicare for All.",
+      "Nein. Erweitern Sie die gesetzlichen Zuschüsse und schützen Sie Menschen in seiner Situation.",
+      "Das bestehende System reicht aus. Er hätte seine Absicherung privat weiterführen müssen.",
+      "Dies ist ein persönliches Versagen. Der Staat sollte das Gesundheitswesen nicht betreiben."
+    ]
+  },
+  "hc2": {
+    "q": "Eine staatlich gesteuerte Gesundheitsversorgung würde den medizinischen Fortschritt bremsen, die Qualität senken und zu Rationierung führen.",
+    "opts": [
+      "Ja. Der freie Markt treibt die besten Innovationen im Gesundheitswesen voran.",
+      "Es gibt Risiken, aber Standardregulierungen könnten diese verhindern.",
+      "Nein. Andere Industrienationen zahlen halb so viel für bessere Ergebnisse bei universellen Systemen."
+    ]
+  },
+  "hc3": {
+    "q": "Medizinische Schulden sollten gesetzlich anders behandelt werden als Konsumschulden, mit strengen Grenzen für Zinsen und Zwangsvollstreckungen.",
+    "opts": [
+      "Ja. Niemand entscheidet sich dafür, krank zu sein. Es ist eine Notwendigkeit, kein Konsum.",
+      "Einige Schutzmaßnahmen sind sinnvoll, aber Gläubiger müssen weiterhin eintreiben können.",
+      "Nein. Verträge müssen für alle gleich durchgesetzt werden. Ausnahmen schaden den Kreditmärkten."
+    ]
+  },
+  "gn1": {
+    "q": "Die Verfassung ist kein Selbstmordpakt. Wir müssen Sturmgewehre verbieten, um unsere Kinder zu schützen.",
+    "ctx": "Seit Columbine haben über 350.000 Schüler Waffengewalt an Schulen erlebt. Amoklauf-Übungen gehören heute zum Standard-Alltag von Kindern.",
+    "opts": [
+      "Ja. Dies sind Kriegswaffen und sie gehören nicht auf unsere Straßen.",
+      "Sturmgewehrverbote sind komplex. Hintergrundüberprüfungen und Gefährdergesetze sind effektiver.",
+      "Nein. Fokus auf psychische Gesundheit und Schulsicherheit. Bestrafen Sie nicht gesetzestreue Bürger."
+    ]
+  },
+  "gn2": {
+    "q": "Das Verbot bestimmter Waffentypen entwaffnet nur gesetzestreue Bürger und macht sie wehrlos gegen Kriminelle, die sich nicht an Gesetze halten.",
+    "opts": [
+      "Ja. Nur ein guter Mann mit einer Waffe stoppt einen bösen Mann mit einer Waffe.",
+      "Selbstverteidigung ist ein Recht, aber einige Einschränkungen für Magazine mit hoher Kapazität sind vernünftig.",
+      "Nein. Länder mit strengen Waffengesetzen haben nur einen Bruchteil unserer Tötungsdelikte."
+    ]
+  },
+  "gn3": {
+    "q": "Wir sollten eine obligatorische 10-tägige Wartezeit für alle Waffenkäufe vorschreiben, um spontane Gewalttaten zu verhindern.",
+    "ctx": "Im Jahr 2022 starben rund 48.000 Amerikaner durch Schussverletzungen. Mehr als die Hälfte davon waren Suizide.",
+    "opts": [
+      "Ja. Eine Bedenkzeit ist eine vernünftige Maßnahme, die Leben rhetet.",
+      "Wartezeiten sollten nur für Erstkäufer oder junge Erwachsene gelten.",
+      "Nein. Ein verzögertes Recht ist ein verweigertes Recht. Opfer von Stalking brauchen sofortigen Schutz."
+    ]
+  },
+  "im1": {
+    "q": "Ein Land ohne Grenzen ist kein Land. Wir müssen die Grenze sichern und illegal Eingereiste abschieben.",
+    "ctx": "Millionen illegaler Einwanderer leben im Land. Die Grenzübertritte haben historische Höchststände erreicht. Kommunale Ressourcen sind überlastet.",
+    "opts": [
+      "Ja. Recht und Ordnung müssen wiederhergestellt werden. Grenzsicherung ist erste Bürgerpflicht.",
+      "Grenze sichern, aber einen Weg zur Legalisierung für diejenigen bieten, die bereits hier sind.",
+      "Fokus auf humane Bearbeitung, Fluchtursachen und Ausweitung legaler Wege."
+    ]
+  },
+  "im2": {
+    "q": "Familien durch Massenabschiebungen auseinanderzureißen, ist moralisch verwerflich. Wir brauchen einen Weg zur Staatsbürgerschaft.",
+    "ctx": "Einwanderer ohne Papiere zahlen Milliarden an Steuern, ernten Lebensmittel, pflegen Alte und bauen Häuser.",
+    "opts": [
+      "Ja. Dies sind unsere Nachbarn und Kollegen. Sie verdienen Würde und legalen Status.",
+      "Bieten Sie legalen Status und Arbeitserlaubnisse an, aber die Einbürgerung sollte streng sein.",
+      "Nein. Wer Gesetze bricht zu belohnen, fördert illegale Einwanderung. Abschiebungen sind notwendig."
+    ]
+  },
+  "im3": {
+    "q": "Das Land sollte die Zahl der Visa für hochqualifizierte Arbeitskräfte (H-1B) deutlich erhöhen, um weltweit Spitzenkräfte anzuziehen.",
+    "opts": [
+      "Ja. Qualifizierte Einwanderung treibt Innovation voran und schafft inländische Arbeitsplätze.",
+      "Ein moderater Anstieg ist in Ordnung, aber wir müssen heimische Fachkräfte vor Lohndumping schützen.",
+      "Nein. Unternehmen sollten in die Ausbildung einheimischer Kräfte investieren, statt billige Kräfte zu importieren."
+    ]
+  },
+  "tx1": {
+    "q": "Extreme Vermögensungleichheit bedroht die Demokratie. Wir müssen eine Vermögenssteuer für Vermögen über 50 Millionen Dollar einführen.",
+    "ctx": "Die drei reichsten Personen besitzen mehr Vermögen als die gesamte ärmere Hälfte der Bevölkerung zusammen.",
+    "opts": [
+      "Ja. Milliardäre sollte es in einer Gesellschaft mit obdachlosen Kindern nicht geben.",
+      "Vermögenssteuern sind verfassungsrechtlich schwierig. Erhöhen Sie stattdessen den Spitzensteuersatz.",
+      "Nein. Erzwungene Umverteilung ist Diebstahl. Wohlstand wird geschaffen, nicht gestohlen."
+    ]
+  },
+  "tx2": {
+    "q": "Die Besteuerung von Kapital und Spitzenverdienern treibt Investitionen ins Ausland, senkt die Produktivität und schadet den Arbeitnehmern.",
+    "opts": [
+      "Ja. Niedrigere Steuern stimulieren Investitionen, Unternehmenswachstum und Arbeitsplätze.",
+      "Steuern sind notwendig, aber hohe Grenzsätze verzerren wirtschaftliche Entscheidungen.",
+      "Nein. Trickle-Down-Ökonomie ist eine bewiesene Lüge. Nachfragegetriebenes Wachstum ist der einzige Weg."
+    ]
+  },
+  "tx3": {
+    "q": "Der Körperschaftssteuersatz für Unternehmen sollte auf 35% angehoben werden, damit große Konzerne ihren fairen Anteil zahlen.",
+    "opts": [
+      "Ja. Konzerne verzeichnen Rekordgewinne, während sie historisch niedrige Steuersätze zahlen.",
+      "Ein moderater Steuersatz um 25-28% ist ein wettbewerbsfähiger Kompromiss.",
+      "Nein. Hohe Sätze machen Unternehmen wettbewerbsunfähig und werden an die Verbraucher weitergegeben."
+    ]
+  },
+  "cl1": {
+    "q": "Wir befinden uns in einem Klimanotstand. Der Staat muss fossile Brennstoffe schnell abbauen und in ein grünes Programm investieren.",
+    "ctx": "Das letzte Jahr war das wärmste seit Beginn der Aufzeichnungen. Waldbrände, Dürren und Fluten kosten die Wirtschaft Milliarden.",
+    "opts": [
+      "Ja. Der Übergang zu erneuerbaren Energien ist die moralische und wirtschaftliche Pflicht unserer Zeit.",
+      "Ein abrupter Ausstieg würde die Wirtschaft ruinieren. Subventionieren Sie stattdessen grüne Technologie.",
+      "Nein. Nationale Energieunabhängigkeit erfordert Öl, Gas und Kohle. Ein Green New Deal ist eine sozialistische Fantasie."
+    ]
+  },
+  "cl2": {
+    "q": "Einseitige Verbote fossiler Brennstoffe vernichten gut bezahlte Arbeitsplätze und machen uns bei Solar- und Batterietechnologie von ausländischen Konkurrenten wie China abhängig.",
+    "opts": [
+      "Ja. Förderung heimischer fossiler Energien sichert billige Energie als Motor der Wirtschaft.",
+      "Wir sollten alle Energieoptionen verfolgen, einschließlich Kernenergie und sauberem Erdgas.",
+      "Nein. Der Übergang ist unvermeidbar. Ihn anzuführen schafft die zukunftsfähigen Industriejobs."
+    ]
+  },
+  "ab1": {
+    "q": "Abtreibung ist Teil der Gesundheitsvorsorge. Der Gesetzgeber muss das Recht auf Abtreibung bundesweit verankern.",
+    "ctx": "Seit dem Urteil des Obersten Gerichtshofs haben viele Bundesstaaten Abtreibungen nahezu vollständig verboten und Frauen zu langen Reisen gezwungen.",
+    "opts": [
+      "Ja. Reproduktive Freiheit ist ein grundlegendes Menschenrecht.",
+      "Unterstützen Sie den Zugang, aber mit üblichen Einschränkungen bei späten Abtreibungen.",
+      "Nein. Das Thema gehört in die Hände der Bundesländer, im Einklang mit der Verfassung.",
+      "Nein. Abtreibung ist die Tötung menschlichen Lebens und sollte verboten werden."
+    ]
+  },
+  "ab2": {
+    "q": "Das Gerichtsurteil hat die Frage der Abtreibung richtigerweise an den demokratischen Prozess in den einzelnen Bundesländern zurückgegeben.",
+    "opts": [
+      "Ja. Die Verfassung erwähnt Abtreibung nicht. Länder haben das Recht, ungeborenes Leben zu schützen.",
+      "Länder sollten entscheiden, aber Verbote müssen Ausnahmen für Vergewaltigung, Inzest und Lebensgefahr haben.",
+      "Nein. Menschenrechte sollten nicht von geografischen Grenzen oder Länderparlamenten abhängen."
+    ]
+  },
+  "sd1": {
+    "q": "Hochschulbildung ist ein öffentliches Gut. Der Staat sollte Studiengebühren abschaffen und bestehende Studienschulden erlassen.",
+    "ctx": "Millionen Bürger tragen immense Studienschulden. Eine ganze Generation verschiebt dadurch den Hauskauf, Familiengründungen oder Unternehmensgründungen.",
+    "opts": [
+      "Ja. Kostenlose Bildung ist eine Investition in unsere gemeinsame Zukunft.",
+      "Schulden für einkommensschwache Studenten erlassen und Zinsen reformieren, aber freies Studium ist zu teuer.",
+      "Nein. Dies ist ein massiver Wohlstandstransfer von der Arbeiterklasse hin zu akademischen Eliten."
+    ]
+  },
+  "sd2": {
+    "q": "Studienschulden zu erlassen ist zutiefst ungerecht gegenüber Millionen Bürgern, die hart gearbeitet haben, um ihre Kredite abzubezahlen, oder gar nicht erst studiert haben.",
+    "opts": [
+      "Ja. Wer einen Vertrag unterschreibt, zahlt ihn zurück. Eigenverantwortung zählt.",
+      "Das System hat Probleme, aber ein pauschaler Schuldenerlass ist das falsche Instrument.",
+      "Nein. Die Studienkosten sind explodiert. Die Kreditverträge waren räuberisch."
+    ]
+  },
+  "rj1": {
+    "q": "Systemischer Rassismus ist real. Wir müssen die Polizei strukturell reformieren, die qualifizierte Immunität beenden und in benachteiligte Gemeinschaften investieren.",
+    "ctx": "Minderheiten sind statistisch weitaus häufiger in Haft und überproportional von Polizeigewalt und Justiz betroffen.",
+    "opts": [
+      "Ja. Das Justizsystem weist rassistische Ungleichheiten auf und erfordert tiefgreifende Reformen.",
+      "Reformieren Sie die Polizei, aber schwächen oder kürzen Sie die Mittel der Strafverfolgung nicht.",
+      "Nein. Systemischer Rassismus ist ein spaltendes Narrativ. Das Problem ist Kriminalität und Familienzerfall."
+    ]
+  },
+  "rj2": {
+    "q": "Die ständige Fokussierung auf ethnische Spaltungen durch Politik und Medien untergräbt den gesellschaftlichen Zusammenhalt und spaltet das Land.",
+    "opts": [
+      "Ja. Wir sollten Menschen nach ihrem Charakter beurteilen, nicht nach ihrer Herkunft.",
+      "Ungleichheiten sind real, aber der Fokus sollte auf einenden wirtschaftlichen Lösungen liegen.",
+      "Nein. Die Geschichte lässt sich nicht leugnen. Wir müssen systemischen Rassismus benennen, um ihn abzubauen."
+    ]
+  },
+  "vt1": {
+    "q": "Wir sollten nationale Standards für die automatische Wählerregistrierung einführen, Briefwahlen ausweiten und den Wahltag zum Feiertag machen.",
+    "opts": [
+      "Ja. Wählen ist ein Grundrecht. Wir sollten es jedem Bürger so einfach wie möglich machen.",
+      "Ein Wahltags-Feiertag ja, aber die Registrierungsregeln sollten bei den Bundesländern verbleiben.",
+      "Nein. Wir brauchen strengere Wählerausweisgesetze, um die Integrität der Wahl zu sichern."
+    ]
+  },
+  "vt2": {
+    "q": "Die Lockerung der Wählerregistrierungsregeln und die Ausweitung der Briefwahl öffnen Tür und Tor für Betrug und untergraben das Vertrauen in Wahlen.",
+    "opts": [
+      "Ja. Jede Stimme muss überprüft werden. Ausweispflicht schützt die Integrität unserer Demokratie.",
+      "Integrität ist wichtig, aber Regeln dürfen nicht zur Wählerunterdrückung missbraucht werden.",
+      "Nein. Wählerbetrug ist praktisch nicht existent. Diese Gesetze sollen Minderheiten vom Wählen abhalten."
+    ]
+  },
+  "fp1": {
+    "q": "Wir müssen Stärke projizieren. Ein starkes Militär ist der einzige Garant für globale Stabilität und den Schutz demokratischer Werte.",
+    "ctx": "Das Land unterhält Hunderte Militärstützpunkte weltweit und gibt mehr für Verteidigung aus als die nächsten zehn Länder zusammen.",
+    "opts": [
+      "Ja. Frieden durch Stärke. Wir müssen unsere Bündnispartner unterstützen.",
+      "Verteidigen wir unsere Verbündeten, aber vermeiden wir teure Auslandseinsätze und Nation-Building.",
+      "Nein. Der militärisch-industrielle Komplex entzieht Ressourcen, die für inländische Bedürfnisse gebraucht werden."
+    ]
+  },
+  "fp2": {
+    "q": "Wir sollten aufhören, Milliarden für Kriege im Ausland auszugeben, und uns stattdessen auf den Wiederaufbau im eigenen Land konzentrieren.",
+    "opts": [
+      "Ja. Die eigene Bevölkerung zuerst. Unsere Priorität muss die heimische Stabilität sein.",
+      "Ein ausgewogener Ansatz. Wir müssen uns global engagieren, um unsere eigenen Interessen zu schützen.",
+      "Nein. Isolationismus ist eine gefährliche Illusion. Globale Stabilität sichert auch unsere Wirtschaft."
+    ]
+  },
+  "si1": {
+    "q": "Geschlechtsangleichende Behandlungen sind eine Frage der medizinischen Freiheit. Die Politik hat kein Recht, diese zu verbieten.",
+    "ctx": "Transgender-Jugendliche weisen hohe Raten von Depressionen auf. Medizinische Fachverbände unterstützen geschlechtsangleichende Pflege als notwendig.",
+    "opts": [
+      "Ja. Entscheidungen sollten von Patienten, Familien und Ärzten getroffen werden, nicht von Politikern.",
+      "Behandlung ja, aber einige Altersgrenzen für irreversible chirurgische Eingriffe sind vernünftig.",
+      "Nein. Wir müssen Kinder vor experimentellen Eingriffen schützen und traditionelle Werte verteidigen."
+    ]
+  },
+  "si2": {
+    "q": "Minderjährigen irreversible Behandlungen zur Geschlechtsangleichung zu erlauben, ist medizinische Fehlpraxis, die der Staat verbieten muss.",
+    "opts": [
+      "Ja. Kinder haben nicht die Reife, um in solche lebensverändernden Entscheidungen einzuwilligen.",
+      "Strenge medizinische Prüfungen sind nötig, aber pauschale Verbote gehen zu weit.",
+      "Nein. Medizinische Entscheidungen gehören in die Hände von Familien und Ärzten."
+    ]
+  },
+  "gi1": {
+    "q": "Der Staat sollte soziale Medien streng regulieren, um Desinformation, Hassrede und ausländische Wahlbeeinflussung zu bekämpfen.",
+    "opts": [
+      "Ja. Unregulierte Tech-Monopole schaden der Demokratie und der öffentlichen Gesundheit.",
+      "Desinformation ist eine Gefahr, aber staatliche Regulierung birgt das Risiko politischer Zensur.",
+      "Nein. Das Recht auf freie Meinungsäußerung schützt alle Meinungen. Freier Austausch ist der einzige Weg."
+    ]
+  },
+  "gi2": {
+    "q": "Druck des Staates auf soziale Medien zur Unterdrückung unliebsamer Meinungen ist staatliche Zensur durch die Hintertür.",
+    "ctx": "Es gibt Berichte, wonach Regierungsstellen mit Plattformen kommunizieren, um Inhalte zu Pandemien oder Wahlen zu kennzeichnen.",
+    "opts": [
+      "Ja. Staatlicher Druck auf private Plattformen zur Unterdrückung von Inhalten verletzt die freie Rede.",
+      "Plattformen sollten ihre eigenen Regeln durchsetzen, aber die Kommunikation mit dem Staat muss transparent sein.",
+      "Nein. Der Staat hat die Pflicht, Plattformen vor Desinformationskampagnen oder Bedrohungen zu warnen."
+    ]
+  },
+  "ss1": {
+    "q": "Wir sollten Rentenkassen sichern, indem wir die Beitragsbemessungsgrenze anheben, sodass Besserverdiener auf ihr gesamtes Einkommen einzahlen.",
+    "opts": [
+      "Ja. Wohlhabende sollten auf ihr gesamtes Einkommen Beiträge zahlen, genau wie Durchschnittsverdiener.",
+      "Grenze anheben, aber auch das Renteneintrittsalter für künftige Generationen anpassen.",
+      "Nein. Wir sollten auf private Konten setzen und die Altersvorsorge dem Markt überlassen."
+    ]
+  },
+  "ss2": {
+    "q": "Der Ausbau staatlicher Rentenprogramme bei wachsender Staatsverschuldung ist fiskalisch unverantwortlich.",
+    "opts": [
+      "Ja. Wir müssen Ausgaben kürzen und private Vorsorge stärken, um Staatsinsolvenz zu verhindern.",
+      "Rentenprogramme müssen reformiert werden, aber das soziale Sicherheitsnetz muss intakt bleiben.",
+      "Nein. Diese Programme sind Versprechen, in die Bürger eingezahlt haben. Kürzen Sie eher Subventionen."
+    ]
+  },
+  "tr1": {
+    "q": "Freihandel war ein massiver Wohlstandstransfer von Arbeitnehmern hin zu multinationalen Konzernen. Wir müssen heimische Industrien schützen.",
+    "ctx": "Jahrzehntelang wurden Industrie-Arbeitsplätze ins Ausland verlagert. Ganze Regionen verödeten, während Konzerne Rekordgewinne verbuchten.",
+    "opts": [
+      "Ja. Zölle und Industriepolitik sind notwendig, um die Mittelschicht wieder aufzubauen.",
+      "Gezielte Zölle nur auf strategische Sektoren (wie Mikrochips). Breite Zölle schaden Verbrauchern.",
+      "Nein. Protektionismus erhöht die Preise und führt zu Handelskriegen, die alle ärmer machen."
+    ]
+  },
+  "ed1": {
+    "q": "Die Schulfinanzierung sollte sich strikt nach dem Bedarf richten, wobei Mittel von wohlhabenden Bezirken an Schulen in ärmeren Gegenden umverteilt werden.",
+    "opts": [
+      "Ja. Jedes Kind verdient den gleichen Start ins Leben, unabhängig von seiner Postleitzahl.",
+      "Bedarfsorientierte Finanzierung ja, aber bestrafen Sie nicht engagierte Schulbezirke.",
+      "Nein. Bildungsgutscheine sollten Eltern erlauben, ihr Kind auf jede Schule zu schicken, ob öffentlich oder privat."
+    ]
+  },
+  "ed2": {
+    "q": "Bildungsgutscheine entziehen staatlichen Schulen dringend benötigte Mittel und fördern soziale Ungleichheit.",
+    "opts": [
+      "Ja. Staatliche Mittel gehören in staatliche Schulen. Gutscheinprogramme schaffen Ungerechtigkeit.",
+      "Gutscheine haben Wert, sollten aber nur einkommensschwachen Schülern an schlechten Schulen helfen.",
+      "Nein. Wettbewerb verbessert alle Schulen. Eltern sollten die freie Wahl haben."
+    ]
+  },
+  "co1": {
+    "q": "Das oberste Gericht ist zu einem parteipolitischen Gremium geworden. Wir sollten Amtszeitbegrenzungen und verbindliche Ethikregeln einführen.",
+    "opts": [
+      "Ja. Lebenslange Ernennungen ohne ethische Rechenschaftspflicht bedrohen die Legitimität.",
+      "Verbindliche Ethikregeln ja, aber Amtszeitbegrenzungen schwächen die Unabhängigkeit der Justiz.",
+      "Nein. Das System hat sich bewährt. Die Regeln zu ändern ist nur parteipolitische Einmischung."
+    ]
+  },
+  "co2": {
+    "q": "Die Verfassung ist ein lebendiges Dokument, das im Lichte moderner Werte und des gesellschaftlichen Fortschritts interpretiert werden muss.",
+    "opts": [
+      "Ja. Die Gründer konnten die moderne Welt nicht vorhersehen. Eine starre Auslegung ist anachronistisch.",
+      "Die Auslegung muss sich anpassen, aber grundlegende Prinzipien müssen stabil bleiben.",
+      "Nein. Die Absicht der Verfasser ist der einzige Garant des Rechts. Änderungen erfordern Verfassungszusätze."
+    ]
+  },
+  "bt1": {
+    "q": "Tech-Monopole wie Google, Meta und Amazon sind zu mächtig geworden und müssen zerschlagen werden.",
+    "ctx": "Eine Handvoll Technologiekonzerne kontrolliert den Informationsfluss und besitzt den digitalen öffentlichen Raum.",
+    "opts": [
+      "Ja. Zerschlagt sie. Sie ersticken Wettbewerb, ernten Daten und kontrollieren den Diskurs.",
+      "Regulierungen und Datenschutzgesetze sind besser. Eine Zerschlagung schadet unserer technologischen Vormacht.",
+      "Nein. Sie sind erfolgreich, weil sie hervorragende Dienste anbieten. Lassen wir den Markt entscheiden."
+    ]
+  },
+  "br1": {
+    "q": "Der Staat ist zu groß, zu teuer und greift zu tief ein. Ein kleinerer Staat würde die Freiheit und Produktivität steigern.",
+    "opts": [
+      "Ja. Ausgaben kürzen, Steuern und Vorschriften abbauen, Bürgern mehr Eigenverantwortung zutrauen.",
+      "Einiges ist zu groß, aber Kernprogramme und soziale Dienste haben genau die richtige Größe.",
+      "Nein. Der Staat schafft das Fundament des Wohlstands. Ihn zu beschneiden entzieht der Bevölkerung den Halt."
+    ]
+  },
+  "br2": {
+    "q": "Die Kluft zwischen Arm und Reich gefährdet den gesellschaftlichen Zusammenhalt und die wirtschaftliche Mobilität.",
+    "opts": [
+      "Ja. Progressive Besteuerung, stärkere Sozialprogramme und Vermögenssteuern sind nötig.",
+      "Ungleichheit ist real, aber Aufstiegsschancen und Wachstum zählen mehr als Umverteilung.",
+      "Ungleichheit spiegelt unterschiedliche Leistung wider. Erzwungene Gleichheit bremst den Ehrgeiz."
+    ]
+  },
+  "br3": {
+    "q": "Die größten Gefahren für die Freiheit kommen von innen — staatliche Überwachung und der Abbau von Bürgerrechten.",
+    "opts": [
+      "Ja. Massenüberwachung und Einschränkungen der Bürgerrechte sind die wahren Bedrohungen.",
+      "Externe Bedrohungen sind real. Die Balance zwischen Sicherheit und Freiheit ist schwer.",
+      "Äußere Bedrohungen erfordern eine starke innere Sicherheit und Geheimdienste."
+    ]
+  },
+  "br4": {
+    "q": "Konzerne haben zu viel Einfluss auf Politik, Wirtschaft und das tägliche Leben.",
+    "opts": [
+      "Ja. Wir müssen Lobbyismus drastisch einschränken und die Wahlkampffinanzierung reformieren.",
+      "Konzerneinfluss ist ein problem, aber übermäßige Regulierung schadet dem Mittelstand.",
+      "Wirtschaftsfreiheit ist die Basis des Wohlstands. Der Staat ist eine größere Bedrohung als jede Firma."
+    ]
+  },
+  "ex1": {
+    "q": "Dass das Land so viele Milliardäre hat, ist kein Erfolg, sondern ein Zeichen für ein manipuliertes System.",
+    "opts": [
+      "Ja. Extremer Reichtum in diesem Ausmaß ist ein politisches Versagen, kein Erfolg.",
+      "Nein. Reichtum an der Spitze nimmt den Ärmeren nichts weg. Wachstum nützt allen."
+    ]
+  },
+  "ex2": {
+    "q": "Die Reichen zu besteuern, um staatliche Programme zu finanzieren, bestraft Leistungsträger und vertreibt Arbeitsplätze.",
+    "opts": [
+      "Ja. Kapital flieht aus Hochsteuerländern. Man kann Wohlstand nicht durch Bestrafung aufbauen.",
+      "Nein. Die Reichen haben ihr Vermögen auf öffentlicher Infrastruktur aufgebaut. Sie schulden der Gesellschaft mehr."
+    ]
+  },
+  "ex3": {
+    "q": "Das Gefängnissystem sperrt überproportional viele Menschen ein. Das ist keine Gerechtigkeit, sondern industrielle Bestrafung.",
+    "opts": [
+      "Ja. Massenhaft Gefängnisstrafen sind eine Katastrophe und erfordern einen Richtungswechsel.",
+      "Nein. Hohe Haftstrafen spiegeln hohe Kriminalitätsraten wider. Öffentliche Sicherheit ist nicht verhandelbar."
+    ]
+  },
+  "ex4": {
+    "q": "Die Kriminalität stieg in Städten, die der Polizei Gelder strichen. Die Mittelkürzung war ein verhängnisvoller Fehler.",
+    "opts": [
+      "Ja. Der Versuch ist gescheitert und die schwächsten Stadtteile haben den Preis gezahlt.",
+      "Nein. Die Vernachlässigung von Sozialausgaben, Wohnen und Schulen ist das Problem, nicht zu wenige Polizisten."
+    ]
+  },
+  "ex5": {
+    "q": "Der Staat hat kein Recht, seine eigenen Bürger ohne richterlichen Beschluss zu überwachen. Massenüberwachung muss enden.",
+    "opts": [
+      "Ja. Eine Regierung, die jeden überwacht, vertraut niemandem.",
+      "Nein. Sicherheitsdienste brauchen breiten Zugang. Terrorismus wartet nicht auf Durchsuchungsbeschlüsse."
+    ]
+  },
+  "id1": {
+    "q": "Jede Kultur hat Errungenschaften hervorgebracht, auf die man stolz sein kann. Ich bin stolz auf meine und entschuldige mich nicht dafür.",
+    "opts": [
+      "Ja. Stolz auf die eigene Kultur und Herkunft ist natürlich und gesund.",
+      "Stolz ist in Ordnung, aber Überlegenheitsansprüche machen mich unruhig.",
+      "Nein. Kulturen hierarchisch zu ordnen ist der Ursprung gefährlichen Denkens."
+    ]
+  },
+  "id2": {
+    "q": "Heute lebende Menschen sollten sich für die historischen Verbrechen ihrer Nation schämen – wie Sklaverei, Vertreibung oder Kolonialismus.",
+    "opts": [
+      "Ja. Historische Schuld anzuerkennen ist Teil eines ehrlichen Selbstbildes.",
+      "Wir sollten die Geschichte ehrlich anerkennen, ohne persönliche Scham zu fordern.",
+      "Nein. Man kann nicht für Taten büßen, die man nicht begangen hat. Kollektivschuld ist ungerecht."
+    ]
+  }
+};
+
+
 const SB_URL = 'https://rttomfnfyjjssdqfzkaj.supabase.co';
 const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
 
@@ -2468,54 +3082,102 @@ const BANK = [
 
 const PARTY_META = {
   "spd": {
-    "name": "SPD",
+    "name": {
+      "de": "SPD",
+      "en": "SPD"
+    },
     "color": "#EB001F",
     "barClass": "bar-spd",
-    "desc": "Deine Antworten stimmen am ehesten mit der SPD (Sozialdemokratische Partei Deutschlands) überein. Du befürwortest einen starken Sozialstaat (wie das Bürgergeld), Arbeitnehmerrechte, öffentliche Investitionen und eine engagierte Umweltpolitik im Rahmen der sozialen Marktwirtschaft."
+    "desc": {
+      "de": "Deine Antworten stimmen am ehesten mit der SPD (Sozialdemokratische Partei Deutschlands) überein. Du befürwortest einen starken Sozialstaat (wie das Bürgergeld), Arbeitnehmerrechte, öffentliche Investitionen und eine engagierte Umweltpolitik.",
+      "en": "Your answers most closely match the SPD (Social Democratic Party). You support a strong welfare state, workers' rights, public investments, and active environmental policies."
+    }
   },
   "cdu": {
-    "name": "CDU/CSU",
+    "name": {
+      "de": "CDU/CSU",
+      "en": "CDU/CSU"
+    },
     "color": "#1C1C1C",
     "barClass": "bar-cdu",
-    "desc": "Deine Antworten stimmen am ehesten mit der CDU/CSU (Union) überein. Du befürwortest wirtschaftliche Stabilität, die Einhaltung der Schuldenbremse, moderate Steuern, solide Finanzen, starke innere Sicherheit und traditionelle gesellschaftliche Werte."
+    "desc": {
+      "de": "Deine Antworten stimmen am ehesten mit der CDU/CSU (Union) überein. Du befürwortest wirtschaftliche Stabilität, die Einhaltung der Schuldenbremse, moderate Steuern, solide Finanzen und starke innere Sicherheit.",
+      "en": "Your answers most closely match the CDU/CSU (Union). You support economic stability, maintaining the debt brake, moderate taxes, solid finances, and strong internal security."
+    }
   },
   "grn": {
-    "name": "Grüne",
+    "name": {
+      "de": "Grüne",
+      "en": "Greens"
+    },
     "color": "#46962B",
     "barClass": "bar-grn",
-    "desc": "Deine Antworten stimmen am ehesten mit Bündnis 90/Die Grünen überein. Du legst großen Wert auf konsequenten Klimaschutz, den schnellen Ausstieg aus fossilen Energieträgern, gesellschaftliche Vielfalt, Bürgerrechte und eine starke europäische Integration."
+    "desc": {
+      "de": "Deine Antworten stimmen am ehesten mit Bündnis 90/Die Grünen überein. Du legst großen Wert auf konsequenten Klimaschutz, den schnellen Ausstieg aus fossilen Energieträgern und gesellschaftliche Vielfalt.",
+      "en": "Your answers most closely match Alliance 90/The Greens. You place high value on consistent climate action, rapid phase-out of fossil fuels, and social diversity."
+    }
   },
   "fdp": {
-    "name": "FDP",
+    "name": {
+      "de": "FDP",
+      "en": "FDP"
+    },
     "color": "#FFED00",
     "barClass": "bar-fdp",
-    "desc": "Deine Antworten stimmen am ehesten mit der FDP (Freie Demokratische Partei) überein. Du trittst für eine liberale Wirtschaftspolitik, Steuersenkungen, Bürokratieabbau, Digitalisierung sowie ein Höchstmaß an individueller Freiheit und Eigenverantwortung ein."
+    "desc": {
+      "de": "Deine Antworten stimmen am ehesten mit der FDP (Freie Demokratische Partei) überein. Du trittst für eine liberale Wirtschaftspolitik, Steuersenkungen, Bürokratieabbau sowie individuelle Freiheit ein.",
+      "en": "Your answers most closely match the FDP (Free Democratic Party). You advocate for a liberal economic policy, tax cuts, deregulation, and maximum individual liberty."
+    }
   },
   "afd": {
-    "name": "AfD",
+    "name": {
+      "de": "AfD",
+      "en": "AfD"
+    },
     "color": "#009EE0",
     "barClass": "bar-afd",
-    "desc": "Deine Antworten stimmen am ehesten mit der AfD (Alternative für Deutschland) überein. Du forderst eine restriktive Asylpolitik, den Austritt aus der EU oder starke Beschränkung, Klimaskepsis und traditionelle Familienwerte."
+    "desc": {
+      "de": "Deine Antworten stimmen am ehesten mit der AfD (Alternative für Deutschland) überein. Du forderst eine restriktive Asylpolitik, den Austritt aus der EU oder starke Beschränkung und Klimaskepsis.",
+      "en": "Your answers most closely match the AfD (Alternative for Germany). You demand a highly restrictive asylum policy, exit from or major restrictions on the EU, and climate skepticism."
+    }
   },
   "lnk": {
-    "name": "Die Linke",
+    "name": {
+      "de": "Die Linke",
+      "en": "Left Party"
+    },
     "color": "#BE3075",
     "barClass": "bar-lnk",
-    "desc": "Deine Antworten stimmen am ehesten mit der Partei Die Linke überein. Du forderst eine umfassende Reichensteuer, die Rekommunalisierung der Daseinsvorsorge (wie Gesundheit und Wohnen) und eine strikt friedensorientierte Außenpolitik."
+    "desc": {
+      "de": "Deine Antworten stimmen am ehesten mit der Partei Die Linke überein. Du forderst eine umfassende Reichensteuer, die Rekommunalisierung der Daseinsvorsorge und eine friedensorientierte Außenpolitik.",
+      "en": "Your answers most closely match Die Linke (The Left). You call for high wealth taxes, municipal ownership of public utilities, and an anti-interventionist foreign policy."
+    }
   },
   "bsw": {
-    "name": "BSW",
+    "name": {
+      "de": "BSW",
+      "en": "BSW"
+    },
     "color": "#9B2335",
     "barClass": "bar-bsw",
-    "desc": "Deine Antworten stimmen am ehesten mit dem BSW (Bündnis Sahra Wagenknecht) überein. Du verbindest eine gerechte Wirtschaftspolitik mit einer restriktiven Haltung in der Migrationspolitik, Ablehnung von Gender-Mainstreaming und Skepsis gegenüber Waffenlieferungen."
+    "desc": {
+      "de": "Deine Antworten stimmen am ehesten mit dem BSW (Bündnis Sahra Wagenknecht) überein. Du verbindest eine gerechte Wirtschaftspolitik mit einer restriktiven Haltung in der Migrationspolitik.",
+      "en": "Your answers most closely match the BSW (Sahra Wagenknecht Alliance). You combine progressive economic policies with a restrictive stance on migration and social conservatism."
+    }
   },
   "ind": {
-    "name": "Unabhängig",
+    "name": {
+      "de": "Unabhängig",
+      "en": "Independent"
+    },
     "color": "#7A7F88",
     "barClass": "bar-ind",
-    "desc": "Deine Ansichten sind gemischt und lassen sich keiner einzelnen Partei eindeutig zuordnen. Du vertrittst pragmatische, themenbezogene Positionen abseits des klassischen Rechts-Links-Spektrums."
+    "desc": {
+      "de": "Deine Ansichten sind gemischt und lassen sich keiner einzelnen Partei eindeutig zuordnen. Du vertrittst pragmatische, themenbezogene Positionen.",
+      "en": "Your views are mixed and do not align strongly with a single party. You hold pragmatic, issue-by-issue stances across the spectrum."
+    }
   }
-};
+}};
 </script>
 <script src="/engine.js"></script>
 </body>
