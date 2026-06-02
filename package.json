@@ -1,0 +1,13 @@
+{
+  "name": "coreopinion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node build.js && vite",
+    "build": "node build.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

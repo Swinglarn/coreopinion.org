@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Zealand Political Quiz 2026: Which Party Do You Align With? | CoreOpinion</title>
-<meta name="description" content="Find your position on the political compass. 47 scenario-based questions on New Zealand issues. See your alignment with National, Labour, Green, ACT, NZ First, and Te Pāti Māori.">
+<title>New Zealand Political Quiz 2026 | CoreOpinion</title>
+<meta name="description" content="Take the free NZ political compass quiz. 47 scenario questions on Kiwi issues to find where you stand and check your alignment with NZ parties.">
 <meta name="keywords" content="New Zealand political compass, voting helper NZ, NZ election 2026, which party to vote NZ, political test NZ, National, Labour, Greens, ACT, NZ First, Te Pati Maori">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -12,12 +12,17 @@
 <meta name="theme-color" content="#F9F8F6">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/nz">
-<meta property="og:title" content="New Zealand Political Quiz 2026: Which Party Do You Align With? | CoreOpinion">
-<meta property="og:description" content="Find your position on the political compass. 47 scenario-based questions on New Zealand issues. See your alignment with National, Labour, Green, ACT, NZ First, and Te Pāti Māori.">
+<meta property="og:title" content="New Zealand Political Quiz 2026 | CoreOpinion">
+<meta property="og:description" content="Take the free NZ political compass quiz. 47 scenario questions on Kiwi issues to find where you stand and check your alignment with NZ parties.">
 <meta property="og:site_name" content="CoreOpinion">
+<meta property="og:image" content="https://coreopinion.org/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CoreOpinion political compass test">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="New Zealand Political Quiz 2026: Which Party Do You Align With? | CoreOpinion">
-<meta name="twitter:description" content="Find your position on the political compass. 47 scenario-based questions on New Zealand issues. See your alignment with National, Labour, Green, ACT, NZ First, and Te Pāti Māori.">
+<meta name="twitter:title" content="New Zealand Political Quiz 2026 | CoreOpinion">
+<meta name="twitter:description" content="Take the free NZ political compass quiz. 47 scenario questions on Kiwi issues to find where you stand and check your alignment with NZ parties.">
+<meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -36,12 +41,12 @@
       <a href="/ca">Canada</a>
       <a href="/au">Australia</a>
       <a href="/nz">New Zealand</a>
+      <a href="/se">Sweden</a>
       <a href="/de">Germany</a>
       <a href="/at">Austria</a>
       <a href="/fr">France</a>
       <a href="/es">Spain</a>
       <a href="/it">Italy</a>
-      <a href="/se">Sweden</a>
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
@@ -68,31 +73,6 @@
   <div class="party-strip">
     <div class="party-cell">
       <div class="party-dot" style="background:#004C97"></div>
-      <div class="party-name">National</div>
-      <div class="party-desc">Centre-right. Tax cuts, fiscal responsibility, infrastructure investment, law and order.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#D82A2A"></div>
-      <div class="party-name">Labour</div>
-      <div class="party-desc">Centre-left. Social safety nets, investments in public healthcare and education.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#098137"></div>
-      <div class="party-name">Greens</div>
-      <div class="party-desc">Green / Left. Environmental protection, wealth redistribution, social justice.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#FDE401"></div>
-      <div class="party-name">ACT</div>
-      <div class="party-desc">Right classical liberal. Minimal state, tax simplification, deregulation, liberty.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#1C1C1C"></div>
-      <div class="party-name">NZ First</div>
-      <div class="party-desc">Nationalist / Populist. Restricting immigration, economic nationalism, seniors support.</div>
-    </div>
-  </div>
-
   <div class="info-section">
     <div class="info-block">
       <h3>Scenario-based, not a survey</h3>
@@ -167,21 +147,19 @@
           <option>Tasman</option>
           <option>Waikato</option>
           <option>Wellington</option>
-          <option>West Coast</option>
-        </select>
+          <option>West Coast</option>        </select>
       </div>
       <div>
         <div class="field-label">How do you currently identify? <span>(optional)</span></div>
         <select id="d-party">
-          <option value="">Prefer not to say</option>
-<option>National</option>
-<option>Labour</option>
-<option>Greens</option>
-<option>ACT</option>
-<option>NZ First</option>
-<option>Te Pāti Māori</option>
-<option>Independent / Other</option>
-        </select>
+          <option value="">Select...</option>
+          <option>National</option>
+          <option>Labour</option>
+          <option>Green Party</option>
+          <option>ACT</option>
+          <option>NZ First</option>
+          <option>Te Pāti Māori</option>
+          <option>Independent</option>        </select>
       </div>
       <div>
         <div class="field-label">Gender <span>(optional)</span></div>
@@ -215,7 +193,7 @@
       </div>
     </div>
     <p class="demo-note">This is never linked to your answers. It helps us understand who takes the test.</p>
-    <div style="display:flex;gap:12px;align-items:flex-start;margin-top:20px;margin-bottom:24px;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px 20px;box-shadow:0 1px 4px rgba(10,12,15,0.02);text-align:left;">
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-top:20px;margin-bottom:24px;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px 20px;box-shadow:0 1px 4px rgba(10,12,15,0.02);text-align:left;">
       <input type="checkbox" id="d-consent" checked style="width:20px;height:20px;margin-top:2px;cursor:pointer;">
       <label for="d-consent" style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5;cursor:pointer;user-select:none;">
         <strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.
@@ -246,12 +224,12 @@
       <a href="/ca">Canada</a>
       <a href="/au">Australia</a>
       <a href="/nz">New Zealand</a>
+      <a href="/se">Sweden</a>
       <a href="/de">Germany</a>
       <a href="/at">Austria</a>
       <a href="/fr">France</a>
       <a href="/es">Spain</a>
       <a href="/it">Italy</a>
-      <a href="/se">Sweden</a>
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
@@ -2464,7 +2442,8 @@ const PARTY_META = {
   }
 };
 
-
+window.currentLang = 'en';
+window.getQuestion = q => q;
 </script>
 <script src="/engine.js"></script>
 </body>

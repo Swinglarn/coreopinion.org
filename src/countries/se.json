@@ -1,0 +1,2538 @@
+{
+  "code": "se",
+  "name": "Sverige",
+  "localLabel": "Sverige",
+  "flag": "🇸🇪",
+  "title": "Politisk Kompass Sverige 2026 | CoreOpinion",
+  "desc": "Hitta din position på den politiska kompassen. 47 scenarioräknade frågor för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.",
+  "keywords": "Swedish political quiz, Sverige politisk kompass, political compass Sweden, Socialdemokraterna Moderaterna test, Sverigedemokraterna quiz, Swedish election quiz, political alignment Sweden, vilket parti passar mig, riksdagspartierna quiz 2026",
+  "canonical": "https://coreopinion.org/se",
+  "regions": [
+    "Stockholm",
+    "Gotland",
+    "Blekinge",
+    "Dalarna",
+    "Gavleborg",
+    "Halland",
+    "Jamtland",
+    "Jonkoping",
+    "Kalmar",
+    "Kronoberg",
+    "Norrbotten",
+    "Orebro",
+    "Ostergotland",
+    "Skane",
+    "Sodermanland",
+    "Uppsala",
+    "Varmland",
+    "Vasterbotten",
+    "Vasternorrland",
+    "Vastmanland",
+    "Vastra Gotaland"
+  ],
+  "parties": [
+    "s",
+    "m",
+    "sd",
+    "c",
+    "v",
+    "mp",
+    "l",
+    "kd"
+  ],
+  "partyMeta": {
+    "s": {
+      "name": "Socialdemokraterna",
+      "color": "#CC0000",
+      "barClass": "bar-s",
+      "desc": "Your answers most closely match the Social Democrats (S) platform. You support a strong welfare state, workers rights, and public services funded by progressive taxation."
+    },
+    "m": {
+      "name": "Moderaterna",
+      "color": "#52BDEC",
+      "barClass": "bar-m",
+      "desc": "Your answers most closely match the Moderates (M) platform. You favour lower taxes, law and order, market solutions to public services, and fiscal discipline."
+    },
+    "sd": {
+      "name": "Sverigedemokraterna",
+      "color": "#006AA7",
+      "barClass": "bar-sd",
+      "desc": "Your answers most closely match the Sweden Democrats (SD) platform. You support sharp cuts to immigration, tougher law enforcement, and a culturally defined national identity."
+    },
+    "c": {
+      "name": "Centerpartiet",
+      "color": "#009933",
+      "barClass": "bar-c",
+      "desc": "Your answers most closely match the Centre Party (C) platform. You favour rural Sweden, a liberal market economy, open immigration policy, and EU integration."
+    },
+    "v": {
+      "name": "Vänsterpartiet",
+      "color": "#DA2213",
+      "barClass": "bar-v",
+      "desc": "Your answers most closely match the Left Party (V) platform. You support wealth redistribution, feminist policy, opposing privatisation, and a strong public sector."
+    },
+    "mp": {
+      "name": "Miljöpartiet",
+      "color": "#53A045",
+      "barClass": "bar-mp",
+      "desc": "Your answers most closely match the Green Party (MP) platform. You prioritise climate action, biodiversity, open borders, and progressive social policy."
+    },
+    "l": {
+      "name": "Liberalerna",
+      "color": "#6EBBF6",
+      "barClass": "bar-l",
+      "desc": "Your answers most closely match the Liberals (L) platform. You support strong public education, individual rights, EU federalism, and classical liberal values."
+    },
+    "kd": {
+      "name": "Kristdemokraterna",
+      "color": "#231977",
+      "barClass": "bar-kd",
+      "desc": "Your answers most closely match the Christian Democrats (KD) platform. You value family policy, welfare reform, traditional social values, and Christian democratic principles."
+    }
+  },
+  "calibrations": {
+    "im1": [
+      {
+        "s": -2,
+        "m": 1,
+        "sd": 2,
+        "c": -1,
+        "v": -2,
+        "mp": -2,
+        "l": -1,
+        "kd": 1
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 1,
+        "m": -1,
+        "sd": -2,
+        "c": 1,
+        "v": 2,
+        "mp": 2,
+        "l": 1,
+        "kd": -1
+      }
+    ],
+    "im2": [
+      {
+        "s": 1,
+        "m": -1,
+        "sd": -2,
+        "c": 1,
+        "v": 2,
+        "mp": 2,
+        "l": 1,
+        "kd": -1
+      },
+      {
+        "s": 1,
+        "m": 0,
+        "sd": -1,
+        "c": 0,
+        "v": 1,
+        "mp": 1,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": -1,
+        "m": 1,
+        "sd": 2,
+        "c": -1,
+        "v": -2,
+        "mp": -1,
+        "l": -1,
+        "kd": 1
+      }
+    ],
+    "im3": [
+      {
+        "s": -1,
+        "m": 1,
+        "sd": 2,
+        "c": -1,
+        "v": -2,
+        "mp": -2,
+        "l": -1,
+        "kd": 1
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": -1,
+        "mp": -1,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 1,
+        "m": -1,
+        "sd": -2,
+        "c": 1,
+        "v": 2,
+        "mp": 2,
+        "l": 1,
+        "kd": -1
+      }
+    ],
+    "im4": [
+      {
+        "s": 1,
+        "m": 1,
+        "sd": 1,
+        "c": 0,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": -1,
+        "c": 1,
+        "v": 1,
+        "mp": 1,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": -1,
+        "sd": -2,
+        "c": 0,
+        "v": 1,
+        "mp": 2,
+        "l": -1,
+        "kd": -1
+      }
+    ],
+    "cr1": [
+      {
+        "s": 0,
+        "m": 2,
+        "sd": 2,
+        "c": -1,
+        "v": -2,
+        "mp": -2,
+        "l": -1,
+        "kd": 2
+      },
+      {
+        "s": 2,
+        "m": -1,
+        "sd": -1,
+        "c": 0,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 1,
+        "m": 1,
+        "sd": 1,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 1,
+        "kd": 1
+      }
+    ],
+    "cr2": [
+      {
+        "s": 0,
+        "m": 2,
+        "sd": 2,
+        "c": -1,
+        "v": -2,
+        "mp": -2,
+        "l": -2,
+        "kd": 1
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": 1,
+        "c": 0,
+        "v": -1,
+        "mp": -1,
+        "l": -1,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": -1,
+        "sd": -1,
+        "c": 1,
+        "v": 2,
+        "mp": 2,
+        "l": 2,
+        "kd": -1
+      }
+    ],
+    "wl1": [
+      {
+        "s": 2,
+        "m": -1,
+        "sd": 0,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": 0,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": -2,
+        "m": 2,
+        "sd": 1,
+        "c": 1,
+        "v": -2,
+        "mp": -2,
+        "l": 1,
+        "kd": 0
+      }
+    ],
+    "wl2": [
+      {
+        "s": 0,
+        "m": 2,
+        "sd": 2,
+        "c": 0,
+        "v": -2,
+        "mp": -2,
+        "l": 0,
+        "kd": 1
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 2,
+        "m": -1,
+        "sd": -2,
+        "c": 0,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": -1
+      }
+    ],
+    "hc1": [
+      {
+        "s": 2,
+        "m": -1,
+        "sd": 0,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": -1,
+        "m": 2,
+        "sd": 1,
+        "c": 2,
+        "v": -2,
+        "mp": -1,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": 1,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": 1,
+        "mp": 1,
+        "l": 0,
+        "kd": 1
+      }
+    ],
+    "hc2": [
+      {
+        "s": 2,
+        "m": -2,
+        "sd": -1,
+        "c": -2,
+        "v": 2,
+        "mp": 2,
+        "l": -1,
+        "kd": -1
+      },
+      {
+        "s": -1,
+        "m": 1,
+        "sd": 0,
+        "c": 1,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": -2,
+        "m": 2,
+        "sd": 0,
+        "c": 2,
+        "v": -2,
+        "mp": -2,
+        "l": 1,
+        "kd": 1
+      }
+    ],
+    "ed1": [
+      {
+        "s": 2,
+        "m": -2,
+        "sd": -1,
+        "c": -2,
+        "v": 2,
+        "mp": 2,
+        "l": -1,
+        "kd": -1
+      },
+      {
+        "s": -1,
+        "m": 1,
+        "sd": 0,
+        "c": 1,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": -2,
+        "m": 2,
+        "sd": 1,
+        "c": 2,
+        "v": -2,
+        "mp": -2,
+        "l": 1,
+        "kd": 1
+      }
+    ],
+    "ed2": [
+      {
+        "s": 0,
+        "m": 2,
+        "sd": 2,
+        "c": 0,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 2
+      },
+      {
+        "s": 1,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": 1,
+        "mp": 1,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": -1,
+        "sd": -1,
+        "c": 0,
+        "v": 2,
+        "mp": 2,
+        "l": -1,
+        "kd": -1
+      }
+    ],
+    "tx1": [
+      {
+        "s": 1,
+        "m": -2,
+        "sd": -1,
+        "c": -2,
+        "v": 2,
+        "mp": 2,
+        "l": -1,
+        "kd": -1
+      },
+      {
+        "s": 1,
+        "m": -1,
+        "sd": -1,
+        "c": -1,
+        "v": 1,
+        "mp": 1,
+        "l": -1,
+        "kd": 0
+      },
+      {
+        "s": -1,
+        "m": 2,
+        "sd": 1,
+        "c": 2,
+        "v": -2,
+        "mp": -2,
+        "l": 1,
+        "kd": 0
+      }
+    ],
+    "tx2": [
+      {
+        "s": -2,
+        "m": 2,
+        "sd": 1,
+        "c": 2,
+        "v": -2,
+        "mp": -2,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": 0,
+        "c": 1,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": 2,
+        "m": -2,
+        "sd": -1,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": -1,
+        "kd": 0
+      }
+    ],
+    "en1": [
+      {
+        "s": 1,
+        "m": -1,
+        "sd": -1,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": 0,
+        "c": 1,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": -1,
+        "m": 1,
+        "sd": 1,
+        "c": 1,
+        "v": -2,
+        "mp": -2,
+        "l": 0,
+        "kd": 0
+      }
+    ],
+    "en2": [
+      {
+        "s": 0,
+        "m": 2,
+        "sd": 2,
+        "c": 1,
+        "v": -1,
+        "mp": -2,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": 1,
+        "c": 0,
+        "v": -1,
+        "mp": -1,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": -1,
+        "sd": -1,
+        "c": 0,
+        "v": 1,
+        "mp": 2,
+        "l": 0,
+        "kd": -1
+      }
+    ],
+    "na1": [
+      {
+        "s": 1,
+        "m": 2,
+        "sd": 2,
+        "c": 1,
+        "v": -1,
+        "mp": -1,
+        "l": 2,
+        "kd": 2
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": -1,
+        "sd": -1,
+        "c": -1,
+        "v": 2,
+        "mp": 1,
+        "l": -1,
+        "kd": -1
+      }
+    ],
+    "na2": [
+      {
+        "s": 0,
+        "m": 2,
+        "sd": 2,
+        "c": 0,
+        "v": -2,
+        "mp": -1,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": 1,
+        "m": 0,
+        "sd": 1,
+        "c": 0,
+        "v": -1,
+        "mp": -1,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": -2,
+        "sd": -1,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": -1,
+        "kd": -1
+      }
+    ],
+    "hs1": [
+      {
+        "s": 2,
+        "m": -1,
+        "sd": 0,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": -1,
+        "m": 2,
+        "sd": 1,
+        "c": 2,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": 0,
+        "c": 1,
+        "v": 0,
+        "mp": 0,
+        "l": 1,
+        "kd": 0
+      }
+    ],
+    "hs2": [
+      {
+        "s": -2,
+        "m": 2,
+        "sd": 0,
+        "c": 2,
+        "v": -2,
+        "mp": -2,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": 0,
+        "c": 1,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": 2,
+        "m": -2,
+        "sd": -1,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": -1,
+        "kd": -1
+      }
+    ],
+    "wr1": [
+      {
+        "s": 2,
+        "m": 0,
+        "sd": 1,
+        "c": 0,
+        "v": 2,
+        "mp": 1,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 1,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": 1,
+        "mp": 1,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": -2,
+        "m": 1,
+        "sd": 0,
+        "c": 2,
+        "v": -2,
+        "mp": -1,
+        "l": 1,
+        "kd": 0
+      }
+    ],
+    "wr2": [
+      {
+        "s": 0,
+        "m": -1,
+        "sd": 1,
+        "c": -1,
+        "v": 1,
+        "mp": 1,
+        "l": 0,
+        "kd": 1
+      },
+      {
+        "s": 1,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": 1,
+        "mp": 0,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 1,
+        "m": 0,
+        "sd": 0,
+        "c": 1,
+        "v": 0,
+        "mp": 0,
+        "l": 0,
+        "kd": 0
+      }
+    ],
+    "in1": [
+      {
+        "s": 1,
+        "m": 1,
+        "sd": 2,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 1,
+        "kd": 1
+      },
+      {
+        "s": 2,
+        "m": -1,
+        "sd": -1,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 1,
+        "m": 0,
+        "sd": 1,
+        "c": 0,
+        "v": 1,
+        "mp": 1,
+        "l": 1,
+        "kd": 1
+      }
+    ],
+    "in2": [
+      {
+        "s": 2,
+        "m": 0,
+        "sd": 0,
+        "c": 1,
+        "v": 1,
+        "mp": 1,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": 1,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 0,
+        "kd": 1
+      },
+      {
+        "s": -1,
+        "m": 0,
+        "sd": 2,
+        "c": -1,
+        "v": -1,
+        "mp": -1,
+        "l": -1,
+        "kd": 1
+      }
+    ],
+    "eu1": [
+      {
+        "s": 1,
+        "m": 0,
+        "sd": -2,
+        "c": 1,
+        "v": -1,
+        "mp": 1,
+        "l": 2,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": -1,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": -1,
+        "m": 0,
+        "sd": 2,
+        "c": 0,
+        "v": 0,
+        "mp": -1,
+        "l": -1,
+        "kd": 0
+      }
+    ],
+    "eu2": [
+      {
+        "s": 1,
+        "m": -1,
+        "sd": -2,
+        "c": 0,
+        "v": 1,
+        "mp": 2,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": -1,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": -1,
+        "m": 1,
+        "sd": 2,
+        "c": 0,
+        "v": -2,
+        "mp": -2,
+        "l": -1,
+        "kd": 0
+      }
+    ],
+    "gs1": [
+      {
+        "s": 2,
+        "m": 0,
+        "sd": -2,
+        "c": 1,
+        "v": 2,
+        "mp": 2,
+        "l": 2,
+        "kd": -2
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": -1,
+        "c": 1,
+        "v": 0,
+        "mp": 1,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": -1,
+        "m": 0,
+        "sd": 2,
+        "c": -1,
+        "v": -2,
+        "mp": -2,
+        "l": -1,
+        "kd": 1
+      }
+    ],
+    "gs2": [
+      {
+        "s": 1,
+        "m": -1,
+        "sd": -1,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": -2
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": 0,
+        "c": 1,
+        "v": 0,
+        "mp": 0,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": -1,
+        "m": 1,
+        "sd": 1,
+        "c": 1,
+        "v": -1,
+        "mp": -1,
+        "l": 0,
+        "kd": 2
+      }
+    ],
+    "rg1": [
+      {
+        "s": 2,
+        "m": -1,
+        "sd": 0,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": 0,
+        "m": 0,
+        "sd": 0,
+        "c": 0,
+        "v": 0,
+        "mp": 0,
+        "l": 0,
+        "kd": 0
+      },
+      {
+        "s": -2,
+        "m": 2,
+        "sd": 0,
+        "c": 2,
+        "v": -2,
+        "mp": -2,
+        "l": 1,
+        "kd": 0
+      }
+    ],
+    "rg2": [
+      {
+        "s": 2,
+        "m": -1,
+        "sd": 0,
+        "c": -1,
+        "v": 2,
+        "mp": 2,
+        "l": 0,
+        "kd": -1
+      },
+      {
+        "s": 0,
+        "m": 1,
+        "sd": 0,
+        "c": 1,
+        "v": -1,
+        "mp": -1,
+        "l": 1,
+        "kd": 0
+      },
+      {
+        "s": -2,
+        "m": 2,
+        "sd": 1,
+        "c": 1,
+        "v": -2,
+        "mp": -2,
+        "l": 1,
+        "kd": 0
+      }
+    ]
+  },
+  "translations": {},
+  "bank": [
+    {
+      "id": "im1",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Sweden received over 160,000 asylum seekers in 2015 alone. Integration has been uneven. Gang violence has increased sharply in certain areas.",
+      "q": "Sweden let in far too many people too quickly. The consequences are still being paid today.",
+      "opts": [
+        {
+          "t": "Yes. Immigration must be reduced sharply and integration demands must be much stricter.",
+          "e": 0,
+          "g": 2,
+          "s": -2,
+          "m": 1,
+          "sd": 2,
+          "c": -1,
+          "v": -2,
+          "mp": -2,
+          "l": -1,
+          "kd": 1
+        },
+        {
+          "t": "The intake was high but the failure was in integration policy, not the numbers themselves.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "No. Sweden benefited from immigration. The narrative of failure is driven by prejudice.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "m": -1,
+          "sd": -2,
+          "c": 1,
+          "v": 2,
+          "mp": 2,
+          "l": 1,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "im2",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Temporary protection status should be made permanent for refugees who have built lives in Sweden, regardless of conditions in their home country.",
+      "opts": [
+        {
+          "t": "Yes. Forcing people back to countries they fled is cruel and counterproductive.",
+          "e": 0,
+          "g": -2,
+          "s": 1,
+          "m": -1,
+          "sd": -2,
+          "c": 1,
+          "v": 2,
+          "mp": 2,
+          "l": 1,
+          "kd": -1
+        },
+        {
+          "t": "Conditional on integration milestones, yes.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "m": 0,
+          "sd": -1,
+          "c": 0,
+          "v": 1,
+          "mp": 1,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "No. Temporary status must mean temporary. Otherwise the system loses credibility.",
+          "e": 0,
+          "g": 2,
+          "s": -1,
+          "m": 1,
+          "sd": 2,
+          "c": -1,
+          "v": -2,
+          "mp": -1,
+          "l": -1,
+          "kd": 1
+        }
+      ]
+    },
+    {
+      "id": "im3",
+      "nl": "Immigration",
+      "pair": "im-b",
+      "fr": "con",
+      "type": "s",
+      "q": "Sweden should pay people to return to their countries of origin if they are willing to leave voluntarily.",
+      "opts": [
+        {
+          "t": "Yes. Voluntary return programs save money and reduce social tension.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "m": 1,
+          "sd": 2,
+          "c": -1,
+          "v": -2,
+          "mp": -2,
+          "l": -1,
+          "kd": 1
+        },
+        {
+          "t": "As a last resort with genuine safeguards, such programs exist elsewhere.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": -1,
+          "mp": -1,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "No. Paying people to leave is incompatible with human dignity.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "m": -1,
+          "sd": -2,
+          "c": 1,
+          "v": 2,
+          "mp": 2,
+          "l": 1,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "im4",
+      "nl": "Immigration",
+      "pair": "im-b",
+      "fr": "pro",
+      "type": "s",
+      "q": "Language requirements, citizenship tests, and integration contracts are reasonable demands that respect both newcomers and the host society.",
+      "opts": [
+        {
+          "t": "Yes. Integration obligations are a sign of taking newcomers seriously.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "m": 1,
+          "sd": 1,
+          "c": 0,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "Voluntary programs work better than coercive ones.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "m": 0,
+          "sd": -1,
+          "c": 1,
+          "v": 1,
+          "mp": 1,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Support and opportunity integrate people better than contracts and tests.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "m": -1,
+          "sd": -2,
+          "c": 0,
+          "v": 1,
+          "mp": 2,
+          "l": -1,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "cr1",
+      "nl": "Crime and justice",
+      "pair": "cr-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Sweden had more than 400 shootings in 2023. Gang-related explosions reached record levels. Several European countries now warn their citizens about travelling to certain Swedish cities.",
+      "q": "The gang violence crisis is a national emergency that requires a fundamentally tougher response.",
+      "opts": [
+        {
+          "t": "Yes. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.",
+          "e": 0,
+          "g": 2,
+          "s": 0,
+          "m": 2,
+          "sd": 2,
+          "c": -1,
+          "v": -2,
+          "mp": -2,
+          "l": -1,
+          "kd": 2
+        },
+        {
+          "t": "Enforcement matters but the root causes lie in poverty, segregation, and exclusion.",
+          "e": -1,
+          "g": 0,
+          "s": 2,
+          "m": -1,
+          "sd": -1,
+          "c": 0,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Both tougher enforcement now and long-term investment in inclusion.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "m": 1,
+          "sd": 1,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 1,
+          "kd": 1
+        }
+      ]
+    },
+    {
+      "id": "cr2",
+      "nl": "Crime and justice",
+      "pair": "cr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Criminalising membership in gangs, rather than just criminal acts, is necessary to break the cycle of violence.",
+      "opts": [
+        {
+          "t": "Yes. Gang structures must be dismantled and membership itself made illegal.",
+          "e": 0,
+          "g": 2,
+          "s": 0,
+          "m": 2,
+          "sd": 2,
+          "c": -1,
+          "v": -2,
+          "mp": -2,
+          "l": -2,
+          "kd": 1
+        },
+        {
+          "t": "Only with very narrow definitions to avoid criminalising association.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "m": 1,
+          "sd": 1,
+          "c": 0,
+          "v": -1,
+          "mp": -1,
+          "l": -1,
+          "kd": 0
+        },
+        {
+          "t": "No. Criminalising membership without criminal acts violates fundamental legal principles.",
+          "e": 0,
+          "g": -2,
+          "s": 0,
+          "m": -1,
+          "sd": -1,
+          "c": 1,
+          "v": 2,
+          "mp": 2,
+          "l": 2,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "wl1",
+      "nl": "Welfare and social policy",
+      "pair": "wl-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The Swedish welfare state is the foundation of a successful society. Cuts to it in the name of fiscal discipline are ideological, not economic.",
+      "opts": [
+        {
+          "t": "Yes. The welfare state is what makes Sweden work. Protect and strengthen it.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "m": -1,
+          "sd": 0,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "The welfare state is essential but it needs reform to remain sustainable.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 1,
+          "sd": 0,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "The welfare state has grown too large and crowds out individual responsibility.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "m": 2,
+          "sd": 1,
+          "c": 1,
+          "v": -2,
+          "mp": -2,
+          "l": 1,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "wl2",
+      "nl": "Welfare and social policy",
+      "pair": "wl-a",
+      "fr": "con",
+      "type": "s",
+      "q": "People who have never paid into the Swedish welfare system should not receive the same benefits as those who have contributed for decades.",
+      "opts": [
+        {
+          "t": "Yes. Contribution should determine entitlement.",
+          "e": 1,
+          "g": 1,
+          "s": 0,
+          "m": 2,
+          "sd": 2,
+          "c": 0,
+          "v": -2,
+          "mp": -2,
+          "l": 0,
+          "kd": 1
+        },
+        {
+          "t": "Need must also matter, but some contribution-linked elements are reasonable.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "No. Need, not contribution history, must be the basis of a fair system.",
+          "e": -2,
+          "g": -1,
+          "s": 2,
+          "m": -1,
+          "sd": -2,
+          "c": 0,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "hc1",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Swedish healthcare queues are among the longest in the EU. The 90-day guarantee is routinely breached. Regional inequalities in care quality are significant.",
+      "q": "The healthcare crisis demands more public investment, not private alternatives.",
+      "opts": [
+        {
+          "t": "Yes. Public healthcare must be properly funded and staffed.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "m": -1,
+          "sd": 0,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Private providers alongside public can reduce queues without threatening equality.",
+          "e": 1,
+          "g": 0,
+          "s": -1,
+          "m": 2,
+          "sd": 1,
+          "c": 2,
+          "v": -2,
+          "mp": -1,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "More funding and better organisation of the public system is the only real answer.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": 1,
+          "mp": 1,
+          "l": 0,
+          "kd": 1
+        }
+      ]
+    },
+    {
+      "id": "hc2",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Profit-driven healthcare companies siphon money from patient care to shareholders. They should not be allowed to operate within the public system.",
+      "opts": [
+        {
+          "t": "Yes. Healthcare profit extraction is incompatible with equal care.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "m": -2,
+          "sd": -1,
+          "c": -2,
+          "v": 2,
+          "mp": 2,
+          "l": -1,
+          "kd": -1
+        },
+        {
+          "t": "Some private delivery is efficient if properly regulated and quality-monitored.",
+          "e": 0,
+          "g": 0,
+          "s": -1,
+          "m": 1,
+          "sd": 0,
+          "c": 1,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "No. Competition improves quality and efficiency.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "m": 2,
+          "sd": 0,
+          "c": 2,
+          "v": -2,
+          "mp": -2,
+          "l": 1,
+          "kd": 1
+        }
+      ]
+    },
+    {
+      "id": "ed1",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "PISA results show Swedish school performance has declined significantly. Segregation between schools is among the worst in the OECD. The free school system has come under intense scrutiny.",
+      "q": "The free school reform has increased segregation and undermined equal education. It needs to be reversed.",
+      "opts": [
+        {
+          "t": "Yes. Vinstdrivna friskolor har misslyckats and should be abolished.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "m": -2,
+          "sd": -1,
+          "c": -2,
+          "v": 2,
+          "mp": 2,
+          "l": -1,
+          "kd": -1
+        },
+        {
+          "t": "Reform free schools strictly but keep the freedom of choice element.",
+          "e": 0,
+          "g": 0,
+          "s": -1,
+          "m": 1,
+          "sd": 0,
+          "c": 1,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "No. Free schools offer parents choice and competition that raises standards.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "m": 2,
+          "sd": 1,
+          "c": 2,
+          "v": -2,
+          "mp": -2,
+          "l": 1,
+          "kd": 1
+        }
+      ]
+    },
+    {
+      "id": "ed2",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Teachers need more authority in the classroom. Student disruption and behavioural problems are undermining the learning environment.",
+      "opts": [
+        {
+          "t": "Yes. Teacher authority and clear discipline are necessary for learning.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "m": 2,
+          "sd": 2,
+          "c": 0,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 2
+        },
+        {
+          "t": "More support for teachers yes, but framing it as discipline misses the deeper causes.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": 1,
+          "mp": 1,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Trauma-informed, resource-rich teaching is more effective than discipline frameworks.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "m": -1,
+          "sd": -1,
+          "c": 0,
+          "v": 2,
+          "mp": 2,
+          "l": -1,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "tx1",
+      "nl": "Tax and economy",
+      "pair": "tx-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Sweden should reintroduce a wealth tax on assets above 3 million kronor. The abolition in 2007 was a gift to the rich.",
+      "opts": [
+        {
+          "t": "Yes. Wealth taxes reduce inequality and fund public services.",
+          "e": -2,
+          "g": 2,
+          "s": 1,
+          "m": -2,
+          "sd": -1,
+          "c": -2,
+          "v": 2,
+          "mp": 2,
+          "l": -1,
+          "kd": -1
+        },
+        {
+          "t": "Close loopholes and raise capital gains taxes before adding new taxes.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "m": -1,
+          "sd": -1,
+          "c": -1,
+          "v": 1,
+          "mp": 1,
+          "l": -1,
+          "kd": 0
+        },
+        {
+          "t": "No. The wealth tax drove capital out of Sweden. It should not return.",
+          "e": 2,
+          "g": -1,
+          "s": -1,
+          "m": 2,
+          "sd": 1,
+          "c": 2,
+          "v": -2,
+          "mp": -2,
+          "l": 1,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "tx2",
+      "nl": "Tax and economy",
+      "pair": "tx-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Sweden has among the highest taxes in the world. Reducing them would increase growth and improve competitiveness.",
+      "opts": [
+        {
+          "t": "Yes. High taxes harm investment, entrepreneurship, and attract fewer high earners.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "m": 2,
+          "sd": 1,
+          "c": 2,
+          "v": -2,
+          "mp": -2,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "Targeted reductions in work-related taxes make sense but broad cuts weaken services.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 1,
+          "sd": 0,
+          "c": 1,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "No. High taxes fund the world-class public services that make Sweden competitive.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "m": -2,
+          "sd": -1,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": -1,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "en1",
+      "nl": "Climate and energy",
+      "pair": "en-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Sweden has committed to net zero by 2045. The current government eased some environmental regulations to stimulate investment and energy security.",
+      "q": "Weakening climate regulation in the name of competitiveness is a betrayal of future generations.",
+      "opts": [
+        {
+          "t": "Yes. Climate commitments must not be traded for short-term economic gains.",
+          "e": -2,
+          "g": 2,
+          "s": 1,
+          "m": -1,
+          "sd": -1,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Some regulatory flexibility is reasonable as long as the net zero target is kept.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 1,
+          "sd": 0,
+          "c": 1,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "Competitiveness and energy security are legitimate concerns that must be balanced.",
+          "e": 1,
+          "g": -1,
+          "s": -1,
+          "m": 1,
+          "sd": 1,
+          "c": 1,
+          "v": -2,
+          "mp": -2,
+          "l": 0,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "en2",
+      "nl": "Climate and energy",
+      "pair": "en-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Sweden should expand nuclear power. It is safe, low-carbon, and the country has been energy-poor without it.",
+      "opts": [
+        {
+          "t": "Yes. Nuclear is the most reliable low-carbon baseload available.",
+          "e": 1,
+          "g": 0,
+          "s": 0,
+          "m": 2,
+          "sd": 2,
+          "c": 1,
+          "v": -1,
+          "mp": -2,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "New reactor types merit consideration but the costs and timelines are uncertain.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 0,
+          "sd": 1,
+          "c": 0,
+          "v": -1,
+          "mp": -1,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "No. Renewables plus storage are faster, cheaper, and safer.",
+          "e": -1,
+          "g": 0,
+          "s": 0,
+          "m": -1,
+          "sd": -1,
+          "c": 0,
+          "v": 1,
+          "mp": 2,
+          "l": 0,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "na1",
+      "nl": "NATO and defence",
+      "pair": "na-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Sweden was right to join NATO. The Russian invasion of Ukraine made the security case unanswerable.",
+      "opts": [
+        {
+          "t": "Yes. NATO membership is the foundation of Swedish security.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "m": 2,
+          "sd": 2,
+          "c": 1,
+          "v": -1,
+          "mp": -1,
+          "l": 2,
+          "kd": 2
+        },
+        {
+          "t": "The decision was understandable but Sweden should maintain maximum strategic independence within NATO.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "NATO membership makes Sweden a target and ends 200 years of neutrality.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "m": -1,
+          "sd": -1,
+          "c": -1,
+          "v": 2,
+          "mp": 1,
+          "l": -1,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "na2",
+      "nl": "NATO and defence",
+      "pair": "na-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Sweden should increase defence spending to 2.5% of GDP to meet NATO obligations and deter Russian aggression.",
+      "opts": [
+        {
+          "t": "Yes. Underinvestment in defence over decades must now be corrected.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "m": 2,
+          "sd": 2,
+          "c": 0,
+          "v": -2,
+          "mp": -1,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "A credible defence requires investment but the level must be balanced against social needs.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "m": 0,
+          "sd": 1,
+          "c": 0,
+          "v": -1,
+          "mp": -1,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Military spending competes with welfare, healthcare and schools. Diplomacy must come first.",
+          "e": -1,
+          "g": -1,
+          "s": 0,
+          "m": -2,
+          "sd": -1,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": -1,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "hs1",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Stockholm has one of the longest housing queues in Europe, often 10 to 20 years for a rental. Young people are locked out. Prices have risen sharply.",
+      "q": "The housing market is failing an entire generation. The state must build massively.",
+      "opts": [
+        {
+          "t": "Yes. Large-scale public housing construction is the only real solution.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "m": -1,
+          "sd": 0,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Reform the rental regulation system so private builders have incentive to construct.",
+          "e": 1,
+          "g": -1,
+          "s": -1,
+          "m": 2,
+          "sd": 1,
+          "c": 2,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "Both construction incentives and long-overdue rental reform are needed.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 1,
+          "sd": 0,
+          "c": 1,
+          "v": 0,
+          "mp": 0,
+          "l": 1,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "hs2",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Rent regulation keeps housing affordable for those who have it but prevents the construction of new rental housing.",
+      "opts": [
+        {
+          "t": "Yes. Avreglera hyror så att fler vill bygga nya hyresrätter.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "m": 2,
+          "sd": 0,
+          "c": 2,
+          "v": -2,
+          "mp": -2,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "Partial deregulation of new builds while protecting existing tenants is the right balance.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 1,
+          "sd": 0,
+          "c": 1,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "No. Deregulation would price out lower earners from rental housing entirely.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "m": -2,
+          "sd": -1,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": -1,
+          "kd": -1
+        }
+      ]
+    },
+    {
+      "id": "wr1",
+      "nl": "Workers and labour",
+      "pair": "wr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The Swedish model of strong unions and collective bargaining is the most effective way to set fair wages without government interference.",
+      "opts": [
+        {
+          "t": "Yes. The model works and must be defended.",
+          "e": -1,
+          "g": -1,
+          "s": 2,
+          "m": 0,
+          "sd": 1,
+          "c": 0,
+          "v": 2,
+          "mp": 1,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "The model is valuable but weakening union density means it needs updating.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": 1,
+          "mp": 1,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Government minimum wages and individual contracts can replace collective models.",
+          "e": 1,
+          "g": 0,
+          "s": -2,
+          "m": 1,
+          "sd": 0,
+          "c": 2,
+          "v": -2,
+          "mp": -1,
+          "l": 1,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "wr2",
+      "nl": "Workers and labour",
+      "pair": "wr-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Sweden should introduce an official minimum wage set by law rather than leaving wages entirely to collective bargaining.",
+      "opts": [
+        {
+          "t": "Yes. A legal floor protects workers in industries with weak union coverage.",
+          "e": -1,
+          "g": 1,
+          "s": 0,
+          "m": -1,
+          "sd": 1,
+          "c": -1,
+          "v": 1,
+          "mp": 1,
+          "l": 0,
+          "kd": 1
+        },
+        {
+          "t": "The collective bargaining model works. A statutory minimum would undermine it.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": 1,
+          "mp": 0,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "No. The Swedish model is more flexible and produces better outcomes than statutory minimums.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "m": 0,
+          "sd": 0,
+          "c": 1,
+          "v": 0,
+          "mp": 0,
+          "l": 0,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "in1",
+      "nl": "Integration policy",
+      "pair": "in-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Areas in Gothenburg, Malmo, and Stockholm where integration has failed are experiencing persistent unemployment, school failure, and over-representation in crime statistics.",
+      "q": "Segregation has been allowed to harden into permanent underclasses. Integration policy has comprehensively failed.",
+      "opts": [
+        {
+          "t": "Yes. The failure demands a fundamentally different approach, including housing dispersal.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "m": 1,
+          "sd": 2,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 1,
+          "kd": 1
+        },
+        {
+          "t": "Investment in schools, jobs, and services in deprived areas is the right response.",
+          "e": -2,
+          "g": 0,
+          "s": 2,
+          "m": -1,
+          "sd": -1,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "Both better support in deprived areas and dispersal mechanisms are needed.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "m": 0,
+          "sd": 1,
+          "c": 0,
+          "v": 1,
+          "mp": 1,
+          "l": 1,
+          "kd": 1
+        }
+      ]
+    },
+    {
+      "id": "in2",
+      "nl": "Integration policy",
+      "pair": "in-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The state must do more to ensure refugees and immigrants have real access to the labour market within the first year of arrival.",
+      "opts": [
+        {
+          "t": "Yes. Early employment is the most effective integration tool.",
+          "e": -1,
+          "g": 0,
+          "s": 2,
+          "m": 0,
+          "sd": 0,
+          "c": 1,
+          "v": 1,
+          "mp": 1,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "Language and skills training first, then employment. Rushing the process backfires.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "m": 1,
+          "sd": 1,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 0,
+          "kd": 1
+        },
+        {
+          "t": "If integration is so difficult, intake levels must be reduced until we can do it properly.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "m": 0,
+          "sd": 2,
+          "c": -1,
+          "v": -1,
+          "mp": -1,
+          "l": -1,
+          "kd": 1
+        }
+      ]
+    },
+    {
+      "id": "eu1",
+      "nl": "EU and foreign policy",
+      "pair": "eu-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Sweden should support deeper EU integration, including a common defence policy and more qualified majority voting.",
+      "opts": [
+        {
+          "t": "Yes. A stronger EU is in the interest of all member states, especially smaller ones.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "m": 0,
+          "sd": -2,
+          "c": 1,
+          "v": -1,
+          "mp": 1,
+          "l": 2,
+          "kd": 0
+        },
+        {
+          "t": "Cooperation on specific issues yes. Federal ambitions go too far.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "m": 1,
+          "sd": -1,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "No. National sovereignty and intergovernmentalism must remain the basis of the EU.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "m": 0,
+          "sd": 2,
+          "c": 0,
+          "v": 0,
+          "mp": -1,
+          "l": -1,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "eu2",
+      "nl": "EU and foreign policy",
+      "pair": "eu-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Sweden should increase bilateral aid and development assistance, even in a period of tight fiscal policy.",
+      "opts": [
+        {
+          "t": "Yes. Development assistance is a moral obligation and builds long-term stability.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "m": -1,
+          "sd": -2,
+          "c": 0,
+          "v": 1,
+          "mp": 2,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "Maintain current levels but ensure effectiveness rather than just increasing spending.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 0,
+          "sd": -1,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "No. Sweden must prioritise its own citizens in a period of fiscal pressure.",
+          "e": 1,
+          "g": 1,
+          "s": -1,
+          "m": 1,
+          "sd": 2,
+          "c": 0,
+          "v": -2,
+          "mp": -2,
+          "l": -1,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "gs1",
+      "nl": "Gender and social policy",
+      "pair": "gs-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Sweden should maintain its status as one of the most progressive countries in the world on gender equality, LGBTQ rights, and social liberalism.",
+      "opts": [
+        {
+          "t": "Yes. Protecting and advancing these rights is central to Swedish identity.",
+          "e": 0,
+          "g": -2,
+          "s": 2,
+          "m": 0,
+          "sd": -2,
+          "c": 1,
+          "v": 2,
+          "mp": 2,
+          "l": 2,
+          "kd": -2
+        },
+        {
+          "t": "Rights should be protected but the state should not be prescriptive about social norms.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "m": 1,
+          "sd": -1,
+          "c": 1,
+          "v": 0,
+          "mp": 1,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "The pace of social change has been too rapid and has damaged social cohesion.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "m": 0,
+          "sd": 2,
+          "c": -1,
+          "v": -2,
+          "mp": -2,
+          "l": -1,
+          "kd": 1
+        }
+      ]
+    },
+    {
+      "id": "gs2",
+      "nl": "Gender and social policy",
+      "pair": "gs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Parental leave should be equally split between parents by default rather than allowing families to choose their own arrangement.",
+      "opts": [
+        {
+          "t": "Yes. Equal leave changes workplace norms and is worth the mandate.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "m": -1,
+          "sd": -1,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": -2
+        },
+        {
+          "t": "Strong incentives to share, but the final choice should be the family's.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 0,
+          "sd": 0,
+          "c": 1,
+          "v": 0,
+          "mp": 0,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "No. Families should decide without government dictating how to raise children.",
+          "e": 0,
+          "g": -1,
+          "s": -1,
+          "m": 1,
+          "sd": 1,
+          "c": 1,
+          "v": -1,
+          "mp": -1,
+          "l": 0,
+          "kd": 2
+        }
+      ]
+    },
+    {
+      "id": "rg1",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The Swedish model of a large, active state providing universal services is the most effective social arrangement ever devised.",
+      "opts": [
+        {
+          "t": "Yes. The model delivers equality and security at a level no other country matches.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "m": -1,
+          "sd": 0,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "The model has strengths but requires ongoing modernisation to stay effective.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 0,
+          "sd": 0,
+          "c": 0,
+          "v": 0,
+          "mp": 0,
+          "l": 0,
+          "kd": 0
+        },
+        {
+          "t": "The model has become too paternalistic and stifles individual initiative.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "m": 2,
+          "sd": 0,
+          "c": 2,
+          "v": -2,
+          "mp": -2,
+          "l": 1,
+          "kd": 0
+        }
+      ]
+    },
+    {
+      "id": "rg2",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Inequality in Sweden has grown significantly since the 1990s. Reversing this trend should be a primary political priority.",
+      "opts": [
+        {
+          "t": "Yes. Sweden's egalitarian character is being eroded and must be restored.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "m": -1,
+          "sd": 0,
+          "c": -1,
+          "v": 2,
+          "mp": 2,
+          "l": 0,
+          "kd": -1
+        },
+        {
+          "t": "Inequality has grown but opportunity and mobility matter more than statistical gaps.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "m": 1,
+          "sd": 0,
+          "c": 1,
+          "v": -1,
+          "mp": -1,
+          "l": 1,
+          "kd": 0
+        },
+        {
+          "t": "Some inequality reflects different contributions. Forced equality reduces incentive.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "m": 2,
+          "sd": 1,
+          "c": 1,
+          "v": -2,
+          "mp": -2,
+          "l": 1,
+          "kd": 0
+        }
+      ]
+    }
+  ],
+  "heroTitle": "Where do you stand in <em>Swedish</em> politics?",
+  "heroSub": "47 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties.",
+  "partyStripHtml": "<div class=\"party-strip\">\r\n    <div class=\"party-cell\"><div class=\"party-dot\" style=\"background:#CC0000\"></div>"
+}

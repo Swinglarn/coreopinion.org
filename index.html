@@ -3,68 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ═══ PRIMARY META ═══ -->
-<title>Political Compass Test with Framing Bias Score | CoreOpinion</title>
-<meta name="description" content="The political compass test that also reveals your framing bias. 102 scenario-based questions across 3 political axes. Find your ideology, then see how much...">
+<title>Political Compass Test with Bias Score | CoreOpinion</title>
+<meta name="description" content="Take the political compass test that reveals your framing bias. 102 scenario-based questions to find your ideology and check your response consistency.">
 <meta name="keywords" content="political compass test, political quiz, political ideology test, framing bias, where do I stand politically, political compass 2026, libertarian authoritarian quiz, economic left right test, free political test, am I liberal or conservative, political spectrum quiz, political compass with bias score">
 <meta name="author" content="CoreOpinion">
-<meta name="copyright" content="CoreOpinion 2026">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://coreopinion.org/">
 <meta name="theme-color" content="#F9F8F6">
-
-<!-- ═══ OPEN GRAPH ═══ -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/">
-<meta property="og:title" content="CoreOpinion: Political Compass Test with Framing Bias Score">
-<meta property="og:description" content="102 scenario-based questions. Your position on the political compass. Then a framing bias score that shows how much the wording of questions shapes your thinking.">
-<meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIj4KCiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjYzMCIgZmlsbD0iI0Y5RjhGNiIvPgoKICA8IS0tIExhcmdlIGdob3N0ICJDTyIgLS0+CiAgPHRleHQgeD0iNjIwIiB5PSI1MjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjYwMCIgZm9udC13ZWlnaHQ9IjcwMCIKICAgICAgICBmaWxsPSIjMEEwQzBGIiBvcGFjaXR5PSIwLjAyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9Ii0xOCI+Q088L3RleHQ+CgogIDwhLS0gTGVmdCBuYXZ5IGJvcmRlciAtLT4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNSIgaGVpZ2h0PSI2MzAiIGZpbGw9IiMxRTREOEMiLz4KCiAgPCEtLSBDb21wYXNzIGNhcmQgdG9wLXJpZ2h0IOKAlCBjb2xvdXJlZCBxdWFkcmFudHMgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTQwLCA2OCkiPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjIxMCIgaGVpZ2h0PSIyMTAiIHJ4PSIxMiIKICAgICAgICAgIGZpbGw9IndoaXRlIiBzdHJva2U9IiNEREQ5RDIiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC45Ii8+CiAgICA8IS0tIFF1YWRyYW50cyAtLT4KICAgIDxyZWN0IHg9IjkiIHk9IjkiIHdpZHRoPSI5NCIgaGVpZ2h0PSI5NCIgcng9IjQiIGZpbGw9IiM0QjhFRjEiIG9wYWNpdHk9IjAuMjIiLz4KICAgIDxyZWN0IHg9IjEwNyIgeT0iOSIgd2lkdGg9Ijk0IiBoZWlnaHQ9Ijk0IiByeD0iNCIgZmlsbD0iI0Y1QTYyMyIgb3BhY2l0eT0iMC4yMiIvPgogICAgPHJlY3QgeD0iOSIgeT0iMTA3IiB3aWR0aD0iOTQiIGhlaWdodD0iOTQiIHJ4PSI0IiBmaWxsPSIjM0RCRjgyIiBvcGFjaXR5PSIwLjIyIi8+CiAgICA8cmVjdCB4PSIxMDciIHk9IjEwNyIgd2lkdGg9Ijk0IiBoZWlnaHQ9Ijk0IiByeD0iNCIgZmlsbD0iI0U4NUQ2QiIgb3BhY2l0eT0iMC4yMiIvPgogICAgPCEtLSBDcm9zcyAtLT4KICAgIDxsaW5lIHgxPSIxMDUiIHkxPSI5IiB4Mj0iMTA1IiB5Mj0iMjAxIiBzdHJva2U9IiNEREQ5RDIiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgICA8bGluZSB4MT0iOSIgeTE9IjEwNSIgeDI9IjIwMSIgeTI9IjEwNSIgc3Ryb2tlPSIjREREOUQyIiBzdHJva2Utd2lkdGg9IjEuMiIvPgogICAgPCEtLSBMYWJlbHMgLS0+CiAgICA8dGV4dCB4PSIxMyIgeT0iMjIiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0IwQjVCQyIgZm9udC1mYW1pbHk9Ik91dGZpdCxzYW5zLXNlcmlmIj5BdXRoIEw8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjAiIHk9IjIyIiBmb250LXNpemU9IjkiIGZpbGw9IiNCMEI1QkMiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiI+QXV0aCBSPC90ZXh0PgogICAgPHRleHQgeD0iMTMiIHk9IjIwMCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQjBCNUJDIiBmb250LWZhbWlseT0iT3V0Zml0LHNhbnMtc2VyaWYiPkxpYiBMPC90ZXh0PgogICAgPHRleHQgeD0iMTIwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0IwQjVCQyIgZm9udC1mYW1pbHk9Ik91dGZpdCxzYW5zLXNlcmlmIj5MaWIgUjwvdGV4dD4KICAgIDwhLS0gRG90IC0tPgogICAgPGNpcmNsZSBjeD0iNTciIGN5PSIxNTMiIHI9IjExIiBmaWxsPSIjMUU0RDhDIi8+CiAgICA8Y2lyY2xlIGN4PSI1NyIgY3k9IjE1MyIgcj0iMTgiIGZpbGw9IiMxRTREOEMiIG9wYWNpdHk9IjAuMTUiLz4KICA8L2c+CgogIDwhLS0gRXllYnJvdyAtLT4KICA8cmVjdCB4PSI4MCIgeT0iMTI4IiB3aWR0aD0iMzIiIGhlaWdodD0iMS41IiBmaWxsPSIjMkE1REIwIi8+CiAgPHRleHQgeD0iMTI0IiB5PSIxNDAiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjQwMCIKICAgICAgICBmaWxsPSIjMkE1REIwIiBsZXR0ZXItc3BhY2luZz0iMyI+UE9MSVRJQ0FMIENPTVBBU1MgVEVTVDwvdGV4dD4KCiAgPCEtLSBIZWFkbGluZSAtLT4KICA8dGV4dCB4PSI4MCIgeT0iMjQ4IiBmb250LWZhbWlseT0iR2VvcmdpYSwnVGltZXMgTmV3IFJvbWFuJyxzZXJpZiIgZm9udC1zaXplPSI4MiIKICAgICAgICBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMEEwQzBGIiBsZXR0ZXItc3BhY2luZz0iLTIuNSI+QSBwb2xpdGljYWwgY29tcGFzcyB0ZXN0PC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIzNDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCdUaW1lcyBOZXcgUm9tYW4nLHNlcmlmIiBmb250LXNpemU9IjgyIgogICAgICAgIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwQTBDMEYiIGxldHRlci1zcGFjaW5nPSItMi41Ij5idWlsdCBmb3IKICAgIDx0c3BhbiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMyQTVEQjAiPm51YW5jZS48L3RzcGFuPgogIDwvdGV4dD4KCiAgPCEtLSBTdWJsaW5lIC0tPgogIDx0ZXh0IHg9IjgwIiB5PSI0MDUiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMSIKICAgICAgICBmb250LXdlaWdodD0iMzAwIiBmaWxsPSIjN0E3Rjg4Ij4KICAgIFNjZW5hcmlvLWJhc2VkIHF1ZXN0aW9ucy4gWW91ciBwb2xpdGljYWwgcG9zaXRpb24uIEFuZCBhIHNjb3JlIHlvdSBkaWQgbm90IGV4cGVjdC4KICA8L3RleHQ+CgogIDwhLS0gRGl2aWRlciAtLT4KICA8bGluZSB4MT0iODAiIHkxPSI0NTQiIHgyPSI3MjAiIHkyPSI0NTQiIHN0cm9rZT0iI0RERDlEMiIgc3Ryb2tlLXdpZHRoPSIxIi8+CgogIDwhLS0gU3RhdHMgcm93IC0tPgogIDx0ZXh0IHg9IjgwIiB5PSI1MDIiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIgogICAgICAgIGZpbGw9IiMwQTBDMEYiIGxldHRlci1zcGFjaW5nPSItMSI+MTAwPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSI1MjgiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjMwMCIKICAgICAgICBmaWxsPSIjQjBCNUJDIiBsZXR0ZXItc3BhY2luZz0iMC41Ij5xdWVzdGlvbnM8L3RleHQ+CgogIDxsaW5lIHgxPSIyMzQiIHkxPSI0NzgiIHgyPSIyMzQiIHkyPSI1MzUiIHN0cm9rZT0iI0VBRTdFMSIgc3Ryb2tlLXdpZHRoPSIxIi8+CgogIDx0ZXh0IHg9IjI1NCIgeT0iNTAyIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSI0MCIgZm9udC13ZWlnaHQ9IjcwMCIKICAgICAgICBmaWxsPSIjMEEwQzBGIiBsZXR0ZXItc3BhY2luZz0iLTEiPjM8L3RleHQ+CiAgPHRleHQgeD0iMjU0IiB5PSI1MjgiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjMwMCIKICAgICAgICBmaWxsPSIjQjBCNUJDIiBsZXR0ZXItc3BhY2luZz0iMC41Ij5wb2xpdGljYWwgYXhlczwvdGV4dD4KCiAgPGxpbmUgeDE9IjQwOCIgeTE9IjQ3OCIgeDI9IjQwOCIgeTI9IjUzNSIgc3Ryb2tlPSIjRUFFN0UxIiBzdHJva2Utd2lkdGg9IjEiLz4KCiAgPHRleHQgeD0iNDI4IiB5PSI1MDIiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIgogICAgICAgIGZpbGw9IiMwQTBDMEYiIGxldHRlci1zcGFjaW5nPSItMSI+MjwvdGV4dD4KICA8dGV4dCB4PSI0MjgiIHk9IjUyOCIgZm9udC1mYW1pbHk9Ik91dGZpdCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iMzAwIgogICAgICAgIGZpbGw9IiNCMEI1QkMiIGxldHRlci1zcGFjaW5nPSIwLjUiPnJlc3VsdHMgaW5jbC4gYmlhcyBzY29yZTwvdGV4dD4KCiAgPCEtLSBEb21haW4gcGlsbCAtLT4KICA8cmVjdCB4PSI4MCIgeT0iNTU4IiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjM4IiByeD0iNCIgZmlsbD0iIzBBMEMwRiIvPgogIDx0ZXh0IHg9IjE4OSIgeT0iNTgyIiBmb250LWZhbWlseT0iT3V0Zml0LHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI0MDAiCiAgICAgICAgZmlsbD0iI0Y5RjhGNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjAuNSI+Y29yZW9waW5pb24ub3JnPC90ZXh0PgoKPC9zdmc+Cg==">
+<meta property="og:title" content="Political Compass Test with Bias Score | CoreOpinion">
+<meta property="og:description" content="Take the political compass test that reveals your framing bias. 102 scenario-based questions to find your ideology and check your response consistency.">
+<meta property="og:site_name" content="CoreOpinion">
+<meta property="og:image" content="https://coreopinion.org/og-image.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="CoreOpinion political compass test">
-<meta property="og:site_name" content="CoreOpinion">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="en_GB">
-
-<!-- ═══ TWITTER / X ═══ -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://coreopinion.org/">
-<meta name="twitter:title" content="CoreOpinion: A political compass test built for nuance">
-<meta name="twitter:description" content="The political compass test with a twist. 102 real-world scenarios, 3 axes, and a framing bias score that reveals whether your views are genuinely consistent.">
-<meta name="twitter:image" content="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIj4KCiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjYzMCIgZmlsbD0iI0Y5RjhGNiIvPgoKICA8IS0tIExhcmdlIGdob3N0ICJDTyIgLS0+CiAgPHRleHQgeD0iNjIwIiB5PSI1MjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjYwMCIgZm9udC13ZWlnaHQ9IjcwMCIKICAgICAgICBmaWxsPSIjMEEwQzBGIiBvcGFjaXR5PSIwLjAyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9Ii0xOCI+Q088L3RleHQ+CgogIDwhLS0gTGVmdCBuYXZ5IGJvcmRlciAtLT4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNSIgaGVpZ2h0PSI2MzAiIGZpbGw9IiMxRTREOEMiLz4KCiAgPCEtLSBDb21wYXNzIGNhcmQgdG9wLXJpZ2h0IOKAlCBjb2xvdXJlZCBxdWFkcmFudHMgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTQwLCA2OCkiPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjIxMCIgaGVpZ2h0PSIyMTAiIHJ4PSIxMiIKICAgICAgICAgIGZpbGw9IndoaXRlIiBzdHJva2U9IiNEREQ5RDIiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC45Ii8+CiAgICA8IS0tIFF1YWRyYW50cyAtLT4KICAgIDxyZWN0IHg9IjkiIHk9IjkiIHdpZHRoPSI5NCIgaGVpZ2h0PSI5NCIgcng9IjQiIGZpbGw9IiM0QjhFRjEiIG9wYWNpdHk9IjAuMjIiLz4KICAgIDxyZWN0IHg9IjEwNyIgeT0iOSIgd2lkdGg9Ijk0IiBoZWlnaHQ9Ijk0IiByeD0iNCIgZmlsbD0iI0Y1QTYyMyIgb3BhY2l0eT0iMC4yMiIvPgogICAgPHJlY3QgeD0iOSIgeT0iMTA3IiB3aWR0aD0iOTQiIGhlaWdodD0iOTQiIHJ4PSI0IiBmaWxsPSIjM0RCRjgyIiBvcGFjaXR5PSIwLjIyIi8+CiAgICA8cmVjdCB4PSIxMDciIHk9IjEwNyIgd2lkdGg9Ijk0IiBoZWlnaHQ9Ijk0IiByeD0iNCIgZmlsbD0iI0U4NUQ2QiIgb3BhY2l0eT0iMC4yMiIvPgogICAgPCEtLSBDcm9zcyAtLT4KICAgIDxsaW5lIHgxPSIxMDUiIHkxPSI5IiB4Mj0iMTA1IiB5Mj0iMjAxIiBzdHJva2U9IiNEREQ5RDIiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgICA8bGluZSB4MT0iOSIgeTE9IjEwNSIgeDI9IjIwMSIgeTI9IjEwNSIgc3Ryb2tlPSIjREREOUQyIiBzdHJva2Utd2lkdGg9IjEuMiIvPgogICAgPCEtLSBMYWJlbHMgLS0+CiAgICA8dGV4dCB4PSIxMyIgeT0iMjIiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0IwQjVCQyIgZm9udC1mYW1pbHk9Ik91dGZpdCxzYW5zLXNlcmlmIj5BdXRoIEw8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjAiIHk9IjIyIiBmb250LXNpemU9IjkiIGZpbGw9IiNCMEI1QkMiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiI+QXV0aCBSPC90ZXh0PgogICAgPHRleHQgeD0iMTMiIHk9IjIwMCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQjBCNUJDIiBmb250LWZhbWlseT0iT3V0Zml0LHNhbnMtc2VyaWYiPkxpYiBMPC90ZXh0PgogICAgPHRleHQgeD0iMTIwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0IwQjVCQyIgZm9udC1mYW1pbHk9Ik91dGZpdCxzYW5zLXNlcmlmIj5MaWIgUjwvdGV4dD4KICAgIDwhLS0gRG90IC0tPgogICAgPGNpcmNsZSBjeD0iNTciIGN5PSIxNTMiIHI9IjExIiBmaWxsPSIjMUU0RDhDIi8+CiAgICA8Y2lyY2xlIGN4PSI1NyIgY3k9IjE1MyIgcj0iMTgiIGZpbGw9IiMxRTREOEMiIG9wYWNpdHk9IjAuMTUiLz4KICA8L2c+CgogIDwhLS0gRXllYnJvdyAtLT4KICA8cmVjdCB4PSI4MCIgeT0iMTI4IiB3aWR0aD0iMzIiIGhlaWdodD0iMS41IiBmaWxsPSIjMkE1REIwIi8+CiAgPHRleHQgeD0iMTI0IiB5PSIxNDAiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjQwMCIKICAgICAgICBmaWxsPSIjMkE1REIwIiBsZXR0ZXItc3BhY2luZz0iMyI+UE9MSVRJQ0FMIENPTVBBU1MgVEVTVDwvdGV4dD4KCiAgPCEtLSBIZWFkbGluZSAtLT4KICA8dGV4dCB4PSI4MCIgeT0iMjQ4IiBmb250LWZhbWlseT0iR2VvcmdpYSwnVGltZXMgTmV3IFJvbWFuJyxzZXJpZiIgZm9udC1zaXplPSI4MiIKICAgICAgICBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMEEwQzBGIiBsZXR0ZXItc3BhY2luZz0iLTIuNSI+QSBwb2xpdGljYWwgY29tcGFzcyB0ZXN0PC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIzNDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCdUaW1lcyBOZXcgUm9tYW4nLHNlcmlmIiBmb250LXNpemU9IjgyIgogICAgICAgIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwQTBDMEYiIGxldHRlci1zcGFjaW5nPSItMi41Ij5idWlsdCBmb3IKICAgIDx0c3BhbiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMyQTVEQjAiPm51YW5jZS48L3RzcGFuPgogIDwvdGV4dD4KCiAgPCEtLSBTdWJsaW5lIC0tPgogIDx0ZXh0IHg9IjgwIiB5PSI0MDUiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMSIKICAgICAgICBmb250LXdlaWdodD0iMzAwIiBmaWxsPSIjN0E3Rjg4Ij4KICAgIFNjZW5hcmlvLWJhc2VkIHF1ZXN0aW9ucy4gWW91ciBwb2xpdGljYWwgcG9zaXRpb24uIEFuZCBhIHNjb3JlIHlvdSBkaWQgbm90IGV4cGVjdC4KICA8L3RleHQ+CgogIDwhLS0gRGl2aWRlciAtLT4KICA8bGluZSB4MT0iODAiIHkxPSI0NTQiIHgyPSI3MjAiIHkyPSI0NTQiIHN0cm9rZT0iI0RERDlEMiIgc3Ryb2tlLXdpZHRoPSIxIi8+CgogIDwhLS0gU3RhdHMgcm93IC0tPgogIDx0ZXh0IHg9IjgwIiB5PSI1MDIiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIgogICAgICAgIGZpbGw9IiMwQTBDMEYiIGxldHRlci1zcGFjaW5nPSItMSI+MTAwPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSI1MjgiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjMwMCIKICAgICAgICBmaWxsPSIjQjBCNUJDIiBsZXR0ZXItc3BhY2luZz0iMC41Ij5xdWVzdGlvbnM8L3RleHQ+CgogIDxsaW5lIHgxPSIyMzQiIHkxPSI0NzgiIHgyPSIyMzQiIHkyPSI1MzUiIHN0cm9rZT0iI0VBRTdFMSIgc3Ryb2tlLXdpZHRoPSIxIi8+CgogIDx0ZXh0IHg9IjI1NCIgeT0iNTAyIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSI0MCIgZm9udC13ZWlnaHQ9IjcwMCIKICAgICAgICBmaWxsPSIjMEEwQzBGIiBsZXR0ZXItc3BhY2luZz0iLTEiPjM8L3RleHQ+CiAgPHRleHQgeD0iMjU0IiB5PSI1MjgiIGZvbnQtZmFtaWx5PSJPdXRmaXQsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjMwMCIKICAgICAgICBmaWxsPSIjQjBCNUJDIiBsZXR0ZXItc3BhY2luZz0iMC41Ij5wb2xpdGljYWwgYXhlczwvdGV4dD4KCiAgPGxpbmUgeDE9IjQwOCIgeTE9IjQ3OCIgeDI9IjQwOCIgeTI9IjUzNSIgc3Ryb2tlPSIjRUFFN0UxIiBzdHJva2Utd2lkdGg9IjEiLz4KCiAgPHRleHQgeD0iNDI4IiB5PSI1MDIiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIgogICAgICAgIGZpbGw9IiMwQTBDMEYiIGxldHRlci1zcGFjaW5nPSItMSI+MjwvdGV4dD4KICA8dGV4dCB4PSI0MjgiIHk9IjUyOCIgZm9udC1mYW1pbHk9Ik91dGZpdCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iMzAwIgogICAgICAgIGZpbGw9IiNCMEI1QkMiIGxldHRlci1zcGFjaW5nPSIwLjUiPnJlc3VsdHMgaW5jbC4gYmlhcyBzY29yZTwvdGV4dD4KCiAgPCEtLSBEb21haW4gcGlsbCAtLT4KICA8cmVjdCB4PSI4MCIgeT0iNTU4IiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjM4IiByeD0iNCIgZmlsbD0iIzBBMEMwRiIvPgogIDx0ZXh0IHg9IjE4OSIgeT0iNTgyIiBmb250LWZhbWlseT0iT3V0Zml0LHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI0MDAiCiAgICAgICAgZmlsbD0iI0Y5RjhGNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjAuNSI+Y29yZW9waW5pb24ub3JnPC90ZXh0PgoKPC9zdmc+Cg==">
-
-<!-- ═══ FAVICON ═══ -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPCEtLSBEYXJrIGJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBBMEMwRiIvPgogIDwhLS0gUXVhZHJhbnQgZmlsbHMg4oCUIHZpdmlkIGFuZCBkaXN0aW5jdCAtLT4KICA8cmVjdCB4PSI1IiB5PSI1IiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHJ4PSIxLjUiIGZpbGw9IiM0QjhFRjEiIG9wYWNpdHk9IjAuODUiLz4KICA8cmVjdCB4PSIxNyIgeT0iNSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiByeD0iMS41IiBmaWxsPSIjRjVBNjIzIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHJlY3QgeD0iNSIgeT0iMTciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgcng9IjEuNSIgZmlsbD0iIzNEQkY4MiIgb3BhY2l0eT0iMC44NSIvPgogIDxyZWN0IHg9IjE3IiB5PSIxNyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiByeD0iMS41IiBmaWxsPSIjRTg1RDZCIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPCEtLSBDcm9zcyBsaW5lcyAtLT4KICA8bGluZSB4MT0iMTYiIHkxPSI0IiB4Mj0iMTYiIHkyPSIyOCIgc3Ryb2tlPSIjMEEwQzBGIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iNCIgeTE9IjE2IiB4Mj0iMjgiIHkyPSIxNiIgc3Ryb2tlPSIjMEEwQzBGIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIERvdCBpbiBsaWItbGVmdCAoZ3JlZW4gcXVhZHJhbnQpIC0tPgogIDxjaXJjbGUgY3g9IjEwIiBjeT0iMjIiIHI9IjMiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+Cg==">
-<link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPCEtLSBEYXJrIGJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBBMEMwRiIvPgogIDwhLS0gUXVhZHJhbnQgZmlsbHMg4oCUIHZpdmlkIGFuZCBkaXN0aW5jdCAtLT4KICA8cmVjdCB4PSI1IiB5PSI1IiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHJ4PSIxLjUiIGZpbGw9IiM0QjhFRjEiIG9wYWNpdHk9IjAuODUiLz4KICA8cmVjdCB4PSIxNyIgeT0iNSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiByeD0iMS41IiBmaWxsPSIjRjVBNjIzIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHJlY3QgeD0iNSIgeT0iMTciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgcng9IjEuNSIgZmlsbD0iIzNEQkY4MiIgb3BhY2l0eT0iMC44NSIvPgogIDxyZWN0IHg9IjE3IiB5PSIxNyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiByeD0iMS41IiBmaWxsPSIjRTg1RDZCIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPCEtLSBDcm9zcyBsaW5lcyAtLT4KICA8bGluZSB4MT0iMTYiIHkxPSI0IiB4Mj0iMTYiIHkyPSIyOCIgc3Ryb2tlPSIjMEEwQzBGIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iNCIgeTE9IjE2IiB4Mj0iMjgiIHkyPSIxNiIgc3Ryb2tlPSIjMEEwQzBGIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIERvdCBpbiBsaWItbGVmdCAoZ3JlZW4gcXVhZHJhbnQpIC0tPgogIDxjaXJjbGUgY3g9IjEwIiBjeT0iMjIiIHI9IjMiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+Cg==">
-
-<!-- ═══ STRUCTURED DATA ═══ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "CoreOpinion",
-  "url": "https://coreopinion.org",
-  "description": "A free political compass test with 102 scenario-based questions across 3 axes. Find your ideological position and discover your personal framing bias score.",
-  "applicationCategory": "Quiz",
-  "operatingSystem": "Any",
-  "browserRequirements": "Requires JavaScript",
-  "isAccessibleForFree": true,
-  "inLanguage": "en",
-  "dateModified": "2026-03-19",
-  "keywords": "political compass, political test, political quiz, framing bias, ideology test",
-  "author": {
-    "@type": "Organization",
-    "name": "CoreOpinion",
-    "url": "https://coreopinion.org"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-</script>
+<meta name="twitter:title" content="Political Compass Test with Bias Score | CoreOpinion">
+<meta name="twitter:description" content="Take the political compass test that reveals your framing bias. 102 scenario-based questions to find your ideology and check your response consistency.">
+<meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -75,7 +33,7 @@
 <!-- LANDING -->
 <div class="page active" id="page-landing">
   <nav>
-    <div class="logo" onclick="goTo('page-landing')">Core<span>opinion</span></div>
+    <a class="logo" href="/">Core<span>opinion</span></a>
     <div class="nav-links">
       <a href="/">General</a>
       <a href="/us">US</a>
@@ -92,92 +50,36 @@
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <div></div>
+    <div style="display:flex;align-items:center;gap:12px">
+      
+      <div class="flag-badge">
+        <span class="flag"></span>
+        <span id="lang-label">General</span>
+      </div>
+    </div>
   </nav>
+
   <div class="hero">
-    <div class="hero-bg">CO</div>
-    <div class="eyebrow">Political compass test</div>
+    <div class="hero-bg"></div>
+    <div class="eyebrow">General Political Test</div>
     <h1>A political compass test<br>built for <em>nuance.</em></h1>
     <p class="hero-sub">Answer scenario-based questions. Go on record across 8 political topics. See exactly where you land and why.</p>
     <div class="hero-cta">
-      <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
-      <button class="btn-secondary" onclick="goTo('page-about')">How does it work?</button>
+      <button class="btn-primary" onclick="startTest()">Start the test</button>
+      <button class="btn-secondary" onclick="goTo('page-landing')">How it works</button>
     </div>
   </div>
-  <div class="stats-strip">
-    <div class="stat-cell"><div class="stat-num">100</div><div class="stat-desc">Scenario-based questions in the full test</div></div>
-    <div class="stat-cell"><div class="stat-num">3</div><div class="stat-desc">Political axes, including Nationalist vs Globalist</div></div>
-    <div class="stat-cell"><div class="stat-num">2</div><div class="stat-desc">Results. You get more than just a dot on a compass.</div></div>
-  </div>
-  <div class="tease-section">
-    <div>
-      <div class="tease-tag">Not your average test</div>
-      <div class="tease-title">Most tests tell you what you already think.</div>
-      <p class="tease-text">CoreOpinion goes further. Answer honestly and your results will reveal something about how you actually think, not just where you sit on a chart. Take the test first. Then you will understand.</p>
-    </div>
-    <div style="display:flex;justify-content:center">
-      <div class="mini-compass" style="width:200px;height:200px;">
-        <svg width="200" height="200" viewBox="0 0 200 200">
-          <!-- Quadrants with strong colour -->
-          <rect x="6" y="6" width="88" height="88" rx="4" fill="#4B8EF1" opacity="0.18"/>
-          <rect x="106" y="6" width="88" height="88" rx="4" fill="#F5A623" opacity="0.18"/>
-          <rect x="6" y="106" width="88" height="88" rx="4" fill="#3DBF82" opacity="0.18"/>
-          <rect x="106" y="106" width="88" height="88" rx="4" fill="#E85D6B" opacity="0.18"/>
-          <!-- Dividers -->
-          <line x1="100" y1="6" x2="100" y2="194" stroke="#C8C4BC" stroke-width="1"/>
-          <line x1="6" y1="100" x2="194" y2="100" stroke="#C8C4BC" stroke-width="1"/>
-          <!-- Corner labels -->
-          <text x="10" y="22" font-size="11" fill="#3D4147" font-family="Outfit,sans-serif" font-weight="400">Auth left</text>
-          <text x="108" y="22" font-size="11" fill="#3D4147" font-family="Outfit,sans-serif" font-weight="400">Auth right</text>
-          <text x="10" y="192" font-size="11" fill="#3D4147" font-family="Outfit,sans-serif" font-weight="400">Lib left</text>
-          <text x="110" y="192" font-size="11" fill="#3D4147" font-family="Outfit,sans-serif" font-weight="400">Lib right</text>
-          <!-- Dot -->
-          <circle cx="62" cy="138" r="9" fill="#1E4D8C"/>
-          <circle cx="62" cy="138" r="16" fill="#1E4D8C" opacity="0.15"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- MODE -->
-<div class="page" id="page-mode">
-  <nav>
-    <div class="logo" onclick="goTo('page-landing')">Core<span>opinion</span></div>
-    <div class="nav-links">
-      <a href="/">General</a>
-      <a href="/us">US</a>
-      <a href="/uk">UK</a>
-      <a href="/ca">Canada</a>
-      <a href="/au">Australia</a>
-      <a href="/nz">New Zealand</a>
-      <a href="/se">Sweden</a>
-      <a href="/de">Germany</a>
-      <a href="/at">Austria</a>
-      <a href="/fr">France</a>
-      <a href="/es">Spain</a>
-      <a href="/it">Italy</a>
-      <a href="/ie">Ireland</a>
-      <a href="/nl">Netherlands</a>
+  <div class="stats-strip">
+    <div class="stat-cell"><div class="stat-num">100</div>
+  <div class="info-section">
+    <div class="info-block">
+      <h3>Scenario-based, not a survey</h3>
+      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
     </div>
-    <div></div>
-  </nav>
-  <div class="mode-outer">
-    <div class="page-title">How much time do you have?</div>
-    <p class="page-sub">Longer tests give a more accurate political position. The more questions you answer, the more your results will surprise you.</p>
-    <div class="mode-list">
-      <div class="mode-card" onclick="startTest('short')">
-        <div class="mode-lhs"><span class="mode-pill pill-s">Short</span><div><div class="mode-name">Quick read</div><div class="mode-desc">10 topics, 2-axis compass</div></div></div>
-        <div class="mode-rhs"><div class="mode-n">30</div><div class="mode-unit">questions</div><div class="mode-time">About 6 min</div></div>
-      </div>
-      <div class="mode-card" onclick="startTest('medium')">
-        <div class="mode-lhs"><span class="mode-pill pill-m">Medium</span><div><div class="mode-name">Full picture</div><div class="mode-desc">18 topics, 2-axis compass</div></div></div>
-        <div class="mode-rhs"><div class="mode-n">60</div><div class="mode-unit">questions</div><div class="mode-time">About 15 min</div></div>
-      </div>
-      <div class="mode-card" onclick="startTest('long')">
-        <div class="mode-lhs"><span class="mode-pill pill-l">Long</span><div><div class="mode-name">Deep dive</div><div class="mode-desc">25 topics, 3-axis compass</div></div></div>
-        <div class="mode-rhs"><div class="mode-n">100</div><div class="mode-unit">questions</div><div class="mode-time">About 25 min</div></div>
-      </div>
+    <div class="info-block">
+      <h3>Party alignment, not party loyalty</h3>
+      <p>The result shows how closely your answers match each party's platform across all issues, not just the ones you feel strongly about. You might find you align with a party you didn't expect, or that you're genuinely split between two.</p>
     </div>
   </div>
 </div>
@@ -185,9 +87,9 @@
 <!-- QUESTION -->
 <div class="page" id="page-test">
   <nav>
-    <div class="logo" onclick="goTo('page-landing')">Core<span>opinion</span></div>
+    <a class="logo" href="/">Core<span>opinion</span></a>
     <div></div>
-    <div id="mode-badge" style="font-size:13px;color:var(--ink-faint)">Short test</div>
+    <div class="flag-badge"><span class="flag"></span> General</div>
   </nav>
   <div class="q-shell">
     <div class="prog-row">
@@ -195,7 +97,7 @@
         <div class="prog-fill" id="prog-fill" style="width:0%"></div>
         <div class="prog-tip"></div>
       </div>
-      <span class="prog-txt" id="prog-txt">1 of 30</span>
+      <span class="prog-txt" id="prog-txt">1 of 47</span>
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
     <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
@@ -216,7 +118,7 @@
 
 <!-- DEMOGRAPHICS -->
 <div class="page" id="page-demo">
-  <nav><div class="logo">Core<span>opinion</span></div><div></div><div></div></nav>
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
   <div class="demo-outer">
     <div class="page-title">Almost there.</div>
     <p class="page-sub">A few quick questions before your results. Everything is anonymous.</p>
@@ -226,27 +128,28 @@
         <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
       </div>
       <div>
-        <div class="field-label">Country</div>
-        <select id="d-country"><option value="">Select...</option>
-<option>United States</option>
-<option>United Kingdom</option>
-<option>Canada</option>
-<option>Australia</option>
-<option>New Zealand</option>
-<option>Germany</option>
-<option>Austria</option>
-<option>France</option>
-<option>Spain</option>
-<option>Italy</option>
-<option>Sweden</option>
-<option>Ireland</option>
-<option>Netherlands</option>
-<option>Other</option>
-</select>
+        <div class="field-label">Region <span>(optional)</span></div>
+        <select id="d-country">
+          <option value="">Select...</option>
+          <option>United States</option>
+          <option>United Kingdom</option>
+          <option>Canada</option>
+          <option>Australia</option>
+          <option>New Zealand</option>
+          <option>Germany</option>
+          <option>Austria</option>
+          <option>France</option>
+          <option>Spain</option>
+          <option>Italy</option>
+          <option>Sweden</option>
+          <option>Ireland</option>
+          <option>Netherlands</option>
+          <option>Other</option>        </select>
       </div>
       <div>
-        <div class="field-label">How do you identify politically? <span>(optional)</span></div>
-        <select id="d-pol"><option value="">Prefer not to say</option><option>Far left</option><option>Left</option><option>Centre-left</option><option>Centre</option><option>Centre-right</option><option>Right</option><option>Far right</option><option>Libertarian</option><option>Apolitical</option></select>
+        <div class="field-label">How do you currently identify? <span>(optional)</span></div>
+        <select id="d-party">
+          <option value="">Select...</option>        </select>
       </div>
       <div>
         <div class="field-label">Gender <span>(optional)</span></div>
@@ -256,6 +159,26 @@
           <option>Female</option>
           <option>Other</option>
           <option>Prefer not to say</option>
+        </select>
+      </div>
+      <div>
+        <div class="field-label">Nationality <span>(optional)</span></div>
+        <select id="d-nationality">
+          <option value="">Select...</option>
+          <option>United States</option>
+          <option>United Kingdom</option>
+          <option>Canada</option>
+          <option>Australia</option>
+          <option>New Zealand</option>
+          <option>Germany</option>
+          <option>Austria</option>
+          <option>France</option>
+          <option>Spain</option>
+          <option>Italy</option>
+          <option>Sweden</option>
+          <option>Ireland</option>
+          <option>Netherlands</option>
+          <option>Other</option>
         </select>
       </div>
     </div>
@@ -272,41 +195,18 @@
 
 <!-- CALCULATING -->
 <div class="page" id="page-calc">
-  <nav><div class="logo">Core<span>opinion</span></div><div></div><div></div></nav>
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
   <div class="calc-shell">
     <div class="spin-ring"></div>
-    <div class="calc-h">Analysing your answers</div>
+    <div class="calc-h">Mapping your answers</div>
     <p class="calc-p">This will only take a moment.</p>
-  </div>
-</div>
-
-<!-- REVEAL -->
-<div class="page" id="page-reveal">
-  <nav><div class="logo">Core<span>opinion</span></div><div></div><div></div></nav>
-  <div class="reveal-shell">
-    <div class="reveal-eyebrow">Your results are ready</div>
-    <div class="reveal-h">You got two scores.<br>One you expected.</div>
-    <p class="reveal-p">We were tracking something else while you answered. See what your choices revealed beyond where you sit on the compass.</p>
-    <div class="reveal-grid">
-      <div class="reveal-card">
-        <div class="rcard-tag">Political position</div>
-        <div class="rcard-val" id="rv-archetype">Social Libertarian</div>
-        <div class="rcard-sub" id="rv-axes">Economic left, anti-authoritarian</div>
-      </div>
-      <div class="reveal-card reveal-dark" onclick="goTo('page-results')">
-        <div class="rcard-tag">Something else</div>
-        <div class="rcard-val">Tap to reveal</div>
-        <div class="rcard-sub">Based on how you answered</div>
-      </div>
-    </div>
-    <button class="btn-primary" onclick="goTo('page-results')" style="padding:16px 40px">See full results</button>
   </div>
 </div>
 
 <!-- RESULTS -->
 <div class="page" id="page-results">
   <nav>
-    <div class="logo" onclick="goTo('page-landing')">Core<span>opinion</span></div>
+    <a class="logo" href="/">Core<span>opinion</span></a>
     <div class="nav-links">
       <a href="/">General</a>
       <a href="/us">US</a>
@@ -323,945 +223,3119 @@
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <button class="btn-nav" onclick="goTo('page-mode')">Retake</button>
+    <div class="flag-badge"><span class="flag"></span> General</div>
   </nav>
-  <div class="tab-bar">
-    <button class="tab-btn on" onclick="switchTab('t-main',this)">Your results</button>
-    <button class="tab-btn" onclick="switchTab('t-bias',this)">Bias breakdown</button>
-  </div>
+  <div class="results-shell">
+    <div class="results-head">
+      <div class="result-eyebrow">Your General political alignment</div>
+      <div class="result-headline" id="r-top-party">Democrat</div>
+      <div class="result-sub" id="r-top-desc">Your answers most closely align with the Democratic Party platform.</div>
+    </div>
 
-  <div id="t-main">
-    <div class="results-shell">
-      <div class="results-head">
-        <div class="archetype-tag">Your position on the compass</div>
-        <div class="archetype-name" id="r-name">Social Libertarian</div>
-        <div class="archetype-axes" id="r-axes">Economic left, anti-authoritarian</div>
-      </div>
-      <div class="results-grid">
-        <div class="res-card">
-          <div class="res-card-title">Political compass</div>
-          <div class="compass-wrap">
-            <svg width="380" height="380" viewBox="0 0 380 380">
-              <!-- Quadrant fills -->
-              <rect x="10" y="10" width="175" height="175" rx="6" fill="#4B8EF1" opacity="0.12"/>
-              <rect x="195" y="10" width="175" height="175" rx="6" fill="#F5A623" opacity="0.12"/>
-              <rect x="10" y="195" width="175" height="175" rx="6" fill="#3DBF82" opacity="0.12"/>
-              <rect x="195" y="195" width="175" height="175" rx="6" fill="#E85D6B" opacity="0.12"/>
-              <!-- Axis lines -->
-              <line x1="190" y1="10" x2="190" y2="370" stroke="#B0B5BC" stroke-width="1.2"/>
-              <line x1="10" y1="190" x2="370" y2="190" stroke="#B0B5BC" stroke-width="1.2"/>
-              <!-- Faint inner grid -->
-              <line x1="95" y1="10" x2="95" y2="370" stroke="#E5E3DF" stroke-width="0.5" stroke-dasharray="3,4"/>
-              <line x1="285" y1="10" x2="285" y2="370" stroke="#E5E3DF" stroke-width="0.5" stroke-dasharray="3,4"/>
-              <line x1="10" y1="95" x2="370" y2="95" stroke="#E5E3DF" stroke-width="0.5" stroke-dasharray="3,4"/>
-              <line x1="10" y1="285" x2="370" y2="285" stroke="#E5E3DF" stroke-width="0.5" stroke-dasharray="3,4"/>
-              <!-- Quadrant labels -->
-              <text x="100" y="36" font-size="11" fill="#4B8EF1" font-family="Outfit,sans-serif" font-weight="500" text-anchor="middle" opacity="0.8">Auth left</text>
-              <text x="280" y="36" font-size="11" fill="#C07018" font-family="Outfit,sans-serif" font-weight="500" text-anchor="middle" opacity="0.8">Auth right</text>
-              <text x="100" y="362" font-size="11" fill="#2A8A5A" font-family="Outfit,sans-serif" font-weight="500" text-anchor="middle" opacity="0.8">Lib left</text>
-              <text x="280" y="362" font-size="11" fill="#C0334A" font-family="Outfit,sans-serif" font-weight="500" text-anchor="middle" opacity="0.8">Lib right</text>
+    <!-- Party alignment bars -->
+    <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Party alignment</div>
+    <div class="party-results" id="party-results"></div>
 
-              <!-- Dot -->
-              <circle id="cdot-ring" cx="190" cy="190" r="22" fill="#1E4D8C" opacity="0.15"/>
-              <circle id="cdot" cx="190" cy="190" r="11" fill="#1E4D8C"/>
-            </svg>
-          </div>
-          <div class="axis-block">
-            <div class="axis-item">
-              <div class="axis-name">Economic</div>
-              <div class="axis-row-labels"><span>Left</span><span>Right</span></div>
-              <div class="axis-track"><div class="axis-marker" id="ax-econ" style="left:50%"></div></div>
-            </div>
-            <div class="axis-item">
-              <div class="axis-name">Governance</div>
-              <div class="axis-row-labels"><span>Libertarian</span><span>Authoritarian</span></div>
-              <div class="axis-track"><div class="axis-marker" id="ax-gov" style="left:50%"></div></div>
-            </div>
-          </div>
+    <!-- Compass + axis -->
+    <div class="results-grid">
+      <div class="res-card">
+        <div class="res-card-title">Political compass position</div>
+        <div class="compass-wrap">
+          <svg width="340" height="340" viewBox="0 0 340 340">
+            <rect x="10" y="10" width="155" height="155" rx="5" fill="#4B8EF1" opacity="0.11"/>
+            <rect x="175" y="10" width="155" height="155" rx="5" fill="#F5A623" opacity="0.11"/>
+            <rect x="10" y="175" width="155" height="155" rx="5" fill="#3DBF82" opacity="0.11"/>
+            <rect x="175" y="175" width="155" height="155" rx="5" fill="#E85D6B" opacity="0.11"/>
+            <line x1="170" y1="10" x2="170" y2="330" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="10" y1="170" x2="330" y2="170" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="90" y1="10" x2="90" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="250" y1="10" x2="250" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="90" x2="330" y2="90" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="250" x2="330" y2="250" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <text x="90" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
+            <text x="90" y="338" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
+            <text x="8" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 174)">Left</text>
+            <text x="336" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 336 174)">Right</text>
+            <circle id="cdot-ring" cx="170" cy="170" r="20" fill="#1E4D8C" opacity="0.15"/>
+            <circle id="cdot" cx="170" cy="170" r="10" fill="#1E4D8C"/>
+          </svg>
         </div>
-        <div class="res-card">
-          <div class="res-card-title">Framing bias score</div>
-          <div class="bias-big" id="r-bias-num">0</div>
-          <div class="bias-denom">out of 100</div>
-          <div class="bias-verdict v-amber" id="r-bias-verdict">Calculating...</div>
-          <div class="bias-rows" id="r-bias-rows"></div>
-          <div id="bias-faceoff" style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border-soft);display:none;"></div>
+        <div class="axis-block">
+          <div class="axis-item">
+            <div class="axis-name">Economic</div>
+            <div class="axis-row-labels"><span>Left</span><span>Right</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-econ" style="left:50%"></div></div>
+          </div>
+          <div class="axis-item">
+            <div class="axis-name">Governance</div>
+            <div class="axis-row-labels"><span>Libertarian</span><span>Authoritarian</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-gov" style="left:50%"></div></div>
+          </div>
         </div>
       </div>
 
-      <div class="insight-panel">
-        <div class="insight-body" id="r-insight"></div>
-      </div>
-
-      <!-- SAVE & SHARE -->
-      <div class="save-panel">
-        <div class="save-title">Save or share your results</div>
-        <div class="save-desc">Enter your email and we will send you a link to these results. Your email is never shared or used for anything else.</div>
-        <div class="save-row">
-          <input type="email" id="save-email" placeholder="your@email.com">
-          <button class="btn-primary" onclick="saveResults()" style="padding:13px 24px;font-size:14px;white-space:nowrap">Send results</button>
-        </div>
-        <div class="save-status" id="save-status"></div>
-        <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border-soft)">
-          <div class="share-row">
-            <button class="btn-ghost" onclick="copyLink()">Copy results link</button>
-            <button class="btn-ghost" onclick="goTo('page-mode')">Take a longer test</button>
-          </div>
-        </div>
+      <div class="res-card">
+        <div class="res-card-title">What this means</div>
+        <div id="r-insight" style="font-size:14px;color:var(--ink-muted);line-height:1.8;font-weight:300;"></div>
       </div>
     </div>
-  </div>
 
-  <div id="t-bias" style="display:none">
-    <div class="results-shell">
-      <div style="margin-bottom:36px">
-        <div class="page-title" style="font-size:34px;margin-bottom:10px">Framing bias breakdown</div>
-        <p class="page-sub" style="margin-bottom:0;max-width:600px">This score measures how much the wording of a question changed your answer. A high score means your answers shifted depending on how the question was framed, even when the underlying issue was the same.</p>
+    <!-- WHERE YOU DISAGREE -->
+    <div id="disagree-section" style="display:none;margin-bottom:28px;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Where you disagree with <span id="disagree-party-name">your top party</span></div>
+      <div id="disagree-list"></div>
+    </div>
+
+    <!-- BIAS SCORE CARD -->
+    <div id="bias-card" style="background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;">
+        <div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Framing Bias Score</div>
+          <div style="font-size:48px;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ink);letter-spacing:-2px;line-height:1" id="bias-num">0%</div>
+          <div style="font-size:14px;color:var(--ink-muted);margin-top:6px;font-weight:300" id="bias-verdict">Calculating...</div>
+        </div>
+        <div style="background:var(--parchment);border-radius:8px;padding:16px 20px;max-width:340px;">
+          <div style="font-size:12px;color:var(--ink-muted);font-weight:300;line-height:1.65" id="bias-explain"></div>
+        </div>
       </div>
-      <div id="bias-detail-list"></div>
+      <div id="bias-rows" style="display:flex;flex-direction:column;gap:10px;"></div>
+      <div id="bias-faceoff" style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border-soft);display:none;"></div>
+    </div>
+    <div class="save-panel">
+      <div class="save-title">Save your results</div>
+      <div class="save-desc">Enter your email and we will send you a link to these results. Never shared.</div>
+      <div class="save-row">
+        <input type="email" id="save-email" placeholder="your@email.com">
+        <button class="btn-primary" onclick="saveResults()" style="padding:13px 24px;font-size:14px;white-space:nowrap">Send results</button>
+      </div>
+      <div class="save-status" id="save-status"></div>
+      <div class="share-row">
+        <button class="btn-ghost" onclick="copyLink()">Copy results link</button>
+        <button class="btn-ghost" onclick="startTest()">Retake test</button>
+        <a href="/" style="text-decoration:none"><button class="btn-ghost">Take general test</button></a>
+      </div>
     </div>
   </div>
 </div>
 
 <script>
-// ============================================================
-// SUPABASE CONFIG
-// ============================================================
-const SB_URL = 'https://rttomfnfyjjssdqfzkaj.supabase.co';
-const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
+const LOCAL_QUESTIONS = {};
 
-async function sbInsert(table, data) {
-  const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': SB_KEY,
-      'Authorization': `Bearer ${SB_KEY}`,
-      'Prefer': 'return=representation'
-    },
-    body: JSON.stringify(data)
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
-
-// ============================================================
-// QUESTION BANK
-// ============================================================
 const BANK = [
-
-  // ── REPRODUCTIVE RIGHTS ──────────────────────────────────────────────
-  {id:'rr1',node:'repro',nl:'Policy and rights',pair:'rr-a',fr:'pro',type:'s',
-   q:'The state has no business inside a woman\'s body. That decision belongs to her and no one else.',
-   opts:[{t:'Completely. The government has no place in that room.',e:0,g:-2,n:-2},
-         {t:'Generally yes, though reasonable limits exist.',e:0,g:0,n:0},
-         {t:'The state has a duty to protect life at all stages.',e:0,g:2,n:2}]},
-
-  {id:'rr2',node:'repro',nl:'Policy and rights',pair:'rr-a',fr:'con',type:'sc',
-   ctx:'A healthy 14-week pregnancy. The mother wants it to end.',
-   q:'Should the hospital be legally required to help her?',
-   opts:[{t:'No. No one should be forced to take a life.',e:0,g:2,n:2},
-         {t:'Yes, or refer her to someone who will.',e:0,g:0,n:0},
-         {t:'Yes, unconditionally. Refusal causes real harm.',e:0,g:-2,n:-2}]},
-
-  {id:'rr3',node:'repro',nl:'Policy and rights',pair:'rr-b',fr:'neutral',type:'sc',
-   ctx:'A 16-year-old is pregnant. Her parents do not know. The law requires their consent.',
-   q:'Should a teenager need her parents\' permission to end a pregnancy?',
-   opts:[{t:'No. Her body, her decision, at any age.',e:0,g:-2,n:-2},
-         {t:'Parental guidance matters, but not as a legal veto.',e:0,g:0,n:0},
-         {t:'Yes. At 16, parents have both a right and a duty to be involved.',e:0,g:2,n:2}]},
-
-  {id:'rr4',node:'repro',nl:'Policy and rights',pair:'rr-b',fr:'con',type:'s',
-   q:'A society with no legal limits on abortion has lost something important.',
-   opts:[{t:'Yes. At some point the law must step in.',e:0,g:2,n:2},
-         {t:'I understand the concern but I trust individuals to decide.',e:0,g:0,n:0},
-         {t:'No. Restricting access causes far more harm than it prevents.',e:0,g:-2,n:-2}]},
-
-  // ── GUN POLICY ───────────────────────────────────────────────────────
-  {id:'gp1',node:'guns',nl:'Public safety',pair:'gp-a',fr:'pro',type:'sc',
-   ctx:'A 14-year-old girl is shot dead in her classroom. The gun was her classmate\'s parent\'s, legally owned, unsecured.',
-   q:'Who bears responsibility for her death?',
-   opts:[{t:'The parent and the laws that let this happen.',e:0,g:2,n:-2},
-         {t:'The parent primarily. The law already requires responsibility.',e:0,g:0,n:0},
-         {t:'The individual who pulled the trigger. Laws cannot prevent evil.',e:0,g:-2,n:2}]},
-
-  {id:'gp2',node:'guns',nl:'Public safety',pair:'gp-a',fr:'con',type:'s',
-   q:'A law-abiding citizen should never have to justify owning a firearm to the government.',
-   opts:[{t:'Agreed. It is a right, not a privilege.',e:0,g:-2,n:2},
-         {t:'Basic checks are reasonable. Ownership should still be accessible.',e:0,g:0,n:0},
-         {t:'Owning a weapon is not a right without accountability.',e:0,g:2,n:-2}]},
-
-  {id:'gp3',node:'guns',nl:'Public safety',pair:'gp-b',fr:'neutral',type:'sc',
-   ctx:'Country A: 30 guns per 100 people, 2.9 gun deaths per 100,000. Country B: 4 guns per 100 people, 0.9 gun deaths per 100,000.',
-   q:'More guns means more death. The data is clear.',
-   opts:[{t:'Yes. The correlation is undeniable and policy should follow.',e:0,g:2,n:-2},
-         {t:'The numbers correlate but culture and enforcement matter more.',e:0,g:0,n:0},
-         {t:'No. Correlation is not causation and this data proves nothing.',e:0,g:-2,n:2}]},
-
-  {id:'gp4',node:'guns',nl:'Public safety',pair:'gp-b',fr:'con',type:'s',
-   q:'An armed citizenry is the last defence against a government that turns against its own people.',
-   opts:[{t:'Yes. The right to bear arms exists precisely for this reason.',e:0,g:-2,n:2},
-         {t:'The argument made sense historically. It is harder to apply today.',e:0,g:0,n:0},
-         {t:'This logic justifies private arsenals. It is dangerous.',e:0,g:2,n:-2}]},
-
-  // ── IMMIGRATION ──────────────────────────────────────────────────────
-  {id:'im1',node:'immig',nl:'Borders and movement',pair:'im-a',fr:'con',type:'sc',
-   ctx:'A city\'s schools are overcrowded. GPs have months-long wait times. Rent has doubled. Immigration has grown sharply.',
-   q:'Immigration caused this. The government should have seen it coming.',
-   opts:[{t:'Yes. Unmanaged intake overwhelmed services that were never built for it.',e:0,g:2,n:2},
-         {t:'Immigration contributed but underinvestment in services is the deeper failure.',e:0,g:0,n:0},
-         {t:'No. Scapegoating newcomers for infrastructure failures is dishonest.',e:-2,g:0,n:-2}]},
-
-  {id:'im2',node:'immig',nl:'Borders and movement',pair:'im-a',fr:'pro',type:'s',
-   q:'Every generation has feared immigration. Every generation has been wrong.',
-   opts:[{t:'Agreed. The warnings have never matched the reality.',e:2,g:-2,n:-2},
-         {t:'Broadly true, but some concerns in some contexts have been legitimate.',e:0,g:0,n:0},
-         {t:'The scale of movement today is genuinely different from anything before.',e:0,g:2,n:2}]},
-
-  {id:'im3',node:'immig',nl:'Borders and movement',pair:'im-b',fr:'pro',type:'sc',
-   ctx:'A family of five. Fled a war. Three years in a camp. Two years waiting for a decision. Still waiting.',
-   q:'Two years is long enough. Let them in.',
-   opts:[{t:'Yes. This is a moral failure and it needs to end.',e:0,g:-2,n:-2},
-         {t:'Process them properly, but two years is too long.',e:0,g:0,n:0},
-         {t:'We cannot open borders to everyone with a difficult story.',e:0,g:2,n:2}]},
-
-  {id:'im4',node:'immig',nl:'Borders and movement',pair:'im-b',fr:'con',type:'s',
-   q:'A country has the absolute right to decide who enters. No international body can override that.',
-   opts:[{t:'Agreed. Sovereignty is non-negotiable.',e:0,g:2,n:2},
-         {t:'Sovereignty matters, but so do legitimate humanitarian obligations.',e:0,g:0,n:0},
-         {t:'No. International law exists to limit exactly this kind of thinking.',e:0,g:-2,n:-2}]},
-
-  // ── TAXATION ─────────────────────────────────────────────────────────
-  {id:'tx1',node:'tax',nl:'Wealth and redistribution',pair:'tx-a',fr:'pro',type:'sc',
-   ctx:'Ten people own more than the bottom half of the country combined.',
-   q:'This is not success. This is a system that is broken.',
-   opts:[{t:'Yes. This level of concentration is a structural failure.',e:-2,g:2,n:-2},
-         {t:'Inequality is high but wealth at the top does not mean poverty at the bottom.',e:0,g:0,n:0},
-         {t:'No. Wealth concentration is what a free market produces. That is not broken.',e:2,g:-2,n:2}]},
-
-  {id:'tx2',node:'tax',nl:'Wealth and redistribution',pair:'tx-a',fr:'con',type:'s',
-   q:'Taking more than half of what someone earns in tax, however rich they are, is theft.',
-   opts:[{t:'Yes. Past a certain point, taxation becomes confiscation.',e:2,g:-2,n:2},
-         {t:'High earners should pay more, but the word theft is too strong.',e:0,g:0,n:0},
-         {t:'No. The wealthy built their fortunes on public infrastructure. They owe it back.',e:-2,g:2,n:-2}]},
-
-  {id:'tx3',node:'tax',nl:'Wealth and redistribution',pair:'tx-b',fr:'pro',type:'sc',
-   ctx:'Option A: raise taxes on incomes over 200k and make university and dental care free for everyone. Option B: keep taxes flat, leave it private.',
-   q:'Which country do you want to live in?',
-   opts:[{t:'Option A. Universal services are worth paying for.',e:-2,g:2,n:-2},
-         {t:'Something in between. Targeted support, not full universality.',e:0,g:0,n:0},
-         {t:'Option B. People should fund their own lives.',e:2,g:-2,n:2}]},
-
-  {id:'tx4',node:'tax',nl:'Wealth and redistribution',pair:'tx-b',fr:'con',type:'s',
-   q:'When you tax success heavily enough, you eventually run out of successful people.',
-   opts:[{t:'Yes. High taxes drive away the wealth creators a country needs.',e:2,g:-2,n:2},
-         {t:'Some truth to it, but this argument is used to justify any tax cut.',e:0,g:0,n:0},
-         {t:'No. This is an old story told to protect the interests of the already-wealthy.',e:-2,g:2,n:-2}]},
-
-  // ── HEALTHCARE ───────────────────────────────────────────────────────
-  {id:'hc1',node:'health',nl:'Healthcare systems',pair:'hc-a',fr:'pro',type:'sc',
-   ctx:'He lost his job. The insurance went with it. Now cancer. The bill is 380,000 dollars his family does not have.',
-   q:'Should this man die because he lost his job?',
-   opts:[{t:'No. A country that lets this happen has failed.',e:-2,g:2,n:-2},
-         {t:'There should be safety nets. But nationalising healthcare is not the answer.',e:0,g:0,n:0},
-         {t:'This is a personal insurance failure, not a reason to redesign the system.',e:2,g:-2,n:2}]},
-
-  {id:'hc2',node:'health',nl:'Healthcare systems',pair:'hc-a',fr:'con',type:'s',
-   q:'The NHS and systems like it are monuments to good intentions and mediocre outcomes.',
-   opts:[{t:'Yes. State healthcare produces waiting lists, rationing, and stagnation.',e:2,g:-2,n:2},
-         {t:'They have problems, but the US model shows private care has worse ones.',e:0,g:0,n:0},
-         {t:'No. Universal systems consistently outperform on outcomes and cost.',e:-2,g:2,n:-2}]},
-
-  {id:'hc3',node:'health',nl:'Healthcare systems',pair:'hc-b',fr:'neutral',type:'sc',
-   ctx:'Poor teeth are a mark of poverty in a country that can afford to fix them.',
-   q:'Dental care should be free at the point of use, just like everything else.',
-   opts:[{t:'Yes. A two-tier smile is indefensible.',e:-2,g:2,n:-2},
-         {t:'Basic dental care yes. Complex procedures can remain private.',e:0,g:0,n:0},
-         {t:'No. There are higher priorities for the healthcare budget.',e:2,g:-2,n:2}]},
-
-  {id:'hc4',node:'health',nl:'Healthcare systems',pair:'hc-b',fr:'con',type:'s',
-   q:'People who spend a lifetime ignoring their health should not expect others to foot the bill.',
-   opts:[{t:'Yes. Personal choices should have personal financial consequences.',e:2,g:2,n:2},
-         {t:'The logic is appealing but determining blame for illness is far too complex.',e:0,g:0,n:0},
-         {t:'No. Illness is not a moral failure. Healthcare must be unconditional.',e:-2,g:-2,n:-2}]},
-
-  // ── CLIMATE ──────────────────────────────────────────────────────────
-  {id:'cl1',node:'climate',nl:'Environment and industry',pair:'cl-a',fr:'con',type:'sc',
-   ctx:'A carbon tax would cut emissions 18%. It would also raise every household\'s energy bill by 340 a year. The poorest families would feel it most.',
-   q:'A climate policy that punishes the poor is not a just policy.',
-   opts:[{t:'Agreed. Green politics should not be a luxury tax on ordinary people.',e:2,g:-2,n:2},
-         {t:'Yes, which is why rebates for low-income households must be built in.',e:-2,g:2,n:-2},
-         {t:'The cost of inaction is far greater. Short-term pain is justified.',e:-2,g:2,n:-2}]},
-
-  {id:'cl2',node:'climate',nl:'Environment and industry',pair:'cl-a',fr:'pro',type:'sc',
-   ctx:'Miami. Jakarta. Amsterdam. All underwater within 60 years without action.',
-   q:'This is an emergency. Governments must act as if civilisation depends on it.',
-   opts:[{t:'Yes. The scale demands emergency-level intervention now.',e:-2,g:2,n:-2},
-         {t:'Serious action yes, but emergency powers carry their own risks.',e:-2,g:0,n:0},
-         {t:'No. Economies cannot be restructured by political fiat.',e:2,g:-2,n:2}]},
-
-  {id:'cl3',node:'climate',nl:'Environment and industry',pair:'cl-b',fr:'con',type:'sc',
-   ctx:'12,000 coal workers. Average age 47. The plant closes under the new law. The retraining programme covers 30% of their previous salary.',
-   q:'You cannot ask people to sacrifice their lives for a target on a spreadsheet.',
-   opts:[{t:'Agreed. Climate policy that destroys communities is not progress.',e:2,g:-2,n:2},
-         {t:'A longer transition and proper support would make this fair.',e:0,g:0,n:0},
-         {t:'The law must apply equally. Proper transition funding is the answer.',e:-2,g:2,n:-2}]},
-
-  {id:'cl4',node:'climate',nl:'Environment and industry',pair:'cl-b',fr:'pro',type:'s',
-   q:'Countries that refuse international climate commitments are stealing from the future.',
-   opts:[{t:'Yes. This is a moral failure that affects everyone.',e:-2,g:2,n:-2},
-         {t:'The framing is right but binding international targets raise real sovereignty issues.',e:0,g:0,n:0},
-         {t:'Nations should set their own path. International agreements are often empty theatre.',e:2,g:-2,n:2}]},
-
-  // ── CRIMINAL JUSTICE ─────────────────────────────────────────────────
-  {id:'cj1',node:'justice',nl:'Crime and punishment',pair:'cj-a',fr:'pro',type:'sc',
-   ctx:'Rehabilitation programmes: 42% lower reoffending, 30% of the cost of prison.',
-   q:'The evidence is clear. We are imprisoning people out of anger, not logic.',
-   opts:[{t:'Yes. The system should follow evidence, not revenge.',e:-2,g:-2,n:-2},
-         {t:'The data matters, but prisons serve purposes beyond reoffending rates.',e:0,g:0,n:0},
-         {t:'Prison is about justice and protecting the public. Not everything can be reduced to statistics.',e:0,g:2,n:2}]},
-
-  {id:'cj2',node:'justice',nl:'Crime and punishment',pair:'cj-a',fr:'con',type:'sc',
-   ctx:'He was released early. Low risk, they said. Six months later he attacked someone again.',
-   q:'The system failed. Some people simply should not be let out.',
-   opts:[{t:'Yes. Public safety must come before rehabilitation theory.',e:0,g:2,n:2},
-         {t:'Prediction is imperfect. One case does not condemn the whole approach.',e:0,g:0,n:0},
-         {t:'The failure was in post-release support, not the decision to release.',e:0,g:-2,n:-2}]},
-
-  {id:'cj3',node:'justice',nl:'Crime and punishment',pair:'cj-b',fr:'neutral',type:'sc',
-   ctx:'Portugal decriminalised all drugs in 2001. Drug deaths fell 80% in a decade.',
-   q:'The war on drugs has failed. It is time to try something else.',
-   opts:[{t:'Yes. The evidence from Portugal alone makes the case.',e:-2,g:-2,n:-2},
-         {t:'Portugal is a small country. Scale and culture matter enormously.',e:0,g:0,n:0},
-         {t:'No. Decriminalisation is surrender dressed up as policy.',e:0,g:2,n:2}]},
-
-  {id:'cj4',node:'justice',nl:'Crime and punishment',pair:'cj-b',fr:'con',type:'s',
-   q:'If you live in a high-crime area, you should expect the police to stop and question you more. That is just reality.',
-   opts:[{t:'Yes. Proactive policing saves lives in the communities that need it most.',e:0,g:2,n:2},
-         {t:'Only with strict safeguards. Unchecked stop-and-search destroys communities.',e:0,g:0,n:0},
-         {t:'No. This is institutionalised harassment and it poisons trust in the police.',e:0,g:-2,n:-2}]},
-
-  // ── FREE SPEECH ──────────────────────────────────────────────────────
-  {id:'sp1',node:'speech',nl:'Expression and limits',pair:'sp-a',fr:'pro',type:'sc',
-   ctx:'Three social media accounts. Millions of followers. Election fraud lies. Voter trust fell 19 points.',
-   q:'Platforms that allow this to happen are complicit in the damage.',
-   opts:[{t:'Yes. Free speech ends where democracy is actively being destroyed.',e:0,g:2,n:-2},
-         {t:'Label it, restrict its reach. But banning speech is always dangerous.',e:0,g:0,n:0},
-         {t:'No. Restricting political speech is more dangerous than the speech itself.',e:0,g:-2,n:2}]},
-
-  {id:'sp2',node:'speech',nl:'Expression and limits',pair:'sp-a',fr:'con',type:'sc',
-   ctx:'A government passes a law. Any content an independent regulator calls harmful misinformation must be removed in 24 hours. The regulator answers to the minister.',
-   q:'This is the beginning of state censorship. It must be opposed.',
-   opts:[{t:'Yes. Governments defining truth is always the first step toward authoritarianism.',e:0,g:-2,n:2},
-         {t:'In principle right, but strong independent oversight could make it workable.',e:0,g:0,n:0},
-         {t:'No. Misinformation causes real harm and platforms cannot be trusted to act alone.',e:0,g:2,n:-2}]},
-
-  {id:'sp3',node:'speech',nl:'Expression and limits',pair:'sp-b',fr:'con',type:'sc',
-   ctx:'A speaker with racist views. A student union that wants him banned. A university that agrees.',
-   q:'Some ideas do not deserve a platform. The university was right.',
-   opts:[{t:'No. Universities are precisely where bad ideas should be confronted, not silenced.',e:0,g:-2,n:2},
-         {t:'The invitation was fine. The ban was an overreaction.',e:0,g:0,n:0},
-         {t:'Yes. Providing a platform is not neutral. It is an endorsement.',e:0,g:2,n:-2}]},
-
-  {id:'sp4',node:'speech',nl:'Expression and limits',pair:'sp-b',fr:'pro',type:'s',
-   q:'Words that tell people they are inferior because of who they are cause real, measurable harm. The law should say so.',
-   opts:[{t:'Yes. The harm is real. The law should recognise it.',e:0,g:2,n:-2},
-         {t:'The harm is real, but making it criminal sets a precedent I do not trust.',e:0,g:0,n:0},
-         {t:'No. The answer to bad speech is more speech, not a prison sentence.',e:0,g:-2,n:2}]},
-
-  // ── WELFARE ──────────────────────────────────────────────────────────
-  {id:'wl1',node:'welfare',nl:'Social safety net',pair:'wl-a',fr:'pro',type:'sc',
-   ctx:'She had a job. Then the factory closed. No savings. Three children. Rent is due in three weeks.',
-   q:'The state owes her enough to survive until she finds her feet. Full stop.',
-   opts:[{t:'Yes. That is what a society is for.',e:-2,g:2,n:-2},
-         {t:'Time-limited support with a requirement to seek work is fair.',e:0,g:0,n:0},
-         {t:'Long-term dependency is a trap. The state should help minimally.',e:2,g:-2,n:2}]},
-
-  {id:'wl2',node:'welfare',nl:'Social safety net',pair:'wl-a',fr:'con',type:'s',
-   q:'Generous welfare systems create people who choose not to work. That is not compassion. That is damage.',
-   opts:[{t:'Yes. Well-intentioned systems can create lasting dependency.',e:2,g:-2,n:2},
-         {t:'Some truth to it, but most people want to work when given a real chance.',e:0,g:0,n:0},
-         {t:'No. The evidence does not support this. This argument punishes the vulnerable.',e:-2,g:2,n:-2}]},
-
-  {id:'wl3',node:'welfare',nl:'Social safety net',pair:'wl-b',fr:'neutral',type:'sc',
-   ctx:'Universal basic income. 1,000 per month. Every adult. Pilots showed higher wellbeing and no drop in employment.',
-   q:'Give every adult a floor and watch what people build on top of it.',
-   opts:[{t:'Yes. The pilot data is compelling and the principle is sound.',e:-2,g:2,n:-2},
-         {t:'Worth exploring in a modified form, but 1,000 for everyone is too blunt.',e:0,g:0,n:0},
-         {t:'No. Universal payments regardless of need are wasteful and the wealth tax will hurt investment.',e:2,g:-2,n:2}]},
-
-  {id:'wl4',node:'welfare',nl:'Social safety net',pair:'wl-b',fr:'con',type:'s',
-   q:'If you have never paid into the system, you have a weaker claim on what it gives out.',
-   opts:[{t:'Yes. Contribution should shape entitlement.',e:2,g:2,n:2},
-         {t:'Some link to contribution is fair, but need must also matter.',e:0,g:0,n:0},
-         {t:'No. Welfare should be based on need alone. Circumstances vary.',e:-2,g:-2,n:-2}]},
-
-  // ── EDUCATION ────────────────────────────────────────────────────────
-  {id:'ed1',node:'education',nl:'Education policy',pair:'ed-a',fr:'pro',type:'sc',
-   ctx:'Rich kid: six times more likely to reach a top university. The only real difference between them is money.',
-   q:'Private schools rig the system. A fair society would abolish them.',
-   opts:[{t:'Yes. They exist to buy advantage and that cannot be justified.',e:-2,g:2,n:-2},
-         {t:'Fund state schools better instead. No need to abolish the private sector.',e:-2,g:0,n:0},
-         {t:'No. Parents have the right to spend their money on their children.',e:2,g:-2,n:2}]},
-
-  {id:'ed2',node:'education',nl:'Education policy',pair:'ed-a',fr:'con',type:'s',
-   q:'A parent who invests in their child\'s education should not be punished for it.',
-   opts:[{t:'Agreed. Educational freedom is a parental right, full stop.',e:2,g:-2,n:2},
-         {t:'Yes, but not when it systematically disadvantages other children.',e:0,g:0,n:0},
-         {t:'Individual choices in education have collective consequences the state must address.',e:-2,g:2,n:-2}]},
-
-  {id:'ed3',node:'education',nl:'Education policy',pair:'ed-b',fr:'neutral',type:'s',
-   q:'Children should be taught how to spot propaganda and manipulation, including from their own government.',
-   opts:[{t:'Yes. Critical thinking is the most important subject on the curriculum.',e:-2,g:-2,n:-2},
-         {t:'Good in principle, but who decides what counts as propaganda is a real problem.',e:0,g:0,n:0},
-         {t:'This risks the state shaping how children think about politics. Parents should decide.',e:2,g:2,n:2}]},
-
-  {id:'ed4',node:'education',nl:'Education policy',pair:'ed-b',fr:'con',type:'s',
-   q:'You chose to go to university. You chose to borrow for it. Pay it back.',
-   opts:[{t:'Yes. The beneficiary should pay. That is fair.',e:2,g:-2,n:2},
-         {t:'Some contribution is fair but current fee levels in many countries are too high.',e:0,g:0,n:0},
-         {t:'No. Education benefits society as a whole and should be free.',e:-2,g:2,n:-2}]},
-
-  // ── DRUG POLICY ──────────────────────────────────────────────────────
-  {id:'dp1',node:'drugs',nl:'Drug policy',pair:'dp-a',fr:'pro',type:'sc',
-   ctx:'He had cannabis. A small amount, personal use. No victims. He loses his job over the criminal record.',
-   q:'Ruining a man\'s life over a joint is not justice. It is cruelty.',
-   opts:[{t:'Yes. Personal drug use should never be a criminal matter.',e:-2,g:-2,n:-2},
-         {t:'A civil fine at most. A criminal record here is wildly disproportionate.',e:0,g:-2,n:0},
-         {t:'The law is the law. Lenience sends the wrong message.',e:0,g:2,n:2}]},
-
-  {id:'dp2',node:'drugs',nl:'Drug policy',pair:'dp-a',fr:'con',type:'s',
-   q:'Legalising drugs tells the next generation that giving up on people is progress.',
-   opts:[{t:'Yes. Legalisation is a form of social surrender.',e:0,g:2,n:2},
-         {t:'The concern is understandable but prohibition has clearly not worked.',e:0,g:0,n:0},
-         {t:'No. Legal regulation is safer and more honest than a black market.',e:0,g:-2,n:-2}]},
-
-  {id:'dp3',node:'drugs',nl:'Drug policy',pair:'dp-b',fr:'neutral',type:'sc',
-   ctx:'Portugal decriminalised drugs. Taxed them. Funded treatment. Drug deaths fell 80%. Black market collapsed by 60%.',
-   q:'The evidence is in. The war on drugs is over and we lost.',
-   opts:[{t:'Yes. Portugal alone makes the case for reform.',e:-2,g:-2,n:-2},
-         {t:'Portugal is small. Scale and culture make direct comparisons difficult.',e:0,g:0,n:0},
-         {t:'No. Some lines should not be crossed regardless of the numbers.',e:0,g:2,n:2}]},
-
-  {id:'dp4',node:'drugs',nl:'Drug policy',pair:'dp-b',fr:'con',type:'s',
-   q:'What you put in your own body, when it hurts nobody else, is none of the government\'s business.',
-   opts:[{t:'Yes. Personal autonomy must be respected without exception.',e:0,g:-2,n:-2},
-         {t:'Generally true, but addiction creates social costs others end up paying for.',e:0,g:0,n:0},
-         {t:'Drug use has wider effects. The state has a legitimate interest.',e:0,g:2,n:2}]},
-
-  // ── LGBTQ+ RIGHTS ────────────────────────────────────────────────────
-  {id:'lq1',node:'lgbtq',nl:'Identity and rights',pair:'lq-a',fr:'pro',type:'sc',
-   ctx:'A same-sex couple wants to adopt. The only local agency is religious. It refuses. There is nowhere else to go.',
-   q:'A publicly licensed service that turns people away because of who they love is not a service. It is a prejudice.',
-   opts:[{t:'Yes. Public services cannot discriminate. Full stop.',e:0,g:2,n:-2},
-         {t:'The agency should refer them. A complete refusal is unacceptable.',e:0,g:0,n:0},
-         {t:'No. Religious organisations must be free to act on their beliefs.',e:0,g:-2,n:2}]},
-
-  {id:'lq2',node:'lgbtq',nl:'Identity and rights',pair:'lq-a',fr:'con',type:'s',
-   q:'No one should be forced by law to act against their deeply held religious conscience.',
-   opts:[{t:'Agreed. Freedom of conscience is a fundamental right.',e:0,g:-2,n:2},
-         {t:'Within limits. Conscience exemptions should not enable discrimination in public services.',e:0,g:0,n:0},
-         {t:'Rights protect people, not beliefs. Conscience exemptions cause real harm.',e:0,g:2,n:-2}]},
-
-  {id:'lq3',node:'lgbtq',nl:'Identity and rights',pair:'lq-b',fr:'neutral',type:'sc',
-   ctx:'A school teaches 7-year-olds that some children have two mums, two dads, or feel like the wrong gender.',
-   q:'Schools should reflect the world as it is, not the world as some parents wish it were.',
-   opts:[{t:'Yes. Children encounter diversity. Schools should reflect that.',e:0,g:-2,n:-2},
-         {t:'Secondary school yes. Age seven is too early for some of this.',e:0,g:0,n:0},
-         {t:'No. This is a matter for families, not classrooms.',e:0,g:2,n:2}]},
-
-  {id:'lq4',node:'lgbtq',nl:'Identity and rights',pair:'lq-b',fr:'con',type:'s',
-   q:'A child cannot consent to medical decisions that may alter them permanently. Protecting children is not bigotry.',
-   opts:[{t:'Yes. Children need protection from irreversible decisions, not encouragement.',e:0,g:2,n:2},
-         {t:'Support and encouragement are different things. Nuance is essential here.',e:0,g:0,n:0},
-         {t:'Withholding support causes harm. Young people need care, not gatekeeping.',e:0,g:-2,n:-2}]},
-
-  // ── FOREIGN POLICY ───────────────────────────────────────────────────
-  {id:'fp1',node:'foreign',nl:'Foreign policy',pair:'fp-a',fr:'pro',type:'sc',
-   ctx:'A government is committing atrocities. Your country does billions in trade with them.',
-   q:'There is no ethical trade with regimes that brutalise their own people.',
-   opts:[{t:'Yes. Values must come before trade deals.',e:-2,g:2,n:-2},
-         {t:'Raise it diplomatically but maintain economic relations.',e:0,g:0,n:0},
-         {t:'No. Interfering in other countries\' internal affairs rarely ends well.',e:2,g:-2,n:2}]},
-
-  {id:'fp2',node:'foreign',nl:'Foreign policy',pair:'fp-a',fr:'con',type:'s',
-   q:'Every foreign military intervention in living memory has made things worse.',
-   opts:[{t:'Yes. The pattern is undeniable and we never learn.',e:0,g:-2,n:2},
-         {t:'Often true, but some interventions have prevented genuine atrocities.',e:0,g:0,n:0},
-         {t:'No. Strong nations have a responsibility to act when others cannot protect their own people.',e:0,g:2,n:-2}]},
-
-  {id:'fp3',node:'foreign',nl:'Foreign policy',pair:'fp-b',fr:'neutral',type:'s',
-   q:'Rich countries spending 1% of GDP on foreign aid while their own people struggle is morally confused.',
-   opts:[{t:'Yes. Charity should start at home.',e:2,g:0,n:2},
-         {t:'Both matter. Foreign aid levels can be maintained alongside domestic investment.',e:0,g:0,n:0},
-         {t:'No. Wealthy nations have a clear responsibility to the global poor.',e:-2,g:0,n:-2}]},
-
-  {id:'fp4',node:'foreign',nl:'Foreign policy',pair:'fp-b',fr:'con',type:'s',
-   q:'A government\'s first obligation is to its own citizens. Everything else is secondary.',
-   opts:[{t:'Yes. That is what a government is for.',e:2,g:0,n:2},
-         {t:'National interest matters, but international cooperation also serves citizens.',e:0,g:0,n:0},
-         {t:'No. This framing is a false choice. Global stability benefits everyone.',e:-2,g:0,n:-2}]},
-
-  // ── DEMOCRACY ────────────────────────────────────────────────────────
-  {id:'dm1',node:'democracy',nl:'Democracy and elections',pair:'dm-a',fr:'pro',type:'sc',
-   ctx:'38% of the vote. 55% turnout. A majority of eligible voters did not vote for them. They call it a mandate.',
-   q:'You cannot govern for everyone on a mandate this thin.',
-   opts:[{t:'Yes. The system that produced this result needs urgent reform.',e:0,g:2,n:-2},
-         {t:'Democracy means accepting results you dislike. Reform the system not the result.',e:0,g:0,n:0},
-         {t:'38% of the vote in a functioning democracy is a mandate. That is how it works.',e:0,g:-2,n:2}]},
-
-  {id:'dm2',node:'democracy',nl:'Democracy and elections',pair:'dm-a',fr:'con',type:'s',
-   q:'Most people simply do not have enough information to vote wisely on complex questions. That is a fact, not an insult.',
-   opts:[{t:'Agreed. Some decisions require expertise, not a popular vote.',e:0,g:2,n:-2},
-         {t:'Experts should inform, not replace, democratic decision-making.',e:0,g:0,n:0},
-         {t:'This is the beginning of every authoritarian argument in history.',e:0,g:-2,n:2}]},
-
-  {id:'dm3',node:'democracy',nl:'Democracy and elections',pair:'dm-b',fr:'neutral',type:'s',
-   q:'Voting should be compulsory. If you live here, you owe the country at least that much.',
-   opts:[{t:'Yes. Civic participation should be a duty, not a lifestyle choice.',e:0,g:2,n:-2},
-         {t:'I understand the argument but forcing people to vote produces uninformed ballots.',e:0,g:0,n:0},
-         {t:'No. A vote you are forced to cast means nothing.',e:0,g:-2,n:2}]},
-
-  {id:'dm4',node:'democracy',nl:'Democracy and elections',pair:'dm-b',fr:'con',type:'s',
-   q:'The fact that something was voted for does not make it right.',
-   opts:[{t:'Yes. Democratic majorities can still choose terrible things.',e:0,g:-2,n:-2},
-         {t:'True, but the solution is better democracy, not less of it.',e:0,g:0,n:0},
-         {t:'No. Questioning democratic outcomes is where authoritarianism begins.',e:0,g:2,n:2}]},
-
-  // ── RELIGION ─────────────────────────────────────────────────────────
-  {id:'re1',node:'religion',nl:'Religion and the state',pair:'re-a',fr:'pro',type:'sc',
-   ctx:'A school bans crosses, hijabs, kippot. All of them. It calls itself neutral.',
-   q:'Banning religious expression in the name of neutrality is just secularism by force.',
-   opts:[{t:'No. Public institutions should be genuinely secular.',e:0,g:2,n:-2},
-         {t:'Personal religious expression should be protected, even in public schools.',e:0,g:-2,n:0},
-         {t:'Yes. This is an overreach that targets religious students.',e:0,g:-2,n:2}]},
-
-  {id:'re2',node:'religion',nl:'Religion and the state',pair:'re-a',fr:'con',type:'s',
-   q:'Religious morality has no more or less legitimate claim to shape law than any secular philosophy.',
-   opts:[{t:'Agreed. Secular is not automatically neutral.',e:0,g:2,n:2},
-         {t:'In a diverse society, laws should be justifiable on non-religious grounds.',e:0,g:0,n:0},
-         {t:'No. Religious law has no place in democratic legislation.',e:0,g:-2,n:-2}]},
-
-  {id:'re3',node:'religion',nl:'Religion and the state',pair:'re-b',fr:'neutral',type:'sc',
-   ctx:'A Catholic hospital takes public money. It refuses to prescribe contraception. It refuses to refer for abortion.',
-   q:'You cannot take public money and then impose your theology on the patients who funded you.',
-   opts:[{t:'Yes. Public funding requires compliance with public health standards.',e:0,g:2,n:-2},
-         {t:'Only if patients cannot access the same services elsewhere.',e:0,g:0,n:0},
-         {t:'No. Religious organisations should retain their ethos.',e:0,g:-2,n:2}]},
-
-  {id:'re4',node:'religion',nl:'Religion and the state',pair:'re-b',fr:'con',type:'s',
-   q:'It is a mistake to treat all religions as equally valid or worthy of equal respect.',
-   opts:[{t:'Yes. Some belief systems cause more harm than others.',e:0,g:2,n:2},
-         {t:'Religions vary in their effects but state neutrality is still the right approach.',e:0,g:0,n:0},
-         {t:'No. Ranking religions by validity is a short path to discrimination.',e:0,g:-2,n:-2}]},
-
-  // ── HOUSING ──────────────────────────────────────────────────────────
-  {id:'hs1',node:'housing',nl:'Housing and planning',pair:'hs-a',fr:'pro',type:'sc',
-   ctx:'Average house price: 14 times average salary. Most young adults will never own where they grew up.',
-   q:'A generation priced out of the place they were born is a political failure, not a market outcome.',
-   opts:[{t:'Yes. The state must intervene. Social housing and rent controls.',e:-2,g:2,n:-2},
-         {t:'Build more. Reform planning. Let supply fix the problem.',e:2,g:-2,n:0},
-         {t:'Both. Supply reform and targeted first-time buyer support.',e:0,g:0,n:0}]},
-
-  {id:'hs2',node:'housing',nl:'Housing and planning',pair:'hs-a',fr:'con',type:'s',
-   q:'Rent controls feel compassionate. In practice they always make housing shortages worse.',
-   opts:[{t:'Yes. The economics are clear whatever the politics suggest.',e:2,g:-2,n:2},
-         {t:'Some controls can work if well-designed. Blanket opposition is too simple.',e:0,g:0,n:0},
-         {t:'No. Prioritising landlord returns over tenant security is the real political choice here.',e:-2,g:2,n:-2}]},
-
-  {id:'hs3',node:'housing',nl:'Housing and planning',pair:'hs-b',fr:'neutral',type:'sc',
-   ctx:'A rural county is blocking 2,000 homes. A regional housing shortage is getting worse. 30% of the units would be affordable.',
-   q:'The people who already have homes should not have a veto over the people who need them.',
-   opts:[{t:'Yes. National need must override local preference.',e:-2,g:2,n:-2},
-         {t:'Only after genuine consultation has been exhausted.',e:0,g:0,n:0},
-         {t:'No. Local communities control their own land. That is a principle worth keeping.',e:2,g:-2,n:2}]},
-
-  {id:'hs4',node:'housing',nl:'Housing and planning',pair:'hs-b',fr:'con',type:'s',
-   q:'Homeowners have the right to protect the value of the most significant investment of their lives.',
-   opts:[{t:'Yes. Property rights must be respected.',e:2,g:-2,n:2},
-         {t:'Some weight should be given to it, but not at the cost of wider housing need.',e:0,g:0,n:0},
-         {t:'Using planning rules to protect your asset at others\' expense is indefensible.',e:-2,g:2,n:-2}]},
-
-  // ── MARKETS & REGULATION ─────────────────────────────────────────────
-  {id:'er1',node:'business',nl:'Markets and regulation',pair:'er-a',fr:'pro',type:'sc',
-   ctx:'Three companies. 80% of the grocery market. They coordinated price increases during a cost of living crisis. Profits up 40%.',
-   q:'This is not capitalism. This is collusion. Break them up.',
-   opts:[{t:'Yes. This is exploitation and it deserves a hard response.',e:-2,g:2,n:-2},
-         {t:'Investigate, fine if proven. But breaking them up is disproportionate.',e:-2,g:0,n:0},
-         {t:'Markets self-correct. Aggressive regulation risks worse unintended consequences.',e:2,g:-2,n:2}]},
-
-  {id:'er2',node:'business',nl:'Markets and regulation',pair:'er-a',fr:'con',type:'s',
-   q:'Every regulation a government adds to business is a cost that ends up on the price tag.',
-   opts:[{t:'Yes. The burden of regulation is consistently underestimated.',e:2,g:-2,n:2},
-         {t:'Some regulation is necessary. The costs should be weighed, not avoided.',e:0,g:0,n:0},
-         {t:'No. Unregulated markets consistently harm workers and consumers. The history is long.',e:-2,g:2,n:-2}]},
-
-  {id:'er3',node:'business',nl:'Markets and regulation',pair:'er-b',fr:'neutral',type:'sc',
-   ctx:'A company with 3 billion users buys its most promising competitor for 20 billion. They will absorb it and shut it down.',
-   q:'When a company is this powerful, it is not a business anymore. It is a government.',
-   opts:[{t:'Yes. Companies of this scale should face a far higher bar.',e:-2,g:2,n:-2},
-         {t:'Block it only if there is clear evidence of harm to consumers.',e:0,g:0,n:0},
-         {t:'No. Acquisitions drive innovation. Governments should not pick winners.',e:2,g:-2,n:2}]},
-
-  {id:'er4',node:'business',nl:'Markets and regulation',pair:'er-b',fr:'con',type:'s',
-   q:'Minimum wage laws price the least skilled workers out of the market. Every economist knows this.',
-   opts:[{t:'Yes. The economic logic is straightforward.',e:2,g:-2,n:2},
-         {t:'Moderately set minimum wages have not shown the job losses this argument predicts.',e:0,g:0,n:0},
-         {t:'No. The evidence for job losses from minimum wages is weak. Workers benefit.',e:-2,g:2,n:-2}]},
-
-  // ── PRIVACY & SURVEILLANCE ───────────────────────────────────────────
-  {id:'sv1',node:'privacy',nl:'Privacy and surveillance',pair:'sv-a',fr:'pro',type:'sc',
-   ctx:'Every street. Every public space. Facial recognition. Your face, permanently on file.',
-   q:'A government that watches everyone treats everyone as a suspect.',
-   opts:[{t:'Yes. Mass surveillance of innocent people is unacceptable regardless of the benefit.',e:0,g:-2,n:2},
-         {t:'Only with strong independent oversight and narrow legal limits on use.',e:0,g:0,n:0},
-         {t:'No. If it cuts crime, the safety case is compelling.',e:0,g:2,n:-2}]},
-
-  {id:'sv2',node:'privacy',nl:'Privacy and surveillance',pair:'sv-a',fr:'con',type:'s',
-   q:'If you have nothing to hide, you have nothing to fear.',
-   opts:[{t:'Broadly true. Surveillance keeps dangerous people accountable.',e:0,g:2,n:-2},
-         {t:'The logic sounds simple but the history of surveillance abuse is long.',e:0,g:0,n:0},
-         {t:'This is the most dangerous sentence in politics. Privacy is not about hiding.',e:0,g:-2,n:2}]},
-
-  {id:'sv3',node:'privacy',nl:'Privacy and surveillance',pair:'sv-b',fr:'neutral',type:'s',
-   q:'The government has no business knowing what books I read, what websites I visit, or who I talk to.',
-   opts:[{t:'Yes. Surveillance of ordinary citizens is never acceptable.',e:0,g:-2,n:2},
-         {t:'Targeted surveillance with judicial oversight is justified.',e:0,g:0,n:0},
-         {t:'No. Security services need broad access to keep people safe.',e:0,g:2,n:-2}]},
-
-  {id:'sv4',node:'privacy',nl:'Privacy and surveillance',pair:'sv-b',fr:'con',type:'s',
-   q:'Encryption that even a court order cannot break is a safe house for terrorists and child abusers.',
-   opts:[{t:'Yes. No tool should be completely beyond lawful oversight.',e:0,g:2,n:-2},
-         {t:'Court-approved access is reasonable but backdoors weaken security for everyone.',e:0,g:0,n:0},
-         {t:'No. Backdoors cannot be made safe. The security cost is too high.',e:0,g:-2,n:2}]},
-
-  // ── TRADE ────────────────────────────────────────────────────────────
-  {id:'tr1',node:'trade',nl:'Trade and globalisation',pair:'tr-a',fr:'pro',type:'sc',
-   ctx:'A free trade deal. Prices down 8%. 40,000 factory jobs gone.',
-   q:'You cannot ask 40,000 people to sacrifice their livelihoods so everyone else saves a few pounds on shopping.',
-   opts:[{t:'Yes. The human cost of free trade is real and routinely ignored.',e:-2,g:2,n:2},
-         {t:'Yes to the deal, but with serious retraining investment for affected workers.',e:0,g:0,n:0},
-         {t:'No. The aggregate benefit outweighs the localised harm. That is how growth works.',e:2,g:-2,n:-2}]},
-
-  {id:'tr2',node:'trade',nl:'Trade and globalisation',pair:'tr-a',fr:'con',type:'s',
-   q:'A country that cannot feed itself, make its own medicine, or build its own chips is not really independent.',
-   opts:[{t:'Yes. National resilience must come before economic efficiency.',e:-2,g:2,n:2},
-         {t:'There is a real risk but full self-sufficiency is neither possible nor efficient.',e:0,g:0,n:0},
-         {t:'Trade interdependence creates peace incentives. The security framing is overstated.',e:2,g:-2,n:-2}]},
-
-  {id:'tr3',node:'trade',nl:'Trade and globalisation',pair:'tr-b',fr:'neutral',type:'sc',
-   ctx:'Foreign steel. Half the price. Made with workers on a tenth of the wages, in a country with no environmental rules.',
-   q:'Buying that steel is exporting our standards. We should put a tariff on it.',
-   opts:[{t:'Yes. We should not compete by abandoning our own values.',e:-2,g:2,n:2},
-         {t:'Temporary protection while the industry restructures. Not permanent.',e:0,g:0,n:0},
-         {t:'No. Consumers benefit and protection just picks losers at public expense.',e:2,g:-2,n:-2}]},
-
-  {id:'tr4',node:'trade',nl:'Trade and globalisation',pair:'tr-b',fr:'con',type:'s',
-   q:'Protectionism, however well-intentioned, always hurts the poorest people most.',
-   opts:[{t:'Yes. Free trade is the most effective poverty reduction tool we have.',e:2,g:-2,n:-2},
-         {t:'Sometimes true. But managed trade can protect workers in vulnerable industries.',e:0,g:0,n:0},
-         {t:'No. This is ideology dressed as economics. Trade policy should serve workers.',e:-2,g:2,n:2}]},
-
-  // ── MEDIA ────────────────────────────────────────────────────────────
-  {id:'md1',node:'media',nl:'Media and information',pair:'md-a',fr:'pro',type:'sc',
-   ctx:'Three billionaires. Most of the national press. Their papers back every policy that keeps their taxes low.',
-   q:'A free press owned by three rich men is not a free press.',
-   opts:[{t:'Yes. Concentrated media ownership is a direct threat to democracy.',e:-2,g:2,n:-2},
-         {t:'Yes, but regulating ownership carries its own serious risks.',e:0,g:0,n:0},
-         {t:'No. People can seek multiple sources. Government media regulation is dangerous.',e:2,g:-2,n:2}]},
-
-  {id:'md2',node:'media',nl:'Media and information',pair:'md-a',fr:'con',type:'s',
-   q:'A state broadcaster paid for by a compulsory tax is not independent. It is the voice of whoever holds power.',
-   opts:[{t:'Yes. There is no such thing as neutral state broadcasting.',e:2,g:-2,n:2},
-         {t:'Public broadcasters have real problems but serve functions markets cannot.',e:0,g:0,n:0},
-         {t:'No. Public broadcasting at its best is essential infrastructure for democracy.',e:-2,g:2,n:-2}]},
-
-  {id:'md3',node:'media',nl:'Media and information',pair:'md-b',fr:'neutral',type:'sc',
-   ctx:'An algorithm feeds you outrage because outrage gets clicks. Research links it to radicalisation. The company knows.',
-   q:'A platform that knowingly radicalises its users for profit is committing a public harm.',
-   opts:[{t:'Yes. This must be regulated as a public health issue.',e:-2,g:2,n:-2},
-         {t:'Transparency and labelling first. Regulation is a blunt instrument.',e:0,g:0,n:0},
-         {t:'No. Regulating algorithms is a slippery slope to regulating thought.',e:2,g:-2,n:2}]},
-
-  {id:'md4',node:'media',nl:'Media and information',pair:'md-b',fr:'con',type:'s',
-   q:'A journalist who publishes information that gets intelligence officers killed has blood on their hands.',
-   opts:[{t:'Yes. Some information should never be published.',e:0,g:2,n:-2},
-         {t:'Only where there is a direct, specific harm, not general government embarrassment.',e:0,g:0,n:0},
-         {t:'No. Press freedom that only applies with government approval is not press freedom.',e:0,g:-2,n:2}]},
-
-  // ── LABOUR ───────────────────────────────────────────────────────────
-  {id:'lb1',node:'labour',nl:'Work and labour',pair:'lb-a',fr:'pro',type:'sc',
-   ctx:'12,000 drivers. Legally contractors. Below minimum wage after costs. No sick pay. Deactivated without notice.',
-   q:'Calling someone a contractor when they work full-time for you is a lie the law should not allow.',
-   opts:[{t:'Yes. The contractor label is a legal fiction used to deny rights.',e:-2,g:2,n:-2},
-         {t:'A new category with some protections but not full employment status.',e:-2,g:0,n:0},
-         {t:'No. Flexibility suits many workers and regulation raises prices.',e:2,g:-2,n:2}]},
-
-  {id:'lb2',node:'labour',nl:'Work and labour',pair:'lb-a',fr:'con',type:'s',
-   q:'Strong unions protect their members. Everyone else pays the price.',
-   opts:[{t:'Yes. Union power often serves insiders at the expense of everyone else.',e:2,g:-2,n:2},
-         {t:'Unions have real problems but the alternative of no collective bargaining is worse.',e:0,g:0,n:0},
-         {t:'No. Workers without collective power are structurally disadvantaged.',e:-2,g:2,n:-2}]},
-
-  {id:'lb3',node:'labour',nl:'Work and labour',pair:'lb-b',fr:'neutral',type:'sc',
-   ctx:'Four-day week. Same pay. Productivity unchanged. Sick days down 20%. Staff retention up significantly.',
-   q:'If the evidence shows it works, there is no good argument against it.',
-   opts:[{t:'Yes. The data makes the case and the wellbeing gains are real.',e:-2,g:2,n:-2},
-         {t:'Good in principle. Incentivise but do not mandate it.',e:0,g:0,n:0},
-         {t:'No. Businesses should set their own working arrangements.',e:2,g:-2,n:2}]},
-
-  {id:'lb4',node:'labour',nl:'Work and labour',pair:'lb-b',fr:'con',type:'s',
-   q:'If you cannot dismiss someone who is not doing their job, you have already lost control of your business.',
-   opts:[{t:'Yes. Rigid dismissal protections punish good employers and cost jobs.',e:2,g:-2,n:2},
-         {t:'Some balance is needed but protections in many countries have gone too far.',e:0,g:0,n:0},
-         {t:'No. Easy dismissal creates fear and destroys any meaningful investment in work.',e:-2,g:2,n:-2}]},
-
-  // ── SCIENCE & TECHNOLOGY ─────────────────────────────────────────────
-  {id:'sc1',node:'science',nl:'Science and technology',pair:'sc-a',fr:'pro',type:'sc',
-   ctx:'A pesticide. Probable risk to bees and human health. The manufacturer disputes it. Banning it costs farming 4 billion.',
-   q:'When the science says it might be killing us, the burden of proof is on the industry, not the regulator.',
-   opts:[{t:'Yes. The precautionary principle must apply when health is at risk.',e:-2,g:2,n:-2},
-         {t:'Phase it out over five years with support for affected farmers.',e:0,g:0,n:0},
-         {t:'Wait for a second study. One contested finding should not destroy an industry.',e:2,g:-2,n:2}]},
-
-  {id:'sc2',node:'science',nl:'Science and technology',pair:'sc-a',fr:'con',type:'s',
-   q:'Regulating AI before we understand it will hand a decisive advantage to countries with no scruples.',
-   opts:[{t:'Yes. Moving too fast on AI regulation is as dangerous as moving too slow.',e:2,g:-2,n:2},
-         {t:'The race-to-the-bottom logic can justify never regulating anything.',e:0,g:0,n:0},
-         {t:'No. The risks of unregulated AI are severe enough to justify acting now, imperfectly.',e:-2,g:2,n:-2}]},
-
-  {id:'sc3',node:'science',nl:'Science and technology',pair:'sc-b',fr:'neutral',type:'sc',
-   ctx:'Gene editing can eliminate hereditary disease before birth. Critics say it is one step from designing children to order.',
-   q:'If we can prevent a child from suffering, we have a moral duty to use that knowledge.',
-   opts:[{t:'Yes. Preventing suffering is the entire point of medicine.',e:-2,g:0,n:-2},
-         {t:'Only for life-threatening conditions, with independent ethics oversight.',e:0,g:0,n:0},
-         {t:'No. The line between treatment and enhancement cannot be safely drawn.',e:0,g:2,n:2}]},
-
-  {id:'sc4',node:'science',nl:'Science and technology',pair:'sc-b',fr:'con',type:'s',
-   q:'Social media companies designed their platforms to be addictive to children. They should be treated accordingly.',
-   opts:[{t:'Yes. Designing addictive products that harm children cannot go unpunished.',e:-2,g:2,n:-2},
-         {t:'They should face some accountability but legal liability for mental health is hard to establish.',e:0,g:0,n:0},
-         {t:'No. Parents and individuals must take responsibility.',e:2,g:-2,n:2}]},
-
-  // ── CIVIC RIGHTS ─────────────────────────────────────────────────────
-  {id:'cv1',node:'civic',nl:'Rights and constitution',pair:'cv-a',fr:'pro',type:'sc',
-   ctx:'A public health emergency. The government grants itself sweeping powers to act without Parliament. The public cheers.',
-   q:'Emergency powers that bypass democratic oversight are dangerous even when they feel necessary.',
-   opts:[{t:'Yes. Parliamentary and judicial oversight must be maintained whatever the crisis.',e:0,g:-2,n:2},
-         {t:'Temporarily justified with firm sunset clauses and regular review.',e:0,g:0,n:0},
-         {t:'No. Governing by committee during a fast-moving crisis costs lives.',e:0,g:2,n:-2}]},
-
-  {id:'cv2',node:'civic',nl:'Rights and constitution',pair:'cv-a',fr:'con',type:'s',
-   q:'Politicians today should not have their hands tied by decisions made by people who have been dead for two hundred years.',
-   opts:[{t:'Agreed. Constitutions should not straitjacket present generations.',e:0,g:2,n:-2},
-         {t:'Some flexibility is good but core rights need protection from shifting majorities.',e:0,g:0,n:0},
-         {t:'No. Constitutional limits on power exist precisely to protect us from ourselves.',e:0,g:-2,n:2}]},
-
-  {id:'cv3',node:'civic',nl:'Rights and constitution',pair:'cv-b',fr:'neutral',type:'sc',
-   ctx:'An unelected court strikes down a popular law. 72% of the public supported it.',
-   q:'Nine unelected judges overruling a clear democratic majority is itself anti-democratic.',
-   opts:[{t:'Yes. Courts should not substitute their judgment for the people\'s.',e:0,g:2,n:-2},
-         {t:'The court has a legitimate role but should exercise real restraint.',e:0,g:0,n:0},
-         {t:'No. That is exactly what a constitution is for. Rights are not subject to majority vote.',e:0,g:-2,n:2}]},
-
-  {id:'cv4',node:'civic',nl:'Rights and constitution',pair:'cv-b',fr:'con',type:'s',
-   q:'Blocking roads and disrupting ordinary life is not protest. It is coercion.',
-   opts:[{t:'Yes. The right to protest does not include the right to hold the public hostage.',e:0,g:2,n:-2},
-         {t:'Proportionate limits on disruption are reasonable. But the right to protest is vital.',e:0,g:0,n:0},
-         {t:'No. The right to disrupt is what gives protest its power. That is the point.',e:0,g:-2,n:2}]},
-
-  // ── CULTURE & IDENTITY ───────────────────────────────────────────────
-  {id:'cu1',node:'culture',nl:'Culture and identity',pair:'cu-a',fr:'con',type:'sc',
-   ctx:'A statue in the town square. The man it honours grew wealthy from the slave trade.',
-   q:'Keeping that statue up is not history. It is a choice about who we celebrate.',
-   opts:[{t:'Yes. Public spaces should not honour people whose legacy includes mass human suffering.',e:0,g:2,n:-2},
-         {t:'Move it to a museum with context. Do not erase it.',e:0,g:0,n:0},
-         {t:'No. Pulling down statues erases history rather than engaging with it.',e:0,g:-2,n:2}]},
-
-  {id:'cu2',node:'culture',nl:'Culture and identity',pair:'cu-a',fr:'pro',type:'s',
-   q:'People who come to live here should be expected to fully adopt the culture and values of their new country.',
-   opts:[{t:'Yes. Integration is the price of belonging.',e:0,g:2,n:2},
-         {t:'Some integration is reasonable but full assimilation is too much to demand.',e:0,g:0,n:0},
-         {t:'No. Demanding cultural conformity is authoritarian. Diversity strengthens societies.',e:0,g:-2,n:-2}]},
-
-  {id:'cu3',node:'culture',nl:'Culture and identity',pair:'cu-b',fr:'neutral',type:'sc',
-   ctx:'Fail the language test. Fail the civics test. Fail the cultural norms assessment. Visa not renewed.',
-   q:'Expecting people who live here permanently to speak the language and understand the law is not too much to ask.',
-   opts:[{t:'Yes. Language and civics are reasonable. Cultural norms testing is another matter.',e:0,g:2,n:2},
-         {t:'Language and civics yes. Testing cultural norms is too vague and too open to abuse.',e:0,g:0,n:0},
-         {t:'No. Demanding cultural conformity as a condition of residency is exclusionary.',e:0,g:-2,n:-2}]},
-
-  {id:'cu4',node:'culture',nl:'Culture and identity',pair:'cu-b',fr:'pro',type:'s',
-   q:'Giving preference to underrepresented groups in hiring and admissions is the only honest response to a rigged system.',
-   opts:[{t:'Yes. Structural disadvantage requires structural remedy.',e:-2,g:2,n:-2},
-         {t:'Targeted support yes, but preference based on group membership creates its own unfairness.',e:0,g:0,n:0},
-         {t:'No. Every decision should be based entirely on individual merit.',e:2,g:-2,n:2}]},
-
-  // ── MILITARY ─────────────────────────────────────────────────────────
-  {id:'ml1',node:'military',nl:'Defence and security',pair:'ml-a',fr:'pro',type:'sc',
-   ctx:'Spending 1.4% of GDP on defence. Allies want 2%. The difference buys 40 hospitals.',
-   q:'Spending more on weapons while hospitals close is a statement about what we value.',
-   opts:[{t:'Yes. Social investment should come before meeting an arbitrary military target.',e:-2,g:0,n:-2},
-         {t:'A gradual increase with a clear strategic case is reasonable.',e:0,g:0,n:0},
-         {t:'No. Security is the foundation everything else is built on.',e:2,g:2,n:2}]},
-
-  {id:'ml2',node:'military',nl:'Defence and security',pair:'ml-a',fr:'con',type:'s',
-   q:'Military alliances drag countries into wars that have nothing to do with their actual security.',
-   opts:[{t:'Yes. Entangling alliances have caused avoidable wars throughout history.',e:0,g:-2,n:2},
-         {t:'The risks are real but alliances also provide security guarantees that deter conflict.',e:0,g:0,n:0},
-         {t:'No. Collective security has kept the peace in Europe for eighty years.',e:0,g:2,n:-2}]},
-
-  {id:'ml3',node:'military',nl:'Defence and security',pair:'ml-b',fr:'neutral',type:'sc',
-   ctx:'A neighbouring country invades a smaller nation. Not an ally. Your military has the capacity to stop it.',
-   q:'Our soldiers should not die for another country\'s borders.',
-   opts:[{t:'Yes. That is not our fight.',e:0,g:-2,n:2},
-         {t:'Support them with equipment and money. Not lives.',e:0,g:0,n:0},
-         {t:'No. Allowing invasions to succeed invites the next one closer to home.',e:0,g:2,n:-2}]},
-
-  {id:'ml4',node:'military',nl:'Defence and security',pair:'ml-b',fr:'con',type:'s',
-   q:'The only thing that has stopped a third world war is the knowledge that it would destroy everyone. Nuclear weapons are the peace.',
-   opts:[{t:'Yes. Deterrence works. Disarmament is dangerously naive.',e:0,g:2,n:2},
-         {t:'Deterrence has value but the long-term risks of proliferation are too high.',e:0,g:0,n:0},
-         {t:'No. Nuclear weapons represent a permanent existential gamble. Disarmament is the only sane goal.',e:0,g:-2,n:-2}]},
-
-  {id:'id1',node:'culture',nl:'Culture and identity',pair:'ident-a',fr:'pro',type:'s',
-   q:'Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.',
-   opts:[{t:'Yes. Pride in your own culture and heritage is natural and healthy.',e:0,g:1,n:2},
-         {t:'Pride is fine but claims of superiority over others make me uncomfortable.',e:0,g:0,n:0},
-         {t:'No. Ranking cultures above each other is where dangerous thinking begins.',e:0,g:-1,n:-2}]},
-
-  {id:'id2',node:'culture',nl:'Culture and identity',pair:'ident-a',fr:'con',type:'s',
-   q:'People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.',
-   opts:[{t:'Yes. Acknowledging inherited wrongs is part of being honest about who we are.',e:0,g:-1,n:-2},
-         {t:'We should acknowledge history honestly without demanding personal shame.',e:0,g:0,n:0},
-         {t:'No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.',e:0,g:1,n:2}]}
+  {
+    "id": "rr1",
+    "node": "repro",
+    "nl": "Policy and rights",
+    "pair": "rr-a",
+    "fr": "pro",
+    "type": "s",
+    "q": "The state has no business inside a woman's body. That decision belongs to her and no one else.",
+    "opts": [
+      {
+        "t": "Completely. The government has no place in that room.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Generally yes, though reasonable limits exist.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "The state has a duty to protect life at all stages.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "rr2",
+    "node": "repro",
+    "nl": "Policy and rights",
+    "pair": "rr-a",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "A healthy 14-week pregnancy. The mother wants it to end.",
+    "q": "Should the hospital be legally required to help her?",
+    "opts": [
+      {
+        "t": "No. No one should be forced to take a life.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Yes, or refer her to someone who will.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Yes, unconditionally. Refusal causes real harm.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "rr3",
+    "node": "repro",
+    "nl": "Policy and rights",
+    "pair": "rr-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "A 16-year-old is pregnant. Her parents do not know. The law requires their consent.",
+    "q": "Should a teenager need her parents' permission to end a pregnancy?",
+    "opts": [
+      {
+        "t": "No. Her body, her decision, at any age.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Parental guidance matters, but not as a legal veto.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Yes. At 16, parents have both a right and a duty to be involved.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "rr4",
+    "node": "repro",
+    "nl": "Policy and rights",
+    "pair": "rr-b",
+    "fr": "con",
+    "type": "s",
+    "q": "A society with no legal limits on abortion has lost something important.",
+    "opts": [
+      {
+        "t": "Yes. At some point the law must step in.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "I understand the concern but I trust individuals to decide.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Restricting access causes far more harm than it prevents.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "gp1",
+    "node": "guns",
+    "nl": "Public safety",
+    "pair": "gp-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A 14-year-old girl is shot dead in her classroom. The gun was her classmate's parent's, legally owned, unsecured.",
+    "q": "Who bears responsibility for her death?",
+    "opts": [
+      {
+        "t": "The parent and the laws that let this happen.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "The parent primarily. The law already requires responsibility.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "The individual who pulled the trigger. Laws cannot prevent evil.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "gp2",
+    "node": "guns",
+    "nl": "Public safety",
+    "pair": "gp-a",
+    "fr": "con",
+    "type": "s",
+    "q": "A law-abiding citizen should never have to justify owning a firearm to the government.",
+    "opts": [
+      {
+        "t": "Agreed. It is a right, not a privilege.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Basic checks are reasonable. Ownership should still be accessible.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Owning a weapon is not a right without accountability.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "gp3",
+    "node": "guns",
+    "nl": "Public safety",
+    "pair": "gp-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Country A: 30 guns per 100 people, 2.9 gun deaths per 100,000. Country B: 4 guns per 100 people, 0.9 gun deaths per 100,000.",
+    "q": "More guns means more death. The data is clear.",
+    "opts": [
+      {
+        "t": "Yes. The correlation is undeniable and policy should follow.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "The numbers correlate but culture and enforcement matter more.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Correlation is not causation and this data proves nothing.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "gp4",
+    "node": "guns",
+    "nl": "Public safety",
+    "pair": "gp-b",
+    "fr": "con",
+    "type": "s",
+    "q": "An armed citizenry is the last defence against a government that turns against its own people.",
+    "opts": [
+      {
+        "t": "Yes. The right to bear arms exists precisely for this reason.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "The argument made sense historically. It is harder to apply today.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "This logic justifies private arsenals. It is dangerous.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "im1",
+    "node": "immig",
+    "nl": "Borders and movement",
+    "pair": "im-a",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "A city's schools are overcrowded. GPs have months-long wait times. Rent has doubled. Immigration has grown sharply.",
+    "q": "Immigration caused this. The government should have seen it coming.",
+    "opts": [
+      {
+        "t": "Yes. Unmanaged intake overwhelmed services that were never built for it.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Immigration contributed but underinvestment in services is the deeper failure.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Scapegoating newcomers for infrastructure failures is dishonest.",
+        "e": -2,
+        "g": 0,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "im2",
+    "node": "immig",
+    "nl": "Borders and movement",
+    "pair": "im-a",
+    "fr": "pro",
+    "type": "s",
+    "q": "Every generation has feared immigration. Every generation has been wrong.",
+    "opts": [
+      {
+        "t": "Agreed. The warnings have never matched the reality.",
+        "e": 2,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Broadly true, but some concerns in some contexts have been legitimate.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "The scale of movement today is genuinely different from anything before.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "im3",
+    "node": "immig",
+    "nl": "Borders and movement",
+    "pair": "im-b",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A family of five. Fled a war. Three years in a camp. Two years waiting for a decision. Still waiting.",
+    "q": "Two years is long enough. Let them in.",
+    "opts": [
+      {
+        "t": "Yes. This is a moral failure and it needs to end.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Process them properly, but two years is too long.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "We cannot open borders to everyone with a difficult story.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "im4",
+    "node": "immig",
+    "nl": "Borders and movement",
+    "pair": "im-b",
+    "fr": "con",
+    "type": "s",
+    "q": "A country has the absolute right to decide who enters. No international body can override that.",
+    "opts": [
+      {
+        "t": "Agreed. Sovereignty is non-negotiable.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Sovereignty matters, but so do legitimate humanitarian obligations.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. International law exists to limit exactly this kind of thinking.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "tx1",
+    "node": "tax",
+    "nl": "Wealth and redistribution",
+    "pair": "tx-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Ten people own more than the bottom half of the country combined.",
+    "q": "This is not success. This is a system that is broken.",
+    "opts": [
+      {
+        "t": "Yes. This level of concentration is a structural failure.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Inequality is high but wealth at the top does not mean poverty at the bottom.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Wealth concentration is what a free market produces. That is not broken.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "tx2",
+    "node": "tax",
+    "nl": "Wealth and redistribution",
+    "pair": "tx-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Taking more than half of what someone earns in tax, however rich they are, is theft.",
+    "opts": [
+      {
+        "t": "Yes. Past a certain point, taxation becomes confiscation.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "High earners should pay more, but the word theft is too strong.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. The wealthy built their fortunes on public infrastructure. They owe it back.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "tx3",
+    "node": "tax",
+    "nl": "Wealth and redistribution",
+    "pair": "tx-b",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Option A: raise taxes on incomes over 200k and make university and dental care free for everyone. Option B: keep taxes flat, leave it private.",
+    "q": "Which country do you want to live in?",
+    "opts": [
+      {
+        "t": "Option A. Universal services are worth paying for.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Something in between. Targeted support, not full universality.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Option B. People should fund their own lives.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "tx4",
+    "node": "tax",
+    "nl": "Wealth and redistribution",
+    "pair": "tx-b",
+    "fr": "con",
+    "type": "s",
+    "q": "When you tax success heavily enough, you eventually run out of successful people.",
+    "opts": [
+      {
+        "t": "Yes. High taxes drive away the wealth creators a country needs.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Some truth to it, but this argument is used to justify any tax cut.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. This is an old story told to protect the interests of the already-wealthy.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "hc1",
+    "node": "health",
+    "nl": "Healthcare systems",
+    "pair": "hc-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "He lost his job. The insurance went with it. Now cancer. The bill is 380,000 dollars his family does not have.",
+    "q": "Should this man die because he lost his job?",
+    "opts": [
+      {
+        "t": "No. A country that lets this happen has failed.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "There should be safety nets. But nationalising healthcare is not the answer.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "This is a personal insurance failure, not a reason to redesign the system.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "hc2",
+    "node": "health",
+    "nl": "Healthcare systems",
+    "pair": "hc-a",
+    "fr": "con",
+    "type": "s",
+    "q": "The NHS and systems like it are monuments to good intentions and mediocre outcomes.",
+    "opts": [
+      {
+        "t": "Yes. State healthcare produces waiting lists, rationing, and stagnation.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "They have problems, but the US model shows private care has worse ones.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Universal systems consistently outperform on outcomes and cost.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "hc3",
+    "node": "health",
+    "nl": "Healthcare systems",
+    "pair": "hc-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Poor teeth are a mark of poverty in a country that can afford to fix them.",
+    "q": "Dental care should be free at the point of use, just like everything else.",
+    "opts": [
+      {
+        "t": "Yes. A two-tier smile is indefensible.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Basic dental care yes. Complex procedures can remain private.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. There are higher priorities for the healthcare budget.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "hc4",
+    "node": "health",
+    "nl": "Healthcare systems",
+    "pair": "hc-b",
+    "fr": "con",
+    "type": "s",
+    "q": "People who spend a lifetime ignoring their health should not expect others to foot the bill.",
+    "opts": [
+      {
+        "t": "Yes. Personal choices should have personal financial consequences.",
+        "e": 2,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "The logic is appealing but determining blame for illness is far too complex.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Illness is not a moral failure. Healthcare must be unconditional.",
+        "e": -2,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "cl1",
+    "node": "climate",
+    "nl": "Environment and industry",
+    "pair": "cl-a",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "A carbon tax would cut emissions 18%. It would also raise every household's energy bill by 340 a year. The poorest families would feel it most.",
+    "q": "A climate policy that punishes the poor is not a just policy.",
+    "opts": [
+      {
+        "t": "Agreed. Green politics should not be a luxury tax on ordinary people.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Yes, which is why rebates for low-income households must be built in.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "The cost of inaction is far greater. Short-term pain is justified.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "cl2",
+    "node": "climate",
+    "nl": "Environment and industry",
+    "pair": "cl-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Miami. Jakarta. Amsterdam. All underwater within 60 years without action.",
+    "q": "This is an emergency. Governments must act as if civilisation depends on it.",
+    "opts": [
+      {
+        "t": "Yes. The scale demands emergency-level intervention now.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Serious action yes, but emergency powers carry their own risks.",
+        "e": -2,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Economies cannot be restructured by political fiat.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cl3",
+    "node": "climate",
+    "nl": "Environment and industry",
+    "pair": "cl-b",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "12,000 coal workers. Average age 47. The plant closes under the new law. The retraining programme covers 30% of their previous salary.",
+    "q": "You cannot ask people to sacrifice their lives for a target on a spreadsheet.",
+    "opts": [
+      {
+        "t": "Agreed. Climate policy that destroys communities is not progress.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "A longer transition and proper support would make this fair.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "The law must apply equally. Proper transition funding is the answer.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "cl4",
+    "node": "climate",
+    "nl": "Environment and industry",
+    "pair": "cl-b",
+    "fr": "pro",
+    "type": "s",
+    "q": "Countries that refuse international climate commitments are stealing from the future.",
+    "opts": [
+      {
+        "t": "Yes. This is a moral failure that affects everyone.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "The framing is right but binding international targets raise real sovereignty issues.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Nations should set their own path. International agreements are often empty theatre.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cj1",
+    "node": "justice",
+    "nl": "Crime and punishment",
+    "pair": "cj-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Rehabilitation programmes: 42% lower reoffending, 30% of the cost of prison.",
+    "q": "The evidence is clear. We are imprisoning people out of anger, not logic.",
+    "opts": [
+      {
+        "t": "Yes. The system should follow evidence, not revenge.",
+        "e": -2,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "The data matters, but prisons serve purposes beyond reoffending rates.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Prison is about justice and protecting the public. Not everything can be reduced to statistics.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cj2",
+    "node": "justice",
+    "nl": "Crime and punishment",
+    "pair": "cj-a",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "He was released early. Low risk, they said. Six months later he attacked someone again.",
+    "q": "The system failed. Some people simply should not be let out.",
+    "opts": [
+      {
+        "t": "Yes. Public safety must come before rehabilitation theory.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Prediction is imperfect. One case does not condemn the whole approach.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "The failure was in post-release support, not the decision to release.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "cj3",
+    "node": "justice",
+    "nl": "Crime and punishment",
+    "pair": "cj-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Portugal decriminalised all drugs in 2001. Drug deaths fell 80% in a decade.",
+    "q": "The war on drugs has failed. It is time to try something else.",
+    "opts": [
+      {
+        "t": "Yes. The evidence from Portugal alone makes the case.",
+        "e": -2,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Portugal is a small country. Scale and culture matter enormously.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Decriminalisation is surrender dressed up as policy.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cj4",
+    "node": "justice",
+    "nl": "Crime and punishment",
+    "pair": "cj-b",
+    "fr": "con",
+    "type": "s",
+    "q": "If you live in a high-crime area, you should expect the police to stop and question you more. That is just reality.",
+    "opts": [
+      {
+        "t": "Yes. Proactive policing saves lives in the communities that need it most.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Only with strict safeguards. Unchecked stop-and-search destroys communities.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. This is institutionalised harassment and it poisons trust in the police.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "sp1",
+    "node": "speech",
+    "nl": "Expression and limits",
+    "pair": "sp-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Three social media accounts. Millions of followers. Election fraud lies. Voter trust fell 19 points.",
+    "q": "Platforms that allow this to happen are complicit in the damage.",
+    "opts": [
+      {
+        "t": "Yes. Free speech ends where democracy is actively being destroyed.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Label it, restrict its reach. But banning speech is always dangerous.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Restricting political speech is more dangerous than the speech itself.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "sp2",
+    "node": "speech",
+    "nl": "Expression and limits",
+    "pair": "sp-a",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "A government passes a law. Any content an independent regulator calls harmful misinformation must be removed in 24 hours. The regulator answers to the minister.",
+    "q": "This is the beginning of state censorship. It must be opposed.",
+    "opts": [
+      {
+        "t": "Yes. Governments defining truth is always the first step toward authoritarianism.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "In principle right, but strong independent oversight could make it workable.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Misinformation causes real harm and platforms cannot be trusted to act alone.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "sp3",
+    "node": "speech",
+    "nl": "Expression and limits",
+    "pair": "sp-b",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "A speaker with racist views. A student union that wants him banned. A university that agrees.",
+    "q": "Some ideas do not deserve a platform. The university was right.",
+    "opts": [
+      {
+        "t": "No. Universities are precisely where bad ideas should be confronted, not silenced.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "The invitation was fine. The ban was an overreaction.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Yes. Providing a platform is not neutral. It is an endorsement.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "sp4",
+    "node": "speech",
+    "nl": "Expression and limits",
+    "pair": "sp-b",
+    "fr": "pro",
+    "type": "s",
+    "q": "Words that tell people they are inferior because of who they are cause real, measurable harm. The law should say so.",
+    "opts": [
+      {
+        "t": "Yes. The harm is real. The law should recognise it.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "The harm is real, but making it criminal sets a precedent I do not trust.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. The answer to bad speech is more speech, not a prison sentence.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "wl1",
+    "node": "welfare",
+    "nl": "Social safety net",
+    "pair": "wl-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "She had a job. Then the factory closed. No savings. Three children. Rent is due in three weeks.",
+    "q": "The state owes her enough to survive until she finds her feet. Full stop.",
+    "opts": [
+      {
+        "t": "Yes. That is what a society is for.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Time-limited support with a requirement to seek work is fair.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Long-term dependency is a trap. The state should help minimally.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "wl2",
+    "node": "welfare",
+    "nl": "Social safety net",
+    "pair": "wl-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Generous welfare systems create people who choose not to work. That is not compassion. That is damage.",
+    "opts": [
+      {
+        "t": "Yes. Well-intentioned systems can create lasting dependency.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Some truth to it, but most people want to work when given a real chance.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. The evidence does not support this. This argument punishes the vulnerable.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "wl3",
+    "node": "welfare",
+    "nl": "Social safety net",
+    "pair": "wl-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Universal basic income. 1,000 per month. Every adult. Pilots showed higher wellbeing and no drop in employment.",
+    "q": "Give every adult a floor and watch what people build on top of it.",
+    "opts": [
+      {
+        "t": "Yes. The pilot data is compelling and the principle is sound.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Worth exploring in a modified form, but 1,000 for everyone is too blunt.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Universal payments regardless of need are wasteful and the wealth tax will hurt investment.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "wl4",
+    "node": "welfare",
+    "nl": "Social safety net",
+    "pair": "wl-b",
+    "fr": "con",
+    "type": "s",
+    "q": "If you have never paid into the system, you have a weaker claim on what it gives out.",
+    "opts": [
+      {
+        "t": "Yes. Contribution should shape entitlement.",
+        "e": 2,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Some link to contribution is fair, but need must also matter.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Welfare should be based on need alone. Circumstances vary.",
+        "e": -2,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "ed1",
+    "node": "education",
+    "nl": "Education policy",
+    "pair": "ed-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Rich kid: six times more likely to reach a top university. The only real difference between them is money.",
+    "q": "Private schools rig the system. A fair society would abolish them.",
+    "opts": [
+      {
+        "t": "Yes. They exist to buy advantage and that cannot be justified.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Fund state schools better instead. No need to abolish the private sector.",
+        "e": -2,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Parents have the right to spend their money on their children.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "ed2",
+    "node": "education",
+    "nl": "Education policy",
+    "pair": "ed-a",
+    "fr": "con",
+    "type": "s",
+    "q": "A parent who invests in their child's education should not be punished for it.",
+    "opts": [
+      {
+        "t": "Agreed. Educational freedom is a parental right, full stop.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Yes, but not when it systematically disadvantages other children.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Individual choices in education have collective consequences the state must address.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "ed3",
+    "node": "education",
+    "nl": "Education policy",
+    "pair": "ed-b",
+    "fr": "neutral",
+    "type": "s",
+    "q": "Children should be taught how to spot propaganda and manipulation, including from their own government.",
+    "opts": [
+      {
+        "t": "Yes. Critical thinking is the most important subject on the curriculum.",
+        "e": -2,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Good in principle, but who decides what counts as propaganda is a real problem.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "This risks the state shaping how children think about politics. Parents should decide.",
+        "e": 2,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "ed4",
+    "node": "education",
+    "nl": "Education policy",
+    "pair": "ed-b",
+    "fr": "con",
+    "type": "s",
+    "q": "You chose to go to university. You chose to borrow for it. Pay it back.",
+    "opts": [
+      {
+        "t": "Yes. The beneficiary should pay. That is fair.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Some contribution is fair but current fee levels in many countries are too high.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Education benefits society as a whole and should be free.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "dp1",
+    "node": "drugs",
+    "nl": "Drug policy",
+    "pair": "dp-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "He had cannabis. A small amount, personal use. No victims. He loses his job over the criminal record.",
+    "q": "Ruining a man's life over a joint is not justice. It is cruelty.",
+    "opts": [
+      {
+        "t": "Yes. Personal drug use should never be a criminal matter.",
+        "e": -2,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "A civil fine at most. A criminal record here is wildly disproportionate.",
+        "e": 0,
+        "g": -2,
+        "n": 0
+      },
+      {
+        "t": "The law is the law. Lenience sends the wrong message.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "dp2",
+    "node": "drugs",
+    "nl": "Drug policy",
+    "pair": "dp-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Legalising drugs tells the next generation that giving up on people is progress.",
+    "opts": [
+      {
+        "t": "Yes. Legalisation is a form of social surrender.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "The concern is understandable but prohibition has clearly not worked.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Legal regulation is safer and more honest than a black market.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "dp3",
+    "node": "drugs",
+    "nl": "Drug policy",
+    "pair": "dp-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Portugal decriminalised drugs. Taxed them. Funded treatment. Drug deaths fell 80%. Black market collapsed by 60%.",
+    "q": "The evidence is in. The war on drugs is over and we lost.",
+    "opts": [
+      {
+        "t": "Yes. Portugal alone makes the case for reform.",
+        "e": -2,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Portugal is small. Scale and culture make direct comparisons difficult.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Some lines should not be crossed regardless of the numbers.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "dp4",
+    "node": "drugs",
+    "nl": "Drug policy",
+    "pair": "dp-b",
+    "fr": "con",
+    "type": "s",
+    "q": "What you put in your own body, when it hurts nobody else, is none of the government's business.",
+    "opts": [
+      {
+        "t": "Yes. Personal autonomy must be respected without exception.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Generally true, but addiction creates social costs others end up paying for.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Drug use has wider effects. The state has a legitimate interest.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "lq1",
+    "node": "lgbtq",
+    "nl": "Identity and rights",
+    "pair": "lq-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A same-sex couple wants to adopt. The only local agency is religious. It refuses. There is nowhere else to go.",
+    "q": "A publicly licensed service that turns people away because of who they love is not a service. It is a prejudice.",
+    "opts": [
+      {
+        "t": "Yes. Public services cannot discriminate. Full stop.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "The agency should refer them. A complete refusal is unacceptable.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Religious organisations must be free to act on their beliefs.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "lq2",
+    "node": "lgbtq",
+    "nl": "Identity and rights",
+    "pair": "lq-a",
+    "fr": "con",
+    "type": "s",
+    "q": "No one should be forced by law to act against their deeply held religious conscience.",
+    "opts": [
+      {
+        "t": "Agreed. Freedom of conscience is a fundamental right.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Within limits. Conscience exemptions should not enable discrimination in public services.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Rights protect people, not beliefs. Conscience exemptions cause real harm.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "lq3",
+    "node": "lgbtq",
+    "nl": "Identity and rights",
+    "pair": "lq-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "A school teaches 7-year-olds that some children have two mums, two dads, or feel like the wrong gender.",
+    "q": "Schools should reflect the world as it is, not the world as some parents wish it were.",
+    "opts": [
+      {
+        "t": "Yes. Children encounter diversity. Schools should reflect that.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Secondary school yes. Age seven is too early for some of this.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. This is a matter for families, not classrooms.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "lq4",
+    "node": "lgbtq",
+    "nl": "Identity and rights",
+    "pair": "lq-b",
+    "fr": "con",
+    "type": "s",
+    "q": "A child cannot consent to medical decisions that may alter them permanently. Protecting children is not bigotry.",
+    "opts": [
+      {
+        "t": "Yes. Children need protection from irreversible decisions, not encouragement.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Support and encouragement are different things. Nuance is essential here.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Withholding support causes harm. Young people need care, not gatekeeping.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "fp1",
+    "node": "foreign",
+    "nl": "Foreign policy",
+    "pair": "fp-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A government is committing atrocities. Your country does billions in trade with them.",
+    "q": "There is no ethical trade with regimes that brutalise their own people.",
+    "opts": [
+      {
+        "t": "Yes. Values must come before trade deals.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Raise it diplomatically but maintain economic relations.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Interfering in other countries' internal affairs rarely ends well.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "fp2",
+    "node": "foreign",
+    "nl": "Foreign policy",
+    "pair": "fp-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Every foreign military intervention in living memory has made things worse.",
+    "opts": [
+      {
+        "t": "Yes. The pattern is undeniable and we never learn.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Often true, but some interventions have prevented genuine atrocities.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Strong nations have a responsibility to act when others cannot protect their own people.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "fp3",
+    "node": "foreign",
+    "nl": "Foreign policy",
+    "pair": "fp-b",
+    "fr": "neutral",
+    "type": "s",
+    "q": "Rich countries spending 1% of GDP on foreign aid while their own people struggle is morally confused.",
+    "opts": [
+      {
+        "t": "Yes. Charity should start at home.",
+        "e": 2,
+        "g": 0,
+        "n": 2
+      },
+      {
+        "t": "Both matter. Foreign aid levels can be maintained alongside domestic investment.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Wealthy nations have a clear responsibility to the global poor.",
+        "e": -2,
+        "g": 0,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "fp4",
+    "node": "foreign",
+    "nl": "Foreign policy",
+    "pair": "fp-b",
+    "fr": "con",
+    "type": "s",
+    "q": "A government's first obligation is to its own citizens. Everything else is secondary.",
+    "opts": [
+      {
+        "t": "Yes. That is what a government is for.",
+        "e": 2,
+        "g": 0,
+        "n": 2
+      },
+      {
+        "t": "National interest matters, but international cooperation also serves citizens.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. This framing is a false choice. Global stability benefits everyone.",
+        "e": -2,
+        "g": 0,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "dm1",
+    "node": "democracy",
+    "nl": "Democracy and elections",
+    "pair": "dm-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "38% of the vote. 55% turnout. A majority of eligible voters did not vote for them. They call it a mandate.",
+    "q": "You cannot govern for everyone on a mandate this thin.",
+    "opts": [
+      {
+        "t": "Yes. The system that produced this result needs urgent reform.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Democracy means accepting results you dislike. Reform the system not the result.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "38% of the vote in a functioning democracy is a mandate. That is how it works.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "dm2",
+    "node": "democracy",
+    "nl": "Democracy and elections",
+    "pair": "dm-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Most people simply do not have enough information to vote wisely on complex questions. That is a fact, not an insult.",
+    "opts": [
+      {
+        "t": "Agreed. Some decisions require expertise, not a popular vote.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Experts should inform, not replace, democratic decision-making.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "This is the beginning of every authoritarian argument in history.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "dm3",
+    "node": "democracy",
+    "nl": "Democracy and elections",
+    "pair": "dm-b",
+    "fr": "neutral",
+    "type": "s",
+    "q": "Voting should be compulsory. If you live here, you owe the country at least that much.",
+    "opts": [
+      {
+        "t": "Yes. Civic participation should be a duty, not a lifestyle choice.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "I understand the argument but forcing people to vote produces uninformed ballots.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. A vote you are forced to cast means nothing.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "dm4",
+    "node": "democracy",
+    "nl": "Democracy and elections",
+    "pair": "dm-b",
+    "fr": "con",
+    "type": "s",
+    "q": "The fact that something was voted for does not make it right.",
+    "opts": [
+      {
+        "t": "Yes. Democratic majorities can still choose terrible things.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "True, but the solution is better democracy, not less of it.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Questioning democratic outcomes is where authoritarianism begins.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "re1",
+    "node": "religion",
+    "nl": "Religion and the state",
+    "pair": "re-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A school bans crosses, hijabs, kippot. All of them. It calls itself neutral.",
+    "q": "Banning religious expression in the name of neutrality is just secularism by force.",
+    "opts": [
+      {
+        "t": "No. Public institutions should be genuinely secular.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Personal religious expression should be protected, even in public schools.",
+        "e": 0,
+        "g": -2,
+        "n": 0
+      },
+      {
+        "t": "Yes. This is an overreach that targets religious students.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "re2",
+    "node": "religion",
+    "nl": "Religion and the state",
+    "pair": "re-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Religious morality has no more or less legitimate claim to shape law than any secular philosophy.",
+    "opts": [
+      {
+        "t": "Agreed. Secular is not automatically neutral.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "In a diverse society, laws should be justifiable on non-religious grounds.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Religious law has no place in democratic legislation.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "re3",
+    "node": "religion",
+    "nl": "Religion and the state",
+    "pair": "re-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "A Catholic hospital takes public money. It refuses to prescribe contraception. It refuses to refer for abortion.",
+    "q": "You cannot take public money and then impose your theology on the patients who funded you.",
+    "opts": [
+      {
+        "t": "Yes. Public funding requires compliance with public health standards.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Only if patients cannot access the same services elsewhere.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Religious organisations should retain their ethos.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "re4",
+    "node": "religion",
+    "nl": "Religion and the state",
+    "pair": "re-b",
+    "fr": "con",
+    "type": "s",
+    "q": "It is a mistake to treat all religions as equally valid or worthy of equal respect.",
+    "opts": [
+      {
+        "t": "Yes. Some belief systems cause more harm than others.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Religions vary in their effects but state neutrality is still the right approach.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Ranking religions by validity is a short path to discrimination.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "hs1",
+    "node": "housing",
+    "nl": "Housing and planning",
+    "pair": "hs-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Average house price: 14 times average salary. Most young adults will never own where they grew up.",
+    "q": "A generation priced out of the place they were born is a political failure, not a market outcome.",
+    "opts": [
+      {
+        "t": "Yes. The state must intervene. Social housing and rent controls.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Build more. Reform planning. Let supply fix the problem.",
+        "e": 2,
+        "g": -2,
+        "n": 0
+      },
+      {
+        "t": "Both. Supply reform and targeted first-time buyer support.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      }
+    ]
+  },
+  {
+    "id": "hs2",
+    "node": "housing",
+    "nl": "Housing and planning",
+    "pair": "hs-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Rent controls feel compassionate. In practice they always make housing shortages worse.",
+    "opts": [
+      {
+        "t": "Yes. The economics are clear whatever the politics suggest.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Some controls can work if well-designed. Blanket opposition is too simple.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Prioritising landlord returns over tenant security is the real political choice here.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "hs3",
+    "node": "housing",
+    "nl": "Housing and planning",
+    "pair": "hs-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "A rural county is blocking 2,000 homes. A regional housing shortage is getting worse. 30% of the units would be affordable.",
+    "q": "The people who already have homes should not have a veto over the people who need them.",
+    "opts": [
+      {
+        "t": "Yes. National need must override local preference.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Only after genuine consultation has been exhausted.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Local communities control their own land. That is a principle worth keeping.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "hs4",
+    "node": "housing",
+    "nl": "Housing and planning",
+    "pair": "hs-b",
+    "fr": "con",
+    "type": "s",
+    "q": "Homeowners have the right to protect the value of the most significant investment of their lives.",
+    "opts": [
+      {
+        "t": "Yes. Property rights must be respected.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Some weight should be given to it, but not at the cost of wider housing need.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Using planning rules to protect your asset at others' expense is indefensible.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "er1",
+    "node": "business",
+    "nl": "Markets and regulation",
+    "pair": "er-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Three companies. 80% of the grocery market. They coordinated price increases during a cost of living crisis. Profits up 40%.",
+    "q": "This is not capitalism. This is collusion. Break them up.",
+    "opts": [
+      {
+        "t": "Yes. This is exploitation and it deserves a hard response.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Investigate, fine if proven. But breaking them up is disproportionate.",
+        "e": -2,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Markets self-correct. Aggressive regulation risks worse unintended consequences.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "er2",
+    "node": "business",
+    "nl": "Markets and regulation",
+    "pair": "er-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Every regulation a government adds to business is a cost that ends up on the price tag.",
+    "opts": [
+      {
+        "t": "Yes. The burden of regulation is consistently underestimated.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Some regulation is necessary. The costs should be weighed, not avoided.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Unregulated markets consistently harm workers and consumers. The history is long.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "er3",
+    "node": "business",
+    "nl": "Markets and regulation",
+    "pair": "er-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "A company with 3 billion users buys its most promising competitor for 20 billion. They will absorb it and shut it down.",
+    "q": "When a company is this powerful, it is not a business anymore. It is a government.",
+    "opts": [
+      {
+        "t": "Yes. Companies of this scale should face a far higher bar.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Block it only if there is clear evidence of harm to consumers.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Acquisitions drive innovation. Governments should not pick winners.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "er4",
+    "node": "business",
+    "nl": "Markets and regulation",
+    "pair": "er-b",
+    "fr": "con",
+    "type": "s",
+    "q": "Minimum wage laws price the least skilled workers out of the market. Every economist knows this.",
+    "opts": [
+      {
+        "t": "Yes. The economic logic is straightforward.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Moderately set minimum wages have not shown the job losses this argument predicts.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. The evidence for job losses from minimum wages is weak. Workers benefit.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "sv1",
+    "node": "privacy",
+    "nl": "Privacy and surveillance",
+    "pair": "sv-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Every street. Every public space. Facial recognition. Your face, permanently on file.",
+    "q": "A government that watches everyone treats everyone as a suspect.",
+    "opts": [
+      {
+        "t": "Yes. Mass surveillance of innocent people is unacceptable regardless of the benefit.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Only with strong independent oversight and narrow legal limits on use.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. If it cuts crime, the safety case is compelling.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "sv2",
+    "node": "privacy",
+    "nl": "Privacy and surveillance",
+    "pair": "sv-a",
+    "fr": "con",
+    "type": "s",
+    "q": "If you have nothing to hide, you have nothing to fear.",
+    "opts": [
+      {
+        "t": "Broadly true. Surveillance keeps dangerous people accountable.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "The logic sounds simple but the history of surveillance abuse is long.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "This is the most dangerous sentence in politics. Privacy is not about hiding.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "sv3",
+    "node": "privacy",
+    "nl": "Privacy and surveillance",
+    "pair": "sv-b",
+    "fr": "neutral",
+    "type": "s",
+    "q": "The government has no business knowing what books I read, what websites I visit, or who I talk to.",
+    "opts": [
+      {
+        "t": "Yes. Surveillance of ordinary citizens is never acceptable.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Targeted surveillance with judicial oversight is justified.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Security services need broad access to keep people safe.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "sv4",
+    "node": "privacy",
+    "nl": "Privacy and surveillance",
+    "pair": "sv-b",
+    "fr": "con",
+    "type": "s",
+    "q": "Encryption that even a court order cannot break is a safe house for terrorists and child abusers.",
+    "opts": [
+      {
+        "t": "Yes. No tool should be completely beyond lawful oversight.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Court-approved access is reasonable but backdoors weaken security for everyone.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Backdoors cannot be made safe. The security cost is too high.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "tr1",
+    "node": "trade",
+    "nl": "Trade and globalisation",
+    "pair": "tr-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A free trade deal. Prices down 8%. 40,000 factory jobs gone.",
+    "q": "You cannot ask 40,000 people to sacrifice their livelihoods so everyone else saves a few pounds on shopping.",
+    "opts": [
+      {
+        "t": "Yes. The human cost of free trade is real and routinely ignored.",
+        "e": -2,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Yes to the deal, but with serious retraining investment for affected workers.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. The aggregate benefit outweighs the localised harm. That is how growth works.",
+        "e": 2,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "tr2",
+    "node": "trade",
+    "nl": "Trade and globalisation",
+    "pair": "tr-a",
+    "fr": "con",
+    "type": "s",
+    "q": "A country that cannot feed itself, make its own medicine, or build its own chips is not really independent.",
+    "opts": [
+      {
+        "t": "Yes. National resilience must come before economic efficiency.",
+        "e": -2,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "There is a real risk but full self-sufficiency is neither possible nor efficient.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Trade interdependence creates peace incentives. The security framing is overstated.",
+        "e": 2,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "tr3",
+    "node": "trade",
+    "nl": "Trade and globalisation",
+    "pair": "tr-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Foreign steel. Half the price. Made with workers on a tenth of the wages, in a country with no environmental rules.",
+    "q": "Buying that steel is exporting our standards. We should put a tariff on it.",
+    "opts": [
+      {
+        "t": "Yes. We should not compete by abandoning our own values.",
+        "e": -2,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Temporary protection while the industry restructures. Not permanent.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Consumers benefit and protection just picks losers at public expense.",
+        "e": 2,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "tr4",
+    "node": "trade",
+    "nl": "Trade and globalisation",
+    "pair": "tr-b",
+    "fr": "con",
+    "type": "s",
+    "q": "Protectionism, however well-intentioned, always hurts the poorest people most.",
+    "opts": [
+      {
+        "t": "Yes. Free trade is the most effective poverty reduction tool we have.",
+        "e": 2,
+        "g": -2,
+        "n": -2
+      },
+      {
+        "t": "Sometimes true. But managed trade can protect workers in vulnerable industries.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. This is ideology dressed as economics. Trade policy should serve workers.",
+        "e": -2,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "md1",
+    "node": "media",
+    "nl": "Media and information",
+    "pair": "md-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Three billionaires. Most of the national press. Their papers back every policy that keeps their taxes low.",
+    "q": "A free press owned by three rich men is not a free press.",
+    "opts": [
+      {
+        "t": "Yes. Concentrated media ownership is a direct threat to democracy.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Yes, but regulating ownership carries its own serious risks.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. People can seek multiple sources. Government media regulation is dangerous.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "md2",
+    "node": "media",
+    "nl": "Media and information",
+    "pair": "md-a",
+    "fr": "con",
+    "type": "s",
+    "q": "A state broadcaster paid for by a compulsory tax is not independent. It is the voice of whoever holds power.",
+    "opts": [
+      {
+        "t": "Yes. There is no such thing as neutral state broadcasting.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Public broadcasters have real problems but serve functions markets cannot.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Public broadcasting at its best is essential infrastructure for democracy.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "md3",
+    "node": "media",
+    "nl": "Media and information",
+    "pair": "md-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "An algorithm feeds you outrage because outrage gets clicks. Research links it to radicalisation. The company knows.",
+    "q": "A platform that knowingly radicalises its users for profit is committing a public harm.",
+    "opts": [
+      {
+        "t": "Yes. This must be regulated as a public health issue.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Transparency and labelling first. Regulation is a blunt instrument.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Regulating algorithms is a slippery slope to regulating thought.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "md4",
+    "node": "media",
+    "nl": "Media and information",
+    "pair": "md-b",
+    "fr": "con",
+    "type": "s",
+    "q": "A journalist who publishes information that gets intelligence officers killed has blood on their hands.",
+    "opts": [
+      {
+        "t": "Yes. Some information should never be published.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Only where there is a direct, specific harm, not general government embarrassment.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Press freedom that only applies with government approval is not press freedom.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "lb1",
+    "node": "labour",
+    "nl": "Work and labour",
+    "pair": "lb-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "12,000 drivers. Legally contractors. Below minimum wage after costs. No sick pay. Deactivated without notice.",
+    "q": "Calling someone a contractor when they work full-time for you is a lie the law should not allow.",
+    "opts": [
+      {
+        "t": "Yes. The contractor label is a legal fiction used to deny rights.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "A new category with some protections but not full employment status.",
+        "e": -2,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Flexibility suits many workers and regulation raises prices.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "lb2",
+    "node": "labour",
+    "nl": "Work and labour",
+    "pair": "lb-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Strong unions protect their members. Everyone else pays the price.",
+    "opts": [
+      {
+        "t": "Yes. Union power often serves insiders at the expense of everyone else.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Unions have real problems but the alternative of no collective bargaining is worse.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Workers without collective power are structurally disadvantaged.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "lb3",
+    "node": "labour",
+    "nl": "Work and labour",
+    "pair": "lb-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Four-day week. Same pay. Productivity unchanged. Sick days down 20%. Staff retention up significantly.",
+    "q": "If the evidence shows it works, there is no good argument against it.",
+    "opts": [
+      {
+        "t": "Yes. The data makes the case and the wellbeing gains are real.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Good in principle. Incentivise but do not mandate it.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Businesses should set their own working arrangements.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "lb4",
+    "node": "labour",
+    "nl": "Work and labour",
+    "pair": "lb-b",
+    "fr": "con",
+    "type": "s",
+    "q": "If you cannot dismiss someone who is not doing their job, you have already lost control of your business.",
+    "opts": [
+      {
+        "t": "Yes. Rigid dismissal protections punish good employers and cost jobs.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Some balance is needed but protections in many countries have gone too far.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Easy dismissal creates fear and destroys any meaningful investment in work.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "sc1",
+    "node": "science",
+    "nl": "Science and technology",
+    "pair": "sc-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A pesticide. Probable risk to bees and human health. The manufacturer disputes it. Banning it costs farming 4 billion.",
+    "q": "When the science says it might be killing us, the burden of proof is on the industry, not the regulator.",
+    "opts": [
+      {
+        "t": "Yes. The precautionary principle must apply when health is at risk.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Phase it out over five years with support for affected farmers.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "Wait for a second study. One contested finding should not destroy an industry.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "sc2",
+    "node": "science",
+    "nl": "Science and technology",
+    "pair": "sc-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Regulating AI before we understand it will hand a decisive advantage to countries with no scruples.",
+    "opts": [
+      {
+        "t": "Yes. Moving too fast on AI regulation is as dangerous as moving too slow.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "The race-to-the-bottom logic can justify never regulating anything.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. The risks of unregulated AI are severe enough to justify acting now, imperfectly.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "sc3",
+    "node": "science",
+    "nl": "Science and technology",
+    "pair": "sc-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Gene editing can eliminate hereditary disease before birth. Critics say it is one step from designing children to order.",
+    "q": "If we can prevent a child from suffering, we have a moral duty to use that knowledge.",
+    "opts": [
+      {
+        "t": "Yes. Preventing suffering is the entire point of medicine.",
+        "e": -2,
+        "g": 0,
+        "n": -2
+      },
+      {
+        "t": "Only for life-threatening conditions, with independent ethics oversight.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. The line between treatment and enhancement cannot be safely drawn.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "sc4",
+    "node": "science",
+    "nl": "Science and technology",
+    "pair": "sc-b",
+    "fr": "con",
+    "type": "s",
+    "q": "Social media companies designed their platforms to be addictive to children. They should be treated accordingly.",
+    "opts": [
+      {
+        "t": "Yes. Designing addictive products that harm children cannot go unpunished.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "They should face some accountability but legal liability for mental health is hard to establish.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Parents and individuals must take responsibility.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cv1",
+    "node": "civic",
+    "nl": "Rights and constitution",
+    "pair": "cv-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A public health emergency. The government grants itself sweeping powers to act without Parliament. The public cheers.",
+    "q": "Emergency powers that bypass democratic oversight are dangerous even when they feel necessary.",
+    "opts": [
+      {
+        "t": "Yes. Parliamentary and judicial oversight must be maintained whatever the crisis.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Temporarily justified with firm sunset clauses and regular review.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Governing by committee during a fast-moving crisis costs lives.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "cv2",
+    "node": "civic",
+    "nl": "Rights and constitution",
+    "pair": "cv-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Politicians today should not have their hands tied by decisions made by people who have been dead for two hundred years.",
+    "opts": [
+      {
+        "t": "Agreed. Constitutions should not straitjacket present generations.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Some flexibility is good but core rights need protection from shifting majorities.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Constitutional limits on power exist precisely to protect us from ourselves.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cv3",
+    "node": "civic",
+    "nl": "Rights and constitution",
+    "pair": "cv-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "An unelected court strikes down a popular law. 72% of the public supported it.",
+    "q": "Nine unelected judges overruling a clear democratic majority is itself anti-democratic.",
+    "opts": [
+      {
+        "t": "Yes. Courts should not substitute their judgment for the people's.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "The court has a legitimate role but should exercise real restraint.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. That is exactly what a constitution is for. Rights are not subject to majority vote.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cv4",
+    "node": "civic",
+    "nl": "Rights and constitution",
+    "pair": "cv-b",
+    "fr": "con",
+    "type": "s",
+    "q": "Blocking roads and disrupting ordinary life is not protest. It is coercion.",
+    "opts": [
+      {
+        "t": "Yes. The right to protest does not include the right to hold the public hostage.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Proportionate limits on disruption are reasonable. But the right to protest is vital.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. The right to disrupt is what gives protest its power. That is the point.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cu1",
+    "node": "culture",
+    "nl": "Culture and identity",
+    "pair": "cu-a",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "A statue in the town square. The man it honours grew wealthy from the slave trade.",
+    "q": "Keeping that statue up is not history. It is a choice about who we celebrate.",
+    "opts": [
+      {
+        "t": "Yes. Public spaces should not honour people whose legacy includes mass human suffering.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Move it to a museum with context. Do not erase it.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Pulling down statues erases history rather than engaging with it.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "cu2",
+    "node": "culture",
+    "nl": "Culture and identity",
+    "pair": "cu-a",
+    "fr": "pro",
+    "type": "s",
+    "q": "People who come to live here should be expected to fully adopt the culture and values of their new country.",
+    "opts": [
+      {
+        "t": "Yes. Integration is the price of belonging.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Some integration is reasonable but full assimilation is too much to demand.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Demanding cultural conformity is authoritarian. Diversity strengthens societies.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "cu3",
+    "node": "culture",
+    "nl": "Culture and identity",
+    "pair": "cu-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Fail the language test. Fail the civics test. Fail the cultural norms assessment. Visa not renewed.",
+    "q": "Expecting people who live here permanently to speak the language and understand the law is not too much to ask.",
+    "opts": [
+      {
+        "t": "Yes. Language and civics are reasonable. Cultural norms testing is another matter.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Language and civics yes. Testing cultural norms is too vague and too open to abuse.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Demanding cultural conformity as a condition of residency is exclusionary.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "cu4",
+    "node": "culture",
+    "nl": "Culture and identity",
+    "pair": "cu-b",
+    "fr": "pro",
+    "type": "s",
+    "q": "Giving preference to underrepresented groups in hiring and admissions is the only honest response to a rigged system.",
+    "opts": [
+      {
+        "t": "Yes. Structural disadvantage requires structural remedy.",
+        "e": -2,
+        "g": 2,
+        "n": -2
+      },
+      {
+        "t": "Targeted support yes, but preference based on group membership creates its own unfairness.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Every decision should be based entirely on individual merit.",
+        "e": 2,
+        "g": -2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "ml1",
+    "node": "military",
+    "nl": "Defence and security",
+    "pair": "ml-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Spending 1.4% of GDP on defence. Allies want 2%. The difference buys 40 hospitals.",
+    "q": "Spending more on weapons while hospitals close is a statement about what we value.",
+    "opts": [
+      {
+        "t": "Yes. Social investment should come before meeting an arbitrary military target.",
+        "e": -2,
+        "g": 0,
+        "n": -2
+      },
+      {
+        "t": "A gradual increase with a clear strategic case is reasonable.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Security is the foundation everything else is built on.",
+        "e": 2,
+        "g": 2,
+        "n": 2
+      }
+    ]
+  },
+  {
+    "id": "ml2",
+    "node": "military",
+    "nl": "Defence and security",
+    "pair": "ml-a",
+    "fr": "con",
+    "type": "s",
+    "q": "Military alliances drag countries into wars that have nothing to do with their actual security.",
+    "opts": [
+      {
+        "t": "Yes. Entangling alliances have caused avoidable wars throughout history.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "The risks are real but alliances also provide security guarantees that deter conflict.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Collective security has kept the peace in Europe for eighty years.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "ml3",
+    "node": "military",
+    "nl": "Defence and security",
+    "pair": "ml-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "A neighbouring country invades a smaller nation. Not an ally. Your military has the capacity to stop it.",
+    "q": "Our soldiers should not die for another country's borders.",
+    "opts": [
+      {
+        "t": "Yes. That is not our fight.",
+        "e": 0,
+        "g": -2,
+        "n": 2
+      },
+      {
+        "t": "Support them with equipment and money. Not lives.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Allowing invasions to succeed invites the next one closer to home.",
+        "e": 0,
+        "g": 2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "ml4",
+    "node": "military",
+    "nl": "Defence and security",
+    "pair": "ml-b",
+    "fr": "con",
+    "type": "s",
+    "q": "The only thing that has stopped a third world war is the knowledge that it would destroy everyone. Nuclear weapons are the peace.",
+    "opts": [
+      {
+        "t": "Yes. Deterrence works. Disarmament is dangerously naive.",
+        "e": 0,
+        "g": 2,
+        "n": 2
+      },
+      {
+        "t": "Deterrence has value but the long-term risks of proliferation are too high.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Nuclear weapons represent a permanent existential gamble. Disarmament is the only sane goal.",
+        "e": 0,
+        "g": -2,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "id1",
+    "node": "culture",
+    "nl": "Culture and identity",
+    "pair": "ident-a",
+    "fr": "pro",
+    "type": "s",
+    "q": "Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.",
+    "opts": [
+      {
+        "t": "Yes. Pride in your own culture and heritage is natural and healthy.",
+        "e": 0,
+        "g": 1,
+        "n": 2
+      },
+      {
+        "t": "Pride is fine but claims of superiority over others make me uncomfortable.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. Ranking cultures above each other is where dangerous thinking begins.",
+        "e": 0,
+        "g": -1,
+        "n": -2
+      }
+    ]
+  },
+  {
+    "id": "id2",
+    "node": "culture",
+    "nl": "Culture and identity",
+    "pair": "ident-a",
+    "fr": "con",
+    "type": "s",
+    "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+    "opts": [
+      {
+        "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",
+        "e": 0,
+        "g": -1,
+        "n": -2
+      },
+      {
+        "t": "We should acknowledge history honestly without demanding personal shame.",
+        "e": 0,
+        "g": 0,
+        "n": 0
+      },
+      {
+        "t": "No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.",
+        "e": 0,
+        "g": 1,
+        "n": 2
+      }
+    ]
+  }
 ];
 
-function archetype(e, g) {
-  const eL = e < -0.05, eR = e > 0.05, gA = g > 0.05, gL = g < -0.05;
-  if (eL && gA) return {
-    name: 'Auth left',
-    axes: 'Economic left, authoritarian',
-    ideology: 'You favour state control over both the economy and social life. You believe strong government is necessary to redistribute wealth, enforce equality, and protect collective interests — even if that limits individual freedoms.',
-    example: 'Politicians in this tradition include Bernie Sanders on economic policy, and historically figures like Clement Attlee, who nationalised industries and built the NHS while running a disciplined, top-down government.'
-  };
-  if (eL && gL) return {
-    name: 'Lib left',
-    axes: 'Economic left, libertarian',
-    ideology: 'You want a fairer economy but not at the cost of personal freedom. You support redistribution, workers\' rights, and public services, while opposing surveillance, censorship, and state overreach into private life.',
-    example: 'This quadrant is home to figures like Noam Chomsky, the late Tony Benn, and in modern politics Alexandria Ocasio-Cortez — people who combine economic progressivism with a strong commitment to civil liberties.'
-  };
-  if (eL) return {
-    name: 'Left',
-    axes: 'Economic left, centre governance',
-    ideology: 'You lean toward collective economic solutions — public services, redistribution, workers\' rights — without taking strong positions on how much authority the state should have in everyday life.',
-    example: 'Much of mainstream centre-left politics sits here. Think Keir Starmer, Olof Palme, or the Democratic mainstream in the United States — pragmatic left-leaning economics without ideological extremes.'
-  };
-  if (eR && gA) return {
-    name: 'Auth right',
-    axes: 'Economic right, authoritarian',
-    ideology: 'You believe in free markets and private enterprise, combined with strong national authority, social order, and traditional values. The state should stay out of the economy but play a firm role in culture and security.',
-    example: 'This is the tradition of figures like Viktor Orban, Marine Le Pen, and historically Margaret Thatcher on economics combined with a strong national identity and law-and-order politics.'
-  };
-  if (eR && gL) return {
-    name: 'Lib right',
-    axes: 'Economic right, libertarian',
-    ideology: 'You want maximum freedom in both economic and personal life. Low taxes, minimal regulation, free markets, and limited government — the state should protect property and enforce contracts, and little else.',
-    example: 'Classic figures here include Milton Friedman, Friedrich Hayek, and in contemporary politics Ron Paul. Libertarian-leaning conservatives who want the state to shrink across the board.'
-  };
-  if (eR) return {
-    name: 'Right',
-    axes: 'Economic right, centre governance',
-    ideology: 'You support free markets, lower taxes, and individual responsibility, without taking extreme positions on state authority. You believe prosperity comes from economic freedom, not government management.',
-    example: 'The traditional home of mainstream conservative parties — think David Cameron, Angela Merkel, or Australia\'s John Howard. Centre-right economic policy without the authoritarian edge.'
-  };
-  if (gA) return {
-    name: 'Authoritarian centre',
-    axes: 'Economic centre, authoritarian',
-    ideology: 'You hold moderate economic views but believe strongly in order, authority, and the state\'s right to govern firmly. You are not ideologically left or right on the economy, but you trust institutions and strong leadership.',
-    example: 'This position is associated with technocratic leaders and centrist strongmen — figures like Emmanuel Macron in his more dirigiste moments, or Lee Kuan Yew, who built Singapore through firm central authority and pragmatic economics.'
-  };
-  if (gL) return {
-    name: 'Libertarian centre',
-    axes: 'Economic centre, libertarian',
-    ideology: 'You hold no strong economic ideology but place a very high value on individual freedom. You resist government overreach in personal life, support civil liberties, and are sceptical of authority for its own sake.',
-    example: 'This is the natural home of classical liberals and civil libertarians — think Nick Clegg, the ACLU, or politicians who champion free speech and personal rights above both market ideology and social conservatism.'
-  };
-  return {
-    name: 'Centre',
-    axes: 'Balanced across all axes',
-    ideology: 'Your answers did not strongly favour any single direction on the political compass. You may hold genuinely mixed views, weigh issues individually rather than ideologically, or find yourself unconvinced by the extremes on both sides.',
-    example: 'The centre is less defined by ideology than by pragmatism. Leaders like Angela Merkel, Tony Blair in his centrist phase, or New Zealand\'s Jacinda Ardern have occupied this space at various points — governing through compromise rather than conviction.'
-  };
-}
-window.archetype = archetype;
+const PARTY_META = {};
+
+window.currentLang = 'en';
+window.getQuestion = q => q;
 </script>
 <script src="/engine.js"></script>
-
-<!-- ABOUT -->
-<div class="page" id="page-about">
-  <nav>
-    <div class="logo" onclick="goTo('page-landing')">Core<span>opinion</span></div>
-    <div class="nav-links">
-      <a href="/">General</a>
-      <a href="/us">US</a>
-      <a href="/uk">UK</a>
-      <a href="/ca">Canada</a>
-      <a href="/au">Australia</a>
-      <a href="/nz">New Zealand</a>
-      <a href="/se">Sweden</a>
-      <a href="/de">Germany</a>
-      <a href="/at">Austria</a>
-      <a href="/fr">France</a>
-      <a href="/es">Spain</a>
-      <a href="/it">Italy</a>
-      <a href="/ie">Ireland</a>
-      <a href="/nl">Netherlands</a>
-    </div>
-    <div></div>
-  </nav>
-  <div style="max-width:680px;margin:0 auto;padding:72px 52px;">
-    <div class="eyebrow">About</div>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:var(--ink);letter-spacing:-1.5px;line-height:1.1;margin-bottom:24px;">A political test built differently.</h2>
-    <p style="font-size:16px;color:var(--ink-muted);line-height:1.8;font-weight:300;margin-bottom:32px;">Most political compass tests ask you whether you agree or disagree with a list of statements. CoreOpinion is different. Every question is a scenario or a real decision, the kind of trade-off that actually shapes political opinion.</p>
-
-    <div style="border-left:3px solid #2A5DB0;padding:20px 24px;background:var(--white);border-radius:0 8px 8px 0;margin-bottom:40px;">
-      <p style="font-size:15px;color:var(--ink-soft);line-height:1.75;font-weight:300;">The test also tracks something most people don't expect. Some beliefs are tested twice, once framed one way and once the other. If your answers shift with the framing, that gap becomes your bias score. It is revealed only at the end.</p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px;">
-      <div style="background:var(--white);border:1px solid var(--border-soft);border-radius:8px;padding:24px;">
-        <div style="font-size:36px;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ink);margin-bottom:8px;">100</div>
-        <div style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.5;">Questions across 25 political topics in the full test</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border-soft);border-radius:8px;padding:24px;">
-        <div style="font-size:36px;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ink);margin-bottom:8px;">3</div>
-        <div style="font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.5;">Axes measured: economic, governance, and nationalist vs globalist</div>
-      </div>
-    </div>
-
-    <div style="margin-bottom:40px;">
-      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:20px;">How it works</div>
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div style="display:flex;gap:18px;align-items:flex-start;">
-          <div style="width:28px;height:28px;border-radius:50%;background:#E8EFF9;color:#2A5DB0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;flex-shrink:0;margin-top:2px;">1</div>
-          <div><div style="font-size:15px;font-weight:400;color:var(--ink);margin-bottom:4px;">Choose your length</div><div style="font-size:14px;color:var(--ink-muted);font-weight:300;">Short (30), medium (60), or long (100) questions. Longer gives more precision.</div></div>
-        </div>
-        <div style="display:flex;gap:18px;align-items:flex-start;">
-          <div style="width:28px;height:28px;border-radius:50%;background:#E8EFF9;color:#2A5DB0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;flex-shrink:0;margin-top:2px;">2</div>
-          <div><div style="font-size:15px;font-weight:400;color:var(--ink);margin-bottom:4px;">Answer the questions</div><div style="font-size:14px;color:var(--ink-muted);font-weight:300;">Each question is a scenario or a statement. Pick the answer that reflects your real view.</div></div>
-        </div>
-        <div style="display:flex;gap:18px;align-items:flex-start;">
-          <div style="width:28px;height:28px;border-radius:50%;background:#E8EFF9;color:#2A5DB0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;flex-shrink:0;margin-top:2px;">3</div>
-          <div><div style="font-size:15px;font-weight:400;color:var(--ink);margin-bottom:4px;">Get two results</div><div style="font-size:14px;color:var(--ink-muted);font-weight:300;">Your political position on the compass, and a framing bias score that reveals how consistent your thinking really is.</div></div>
-        </div>
-      </div>
-    </div>
-
-    <p style="font-size:14px;color:var(--ink-faint);font-weight:300;line-height:1.6;margin-bottom:32px;">CoreOpinion is free and anonymous. No sign-up required. Your answers are never linked to your identity unless you choose to save your results by email.</p>
-    <button class="btn-primary" onclick="goTo('page-mode')" style="padding:15px 32px;">Take the test</button>
-  </div>
-</div>
-
 </body>
 </html>

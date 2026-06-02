@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="keywords" content="{{KEYWORDS}}">
+<meta name="author" content="CoreOpinion">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#F9F8F6">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:site_name" content="CoreOpinion">
+<meta property="og:image" content="https://coreopinion.org/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CoreOpinion political compass test">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- LANDING -->
+<div class="page active" id="page-landing">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links">
+      <a href="/">General</a>
+      <a href="/us">US</a>
+      <a href="/uk">UK</a>
+      <a href="/ca">Canada</a>
+      <a href="/au">Australia</a>
+      <a href="/nz">New Zealand</a>
+      <a href="/se">Sweden</a>
+      <a href="/de">Germany</a>
+      <a href="/at">Austria</a>
+      <a href="/fr">France</a>
+      <a href="/es">Spain</a>
+      <a href="/it">Italy</a>
+      <a href="/ie">Ireland</a>
+      <a href="/nl">Netherlands</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      {{TOGGLE_LANG_BUTTON}}
+      <div class="flag-badge">
+        <span class="flag">{{FLAG}}</span>
+        <span id="lang-label">{{LABEL}}</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-bg">{{FLAG}}</div>
+    <div class="eyebrow">{{NAME}} Political Test</div>
+    <h1>{{HERO_TITLE}}</h1>
+    <p class="hero-sub">{{HERO_SUB}}</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="startTest()">Start the test</button>
+      <button class="btn-secondary" onclick="goTo('page-landing')">How it works</button>
+    </div>
+  </div>
+
+  <div class="party-strip">
+{{PARTY_STRIP}}  </div>
+  <div class="info-section">
+    <div class="info-block">
+      <h3>Scenario-based, not a survey</h3>
+      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
+    </div>
+    <div class="info-block">
+      <h3>Party alignment, not party loyalty</h3>
+      <p>The result shows how closely your answers match each party's platform across all issues, not just the ones you feel strongly about. You might find you align with a party you didn't expect, or that you're genuinely split between two.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUESTION -->
+<div class="page" id="page-test">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div></div>
+    <div class="flag-badge"><span class="flag">{{FLAG}}</span> {{NAME}}</div>
+  </nav>
+  <div class="q-shell">
+    <div class="prog-row">
+      <div class="prog-track">
+        <div class="prog-fill" id="prog-fill" style="width:0%"></div>
+        <div class="prog-tip"></div>
+      </div>
+      <span class="prog-txt" id="prog-txt">1 of 47</span>
+    </div>
+    <div class="q-topic-tag" id="q-topic"></div>
+    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
+      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-body" id="q-scen-body"></div>
+    </div>
+    <div class="q-question" id="q-text"></div>
+    <div class="q-opts" id="q-opts"></div>
+    <div class="q-foot">
+      <button class="btn-skip" onclick="skipQ()">Skip</button>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="btn-back" onclick="prevQ()" id="btn-back">Back</button>
+        <button class="btn-primary" onclick="nextQ()" style="padding:12px 30px;font-size:14px">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DEMOGRAPHICS -->
+<div class="page" id="page-demo">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="demo-outer">
+    <div class="page-title">Almost there.</div>
+    <p class="page-sub">A few quick questions before your results. Everything is anonymous.</p>
+    <div class="demo-fields">
+      <div>
+        <div class="field-label">Age</div>
+        <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
+      </div>
+      <div>
+        <div class="field-label">Region <span>(optional)</span></div>
+        <select id="d-country">
+          {{REGIONS_OPTIONS}}        </select>
+      </div>
+      <div>
+        <div class="field-label">How do you currently identify? <span>(optional)</span></div>
+        <select id="d-party">
+          {{PARTY_OPTIONS}}        </select>
+      </div>
+      <div>
+        <div class="field-label">Gender <span>(optional)</span></div>
+        <select id="d-gender">
+          <option value="">Select...</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+      <div>
+        <div class="field-label">Nationality <span>(optional)</span></div>
+        <select id="d-nationality">
+          {{NATIONALITY_OPTIONS}}
+        </select>
+      </div>
+    </div>
+    <p class="demo-note">This is never linked to your answers. It helps us understand who takes the test.</p>
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-top:20px;margin-bottom:24px;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px 20px;box-shadow:0 1px 4px rgba(10,12,15,0.02);text-align:left;">
+      <input type="checkbox" id="d-consent" checked style="width:20px;height:20px;margin-top:2px;cursor:pointer;">
+      <label for="d-consent" style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5;cursor:pointer;user-select:none;">
+        <strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.
+      </label>
+    </div>
+    <button class="btn-primary" onclick="goCalc()">See my results</button>
+  </div>
+</div>
+
+<!-- CALCULATING -->
+<div class="page" id="page-calc">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="calc-shell">
+    <div class="spin-ring"></div>
+    <div class="calc-h">Mapping your answers</div>
+    <p class="calc-p">This will only take a moment.</p>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="page" id="page-results">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links">
+      <a href="/">General</a>
+      <a href="/us">US</a>
+      <a href="/uk">UK</a>
+      <a href="/ca">Canada</a>
+      <a href="/au">Australia</a>
+      <a href="/nz">New Zealand</a>
+      <a href="/se">Sweden</a>
+      <a href="/de">Germany</a>
+      <a href="/at">Austria</a>
+      <a href="/fr">France</a>
+      <a href="/es">Spain</a>
+      <a href="/it">Italy</a>
+      <a href="/ie">Ireland</a>
+      <a href="/nl">Netherlands</a>
+    </div>
+    <div class="flag-badge"><span class="flag">{{FLAG}}</span> {{NAME}}</div>
+  </nav>
+  <div class="results-shell">
+    <div class="results-head">
+      <div class="result-eyebrow">Your {{NAME}} political alignment</div>
+      <div class="result-headline" id="r-top-party">Democrat</div>
+      <div class="result-sub" id="r-top-desc">Your answers most closely align with the Democratic Party platform.</div>
+    </div>
+
+    <!-- Party alignment bars -->
+    <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Party alignment</div>
+    <div class="party-results" id="party-results"></div>
+
+    <!-- Compass + axis -->
+    <div class="results-grid">
+      <div class="res-card">
+        <div class="res-card-title">Political compass position</div>
+        <div class="compass-wrap">
+          <svg width="340" height="340" viewBox="0 0 340 340">
+            <rect x="10" y="10" width="155" height="155" rx="5" fill="#4B8EF1" opacity="0.11"/>
+            <rect x="175" y="10" width="155" height="155" rx="5" fill="#F5A623" opacity="0.11"/>
+            <rect x="10" y="175" width="155" height="155" rx="5" fill="#3DBF82" opacity="0.11"/>
+            <rect x="175" y="175" width="155" height="155" rx="5" fill="#E85D6B" opacity="0.11"/>
+            <line x1="170" y1="10" x2="170" y2="330" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="10" y1="170" x2="330" y2="170" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="90" y1="10" x2="90" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="250" y1="10" x2="250" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="90" x2="330" y2="90" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="250" x2="330" y2="250" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <text x="90" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
+            <text x="90" y="338" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
+            <text x="8" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 174)">Left</text>
+            <text x="336" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 336 174)">Right</text>
+            <circle id="cdot-ring" cx="170" cy="170" r="20" fill="#1E4D8C" opacity="0.15"/>
+            <circle id="cdot" cx="170" cy="170" r="10" fill="#1E4D8C"/>
+          </svg>
+        </div>
+        <div class="axis-block">
+          <div class="axis-item">
+            <div class="axis-name">Economic</div>
+            <div class="axis-row-labels"><span>Left</span><span>Right</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-econ" style="left:50%"></div></div>
+          </div>
+          <div class="axis-item">
+            <div class="axis-name">Governance</div>
+            <div class="axis-row-labels"><span>Libertarian</span><span>Authoritarian</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-gov" style="left:50%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-card">
+        <div class="res-card-title">What this means</div>
+        <div id="r-insight" style="font-size:14px;color:var(--ink-muted);line-height:1.8;font-weight:300;"></div>
+      </div>
+    </div>
+
+    <!-- WHERE YOU DISAGREE -->
+    <div id="disagree-section" style="display:none;margin-bottom:28px;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Where you disagree with <span id="disagree-party-name">your top party</span></div>
+      <div id="disagree-list"></div>
+    </div>
+
+    <!-- BIAS SCORE CARD -->
+    <div id="bias-card" style="background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;">
+        <div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Framing Bias Score</div>
+          <div style="font-size:48px;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ink);letter-spacing:-2px;line-height:1" id="bias-num">0%</div>
+          <div style="font-size:14px;color:var(--ink-muted);margin-top:6px;font-weight:300" id="bias-verdict">Calculating...</div>
+        </div>
+        <div style="background:var(--parchment);border-radius:8px;padding:16px 20px;max-width:340px;">
+          <div style="font-size:12px;color:var(--ink-muted);font-weight:300;line-height:1.65" id="bias-explain"></div>
+        </div>
+      </div>
+      <div id="bias-rows" style="display:flex;flex-direction:column;gap:10px;"></div>
+      <div id="bias-faceoff" style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border-soft);display:none;"></div>
+    </div>
+    <div class="save-panel">
+      <div class="save-title">Save your results</div>
+      <div class="save-desc">Enter your email and we will send you a link to these results. Never shared.</div>
+      <div class="save-row">
+        <input type="email" id="save-email" placeholder="your@email.com">
+        <button class="btn-primary" onclick="saveResults()" style="padding:13px 24px;font-size:14px;white-space:nowrap">Send results</button>
+      </div>
+      <div class="save-status" id="save-status"></div>
+      <div class="share-row">
+        <button class="btn-ghost" onclick="copyLink()">Copy results link</button>
+        <button class="btn-ghost" onclick="startTest()">Retake test</button>
+        <a href="/" style="text-decoration:none"><button class="btn-ghost">Take general test</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const LOCAL_QUESTIONS = {{LOCAL_QUESTIONS}};
+
+const BANK = {{BANK}};
+
+const PARTY_META = {{PARTY_META}};
+
+{{TOGGLE_LANG_SCRIPT}}
+</script>
+<script src="/engine.js"></script>
+</body>
+</html>

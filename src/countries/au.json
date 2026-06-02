@@ -1,0 +1,2444 @@
+{
+  "code": "au",
+  "name": "AU",
+  "localLabel": "AU",
+  "flag": "🇦🇺",
+  "title": "Australia Political Quiz 2026 | CoreOpinion",
+  "desc": "Take the free Australian political compass quiz. 39 scenario questions to find where you stand and check your alignment with major Australian parties.",
+  "keywords": "Australian political quiz, Australia political compass test, Labor Liberal Greens quiz, where do I stand in Australian politics, political alignment test Australia, which party should I vote for Australia, Albanese Dutton quiz, Australian election 2025 quiz",
+  "canonical": "https://coreopinion.org/au",
+  "regions": [
+    "New South Wales",
+    "Victoria",
+    "Queensland",
+    "Western Australia",
+    "South Australia",
+    "Tasmania",
+    "Australian Capital Territory",
+    "Northern Territory"
+  ],
+  "parties": [
+    "alp",
+    "lib",
+    "nat",
+    "grn",
+    "teal"
+  ],
+  "partyMeta": {
+    "alp": {
+      "name": "Labor",
+      "color": "#CC0000",
+      "desc": "Your answers most closely match the Australian Labor Party. You favour workers rights, Medicare, clean energy transition, and a stronger role for government in reducing inequality."
+    },
+    "lib": {
+      "name": "Liberal",
+      "color": "#003DA5",
+      "desc": "Your answers most closely match the Liberal Party. You favour lower taxes, smaller government, strong borders, and a market-led approach to the economy."
+    },
+    "nat": {
+      "name": "Nationals",
+      "color": "#006400",
+      "desc": "Your answers most closely match the Nationals. You prioritise regional Australia, farming communities, resource industries, and scepticism of city-centric climate policy."
+    },
+    "grn": {
+      "name": "Greens",
+      "color": "#008000",
+      "desc": "Your answers most closely match the Greens. You support treating climate as an emergency, ending fossil fuel extraction, wealth taxes, and strong renters rights."
+    },
+    "teal": {
+      "name": "Teal Independents",
+      "color": "#007777",
+      "desc": "Your answers most closely match the Teal independents. You support strong integrity reforms, climate action, and pragmatic centrist economics, outside the major party blocs."
+    }
+  },
+  "calibrations": {
+    "cl1": [
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 1,
+        "teal": 2
+      },
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "cl2": [
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": 0
+      },
+      {
+        "alp": 0,
+        "lib": 0,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": -1
+      }
+    ],
+    "hs1": [
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -1,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 1,
+        "teal": 2
+      }
+    ],
+    "hs2": [
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      }
+    ],
+    "en1": [
+      {
+        "alp": 0,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 2,
+        "lib": -1,
+        "nat": -1,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "en2": [
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      },
+      {
+        "alp": 2,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      }
+    ],
+    "iv1": [
+      {
+        "alp": 2,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 2
+      },
+      {
+        "alp": 0,
+        "lib": 1,
+        "nat": 1,
+        "grn": 0,
+        "teal": 0
+      },
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "iv2": [
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "au1": [
+      {
+        "alp": -1,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      },
+      {
+        "alp": 1,
+        "lib": 2,
+        "nat": 2,
+        "grn": -2,
+        "teal": 1
+      },
+      {
+        "alp": 0,
+        "lib": -1,
+        "nat": -1,
+        "grn": 1,
+        "teal": 1
+      }
+    ],
+    "au2": [
+      {
+        "alp": 1,
+        "lib": 2,
+        "nat": 2,
+        "grn": -2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      },
+      {
+        "alp": 0,
+        "lib": -1,
+        "nat": -1,
+        "grn": 1,
+        "teal": 1
+      }
+    ],
+    "hc1": [
+      {
+        "alp": 2,
+        "lib": -1,
+        "nat": 0,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 1,
+        "grn": 1,
+        "teal": 2
+      },
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 0,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "hc2": [
+      {
+        "alp": 0,
+        "lib": 2,
+        "nat": 1,
+        "grn": -1,
+        "teal": 0
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      }
+    ],
+    "im1": [
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 1,
+        "grn": -1,
+        "teal": 0
+      },
+      {
+        "alp": 0,
+        "lib": 1,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": -1,
+        "grn": 0,
+        "teal": 0
+      }
+    ],
+    "im2": [
+      {
+        "alp": 2,
+        "lib": 0,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 0,
+        "lib": 1,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "tx1": [
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": 0,
+        "grn": 1,
+        "teal": 2
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "tx2": [
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": 0
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      }
+    ],
+    "wr1": [
+      {
+        "alp": 2,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "wr2": [
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": 0
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      }
+    ],
+    "nv1": [
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 0,
+        "lib": 0,
+        "nat": 1,
+        "grn": 0,
+        "teal": 0
+      },
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "nv2": [
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      },
+      {
+        "alp": 0,
+        "lib": 1,
+        "nat": 1,
+        "grn": -1,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 0
+      }
+    ],
+    "di1": [
+      {
+        "alp": 0,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 2
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 2
+      },
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 1,
+        "grn": -1,
+        "teal": -1
+      }
+    ],
+    "di2": [
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 2
+      },
+      {
+        "alp": 0,
+        "lib": 0,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 0,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "ed1": [
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": 0
+      }
+    ],
+    "ed2": [
+      {
+        "alp": 1,
+        "lib": 1,
+        "nat": 2,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": 0,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      }
+    ],
+    "md1": [
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": 0,
+        "lib": 0,
+        "nat": 0,
+        "grn": 0,
+        "teal": 0
+      },
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 1,
+        "grn": -1,
+        "teal": 0
+      }
+    ],
+    "md2": [
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "re1": [
+      {
+        "alp": 2,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 2
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -1,
+        "teal": -1
+      }
+    ],
+    "re2": [
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      }
+    ],
+    "rg1": [
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 1,
+        "grn": -1,
+        "teal": 1
+      },
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 0,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "rg2": [
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 0,
+        "lib": 1,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "cs1": [
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 0,
+        "lib": 0,
+        "nat": 0,
+        "grn": 1,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "cs2": [
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 2
+      },
+      {
+        "alp": 0,
+        "lib": 0,
+        "nat": 0,
+        "grn": 0,
+        "teal": 0
+      },
+      {
+        "alp": -2,
+        "lib": 1,
+        "nat": 0,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "ex1": [
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "ex2": [
+      {
+        "alp": -1,
+        "lib": 2,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      },
+      {
+        "alp": 1,
+        "lib": -2,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      }
+    ],
+    "ex3": [
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 0
+      },
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": -1
+      }
+    ],
+    "ex4": [
+      {
+        "alp": -2,
+        "lib": 2,
+        "nat": 1,
+        "grn": -2,
+        "teal": 0
+      },
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 1
+      }
+    ],
+    "ex5": [
+      {
+        "alp": 2,
+        "lib": -2,
+        "nat": -1,
+        "grn": 2,
+        "teal": 2
+      },
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 0,
+        "grn": -1,
+        "teal": -1
+      }
+    ],
+    "id1": [
+      {
+        "alp": 0,
+        "lib": 1,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": 0,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": -1,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      }
+    ],
+    "id2": [
+      {
+        "alp": 2,
+        "lib": -1,
+        "nat": -2,
+        "grn": 2,
+        "teal": 1
+      },
+      {
+        "alp": 1,
+        "lib": 0,
+        "nat": -1,
+        "grn": 0,
+        "teal": 1
+      },
+      {
+        "alp": -1,
+        "lib": 1,
+        "nat": 2,
+        "grn": -2,
+        "teal": -1
+      }
+    ]
+  },
+  "translations": {},
+  "bank": [
+    {
+      "id": "cl1",
+      "nl": "Cost of living",
+      "pair": "cl-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Inflation hit 7.8% in 2022. Mortgage repayments doubled for many homeowners. Real wages fell for two consecutive years.",
+      "q": "Families are skipping meals while corporations post record profits. This is not a market failure. It is theft.",
+      "opts": [
+        {
+          "t": "Yes. Windfall taxes, energy price caps, and stronger wage growth.",
+          "e": -2,
+          "g": 2,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        },
+        {
+          "t": "Target relief at those who need it most without distorting markets.",
+          "e": -1,
+          "g": 1,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 1,
+          "teal": 2
+        },
+        {
+          "t": "Cut taxes and regulation so businesses can bring prices down.",
+          "e": 2,
+          "g": -1,
+          "alp": -2,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "cl2",
+      "nl": "Cost of living",
+      "pair": "cl-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Government spending is driving inflation. Cutting the budget deficit is the most effective way to reduce cost of living pressures.",
+      "opts": [
+        {
+          "t": "Yes. Fiscal discipline is the foundation of economic stability.",
+          "e": 2,
+          "g": 0,
+          "alp": -2,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": 0
+        },
+        {
+          "t": "The deficit contributed but supply chain issues and corporate pricing matter too.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 0,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. Cutting spending during a cost of living crisis takes money out of struggling households.",
+          "e": -2,
+          "g": 1,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "hs1",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Sydney median house price: 1.4 million dollars. Melbourne: 950,000. Rental vacancy rates are at historic lows. Young Australians are being locked out permanently.",
+      "q": "The housing crisis is a failure of government policy over decades. Emergency action is needed.",
+      "opts": [
+        {
+          "t": "Yes. Build social housing, reform negative gearing, and end foreign speculation.",
+          "e": -2,
+          "g": 2,
+          "alp": 1,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Stop blocking development. Reform planning laws and let the market build its way out of this.",
+          "e": 1,
+          "g": -1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -1,
+          "teal": 1
+        },
+        {
+          "t": "Both supply and targeted demand reform. The market alone will not fix this.",
+          "e": -1,
+          "g": 1,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 1,
+          "teal": 2
+        }
+      ]
+    },
+    {
+      "id": "hs2",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Negative gearing allows investors to reduce taxable income on loss-making properties. Removing it would reduce housing supply and hurt renters.",
+      "opts": [
+        {
+          "t": "Yes. Negative gearing supports investment that ultimately increases supply.",
+          "e": 2,
+          "g": 0,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        },
+        {
+          "t": "Grandfathering existing arrangements while ending it for new purchases is fairer.",
+          "e": -1,
+          "g": 0,
+          "alp": 1,
+          "lib": -1,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "No. It inflates prices and transfers wealth from renters to investors. It must go.",
+          "e": -2,
+          "g": 1,
+          "alp": 1,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "en1",
+      "nl": "Climate and energy",
+      "pair": "en-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Australia is one of the highest per capita emitters in the world and one of the largest coal and gas exporters. The Great Barrier Reef is experiencing mass bleaching events.",
+      "q": "Australia is burning its future to prop up industries that have no long-term future. The coal and gas era must end.",
+      "opts": [
+        {
+          "t": "Yes. No new coal or gas approvals. Accelerate the transition to renewables.",
+          "e": -2,
+          "g": 2,
+          "alp": 0,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Managed transition with proper support for affected workers and communities.",
+          "e": -1,
+          "g": 1,
+          "alp": 2,
+          "lib": -1,
+          "nat": -1,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "Coal and gas support hundreds of thousands of jobs and billions in exports. We need them.",
+          "e": 2,
+          "g": 0,
+          "alp": -1,
+          "lib": 2,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "en2",
+      "nl": "Climate and energy",
+      "pair": "en-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Australia should not sacrifice jobs and economic growth for climate targets when China and India are still building coal plants.",
+      "opts": [
+        {
+          "t": "Yes. Unilateral action puts us at a disadvantage without solving anything.",
+          "e": 1,
+          "g": 0,
+          "alp": -2,
+          "lib": 2,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        },
+        {
+          "t": "The comparison is used to justify inaction. Australia can lead and profit from the transition.",
+          "e": -1,
+          "g": 0,
+          "alp": 2,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "No. Climate physics does not care about our share of emissions. Act now.",
+          "e": -2,
+          "g": 1,
+          "alp": 1,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        }
+      ]
+    },
+    {
+      "id": "iv1",
+      "nl": "Indigenous affairs",
+      "pair": "iv-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "The 2023 Voice referendum was defeated. 60.3% of Australians voted No. The gap in life expectancy, incarceration, and health outcomes between Indigenous and non-Indigenous Australians remains stark.",
+      "q": "The referendum result does not end the obligation. Australia must find another path to meaningful Indigenous representation and closing the gap.",
+      "opts": [
+        {
+          "t": "Yes. Legislated Voice mechanisms, treaty, and truth-telling must continue.",
+          "e": -1,
+          "g": 0,
+          "alp": 2,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 2
+        },
+        {
+          "t": "Practical programs focused on health, housing, and education deliver more than symbolic structures.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 1,
+          "nat": 1,
+          "grn": 0,
+          "teal": 0
+        },
+        {
+          "t": "60% voted No. Continuing to push constitutional change against that verdict is undemocratic.",
+          "e": 0,
+          "g": 1,
+          "alp": -2,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "iv2",
+      "nl": "Indigenous affairs",
+      "pair": "iv-a",
+      "fr": "con",
+      "type": "s",
+      "q": "A treaty with First Nations peoples would be a significant step toward genuine reconciliation and should be a national priority.",
+      "opts": [
+        {
+          "t": "Yes. Treaty is the foundation of a just relationship between First Nations and the state.",
+          "e": -1,
+          "g": -1,
+          "alp": 1,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "State-based processes are making progress. A national treaty needs broader support first.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": -1,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. A treaty implies a separate sovereignty that is incompatible with the Australian constitution.",
+          "e": 0,
+          "g": 1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "au1",
+      "nl": "Defence and AUKUS",
+      "pair": "au-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Australia committed to purchasing nuclear-powered submarines under AUKUS at a cost of up to 368 billion dollars. The subs may not be delivered until the 2040s.",
+      "q": "Spending 368 billion on submarines while hospitals and schools struggle for funding is a catastrophic misallocation of national resources.",
+      "opts": [
+        {
+          "t": "Yes. AUKUS locks Australia into American strategic interests at enormous cost.",
+          "e": -1,
+          "g": -1,
+          "alp": -1,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        },
+        {
+          "t": "The cost is real but the strategic environment demands it. China is not a theoretical threat.",
+          "e": 0,
+          "g": 1,
+          "alp": 1,
+          "lib": 2,
+          "nat": 2,
+          "grn": -2,
+          "teal": 1
+        },
+        {
+          "t": "Australia must maintain genuine strategic independence, not dependence on the US.",
+          "e": 0,
+          "g": -1,
+          "alp": 0,
+          "lib": -1,
+          "nat": -1,
+          "grn": 1,
+          "teal": 1
+        }
+      ]
+    },
+    {
+      "id": "au2",
+      "nl": "Defence and AUKUS",
+      "pair": "au-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Australia faces genuine security risks in the Indo-Pacific. Investing in defence capability now is cheaper than the alternative.",
+      "opts": [
+        {
+          "t": "Yes. The strategic environment requires hard choices on defence spending.",
+          "e": 1,
+          "g": 1,
+          "alp": 1,
+          "lib": 2,
+          "nat": 2,
+          "grn": -2,
+          "teal": 1
+        },
+        {
+          "t": "Diplomacy and regional engagement must be the primary tool, not military hardware.",
+          "e": -1,
+          "g": -1,
+          "alp": 1,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        },
+        {
+          "t": "Meaningful defence requires independence from US strategic goals, not dependence.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": -1,
+          "nat": -1,
+          "grn": 1,
+          "teal": 1
+        }
+      ]
+    },
+    {
+      "id": "hc1",
+      "nl": "Healthcare and Medicare",
+      "pair": "hc-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Medicare is under strain. Bulk billing rates are falling. Millions of Australians cannot afford GP care. The government must invest heavily to restore universal access.",
+      "opts": [
+        {
+          "t": "Yes. Bulk billing incentives, more GPs, and proper Medicare funding.",
+          "e": -2,
+          "g": 2,
+          "alp": 2,
+          "lib": -1,
+          "nat": 0,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Target bulk billing incentives at disadvantaged areas and vulnerable groups.",
+          "e": -1,
+          "g": 1,
+          "alp": 1,
+          "lib": 0,
+          "nat": 1,
+          "grn": 1,
+          "teal": 2
+        },
+        {
+          "t": "Allow more market-based solutions. Competition will improve access and quality.",
+          "e": 2,
+          "g": -1,
+          "alp": -2,
+          "lib": 2,
+          "nat": 0,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "hc2",
+      "nl": "Healthcare and Medicare",
+      "pair": "hc-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The NDIS has blown out to over 50 billion dollars annually. Without reform it will consume resources needed for other services.",
+      "opts": [
+        {
+          "t": "Yes. The program needs tighter eligibility and stronger oversight.",
+          "e": 1,
+          "g": 1,
+          "alp": 0,
+          "lib": 2,
+          "nat": 1,
+          "grn": -1,
+          "teal": 0
+        },
+        {
+          "t": "Costs must be managed but cuts must not come at the expense of participants who depend on it.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "No. The NDIS is working. Its costs reflect unmet need that previously went unaddressed.",
+          "e": -2,
+          "g": 0,
+          "alp": 1,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "im1",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Australia took in 740,000 migrants in 2023. Infrastructure, housing, and services have not kept pace.",
+      "q": "Australia grew too fast. Immigration must be cut sharply to let the country absorb what it has taken on.",
+      "opts": [
+        {
+          "t": "Yes. Numbers must come down significantly for at least two years.",
+          "e": 0,
+          "g": 1,
+          "alp": -1,
+          "lib": 1,
+          "nat": 1,
+          "grn": -1,
+          "teal": 0
+        },
+        {
+          "t": "Cuts to temporary workers and international students, but skilled migration should continue.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 1,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. Immigration is essential for an ageing population and growing economy.",
+          "e": -1,
+          "g": -1,
+          "alp": 1,
+          "lib": 0,
+          "nat": -1,
+          "grn": 0,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "im2",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Australia was built by immigration and its multicultural society is one of its greatest strengths.",
+      "opts": [
+        {
+          "t": "Yes. Diversity and immigration are core to the Australian story.",
+          "e": -1,
+          "g": -1,
+          "alp": 2,
+          "lib": 0,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Immigration has been valuable but must be managed in line with capacity.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 1,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "Multiculturalism has been taken too far. Social cohesion requires integration.",
+          "e": 1,
+          "g": 1,
+          "alp": -1,
+          "lib": 1,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "tx1",
+      "nl": "Tax and economy",
+      "pair": "tx-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Australia needs a serious wealth tax on assets above 5 million dollars. The concentration of wealth at the top is incompatible with a fair society.",
+      "opts": [
+        {
+          "t": "Yes. Tax wealth more and use it to fund housing, health, and education.",
+          "e": -2,
+          "g": 2,
+          "alp": 1,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        },
+        {
+          "t": "Close loopholes and ensure the wealthy pay the rates the law intends first.",
+          "e": -1,
+          "g": 1,
+          "alp": 1,
+          "lib": -1,
+          "nat": 0,
+          "grn": 1,
+          "teal": 2
+        },
+        {
+          "t": "No. Wealth taxes drive capital offshore and punish success.",
+          "e": 2,
+          "g": -1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "tx2",
+      "nl": "Tax and economy",
+      "pair": "tx-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Stage three tax cuts benefiting higher earners were the right economic policy. Incentivising high earners drives productivity.",
+      "opts": [
+        {
+          "t": "Yes. Reward and incentivise those who contribute most.",
+          "e": 2,
+          "g": 0,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": 0
+        },
+        {
+          "t": "Modified stage three targeting middle earners was a sensible compromise.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. Tax cuts for the wealthy during a cost of living crisis were indefensible.",
+          "e": -2,
+          "g": 1,
+          "alp": 1,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "wr1",
+      "nl": "Workers rights",
+      "pair": "wr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The right to disconnect from work outside of hours should be a legal protection for all Australian workers.",
+      "opts": [
+        {
+          "t": "Yes. Unpaid overtime and after-hours contact are exploitation.",
+          "e": -1,
+          "g": 1,
+          "alp": 2,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "The law goes too far but cultural norms around work need to change.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "No. It is regulatory overreach that will harm small businesses and flexibility.",
+          "e": 1,
+          "g": -1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "wr2",
+      "nl": "Workers rights",
+      "pair": "wr-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Multi-employer bargaining undermines the ability of small businesses to manage their own pay arrangements and will destroy jobs.",
+      "opts": [
+        {
+          "t": "Yes. Individual enterprise bargaining is the right framework for most businesses.",
+          "e": 2,
+          "g": 0,
+          "alp": -2,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": 0
+        },
+        {
+          "t": "Industry-wide bargaining can work for some sectors but must be carefully designed.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": -1,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. Workers bargaining collectively across industries is how wages actually rise.",
+          "e": -2,
+          "g": 1,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "nv1",
+      "nl": "Nature and environment",
+      "pair": "nv-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Australia has one of the worst species extinction records of any country. Deforestation, invasive species, and climate change are accelerating biodiversity collapse.",
+      "q": "Australia is sleepwalking toward ecological catastrophe and must treat nature loss as an emergency alongside climate.",
+      "opts": [
+        {
+          "t": "Yes. Nature positive laws, stronger protections, and end land clearing.",
+          "e": -2,
+          "g": 2,
+          "alp": 1,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Protect what matters most, but do not impose city-based values on people whose livelihoods depend on the land.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 0,
+          "nat": 1,
+          "grn": 0,
+          "teal": 0
+        },
+        {
+          "t": "Landholders and farmers should have the right to manage their own land.",
+          "e": 2,
+          "g": -1,
+          "alp": -1,
+          "lib": 1,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "nv2",
+      "nl": "Nature and environment",
+      "pair": "nv-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Environmental regulations blocking development and mining are costing Australia billions in investment and thousands of jobs.",
+      "opts": [
+        {
+          "t": "Yes. The approval system is too slow and too restrictive.",
+          "e": 1,
+          "g": -1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        },
+        {
+          "t": "Streamline the process without lowering the environmental standards.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 1,
+          "nat": 1,
+          "grn": -1,
+          "teal": 1
+        },
+        {
+          "t": "No. Environmental assessment exists because development causes real, lasting harm.",
+          "e": -2,
+          "g": 1,
+          "alp": 1,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "di1",
+      "nl": "Political integrity",
+      "pair": "di-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Australia needs a strong federal integrity commission with real powers to investigate politicians and public servants.",
+      "opts": [
+        {
+          "t": "Yes. The weak version Labor delivered does not go nearly far enough.",
+          "e": 0,
+          "g": -2,
+          "alp": 0,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 2
+        },
+        {
+          "t": "A meaningful integrity body with proper independence is essential.",
+          "e": 0,
+          "g": -1,
+          "alp": 1,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 2
+        },
+        {
+          "t": "The existing oversight mechanisms are sufficient if properly resourced.",
+          "e": 0,
+          "g": 1,
+          "alp": -1,
+          "lib": 1,
+          "nat": 1,
+          "grn": -1,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "di2",
+      "nl": "Political integrity",
+      "pair": "di-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Political donations from property developers to local councils are a form of legalised corruption that must be banned nationwide.",
+      "opts": [
+        {
+          "t": "Yes. Developer donations corrupt planning decisions and must be prohibited.",
+          "e": 0,
+          "g": 1,
+          "alp": 1,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 2
+        },
+        {
+          "t": "Disclosure requirements and donation caps are sufficient safeguards.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 0,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. Political donations are a form of democratic participation.",
+          "e": 0,
+          "g": -1,
+          "alp": -1,
+          "lib": 1,
+          "nat": 0,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "ed1",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Australia has among the highest private school funding rates in the OECD. Public school students are increasingly disadvantaged by funding disparities.",
+      "q": "Channelling public money into elite private schools while public schools deteriorate is an indefensible policy choice.",
+      "opts": [
+        {
+          "t": "Yes. Needs-based funding must redirect money from wealthy private schools.",
+          "e": -2,
+          "g": 1,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Funding reform should increase public school funding without cuts to private.",
+          "e": -1,
+          "g": 0,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "No. Parents choosing to invest in their children deserve public support too.",
+          "e": 2,
+          "g": -1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "ed2",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "con",
+      "type": "s",
+      "q": "University degrees are oversold. More pathways into trades and vocational education would serve Australia better.",
+      "opts": [
+        {
+          "t": "Yes. The status gap between university and TAFE is damaging and must close.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": 1,
+          "nat": 2,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "Both paths matter. The problem is HECS debt making university an unfair burden.",
+          "e": -1,
+          "g": 0,
+          "alp": 1,
+          "lib": -1,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "University should be free. The argument against it protects class advantage.",
+          "e": -2,
+          "g": 1,
+          "alp": 0,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "md1",
+      "nl": "Media and tech",
+      "pair": "md-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The News Media Bargaining Code requiring tech giants to pay Australian news publishers was the right approach to saving quality journalism.",
+      "opts": [
+        {
+          "t": "Yes. Tech platforms profit from journalism without funding it.",
+          "e": -1,
+          "g": 1,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "The principle is right but the execution allowed Murdoch-owned papers to capture most of the money.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 0,
+          "nat": 0,
+          "grn": 0,
+          "teal": 0
+        },
+        {
+          "t": "No. Government should not be subsidising and therefore influencing journalism.",
+          "e": 1,
+          "g": -1,
+          "alp": -1,
+          "lib": 1,
+          "nat": 1,
+          "grn": -1,
+          "teal": 0
+        }
+      ]
+    },
+    {
+      "id": "md2",
+      "nl": "Media and tech",
+      "pair": "md-a",
+      "fr": "con",
+      "type": "s",
+      "q": "News Corp controls too much of the Australian media and uses its dominance to push conservative politics at the expense of public interest journalism.",
+      "opts": [
+        {
+          "t": "Yes. Media concentration at this level is a threat to democracy.",
+          "e": -1,
+          "g": 1,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Media diversity is important but the ABC provides a significant public interest counterweight.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": -1,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "No. News Corp operates in a competitive market and its readers choose its products.",
+          "e": 1,
+          "g": -1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "re1",
+      "nl": "Republic and identity",
+      "pair": "re-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Australia should become a republic with an Australian as head of state. Retaining the British monarchy is an anachronism.",
+      "opts": [
+        {
+          "t": "Yes. An Australian head of state is an obvious necessity for a confident nation.",
+          "e": 0,
+          "g": -1,
+          "alp": 2,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 2
+        },
+        {
+          "t": "Eventually yes, but there are more pressing priorities right now.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "No. The constitutional monarchy has served Australia well and change carries risk.",
+          "e": 0,
+          "g": 1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -1,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "re2",
+      "nl": "Republic and identity",
+      "pair": "re-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Australia Day on January 26 should remain unchanged. Changing the date reopens wounds rather than healing them.",
+      "opts": [
+        {
+          "t": "Yes. Australia Day marks nationhood. The date should stay.",
+          "e": 0,
+          "g": 1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        },
+        {
+          "t": "Move it to a date all Australians can celebrate without it being a day of mourning.",
+          "e": 0,
+          "g": -1,
+          "alp": 1,
+          "lib": -1,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "The conversation should be led by First Nations peoples, not settled by parliament.",
+          "e": 0,
+          "g": -1,
+          "alp": 1,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        }
+      ]
+    },
+    {
+      "id": "rg1",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The federal government should take a larger role in strategic industries like clean energy, advanced manufacturing, and critical minerals.",
+      "opts": [
+        {
+          "t": "Yes. Industrial strategy is how nations build future prosperity.",
+          "e": -1,
+          "g": 1,
+          "alp": 2,
+          "lib": -2,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "Government should set the rules and incentives but not pick and fund winners.",
+          "e": 1,
+          "g": 0,
+          "alp": -1,
+          "lib": 1,
+          "nat": 1,
+          "grn": -1,
+          "teal": 1
+        },
+        {
+          "t": "No. Government investment crowds out private capital and distorts markets.",
+          "e": 2,
+          "g": -1,
+          "alp": -2,
+          "lib": 2,
+          "nat": 0,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "rg2",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Inequality in Australia has grown to a level that threatens social cohesion and demands a serious redistributive response.",
+      "opts": [
+        {
+          "t": "Yes. Wealth taxes, higher top rates, and strong public services.",
+          "e": -2,
+          "g": 2,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Target support at those who need it without punishing wealth creation.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 1,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. Inequality reflects different choices. Redistribution punishes success.",
+          "e": 2,
+          "g": -1,
+          "alp": -2,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "cs1",
+      "nl": "Social security",
+      "pair": "cs-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "JobSeeker is set below the poverty line and forces people into destitution. It must be raised significantly.",
+      "opts": [
+        {
+          "t": "Yes. No one in a wealthy country should be forced into poverty by the safety net.",
+          "e": -2,
+          "g": 2,
+          "alp": 1,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "Raise it, but with strong mutual obligations and pathways back to work.",
+          "e": -1,
+          "g": 1,
+          "alp": 0,
+          "lib": 0,
+          "nat": 0,
+          "grn": 1,
+          "teal": 1
+        },
+        {
+          "t": "The rate is set to incentivise job-seeking. Raising it reduces that incentive.",
+          "e": 1,
+          "g": 0,
+          "alp": -1,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "cs2",
+      "nl": "Social security",
+      "pair": "cs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Robodebt caused real harm to hundreds of thousands of welfare recipients. Those responsible in government should face consequences.",
+      "opts": [
+        {
+          "t": "Yes. This was a systemic injustice and accountability is essential.",
+          "e": 0,
+          "g": -1,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 2
+        },
+        {
+          "t": "The royal commission and compensation addressed it. Move forward.",
+          "e": 0,
+          "g": 0,
+          "alp": 0,
+          "lib": 0,
+          "nat": 0,
+          "grn": 0,
+          "teal": 0
+        },
+        {
+          "t": "The political class is using Robodebt to relitigate welfare reform debate.",
+          "e": 0,
+          "g": 1,
+          "alp": -2,
+          "lib": 1,
+          "nat": 0,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "ex1",
+      "nl": "Climate emergency",
+      "pair": "ex-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Australia is on fire every summer. The Great Barrier Reef is bleaching. Flood damage has cost billions. Scientists have been warning about this for 40 years.",
+      "q": "We knew this was coming and did nothing. That is not misfortune. That is criminal negligence.",
+      "opts": [
+        {
+          "t": "Yes. The fossil fuel lobby captured our politics and we are paying with our coastlines.",
+          "e": -2,
+          "g": 2,
+          "alp": 1,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "No. Climate policy must balance the economy. Destroying jobs for symbolic targets helps no one.",
+          "e": 1,
+          "g": -1,
+          "alp": -1,
+          "lib": 2,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "nl": "Climate emergency",
+      "pair": "ex-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Australian coal and gas keep the lights on in Asia and bring billions into this country. Shutting them down while demand exists is economic self-harm.",
+      "opts": [
+        {
+          "t": "Yes. Someone will supply the market. Better us with higher standards than coal from elsewhere.",
+          "e": 1,
+          "g": 0,
+          "alp": -1,
+          "lib": 2,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        },
+        {
+          "t": "No. The demand will not exist in 20 years. Building new fossil fuel infrastructure now is betting on a losing hand.",
+          "e": -2,
+          "g": 1,
+          "alp": 1,
+          "lib": -2,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        }
+      ]
+    },
+    {
+      "id": "ex3",
+      "nl": "Cost of living",
+      "pair": "ex-b",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Four major banks posted combined profits of 30 billion dollars last year. Average mortgage repayments doubled in two years.",
+      "q": "Banks are extracting billions from people who cannot afford their mortgages. That is not the market working. That is the market failing.",
+      "opts": [
+        {
+          "t": "Yes. Windfall taxes on bank profits, mandatory hardship provisions, and real competition.",
+          "e": -2,
+          "g": 2,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 0
+        },
+        {
+          "t": "No. Bank profits reflect risk. Intervening in lending markets makes credit harder to get, not easier.",
+          "e": 2,
+          "g": -1,
+          "alp": -2,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "ex4",
+      "nl": "Cost of living",
+      "pair": "ex-b",
+      "fr": "con",
+      "type": "s",
+      "q": "Raising wages faster than productivity forces businesses to cut jobs or raise prices. Workers end up worse off.",
+      "opts": [
+        {
+          "t": "Yes. Wages must reflect what the economy can sustain, not what politicians promise.",
+          "e": 2,
+          "g": -1,
+          "alp": -2,
+          "lib": 2,
+          "nat": 1,
+          "grn": -2,
+          "teal": 0
+        },
+        {
+          "t": "No. Wages have been held down for a decade while profits soared. Workers are owed this.",
+          "e": -2,
+          "g": 1,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 1
+        }
+      ]
+    },
+    {
+      "id": "ex5",
+      "nl": "Rule of law",
+      "pair": "ex-c",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Robodebt destroyed lives. The people who approved it knew it was illegal. Not one of them has faced criminal charges.",
+      "opts": [
+        {
+          "t": "Yes. Accountability for government wrongdoing must mean real consequences, not just apologies.",
+          "e": 0,
+          "g": -1,
+          "alp": 2,
+          "lib": -2,
+          "nat": -1,
+          "grn": 2,
+          "teal": 2
+        },
+        {
+          "t": "No. The royal commission, compensation, and political defeat were the accountability. Move forward.",
+          "e": 0,
+          "g": 1,
+          "alp": -1,
+          "lib": 1,
+          "nat": 0,
+          "grn": -1,
+          "teal": -1
+        }
+      ]
+    },
+    {
+      "id": "id1",
+      "nl": "National and cultural identity",
+      "pair": "ident-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.",
+      "opts": [
+        {
+          "t": "Yes. Pride in your own culture and heritage is natural and healthy.",
+          "e": 0,
+          "g": 1,
+          "alp": 0,
+          "lib": 1,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        },
+        {
+          "t": "Pride is fine but claims of superiority over others make me uncomfortable.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": 0,
+          "nat": 0,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. Ranking cultures above each other is where dangerous thinking begins.",
+          "e": 0,
+          "g": -1,
+          "alp": 1,
+          "lib": -1,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        }
+      ]
+    },
+    {
+      "id": "id2",
+      "nl": "National and cultural identity",
+      "pair": "ident-a",
+      "fr": "con",
+      "type": "s",
+      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+      "opts": [
+        {
+          "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",
+          "e": 0,
+          "g": -1,
+          "alp": 2,
+          "lib": -1,
+          "nat": -2,
+          "grn": 2,
+          "teal": 1
+        },
+        {
+          "t": "We should acknowledge history honestly without demanding personal shame.",
+          "e": 0,
+          "g": 0,
+          "alp": 1,
+          "lib": 0,
+          "nat": -1,
+          "grn": 0,
+          "teal": 1
+        },
+        {
+          "t": "No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.",
+          "e": 0,
+          "g": 1,
+          "alp": -1,
+          "lib": 1,
+          "nat": 2,
+          "grn": -2,
+          "teal": -1
+        }
+      ]
+    }
+  ],
+  "heroTitle": "Where do you stand in <em>Australian</em> politics?",
+  "heroSub": "39 scenario-based questions on the issues defining Australia right now. Cost of living, housing, climate, Indigenous rights, AUKUS and more. Find your full party alignment.",
+  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#CC0000\"></div>"
+}

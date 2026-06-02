@@ -1,0 +1,3231 @@
+{
+  "code": "ca",
+  "name": "CA",
+  "localLabel": "CA",
+  "flag": "🇨🇦",
+  "title": "Canada Political Quiz 2026 | CoreOpinion",
+  "desc": "Take the free Canadian political compass quiz. 47 scenario questions to find your position and check alignment with Liberal, Conservative, NDP, and more.",
+  "keywords": "Canadian political quiz, Canada political compass test, Liberal Conservative NDP quiz, where do I stand in Canadian politics, political alignment test Canada, which party should I vote for Canada, Carney Poilievre quiz, Canadian election 2025 quiz",
+  "canonical": "https://coreopinion.org/ca",
+  "regions": [
+    "Alberta",
+    "British Columbia",
+    "Manitoba",
+    "New Brunswick",
+    "Newfoundland and Labrador",
+    "Nova Scotia",
+    "Ontario",
+    "Prince Edward Island",
+    "Quebec",
+    "Saskatchewan",
+    "Northwest Territories",
+    "Nunavut",
+    "Yukon"
+  ],
+  "parties": [
+    "lib",
+    "con",
+    "ndp",
+    "grn",
+    "blq",
+    "ppc"
+  ],
+  "partyMeta": {
+    "lib": {
+      "name": "Liberal",
+      "color": "#CC0000",
+      "desc": "Your answers most closely match the Liberal Party. You tend to support managed trade, social programs, climate action, and a strong federal role in the economy."
+    },
+    "con": {
+      "name": "Conservative",
+      "color": "#003F7F",
+      "desc": "Your answers most closely match the Conservative Party. You favour lower taxes, smaller government, axing the carbon tax, and reducing federal spending."
+    },
+    "ndp": {
+      "name": "NDP",
+      "color": "#F37021",
+      "desc": "Your answers most closely match the NDP. You support pharmacare, dental care, workers rights, wealth taxes, and a more activist government on inequality and climate."
+    },
+    "grn": {
+      "name": "Green",
+      "color": "#3D9B35",
+      "desc": "Your answers most closely match the Green Party. You prioritise strong climate action, proportional representation, and a systemic challenge to corporate power."
+    },
+    "blq": {
+      "name": "Bloc Québécois",
+      "color": "#003DA5",
+      "desc": "Your answers most closely match the Bloc. You support Quebec autonomy, French language protection, and a centre-left social model on federal matters."
+    },
+    "ppc": {
+      "name": "PPC",
+      "color": "#4B0082",
+      "desc": "Your answers most closely match the PPC. You want radical cuts to immigration, elimination of climate policy, and a rejection of mainstream conservative incrementalism."
+    }
+  },
+  "calibrations": {
+    "us1": [
+      {
+        "lib": 2,
+        "con": 0,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 2,
+        "ppc": -1
+      },
+      {
+        "lib": 1,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": -1,
+        "con": 1,
+        "ndp": -2,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 1
+      }
+    ],
+    "us2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 1,
+        "grn": 0,
+        "blq": 1,
+        "ppc": -1
+      },
+      {
+        "lib": 2,
+        "con": -1,
+        "ndp": 2,
+        "grn": 1,
+        "blq": 2,
+        "ppc": -2
+      }
+    ],
+    "ct1": [
+      {
+        "lib": 2,
+        "con": -2,
+        "ndp": 1,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": -1,
+        "ndp": 0,
+        "grn": 1,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -2,
+        "con": 2,
+        "ndp": -1,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "ct2": [
+      {
+        "lib": -2,
+        "con": 2,
+        "ndp": -1,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 1,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": 2,
+        "con": -2,
+        "ndp": 1,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      }
+    ],
+    "hs1": [
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": 2,
+        "con": 0,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -1
+      }
+    ],
+    "hs2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 1,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      }
+    ],
+    "hc1": [
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 1
+      }
+    ],
+    "hc2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "ph1": [
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 0,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "ph2": [
+      {
+        "lib": -2,
+        "con": 2,
+        "ndp": -2,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": -1,
+        "ndp": 1,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "im1": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 1,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 1,
+        "ppc": 1
+      },
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 0,
+        "ppc": -2
+      }
+    ],
+    "im2": [
+      {
+        "lib": 2,
+        "con": -1,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 1,
+        "ppc": 2
+      }
+    ],
+    "cl1": [
+      {
+        "lib": -1,
+        "con": -2,
+        "ndp": 0,
+        "grn": 2,
+        "blq": -1,
+        "ppc": -2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 1,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "cl2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": 0,
+        "grn": -2,
+        "blq": 0,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 1,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": 0,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      }
+    ],
+    "ir1": [
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 1,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 1
+      }
+    ],
+    "ir2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": 0,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      }
+    ],
+    "tx1": [
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 1,
+        "blq": 0,
+        "ppc": -2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "tx2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 0
+      }
+    ],
+    "tx3": [
+      {
+        "lib": 0,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "nu1": [
+      {
+        "lib": -1,
+        "con": -2,
+        "ndp": -1,
+        "grn": 0,
+        "blq": 2,
+        "ppc": -1
+      },
+      {
+        "lib": 1,
+        "con": 1,
+        "ndp": 1,
+        "grn": 0,
+        "blq": -1,
+        "ppc": 0
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": -2,
+        "ppc": 0
+      }
+    ],
+    "nu2": [
+      {
+        "lib": -1,
+        "con": 1,
+        "ndp": -1,
+        "grn": -1,
+        "blq": -2,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -1
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 0,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 1
+      }
+    ],
+    "wr1": [
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "wr2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": -1,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "en1": [
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 1,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 0,
+        "grn": 1,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 1,
+        "ndp": -1,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "dr1": [
+      {
+        "lib": 0,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": 1
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": -1,
+        "ppc": -1
+      }
+    ],
+    "dr2": [
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": 0,
+        "con": 0,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": -1
+      }
+    ],
+    "si1": [
+      {
+        "lib": 2,
+        "con": -1,
+        "ndp": 2,
+        "grn": 2,
+        "blq": -1,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": -2,
+        "con": 1,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "si2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      }
+    ],
+    "rg1": [
+      {
+        "lib": -2,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -1
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "rg2": [
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "fp1": [
+      {
+        "lib": 0,
+        "con": 2,
+        "ndp": -1,
+        "grn": -2,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": 0,
+        "con": -2,
+        "ndp": 1,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -1
+      }
+    ],
+    "fp2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 2,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -1
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "co1": [
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 2,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -1
+      },
+      {
+        "lib": 0,
+        "con": 2,
+        "ndp": -1,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 2
+      },
+      {
+        "lib": -2,
+        "con": 2,
+        "ndp": -2,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "co2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "in1": [
+      {
+        "lib": 2,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": -1,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": -1,
+        "con": 1,
+        "ndp": -2,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "me1": [
+      {
+        "lib": 2,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 1,
+        "ndp": -1,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 2
+      }
+    ],
+    "ni1": [
+      {
+        "lib": -1,
+        "con": 1,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": 2,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 1,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 2,
+        "ppc": -1
+      }
+    ],
+    "ni2": [
+      {
+        "lib": -2,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 0,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 1
+      },
+      {
+        "lib": 2,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "en2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -2,
+        "blq": 0,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 0,
+        "ndp": 0,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 1,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      }
+    ],
+    "me2": [
+      {
+        "lib": -2,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": -1,
+        "grn": 0,
+        "blq": 0,
+        "ppc": 0
+      },
+      {
+        "lib": 2,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "ex1": [
+      {
+        "lib": 2,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 2,
+        "ppc": -2
+      },
+      {
+        "lib": -1,
+        "con": 1,
+        "ndp": -1,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 1
+      }
+    ],
+    "ex2": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 1,
+        "grn": 1,
+        "blq": 2,
+        "ppc": -1
+      }
+    ],
+    "ex3": [
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 1
+      }
+    ],
+    "ex4": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": -1,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 1,
+        "ppc": -2
+      }
+    ],
+    "ex5": [
+      {
+        "lib": 1,
+        "con": -1,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      },
+      {
+        "lib": 0,
+        "con": 1,
+        "ndp": -1,
+        "grn": -1,
+        "blq": 0,
+        "ppc": 0
+      }
+    ],
+    "id1": [
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -1,
+        "grn": -2,
+        "blq": 1,
+        "ppc": 2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 1,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": -1,
+        "ppc": -2
+      }
+    ],
+    "id2": [
+      {
+        "lib": 1,
+        "con": -2,
+        "ndp": 2,
+        "grn": 2,
+        "blq": 0,
+        "ppc": -2
+      },
+      {
+        "lib": 1,
+        "con": 0,
+        "ndp": 0,
+        "grn": 0,
+        "blq": 0,
+        "ppc": -1
+      },
+      {
+        "lib": -1,
+        "con": 2,
+        "ndp": -2,
+        "grn": -2,
+        "blq": 0,
+        "ppc": 2
+      }
+    ]
+  },
+  "translations": {},
+  "bank": [
+    {
+      "id": "us1",
+      "nl": "Canada-US relations",
+      "pair": "us-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Donald Trump imposed 25% tariffs on Canadian goods and called Canada the 51st state. Mark Carney campaigned on economic sovereignty and won.",
+      "q": "Canada must diversify away from the United States. This is a national security issue, not just an economic one.",
+      "opts": [
+        {
+          "t": "Yes. Trade diversification and building domestic capacity is essential.",
+          "e": -1,
+          "g": 1,
+          "lib": 2,
+          "con": 0,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 2,
+          "ppc": -1
+        },
+        {
+          "t": "We should stand firm and negotiate hard, but ultimately the US relationship is irreplaceable.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "Trade protectionism and economic nationalism will make Canadians poorer.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 1,
+          "ndp": -2,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 1
+        }
+      ]
+    },
+    {
+      "id": "us2",
+      "nl": "Canada-US relations",
+      "pair": "us-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Canada should never allow retaliation against the United States to trigger a trade war that hurts Canadian workers and families.",
+      "opts": [
+        {
+          "t": "Agreed. Our economic integration with the US is too deep for confrontation.",
+          "e": 1,
+          "g": 0,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "Counter-tariffs are a legitimate tool. You do not negotiate by showing weakness.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 1,
+          "grn": 0,
+          "blq": 1,
+          "ppc": -1
+        },
+        {
+          "t": "Canada must show it will not be bullied, regardless of the short-term costs.",
+          "e": -1,
+          "g": 1,
+          "lib": 2,
+          "con": -1,
+          "ndp": 2,
+          "grn": 1,
+          "blq": 2,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "ct1",
+      "nl": "Carbon pricing",
+      "pair": "ct-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Axing the carbon tax is not climate policy. It is an election promise to people who do not believe in physics.",
+      "opts": [
+        {
+          "t": "Yes. The science and economics both support it.",
+          "e": -1,
+          "g": 1,
+          "lib": 2,
+          "con": -2,
+          "ndp": 1,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "The principle is sound but the rebate system has failed to bring public support.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": -1,
+          "ndp": 0,
+          "grn": 1,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "No. It raises the cost of living for ordinary Canadians and should be eliminated.",
+          "e": 1,
+          "g": -1,
+          "lib": -2,
+          "con": 2,
+          "ndp": -1,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "ct2",
+      "nl": "Carbon pricing",
+      "pair": "ct-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The carbon tax hits rural Canadians, farmers, and truckers hardest while doing almost nothing to change global emissions.",
+      "opts": [
+        {
+          "t": "Yes. It is a tax on people who have no alternatives.",
+          "e": 1,
+          "g": 0,
+          "lib": -2,
+          "con": 2,
+          "ndp": -1,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "The distributional impact is a real concern that should be addressed through better rebate design.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": -1,
+          "ndp": 1,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "No. The rebate returns more to most households than they pay. The narrative is misleading.",
+          "e": -1,
+          "g": 1,
+          "lib": 2,
+          "con": -2,
+          "ndp": 1,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "hs1",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Average home price in Toronto: 1.1 million dollars. In Vancouver: 1.3 million. A generation has been priced out of the cities they grew up in.",
+      "q": "The housing crisis is a national emergency that requires the federal government to build at a scale not seen since the postwar period.",
+      "opts": [
+        {
+          "t": "Yes. Direct federal investment in affordable housing is the only answer.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -1,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "Zoning reform and removing barriers to private construction is the right approach.",
+          "e": 1,
+          "g": -1,
+          "lib": 0,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "Both are needed. Supply reform and targeted public investment simultaneously.",
+          "e": -1,
+          "g": 1,
+          "lib": 2,
+          "con": 0,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -1
+        }
+      ]
+    },
+    {
+      "id": "hs2",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Immigration at current levels is driving up housing costs faster than we can build. Reducing intake is part of the housing solution.",
+      "opts": [
+        {
+          "t": "Yes. Supply cannot keep pace with demand at current immigration levels.",
+          "e": 0,
+          "g": 1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 1,
+          "ppc": 2
+        },
+        {
+          "t": "Build faster. Cutting immigration avoids the harder conversation about zoning and costs.",
+          "e": 1,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "No. The housing crisis predates recent immigration surges. The cause is policy failure.",
+          "e": -1,
+          "g": 0,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "hc1",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Canada ranks last among peer countries on wait times. ER overcrowding. Family doctor shortages. 6 million Canadians with no primary care physician.",
+      "q": "The federal government must invest massively and immediately in healthcare or the public system will not survive.",
+      "opts": [
+        {
+          "t": "Yes. Healthcare is a right. Fund it properly.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -1,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "Transfer more to provinces with strings attached. Outcomes-based funding.",
+          "e": -1,
+          "g": 1,
+          "lib": 1,
+          "con": 0,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "The system needs structural reform, not more money poured into the same model.",
+          "e": 1,
+          "g": 0,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 1
+        }
+      ]
+    },
+    {
+      "id": "hc2",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Allowing more private delivery of publicly funded healthcare services would reduce wait times without undermining the principle of universal access.",
+      "opts": [
+        {
+          "t": "Yes. The public system does not have to be the only system.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "Some private delivery in specific areas is acceptable if strict safeguards prevent a two-tier system.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "No. Private healthcare siphons doctors and creates inequality. The evidence is clear.",
+          "e": -2,
+          "g": 1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "ph1",
+      "nl": "Social programs",
+      "pair": "ph-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Universal pharmacare would save Canadians billions in drug costs and leave no one choosing between food and medication.",
+      "opts": [
+        {
+          "t": "Yes. A single public payer for drugs is overdue.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "Fill the gaps with targeted coverage for those who have nothing, not a full replacement of private plans.",
+          "e": -1,
+          "g": 1,
+          "lib": 1,
+          "con": 0,
+          "ndp": 0,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -1
+        },
+        {
+          "t": "No. Universal programs crowd out private insurance and reduce drug availability.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "ph2",
+      "nl": "Social programs",
+      "pair": "ph-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The NDP-Liberal dental care program is a fiscal reckless expansion of government that Canada cannot afford.",
+      "opts": [
+        {
+          "t": "Yes. Adding new universal programs while the deficit grows is irresponsible.",
+          "e": 2,
+          "g": -1,
+          "lib": -2,
+          "con": 2,
+          "ndp": -2,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "The cost is real but dental care was a genuine gap in the social safety net.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": -1,
+          "ndp": 1,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "No. Millions of Canadians could not afford dental care. This program is long overdue.",
+          "e": -2,
+          "g": 1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "im1",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Canada admitted over 400,000 new permanent residents in 2023, plus hundreds of thousands of temporary workers and students. Services and infrastructure are under strain.",
+      "q": "Canada grew too fast. Intake must come down sharply to let public services and housing catch up.",
+      "opts": [
+        {
+          "t": "Yes. The numbers were too high and must be reduced significantly.",
+          "e": 0,
+          "g": 1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 1,
+          "ppc": 2
+        },
+        {
+          "t": "Targeted reductions in specific categories, especially temporary foreign workers.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 1,
+          "ppc": 1
+        },
+        {
+          "t": "No. Canada needs immigrants to grow the economy and fund aging social programs.",
+          "e": -1,
+          "g": -1,
+          "lib": 1,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 0,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "im2",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Canada has always been built by immigration. Turning against newcomers now is short-sighted and contrary to who we are.",
+      "opts": [
+        {
+          "t": "Yes. Our diversity is our greatest economic and cultural asset.",
+          "e": -1,
+          "g": -1,
+          "lib": 2,
+          "con": -1,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        },
+        {
+          "t": "Immigration has been valuable but the pace and planning have been badly mismanaged.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "Pride in immigration history does not mean unlimited present intake.",
+          "e": 0,
+          "g": 1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "cl1",
+      "nl": "Climate and energy",
+      "pair": "cl-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Canada is the fourth largest oil producer in the world and has committed to net zero by 2050. The Trans Mountain expansion was completed in 2024.",
+      "q": "Canada cannot credibly claim to lead on climate while expanding fossil fuel infrastructure.",
+      "opts": [
+        {
+          "t": "Yes. New pipelines and oil sands expansion are incompatible with climate commitments.",
+          "e": -2,
+          "g": 2,
+          "lib": -1,
+          "con": -2,
+          "ndp": 0,
+          "grn": 2,
+          "blq": -1,
+          "ppc": -2
+        },
+        {
+          "t": "A managed transition is needed. Abrupt shutdowns would devastate Alberta and workers.",
+          "e": -1,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 1,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "Canadian oil is ethical and replacing it with imports would achieve nothing on climate.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "cl2",
+      "nl": "Climate and energy",
+      "pair": "cl-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Alberta oil and gas workers and communities deserve the same respect that coastal or urban Canadians demand for their industries.",
+      "opts": [
+        {
+          "t": "Yes. The contempt shown for resource workers is a national unity problem.",
+          "e": 1,
+          "g": 0,
+          "lib": -1,
+          "con": 2,
+          "ndp": 0,
+          "grn": -2,
+          "blq": 0,
+          "ppc": 2
+        },
+        {
+          "t": "Respect for workers is right. Defending the fossil fuel industry indefinitely is not.",
+          "e": -1,
+          "g": 0,
+          "lib": 1,
+          "con": -1,
+          "ndp": 1,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "Just transition programs must be fully funded and real, not symbolic.",
+          "e": -2,
+          "g": 1,
+          "lib": 0,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "ir1",
+      "nl": "Indigenous reconciliation",
+      "pair": "ir-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "The Truth and Reconciliation Commission made 94 Calls to Action in 2015. Over a decade later, fewer than half have been fully implemented.",
+      "q": "Canada has failed Indigenous peoples again and again. Reconciliation requires action, not promises.",
+      "opts": [
+        {
+          "t": "Yes. Full implementation of the Calls to Action, treaty rights, and UNDRIP.",
+          "e": -2,
+          "g": 1,
+          "lib": 1,
+          "con": -1,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "Progress has been slow but real. The process requires partnership, not speed.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "Reconciliation should not override resource development that benefits all Canadians.",
+          "e": 1,
+          "g": 1,
+          "lib": -1,
+          "con": 1,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 1
+        }
+      ]
+    },
+    {
+      "id": "ir2",
+      "nl": "Indigenous reconciliation",
+      "pair": "ir-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The duty to consult with Indigenous communities should not give any group an effective veto over national infrastructure projects.",
+      "opts": [
+        {
+          "t": "Yes. One group should not be able to block projects that serve all Canadians.",
+          "e": 1,
+          "g": 1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": 0,
+          "ppc": 2
+        },
+        {
+          "t": "Consultation must be meaningful, not a rubber stamp, but a veto is too far.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "No. Indigenous land rights are treaty rights. Consent is not a veto, it is a right.",
+          "e": -2,
+          "g": -1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "tx1",
+      "nl": "Tax and spending",
+      "pair": "tx-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Canada has run deficits since 2008. Federal debt stands at over 1.2 trillion dollars. Interest payments are now the fourth largest expenditure.",
+      "q": "Running deficits to invest in the future is responsible. Austerity now would be self-defeating.",
+      "opts": [
+        {
+          "t": "Yes. The deficit reflects necessary investment. Cut during a downturn and you cause one.",
+          "e": -2,
+          "g": 1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 1,
+          "blq": 0,
+          "ppc": -2
+        },
+        {
+          "t": "Deficits must come down, but not through cuts that harm services.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "No. The trajectory is unsustainable. Future generations will pay for today.",
+          "e": 2,
+          "g": 0,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "tx2",
+      "nl": "Tax and spending",
+      "pair": "tx-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The capital gains inclusion rate hike punished entrepreneurs, investors, and anyone who built something. It should be reversed.",
+      "opts": [
+        {
+          "t": "Yes. It discourages risk-taking and investment in Canadian businesses.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "Taxing capital gains more like income is fairer. The critics are protecting privilege.",
+          "e": -2,
+          "g": 1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        },
+        {
+          "t": "A more targeted approach would be better than a blanket reversal.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 0
+        }
+      ]
+    },
+    {
+      "id": "tx3",
+      "nl": "Tax and spending",
+      "pair": "tx-b",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Canada should introduce a wealth tax on assets above 10 million dollars to fund public services and reduce inequality.",
+      "opts": [
+        {
+          "t": "Yes. Extreme wealth should contribute more to the society that made it possible.",
+          "e": -2,
+          "g": 2,
+          "lib": 0,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "The administrative challenges are real and the wealthy will find ways around it.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "No. Wealth taxes drive capital and talent out of the country.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "nu1",
+      "nl": "National unity and Quebec",
+      "pair": "nu-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Quebec has the right to hold a referendum on independence if its National Assembly votes for one.",
+      "opts": [
+        {
+          "t": "Yes. Self-determination is a democratic right.",
+          "e": 0,
+          "g": -2,
+          "lib": -1,
+          "con": -2,
+          "ndp": -1,
+          "grn": 0,
+          "blq": 2,
+          "ppc": -1
+        },
+        {
+          "t": "Only with a clear question and a clear majority threshold, as the Clarity Act requires.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 1,
+          "ndp": 1,
+          "grn": 0,
+          "blq": -1,
+          "ppc": 0
+        },
+        {
+          "t": "No. The 1995 vote settled this. Canada is not divisible.",
+          "e": 0,
+          "g": 1,
+          "lib": 0,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": -2,
+          "ppc": 0
+        }
+      ]
+    },
+    {
+      "id": "nu2",
+      "nl": "National unity and Quebec",
+      "pair": "nu-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Federal spending in Quebec through the equalization formula subsidises policies that undermine national cohesion.",
+      "opts": [
+        {
+          "t": "Yes. Equalization requires reform to reflect contribution, not just need.",
+          "e": 1,
+          "g": 1,
+          "lib": -1,
+          "con": 1,
+          "ndp": -1,
+          "grn": -1,
+          "blq": -2,
+          "ppc": 2
+        },
+        {
+          "t": "Equalization is a constitutional commitment. Attacking it threatens national unity.",
+          "e": -1,
+          "g": -1,
+          "lib": 1,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -1
+        },
+        {
+          "t": "The formula should be reformed to account for resource revenues more fairly.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": 0,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 1
+        }
+      ]
+    },
+    {
+      "id": "wr1",
+      "nl": "Workers rights",
+      "pair": "wr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Gig workers deserve the same rights as employees. Uber drivers, couriers, and other platform workers should be classified as employees.",
+      "opts": [
+        {
+          "t": "Yes. The contractor model is a legal fiction used to deny rights.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "A new category with some protections but not full employment rights makes more sense.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "No. Flexibility is the point. Forced reclassification kills the model and the jobs.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "wr2",
+      "nl": "Workers rights",
+      "pair": "wr-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The federal government should use back-to-work legislation more readily to end strikes in essential services.",
+      "opts": [
+        {
+          "t": "Yes. The public cannot be held hostage by unions in critical sectors.",
+          "e": 0,
+          "g": 2,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "Back-to-work legislation is a last resort that undermines genuine bargaining.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": -1,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "No. It is union busting with government authority. Workers have a right to strike.",
+          "e": 0,
+          "g": -2,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "en1",
+      "nl": "Environment and conservation",
+      "pair": "en-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Canada has committed to protecting 30% of land and water by 2030. It is currently at about 13%.",
+      "q": "Protecting nature is not a luxury. Biodiversity collapse is as serious a threat as climate change.",
+      "opts": [
+        {
+          "t": "Yes. Hit the 30x30 target. Old growth forests, wetlands, and coastlines must be protected.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -1,
+          "ndp": 1,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        },
+        {
+          "t": "Balanced approach. Conservation that works with, not against, resource communities.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 0,
+          "grn": 1,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "Locking up 30% of Canada limits resource development and costs jobs.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 1,
+          "ndp": -1,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "dr1",
+      "nl": "Democratic reform",
+      "pair": "dr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "First-past-the-post must be replaced. Governments should not win massive majorities on a third of the vote.",
+      "opts": [
+        {
+          "t": "Yes. Proportional representation is long overdue.",
+          "e": 0,
+          "g": -2,
+          "lib": 0,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": 1
+        },
+        {
+          "t": "Reform is needed but PR often produces unstable minority governments.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "FPTP produces strong governments. The current system works well enough.",
+          "e": 0,
+          "g": 1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": -1,
+          "ppc": -1
+        }
+      ]
+    },
+    {
+      "id": "dr2",
+      "nl": "Democratic reform",
+      "pair": "dr-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Senate reform is long overdue. An appointed upper house with no democratic mandate is an embarrassment.",
+      "opts": [
+        {
+          "t": "Yes. Elect it or abolish it.",
+          "e": 0,
+          "g": -1,
+          "lib": 0,
+          "con": 1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "The independent appointment process is a reasonable compromise for now.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": -1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "Senate abolition would require a constitutional amendment and is not worth the political cost.",
+          "e": 0,
+          "g": 1,
+          "lib": 0,
+          "con": 0,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": -1
+        }
+      ]
+    },
+    {
+      "id": "si1",
+      "nl": "Social issues",
+      "pair": "si-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Canada should maintain a strong multicultural policy. Our diversity is a strength that should be actively supported by government.",
+      "opts": [
+        {
+          "t": "Yes. Official multiculturalism is a defining Canadian value.",
+          "e": -1,
+          "g": 0,
+          "lib": 2,
+          "con": -1,
+          "ndp": 2,
+          "grn": 2,
+          "blq": -1,
+          "ppc": -2
+        },
+        {
+          "t": "Diversity is valuable but government promotion of cultural division is not.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "Multiculturalism has undermined social cohesion. Integration, not celebration of separation.",
+          "e": 1,
+          "g": 1,
+          "lib": -2,
+          "con": 1,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "si2",
+      "nl": "Social issues",
+      "pair": "si-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Medical assistance in dying has been expanded too far. Approving MAID for mental illness alone crosses a line.",
+      "opts": [
+        {
+          "t": "Yes. Mental illness MAID is dangerous and must not proceed.",
+          "e": 0,
+          "g": 1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 2
+        },
+        {
+          "t": "Expansion should pause until safeguards are proven robust.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "Autonomous individuals in severe, irremediable suffering have the right to choose.",
+          "e": 0,
+          "g": -2,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "rg1",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The federal government is too large, too expensive, and too intrusive. A smaller state would make Canada more free and more productive.",
+      "opts": [
+        {
+          "t": "Yes. Cut spending, reduce regulations, trust citizens to make their own decisions.",
+          "e": 2,
+          "g": -2,
+          "lib": -2,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "Some government is too large but public services and social programs are the right size or too small.",
+          "e": -1,
+          "g": 0,
+          "lib": 1,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -1
+        },
+        {
+          "t": "No. The state builds the foundations of prosperity. Cutting it cuts the floor out from under Canadians.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "rg2",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The gap between the wealthiest Canadians and everyone else has grown to a level that threatens social cohesion and economic mobility.",
+      "opts": [
+        {
+          "t": "Yes. Progressive taxation, stronger social programs, and wealth taxes are needed.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "Inequality is real but opportunity and growth matter more than redistribution.",
+          "e": 1,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "Inequality reflects different efforts. Forced equality stifles ambition.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "fp1",
+      "nl": "Foreign policy and defence",
+      "pair": "fp-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Canada has under-invested in defence for decades. Meeting NATO commitments is both a security necessity and an alliance obligation.",
+      "opts": [
+        {
+          "t": "Yes. 2% of GDP is the floor, not the ceiling.",
+          "e": 0,
+          "g": 1,
+          "lib": 0,
+          "con": 2,
+          "ndp": -1,
+          "grn": -2,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "Smart defence spending yes, but raw percentage targets miss the point.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "Canada should pursue peace through diplomacy, not military spending increases.",
+          "e": -1,
+          "g": -1,
+          "lib": 0,
+          "con": -2,
+          "ndp": 1,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -1
+        }
+      ]
+    },
+    {
+      "id": "fp2",
+      "nl": "Foreign policy and defence",
+      "pair": "fp-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Canada should prioritise its relationship with the US above all other foreign policy considerations, including relations with the EU and China.",
+      "opts": [
+        {
+          "t": "Yes. Geography and economics make the US relationship irreplaceable.",
+          "e": 1,
+          "g": 0,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "The US relationship is vital but over-dependence created our current vulnerability.",
+          "e": -1,
+          "g": 0,
+          "lib": 2,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -1
+        },
+        {
+          "t": "Canada must build a genuinely independent foreign policy centred on multilateralism.",
+          "e": -2,
+          "g": 0,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "co1",
+      "nl": "Cost of living",
+      "pair": "co-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Grocery prices are up over 20% since 2021. The top five grocers posted record profits during the same period.",
+      "q": "Canadian grocers are profiteering and the government must act to stop it.",
+      "opts": [
+        {
+          "t": "Yes. Investigate, fine, and legislate if necessary.",
+          "e": -1,
+          "g": 2,
+          "lib": 1,
+          "con": -1,
+          "ndp": 2,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -1
+        },
+        {
+          "t": "Profits reflect inflation and supply chain costs, not gouging. More competition is the answer.",
+          "e": 1,
+          "g": -1,
+          "lib": 0,
+          "con": 2,
+          "ndp": -1,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 2
+        },
+        {
+          "t": "The government caused inflation through deficit spending. It should not pretend otherwise.",
+          "e": 2,
+          "g": -1,
+          "lib": -2,
+          "con": 2,
+          "ndp": -2,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "co2",
+      "nl": "Cost of living",
+      "pair": "co-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The fastest way to reduce the cost of living is to reduce the regulatory and tax burden on businesses so they can compete and lower prices.",
+      "opts": [
+        {
+          "t": "Yes. Government regulation raises costs and limits competition.",
+          "e": 2,
+          "g": -2,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "Deregulation helps some costs but has a poor track record on consumer prices in concentrated markets.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "No. Weak regulation is why grocers and telecom companies gouge Canadians.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "in1",
+      "nl": "Innovation and economy",
+      "pair": "in-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Canada is falling behind in artificial intelligence, biotech, and clean tech. The government must invest directly in strategic industries or lose out.",
+      "opts": [
+        {
+          "t": "Yes. Industrial strategy and public investment are how nations win.",
+          "e": -1,
+          "g": 1,
+          "lib": 2,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "Pick winners carefully, but the market is generally better at allocating capital.",
+          "e": 1,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": -1,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "Government picking winners is how you get Bombardier. Keep the state out of business.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 1,
+          "ndp": -2,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "me1",
+      "nl": "Media and democracy",
+      "pair": "me-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The government was right to require tech companies like Meta and Google to pay Canadian news publishers for journalism.",
+      "opts": [
+        {
+          "t": "Yes. News media is a public good and must be supported.",
+          "e": -1,
+          "g": 1,
+          "lib": 2,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "The principle is right but the execution caused Meta to block news entirely.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "No. Government should not be subsidising and therefore influencing journalism.",
+          "e": 1,
+          "g": -1,
+          "lib": -1,
+          "con": 1,
+          "ndp": -1,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 2
+        }
+      ]
+    },
+    {
+      "id": "ni1",
+      "nl": "National identity",
+      "pair": "ni-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Canada defining itself primarily by opposition to American values is not a national identity. We need something more positive to rally around.",
+      "opts": [
+        {
+          "t": "Yes. Being not-American is thin and will not hold us together.",
+          "e": 0,
+          "g": 0,
+          "lib": -1,
+          "con": 1,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "In the current moment, distinguishing ourselves from the US direction is essential.",
+          "e": 0,
+          "g": 0,
+          "lib": 2,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 1,
+          "ppc": -1
+        },
+        {
+          "t": "Quebec and Indigenous nations both offer richer foundations for identity than pan-Canadian nationalism.",
+          "e": 0,
+          "g": -1,
+          "lib": -1,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 2,
+          "ppc": -1
+        }
+      ]
+    },
+    {
+      "id": "ni2",
+      "nl": "National identity",
+      "pair": "ni-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Woke ideology has captured Canadian institutions — the CBC, universities, the civil service — and is making the country less free.",
+      "opts": [
+        {
+          "t": "Yes. There is an ideological conformism that does not tolerate dissent.",
+          "e": 1,
+          "g": 1,
+          "lib": -2,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "Some institutions lean left but the word woke is used to dismiss legitimate concerns.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 0,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 1
+        },
+        {
+          "t": "No. This is a culture war import from the US and should be resisted.",
+          "e": -1,
+          "g": -1,
+          "lib": 2,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "en2",
+      "nl": "Environment and conservation",
+      "pair": "en-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Shutting down Canadian resource industries to meet emissions targets just exports the pollution and the jobs to countries with lower standards.",
+      "opts": [
+        {
+          "t": "Yes. Canadian oil and mining operate to higher environmental standards than most alternatives.",
+          "e": 1,
+          "g": 0,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -2,
+          "blq": 0,
+          "ppc": 2
+        },
+        {
+          "t": "The argument has some merit but cannot be used to justify unlimited extraction.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 0,
+          "ndp": 0,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "No. It is a fossil fuel lobby argument used to justify every new pipeline and mine.",
+          "e": -2,
+          "g": 1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 1,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "me2",
+      "nl": "Media and democracy",
+      "pair": "me-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The CBC receives over 1.4 billion dollars in public funding annually. That money would be better spent elsewhere.",
+      "opts": [
+        {
+          "t": "Yes. Defund the CBC and let the market support journalism.",
+          "e": 2,
+          "g": -1,
+          "lib": -2,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "Reform it and reduce its budget but do not eliminate public broadcasting.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": -1,
+          "grn": 0,
+          "blq": 0,
+          "ppc": 0
+        },
+        {
+          "t": "No. Public broadcasting is essential infrastructure for democracy and national identity.",
+          "e": -2,
+          "g": 1,
+          "lib": 2,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "ex1",
+      "nl": "Canada-US sovereignty",
+      "pair": "ex-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Donald Trump called Canada the 51st state. Any Canadian politician who does not treat that as a declaration of economic war is not fit for office.",
+      "opts": [
+        {
+          "t": "Yes. Canada must respond with full force — retaliatory tariffs, economic diversification, and a rejection of dependence.",
+          "e": -1,
+          "g": 1,
+          "lib": 2,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 2,
+          "ppc": -2
+        },
+        {
+          "t": "No. Hardline nationalism in response to Trump plays into his hands. Smart negotiation wins more than gestures.",
+          "e": 1,
+          "g": -1,
+          "lib": -1,
+          "con": 1,
+          "ndp": -1,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 1
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "nl": "Canada-US sovereignty",
+      "pair": "ex-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Canada and the United States are deeply integrated economies. Treating our largest trading partner as an enemy would devastate Canadian workers.",
+      "opts": [
+        {
+          "t": "Yes. The economic relationship must be protected even when the politics are ugly.",
+          "e": 1,
+          "g": 0,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "No. Dependence on one country is the vulnerability. Build new markets now before the next crisis.",
+          "e": -1,
+          "g": 0,
+          "lib": 1,
+          "con": -1,
+          "ndp": 1,
+          "grn": 1,
+          "blq": 2,
+          "ppc": -1
+        }
+      ]
+    },
+    {
+      "id": "ex3",
+      "nl": "Healthcare crisis",
+      "pair": "ex-b",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "6 million Canadians have no family doctor. Emergency rooms are overwhelmed. Doctors and nurses are burning out and leaving.",
+      "q": "This is not a resource shortage. It is a political failure that has been building for 30 years.",
+      "opts": [
+        {
+          "t": "Yes. Fund it properly, train more doctors, and stop letting the system collapse.",
+          "e": -2,
+          "g": 2,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        },
+        {
+          "t": "No. More money without structural reform just feeds a broken system.",
+          "e": 1,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 1
+        }
+      ]
+    },
+    {
+      "id": "ex4",
+      "nl": "Healthcare crisis",
+      "pair": "ex-b",
+      "fr": "con",
+      "type": "s",
+      "q": "Allowing more private clinics would cut wait times immediately. Refusing to consider it while people suffer is ideological stubbornness.",
+      "opts": [
+        {
+          "t": "Yes. Private clinics alongside a strong public system would help everyone.",
+          "e": 2,
+          "g": -1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": -1,
+          "ppc": 2
+        },
+        {
+          "t": "No. Private clinics pull doctors from the public system and make wait times worse for those who cannot pay.",
+          "e": -2,
+          "g": 1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "ex5",
+      "nl": "Reconciliation",
+      "pair": "ex-c",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Canada has apologised to Indigenous peoples many times and changed very little. Words without action are an insult.",
+      "opts": [
+        {
+          "t": "Yes. Full implementation of TRC Calls to Action, not another commission, not another apology.",
+          "e": -1,
+          "g": 0,
+          "lib": 1,
+          "con": -1,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        },
+        {
+          "t": "No. The calls to action are being implemented gradually. Real change takes time.",
+          "e": 0,
+          "g": 0,
+          "lib": 0,
+          "con": 1,
+          "ndp": -1,
+          "grn": -1,
+          "blq": 0,
+          "ppc": 0
+        }
+      ]
+    },
+    {
+      "id": "id1",
+      "nl": "National and cultural identity",
+      "pair": "ident-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.",
+      "opts": [
+        {
+          "t": "Yes. Pride in your own culture and heritage is natural and healthy.",
+          "e": 0,
+          "g": 1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -1,
+          "grn": -2,
+          "blq": 1,
+          "ppc": 2
+        },
+        {
+          "t": "Pride is fine but claims of superiority over others make me uncomfortable.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 1,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "No. Ranking cultures above each other is where dangerous thinking begins.",
+          "e": 0,
+          "g": -1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": -1,
+          "ppc": -2
+        }
+      ]
+    },
+    {
+      "id": "id2",
+      "nl": "National and cultural identity",
+      "pair": "ident-a",
+      "fr": "con",
+      "type": "s",
+      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+      "opts": [
+        {
+          "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",
+          "e": 0,
+          "g": -1,
+          "lib": 1,
+          "con": -2,
+          "ndp": 2,
+          "grn": 2,
+          "blq": 0,
+          "ppc": -2
+        },
+        {
+          "t": "We should acknowledge history honestly without demanding personal shame.",
+          "e": 0,
+          "g": 0,
+          "lib": 1,
+          "con": 0,
+          "ndp": 0,
+          "grn": 0,
+          "blq": 0,
+          "ppc": -1
+        },
+        {
+          "t": "No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.",
+          "e": 0,
+          "g": 1,
+          "lib": -1,
+          "con": 2,
+          "ndp": -2,
+          "grn": -2,
+          "blq": 0,
+          "ppc": 2
+        }
+      ]
+    }
+  ],
+  "heroTitle": "Where do you stand in <em>Canadian</em> politics?",
+  "heroSub": "47 scenario-based questions on the issues defining Canada right now — from the trade war with the US to housing, healthcare, and national identity. See your full party alignment.",
+  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--lib)\"></div>"
+}

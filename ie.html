@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Irish Political Quiz 2026: Where Do You Align? | CoreOpinion</title>
-<meta name="description" content="Find where you stand on the Irish political compass. 47 scenario-based questions. Check your alignment with Fine Gael, Fianna Fáil, Sinn Féin, Greens, Labour, and Social Democrats.">
+<title>Irish Political Quiz 2026 | CoreOpinion</title>
+<meta name="description" content="Take the free Irish political compass quiz. 47 scenario questions to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
 <meta name="keywords" content="Irish political quiz, Ireland compass test, Sinn Féin Fine Gael Fianna Fáil, Ireland election 2026, political alignment test Ireland, Irish party quiz">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -12,12 +12,17 @@
 <meta name="theme-color" content="#F9F8F6">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/ie">
-<meta property="og:title" content="Irish Political Quiz 2026: Where Do You Align? | CoreOpinion">
-<meta property="og:description" content="Find where you stand on the Irish political compass. 47 scenario-based questions. Check your alignment with Fine Gael, Fianna Fáil, Sinn Féin, Greens, Labour, and Social Democrats.">
+<meta property="og:title" content="Irish Political Quiz 2026 | CoreOpinion">
+<meta property="og:description" content="Take the free Irish political compass quiz. 47 scenario questions to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
 <meta property="og:site_name" content="CoreOpinion">
+<meta property="og:image" content="https://coreopinion.org/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CoreOpinion political compass test">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="US Political Quiz 2026 | CoreOpinion">
-<meta name="twitter:description" content="Which US political party do you actually align with? 47 real-world scenarios on American politics. Free, anonymous, and no sign-up.">
+<meta name="twitter:title" content="Irish Political Quiz 2026 | CoreOpinion">
+<meta name="twitter:description" content="Take the free Irish political compass quiz. 47 scenario questions to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
+<meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -45,12 +50,18 @@
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <div class="flag-badge"><span class="flag">🇮🇪</span> Ireland</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      
+      <div class="flag-badge">
+        <span class="flag">🇮🇪</span>
+        <span id="lang-label">IE</span>
+      </div>
+    </div>
   </nav>
 
   <div class="hero">
     <div class="hero-bg">🇮🇪</div>
-    <div class="eyebrow">Ireland Political Test</div>
+    <div class="eyebrow">IE Political Test</div>
     <h1>Where do you stand in<br><em>Irish</em> politics?</h1>
     <p class="hero-sub">47 scenario-based questions on the core issues defining Ireland right now, from housing and health to corporate tax and neutral foreign policy. Check your alignment with all main parties.</p>
     <div class="hero-cta">
@@ -62,31 +73,6 @@
   <div class="party-strip">
     <div class="party-cell">
       <div class="party-dot" style="background:#005A9C"></div>
-      <div class="party-name">Fine Gael</div>
-      <div class="party-desc">Centre-right. Pro-business, low corporate tax, balanced budget, European integration.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#66BB66"></div>
-      <div class="party-name">Fianna Fáil</div>
-      <div class="party-desc">Centrist. Practical republicanism, public housing builds, public services.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#006644"></div>
-      <div class="party-name">Sinn Féin</div>
-      <div class="party-desc">Left-wing nationalist. Irish unification, massive public housing investment, wealth tax.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#449944"></div>
-      <div class="party-name">Green Party</div>
-      <div class="party-desc">Green. Carbon tax increases, active transit, climate action priorities.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#7B2E8D"></div>
-      <div class="party-name">Social Democrats</div>
-      <div class="party-desc">Progressive centre-left. Sláintecare universal healthcare, anti-corruption, public housing.</div>
-    </div>
-  </div>
-
   <div class="info-section">
     <div class="info-block">
       <h3>Scenario-based, not a survey</h3>
@@ -104,7 +90,7 @@
   <nav>
     <a class="logo" href="/">Core<span>opinion</span></a>
     <div></div>
-    <div class="flag-badge"><span class="flag">🇮🇪</span> Ireland</div>
+    <div class="flag-badge"><span class="flag">🇮🇪</span> IE</div>
   </nav>
   <div class="q-shell">
     <div class="prog-row">
@@ -146,12 +132,22 @@
         <div class="field-label">Region <span>(optional)</span></div>
         <select id="d-country">
           <option value="">Select...</option>
-          <option>Leinster</option><option>Munster</option><option>Connacht</option><option>Ulster (Republic of Ireland part)</option>
-        </select>
+          <option>Leinster</option>
+          <option>Munster</option>
+          <option>Connacht</option>
+          <option>Ulster (Republic of Ireland part)</option>        </select>
       </div>
       <div>
         <div class="field-label">How do you currently identify? <span>(optional)</span></div>
-        <select id="d-party"><option value="">Prefer not to say</option><option>Fine Gael</option><option>Fianna Fáil</option><option>Sinn Féin</option><option>Green Party</option><option>Labour Party</option><option>Social Democrats</option><option>Independent/Other</option></select>
+        <select id="d-party">
+          <option value="">Select...</option>
+          <option>Fine Gael</option>
+          <option>Fianna Fáil</option>
+          <option>Sinn Féin</option>
+          <option>Green Party</option>
+          <option>Labour Party</option>
+          <option>Social Democrats</option>
+          <option>Independent</option>        </select>
       </div>
       <div>
         <div class="field-label">Gender <span>(optional)</span></div>
@@ -225,11 +221,11 @@
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <div class="flag-badge"><span class="flag">🇮🇪</span> Ireland</div>
+    <div class="flag-badge"><span class="flag">🇮🇪</span> IE</div>
   </nav>
   <div class="results-shell">
     <div class="results-head">
-      <div class="result-eyebrow">Your Ireland political alignment</div>
+      <div class="result-eyebrow">Your IE political alignment</div>
       <div class="result-headline" id="r-top-party">Democrat</div>
       <div class="result-sub" id="r-top-desc">Your answers most closely align with the Democratic Party platform.</div>
     </div>
@@ -321,18 +317,7 @@
 </div>
 
 <script>
-const SB_URL = 'https://rttomfnfyjjssdqfzkaj.supabase.co';
-const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3NjYzMzIsImV4cCI6MjA1OTM0MjMzMn0.jcHDfKUhGcfbfJ3wBcWYSwHNcxFkxKhAzjqBMerKF6g';
-
-async function sbInsert(table, data) {
-  const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
-    method:'POST',
-    headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':`Bearer ${SB_KEY}`,'Prefer':'return=representation'},
-    body:JSON.stringify(data)
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
+const LOCAL_QUESTIONS = {};
 
 const BANK = [
   {
@@ -2384,6 +2369,9 @@ const PARTY_META = {
     "desc": "Your answers do not strongly align with a single party. You hold pragmatic, local, or mixed views typical of Ireland's large independent voting base."
   }
 };
+
+window.currentLang = 'en';
+window.getQuestion = q => q;
 </script>
 <script src="/engine.js"></script>
 </body>

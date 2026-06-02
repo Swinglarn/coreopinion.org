@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wahlkompass Österreich 2026: Welche Partei passt zu dir? | CoreOpinion</title>
-<meta name="description" content="Finde deine Position auf dem politischen Kompass. 47 szenariobasierte Fragen zu realen österreichischen Themen. Siehe deine Übereinstimmung mit ÖVP, SPÖ, FPÖ, Grünen, NEOS, KPÖ und BIER.">
+<title>Wahlkompass Österreich 2026 | CoreOpinion</title>
+<meta name="description" content="Finde deine Position auf dem politischen Kompass. 47 Fragen zur Übereinstimmung mit ÖVP, SPÖ, FPÖ, Grünen, NEOS, KPÖ und BIER.">
 <meta name="keywords" content="Wahlkompass Österreich, Wahlrechner Österreich 2026, Nationalratswahl, politische Orientierung Österreich, ÖVP, SPÖ, FPÖ, Grüne, NEOS, KPÖ, Bierpartei">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -12,12 +12,17 @@
 <meta name="theme-color" content="#F9F8F6">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/at">
-<meta property="og:title" content="Wahlkompass Österreich 2026: Welche Partei passt zu dir? | CoreOpinion">
-<meta property="og:description" content="Finde deine Position auf dem politischen Kompass. 47 szenariobasierte Fragen zu realen österreichischen Themen. Siehe deine Übereinstimmung mit ÖVP, SPÖ, FPÖ, Grünen, NEOS, KPÖ und BIER.">
+<meta property="og:title" content="Wahlkompass Österreich 2026 | CoreOpinion">
+<meta property="og:description" content="Finde deine Position auf dem politischen Kompass. 47 Fragen zur Übereinstimmung mit ÖVP, SPÖ, FPÖ, Grünen, NEOS, KPÖ und BIER.">
 <meta property="og:site_name" content="CoreOpinion">
+<meta property="og:image" content="https://coreopinion.org/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CoreOpinion political compass test">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wahlkompass Österreich 2026: Welche Partei passt zu dir? | CoreOpinion">
-<meta name="twitter:description" content="Finde deine Position auf dem politischen Kompass. 47 szenariobasierte Fragen zu realen österreichischen Themen. Siehe deine Übereinstimmung mit ÖVP, SPÖ, FPÖ, Grünen, NEOS, KPÖ und BIER.">
+<meta name="twitter:title" content="Wahlkompass Österreich 2026 | CoreOpinion">
+<meta name="twitter:description" content="Finde deine Position auf dem politischen Kompass. 47 Fragen zur Übereinstimmung mit ÖVP, SPÖ, FPÖ, Grünen, NEOS, KPÖ und BIER.">
+<meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -36,12 +41,12 @@
       <a href="/ca">Canada</a>
       <a href="/au">Australia</a>
       <a href="/nz">New Zealand</a>
+      <a href="/se">Sweden</a>
       <a href="/de">Germany</a>
       <a href="/at">Austria</a>
       <a href="/fr">France</a>
       <a href="/es">Spain</a>
       <a href="/it">Italy</a>
-      <a href="/se">Sweden</a>
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
@@ -56,11 +61,11 @@
 
   <div class="hero">
     <div class="hero-bg">🇦🇹</div>
-    <div class="eyebrow">Austria Political Test</div>
+    <div class="eyebrow">Österreich Political Test</div>
     <h1>Wo stehst du in der<br><em>österreichischen</em> Politik?</h1>
     <p class="hero-sub">47 praxisnahe Szenario-Fragen zu den drängenden Themen der österreichischen Bundespolitik. Ermittle deine Position auf dem Kompass und sieh die Übereinstimmung mit allen großen Parteien.</p>
     <div class="hero-cta">
-      <button class="btn-primary" onclick="startTest()">Test starten</button>
+      <button class="btn-primary" onclick="startTest()">Start the test</button>
       <button class="btn-secondary" onclick="goTo('page-landing')">How it works</button>
     </div>
   </div>
@@ -68,31 +73,6 @@
   <div class="party-strip">
     <div class="party-cell">
       <div class="party-dot" style="background:#60C0CD"></div>
-      <div class="party-name">ÖVP</div>
-      <div class="party-desc">Konservativ. Wirtschaftsliberalismus, Steuersenkungen, solide Staatsfinanzen.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#EB001F"></div>
-      <div class="party-name">SPÖ</div>
-      <div class="party-desc">Sozialdemokratisch. Sozialstaat, Arbeitnehmerrechte, öffentliche Investitionen.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#0056A2"></div>
-      <div class="party-name">FPÖ</div>
-      <div class="party-desc">Rechtspopulistisch. Restriktive Einwanderungspolitik, Heimatschutz, Klimaskepsis.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#84B414"></div>
-      <div class="party-name">Grüne</div>
-      <div class="party-desc">Klimaschutz, erneuerbare Energien, soziale Gerechtigkeit, Menschenrechte.</div>
-    </div>
-    <div class="party-cell">
-      <div class="party-dot" style="background:#E84088"></div>
-      <div class="party-name">NEOS</div>
-      <div class="party-desc">Liberal. Freie Marktwirtschaft, Bildungsreformen, Bürgerrechte, pro-europäisch.</div>
-    </div>
-  </div>
-
   <div class="info-section">
     <div class="info-block">
       <h3>Scenario-based, not a survey</h3>
@@ -110,7 +90,7 @@
   <nav>
     <a class="logo" href="/">Core<span>opinion</span></a>
     <div></div>
-    <div class="flag-badge"><span class="flag">🇦🇹</span> Austria</div>
+    <div class="flag-badge"><span class="flag">🇦🇹</span> Österreich</div>
   </nav>
   <div class="q-shell">
     <div class="prog-row">
@@ -128,10 +108,10 @@
     <div class="q-question" id="q-text"></div>
     <div class="q-opts" id="q-opts"></div>
     <div class="q-foot">
-      <button class="btn-skip" onclick="skipQ()">Überspringen</button>
+      <button class="btn-skip" onclick="skipQ()">Skip</button>
       <div style="display:flex;gap:12px;align-items:center">
-        <button class="btn-back" onclick="prevQ()" id="btn-back">Zurück</button>
-        <button class="btn-primary" onclick="nextQ()" style="padding:12px 30px;font-size:14px">Weiter</button>
+        <button class="btn-back" onclick="prevQ()" id="btn-back">Back</button>
+        <button class="btn-primary" onclick="nextQ()" style="padding:12px 30px;font-size:14px">Next</button>
       </div>
     </div>
   </div>
@@ -141,17 +121,17 @@
 <div class="page" id="page-demo">
   <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
   <div class="demo-outer">
-    <div class="page-title">Fast geschafft.</div>
-    <p class="page-sub">Einige kurze Fragen vor deinen Ergebnissen. Alles ist vollkommen anonym.</p>
+    <div class="page-title">Almost there.</div>
+    <p class="page-sub">A few quick questions before your results. Everything is anonymous.</p>
     <div class="demo-fields">
       <div>
-        <div class="field-label">Alter</div>
+        <div class="field-label">Age</div>
         <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
       </div>
       <div>
-        <div class="field-label">Bundesland <span>(optional)</span></div>
+        <div class="field-label">Region <span>(optional)</span></div>
         <select id="d-country">
-          <option value="">Select...</option>
+          <option value="">Auswählen...</option>
           <option>Burgenland</option>
           <option>Kärnten</option>
           <option>Niederösterreich</option>
@@ -160,25 +140,23 @@
           <option>Steiermark</option>
           <option>Tirol</option>
           <option>Vorarlberg</option>
-          <option>Wien</option>
-        </select>
+          <option>Wien</option>        </select>
       </div>
       <div>
-        <div class="field-label">Wie identifizierst du dich politisch? <span>(optional)</span></div>
+        <div class="field-label">How do you currently identify? <span>(optional)</span></div>
         <select id="d-party">
-          <option value="">Lieber nicht sagen</option>
-<option>ÖVP</option>
-<option>SPÖ</option>
-<option>FPÖ</option>
-<option>Grüne</option>
-<option>NEOS</option>
-<option>KPÖ</option>
-<option>BIER</option>
-<option>Unabhängig / Sonstige</option>
-        </select>
+          <option value="">Auswählen...</option>
+          <option>ÖVP</option>
+          <option>SPÖ</option>
+          <option>FPÖ</option>
+          <option>Grüne</option>
+          <option>NEOS</option>
+          <option>KPÖ</option>
+          <option>BIER</option>
+          <option>Unabhängig</option>        </select>
       </div>
       <div>
-        <div class="field-label">Geschlecht <span>(optional)</span></div>
+        <div class="field-label">Gender <span>(optional)</span></div>
         <select id="d-gender">
           <option value="">Select...</option>
           <option>Male</option>
@@ -188,9 +166,9 @@
         </select>
       </div>
       <div>
-        <div class="field-label">Nationalität <span>(optional)</span></div>
+        <div class="field-label">Nationality <span>(optional)</span></div>
         <select id="d-nationality">
-          <option value="">Select...</option>
+          <option value="">Auswählen...</option>
           <option>United States</option>
           <option>United Kingdom</option>
           <option>Canada</option>
@@ -209,13 +187,13 @@
       </div>
     </div>
     <p class="demo-note">This is never linked to your answers. It helps us understand who takes the test.</p>
-    <div style="display:flex;gap:12px;align-items:flex-start;margin-top:20px;margin-bottom:24px;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px 20px;box-shadow:0 1px 4px rgba(10,12,15,0.02);text-align:left;">
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-top:20px;margin-bottom:24px;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px 20px;box-shadow:0 1px 4px rgba(10,12,15,0.02);text-align:left;">
       <input type="checkbox" id="d-consent" checked style="width:20px;height:20px;margin-top:2px;cursor:pointer;">
       <label for="d-consent" style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5;cursor:pointer;user-select:none;">
         <strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.
       </label>
     </div>
-    <button class="btn-primary" onclick="goCalc()">Ergebnisse ansehen</button>
+    <button class="btn-primary" onclick="goCalc()">See my results</button>
   </div>
 </div>
 
@@ -240,20 +218,20 @@
       <a href="/ca">Canada</a>
       <a href="/au">Australia</a>
       <a href="/nz">New Zealand</a>
+      <a href="/se">Sweden</a>
       <a href="/de">Germany</a>
       <a href="/at">Austria</a>
       <a href="/fr">France</a>
       <a href="/es">Spain</a>
       <a href="/it">Italy</a>
-      <a href="/se">Sweden</a>
       <a href="/ie">Ireland</a>
       <a href="/nl">Netherlands</a>
     </div>
-    <div class="flag-badge"><span class="flag">🇦🇹</span> Austria</div>
+    <div class="flag-badge"><span class="flag">🇦🇹</span> Österreich</div>
   </nav>
   <div class="results-shell">
     <div class="results-head">
-      <div class="result-eyebrow">Your Austria political alignment</div>
+      <div class="result-eyebrow">Your Österreich political alignment</div>
       <div class="result-headline" id="r-top-party">Democrat</div>
       <div class="result-sub" id="r-top-desc">Your answers most closely align with the Democratic Party platform.</div>
     </div>
@@ -3011,19 +2989,15 @@ const PARTY_META = {
   }
 };
 
-
 let currentLang = 'de';
     
 function toggleLang() {
   currentLang = currentLang === 'en' ? 'de' : 'en';
-  document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'Österreich' : 'English';
+  document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'Deutsch' : 'English';
   document.getElementById('lang-label').textContent = currentLang === 'en' ? 'Austria' : 'Österreich';
   
-  // Set in window scope for the engine.js to pick up
   window.currentLang = currentLang;
-  
-  applyLang();
-  
+  if (typeof applyLang === 'function') applyLang();
   if (document.getElementById('page-test').classList.contains('active')) renderQ();
 }
 
@@ -3044,194 +3018,8 @@ function getQuestion(q) {
   };
 }
 
-// Bind function to window scope for engine.js integration
 window.getQuestion = getQuestion;
 window.currentLang = currentLang;
-
-function applyLang() {
-  const isEn = currentLang === 'en';
-  
-  // Translate Hero Title & Sub
-  const heroTitle = document.querySelector('.hero h1');
-  if (heroTitle) {
-    heroTitle.innerHTML = isEn ? "Where do you stand in<br><em>Austrian</em> politics?" : "Wo stehst du in der<br><em>österreichischen</em> Politik?";
-  }
-  
-  const heroSub = document.querySelector('.hero-sub');
-  if (heroSub) {
-    heroSub.textContent = isEn ? "47 scenario-based questions on the issues defining Austria right now. Crime, immigration, welfare, debt, and energy. See your alignment across all parties." : "47 praxisnahe Szenario-Fragen zu den drängenden Themen der österreichischen Bundespolitik. Ermittle deine Position auf dem Kompass und sieh die Übereinstimmung mit allen großen Parteien.";
-  }
-
-  // Start & Control Buttons
-  const startBtn = document.querySelector('.hero-cta .btn-primary');
-  if (startBtn) startBtn.textContent = isEn ? 'Start the test' : "Test starten";
-  
-  const skipBtn = document.querySelector('.btn-skip');
-  if (skipBtn) skipBtn.textContent = isEn ? 'Skip' : "Überspringen";
-  
-  const backBtn = document.getElementById('btn-back');
-  if (backBtn) backBtn.textContent = isEn ? 'Back' : "Zurück";
-  
-  const nextBtn = document.querySelector('.q-foot .btn-primary');
-  if (nextBtn) nextBtn.textContent = isEn ? 'Next' : "Weiter";
-
-  // Demographics Titles
-  const demoTitle = document.querySelector('#page-demo .page-title');
-  if (demoTitle) demoTitle.textContent = isEn ? 'Almost there.' : "Fast geschafft.";
-  
-  const demoSub = document.querySelector('#page-demo .page-sub');
-  if (demoSub) demoSub.textContent = isEn 
-    ? 'A few quick questions before your results. Everything is anonymous.' 
-    : "Einige kurze Fragen vor deinen Ergebnissen. Alles ist vollkommen anonym.";
-    
-  const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
-  if (seeResultsBtn) seeResultsBtn.textContent = isEn ? 'See my results' : "Ergebnisse ansehen";
-
-  // Demographics Field Labels
-  const lblAge = document.getElementById('d-age')?.previousElementSibling;
-  if (lblAge) lblAge.textContent = isEn ? 'Age' : "Alter";
-  
-  const lblCountry = document.getElementById('d-country')?.previousElementSibling || document.getElementById('d-county')?.previousElementSibling;
-  if (lblCountry) lblCountry.innerHTML = isEn ? 'Region <span>(optional)</span>' : "Bundesland <span>(optional)</span>";
-  
-  const lblParty = document.getElementById('d-party')?.previousElementSibling;
-  if (lblParty) lblParty.innerHTML = isEn ? 'How do you currently identify? <span>(optional)</span>' : "Wie identifizierst du dich politisch? <span>(optional)</span>";
-  
-  const lblGender = document.getElementById('d-gender')?.previousElementSibling;
-  if (lblGender) lblGender.innerHTML = isEn ? 'Gender <span>(optional)</span>' : "Geschlecht <span>(optional)</span>";
-  
-  const lblNat = document.getElementById('d-nationality')?.previousElementSibling;
-  if (lblNat) lblNat.innerHTML = isEn ? 'Nationality <span>(optional)</span>' : "Nationalität <span>(optional)</span>";
-
-  // Demographics Select Options
-  const optSelect = isEn ? 'Select...' : "Auswählen...";
-  const optPreferNot = isEn ? 'Prefer not to say' : "Lieber nicht sagen";
-
-  // Update options inside selects
-  const ageSelect = document.getElementById('d-age');
-  if (ageSelect) {
-    ageSelect.options[0].textContent = optSelect;
-    const ageTexts = isEn 
-      ? ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 or older']
-      : (currentLang === 'de' 
-         ? ['Unter 18', '18 bis 24', '25 bis 34', '35 bis 44', '45 bis 54', '55 bis 64', '65 oder älter']
-         : (currentLang === 'es'
-            ? ['Menor de 18', '18 a 24', '25 a 34', '35 a 44', '45 a 54', '55 a 64', '65 o más']
-            : ['Sotto i 18', 'da 18 a 24', 'da 25 a 34', 'da 35 a 44', 'da 45 a 54', 'da 55 a 64', '65 o più']));
-    for (let i = 1; i < ageSelect.options.length; i++) {
-      if (ageTexts[i-1]) ageSelect.options[i].textContent = ageTexts[i-1];
-    }
-  }
-
-  const genderSelect = document.getElementById('d-gender');
-  if (genderSelect) {
-    genderSelect.options[0].textContent = optSelect;
-    const genTexts = isEn 
-      ? ['Male', 'Female', 'Other', 'Prefer not to say']
-      : (currentLang === 'de'
-         ? ['Männlich', 'Weiblich', 'Sonstiges', 'Lieber nicht sagen']
-         : (currentLang === 'es'
-            ? ['Masculino', 'Femenino', 'Otro', 'Prefiero no decirlo']
-            : ['Maschile', 'Femminile', 'Altro', 'Preferisco non dirlo']));
-    for (let i = 1; i < genderSelect.options.length; i++) {
-      if (genTexts[i-1]) genderSelect.options[i].textContent = genTexts[i-1];
-    }
-  }
-
-  const partySelect = document.getElementById('d-party');
-  if (partySelect) {
-    partySelect.options[0].textContent = optPreferNot;
-    const lastOpt = partySelect.options[partySelect.options.length - 1];
-    if (lastOpt) {
-      if (isEn) {
-        lastOpt.textContent = 'Independent / Other';
-      } else {
-        lastOpt.textContent = "Unabhängig / Sonstige";
-      }
-    }
-  }
-
-  const countrySelect = document.getElementById('d-country') || document.getElementById('d-county');
-  if (countrySelect) countrySelect.options[0].textContent = optSelect;
-
-  const natSelect = document.getElementById('d-nationality');
-  if (natSelect) {
-    natSelect.options[0].textContent = optSelect;
-    const natNames = {
-      'United States': isEn ? 'United States' : "Vereinigte Staaten",
-      'United Kingdom': isEn ? 'United Kingdom' : "Vereinigtes Königreich",
-      'Canada': isEn ? 'Canada' : "Kanada",
-      'Australia': isEn ? 'Australia' : "Australien",
-      'New Zealand': isEn ? 'New Zealand' : "Neuseeland",
-      'Sweden': isEn ? 'Sweden' : "Schweden",
-      'Germany': isEn ? 'Germany' : "Deutschland",
-      'Austria': isEn ? 'Austria' : "Österreich",
-      'France': isEn ? 'France' : "Frankreich",
-      'Spain': isEn ? 'Spain' : "Spanien",
-      'Italy': isEn ? 'Italy' : "Italien",
-      'Ireland': isEn ? 'Ireland' : "Irland",
-      'Netherlands': isEn ? 'Netherlands' : "Niederlande",
-      'Other': isEn ? 'Other' : "Sonstige"
-    };
-    for (let i = 1; i < natSelect.options.length; i++) {
-      const opt = natSelect.options[i];
-      const enVal = opt.getAttribute('data-en') || opt.value || opt.textContent;
-      if (!opt.getAttribute('data-en')) opt.setAttribute('data-en', enVal);
-      if (natNames[enVal]) opt.textContent = natNames[enVal];
-    }
-  }
-
-  // Demographics Note and Consent
-  const demoNote = document.querySelector('.demo-note');
-  if (demoNote) demoNote.textContent = isEn 
-    ? 'This is never linked to your answers. It helps us understand who takes the test.' 
-    : "Dies wird niemals mit deinen Antworten verknüpft. Es hilft uns zu verstehen, wer an dem Test teilnimmt.";
-  
-  const lblConsent = document.querySelector('label[for="d-consent"]');
-  if (lblConsent) {
-    if (isEn) {
-      lblConsent.innerHTML = '<strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.';
-    } else {
-      lblConsent.innerHTML = "<strong>Einwilligung zur Forschung:</strong> Ich gestatte CoreOpinion, meine anonymen Antworten und demografischen Daten für Forschung, Statistiken und öffentliche Wahl-Dashboards zu speichern.";
-    }
-  }
-
-  // Calculating page
-  const calcTitle = document.querySelector('.calc-h');
-  if (calcTitle) calcTitle.textContent = isEn ? 'Mapping your answers' : "Antworten werden ausgewertet";
-  
-  const calcSub = document.querySelector('.calc-p');
-  if (calcSub) calcSub.textContent = isEn ? 'This will only take a moment.' : "Dies wird nur einen Moment dauern.";
-
-  // Results Dashboard titles
-  const rEyebrow = document.querySelector('.result-eyebrow');
-  if (rEyebrow) rEyebrow.textContent = isEn 
-    ? 'Your Austria political alignment' 
-    : "Deine politische Übereinstimmung in Österreich";
-
-  // Save Panel titles
-  const saveTitle = document.querySelector('.save-title');
-  if (saveTitle) saveTitle.textContent = isEn ? 'Save your results' : "Ergebnisse speichern";
-  
-  const saveDesc = document.querySelector('.save-desc');
-  if (saveDesc) saveDesc.textContent = isEn 
-    ? 'Enter your email and we will send you a link to these results. Never shared.' 
-    : "Gib deine E-Mail ein und wir senden dir einen Link zu diesen Ergebnissen. Niemals weitergegeben.";
-    
-  const sendBtn = document.querySelector('.save-row .btn-primary');
-  if (sendBtn) sendBtn.textContent = isEn ? 'Send results' : "Ergebnisse senden";
-
-  // Action Buttons
-  const copyBtn = document.querySelector('.share-row button:nth-child(1)');
-  if (copyBtn) copyBtn.textContent = isEn ? 'Copy results link' : "Ergebnis-Link kopieren";
-  
-  const retakeBtn = document.querySelector('.share-row button:nth-child(2)');
-  if (retakeBtn) retakeBtn.textContent = isEn ? 'Retake' : "Wiederholen";
-  
-  const genBtn = document.querySelector('.share-row a button');
-  if (genBtn) genBtn.textContent = isEn ? 'General test' : "Allgemeiner Test";
-}
-
 </script>
 <script src="/engine.js"></script>
 </body>

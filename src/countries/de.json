@@ -1,0 +1,4009 @@
+{
+  "code": "de",
+  "name": "Deutschland",
+  "localLabel": "Deutschland",
+  "flag": "🇩🇪",
+  "title": "Wahlkompass Deutschland 2026 | CoreOpinion",
+  "desc": "Finde deine Position auf dem politischen Kompass. 47 szenariobasierte Fragen zur Übereinstimmung mit SPD, CDU/CSU, Grünen, FDP, AfD, Linke und BSW.",
+  "keywords": "Wahlkompass Deutschland, Wahl-O-Mat alternative 2026, politische Orientierung, Kompass Test Deutschland, welche Partei wählen, Parteien Kompass, SPD CDU Grüne FDP AfD Linke BSW",
+  "canonical": "https://coreopinion.org/de",
+  "regions": [
+    "Baden-Württemberg",
+    "Bayern",
+    "Berlin",
+    "Brandenburg",
+    "Bremen",
+    "Hamburg",
+    "Hessen",
+    "Mecklenburg-Vorpommern",
+    "Niedersachsen",
+    "Nordrhein-Westfalen",
+    "Rheinland-Pfalz",
+    "Saarland",
+    "Sachsen",
+    "Sachsen-Anhalt",
+    "Schleswig-Holstein",
+    "Thüringen"
+  ],
+  "parties": [
+    "spd",
+    "cdu",
+    "grn",
+    "fdp",
+    "afd",
+    "lnk",
+    "bsw"
+  ],
+  "partyMeta": {
+    "spd": {
+      "name": {
+        "de": "SPD",
+        "en": "SPD"
+      },
+      "color": "#EB001F",
+      "barClass": "bar-spd",
+      "desc": {
+        "de": "Deine Antworten stimmen am ehesten mit der SPD (Sozialdemokratische Partei Deutschlands) überein. Du befürwortest einen starken Sozialstaat (wie das Bürgergeld), Arbeitnehmerrechte, öffentliche Investitionen und eine engagierte Umweltpolitik.",
+        "en": "Your answers most closely match the SPD (Social Democratic Party). You support a strong welfare state, workers' rights, public investments, and active environmental policies."
+      }
+    },
+    "cdu": {
+      "name": {
+        "de": "CDU/CSU",
+        "en": "CDU/CSU"
+      },
+      "color": "#1C1C1C",
+      "barClass": "bar-cdu",
+      "desc": {
+        "de": "Deine Antworten stimmen am ehesten mit der CDU/CSU (Union) überein. Du befürwortest wirtschaftliche Stabilität, die Einhaltung der Schuldenbremse, moderate Steuern, solide Finanzen und starke innere Sicherheit.",
+        "en": "Your answers most closely match the CDU/CSU (Union). You support economic stability, maintaining the debt brake, moderate taxes, solid finances, and strong internal security."
+      }
+    },
+    "grn": {
+      "name": {
+        "de": "Grüne",
+        "en": "Greens"
+      },
+      "color": "#46962B",
+      "barClass": "bar-grn",
+      "desc": {
+        "de": "Deine Antworten stimmen am ehesten mit Bündnis 90/Die Grünen überein. Du legst großen Wert auf konsequenten Klimaschutz, den schnellen Ausstieg aus fossilen Energieträgern und gesellschaftliche Vielfalt.",
+        "en": "Your answers most closely match Alliance 90/The Greens. You place high value on consistent climate action, rapid phase-out of fossil fuels, and social diversity."
+      }
+    },
+    "fdp": {
+      "name": {
+        "de": "FDP",
+        "en": "FDP"
+      },
+      "color": "#FFED00",
+      "barClass": "bar-fdp",
+      "desc": {
+        "de": "Deine Antworten stimmen am ehesten mit der FDP (Freie Demokratische Partei) überein. Du trittst für eine liberale Wirtschaftspolitik, Steuersenkungen, Bürokratieabbau sowie individuelle Freiheit ein.",
+        "en": "Your answers most closely match the FDP (Free Democratic Party). You advocate for a liberal economic policy, tax cuts, deregulation, and maximum individual liberty."
+      }
+    },
+    "afd": {
+      "name": {
+        "de": "AfD",
+        "en": "AfD"
+      },
+      "color": "#009EE0",
+      "barClass": "bar-afd",
+      "desc": {
+        "de": "Deine Antworten stimmen am ehesten mit der AfD (Alternative für Deutschland) überein. Du forderst eine restriktive Asylpolitik, den Austritt aus der EU oder starke Beschränkung und Klimaskepsis.",
+        "en": "Your answers most closely match the AfD (Alternative for Germany). You demand a highly restrictive asylum policy, exit from or major restrictions on the EU, and climate skepticism."
+      }
+    },
+    "lnk": {
+      "name": {
+        "de": "Die Linke",
+        "en": "Left Party"
+      },
+      "color": "#BE3075",
+      "barClass": "bar-lnk",
+      "desc": {
+        "de": "Deine Antworten stimmen am ehesten mit der Partei Die Linke überein. Du forderst eine umfassende Reichensteuer, die Rekommunalisierung der Daseinsvorsorge und eine friedensorientierte Außenpolitik.",
+        "en": "Your answers most closely match Die Linke (The Left). You call for high wealth taxes, municipal ownership of public utilities, and an anti-interventionist foreign policy."
+      }
+    },
+    "bsw": {
+      "name": {
+        "de": "BSW",
+        "en": "BSW"
+      },
+      "color": "#9B2335",
+      "barClass": "bar-bsw",
+      "desc": {
+        "de": "Deine Antworten stimmen am ehesten mit dem BSW (Bündnis Sahra Wagenknecht) überein. Du verbindest eine gerechte Wirtschaftspolitik mit einer restriktiven Haltung in der Migrationspolitik.",
+        "en": "Your answers most closely match the BSW (Sahra Wagenknecht Alliance). You combine progressive economic policies with a restrictive stance on migration and social conservatism."
+      }
+    },
+    "ind": {
+      "name": {
+        "de": "Unabhängig",
+        "en": "Independent"
+      },
+      "color": "#7A7F88",
+      "barClass": "bar-ind",
+      "desc": {
+        "de": "Deine Ansichten sind gemischt und lassen sich keiner einzelnen Partei eindeutig zuordnen. Du vertrittst pragmatische, themenbezogene Positionen.",
+        "en": "Your views are mixed and do not align strongly with a single party. You hold pragmatic, issue-by-issue stances across the spectrum."
+      }
+    }
+  },
+  "calibrations": {
+    "hc1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 2,
+        "fdp": -1,
+        "afd": -1,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": -1,
+        "bsw": -1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "hc2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": -1,
+        "bsw": -1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "hc3": [
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 2,
+        "fdp": 1,
+        "afd": -1,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 0,
+        "cdu": 1,
+        "grn": 0,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": 0,
+        "bsw": 0
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "gn1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": -1,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "gn2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 1,
+        "afd": 1,
+        "lnk": -1,
+        "bsw": -1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "gn3": [
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 2,
+        "fdp": -1,
+        "afd": -1,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 0,
+        "grn": 1,
+        "fdp": 0,
+        "afd": 0,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "im1": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 0,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 1,
+        "grn": 1,
+        "fdp": -1,
+        "afd": 1,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 0,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      }
+    ],
+    "im2": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 1,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": 0,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": -1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 0,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      }
+    ],
+    "im3": [
+      {
+        "spd": 2,
+        "cdu": 1,
+        "grn": 2,
+        "fdp": 2,
+        "afd": 1,
+        "lnk": 0,
+        "bsw": 1
+      },
+      {
+        "spd": 0,
+        "cdu": 0,
+        "grn": 0,
+        "fdp": 0,
+        "afd": 0,
+        "lnk": 0,
+        "bsw": 0
+      },
+      {
+        "spd": -1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": -2,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": -1
+      }
+    ],
+    "tx1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 2,
+        "fdp": -1,
+        "afd": -1,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "tx2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 1,
+        "afd": 1,
+        "lnk": -1,
+        "bsw": -1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "tx3": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 0,
+        "grn": 1,
+        "fdp": -1,
+        "afd": 0,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "cl1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": -1,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": -1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      }
+    ],
+    "cl2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 1,
+        "afd": 1,
+        "lnk": -1,
+        "bsw": 1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      }
+    ],
+    "ab1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 1,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 2,
+        "fdp": 0,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": -1
+      },
+      {
+        "spd": -1,
+        "cdu": 2,
+        "grn": -1,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -1,
+        "bsw": 2
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      }
+    ],
+    "ab2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      },
+      {
+        "spd": -1,
+        "cdu": 2,
+        "grn": -1,
+        "fdp": 0,
+        "afd": 2,
+        "lnk": -1,
+        "bsw": 2
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 1,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      }
+    ],
+    "sd1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 2,
+        "fdp": -1,
+        "afd": -1,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "sd2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 1,
+        "afd": 1,
+        "lnk": -1,
+        "bsw": -1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "rj1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 2,
+        "fdp": 0,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": -1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      }
+    ],
+    "rj2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 0,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": -1,
+        "bsw": 1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      }
+    ],
+    "vt1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 1,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": 0,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": -1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      }
+    ],
+    "vt2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 1,
+        "grn": 1,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 1,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      }
+    ],
+    "fp1": [
+      {
+        "spd": 1,
+        "cdu": 2,
+        "grn": 1,
+        "fdp": 2,
+        "afd": -1,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": 1,
+        "cdu": 2,
+        "grn": 1,
+        "fdp": 1,
+        "afd": -1,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -2,
+        "afd": -1,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "fp2": [
+      {
+        "spd": -2,
+        "cdu": -1,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": 0,
+        "afd": 2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 2,
+        "cdu": -1,
+        "grn": 2,
+        "fdp": -2,
+        "afd": 2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "si1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": 0,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": -1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      }
+    ],
+    "si2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 1,
+        "grn": 1,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      }
+    ],
+    "gi1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 0,
+        "cdu": 0,
+        "grn": 0,
+        "fdp": 0,
+        "afd": 0,
+        "lnk": 0,
+        "bsw": 0
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "gi2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": 0,
+        "bsw": -1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "ss1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": -1,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "ss2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 1,
+        "afd": 1,
+        "lnk": -1,
+        "bsw": -1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "tr1": [
+      {
+        "spd": 2,
+        "cdu": 2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": 2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 0,
+        "grn": 1,
+        "fdp": -1,
+        "afd": 0,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": -1,
+        "grn": -2,
+        "fdp": 2,
+        "afd": -1,
+        "lnk": -1,
+        "bsw": -1
+      }
+    ],
+    "ed1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": 0,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "ed2": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 0,
+        "grn": 1,
+        "fdp": -1,
+        "afd": 0,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "co1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": -1,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "co2": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 0,
+        "grn": 1,
+        "fdp": 0,
+        "afd": 0,
+        "lnk": 0,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "bt1": [
+      {
+        "spd": 2,
+        "cdu": 2,
+        "grn": 2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 0,
+        "grn": 1,
+        "fdp": -1,
+        "afd": 0,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": -2,
+        "cdu": -1,
+        "grn": -2,
+        "fdp": 2,
+        "afd": -1,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "br1": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": 1,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": 1
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "br2": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": 0,
+        "cdu": 1,
+        "grn": 0,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": 0,
+        "bsw": 0
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "br3": [
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": 2,
+        "afd": -1,
+        "lnk": 1,
+        "bsw": -1
+      },
+      {
+        "spd": 0,
+        "cdu": 1,
+        "grn": 0,
+        "fdp": 0,
+        "afd": 1,
+        "lnk": 0,
+        "bsw": 1
+      },
+      {
+        "spd": -1,
+        "cdu": 2,
+        "grn": -1,
+        "fdp": -2,
+        "afd": 2,
+        "lnk": -1,
+        "bsw": 2
+      }
+    ],
+    "br4": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 0,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": 0,
+        "cdu": 0,
+        "grn": 0,
+        "fdp": 0,
+        "afd": 0,
+        "lnk": 0,
+        "bsw": 0
+      },
+      {
+        "spd": -2,
+        "cdu": 1,
+        "grn": -2,
+        "fdp": 1,
+        "afd": 1,
+        "lnk": -2,
+        "bsw": 1
+      }
+    ],
+    "ex1": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      }
+    ],
+    "ex2": [
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 2,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": -2
+      },
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": -2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": 2
+      }
+    ],
+    "ex3": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 2,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      }
+    ],
+    "ex4": [
+      {
+        "spd": -1,
+        "cdu": 2,
+        "grn": -1,
+        "fdp": -1,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 1,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      }
+    ],
+    "ex5": [
+      {
+        "spd": 1,
+        "cdu": -1,
+        "grn": 1,
+        "fdp": 2,
+        "afd": -1,
+        "lnk": 2,
+        "bsw": 1
+      },
+      {
+        "spd": -1,
+        "cdu": 1,
+        "grn": -1,
+        "fdp": 2,
+        "afd": 1,
+        "lnk": -2,
+        "bsw": -1
+      }
+    ],
+    "id1": [
+      {
+        "spd": -1,
+        "cdu": 2,
+        "grn": -1,
+        "fdp": 1,
+        "afd": 2,
+        "lnk": -1,
+        "bsw": 2
+      },
+      {
+        "spd": 1,
+        "cdu": 0,
+        "grn": 1,
+        "fdp": 1,
+        "afd": 0,
+        "lnk": 0,
+        "bsw": 0
+      },
+      {
+        "spd": 1,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 0,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      }
+    ],
+    "id2": [
+      {
+        "spd": 2,
+        "cdu": -2,
+        "grn": 2,
+        "fdp": 0,
+        "afd": -2,
+        "lnk": 2,
+        "bsw": -2
+      },
+      {
+        "spd": 1,
+        "cdu": 0,
+        "grn": 1,
+        "fdp": 1,
+        "afd": 0,
+        "lnk": 0,
+        "bsw": 0
+      },
+      {
+        "spd": -2,
+        "cdu": 2,
+        "grn": -2,
+        "fdp": 0,
+        "afd": 2,
+        "lnk": -2,
+        "bsw": 2
+      }
+    ]
+  },
+  "translations": {
+    "hc1": {
+      "q": "Sollte dieser Mann bankrottgehen oder sterben, weil er seinen Job verloren hat?",
+      "ctx": "Er hat sein ganzes Leben gearbeitet. Verlor seinen Job mit 58 Jahren und damit seine Krankenversicherung. Krebs im Stadium 3. Die Rechnung beträgt 400.000 Dollar.",
+      "opts": [
+        "Nein. Eine universelle Gesundheitsversorgung ist die einzige Antwort. Medicare for All.",
+        "Nein. Erweitern Sie die gesetzlichen Zuschüsse und schützen Sie Menschen in seiner Situation.",
+        "Das bestehende System reicht aus. Er hätte seine Absicherung privat weiterführen müssen.",
+        "Dies ist ein persönliches Versagen. Der Staat sollte das Gesundheitswesen nicht betreiben."
+      ]
+    },
+    "hc2": {
+      "q": "Eine staatlich gesteuerte Gesundheitsversorgung würde den medizinischen Fortschritt bremsen, die Qualität senken und zu Rationierung führen.",
+      "opts": [
+        "Ja. Der freie Markt treibt die besten Innovationen im Gesundheitswesen voran.",
+        "Es gibt Risiken, aber Standardregulierungen könnten diese verhindern.",
+        "Nein. Andere Industrienationen zahlen halb so viel für bessere Ergebnisse bei universellen Systemen."
+      ]
+    },
+    "hc3": {
+      "q": "Medizinische Schulden sollten gesetzlich anders behandelt werden als Konsumschulden, mit strengen Grenzen für Zinsen und Zwangsvollstreckungen.",
+      "opts": [
+        "Ja. Niemand entscheidet sich dafür, krank zu sein. Es ist eine Notwendigkeit, kein Konsum.",
+        "Einige Schutzmaßnahmen sind sinnvoll, aber Gläubiger müssen weiterhin eintreiben können.",
+        "Nein. Verträge müssen für alle gleich durchgesetzt werden. Ausnahmen schaden den Kreditmärkten."
+      ]
+    },
+    "gn1": {
+      "q": "Die Verfassung ist kein Selbstmordpakt. Wir müssen Sturmgewehre verbieten, um unsere Kinder zu schützen.",
+      "ctx": "Seit Columbine haben über 350.000 Schüler Waffengewalt an Schulen erlebt. Amoklauf-Übungen gehören heute zum Standard-Alltag von Kindern.",
+      "opts": [
+        "Ja. Dies sind Kriegswaffen und sie gehören nicht auf unsere Straßen.",
+        "Sturmgewehrverbote sind komplex. Hintergrundüberprüfungen und Gefährdergesetze sind effektiver.",
+        "Nein. Fokus auf psychische Gesundheit und Schulsicherheit. Bestrafen Sie nicht gesetzestreue Bürger."
+      ]
+    },
+    "gn2": {
+      "q": "Das Verbot bestimmter Waffentypen entwaffnet nur gesetzestreue Bürger und macht sie wehrlos gegen Kriminelle, die sich nicht an Gesetze halten.",
+      "opts": [
+        "Ja. Nur ein guter Mann mit einer Waffe stoppt einen bösen Mann mit einer Waffe.",
+        "Selbstverteidigung ist ein Recht, aber einige Einschränkungen für Magazine mit hoher Kapazität sind vernünftig.",
+        "Nein. Länder mit strengen Waffengesetzen haben nur einen Bruchteil unserer Tötungsdelikte."
+      ]
+    },
+    "gn3": {
+      "q": "Wir sollten eine obligatorische 10-tägige Wartezeit für alle Waffenkäufe vorschreiben, um spontane Gewalttaten zu verhindern.",
+      "ctx": "Im Jahr 2022 starben rund 48.000 Amerikaner durch Schussverletzungen. Mehr als die Hälfte davon waren Suizide.",
+      "opts": [
+        "Ja. Eine Bedenkzeit ist eine vernünftige Maßnahme, die Leben rhetet.",
+        "Wartezeiten sollten nur für Erstkäufer oder junge Erwachsene gelten.",
+        "Nein. Ein verzögertes Recht ist ein verweigertes Recht. Opfer von Stalking brauchen sofortigen Schutz."
+      ]
+    },
+    "im1": {
+      "q": "Ein Land ohne Grenzen ist kein Land. Wir müssen die Grenze sichern und illegal Eingereiste abschieben.",
+      "ctx": "Millionen illegaler Einwanderer leben im Land. Die Grenzübertritte haben historische Höchststände erreicht. Kommunale Ressourcen sind überlastet.",
+      "opts": [
+        "Ja. Recht und Ordnung müssen wiederhergestellt werden. Grenzsicherung ist erste Bürgerpflicht.",
+        "Grenze sichern, aber einen Weg zur Legalisierung für diejenigen bieten, die bereits hier sind.",
+        "Fokus auf humane Bearbeitung, Fluchtursachen und Ausweitung legaler Wege."
+      ]
+    },
+    "im2": {
+      "q": "Familien durch Massenabschiebungen auseinanderzureißen, ist moralisch verwerflich. Wir brauchen einen Weg zur Staatsbürgerschaft.",
+      "ctx": "Einwanderer ohne Papiere zahlen Milliarden an Steuern, ernten Lebensmittel, pflegen Alte und bauen Häuser.",
+      "opts": [
+        "Ja. Dies sind unsere Nachbarn und Kollegen. Sie verdienen Würde und legalen Status.",
+        "Bieten Sie legalen Status und Arbeitserlaubnisse an, aber die Einbürgerung sollte streng sein.",
+        "Nein. Wer Gesetze bricht zu belohnen, fördert illegale Einwanderung. Abschiebungen sind notwendig."
+      ]
+    },
+    "im3": {
+      "q": "Das Land sollte die Zahl der Visa für hochqualifizierte Arbeitskräfte (H-1B) deutlich erhöhen, um weltweit Spitzenkräfte anzuziehen.",
+      "opts": [
+        "Ja. Qualifizierte Einwanderung treibt Innovation voran und schafft inländische Arbeitsplätze.",
+        "Ein moderater Anstieg ist in Ordnung, aber wir müssen heimische Fachkräfte vor Lohndumping schützen.",
+        "Nein. Unternehmen sollten in die Ausbildung einheimischer Kräfte investieren, statt billige Kräfte zu importieren."
+      ]
+    },
+    "tx1": {
+      "q": "Extreme Vermögensungleichheit bedroht die Demokratie. Wir müssen eine Vermögenssteuer für Vermögen über 50 Millionen Dollar einführen.",
+      "ctx": "Die drei reichsten Personen besitzen mehr Vermögen als die gesamte ärmere Hälfte der Bevölkerung zusammen.",
+      "opts": [
+        "Ja. Milliardäre sollte es in einer Gesellschaft mit obdachlosen Kindern nicht geben.",
+        "Vermögenssteuern sind verfassungsrechtlich schwierig. Erhöhen Sie stattdessen den Spitzensteuersatz.",
+        "Nein. Erzwungene Umverteilung ist Diebstahl. Wohlstand wird geschaffen, nicht gestohlen."
+      ]
+    },
+    "tx2": {
+      "q": "Die Besteuerung von Kapital und Spitzenverdienern treibt Investitionen ins Ausland, senkt die Produktivität und schadet den Arbeitnehmern.",
+      "opts": [
+        "Ja. Niedrigere Steuern stimulieren Investitionen, Unternehmenswachstum und Arbeitsplätze.",
+        "Steuern sind notwendig, aber hohe Grenzsätze verzerren wirtschaftliche Entscheidungen.",
+        "Nein. Trickle-Down-Ökonomie ist eine bewiesene Lüge. Nachfragegetriebenes Wachstum ist der einzige Weg."
+      ]
+    },
+    "tx3": {
+      "q": "Der Körperschaftssteuersatz für Unternehmen sollte auf 35% angehoben werden, damit große Konzerne ihren fairen Anteil zahlen.",
+      "opts": [
+        "Ja. Konzerne verzeichnen Rekordgewinne, während sie historisch niedrige Steuersätze zahlen.",
+        "Ein moderater Steuersatz um 25-28% ist ein wettbewerbsfähiger Kompromiss.",
+        "Nein. Hohe Sätze machen Unternehmen wettbewerbsunfähig und werden an die Verbraucher weitergegeben."
+      ]
+    },
+    "cl1": {
+      "q": "Wir befinden uns in einem Klimanotstand. Der Staat muss fossile Brennstoffe schnell abbauen und in ein grünes Programm investieren.",
+      "ctx": "Das letzte Jahr war das wärmste seit Beginn der Aufzeichnungen. Waldbrände, Dürren und Fluten kosten die Wirtschaft Milliarden.",
+      "opts": [
+        "Ja. Der Übergang zu erneuerbaren Energien ist die moralische und wirtschaftliche Pflicht unserer Zeit.",
+        "Ein abrupter Ausstieg würde die Wirtschaft ruinieren. Subventionieren Sie stattdessen grüne Technologie.",
+        "Nein. Nationale Energieunabhängigkeit erfordert Öl, Gas und Kohle. Ein Green New Deal ist eine sozialistische Fantasie."
+      ]
+    },
+    "cl2": {
+      "q": "Einseitige Verbote fossiler Brennstoffe vernichten gut bezahlte Arbeitsplätze und machen uns bei Solar- und Batterietechnologie von ausländischen Konkurrenten wie China abhängig.",
+      "opts": [
+        "Ja. Förderung heimischer fossiler Energien sichert billige Energie als Motor der Wirtschaft.",
+        "Wir sollten alle Energieoptionen verfolgen, einschließlich Kernenergie und sauberem Erdgas.",
+        "Nein. Der Übergang ist unvermeidbar. Ihn anzuführen schafft die zukunftsfähigen Industriejobs."
+      ]
+    },
+    "ab1": {
+      "q": "Abtreibung ist Teil der Gesundheitsvorsorge. Der Gesetzgeber muss das Recht auf Abtreibung bundesweit verankern.",
+      "ctx": "Seit dem Urteil des Obersten Gerichtshofs haben viele Bundesstaaten Abtreibungen nahezu vollständig verboten und Frauen zu langen Reisen gezwungen.",
+      "opts": [
+        "Ja. Reproduktive Freiheit ist ein grundlegendes Menschenrecht.",
+        "Unterstützen Sie den Zugang, aber mit üblichen Einschränkungen bei späten Abtreibungen.",
+        "Nein. Das Thema gehört in die Hände der Bundesländer, im Einklang mit der Verfassung.",
+        "Nein. Abtreibung ist die Tötung menschlichen Lebens und sollte verboten werden."
+      ]
+    },
+    "ab2": {
+      "q": "Das Gerichtsurteil hat die Frage der Abtreibung richtigerweise an den demokratischen Prozess in den einzelnen Bundesländern zurückgegeben.",
+      "opts": [
+        "Ja. Die Verfassung erwähnt Abtreibung nicht. Länder haben das Recht, ungeborenes Leben zu schützen.",
+        "Länder sollten entscheiden, aber Verbote müssen Ausnahmen für Vergewaltigung, Inzest und Lebensgefahr haben.",
+        "Nein. Menschenrechte sollten nicht von geografischen Grenzen oder Länderparlamenten abhängen."
+      ]
+    },
+    "sd1": {
+      "q": "Hochschulbildung ist ein öffentliches Gut. Der Staat sollte Studiengebühren abschaffen und bestehende Studienschulden erlassen.",
+      "ctx": "Millionen Bürger tragen immense Studienschulden. Eine ganze Generation verschiebt dadurch den Hauskauf, Familiengründungen oder Unternehmensgründungen.",
+      "opts": [
+        "Ja. Kostenlose Bildung ist eine Investition in unsere gemeinsame Zukunft.",
+        "Schulden für einkommensschwache Studenten erlassen und Zinsen reformieren, aber freies Studium ist zu teuer.",
+        "Nein. Dies ist ein massiver Wohlstandstransfer von der Arbeiterklasse hin zu akademischen Eliten."
+      ]
+    },
+    "sd2": {
+      "q": "Studienschulden zu erlassen ist zutiefst ungerecht gegenüber Millionen Bürgern, die hart gearbeitet haben, um ihre Kredite abzubezahlen, oder gar nicht erst studiert haben.",
+      "opts": [
+        "Ja. Wer einen Vertrag unterschreibt, zahlt ihn zurück. Eigenverantwortung zählt.",
+        "Das System hat Probleme, aber ein pauschaler Schuldenerlass ist das falsche Instrument.",
+        "Nein. Die Studienkosten sind explodiert. Die Kreditverträge waren räuberisch."
+      ]
+    },
+    "rj1": {
+      "q": "Systemischer Rassismus ist real. Wir müssen die Polizei strukturell reformieren, die qualifizierte Immunität beenden und in benachteiligte Gemeinschaften investieren.",
+      "ctx": "Minderheiten sind statistisch weitaus häufiger in Haft und überproportional von Polizeigewalt und Justiz betroffen.",
+      "opts": [
+        "Ja. Das Justizsystem weist rassistische Ungleichheiten auf und erfordert tiefgreifende Reformen.",
+        "Reformieren Sie die Polizei, aber schwächen oder kürzen Sie die Mittel der Strafverfolgung nicht.",
+        "Nein. Systemischer Rassismus ist ein spaltendes Narrativ. Das Problem ist Kriminalität und Familienzerfall."
+      ]
+    },
+    "rj2": {
+      "q": "Die ständige Fokussierung auf ethnische Spaltungen durch Politik und Medien untergräbt den gesellschaftlichen Zusammenhalt und spaltet das Land.",
+      "opts": [
+        "Ja. Wir sollten Menschen nach ihrem Charakter beurteilen, nicht nach ihrer Herkunft.",
+        "Ungleichheiten sind real, aber der Fokus sollte auf einenden wirtschaftlichen Lösungen liegen.",
+        "Nein. Die Geschichte lässt sich nicht leugnen. Wir müssen systemischen Rassismus benennen, um ihn abzubauen."
+      ]
+    },
+    "vt1": {
+      "q": "Wir sollten nationale Standards für die automatische Wählerregistrierung einführen, Briefwahlen ausweiten und den Wahltag zum Feiertag machen.",
+      "opts": [
+        "Ja. Wählen ist ein Grundrecht. Wir sollten es jedem Bürger so einfach wie möglich machen.",
+        "Ein Wahltags-Feiertag ja, aber die Registrierungsregeln sollten bei den Bundesländern verbleiben.",
+        "Nein. Wir brauchen strengere Wählerausweisgesetze, um die Integrität der Wahl zu sichern."
+      ]
+    },
+    "vt2": {
+      "q": "Die Lockerung der Wählerregistrierungsregeln und die Ausweitung der Briefwahl öffnen Tür und Tor für Betrug und untergraben das Vertrauen in Wahlen.",
+      "opts": [
+        "Ja. Jede Stimme muss überprüft werden. Ausweispflicht schützt die Integrität unserer Demokratie.",
+        "Integrität ist wichtig, aber Regeln dürfen nicht zur Wählerunterdrückung missbraucht werden.",
+        "Nein. Wählerbetrug ist praktisch nicht existent. Diese Gesetze sollen Minderheiten vom Wählen abhalten."
+      ]
+    },
+    "fp1": {
+      "q": "Wir müssen Stärke projizieren. Ein starkes Militär ist der einzige Garant für globale Stabilität und den Schutz demokratischer Werte.",
+      "ctx": "Das Land unterhält Hunderte Militärstützpunkte weltweit und gibt mehr für Verteidigung aus als die nächsten zehn Länder zusammen.",
+      "opts": [
+        "Ja. Frieden durch Stärke. Wir müssen unsere Bündnispartner unterstützen.",
+        "Verteidigen wir unsere Verbündeten, aber vermeiden wir teure Auslandseinsätze und Nation-Building.",
+        "Nein. Der militärisch-industrielle Komplex entzieht Ressourcen, die für inländische Bedürfnisse gebraucht werden."
+      ]
+    },
+    "fp2": {
+      "q": "Wir sollten aufhören, Milliarden für Kriege im Ausland auszugeben, und uns stattdessen auf den Wiederaufbau im eigenen Land konzentrieren.",
+      "opts": [
+        "Ja. Die eigene Bevölkerung zuerst. Unsere Priorität muss die heimische Stabilität sein.",
+        "Ein ausgewogener Ansatz. Wir müssen uns global engagieren, um unsere eigenen Interessen zu schützen.",
+        "Nein. Isolationismus ist eine gefährliche Illusion. Globale Stabilität sichert auch unsere Wirtschaft."
+      ]
+    },
+    "si1": {
+      "q": "Geschlechtsangleichende Behandlungen sind eine Frage der medizinischen Freiheit. Die Politik hat kein Recht, diese zu verbieten.",
+      "ctx": "Transgender-Jugendliche weisen hohe Raten von Depressionen auf. Medizinische Fachverbände unterstützen geschlechtsangleichende Pflege als notwendig.",
+      "opts": [
+        "Ja. Entscheidungen sollten von Patienten, Familien und Ärzten getroffen werden, nicht von Politikern.",
+        "Behandlung ja, aber einige Altersgrenzen für irreversible chirurgische Eingriffe sind vernünftig.",
+        "Nein. Wir müssen Kinder vor experimentellen Eingriffen schützen und traditionelle Werte verteidigen."
+      ]
+    },
+    "si2": {
+      "q": "Minderjährigen irreversible Behandlungen zur Geschlechtsangleichung zu erlauben, ist medizinische Fehlpraxis, die der Staat verbieten muss.",
+      "opts": [
+        "Ja. Kinder haben nicht die Reife, um in solche lebensverändernden Entscheidungen einzuwilligen.",
+        "Strenge medizinische Prüfungen sind nötig, aber pauschale Verbote gehen zu weit.",
+        "Nein. Medizinische Entscheidungen gehören in die Hände von Familien und Ärzten."
+      ]
+    },
+    "gi1": {
+      "q": "Der Staat sollte soziale Medien streng regulieren, um Desinformation, Hassrede und ausländische Wahlbeeinflussung zu bekämpfen.",
+      "opts": [
+        "Ja. Unregulierte Tech-Monopole schaden der Demokratie und der öffentlichen Gesundheit.",
+        "Desinformation ist eine Gefahr, aber staatliche Regulierung birgt das Risiko politischer Zensur.",
+        "Nein. Das Recht auf freie Meinungsäußerung schützt alle Meinungen. Freier Austausch ist der einzige Weg."
+      ]
+    },
+    "gi2": {
+      "q": "Druck des Staates auf soziale Medien zur Unterdrückung unliebsamer Meinungen ist staatliche Zensur durch die Hintertür.",
+      "ctx": "Es gibt Berichte, wonach Regierungsstellen mit Plattformen kommunizieren, um Inhalte zu Pandemien oder Wahlen zu kennzeichnen.",
+      "opts": [
+        "Ja. Staatlicher Druck auf private Plattformen zur Unterdrückung von Inhalten verletzt die freie Rede.",
+        "Plattformen sollten ihre eigenen Regeln durchsetzen, aber die Kommunikation mit dem Staat muss transparent sein.",
+        "Nein. Der Staat hat die Pflicht, Plattformen vor Desinformationskampagnen oder Bedrohungen zu warnen."
+      ]
+    },
+    "ss1": {
+      "q": "Wir sollten Rentenkassen sichern, indem wir die Beitragsbemessungsgrenze anheben, sodass Besserverdiener auf ihr gesamtes Einkommen einzahlen.",
+      "opts": [
+        "Ja. Wohlhabende sollten auf ihr gesamtes Einkommen Beiträge zahlen, genau wie Durchschnittsverdiener.",
+        "Grenze anheben, aber auch das Renteneintrittsalter für künftige Generationen anpassen.",
+        "Nein. Wir sollten auf private Konten setzen und die Altersvorsorge dem Markt überlassen."
+      ]
+    },
+    "ss2": {
+      "q": "Der Ausbau staatlicher Rentenprogramme bei wachsender Staatsverschuldung ist fiskalisch unverantwortlich.",
+      "opts": [
+        "Ja. Wir müssen Ausgaben kürzen und private Vorsorge stärken, um Staatsinsolvenz zu verhindern.",
+        "Rentenprogramme müssen reformiert werden, aber das soziale Sicherheitsnetz muss intakt bleiben.",
+        "Nein. Diese Programme sind Versprechen, in die Bürger eingezahlt haben. Kürzen Sie eher Subventionen."
+      ]
+    },
+    "tr1": {
+      "q": "Freihandel war ein massiver Wohlstandstransfer von Arbeitnehmern hin zu multinationalen Konzernen. Wir müssen heimische Industrien schützen.",
+      "ctx": "Jahrzehntelang wurden Industrie-Arbeitsplätze ins Ausland verlagert. Ganze Regionen verödeten, während Konzerne Rekordgewinne verbuchten.",
+      "opts": [
+        "Ja. Zölle und Industriepolitik sind notwendig, um die Mittelschicht wieder aufzubauen.",
+        "Gezielte Zölle nur auf strategische Sektoren (wie Mikrochips). Breite Zölle schaden Verbrauchern.",
+        "Nein. Protektionismus erhöht die Preise und führt zu Handelskriegen, die alle ärmer machen."
+      ]
+    },
+    "ed1": {
+      "q": "Die Schulfinanzierung sollte sich strikt nach dem Bedarf richten, wobei Mittel von wohlhabenden Bezirken an Schulen in ärmeren Gegenden umverteilt werden.",
+      "opts": [
+        "Ja. Jedes Kind verdient den gleichen Start ins Leben, unabhängig von seiner Postleitzahl.",
+        "Bedarfsorientierte Finanzierung ja, aber bestrafen Sie nicht engagierte Schulbezirke.",
+        "Nein. Bildungsgutscheine sollten Eltern erlauben, ihr Kind auf jede Schule zu schicken, ob öffentlich oder privat."
+      ]
+    },
+    "ed2": {
+      "q": "Bildungsgutscheine entziehen staatlichen Schulen dringend benötigte Mittel und fördern soziale Ungleichheit.",
+      "opts": [
+        "Ja. Staatliche Mittel gehören in staatliche Schulen. Gutscheinprogramme schaffen Ungerechtigkeit.",
+        "Gutscheine haben Wert, sollten aber nur einkommensschwachen Schülern an schlechten Schulen helfen.",
+        "Nein. Wettbewerb verbessert alle Schulen. Eltern sollten die freie Wahl haben."
+      ]
+    },
+    "co1": {
+      "q": "Das oberste Gericht ist zu einem parteipolitischen Gremium geworden. Wir sollten Amtszeitbegrenzungen und verbindliche Ethikregeln einführen.",
+      "opts": [
+        "Ja. Lebenslange Ernennungen ohne ethische Rechenschaftspflicht bedrohen die Legitimität.",
+        "Verbindliche Ethikregeln ja, aber Amtszeitbegrenzungen schwächen die Unabhängigkeit der Justiz.",
+        "Nein. Das System hat sich bewährt. Die Regeln zu ändern ist nur parteipolitische Einmischung."
+      ]
+    },
+    "co2": {
+      "q": "Die Verfassung ist ein lebendiges Dokument, das im Lichte moderner Werte und des gesellschaftlichen Fortschritts interpretiert werden muss.",
+      "opts": [
+        "Ja. Die Gründer konnten die moderne Welt nicht vorhersehen. Eine starre Auslegung ist anachronistisch.",
+        "Die Auslegung muss sich anpassen, aber grundlegende Prinzipien müssen stabil bleiben.",
+        "Nein. Die Absicht der Verfasser ist der einzige Garant des Rechts. Änderungen erfordern Verfassungszusätze."
+      ]
+    },
+    "bt1": {
+      "q": "Tech-Monopole wie Google, Meta und Amazon sind zu mächtig geworden und müssen zerschlagen werden.",
+      "ctx": "Eine Handvoll Technologiekonzerne kontrolliert den Informationsfluss und besitzt den digitalen öffentlichen Raum.",
+      "opts": [
+        "Ja. Zerschlagt sie. Sie ersticken Wettbewerb, ernten Daten und kontrollieren den Diskurs.",
+        "Regulierungen und Datenschutzgesetze sind besser. Eine Zerschlagung schadet unserer technologischen Vormacht.",
+        "Nein. Sie sind erfolgreich, weil sie hervorragende Dienste anbieten. Lassen wir den Markt entscheiden."
+      ]
+    },
+    "br1": {
+      "q": "Der Staat ist zu groß, zu teuer und greift zu tief ein. Ein kleinerer Staat würde die Freiheit und Produktivität steigern.",
+      "opts": [
+        "Ja. Ausgaben kürzen, Steuern und Vorschriften abbauen, Bürgern mehr Eigenverantwortung zutrauen.",
+        "Einiges ist zu groß, aber Kernprogramme und soziale Dienste haben genau die richtige Größe.",
+        "Nein. Der Staat schafft das Fundament des Wohlstands. Ihn zu beschneiden entzieht der Bevölkerung den Halt."
+      ]
+    },
+    "br2": {
+      "q": "Die Kluft zwischen Arm und Reich gefährdet den gesellschaftlichen Zusammenhalt und die wirtschaftliche Mobilität.",
+      "opts": [
+        "Ja. Progressive Besteuerung, stärkere Sozialprogramme und Vermögenssteuern sind nötig.",
+        "Ungleichheit ist real, aber Aufstiegsschancen und Wachstum zählen mehr als Umverteilung.",
+        "Ungleichheit spiegelt unterschiedliche Leistung wider. Erzwungene Gleichheit bremst den Ehrgeiz."
+      ]
+    },
+    "br3": {
+      "q": "Die größten Gefahren für die Freiheit kommen von innen — staatliche Überwachung und der Abbau von Bürgerrechten.",
+      "opts": [
+        "Ja. Massenüberwachung und Einschränkungen der Bürgerrechte sind die wahren Bedrohungen.",
+        "Externe Bedrohungen sind real. Die Balance zwischen Sicherheit und Freiheit ist schwer.",
+        "Äußere Bedrohungen erfordern eine starke innere Sicherheit und Geheimdienste."
+      ]
+    },
+    "br4": {
+      "q": "Konzerne haben zu viel Einfluss auf Politik, Wirtschaft und das tägliche Leben.",
+      "opts": [
+        "Ja. Wir müssen Lobbyismus drastisch einschränken und die Wahlkampffinanzierung reformieren.",
+        "Konzerneinfluss ist ein problem, aber übermäßige Regulierung schadet dem Mittelstand.",
+        "Wirtschaftsfreiheit ist die Basis des Wohlstands. Der Staat ist eine größere Bedrohung als jede Firma."
+      ]
+    },
+    "ex1": {
+      "q": "Dass das Land so viele Milliardäre hat, ist kein Erfolg, sondern ein Zeichen für ein manipuliertes System.",
+      "opts": [
+        "Ja. Extremer Reichtum in diesem Ausmaß ist ein politisches Versagen, kein Erfolg.",
+        "Nein. Reichtum an der Spitze nimmt den Ärmeren nichts weg. Wachstum nützt allen."
+      ]
+    },
+    "ex2": {
+      "q": "Die Reichen zu besteuern, um staatliche Programme zu finanzieren, bestraft Leistungsträger und vertreibt Arbeitsplätze.",
+      "opts": [
+        "Ja. Kapital flieht aus Hochsteuerländern. Man kann Wohlstand nicht durch Bestrafung aufbauen.",
+        "Nein. Die Reichen haben ihr Vermögen auf öffentlicher Infrastruktur aufgebaut. Sie schulden der Gesellschaft mehr."
+      ]
+    },
+    "ex3": {
+      "q": "Das Gefängnissystem sperrt überproportional viele Menschen ein. Das ist keine Gerechtigkeit, sondern industrielle Bestrafung.",
+      "opts": [
+        "Ja. Massenhaft Gefängnisstrafen sind eine Katastrophe und erfordern einen Richtungswechsel.",
+        "Nein. Hohe Haftstrafen spiegeln hohe Kriminalitätsraten wider. Öffentliche Sicherheit ist nicht verhandelbar."
+      ]
+    },
+    "ex4": {
+      "q": "Die Kriminalität stieg in Städten, die der Polizei Gelder strichen. Die Mittelkürzung war ein verhängnisvoller Fehler.",
+      "opts": [
+        "Ja. Der Versuch ist gescheitert und die schwächsten Stadtteile haben den Preis gezahlt.",
+        "Nein. Die Vernachlässigung von Sozialausgaben, Wohnen und Schulen ist das Problem, nicht zu wenige Polizisten."
+      ]
+    },
+    "ex5": {
+      "q": "Der Staat hat kein Recht, seine eigenen Bürger ohne richterlichen Beschluss zu überwachen. Massenüberwachung muss enden.",
+      "opts": [
+        "Ja. Eine Regierung, die jeden überwacht, vertraut niemandem.",
+        "Nein. Sicherheitsdienste brauchen breiten Zugang. Terrorismus wartet nicht auf Durchsuchungsbeschlüsse."
+      ]
+    },
+    "id1": {
+      "q": "Jede Kultur hat Errungenschaften hervorgebracht, auf die man stolz sein kann. Ich bin stolz auf meine und entschuldige mich nicht dafür.",
+      "opts": [
+        "Ja. Stolz auf die eigene Kultur und Herkunft ist natürlich und gesund.",
+        "Stolz ist in Ordnung, aber Überlegenheitsansprüche machen mich unruhig.",
+        "Nein. Kulturen hierarchisch zu ordnen ist der Ursprung gefährlichen Denkens."
+      ]
+    },
+    "id2": {
+      "q": "Heute lebende Menschen sollten sich für die historischen Verbrechen ihrer Nation schämen – wie Sklaverei, Vertreibung oder Kolonialismus.",
+      "opts": [
+        "Ja. Historische Schuld anzuerkennen ist Teil eines ehrlichen Selbstbildes.",
+        "Wir sollten die Geschichte ehrlich anerkennen, ohne persönliche Scham zu fordern.",
+        "Nein. Man kann nicht für Taten büßen, die man nicht begangen hat. Kollektivschuld ist ungerecht."
+      ]
+    }
+  },
+  "bank": [
+    {
+      "id": "hc1",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "He worked his whole life. Lost his job at 58. Lost his insurance with it. Stage 3 cancer. The bill is 400,000 dollars.",
+      "q": "Should this man go bankrupt or die because he lost his job?",
+      "opts": [
+        {
+          "t": "No. Universal healthcare is the only answer. Medicare for All.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "No. Expand the ACA and protect people in his situation.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 2,
+          "fdp": -1,
+          "afd": -1,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "The ACA is enough. He should have kept his coverage through COBRA.",
+          "e": 1,
+          "g": 0,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": -1,
+          "bsw": -1
+        },
+        {
+          "t": "This is a personal failure. The government should not run healthcare.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "hc2",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Government-run healthcare would destroy medical innovation, decrease care quality, and lead to rationing.",
+      "opts": [
+        {
+          "t": "Yes. The free market drives the best healthcare innovation.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "There are real risks, but standard regulations could prevent them.",
+          "e": 1,
+          "g": 0,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": -1,
+          "bsw": -1
+        },
+        {
+          "t": "No. Other advanced nations pay half as much for better outcomes under universal systems.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "hc3",
+      "nl": "Healthcare",
+      "pair": "hc-b",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Medical debt should be treated differently from consumer debt under the law, with strict limits on interest and collections.",
+      "opts": [
+        {
+          "t": "Yes. No one chooses to be sick. It is a necessity, not a purchase.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 2,
+          "fdp": 1,
+          "afd": -1,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Some protections make sense, but lenders must still be able to collect.",
+          "e": 0,
+          "g": 0,
+          "spd": 0,
+          "cdu": 1,
+          "grn": 0,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": 0,
+          "bsw": 0
+        },
+        {
+          "t": "No. Contracts must be enforced equally. Carving out exemptions hurts credit markets.",
+          "e": 1,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "gn1",
+      "nl": "Gun policy",
+      "pair": "gn-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Since Columbine, over 350,000 students have experienced gun violence at school. Active shooter drills are now a standard part of American childhood.",
+      "q": "The Second Amendment is not a suicide pact. We must ban assault weapons to protect our children.",
+      "opts": [
+        {
+          "t": "Yes. These are weapons of war and have no place on our streets.",
+          "e": 0,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Assault weapons bans are complex. Background checks and red flag laws are more effective.",
+          "e": 0,
+          "g": 1,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": -1,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. Focus on mental health and school security. Do not punish law-abiding citizens.",
+          "e": 0,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "gn2",
+      "nl": "Gun policy",
+      "pair": "gn-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Banning specific types of firearms only disarms law-abiding citizens, leaving them defenceless against criminals who ignore the law.",
+      "opts": [
+        {
+          "t": "Yes. The only thing that stops a bad guy with a gun is a good guy with a gun.",
+          "e": 0,
+          "g": -2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "Self-defence is a right, but some restrictions on high-capacity magazines are reasonable.",
+          "e": 0,
+          "g": -1,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 1,
+          "afd": 1,
+          "lnk": -1,
+          "bsw": -1
+        },
+        {
+          "t": "No. Countries with strict gun laws have a fraction of our homicide rates.",
+          "e": 0,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "gn3",
+      "nl": "Gun policy",
+      "pair": "gn-b",
+      "fr": "neutral",
+      "type": "sc",
+      "ctx": "Roughly 48,000 Americans died from gun-related injuries in 2022. More than half were suicides.",
+      "q": "We should require a mandatory 10-day waiting period for all firearm purchases to prevent impulsive acts of violence.",
+      "opts": [
+        {
+          "t": "Yes. A cooling-off period is a common-sense measure that saves lives.",
+          "e": 0,
+          "g": 1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 2,
+          "fdp": -1,
+          "afd": -1,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Waiting periods should apply only to first-time buyers or young adults.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": 0,
+          "grn": 1,
+          "fdp": 0,
+          "afd": 0,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. A right delayed is a right denied. Victims of stalking need protection immediately.",
+          "e": 0,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "im1",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Millions of undocumented immigrants live in the United States. Border crossings have reached historic highs. Municipal resources are overwhelmed.",
+      "q": "A country without borders is not a country. We must secure the southern border and deport those here illegally.",
+      "opts": [
+        {
+          "t": "Yes. Law and order must be restored. Border security is national security.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 0,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        },
+        {
+          "t": "Secure the border, but provide a pathway to legal status for those already here.",
+          "e": 0,
+          "g": 1,
+          "spd": 1,
+          "cdu": 1,
+          "grn": 1,
+          "fdp": -1,
+          "afd": 1,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "Focus on humane processing, addressing root causes, and expanding legal pathways.",
+          "e": -1,
+          "g": 0,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 0,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "im2",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Undocumented immigrants pay billions in taxes, harvest our food, care for our elderly, and build our homes.",
+      "q": "Tearing families apart through mass deportations is a moral abomination. We need a pathway to citizenship.",
+      "opts": [
+        {
+          "t": "Yes. These are our neighbours and co-workers. They deserve dignity and legal status.",
+          "e": -1,
+          "g": -1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 1,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "Provide legal status and work permits, but citizenship should be a long and strict process.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": 0,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": -1
+        },
+        {
+          "t": "No. Rewarding law-breaking encourages more illegal immigration. Deportations are necessary.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 0,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "im3",
+      "nl": "Immigration",
+      "pair": "im-b",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The United States should significantly increase the number of highly-skilled visas (H-1B) to attract the best talent globally.",
+      "opts": [
+        {
+          "t": "Yes. High-skill immigration drives innovation and creates American jobs.",
+          "e": 1,
+          "g": -1,
+          "spd": 2,
+          "cdu": 1,
+          "grn": 2,
+          "fdp": 2,
+          "afd": 1,
+          "lnk": 0,
+          "bsw": 1
+        },
+        {
+          "t": "Some increase is fine, but we must protect American tech workers from wage suppression.",
+          "e": 0,
+          "g": 0,
+          "spd": 0,
+          "cdu": 0,
+          "grn": 0,
+          "fdp": 0,
+          "afd": 0,
+          "lnk": 0,
+          "bsw": 0
+        },
+        {
+          "t": "No. Corporations should invest in training American workers instead of importing cheap talent.",
+          "e": -1,
+          "g": 1,
+          "spd": -1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": -2,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": -1
+        }
+      ]
+    },
+    {
+      "id": "tx1",
+      "nl": "Taxes and economy",
+      "pair": "tx-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "The three richest Americans hold more wealth than the bottom 50% of the entire population combined.",
+      "q": "Extreme wealth inequality is a threat to democracy. We must introduce a wealth tax on fortunes over $50 million.",
+      "opts": [
+        {
+          "t": "Yes. Billionaires should not exist in a society with homeless children.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Wealth taxes are unconstitutional. Raise the top income tax bracket instead.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 2,
+          "fdp": -1,
+          "afd": -1,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "No. Forced redistribution is theft. Wealth is created, not stolen.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "tx2",
+      "nl": "Taxes and economy",
+      "pair": "tx-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Taxing capital and high earners only drives investment offshore, reduces productivity, and hurts the workers it claims to help.",
+      "opts": [
+        {
+          "t": "Yes. Lower taxes stimulate investment, business growth, and job creation.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "Some taxes are necessary, but high marginal rates distort economic decisions.",
+          "e": 1,
+          "g": 0,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 1,
+          "afd": 1,
+          "lnk": -1,
+          "bsw": -1
+        },
+        {
+          "t": "No. Trickle-down economics is a proven lie. Demand-side growth is the only reality.",
+          "e": -2,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "tx3",
+      "nl": "Taxes and economy",
+      "pair": "tx-b",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The federal corporate income tax rate should be returned to 35% to ensure large corporations pay their fair share.",
+      "opts": [
+        {
+          "t": "Yes. Corporations have enjoyed record profits while paying historically low tax rates.",
+          "e": -2,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "A moderate rate around 25-28% is a competitive compromise.",
+          "e": -1,
+          "g": 0,
+          "spd": 1,
+          "cdu": 0,
+          "grn": 1,
+          "fdp": -1,
+          "afd": 0,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. A high rate makes American businesses uncompetitive and is passed on to consumers.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "cl1",
+      "nl": "Climate and energy",
+      "pair": "cl-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "2023 was the hottest year on record. Wildfires, droughts, and historic flooding have cost the US economy billions in disaster relief.",
+      "q": "We are in a climate emergency. The federal government must rapidly phase out fossil fuels and invest in a Green New Deal.",
+      "opts": [
+        {
+          "t": "Yes. Transitioning to renewable energy is the moral and economic imperitive of our time.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "Phasing out fossil fuels abruptly would devastate the economy. Subsidise green tech instead.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": -1,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": -1
+        },
+        {
+          "t": "No. American energy independence requires oil, gas, and coal. The Green New Deal is socialist fantasy.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "cl2",
+      "nl": "Climate and energy",
+      "pair": "cl-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Unilateral bans on fossil fuels destroy high-paying American jobs and make us dependent on foreign adversaries like China for solar and battery tech.",
+      "opts": [
+        {
+          "t": "Yes. Drill, baby, drill. Cheap, abundant energy is the engine of the economy.",
+          "e": 2,
+          "g": 0,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        },
+        {
+          "t": "We should pursue all energy options, including nuclear and clean natural gas.",
+          "e": 1,
+          "g": 0,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 1,
+          "afd": 1,
+          "lnk": -1,
+          "bsw": 1
+        },
+        {
+          "t": "No. The transition is inevitable. Leading it is how we create the manufacturing jobs of the future.",
+          "e": -2,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "ab1",
+      "nl": "Abortion rights",
+      "pair": "ab-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Since Roe v. Wade was overturned, over a dozen states have enacted near-total bans on abortion, forcing women to travel thousands of miles for basic reproductive healthcare.",
+      "q": "Abortion is healthcare. Congress must pass federal legislation to codify the protections of Roe v. Wade nationwide.",
+      "opts": [
+        {
+          "t": "Yes. Reproductive freedom is a fundamental human right.",
+          "e": 0,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 1,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "Support federal access, but with standard limits on late-term abortions.",
+          "e": 0,
+          "g": -1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 2,
+          "fdp": 0,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": -1
+        },
+        {
+          "t": "No. The issue belongs with the states, in accordance with the Constitution.",
+          "e": 0,
+          "g": 1,
+          "spd": -1,
+          "cdu": 2,
+          "grn": -1,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -1,
+          "bsw": 2
+        },
+        {
+          "t": "No. Abortion is the taking of a human life and should be banned nationwide.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "ab2",
+      "nl": "Abortion rights",
+      "pair": "ab-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The Dobbs decision correctly returned the issue of abortion to the democratic process in each state, rather than leaving it to unelected judges.",
+      "opts": [
+        {
+          "t": "Yes. The Constitution does not mention abortion. States have the right to protect unborn life.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        },
+        {
+          "t": "States should decide, but bans should have exceptions for rape, incest, and the life of the mother.",
+          "e": 0,
+          "g": 1,
+          "spd": -1,
+          "cdu": 2,
+          "grn": -1,
+          "fdp": 0,
+          "afd": 2,
+          "lnk": -1,
+          "bsw": 2
+        },
+        {
+          "t": "No. Human rights should not be subject to geographical boundaries or state legislatures.",
+          "e": 0,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 1,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "sd1",
+      "nl": "Student debt and education",
+      "pair": "sd-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Over 43 million Americans carry student loan debt, totalling more than 1.7 trillion dollars. A generation is delaying buying homes, starting businesses, and having children under this burden.",
+      "q": "Higher education is a public good. The federal government should cancel student debt and make public colleges tuition-free.",
+      "opts": [
+        {
+          "t": "Yes. Free education is an investment in our national future.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Cancel debt for lower-income students and reform interest rates, but free tuition is too costly.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 2,
+          "fdp": -1,
+          "afd": -1,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "No. This is a massive wealth transfer from working-class taxpayers to college-educated elites.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "sd2",
+      "nl": "Student debt and education",
+      "pair": "sd-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Forgiving student debt is deeply unfair to the millions of Americans who worked to pay off their loans or chose not to attend college.",
+      "opts": [
+        {
+          "t": "Yes. You sign a contract, you pay it back. Personal responsibility matters.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "The system has issues, but outright cancellation is the wrong tool.",
+          "e": 1,
+          "g": 0,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 1,
+          "afd": 1,
+          "lnk": -1,
+          "bsw": -1
+        },
+        {
+          "t": "No. The cost of college has skyrocketed due to state disinvestment. The contract was predatory.",
+          "e": -2,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "rj1",
+      "nl": "Race and justice",
+      "pair": "rj-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Black Americans are incarcerated at roughly five times the rate of white Americans and are disproportionately targeted by police and the judicial system.",
+      "q": "Systemic racism is real. We must structurally reform policing, end qualified immunity, and invest in Black communities.",
+      "opts": [
+        {
+          "t": "Yes. The criminal justice system is built on racial inequality and requires radical reform.",
+          "e": -1,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "Reform policing and qualified immunity, but do not defund or weaken law enforcement.",
+          "e": 0,
+          "g": -1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 2,
+          "fdp": 0,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": -1
+        },
+        {
+          "t": "No. Systemic racism is a divisive narrative. The problem is crime and breakdown of the family.",
+          "e": 1,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "rj2",
+      "nl": "Race and justice",
+      "pair": "rj-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The constant focus on racial divisions by politicians and the media undermines American unity and turns us against each other.",
+      "opts": [
+        {
+          "t": "Yes. We should judge people by the content of their character, not the color of their skin.",
+          "e": 0,
+          "g": 1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 0,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        },
+        {
+          "t": "Racial gaps are real, but our language should focus on unifying economic solutions.",
+          "e": 0,
+          "g": 0,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": -1,
+          "bsw": 1
+        },
+        {
+          "t": "No. Ignoring history does not erase the legacy of slavery and Jim Crow. We must name systemic racism to dismantle it.",
+          "e": -1,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "vt1",
+      "nl": "Voting and democracy",
+      "pair": "vt-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "We should establish federal standards for automatic voter registration, expand mail-in voting, and make Election Day a national holiday.",
+      "opts": [
+        {
+          "t": "Yes. Voting is a right. We should make it as easy as possible for every citizen to participate.",
+          "e": 0,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 1,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "National holiday yes, but registration and voting rules should remain with the states.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": 0,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": -1
+        },
+        {
+          "t": "No. We need stricter voter ID laws to ensure election integrity and prevent fraud.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "vt2",
+      "nl": "Voting and democracy",
+      "pair": "vt-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Loosening voter registration rules and expanding mail-in voting opens the door to fraud and undermines public trust in elections.",
+      "opts": [
+        {
+          "t": "Yes. Every vote must be verified. Stricter voter ID laws protect the integrity of our democracy.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        },
+        {
+          "t": "Integrity is important, but rules should not be used as tools for voter suppression.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": 1,
+          "grn": 1,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. Voter fraud is virtually non-existent. These laws are designed to suppress minority turnout.",
+          "e": 0,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 1,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "fp1",
+      "nl": "Foreign policy",
+      "pair": "fp-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "The United States has hundreds of military bases globally and spends more on defence than the next ten countries combined.",
+      "q": "We must project strength. A strong military is the only guarantee of global stability and the protection of democratic values.",
+      "opts": [
+        {
+          "t": "Yes. Peace through strength. We must support our allies in NATO and the Pacific.",
+          "e": 0,
+          "g": 1,
+          "spd": 1,
+          "cdu": 2,
+          "grn": 1,
+          "fdp": 2,
+          "afd": -1,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "Defend our allies, but avoid costly foreign interventions and nation-building.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": 2,
+          "grn": 1,
+          "fdp": 1,
+          "afd": -1,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "No. The military-industrial complex makes us less safe and drains resources from domestic needs.",
+          "e": -1,
+          "g": -2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -2,
+          "afd": -1,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "fp2",
+      "nl": "Foreign policy",
+      "pair": "fp-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The United States should stop spending billions of dollars on foreign wars and instead focus on rebuilding our own communities.",
+      "opts": [
+        {
+          "t": "Yes. America First. Our priority must be the American worker and domestic stability.",
+          "e": 1,
+          "g": 0,
+          "spd": -2,
+          "cdu": -1,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "A balanced approach. We must engage globally to protect our own interests.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": 0,
+          "afd": 2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "No. Isolationism is a dangerous illusion. Global stability directly affects our economy and security.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": -1,
+          "grn": 2,
+          "fdp": -2,
+          "afd": 2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "si1",
+      "nl": "Social and cultural issues",
+      "pair": "si-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Transgender youths face high rates of depression, anxiety, and suicide. Major medical associations support gender-affirming care as medically necessary.",
+      "q": "Gender-affirming care is a matter of basic healthcare and medical freedom. Government has no right to ban it.",
+      "opts": [
+        {
+          "t": "Yes. Decisions should be made by patients, families, and doctors, not politicians.",
+          "e": 0,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "Care is healthcare, but some age-limits on irreversible surgical procedures are reasonable.",
+          "e": 0,
+          "g": -1,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": 0,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": -1
+        },
+        {
+          "t": "No. We must protect children from experimental procedures and defend traditional values.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "si2",
+      "nl": "Social and cultural issues",
+      "pair": "si-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Allowing minors to undergo irreversible gender transition procedures is a form of medical malpractice that the state must prohibit.",
+      "opts": [
+        {
+          "t": "Yes. Children do not have the maturity to consent to such life-altering decisions.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        },
+        {
+          "t": "Strict medical evaluation is needed, but total bans go too far.",
+          "e": 0,
+          "g": 1,
+          "spd": 1,
+          "cdu": 1,
+          "grn": 1,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. Medical decisions belong with families and doctors. Bans are built on transphobia.",
+          "e": 0,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "gi1",
+      "nl": "Government and institutions",
+      "pair": "gi-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The federal government should establish strict regulations on social media platforms to combat misinformation, hate speech, and foreign election interference.",
+      "opts": [
+        {
+          "t": "Yes. Unregulated tech monopolies have damaged our democracy and public health.",
+          "e": -1,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Misinformation is a threat, but government regulation carries high risks of political censorship.",
+          "e": 0,
+          "g": 0,
+          "spd": 0,
+          "cdu": 0,
+          "grn": 0,
+          "fdp": 0,
+          "afd": 0,
+          "lnk": 0,
+          "bsw": 0
+        },
+        {
+          "t": "No. The First Amendment protects all speech, including offensive speech. Free debate is the only answer.",
+          "e": 1,
+          "g": -2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "gi2",
+      "nl": "Government and institutions",
+      "pair": "gi-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "The federal government works behind the scenes with social media platforms to flag, suppress, and label content regarding public health, elections, and political opinions.",
+      "q": "This is not regulation. It is a modern, digital Ministry of Truth violating the First Amendment through the back door.",
+      "opts": [
+        {
+          "t": "Yes. Government pressure on private platforms to suppress speech is state censorship.",
+          "e": 1,
+          "g": -2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "The platform should moderate its own rules, but government communication must be transparent.",
+          "e": 0,
+          "g": 0,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": 0,
+          "bsw": -1
+        },
+        {
+          "t": "No. The state has an obligation to warn platforms about dangerous foreign campaigns or threats to public safety.",
+          "e": -1,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "ss1",
+      "nl": "Social Security and Medicare",
+      "pair": "ss-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "We should secure Social Security and Medicare for future generations by raising the cap on taxable income so high earners contribute more.",
+      "opts": [
+        {
+          "t": "Yes. The wealthy should pay into the system on all of their income, just like average workers.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Raise the cap, but also gradually adjust the retirement age for future generations.",
+          "e": 0,
+          "g": 1,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": -1,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. We should move toward privatised personal accounts and let the market manage retirement.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "ss2",
+      "nl": "Social Security and Medicare",
+      "pair": "ss-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Expanding government entitlement programs like Social Security and Medicare as the national debt grows is fiscally irresponsible.",
+      "opts": [
+        {
+          "t": "Yes. We must cut spending and look at privatisation to prevent national insolvency.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "Entitlements must be reformed and capped, but the safety net should remain intact.",
+          "e": 1,
+          "g": 0,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 1,
+          "afd": 1,
+          "lnk": -1,
+          "bsw": -1
+        },
+        {
+          "t": "No. These programs are promises that working class Americans paid into. Cut military or corporate subsidies instead.",
+          "e": -2,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "tr1",
+      "nl": "Trade and jobs",
+      "pair": "tr-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "For forty years, manufacturing jobs were outsourced to low-wage nations. American towns were hollowed out, while corporations posted record profits.",
+      "q": "Free trade was a massive transfer of wealth from American workers to multinational corporations. We must protect domestic industries.",
+      "opts": [
+        {
+          "t": "Yes. Tariffs and industrial policy are necessary to rebuild the American middle class.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": 2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": 2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Targeted tariffs on strategic sectors only (like microchips). Broad tariffs hurt consumers.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": 0,
+          "grn": 1,
+          "fdp": -1,
+          "afd": 0,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. Protectionism raises prices and leads to trade wars that make everyone poorer.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": -1,
+          "grn": -2,
+          "fdp": 2,
+          "afd": -1,
+          "lnk": -1,
+          "bsw": -1
+        }
+      ]
+    },
+    {
+      "id": "ed1",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Public school funding should be strictly needs-based, with additional federal funding redirected from wealthy districts to low-income schools.",
+      "opts": [
+        {
+          "t": "Yes. Every child deserves an equal start in life, regardless of their zip code.",
+          "e": -1,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Needs-based funding yes, but do not penalise districts that choose to fund their schools more.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": 0,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. Educational vouchers should allow parents to send their children to any school, public or private.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "ed2",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "con",
+      "type": "s",
+      "q": "School choice vouchers allow parents to use public funds for private schooling. This siphons vital resources from a struggling public school system.",
+      "opts": [
+        {
+          "t": "Yes. Public money belongs in public schools. Voucher programs create inequality.",
+          "e": -2,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Vouchers have some value, but they must be targeted only at low-income students in failing schools.",
+          "e": -1,
+          "g": 0,
+          "spd": 1,
+          "cdu": 0,
+          "grn": 1,
+          "fdp": -1,
+          "afd": 0,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. Competition improves all schools. Parents should have the freedom to choose what is best for their children.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "co1",
+      "nl": "Courts and Constitution",
+      "pair": "co-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The Supreme Court has become a partisan political body. We should establish 18-year term limits and a binding code of ethics for all justices.",
+      "opts": [
+        {
+          "t": "Yes. Lifelong appointments with no ethical accountability are a threat to democratic legitimacy.",
+          "e": 0,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Binding ethics code yes, but term limits require a constitutional amendment and are too risky.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": -1,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. The system has worked for 240 years. Changing the rules is just court-packing by another name.",
+          "e": 0,
+          "g": 1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "co2",
+      "nl": "Courts and Constitution",
+      "pair": "co-a",
+      "fr": "con",
+      "type": "s",
+      "q": "The Constitution is a living document that must be interpreted in light of modern values and social progress.",
+      "opts": [
+        {
+          "t": "Yes. The founders could not foresee the internet, modern weapons, or civil rights. Strict originalism is anachronistic.",
+          "e": 0,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Interpretation must adapt slightly, but fundamental constitutional principles must remain stable.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": 0,
+          "grn": 1,
+          "fdp": 0,
+          "afd": 0,
+          "lnk": 0,
+          "bsw": 1
+        },
+        {
+          "t": "No. Original intent is the only guarantee of law. If you want to change the Constitution, pass an amendment.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "bt1",
+      "nl": "Big Tech",
+      "pair": "bt-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "A handful of tech conglomerates control the flow of modern information, own the digital public square, and hold massive influence over elections.",
+      "q": "Tech monopolies like Google, Meta, and Amazon have grown too large and must be broken up under antitrust laws.",
+      "opts": [
+        {
+          "t": "Yes. Break them up. They stifle competition, harvest private data, and suppress speech.",
+          "e": -1,
+          "g": 2,
+          "spd": 2,
+          "cdu": 2,
+          "grn": 2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Regulation and data privacy laws are better tools. Breaking them up hurts US tech dominance.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": 0,
+          "grn": 1,
+          "fdp": -1,
+          "afd": 0,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. They are successful because they provide great services. Let the market decide.",
+          "e": 2,
+          "g": -2,
+          "spd": -2,
+          "cdu": -1,
+          "grn": -2,
+          "fdp": 2,
+          "afd": -1,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "br1",
+      "nl": "Role of government",
+      "pair": "br-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The federal government is too large, too expensive, and too intrusive. A smaller state would make America more free and more productive.",
+      "opts": [
+        {
+          "t": "Yes. Cut spending, reduce regulations, trust citizens to make their own decisions.",
+          "e": 2,
+          "g": -2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "Some government is too large, but public services and social programs are the right size.",
+          "e": -1,
+          "g": 0,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": 1,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": 1
+        },
+        {
+          "t": "No. The state builds the foundations of prosperity. Cutting it cuts the floor out from under Americans.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "br2",
+      "nl": "Role of government",
+      "pair": "br-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The gap between the wealthiest Americans and everyone else has grown to a level that threatens social cohesion and economic mobility.",
+      "opts": [
+        {
+          "t": "Yes. Progressive taxation, stronger social programs, and wealth taxes are needed.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "Inequality is real, but opportunity and growth matter more than redistribution.",
+          "e": 1,
+          "g": 0,
+          "spd": 0,
+          "cdu": 1,
+          "grn": 0,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": 0,
+          "bsw": 0
+        },
+        {
+          "t": "Inequality reflects different efforts. Forced equality stifles ambition.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "br3",
+      "nl": "Individual rights",
+      "pair": "br-b",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The greatest threats to American freedom come from within — government overreach, surveillance, and the erosion of civil liberties.",
+      "opts": [
+        {
+          "t": "Yes. The Patriot Act, NSA surveillance, and the war on drugs are the real threats.",
+          "e": -1,
+          "g": -2,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": 2,
+          "afd": -1,
+          "lnk": 1,
+          "bsw": -1
+        },
+        {
+          "t": "External threats are real too. Balancing security and liberty is genuinely hard.",
+          "e": 0,
+          "g": 0,
+          "spd": 0,
+          "cdu": 1,
+          "grn": 0,
+          "fdp": 0,
+          "afd": 1,
+          "lnk": 0,
+          "bsw": 1
+        },
+        {
+          "t": "Threats from China, Russia, and terrorism require strong internal security.",
+          "e": 1,
+          "g": 2,
+          "spd": -1,
+          "cdu": 2,
+          "grn": -1,
+          "fdp": -2,
+          "afd": 2,
+          "lnk": -1,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "br4",
+      "nl": "Individual rights",
+      "pair": "br-b",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Corporations have too much influence over American politics, the economy, and daily life.",
+      "opts": [
+        {
+          "t": "Yes. Citizens United was a catastrophe. Public financing, strict lobbying limits.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 0,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "Corporate influence is a real problem but heavy-handed regulation creates its own abuses.",
+          "e": 0,
+          "g": 0,
+          "spd": 0,
+          "cdu": 0,
+          "grn": 0,
+          "fdp": 0,
+          "afd": 0,
+          "lnk": 0,
+          "bsw": 0
+        },
+        {
+          "t": "Corporate freedom is economic freedom. Government is a bigger threat than any company.",
+          "e": 2,
+          "g": -2,
+          "spd": -2,
+          "cdu": 1,
+          "grn": -2,
+          "fdp": 1,
+          "afd": 1,
+          "lnk": -2,
+          "bsw": 1
+        }
+      ]
+    },
+    {
+      "id": "ex1",
+      "nl": "Economy and inequality",
+      "pair": "ex-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "America has more billionaires than any country on earth. That is not success. That is a system rigged in their favour.",
+      "opts": [
+        {
+          "t": "Yes. Extreme wealth at this scale is a political failure, not an achievement.",
+          "e": -2,
+          "g": 2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        },
+        {
+          "t": "No. Wealth at the top does not take from the bottom. Growth benefits everyone.",
+          "e": 2,
+          "g": -2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "nl": "Economy and inequality",
+      "pair": "ex-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Taxing the rich to fund government programmes punishes success and drives away the people who create jobs.",
+      "opts": [
+        {
+          "t": "Yes. Capital flees high-tax environments. You cannot build prosperity by punishing it.",
+          "e": 2,
+          "g": -1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 2,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": -2
+        },
+        {
+          "t": "No. The wealthy built their fortunes on public infrastructure. They owe more back.",
+          "e": -2,
+          "g": 1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": -2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "ex3",
+      "nl": "Criminal justice",
+      "pair": "ex-b",
+      "fr": "pro",
+      "type": "s",
+      "q": "The American prison system locks up more people than any country on earth. That is not justice. It is industrial punishment.",
+      "opts": [
+        {
+          "t": "Yes. Mass incarceration is a moral catastrophe and must be dismantled.",
+          "e": -1,
+          "g": -2,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 2,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "No. High incarceration reflects high crime rates. Public safety is not negotiable.",
+          "e": 0,
+          "g": 2,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        }
+      ]
+    },
+    {
+      "id": "ex4",
+      "nl": "Criminal justice",
+      "pair": "ex-b",
+      "fr": "con",
+      "type": "s",
+      "q": "Violent crime surged in cities that cut police funding. Defunding the police was a catastrophic mistake.",
+      "opts": [
+        {
+          "t": "Yes. The experiment failed and communities of colour paid the price.",
+          "e": 0,
+          "g": 2,
+          "spd": -1,
+          "cdu": 2,
+          "grn": -1,
+          "fdp": -1,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        },
+        {
+          "t": "No. Underfunding mental health, housing, and schools created the conditions. More cops is not the answer.",
+          "e": 0,
+          "g": -1,
+          "spd": 1,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 1,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "ex5",
+      "nl": "Civil liberties",
+      "pair": "ex-c",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The government has no right to monitor its own citizens without a court order. Mass surveillance must end.",
+      "opts": [
+        {
+          "t": "Yes. A government that watches everyone trusts no one.",
+          "e": 0,
+          "g": -2,
+          "spd": 1,
+          "cdu": -1,
+          "grn": 1,
+          "fdp": 2,
+          "afd": -1,
+          "lnk": 2,
+          "bsw": 1
+        },
+        {
+          "t": "No. Security services need broad access. Terrorism does not wait for warrants.",
+          "e": 0,
+          "g": 2,
+          "spd": -1,
+          "cdu": 1,
+          "grn": -1,
+          "fdp": 2,
+          "afd": 1,
+          "lnk": -2,
+          "bsw": -1
+        }
+      ]
+    },
+    {
+      "id": "id1",
+      "nl": "National and cultural identity",
+      "pair": "ident-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.",
+      "opts": [
+        {
+          "t": "Yes. Pride in your own culture and heritage is natural and healthy.",
+          "e": 0,
+          "g": 1,
+          "spd": -1,
+          "cdu": 2,
+          "grn": -1,
+          "fdp": 1,
+          "afd": 2,
+          "lnk": -1,
+          "bsw": 2
+        },
+        {
+          "t": "Pride is fine but claims of superiority over others make me uncomfortable.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": 0,
+          "grn": 1,
+          "fdp": 1,
+          "afd": 0,
+          "lnk": 0,
+          "bsw": 0
+        },
+        {
+          "t": "No. Ranking cultures above each other is where dangerous thinking begins.",
+          "e": 0,
+          "g": -1,
+          "spd": 1,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 0,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        }
+      ]
+    },
+    {
+      "id": "id2",
+      "nl": "National and cultural identity",
+      "pair": "ident-a",
+      "fr": "con",
+      "type": "s",
+      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+      "opts": [
+        {
+          "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",
+          "e": 0,
+          "g": -1,
+          "spd": 2,
+          "cdu": -2,
+          "grn": 2,
+          "fdp": 0,
+          "afd": -2,
+          "lnk": 2,
+          "bsw": -2
+        },
+        {
+          "t": "We should acknowledge history honestly without demanding personal shame.",
+          "e": 0,
+          "g": 0,
+          "spd": 1,
+          "cdu": 0,
+          "grn": 1,
+          "fdp": 1,
+          "afd": 0,
+          "lnk": 0,
+          "bsw": 0
+        },
+        {
+          "t": "No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.",
+          "e": 0,
+          "g": 1,
+          "spd": -2,
+          "cdu": 2,
+          "grn": -2,
+          "fdp": 0,
+          "afd": 2,
+          "lnk": -2,
+          "bsw": 2
+        }
+      ]
+    }
+  ],
+  "heroTitle": "Wo stehst du in der<br><em>deutschen</em> Politik?",
+  "heroSub": "47 praxisnahe Szenario-Fragen zu den drängenden Themen der Bundespolitik. Ermittle deine Position auf dem Kompass und sieh die Übereinstimmung mit allen großen Parteien.",
+  "partyStripHtml": "<div class=\"party-strip\">\r\n    <div class=\"party-cell\">\r\n      <div class=\"party-dot\" style=\"background:#EB001F\"></div>"
+}
