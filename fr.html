@@ -2812,14 +2812,143 @@ const PARTY_META = {
 };
 
 let currentLang = 'fr';
-    
+const engCountryName = 'France';
+const localCountryName = 'France';
+const heroTitleEn = "Where do you stand in<br><em>French</em> politics?";
+const heroSubEn = "47 scenario-based questions on the issues defining France right now. Economy, security, environment, pensions, and EU. See your alignment across all parties.";
+const heroTitleLocal = "Où vous situez-vous dans la<br>politique <em>française</em>?";
+const heroSubLocal = "47 questions concrètes basées sur des scénarios réels qui définissent la politique française actuelle. Découvrez votre position sur l'échiquier et votre alignement avec chaque parti.";
+
+const STATIC_TRANSLATIONS = {
+  en: {
+  "startBtn": "Start the test",
+  "howItWorks": "How it works",
+  "skipBtn": "Skip",
+  "backBtn": "Back",
+  "nextBtn": "Next",
+  "demoTitle": "Almost there.",
+  "demoSub": "A few quick questions before your results. Everything is anonymous.",
+  "seeResultsBtn": "See my results",
+  "lblAge": "Age",
+  "lblCountry": "Region <span>(optional)</span>",
+  "lblParty": "How do you currently identify? <span>(optional)</span>",
+  "lblGender": "Gender <span>(optional)</span>",
+  "lblNat": "Nationality <span>(optional)</span>",
+  "optSelect": "Select...",
+  "optPreferNot": "Prefer not to say",
+  "optInd": "Independent / Other",
+  "ageSelectOpts": [
+    "Under 18",
+    "18 to 24",
+    "25 to 34",
+    "35 to 44",
+    "45 to 54",
+    "55 to 64",
+    "65 or older"
+  ],
+  "genderSelectOpts": [
+    "Male",
+    "Female",
+    "Other",
+    "Prefer not to say"
+  ],
+  "lblConsent": "<strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.",
+  "demoNote": "This is never linked to your answers. It helps us understand who takes the test.",
+  "calcTitle": "Mapping your answers",
+  "calcSub": "This will only take a moment.",
+  "rEyebrow": "Your {Country} political alignment",
+  "saveTitle": "Save your results",
+  "saveDesc": "Enter your email and we will send you a link to these results. Never shared.",
+  "sendBtn": "Send results",
+  "copyBtn": "Copy results link",
+  "retakeBtn": "Retake",
+  "genBtn": "General test",
+  "natNames": {
+    "United States": "United States",
+    "United Kingdom": "United Kingdom",
+    "Canada": "Canada",
+    "Australia": "Australia",
+    "New Zealand": "New Zealand",
+    "Germany": "Germany",
+    "Austria": "Austria",
+    "France": "France",
+    "Spain": "Spain",
+    "Italy": "Italy",
+    "Sweden": "Sweden",
+    "Ireland": "Ireland",
+    "Netherlands": "Netherlands",
+    "Other": "Other"
+  }
+},
+  fr: {
+  "startBtn": "Démarrer le test",
+  "howItWorks": "Comment ça marche",
+  "skipBtn": "Passer",
+  "backBtn": "Retour",
+  "nextBtn": "Suivant",
+  "demoTitle": "Presque fini.",
+  "demoSub": "Quelques questions rapides avant vos résultats. Tout est anonyme.",
+  "seeResultsBtn": "Voir mes résultats",
+  "lblAge": "Âge",
+  "lblCountry": "Région <span>(facultatif)</span>",
+  "lblParty": "Comment vous identifiez-vous politiquement ? <span>(facultatif)</span>",
+  "lblGender": "Genre <span>(facultatif)</span>",
+  "lblNat": "Nationalité <span>(facultatif)</span>",
+  "optSelect": "Sélectionner...",
+  "optPreferNot": "Préfère ne pas répondre",
+  "optInd": "Indépendant / Autre",
+  "ageSelectOpts": [
+    "Moins de 18 ans",
+    "18 à 24 ans",
+    "25 à 34 ans",
+    "35 à 44 ans",
+    "45 à 54 ans",
+    "55 à 64 ans",
+    "65 ans ou plus"
+  ],
+  "genderSelectOpts": [
+    "Homme",
+    "Femme",
+    "Autre",
+    "Préfère ne pas répondre"
+  ],
+  "lblConsent": "<strong>Consentement de recherche :</strong> J’autorise CoreOpinion à enregistrer mes réponses anonymes et mes données démographiques pour la recherche, les statistiques et les tableaux de bord de sondages publics.",
+  "demoNote": "Ceci n'est jamais lié à vos réponses. Cela nous aide à comprendre qui passe le test.",
+  "calcTitle": "Analyse de vos réponses",
+  "calcSub": "Cela ne prendra qu'un instant.",
+  "rEyebrow": "Votre alignement politique en {Country}",
+  "saveTitle": "Enregistrer vos résultats",
+  "saveDesc": "Saisissez votre e-mail et nous vous enverrons un lien vers vos résultats. Jamais partagé.",
+  "sendBtn": "Envoyer les résultats",
+  "copyBtn": "Copier le lien des résultats",
+  "retakeBtn": "Recommencer",
+  "genBtn": "Test général",
+  "natNames": {
+    "United States": "États-Unis",
+    "United Kingdom": "Royaume-Uni",
+    "Canada": "Canada",
+    "Australia": "Australie",
+    "New Zealand": "Nouvelle-Zélande",
+    "Germany": "Allemagne",
+    "Austria": "Autriche",
+    "France": "France",
+    "Spain": "Espagne",
+    "Italy": "Italie",
+    "Sweden": "Suède",
+    "Ireland": "Irlande",
+    "Netherlands": "Pays-Bas",
+    "Other": "Autre"
+  }
+}
+};
+
 function toggleLang() {
   currentLang = currentLang === 'en' ? 'fr' : 'en';
   document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'Français' : 'English';
   document.getElementById('lang-label').textContent = currentLang === 'en' ? 'France' : 'France';
   
   window.currentLang = currentLang;
-  if (typeof applyLang === 'function') applyLang();
+  applyLang();
   if (document.getElementById('page-test').classList.contains('active')) renderQ();
 }
 
@@ -2840,8 +2969,134 @@ function getQuestion(q) {
   };
 }
 
+function applyLang() {
+  const isEn = currentLang === 'en';
+  const strings = STATIC_TRANSLATIONS[currentLang];
+  if (!strings) return;
+
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) heroTitle.innerHTML = isEn ? heroTitleEn : heroTitleLocal;
+
+  const heroSub = document.querySelector('.hero-sub');
+  if (heroSub) heroSub.textContent = isEn ? heroSubEn : heroSubLocal;
+
+  const startBtn = document.querySelector('.hero-cta .btn-primary');
+  if (startBtn) startBtn.textContent = strings.startBtn;
+
+  const howItWorksBtn = document.querySelector('.hero-cta .btn-secondary');
+  if (howItWorksBtn) howItWorksBtn.textContent = strings.howItWorks;
+
+  const skipBtn = document.querySelector('.btn-skip');
+  if (skipBtn) skipBtn.textContent = strings.skipBtn;
+
+  const backBtn = document.getElementById('btn-back');
+  if (backBtn) backBtn.textContent = strings.backBtn;
+
+  const nextBtn = document.querySelector('.q-foot .btn-primary');
+  if (nextBtn) nextBtn.textContent = strings.nextBtn;
+
+  const demoTitle = document.querySelector('#page-demo .page-title');
+  if (demoTitle) demoTitle.textContent = strings.demoTitle;
+
+  const demoSub = document.querySelector('#page-demo .page-sub');
+  if (demoSub) demoSub.textContent = strings.demoSub;
+
+  const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
+  if (seeResultsBtn) seeResultsBtn.textContent = strings.seeResultsBtn;
+
+  const lblAge = document.getElementById('d-age')?.previousElementSibling;
+  if (lblAge) lblAge.textContent = strings.lblAge;
+
+  const lblCountry = document.getElementById('d-country')?.previousElementSibling || document.getElementById('d-county')?.previousElementSibling;
+  if (lblCountry) lblCountry.innerHTML = strings.lblCountry;
+
+  const lblParty = document.getElementById('d-party')?.previousElementSibling;
+  if (lblParty) lblParty.innerHTML = strings.lblParty;
+
+  const lblGender = document.getElementById('d-gender')?.previousElementSibling;
+  if (lblGender) lblGender.innerHTML = strings.lblGender;
+
+  const lblNat = document.getElementById('d-nationality')?.previousElementSibling;
+  if (lblNat) lblNat.innerHTML = strings.lblNat;
+
+  const ageSelect = document.getElementById('d-age');
+  if (ageSelect) {
+    ageSelect.options[0].textContent = strings.optSelect;
+    for (let i = 1; i < ageSelect.options.length; i++) {
+      if (strings.ageSelectOpts[i - 1]) ageSelect.options[i].textContent = strings.ageSelectOpts[i - 1];
+    }
+  }
+
+  const genderSelect = document.getElementById('d-gender');
+  if (genderSelect) {
+    genderSelect.options[0].textContent = strings.optSelect;
+    for (let i = 1; i < genderSelect.options.length; i++) {
+      if (strings.genderSelectOpts[i - 1]) genderSelect.options[i].textContent = strings.genderSelectOpts[i - 1];
+    }
+  }
+
+  const partySelect = document.getElementById('d-party');
+  if (partySelect) {
+    partySelect.options[0].textContent = strings.optPreferNot;
+    const lastOpt = partySelect.options[partySelect.options.length - 1];
+    if (lastOpt) lastOpt.textContent = strings.optInd;
+  }
+
+  const countrySelect = document.getElementById('d-country') || document.getElementById('d-county');
+  if (countrySelect) countrySelect.options[0].textContent = strings.optSelect;
+
+  const natSelect = document.getElementById('d-nationality');
+  if (natSelect) {
+    natSelect.options[0].textContent = strings.optSelect;
+    for (let i = 1; i < natSelect.options.length; i++) {
+      const opt = natSelect.options[i];
+      const enVal = opt.getAttribute('data-en') || opt.value || opt.textContent;
+      if (!opt.getAttribute('data-en')) opt.setAttribute('data-en', enVal);
+      if (strings.natNames[enVal]) opt.textContent = strings.natNames[enVal];
+    }
+  }
+
+  const demoNote = document.querySelector('.demo-note');
+  if (demoNote) demoNote.textContent = strings.demoNote;
+  
+  const lblConsent = document.querySelector('label[for="d-consent"]');
+  if (lblConsent) {
+    lblConsent.innerHTML = strings.lblConsent;
+  }
+
+  const calcTitle = document.querySelector('.calc-h');
+  if (calcTitle) calcTitle.textContent = strings.calcTitle;
+
+  const calcSub = document.querySelector('.calc-p');
+  if (calcSub) calcSub.textContent = strings.calcSub;
+
+  const rEyebrow = document.querySelector('.result-eyebrow');
+  if (rEyebrow) {
+    rEyebrow.textContent = strings.rEyebrow.replace('{Country}', isEn ? engCountryName : localCountryName);
+  }
+
+  const saveTitle = document.querySelector('.save-title');
+  if (saveTitle) saveTitle.textContent = strings.saveTitle;
+
+  const saveDesc = document.querySelector('.save-desc');
+  if (saveDesc) saveDesc.textContent = strings.saveDesc;
+
+  const sendBtn = document.querySelector('.save-row .btn-primary');
+  if (sendBtn) sendBtn.textContent = strings.sendBtn;
+
+  const copyBtn = document.querySelector('.share-row button:nth-child(1)');
+  if (copyBtn) copyBtn.textContent = strings.copyBtn;
+
+  const retakeBtn = document.querySelector('.share-row button:nth-child(2)');
+  if (retakeBtn) retakeBtn.textContent = strings.retakeBtn;
+
+  const genBtn = document.querySelector('.share-row a button');
+  if (genBtn) genBtn.textContent = strings.genBtn;
+}
+
 window.getQuestion = getQuestion;
 window.currentLang = currentLang;
+applyLang();
 </script>
 <script src="/engine.js"></script>
 </body>

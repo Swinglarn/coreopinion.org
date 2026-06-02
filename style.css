@@ -1349,20 +1349,39 @@ select:focus, input:focus {
   }
   
   nav {
-    padding: 0 20px;
-    height: 64px;
+    padding: 12px 20px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 8px;
   }
   
   .logo {
     font-size: 24px;
+    order: 1;
+  }
+  
+  nav > div:last-child {
+    order: 2;
   }
   
   .nav-links {
-    gap: 18px;
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
   
   .nav-links a {
     font-size: 14px;
+    display: inline-block;
   }
 
   .hero {
@@ -1552,6 +1571,15 @@ select:focus, input:focus {
   
   .bdc-score {
     font-size: 28px;
+  }
+
+  .party-row {
+    padding: 16px 16px;
+    gap: 12px;
+  }
+
+  .party-row-info {
+    min-width: 100px;
   }
 }
 

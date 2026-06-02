@@ -44,6 +44,369 @@ const nationalitiesList = [
   "Germany", "Austria", "France", "Spain", "Italy", "Sweden", "Ireland", "Netherlands", "Other"
 ];
 
+const englishHeroTexts = {
+  de: {
+    heroTitle: "Where do you stand in<br><em>German</em> politics?",
+    heroSub: "47 scenario-based questions on the issues defining Germany right now. Crime, immigration, welfare, debt brakes, and energy. See your alignment across all parties."
+  },
+  at: {
+    heroTitle: "Where do you stand in<br><em>Austrian</em> politics?",
+    heroSub: "47 scenario-based questions on the issues defining Austria right now. Migration, economy, neutrality, and climate. See your alignment across all parties."
+  },
+  fr: {
+    heroTitle: "Where do you stand in<br><em>French</em> politics?",
+    heroSub: "47 scenario-based questions on the issues defining France right now. Economy, security, environment, pensions, and EU. See your alignment across all parties."
+  },
+  es: {
+    heroTitle: "Where do you stand in<br><em>Spanish</em> politics?",
+    heroSub: "47 scenario-based questions on the issues defining Spain right now. Unemployment, regional autonomy, housing, and social policy. See your alignment across all parties."
+  },
+  it: {
+    heroTitle: "Where do you stand in<br><em>Italian</em> politics?",
+    heroSub: "47 scenario-based questions on the issues defining Italy right now. Economic growth, migration, justice, and EU relations. See your alignment across all parties."
+  },
+  nl: {
+    heroTitle: "Where do you stand in<br><em>Dutch</em> politics?",
+    heroSub: "47 scenario-based questions on the issues defining Netherlands right now. Housing, climate policy, migration, and healthcare. See your alignment across all parties."
+  },
+  se: {
+    heroTitle: "Where do you stand in<br><em>Swedish</em> politics?",
+    heroSub: "47 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties."
+  }
+};
+
+const staticUiTranslations = {
+  en: {
+    startBtn: "Start the test",
+    howItWorks: "How it works",
+    skipBtn: "Skip",
+    backBtn: "Back",
+    nextBtn: "Next",
+    demoTitle: "Almost there.",
+    demoSub: "A few quick questions before your results. Everything is anonymous.",
+    seeResultsBtn: "See my results",
+    lblAge: "Age",
+    lblCountry: "Region <span>(optional)</span>",
+    lblParty: "How do you currently identify? <span>(optional)</span>",
+    lblGender: "Gender <span>(optional)</span>",
+    lblNat: "Nationality <span>(optional)</span>",
+    optSelect: "Select...",
+    optPreferNot: "Prefer not to say",
+    optInd: "Independent / Other",
+    ageSelectOpts: ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 or older'],
+    genderSelectOpts: ['Male', 'Female', 'Other', 'Prefer not to say'],
+    lblConsent: "<strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.",
+    demoNote: "This is never linked to your answers. It helps us understand who takes the test.",
+    calcTitle: "Mapping your answers",
+    calcSub: "This will only take a moment.",
+    rEyebrow: "Your {Country} political alignment",
+    saveTitle: "Save your results",
+    saveDesc: "Enter your email and we will send you a link to these results. Never shared.",
+    sendBtn: "Send results",
+    copyBtn: "Copy results link",
+    retakeBtn: "Retake",
+    genBtn: "General test",
+    natNames: {
+      'United States': 'United States',
+      'United Kingdom': 'United Kingdom',
+      'Canada': 'Canada',
+      'Australia': 'Australia',
+      'New Zealand': 'New Zealand',
+      'Germany': 'Germany',
+      'Austria': 'Austria',
+      'France': 'France',
+      'Spain': 'Spain',
+      'Italy': 'Italy',
+      'Sweden': 'Sweden',
+      'Ireland': 'Ireland',
+      'Netherlands': 'Netherlands',
+      'Other': 'Other'
+    }
+  },
+  de: {
+    startBtn: "Test starten",
+    howItWorks: "Wie es funktioniert",
+    skipBtn: "Überspringen",
+    backBtn: "Zurück",
+    nextBtn: "Weiter",
+    demoTitle: "Fast geschafft.",
+    demoSub: "Einige kurze Fragen vor deinen Ergebnissen. Alles ist vollkommen anonym.",
+    seeResultsBtn: "Ergebnisse ansehen",
+    lblAge: "Alter",
+    lblCountry: "Region <span>(optional)</span>",
+    lblParty: "Wie identifizierst du dich politisch? <span>(optional)</span>",
+    lblGender: "Geschlecht <span>(optional)</span>",
+    lblNat: "Nationalität <span>(optional)</span>",
+    optSelect: "Auswählen...",
+    optPreferNot: "Lieber nicht sagen",
+    optInd: "Unabhängig / Sonstige",
+    ageSelectOpts: ['Unter 18', '18 bis 24', '25 bis 34', '35 bis 44', '45 bis 54', '55 bis 64', '65 oder älter'],
+    genderSelectOpts: ['Männlich', 'Weiblich', 'Sonstiges', 'Lieber nicht sagen'],
+    lblConsent: "<strong>Einwilligung zur Forschung:</strong> Ich gestatte CoreOpinion, meine anonymen Antworten und demografischen Daten für Forschung, Statistiken und öffentliche Wahl-Dashboards zu speichern.",
+    demoNote: "Dies wird niemals mit deinen Antworten verknüpft. Es hilft uns zu verstehen, wer an dem Test teilnimmt.",
+    calcTitle: "Antworten werden ausgewertet",
+    calcSub: "Dies wird nur einen Moment dauern.",
+    rEyebrow: "Deine politische Übereinstimmung in {Country}",
+    saveTitle: "Ergebnisse speichern",
+    saveDesc: "Gib deine E-Mail ein und wir senden dir einen Link zu diesen Ergebnissen. Niemals weitergegeben.",
+    sendBtn: "Ergebnisse senden",
+    copyBtn: "Ergebnis-Link kopieren",
+    retakeBtn: "Wiederholen",
+    genBtn: "Allgemeiner Test",
+    natNames: {
+      'United States': "Vereinigte Staaten",
+      'United Kingdom': "Vereinigtes Königreich",
+      'Canada': "Kanada",
+      'Australia': "Australien",
+      'New Zealand': "Neuseeland",
+      'Germany': "Deutschland",
+      'Austria': "Österreich",
+      'France': "Frankreich",
+      'Spain': "Spanien",
+      'Italy': "Italien",
+      'Sweden': "Schweden",
+      'Ireland': "Irland",
+      'Netherlands': "Niederlande",
+      'Other': "Sonstige"
+    }
+  },
+  fr: {
+    startBtn: "Démarrer le test",
+    howItWorks: "Comment ça marche",
+    skipBtn: "Passer",
+    backBtn: "Retour",
+    nextBtn: "Suivant",
+    demoTitle: "Presque fini.",
+    demoSub: "Quelques questions rapides avant vos résultats. Tout est anonyme.",
+    seeResultsBtn: "Voir mes résultats",
+    lblAge: "Âge",
+    lblCountry: "Région <span>(facultatif)</span>",
+    lblParty: "Comment vous identifiez-vous politiquement ? <span>(facultatif)</span>",
+    lblGender: "Genre <span>(facultatif)</span>",
+    lblNat: "Nationalité <span>(facultatif)</span>",
+    optSelect: "Sélectionner...",
+    optPreferNot: "Préfère ne pas répondre",
+    optInd: "Indépendant / Autre",
+    ageSelectOpts: ['Moins de 18 ans', '18 à 24 ans', '25 à 34 ans', '35 à 44 ans', '45 à 54 ans', '55 à 64 ans', '65 ans ou plus'],
+    genderSelectOpts: ['Homme', 'Femme', 'Autre', 'Préfère ne pas répondre'],
+    lblConsent: "<strong>Consentement de recherche :</strong> J’autorise CoreOpinion à enregistrer mes réponses anonymes et mes données démographiques pour la recherche, les statistiques et les tableaux de bord de sondages publics.",
+    demoNote: "Ceci n'est jamais lié à vos réponses. Cela nous aide à comprendre qui passe le test.",
+    calcTitle: "Analyse de vos réponses",
+    calcSub: "Cela ne prendra qu'un instant.",
+    rEyebrow: "Votre alignement politique en {Country}",
+    saveTitle: "Enregistrer vos résultats",
+    saveDesc: "Saisissez votre e-mail et nous vous enverrons un lien vers vos résultats. Jamais partagé.",
+    sendBtn: "Envoyer les résultats",
+    copyBtn: "Copier le lien des résultats",
+    retakeBtn: "Recommencer",
+    genBtn: "Test général",
+    natNames: {
+      'United States': "États-Unis",
+      'United Kingdom': "Royaume-Uni",
+      'Canada': "Canada",
+      'Australia': "Australie",
+      'New Zealand': "Nouvelle-Zélande",
+      'Germany': "Allemagne",
+      'Austria': "Autriche",
+      'France': "France",
+      'Spain': "Espagne",
+      'Italy': "Italie",
+      'Sweden': "Suède",
+      'Ireland': "Irlande",
+      'Netherlands': "Pays-Bas",
+      'Other': "Autre"
+    }
+  },
+  es: {
+    startBtn: "Iniciar el test",
+    howItWorks: "Cómo funciona",
+    skipBtn: "Saltar",
+    backBtn: "Atrás",
+    nextBtn: "Siguiente",
+    demoTitle: "Casi hemos terminado.",
+    demoSub: "Unas pocas preguntas rápidas antes de ver tus resultados. Todo es anónimo.",
+    seeResultsBtn: "Ver mis resultados",
+    lblAge: "Edad",
+    lblCountry: "Región <span>(opcional)</span>",
+    lblParty: "¿Cómo te identificas políticamente? <span>(opcional)</span>",
+    lblGender: "Género <span>(opcional)</span>",
+    lblNat: "Nacionalidad <span>(opcional)</span>",
+    optSelect: "Seleccionar...",
+    optPreferNot: "Prefiero no decirlo",
+    optInd: "Independiente / Otro",
+    ageSelectOpts: ['Menor de 18', '18 a 24', '25 a 34', '35 a 44', '45 a 54', '55 a 64', '65 o más'],
+    genderSelectOpts: ['Masculino', 'Femenino', 'Otro', 'Prefiero no decirlo'],
+    lblConsent: "<strong>Consentimiento de investigación:</strong> Permito que CoreOpinion guarde mis respuestas anónimas y datos demográficos para investigación, estadísticas y paneles de opinión pública.",
+    demoNote: "Esto nunca se vincula con tus respuestas. Nos ayuda a entender quién realiza el test.",
+    calcTitle: "Evaluando tus respuestas",
+    calcSub: "Esto solo tomará un momento.",
+    rEyebrow: "Tu alineación política en {Country}",
+    saveTitle: "Guardar tus resultados",
+    saveDesc: "Introduce tu correo electrónico y te enviaremos un enlace a estos resultados. Nunca compartido.",
+    sendBtn: "Enviar resultados",
+    copyBtn: "Copiar enlace de resultados",
+    retakeBtn: "Repetir",
+    genBtn: "Test general",
+    natNames: {
+      'United States': "Estados Unidos",
+      'United Kingdom': "Reino Unido",
+      'Canada': "Canadá",
+      'Australia': "Australia",
+      'New Zealand': "Nueva Zelanda",
+      'Germany': "Alemania",
+      'Austria': "Austria",
+      'France': "Francia",
+      'Spain': "España",
+      'Italy': "Italia",
+      'Sweden': "Suecia",
+      'Ireland': "Irlanda",
+      'Netherlands': "Países Bajos",
+      'Other': "Otro"
+    }
+  },
+  it: {
+    startBtn: "Inizia il test",
+    howItWorks: "Come funziona",
+    skipBtn: "Salta",
+    backBtn: "Indietro",
+    nextBtn: "Avanti",
+    demoTitle: "Quasi fatto.",
+    demoSub: "Qualche rapida domanda prima dei tuoi risultati. Tutto è anonimo.",
+    seeResultsBtn: "Vedi i miei risultati",
+    lblAge: "Età",
+    lblCountry: "Regione <span>(opzionale)</span>",
+    lblParty: "Come ti identifichi politicamente? <span>(opzionale)</span>",
+    lblGender: "Genere <span>(opzionale)</span>",
+    lblNat: "Nazionalità <span>(opzionale)</span>",
+    optSelect: "Seleziona...",
+    optPreferNot: "Preferisco non rispondere",
+    optInd: "Indipendente / Altro",
+    ageSelectOpts: ['Meno di 18', '18 a 24', '25 a 34', '35 a 44', '45 a 54', '55 a 64', '65 o più'],
+    genderSelectOpts: ['Maschio', 'Femmina', 'Altro', 'Preferisco non rispondere'],
+    lblConsent: "<strong>Consenso alla ricerca:</strong> Autorizzo CoreOpinion a memorizzare le mie risposte anonime e i miei dati demografici per ricerca, statistiche e dashboard di sondaggio pubblico.",
+    demoNote: "Questo non viene mai collegato alle tue risposte. Ci aiuta a capire chi effettua il test.",
+    calcTitle: "Analisi delle risposte",
+    calcSub: "Ci vorrà solo un momento.",
+    rEyebrow: "Il tuo allineamento politico in {Country}",
+    saveTitle: "Salva i tuoi risultati",
+    saveDesc: "Inserisci la tua email e ti invieremo un link a questi risultati. Mai condivisa.",
+    sendBtn: "Invia risultati",
+    copyBtn: "Copia link dei risultati",
+    retakeBtn: "Rifare",
+    genBtn: "Test generale",
+    natNames: {
+      'United States': "Stati Uniti",
+      'United Kingdom': "Regno Unito",
+      'Canada': "Canada",
+      'Australia': "Australia",
+      'New Zealand': "Nuova Zelanda",
+      'Germany': "Germania",
+      'Austria': "Austria",
+      'France': "Francia",
+      'Spain': "Spagna",
+      'Italy': "Italia",
+      'Sweden': "Svezia",
+      'Ireland': "Irland",
+      'Netherlands': "Paesi Bassi",
+      'Other': "Altro"
+    }
+  },
+  nl: {
+    startBtn: "Start de test",
+    howItWorks: "Hoe het werkt",
+    skipBtn: "Overslaan",
+    backBtn: "Terug",
+    nextBtn: "Volgende",
+    demoTitle: "Bijna klaar.",
+    demoSub: "Een paar snelle vragen voor je resultaten. Alles is anoniem.",
+    seeResultsBtn: "Bekijk mijn resultaten",
+    lblAge: "Leeftijd",
+    lblCountry: "Regio <span>(optioneel)</span>",
+    lblParty: "Hoe identificeer je jezelf politiek? <span>(optioneel)</span>",
+    lblGender: "Geslacht <span>(optioneel)</span>",
+    lblNat: "Nationaliteit <span>(optioneel)</span>",
+    optSelect: "Selecteer...",
+    optPreferNot: "Liever niet zeggen",
+    optInd: "Onafhankelijk / Anders",
+    ageSelectOpts: ['Onder 18', '18 tot 24', '25 tot 34', '35 tot 44', '45 tot 54', '55 tot 64', '65 of ouder'],
+    genderSelectOpts: ['Man', 'Vrouw', 'Anders', 'Liever niet zeggen'],
+    lblConsent: "<strong>Toestemming voor onderzoek:</strong> Ik sta CoreOpinion toe mijn anonieme antwoorden en demografische gegevens op te slaan voor onderzoek, statistieken en openbare peilingen.",
+    demoNote: "Dit wordt nooit gekoppeld aan je antwoorden. Het helpt ons te begrijpen wie de test invult.",
+    calcTitle: "Je antwoorden in kaart brengen",
+    calcSub: "Dit duurt een kort moment.",
+    rEyebrow: "Jouw politieke partijvoorkeur in {Country}",
+    saveTitle: "Sla je resultaten op",
+    saveDesc: "Vul je e-mailadres in en we sturen je een link naar deze resultaten. Wordt nooit gedeeld.",
+    sendBtn: "Resultaten verzenden",
+    copyBtn: "Resultatenlink kopiëren",
+    retakeBtn: "Opnieuw doen",
+    genBtn: "Algemene test",
+    natNames: {
+      'United States': "Verenigde Staten",
+      'United Kingdom': "Verenigd Koninkrijk",
+      'Canada': "Canada",
+      'Australia': "Australië",
+      'New Zealand': "Nieuw-Zeeland",
+      'Germany': "Duitsland",
+      'Austria': "Oostenrijk",
+      'France': "Frankrijk",
+      'Spain': "Spanje",
+      'Italy': "Italië",
+      'Sweden': "Zweden",
+      'Ireland': "Ierland",
+      'Netherlands': "Nederland",
+      'Other': "Anders"
+    }
+  },
+  sv: {
+    startBtn: "Starta testet",
+    howItWorks: "Hur det fungerar",
+    skipBtn: "Hoppa över",
+    backBtn: "Bakåt",
+    nextBtn: "Nästa",
+    demoTitle: "Nästan klar.",
+    demoSub: "Några snabba frågor innan dina resultat. Allt är anonymt.",
+    seeResultsBtn: "Se mina resultat",
+    lblAge: "Ålder",
+    lblCountry: "Län <span>(valfritt)</span>",
+    lblParty: "Vilket parti identifierar du dig med? <span>(valfritt)</span>",
+    lblGender: "Kön <span>(valfritt)</span>",
+    lblNat: "Nationalitet <span>(valfritt)</span>",
+    optSelect: "Välj...",
+    optPreferNot: "Vill ej uppge",
+    optInd: "Oberoende / Annat",
+    ageSelectOpts: ['Under 18', '18 till 24', '25 till 34', '35 till 44', '45 till 54', '55 till 64', '65 eller äldre'],
+    genderSelectOpts: ['Man', 'Kvinna', 'Annat', 'Vill ej uppge'],
+    lblConsent: "<strong>Samtycke för forskning:</strong> Jag tillåter CoreOpinion att spara mina anonyma svar och demografiska uppgifter för forskning, statistik och offentliga opinionspaneler.",
+    demoNote: "Detta kopplas aldrig till dina svar. Det hjälper oss att förstå vilka som gör testet.",
+    calcTitle: "Kartlägger dina svar",
+    calcSub: "Detta tar bara ett ögonblick.",
+    rEyebrow: "Din politiska överensstämmelse i {Country}",
+    saveTitle: "Spara dina resultat",
+    saveDesc: "Ange din e-postadress så skickar vi en länk till dina resultat. Delas aldrig.",
+    sendBtn: "Skicka resultat",
+    copyBtn: "Kopiera resultatlänk",
+    retakeBtn: "Gör om testet",
+    genBtn: "Allmänt test",
+    natNames: {
+      'United States': "USA",
+      'United Kingdom': "Storbritannien",
+      'Canada': "Kanada",
+      'Australia': "Australien",
+      'New Zealand': "Nya Zeeland",
+      'Germany': "Tyskland",
+      'Austria': "Österrike",
+      'France': "Frankrike",
+      'Spain': "Spanien",
+      'Italy': "Italien",
+      'Sweden': "Sverige",
+      'Ireland': "Irland",
+      'Netherlands': "Nederländerna",
+      'Other': "Annat"
+    }
+  }
+};
+
 function getDisplayName(val, langCode) {
   if (typeof val === 'string') return val;
   if (val && typeof val === 'object') {
@@ -95,14 +458,25 @@ configFiles.forEach(file => {
     
     // Generate Toggle Script
     const script = `let currentLang = '${langConfig.langCode}';
-    
+const engCountryName = '${langConfig.engCountry}';
+const localCountryName = '${langConfig.localCountry}';
+const heroTitleEn = ${JSON.stringify(englishHeroTexts[config.code]?.heroTitle || '')};
+const heroSubEn = ${JSON.stringify(englishHeroTexts[config.code]?.heroSub || '')};
+const heroTitleLocal = ${JSON.stringify(config.heroTitle || '')};
+const heroSubLocal = ${JSON.stringify(config.heroSub || '')};
+
+const STATIC_TRANSLATIONS = {
+  en: ${JSON.stringify(staticUiTranslations.en, null, 2)},
+  ${langConfig.langCode}: ${JSON.stringify(staticUiTranslations[langConfig.langCode], null, 2)}
+};
+
 function toggleLang() {
   currentLang = currentLang === 'en' ? '${langConfig.langCode}' : 'en';
   document.getElementById('lang-toggle').textContent = currentLang === 'en' ? '${langConfig.localLang}' : 'English';
   document.getElementById('lang-label').textContent = currentLang === 'en' ? '${langConfig.engCountry}' : '${langConfig.localCountry}';
   
   window.currentLang = currentLang;
-  if (typeof applyLang === 'function') applyLang();
+  applyLang();
   if (document.getElementById('page-test').classList.contains('active')) renderQ();
 }
 
@@ -123,8 +497,134 @@ function getQuestion(q) {
   };
 }
 
+function applyLang() {
+  const isEn = currentLang === 'en';
+  const strings = STATIC_TRANSLATIONS[currentLang];
+  if (!strings) return;
+
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) heroTitle.innerHTML = isEn ? heroTitleEn : heroTitleLocal;
+
+  const heroSub = document.querySelector('.hero-sub');
+  if (heroSub) heroSub.textContent = isEn ? heroSubEn : heroSubLocal;
+
+  const startBtn = document.querySelector('.hero-cta .btn-primary');
+  if (startBtn) startBtn.textContent = strings.startBtn;
+
+  const howItWorksBtn = document.querySelector('.hero-cta .btn-secondary');
+  if (howItWorksBtn) howItWorksBtn.textContent = strings.howItWorks;
+
+  const skipBtn = document.querySelector('.btn-skip');
+  if (skipBtn) skipBtn.textContent = strings.skipBtn;
+
+  const backBtn = document.getElementById('btn-back');
+  if (backBtn) backBtn.textContent = strings.backBtn;
+
+  const nextBtn = document.querySelector('.q-foot .btn-primary');
+  if (nextBtn) nextBtn.textContent = strings.nextBtn;
+
+  const demoTitle = document.querySelector('#page-demo .page-title');
+  if (demoTitle) demoTitle.textContent = strings.demoTitle;
+
+  const demoSub = document.querySelector('#page-demo .page-sub');
+  if (demoSub) demoSub.textContent = strings.demoSub;
+
+  const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
+  if (seeResultsBtn) seeResultsBtn.textContent = strings.seeResultsBtn;
+
+  const lblAge = document.getElementById('d-age')?.previousElementSibling;
+  if (lblAge) lblAge.textContent = strings.lblAge;
+
+  const lblCountry = document.getElementById('d-country')?.previousElementSibling || document.getElementById('d-county')?.previousElementSibling;
+  if (lblCountry) lblCountry.innerHTML = strings.lblCountry;
+
+  const lblParty = document.getElementById('d-party')?.previousElementSibling;
+  if (lblParty) lblParty.innerHTML = strings.lblParty;
+
+  const lblGender = document.getElementById('d-gender')?.previousElementSibling;
+  if (lblGender) lblGender.innerHTML = strings.lblGender;
+
+  const lblNat = document.getElementById('d-nationality')?.previousElementSibling;
+  if (lblNat) lblNat.innerHTML = strings.lblNat;
+
+  const ageSelect = document.getElementById('d-age');
+  if (ageSelect) {
+    ageSelect.options[0].textContent = strings.optSelect;
+    for (let i = 1; i < ageSelect.options.length; i++) {
+      if (strings.ageSelectOpts[i - 1]) ageSelect.options[i].textContent = strings.ageSelectOpts[i - 1];
+    }
+  }
+
+  const genderSelect = document.getElementById('d-gender');
+  if (genderSelect) {
+    genderSelect.options[0].textContent = strings.optSelect;
+    for (let i = 1; i < genderSelect.options.length; i++) {
+      if (strings.genderSelectOpts[i - 1]) genderSelect.options[i].textContent = strings.genderSelectOpts[i - 1];
+    }
+  }
+
+  const partySelect = document.getElementById('d-party');
+  if (partySelect) {
+    partySelect.options[0].textContent = strings.optPreferNot;
+    const lastOpt = partySelect.options[partySelect.options.length - 1];
+    if (lastOpt) lastOpt.textContent = strings.optInd;
+  }
+
+  const countrySelect = document.getElementById('d-country') || document.getElementById('d-county');
+  if (countrySelect) countrySelect.options[0].textContent = strings.optSelect;
+
+  const natSelect = document.getElementById('d-nationality');
+  if (natSelect) {
+    natSelect.options[0].textContent = strings.optSelect;
+    for (let i = 1; i < natSelect.options.length; i++) {
+      const opt = natSelect.options[i];
+      const enVal = opt.getAttribute('data-en') || opt.value || opt.textContent;
+      if (!opt.getAttribute('data-en')) opt.setAttribute('data-en', enVal);
+      if (strings.natNames[enVal]) opt.textContent = strings.natNames[enVal];
+    }
+  }
+
+  const demoNote = document.querySelector('.demo-note');
+  if (demoNote) demoNote.textContent = strings.demoNote;
+  
+  const lblConsent = document.querySelector('label[for="d-consent"]');
+  if (lblConsent) {
+    lblConsent.innerHTML = strings.lblConsent;
+  }
+
+  const calcTitle = document.querySelector('.calc-h');
+  if (calcTitle) calcTitle.textContent = strings.calcTitle;
+
+  const calcSub = document.querySelector('.calc-p');
+  if (calcSub) calcSub.textContent = strings.calcSub;
+
+  const rEyebrow = document.querySelector('.result-eyebrow');
+  if (rEyebrow) {
+    rEyebrow.textContent = strings.rEyebrow.replace('{Country}', isEn ? engCountryName : localCountryName);
+  }
+
+  const saveTitle = document.querySelector('.save-title');
+  if (saveTitle) saveTitle.textContent = strings.saveTitle;
+
+  const saveDesc = document.querySelector('.save-desc');
+  if (saveDesc) saveDesc.textContent = strings.saveDesc;
+
+  const sendBtn = document.querySelector('.save-row .btn-primary');
+  if (sendBtn) sendBtn.textContent = strings.sendBtn;
+
+  const copyBtn = document.querySelector('.share-row button:nth-child(1)');
+  if (copyBtn) copyBtn.textContent = strings.copyBtn;
+
+  const retakeBtn = document.querySelector('.share-row button:nth-child(2)');
+  if (retakeBtn) retakeBtn.textContent = strings.retakeBtn;
+
+  const genBtn = document.querySelector('.share-row a button');
+  if (genBtn) genBtn.textContent = strings.genBtn;
+}
+
 window.getQuestion = getQuestion;
-window.currentLang = currentLang;`;
+window.currentLang = currentLang;
+applyLang();`;
 
     html = html.replace(/\{\{TOGGLE_LANG_SCRIPT\}\}/g, script);
   } else {

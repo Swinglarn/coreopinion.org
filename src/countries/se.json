@@ -42,52 +42,100 @@
   ],
   "partyMeta": {
     "s": {
-      "name": "Socialdemokraterna",
+      "name": {
+        "sv": "Socialdemokraterna",
+        "en": "Social Democrats"
+      },
       "color": "#CC0000",
       "barClass": "bar-s",
-      "desc": "Your answers most closely match the Social Democrats (S) platform. You support a strong welfare state, workers rights, and public services funded by progressive taxation."
+      "desc": {
+        "sv": "Dina svar matchar bäst Socialdemokraternas (S) partiprogram. Du stödjer en stark välfärdsstat, arbetstagares rättigheter och offentliga tjänster finansierade genom progressiv beskattning.",
+        "en": "Your answers most closely match the Social Democrats (S) platform. You support a strong welfare state, workers rights, and public services funded by progressive taxation."
+      }
     },
     "m": {
-      "name": "Moderaterna",
+      "name": {
+        "sv": "Moderaterna",
+        "en": "Moderates"
+      },
       "color": "#52BDEC",
       "barClass": "bar-m",
-      "desc": "Your answers most closely match the Moderates (M) platform. You favour lower taxes, law and order, market solutions to public services, and fiscal discipline."
+      "desc": {
+        "sv": "Dina svar matchar bäst Moderaternas (M) partiprogram. Du förespråkar lägre skatter, lag och ordning, marknadslösningar för offentliga tjänster och finanspolitisk disciplin.",
+        "en": "Your answers most closely match the Moderates (M) platform. You favour lower taxes, law and order, market solutions to public services, and fiscal discipline."
+      }
     },
     "sd": {
-      "name": "Sverigedemokraterna",
+      "name": {
+        "sv": "Sverigedemokraterna",
+        "en": "Sweden Democrats"
+      },
       "color": "#006AA7",
       "barClass": "bar-sd",
-      "desc": "Your answers most closely match the Sweden Democrats (SD) platform. You support sharp cuts to immigration, tougher law enforcement, and a culturally defined national identity."
+      "desc": {
+        "sv": "Dina svar matchar bäst Sverigedemokraternas (SD) partiprogram. Du stödjer kraftiga nedskärningar av invandringen, tuffare brottsbekämpning och en kulturellt definierad nationell identitet.",
+        "en": "Your answers most closely match the Sweden Democrats (SD) platform. You support sharp cuts to immigration, tougher law enforcement, and a culturally defined national identity."
+      }
     },
     "c": {
-      "name": "Centerpartiet",
+      "name": {
+        "sv": "Centerpartiet",
+        "en": "Centre Party"
+      },
       "color": "#009933",
       "barClass": "bar-c",
-      "desc": "Your answers most closely match the Centre Party (C) platform. You favour rural Sweden, a liberal market economy, open immigration policy, and EU integration."
+      "desc": {
+        "sv": "Dina svar matchar bäst Centerpartiets (C) partiprogram. Du prioriterar landsbygden, en liberal marknadsekonomi, en öppen invandringspolitik och EU-integrering.",
+        "en": "Your answers most closely match the Centre Party (C) platform. You favour rural Sweden, a liberal market economy, open immigration policy, and EU integration."
+      }
     },
     "v": {
-      "name": "Vänsterpartiet",
+      "name": {
+        "sv": "Vänsterpartiet",
+        "en": "Left Party"
+      },
       "color": "#DA2213",
       "barClass": "bar-v",
-      "desc": "Your answers most closely match the Left Party (V) platform. You support wealth redistribution, feminist policy, opposing privatisation, and a strong public sector."
+      "desc": {
+        "sv": "Dina svar matchar bäst Vänsterpartiets (V) partiprogram. Du stödjer omfördelning av välfärden, feministisk politik, motstånd mot privatiseringar och en stark offentlig sektor.",
+        "en": "Your answers most closely match the Left Party (V) platform. You support wealth redistribution, feminist policy, opposing privatisation, and a strong public sector."
+      }
     },
     "mp": {
-      "name": "Miljöpartiet",
+      "name": {
+        "sv": "Miljöpartiet",
+        "en": "Green Party"
+      },
       "color": "#53A045",
       "barClass": "bar-mp",
-      "desc": "Your answers most closely match the Green Party (MP) platform. You prioritise climate action, biodiversity, open borders, and progressive social policy."
+      "desc": {
+        "sv": "Dina svar matchar bäst Miljöpartiets (MP) partiprogram. Du prioriterar klimatåtgärder, biologisk mångfald, öppna gränser och en progressiv socialpolitik.",
+        "en": "Your answers most closely match the Green Party (MP) platform. You prioritise climate action, biodiversity, open borders, and progressive social policy."
+      }
     },
     "l": {
-      "name": "Liberalerna",
+      "name": {
+        "sv": "Liberalerna",
+        "en": "Liberals"
+      },
       "color": "#6EBBF6",
       "barClass": "bar-l",
-      "desc": "Your answers most closely match the Liberals (L) platform. You support strong public education, individual rights, EU federalism, and classical liberal values."
+      "desc": {
+        "sv": "Dina svar matchar bäst Liberalernas (L) partiprogram. Du stödjer en stark statlig skola, individuella rättigheter, EU-federalism och klassiska liberala värden.",
+        "en": "Your answers most closely match the Liberals (L) platform. You support strong public education, individual rights, EU federalism, and classical liberal values."
+      }
     },
     "kd": {
-      "name": "Kristdemokraterna",
+      "name": {
+        "sv": "Kristdemokraterna",
+        "en": "Christian Democrats"
+      },
       "color": "#231977",
       "barClass": "bar-kd",
-      "desc": "Your answers most closely match the Christian Democrats (KD) platform. You value family policy, welfare reform, traditional social values, and Christian democratic principles."
+      "desc": {
+        "sv": "Dina svar matchar bäst Kristdemokraternas (KD) partiprogram. Du värdesätter familjepolitik, välfärdsreformer, traditionella sociala värden och kristdemokratiska principer.",
+        "en": "Your answers most closely match the Christian Democrats (KD) platform. You value family policy, welfare reform, traditional social values, and Christian democratic principles."
+      }
     }
   },
   "calibrations": {
@@ -1052,7 +1100,374 @@
       }
     ]
   },
-  "translations": {},
+  "translations": {
+    "im1": {
+      "q": "Sverige tog in alldeles för många människor för snabbt. Konsekvenserna betalas fortfarande idag.",
+      "ctx": "Sverige tog emot över 160 000 asylsökande under 2015 ensam. Integrationen har varit ojämn. Gängvåldet har ökat kraftigt i vissa områden.",
+      "opts": [
+        "Ja. Invandringen måste minskas kraftigt och integrationskraven måste skärpas.",
+        "Antalet var högt men felet låg i integrationspolitiken, inte i siffrorna i sig.",
+        "Nej. Sverige har gynnats av invandring. Misslyckandets narrativ drivs av fördomar."
+      ]
+    },
+    "im2": {
+      "q": "Flyktingar som bott i Sverige i flera år och byggt sina liv här bör få stanna permanent.",
+      "opts": [
+        "Ja. Att skicka tillbaka folk till länder de flydde från är grymt.",
+        "Ja, om de uppfyller rimliga krav på integration.",
+        "Nej. Tillfälligt ska betyda tillfälligt. Annars tror ingen på systemet."
+      ]
+    },
+    "im3": {
+      "q": "Sverige bör erbjuda pengar till dem som vill åka hem frivilligt.",
+      "opts": [
+        "Ja. Frivilligt återvändande kostar mindre och minskar konflikter.",
+        "Som en sista utväg med verkliga skyddsåtgärder existerar sådana program på andra håll.",
+        "Nej. Att betala folk för att lämna kränker deras värdighet."
+      ]
+    },
+    "im4": {
+      "q": "Krav på svenska, samhällskunskapstest och integrationsavtal är rimligt för alla som bor här.",
+      "opts": [
+        "Ja. Integrationsskyldigheter är ett tecken på att man tar nyanlända på allvar.",
+        "Frivilliga program fungerar bättre än tvång.",
+        "Jobb, bostäder och stöd integrerar folk bättre än papper och test."
+      ]
+    },
+    "cr1": {
+      "q": "Gängvåldet är en nationell kris som kräver ett fundamentalt hårdare svar.",
+      "ctx": "Sverige hade mer än 400 skjutningar 2023. Gängrelaterade explosioner nådde rekordnivåer. Flera europeiska länder varnar nu sina medborgare för att resa till vissa svenska städer.",
+      "opts": [
+        "Ja. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.",
+        "Polisarbete behövs men grundproblemet är fattigdom och segregation.",
+        "Både hårdare ingripanden nu och långsiktig investering i inkludering."
+      ]
+    },
+    "cr2": {
+      "q": "Det måste bli olagligt att tillhöra ett gäng, inte bara att begå brott.",
+      "opts": [
+        "Ja. Gängstrukturer måste brytas upp och tillhörighet i sig göras olaglig.",
+        "Bara med tydliga regler så att vanliga föreningar inte drabbas.",
+        "Nej. Att straffa folk för att tillhöra en grupp, utan att de gjort något brott, strider mot lagen."
+      ]
+    },
+    "wl1": {
+      "q": "Den svenska välfärden är det som gör Sverige bra. Nedskärningar är ett politiskt val, inte ett ekonomiskt måste.",
+      "opts": [
+        "Ja. Välfärdsstaten är det som gör Sverige fungerande. Skydda och stärk den.",
+        "Välfärden är nödvändig men måste reformeras för att hålla på sikt.",
+        "Staten gör för mycket och tar bort folks ansvar för sina egna liv."
+      ]
+    },
+    "wl2": {
+      "q": "Människor som aldrig har betalat in i det svenska välfärdssystemet bör inte få samma förmåner som de som bidragit i decennier.",
+      "opts": [
+        "Ja. Du ska ha betalat in för att få ut. Enkel princip.",
+        "Behov måste också räknas, men vissa bidragsrelaterade element är rimliga.",
+        "Nej. Behov, inte hur länge du jobbat, ska avgöra vad du får."
+      ]
+    },
+    "hc1": {
+      "q": "Sjukvårdsbristen kräver mer offentliga investeringar, inte privata alternativ.",
+      "ctx": "Sverige har bland de längsta sjukvårdsköerna i EU. 90-dagarsgarantin bryts rutinmässigt. Regionala ojämlikheter i vårdkvalitet är betydande.",
+      "opts": [
+        "Ja. Offentlig sjukvård måste finansieras och bemannas ordentligt.",
+        "Privata vårdgivare vid sidan av offentliga kan minska köer utan att hota jämlikheten.",
+        "Mer finansiering och bättre organisation av det offentliga systemet är det enda riktiga svaret."
+      ]
+    },
+    "hc2": {
+      "q": "Vinstdrivna vård-bolag suger ut pengar från patientvård till aktieägare. De bör inte tillåtas verka inom det offentliga systemet.",
+      "opts": [
+        "Ja. Vinstuttag från vård är fel när man driver sjukvård för att tjäna pengar.",
+        "Viss privat verksamhet är effektiv om den regleras och kvalitetsgranskas ordentligt.",
+        "Nej. Konkurrens driver kvalitet och effektivitet."
+      ]
+    },
+    "ed1": {
+      "q": "Friskoleformen har ökat segregationen och undergrävt likvärdig utbildning. Den behöver backas.",
+      "ctx": "PISA-resultaten visar att svenska skolprestationer har sjunkit markant. Segregationen mellan skolor är bland de sämsta i OECD. Det fria skolvalet har kommit under intensiv granskning.",
+      "opts": [
+        "Ja. Vinstdrivna friskolor har misslyckats och bör avvecklas.",
+        "Reglera friskolor hårt men behåll inslaget av valfrihet.",
+        "Nej. Friskolor ger föräldrar valfrihet och konkurrens som höjer standarden."
+      ]
+    },
+    "ed2": {
+      "q": "Lärare behöver mer respekt och auktoritet. Störande elever förstör för alla andra.",
+      "opts": [
+        "Ja. Lärarauktoritet och tydlig disciplin är nödvändigt för lärande.",
+        "Mer stöd till lärare ja, men att rama in det som disciplin missar de djupare orsakerna.",
+        "Stöd och resurser till utsatta elever gör mer nytta än disciplinregler."
+      ]
+    },
+    "tx1": {
+      "q": "Sverige borde återinföra en förmögenhetsskatt på tillgångar över 3 miljoner kronor. Avskaffandet 2007 var en gåva till de rika.",
+      "opts": [
+        "Ja. Förmögenhetsskatter minskar ojämlikhet och finansierar offentliga tjänster.",
+        "Stäng kryphål och höj kapitalvinstskatter innan nya skatter läggs till.",
+        "Nej. Förmögenhetsskatten drev kapital ut ur Sverige. Den bör inte återkomma."
+      ]
+    },
+    "tx2": {
+      "q": "Sverige har bland världens högsta skatter. Att sänka dem skulle öka tillväxten och förbättra konkurrenskraften.",
+      "opts": [
+        "Ja. Höga skatter skadar investeringar, entreprenörskap och attraherar färre högpresterande.",
+        "Riktade sänkningar i arbetsrelaterade skatter är rimliga men breda sänkningar försvagar service.",
+        "Nej. Höga skatter finansierar de bra skolor, sjukvård och infrastruktur som gör Sverige konkurrenskraftigt."
+      ]
+    },
+    "en1": {
+      "q": "Att försvaga klimatreglering i konkurrenskraftens namn är ett svek mot framtida generationer.",
+      "ctx": "Sverige har åtagit sig att nå netto noll till 2045. Den nuvarande regeringen lättade på vissa miljöregler för att stimulera investeringar och energisäkerhet.",
+      "opts": [
+        "Ja. Klimatåtaganden får inte bytas mot kortsiktiga ekonomiska vinster.",
+        "Viss regulatorisk flexibilitet är rimlig så länge nettonollmålet hålls.",
+        "Konkurrenskraft och energisäkerhet är legitima frågor som måste balanseras."
+      ]
+    },
+    "en2": {
+      "q": "Sverige borde bygga ut kärnkraften. Det är säkert, koldioxidsnålt och landet har haft energibrist utan det.",
+      "opts": [
+        "Ja. Kärnkraft är den mest tillförlitliga koldioxidsnåla baslasten.",
+        "Nya reaktortyper förtjänar övervägande, men kostnaderna och tidslinjerna är osäkra.",
+        "Nej. Förnybar energi plus lagring är snabbare, billigare och säkrare."
+      ]
+    },
+    "na1": {
+      "q": "Sverige hade rätt att gå med i NATO. Den ryska invasionen av Ukraina gjorde säkerhetsargumentet ofrånkomligt.",
+      "opts": [
+        "Ja. NATO-medlemskapet är grunden för svensk säkerhet.",
+        "Beslutet var förståeligt men Sverige bör upprätthålla maximal strategisk självständighet inom NATO.",
+        "NATO-medlemskapet gör Sverige till ett mål och avslutar 200 år av neutralitet."
+      ]
+    },
+    "na2": {
+      "q": "Sverige bör öka försvarsutgifterna till 2,5 procent av BNP för att uppfylla NATO-åtaganden och avskräcka rysk aggression.",
+      "opts": [
+        "Ja. Decennier av underinvestering i försvaret måste nu korrigeras.",
+        "Ett trovärdigt försvar kräver investeringar men nivån måste balanseras mot sociala behov.",
+        "Militärutgifter konkurrerar med välfärd, sjukvård och skolor. Diplomati måste komma först."
+      ]
+    },
+    "hs1": {
+      "q": "Bostadsmarknaden sviker en hel generation. Staten måste bygga massivt.",
+      "ctx": "Stockholm har en av Europas längsta bostadsköer, ofta 10 till 20 år för en hyresrätt. Unga är utestängda. Priserna har stigit kraftigt.",
+      "opts": [
+        "Ja. Storskaligt allmännyggande är den enda verkliga lösningen.",
+        "Reformera hyresregleringen så att privata byggare har incitament att bygga.",
+        "Båda byggincitament och länge försenad hyresreform behövs."
+      ]
+    },
+    "hs2": {
+      "q": "Hyresreglering håller boende prisvärt för dem som har det, men hindrar byggandet av nya hyresrätter.",
+      "opts": [
+        "Ja. Avreglera hyror och investeringar i nya bostäder kommer att följa.",
+        "Avreglera hyror för nya lägenheter, men skydda dem som redan bor kvar.",
+        "Nej. Avreglering skulle pressa ut lägre inkomsttagare från hyresmarknaden helt."
+      ]
+    },
+    "wr1": {
+      "q": "Starka fack och kollektivavtal är det bästa sättet att sätta rättvisa löner utan att staten lägger sig i.",
+      "opts": [
+        "Ja. Modellen fungerar och måste försvaras.",
+        "Modellen är värdefull men sjunkande facklig anslutning innebär att den behöver uppdateras.",
+        "Staten kan sätta en lägsta lön och folk kan förhandla själva istället."
+      ]
+    },
+    "wr2": {
+      "q": "Sverige bör införa en officiell minimilön satt av lag snarare än att lämna löner helt till kollektiva förhandlingar.",
+      "opts": [
+        "Ja. En lagstadgad minimilön skyddar dem som jobbar i branscher utan starkt fack.",
+        "Kollektivavtalen fungerar. En lagstadgad minimilön gräver under dem.",
+        "Nej. Den svenska modellen ger bättre löner och villkor än vad lagen kan garantera."
+      ]
+    },
+    "in1": {
+      "q": "Segregationen har tillåtits stelna till permanenta undre klasser. Integrationspolitiken har misslyckats grundligt.",
+      "ctx": "Områden i Göteborg, Malmö och Stockholm där integrationen misslyckats upplever ihållande arbetslöshet, skolmisslyckanden och överrepresentation i brottsstatistiken.",
+      "opts": [
+        "Ja. Misslyckandet kräver ett fundamentalt annorlunda tillvägagångssätt, inklusive bosättningsspridning.",
+        "Investeringar i skolor, jobb och service i eftersatta områden är rätt svar.",
+        "Både bättre stöd i eftersatta områden och spridningsmekanismer behövs."
+      ]
+    },
+    "in2": {
+      "q": "Staten måste göra mer för att säkerställa att flyktingar och invandrare har verklig tillgång till arbetsmarknaden inom det första året efter ankomst.",
+      "opts": [
+        "Ja. Tidig anställning är det effektivaste integrationsverktyget.",
+        "Språk- och kompetensutbildning först, sedan anställning. Att skynda på processen slår tillbaka.",
+        "Om integration är så svår måste antalet minskas tills vi klarar av det ordentligt."
+      ]
+    },
+    "eu1": {
+      "q": "Sverige bör stödja fördjupad EU-integration, inklusive en gemensam försvarspolitik och mer beslut med kvalificerad majoritet.",
+      "opts": [
+        "Ja. Ett starkare EU gynnar alla medlemsstater, särskilt de mindre.",
+        "Samarbete i specifika frågor ja. Federala ambitioner går för långt.",
+        "Nej. Nationell suveränitet och mellanstatlighet måste förbli grunden för EU."
+      ]
+    },
+    "eu2": {
+      "q": "Sverige bör öka det bilaterala biståndet och utvecklingsstödet, även under en period av stram finanspolitik.",
+      "opts": [
+        "Ja. Utvecklingsbistånd är en moralisk skyldighet och bygger långsiktig stabilitet.",
+        "Behåll nuvarande nivåer men säkerställ effektivitet snarare än att bara öka utgifterna.",
+        "Nej. Sverige måste prioritera sina egna medborgare under en period av finansiellt tryck."
+      ]
+    },
+    "gs1": {
+      "q": "Sverige bör upprätthålla sin status som ett av världens mest progressiva länder när det gäller jämställdhet, HBTQ-rättigheter och social liberalism.",
+      "opts": [
+        "Ja. Att skydda och förstärka dessa rättigheter är central del av den svenska identiteten.",
+        "Rättigheter bör skyddas men staten bör inte vara föreskrivande om sociala normer.",
+        "Förändringen har gått för snabbt och skadat den sociala sammanhållningen."
+      ]
+    },
+    "gs2": {
+      "q": "Föräldraledigheten bör som standard delas lika mellan föräldrar snarare än att låta familjer välja egna upplägg.",
+      "opts": [
+        "Ja. Lika ledighet förändrar arbetsplatsens normer och är värt lagstiftning.",
+        "Starka incitament att dela ja, men det slutliga valet bör vara familjens.",
+        "Nej. Familjer bör bestämma utan att regeringen dikterar hur man uppfostrar barn."
+      ]
+    },
+    "rg1": {
+      "q": "Den svenska modellen med en stor, aktiv stat som tillhandahåller universella tjänster är den effektivaste sociala ordningen som någonsin konstruerats.",
+      "opts": [
+        "Ja. Modellen levererar jämlikhet och trygghet som inget annat land i världen kan matcha.",
+        "Modellen har styrkor men kräver löpande modernisering för att förbli effektiv.",
+        "Staten lägger sig i för mycket och hindrar folk från att ta egna initiativ."
+      ]
+    },
+    "rg2": {
+      "q": "Ojämlikheten i Sverige har ökat markant sedan 1990-talet. Att vända den trenden bör vara en primär politisk prioritet.",
+      "opts": [
+        "Det egalitära prägeln på Sverige urgröps och måste återställas.",
+        "Ojämlikheten har ökat men möjligheter och rörlighet är viktigare än statistiska skillnader.",
+        "Viss ojämlikhet återspeglar olika bidrag. Tvingad jämlikhet minskar drivkraften."
+      ]
+    },
+    "ec1": {
+      "q": "Vinstdrivna äldrevårdsföretag har misslyckats. Staten måste återta ansvaret.",
+      "ctx": "Sverige har upplevt allvarliga skandaler inom privatiserad äldreomsorg. Underbemanning och dåliga förhållanden i vissa hem ledde till betydande covid-dödsfall.",
+      "opts": [
+        "Ja. Omsorg om äldre är för viktigt att överlåta till marknaden.",
+        "Bättre reglering och transparens kan reparera privat vård utan förstatligande.",
+        "Nej. Konkurrens driver kvalitet. Dålig vård bör hanteras genom inspektion."
+      ]
+    },
+    "ec2": {
+      "q": "Sverige spenderar mycket på äldre men pengarna förvaltas dåligt. Reform och effektivitet måste komma före mer finansiering.",
+      "opts": [
+        "Ja. Mer pengar utan ansvarsskyldighet förändrar ingenting.",
+        "Viss reform behövs men kronisk underfinansiering är det primära problemet.",
+        "Nej. Problemet är marknadisering, inte underfinansiering. Kommunalisera igen."
+      ]
+    },
+    "dj1": {
+      "q": "Sveriges strikta narkotikapolitik kriminaliserar användare och orsakar skada. En hälsobaserad approach med avkriminalisering skulle ge bättre utfall.",
+      "opts": [
+        "Ja. Portugal visar att det fungerar. Kriminalisering förvärrar narkotikaproblemen.",
+        "Behandling och skadereducering ja, men full avkriminalisering är ett steg för långt.",
+        "Nej. Strikta narkotikalagar sänder rätt signal och skyddar samhället."
+      ]
+    },
+    "dj2": {
+      "q": "Straffen för gängrelaterade vapen- och narkotikabrott måste ökas dramatiskt för att avskräcka kriminellt beteende.",
+      "opts": [
+        "Ja. Hårdare straff är ett nödvändigt avskräckningselement.",
+        "Viss ökning ja, men bevis visar att avskräckningseffekten är begränsad. Rehabilitering måste vara central.",
+        "Nej. Strafflängd minskar inte brott. Förebyggande arbete och sociala investeringar gör det."
+      ]
+    },
+    "np1": {
+      "q": "Sverige bör snabbspåra tillstånd för nya kärnkraftverk på befintliga platser.",
+      "opts": [
+        "Ja. Nya reaktorer är avgörande för energisäkerhet och den gröna omställningen.",
+        "Värt att utforska vid sidan av förnybart som del av en diversifierad energistrategi.",
+        "Nej. Vindkraft och solenergi med batteri är snabbare, billigare och säkrare."
+      ]
+    },
+    "np2": {
+      "q": "Sverige måste kraftigt öka sin vindkraftskapacitet. Lokalt motstånd mot vindkraftparker bör inte blockera energiomställningen.",
+      "opts": [
+        "Ja. Nationella energimål måste väga tyngre än lokalt motstånd.",
+        "Lokalt inflytande ja, men inte rätt att blockera för evigt.",
+        "Nej. Lokalsamhällen måste ha genuint inflytande över vad som byggs i deras område."
+      ]
+    },
+    "md1": {
+      "q": "SVT och SR är viktiga för demokratin och måste skyddas från politiker.",
+      "opts": [
+        "Ja. Oberoende public service är grundläggande för demokratin.",
+        "Public service är värdefull men måste reformeras för att förbli relevant och trovärdig.",
+        "SVT och SR lutar åt vänster och bör antingen reformeras grundligt eller minskas."
+      ]
+    },
+    "md2": {
+      "q": "Lögner och konspirationsteorier online är ett verkligt hot mot demokratin.",
+      "opts": [
+        "Ja. Plattformsreglering och undervisning i källkritik är nödvändigt.",
+        "Medieutbildning ja. Staten som bestämmer vad som är sant är farligare än lögner.",
+        "Nej. Om staten bestämmer vad som är sant har vi ett större problem."
+      ]
+    },
+    "ni1": {
+      "q": "Sverige har alltför snabbt övergett sina nationella kulturella traditioner i mångkulturalismens namn.",
+      "opts": [
+        "Ja. Nationell identitet och kulturell kontinuitet har verkligt värde och förtjänar skydd.",
+        "Viss oro är legitim men svensk kultur har alltid anpassats och absorberat nya influenser.",
+        "Nej. Svensk identitet var alltid mångkulturell. Nostalgin gäller ett land som aldrig riktigt existerade."
+      ]
+    },
+    "ni2": {
+      "q": "Sverige bör formellt undervisa om svensk historia, kultur och demokratiska värderingar i skolan som grund för medborgerlig identitet.",
+      "opts": [
+        "Ja. Medborgarutbildning är grunden för en sammanhållen demokrati.",
+        "Ja, men det måste vara kritiskt och inkludera perspektiv från dem som kommit senare.",
+        "Medborgarutbildning är viktig men att påtvinga ett enda nationellt narrativ är exkluderande."
+      ]
+    },
+    "ex1": {
+      "q": "Det är inte ett polisproblem. Det är ett samhällsproblem som vi blundat för i 20 år.",
+      "ctx": "Sverige har fler dödsskjutningar per capita än nästan alla länder i EU. Barn dör i korseld.",
+      "opts": [
+        "Ja. Fattigdom och utanförskap skapade detta. Vi måste ta itu med grundorsakerna.",
+        "Nej. Polisen måste slå hårt mot gängen nu. Sociala förklaringar är inte ursäkter."
+      ]
+    },
+    "ex2": {
+      "q": "Hårdare straff stoppar inte gängbrott. Forskningen visar det. Att tro något annat väljer hämd framför resultat.",
+      "opts": [
+        "Sant. Satsa på förebyggande arbete istället.",
+        "Fel. Utan riktiga konsekvenser rekryterar gängen fritt."
+      ]
+    },
+    "ex3": {
+      "q": "Det här är ett systemfel skapat av att vi styckat ut sjukvården på vinstbolag.",
+      "ctx": "Köerna är bland de längsta i EU. En garantin som sällan hålls. Läkare slutar för att de är utbrända.",
+      "opts": [
+        "Ja. Ta bort vinstintresset ur vård och omsorg.",
+        "Nej. Problemet är byråkrati, inte vinstintresse. Konkurrens driver kvalitet."
+      ]
+    },
+    "ex4": {
+      "q": "Sverige lägger mer på sjukvård än de flesta EU-länder men får sämre resultat. Mer pengar utan reform löser ingenting.",
+      "opts": [
+        "Sant. Reformera systemen innan vi ökar pengarna.",
+        "Fel. Sverige har skurit ned i 30 år. Problemet är underfinansiering."
+      ]
+    },
+    "ex5": {
+      "q": "Vi har skapat ett system där du måste vara rik för att ha en trygg bostad. Det är ett politiskt val.",
+      "ctx": "En vanlig 30-åring i Stockholm har inte råd att köpa bostad. Bostadskön kan ta 20 år.",
+      "opts": [
+        "Sant. Bygg fler allmännyttiga bostäder och stoppa systemet som gynnar de rika.",
+        "Fel. Problemet är regler och planmonopol som stoppar byggandet. Låt marknaden bygga."
+      ]
+    }
+  },
   "bank": [
     {
       "id": "im1",
@@ -2532,7 +2947,7 @@
       ]
     }
   ],
-  "heroTitle": "Where do you stand in <em>Swedish</em> politics?",
-  "heroSub": "47 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties.",
+  "heroTitle": "Var står du i <em>svensk</em> politik?",
+  "heroSub": "47 scenariobaserade frågor om ämnena som definierar Sverige just nu. Brottslighet, migration, välfärd, Nato, bostäder med mera. Se din överensstämmelse med alla åtta riksdagspartier.",
   "partyStripHtml": "<div class=\"party-strip\">\r\n    <div class=\"party-cell\"><div class=\"party-dot\" style=\"background:#CC0000\"></div>"
 }
