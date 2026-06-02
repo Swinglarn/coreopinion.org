@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Canadian Political Quiz 2026: Which Party Do You Align With? | CoreOpinion</title>
-<meta name="description" content="Free Canadian political quiz with 47 scenario-based questions. Find your position on the political compass and see your alignment with Liberal,...">
+<meta name="description" content="Free Canadian political quiz with 47 scenario-based questions. Find your position on the political compass and see your alignment with Liberal, Conservative, NDP, Bloc Québécois, Green, and PPC.">
 <meta name="keywords" content="Canadian political quiz, Canada political compass test, Liberal Conservative NDP quiz, where do I stand in Canadian politics, political alignment test Canada, which party should I vote for Canada, Carney Poilievre quiz, Canadian election 2025 quiz">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -21,153 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#0A0C0F;--ink-soft:#3D4147;--ink-muted:#7A7F88;--ink-faint:#B0B5BC;
-  --parchment:#F9F8F6;--parchment-warm:#F3F1EE;--white:#FFFFFF;
-  --navy:#1E4D8C;--navy-soft:#E8EFF9;
-  --border:#DDD9D2;--border-soft:#EAE7E1;
-  --green:#2D6A4F;--green-soft:#E8F5EE;
-  --lib:#CC0000;--lib-soft:#FAEAEA;
-  --con:#003F7F;--con-soft:#E5EBF5;
-  --ndp:#F37021;--ndp-soft:#FEF0E5;
-  --grn:#3D9B35;--grn-soft:#E5F5E4;
-  --blq:#003DA5;--blq-soft:#E5ECFA;
-  --ppc:#4B0082;--ppc-soft:#F0E8FA;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--parchment);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;font-weight:300;}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.4;}
-.page{display:none}
-.page.active{display:block;animation:rise 0.4s cubic-bezier(0.22,1,0.36,1)}
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-nav{display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;border-bottom:1px solid var(--border-soft);background:rgba(249,248,246,0.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
-.logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);cursor:pointer;letter-spacing:-0.5px;line-height:1;text-decoration:none;}
-.logo span{color:#2A5DB0}
-.nav-links{display:flex;gap:24px}
-.nav-links a{font-size:14px;color:var(--ink-muted);text-decoration:none;cursor:pointer;font-weight:400;transition:color 0.15s;}
-.nav-links a:hover{color:var(--ink)}
-.flag-badge{font-size:13px;color:var(--ink-muted);display:flex;align-items:center;gap:8px;}
-.flag-badge .flag{font-size:20px;line-height:1}
-.btn-primary{background:var(--ink);color:var(--white);border:none;padding:16px 36px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:400;transition:opacity 0.15s;display:inline-block;}
-.btn-primary:hover{opacity:0.84}
-.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--border);padding:15px 32px;border-radius:4px;font-size:15px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
-.btn-secondary:hover{border-color:var(--ink)}
-.btn-ghost{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:10px 22px;border-radius:4px;font-size:13px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
-.btn-ghost:hover{border-color:var(--border);color:var(--ink)}
-.btn-back{background:none;border:1px solid var(--border-soft);color:var(--ink-muted);padding:11px 22px;border-radius:4px;font-size:14px;font-family:'Outfit',sans-serif;cursor:pointer;font-weight:300;transition:all 0.15s;}
-.btn-back:hover{border-color:var(--border);color:var(--ink)}
-.btn-back:disabled{opacity:0.28;cursor:default;}
-.hero{max-width:980px;margin:0 auto;padding:88px 52px 72px;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;right:-20px;top:10px;font-family:'Cormorant Garamond',serif;font-size:260px;font-weight:700;color:rgba(10,12,15,0.022);line-height:1;pointer-events:none;letter-spacing:-8px;user-select:none;}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:28px;}
-.eyebrow::before{content:'';display:block;width:28px;height:1px;background:#2A5DB0}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:70px;font-weight:600;line-height:1.05;color:var(--ink);margin-bottom:24px;letter-spacing:-2px;max-width:700px;}
-.hero h1 em{font-style:italic;color:#2A5DB0}
-.hero-sub{font-size:17px;color:var(--ink-muted);line-height:1.72;max-width:500px;margin-bottom:44px;font-weight:300;}
-.hero-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-.party-strip{border-top:1px solid var(--border-soft);display:grid;grid-template-columns:repeat(6,1fr);max-width:980px;margin:0 auto;}
-.party-cell{padding:24px 18px;border-right:1px solid var(--border-soft);display:flex;flex-direction:column;gap:8px;}
-.party-cell:last-child{border-right:none}
-.party-dot{width:28px;height:6px;border-radius:3px;}
-.party-name{font-size:13px;font-weight:500;color:var(--ink);}
-.party-desc{font-size:11px;color:var(--ink-muted);font-weight:300;line-height:1.5;}
-.info-section{max-width:980px;margin:0 auto;padding:60px 52px;border-top:1px solid var(--border-soft);display:grid;grid-template-columns:1fr 1fr;gap:64px;}
-.info-block h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--ink);margin-bottom:14px;letter-spacing:-0.5px;}
-.info-block p{font-size:15px;color:var(--ink-muted);line-height:1.75;font-weight:300;}
-.q-shell{max-width:720px;margin:0 auto;padding:52px;}
-.prog-row{display:flex;align-items:center;gap:18px;margin-bottom:56px;}
-.prog-track{flex:1;height:1px;background:var(--border-soft);position:relative;overflow:visible;}
-.prog-fill{height:1px;background:var(--ink);transition:width 0.5s cubic-bezier(0.22,1,0.36,1);}
-.prog-tip{position:absolute;right:-4px;top:-4px;width:9px;height:9px;background:var(--ink);border-radius:50%;}
-.prog-txt{font-size:12px;color:var(--ink-faint);white-space:nowrap;font-variant-numeric:tabular-nums;}
-.q-topic-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#2A5DB0;background:var(--navy-soft);padding:5px 14px;border-radius:20px;margin-bottom:22px;}
-.q-scenario-box{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--ink);padding:22px 26px;margin-bottom:32px;border-radius:0 8px 8px 0;box-shadow:0 2px 8px rgba(10,12,15,0.05);}
-.q-scenario-tag{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:12px;}
-.q-scenario-body{font-size:16px;color:var(--ink-soft);line-height:1.75;font-weight:300;}
-.q-question{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500;color:var(--ink);line-height:1.38;margin-bottom:32px;letter-spacing:-0.4px;}
-.q-opts{display:flex;flex-direction:column;gap:11px}
-.q-opt{background:var(--white);border:1px solid var(--border);border-radius:7px;padding:18px 22px;cursor:pointer;font-size:15px;color:var(--ink-soft);line-height:1.55;font-weight:400;transition:all 0.18s;}
-.q-opt:hover{border-color:var(--ink);color:var(--ink);background:var(--parchment);}
-.q-opt.picked{border-color:var(--ink);background:var(--ink);color:var(--white);}
-.q-foot{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--border-soft);}
-.btn-skip{background:none;border:none;font-size:13px;color:var(--ink-faint);cursor:pointer;font-family:'Outfit',sans-serif;padding:0;}
-.demo-outer{max-width:580px;margin:0 auto;padding:72px 52px;}
-.page-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--ink);margin-bottom:12px;letter-spacing:-1.2px;}
-.page-sub{font-size:15px;color:var(--ink-muted);margin-bottom:44px;font-weight:300;line-height:1.65;}
-.demo-fields{display:flex;flex-direction:column;gap:22px;margin-bottom:40px;}
-.field-label{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:9px;}
-.field-label span{color:var(--ink-faint);font-weight:300;}
-select,input[type=email]{width:100%;padding:13px 16px;border:1px solid var(--border-soft);border-radius:6px;font-size:14px;font-family:'Outfit',sans-serif;font-weight:300;background:var(--white);color:var(--ink);appearance:none;-webkit-appearance:none;transition:border-color 0.15s;}
-select:focus,input:focus{outline:none;border-color:var(--navy);}
-.demo-note{font-size:13px;color:var(--ink-faint);font-weight:300;line-height:1.6;margin-bottom:32px;}
-.calc-shell{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 72px);padding:52px;text-align:center;}
-.spin-ring{width:48px;height:48px;border:1.5px solid var(--border-soft);border-top-color:var(--ink);border-radius:50%;animation:spin 1.1s linear infinite;margin:0 auto 36px;}
-@keyframes spin{to{transform:rotate(360deg)}}
-.calc-h{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--ink);margin-bottom:12px;letter-spacing:-0.5px;}
-.calc-p{font-size:15px;color:var(--ink-muted);font-weight:300}
-.results-shell{max-width:860px;margin:0 auto;padding:60px 52px;}
-.results-head{margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--border-soft);}
-.result-eyebrow{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;}
-.result-headline{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;color:var(--ink);letter-spacing:-2px;line-height:1;margin-bottom:12px;}
-.result-sub{font-size:16px;color:var(--ink-muted);font-weight:300;}
-.party-results{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--border-soft);border-radius:10px;overflow:hidden;margin-bottom:36px;}
-.party-row{display:flex;align-items:center;gap:20px;padding:20px 28px;border-bottom:1px solid var(--border-soft);}
-.party-row:last-child{border-bottom:none}
-.party-row.top-match{background:var(--parchment);}
-.party-row-rank{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--ink-faint);min-width:24px;}
-.party-row.top-match .party-row-rank{color:var(--ink);}
-.party-row-info{min-width:180px;}
-.party-row-name{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:2px;}
-.party-row-sub{font-size:12px;color:var(--ink-muted);font-weight:300;}
-.party-row-bar-wrap{flex:1;height:8px;background:var(--parchment-warm);border-radius:4px;overflow:hidden;}
-.party-row-bar{height:100%;border-radius:4px;transition:width 1.2s cubic-bezier(0.22,1,0.36,1);}
-.party-row-pct{font-size:16px;font-weight:500;color:var(--ink);min-width:44px;text-align:right;font-variant-numeric:tabular-nums;}
-.results-grid{display:grid;grid-template-columns:55fr 45fr;gap:24px;margin-bottom:28px;}
-.res-card{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;}
-.res-card-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:20px;}
-.compass-wrap{display:flex;justify-content:center;margin-bottom:24px;}
-.axis-block{margin-top:4px}
-.axis-item{margin-bottom:18px}
-.axis-item:last-child{margin-bottom:0}
-.axis-row-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-faint);margin-bottom:7px;}
-.axis-track{width:100%;height:5px;background:var(--parchment-warm);border-radius:3px;position:relative;}
-.axis-marker{position:absolute;width:13px;height:13px;background:var(--ink);border:2.5px solid var(--white);border-radius:50%;top:-4px;transform:translateX(-50%);transition:left 0.9s cubic-bezier(0.22,1,0.36,1);box-shadow:0 1px 4px rgba(0,0,0,0.2);}
-.axis-name{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:8px;}
-.save-panel{background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;}
-.save-title{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;}
-.save-desc{font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.6;margin-bottom:20px;}
-.save-row{display:flex;gap:10px;align-items:center;}
-.save-row input{margin-bottom:0;flex:1;}
-.save-status{font-size:13px;margin-top:10px;min-height:20px;}
-.share-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;padding-top:20px;border-top:1px solid var(--border-soft);}
-@media(max-width:768px){
-  nav{padding:0 20px;height:64px;}
-  .logo{font-size:22px;}
-  .nav-links{gap:12px;}
-  .nav-links a{font-size:12px;}
-  .hero{padding:52px 20px 44px;}
-  .hero h1{font-size:42px;letter-spacing:-1px;}
-  .hero-sub{font-size:15px;}
-  .hero-cta{flex-direction:column;align-items:flex-start;}
-  .btn-primary,.btn-secondary{width:100%;text-align:center;}
-  .party-strip{grid-template-columns:1fr 1fr 1fr;border-top:none;}
-  .party-cell{padding:14px;border-right:none;border-top:1px solid var(--border-soft);}
-  .info-section{grid-template-columns:1fr;gap:32px;padding:40px 20px;}
-  .q-shell{padding:28px 20px;}
-  .q-question{font-size:21px;}
-  .q-opt{font-size:14px;padding:15px 16px;}
-  .demo-outer{padding:40px 20px;}
-  .results-shell{padding:32px 20px;}
-  .result-headline{font-size:34px;}
-  .results-grid{grid-template-columns:1fr;}
-  .party-row{padding:14px 16px;gap:12px;}
-  .party-row-info{min-width:120px;}
-  .save-row{flex-direction:column;}
-  .share-row{flex-direction:column;}
-}
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -179,9 +33,13 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
       <a href="/">General</a>
       <a href="/us">US</a>
       <a href="/uk">UK</a>
-      <a onclick="goTo('page-landing')">Canada</a>
+      <a href="/ca">Canada</a>
       <a href="/au">Australia</a>
       <a href="/se">Sweden</a>
+      <a href="/de">Germany</a>
+      <a href="/fr">France</a>
+      <a href="/ie">Ireland</a>
+      <a href="/nl">Netherlands</a>
     </div>
     <div class="flag-badge"><span class="flag">🇨🇦</span> Canada</div>
   </nav>
@@ -252,7 +110,7 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
         <div class="prog-fill" id="prog-fill" style="width:0%"></div>
         <div class="prog-tip"></div>
       </div>
-      <span class="prog-txt" id="prog-txt">1 of 40</span>
+      <span class="prog-txt" id="prog-txt">1 of 47</span>
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
     <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
@@ -271,27 +129,74 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
   </div>
 </div>
 
-<!-- DEMO -->
+<!-- DEMOGRAPHICS -->
 <div class="page" id="page-demo">
   <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
   <div class="demo-outer">
     <div class="page-title">Almost there.</div>
-    <p class="page-sub">A few quick questions. Everything is anonymous.</p>
+    <p class="page-sub">A few quick questions before your results. Everything is anonymous.</p>
     <div class="demo-fields">
       <div>
         <div class="field-label">Age</div>
         <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
       </div>
       <div>
-        <div class="field-label">Province or territory <span>(optional)</span></div>
-        <select id="d-province"><option value="">Select...</option><option>Alberta</option><option>British Columbia</option><option>Manitoba</option><option>New Brunswick</option><option>Newfoundland and Labrador</option><option>Northwest Territories</option><option>Nova Scotia</option><option>Nunavut</option><option>Ontario</option><option>Prince Edward Island</option><option>Quebec</option><option>Saskatchewan</option><option>Yukon</option></select>
+        <div class="field-label">Province or Territory <span>(optional)</span></div>
+        <select id="d-country">
+          <option value="">Select...</option>
+          <option>Alberta</option>
+          <option>British Columbia</option>
+          <option>Manitoba</option>
+          <option>New Brunswick</option>
+          <option>Newfoundland and Labrador</option>
+          <option>Nova Scotia</option>
+          <option>Ontario</option>
+          <option>Prince Edward Island</option>
+          <option>Quebec</option>
+          <option>Saskatchewan</option>
+          <option>Northwest Territories</option>
+          <option>Nunavut</option>
+          <option>Yukon</option>
+        </select>
       </div>
       <div>
         <div class="field-label">How do you currently identify? <span>(optional)</span></div>
         <select id="d-party"><option value="">Prefer not to say</option><option>Liberal</option><option>Conservative</option><option>NDP</option><option>Green</option><option>Bloc Québécois</option><option>PPC</option><option>None</option></select>
       </div>
+      <div>
+        <div class="field-label">Gender <span>(optional)</span></div>
+        <select id="d-gender">
+          <option value="">Select...</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+      <div>
+        <div class="field-label">Nationality <span>(optional)</span></div>
+        <select id="d-nationality">
+          <option value="">Select...</option>
+          <option>United States</option>
+          <option>United Kingdom</option>
+          <option selected>Canada</option>
+          <option>Australia</option>
+          <option>Sweden</option>
+          <option>Germany</option>
+          <option>France</option>
+          <option>Ireland</option>
+          <option>Netherlands</option>
+          <option>Other</option>
+        </select>
+      </div>
     </div>
-    <p class="demo-note">Never linked to your answers. Helps us understand who takes the test.</p>
+    <p class="demo-note">This is never linked to your answers. It helps us understand who takes the test.</p>
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-top:20px;margin-bottom:24px;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px 20px;box-shadow:0 1px 4px rgba(10,12,15,0.02);text-align:left;">
+      <input type="checkbox" id="d-consent" checked style="width:20px;height:20px;margin-top:2px;cursor:pointer;">
+      <label for="d-consent" style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5;cursor:pointer;user-select:none;">
+        <strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.
+      </label>
+    </div>
     <button class="btn-primary" onclick="goCalc()">See my results</button>
   </div>
 </div>
@@ -310,38 +215,53 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
 <div class="page" id="page-results">
   <nav>
     <a class="logo" href="/">Core<span>opinion</span></a>
-    <div class="nav-links"><a onclick="startTest()">Retake</a><a href="/">General</a><a href="/us">US</a><a href="/uk">UK</a><a href="/au">AU</a><a href="/se">SE</a></div>
-    <div class="flag-badge"><span class="flag">🇨🇦</span> Canada</div>
+    <div class="nav-links">
+      <a href="/">General</a>
+      <a href="/us">US</a>
+      <a href="/uk">UK</a>
+      <a href="/ca">Canada</a>
+      <a href="/au">Australia</a>
+      <a href="/se">Sweden</a>
+      <a href="/de">Germany</a>
+      <a href="/fr">France</a>
+      <a href="/ie">Ireland</a>
+      <a href="/nl">Netherlands</a>
+    </div>
+    <div class="flag-badge"><span class="flag">🇨🇦</span> Canada test</div>
   </nav>
   <div class="results-shell">
     <div class="results-head">
       <div class="result-eyebrow">Your Canadian political alignment</div>
       <div class="result-headline" id="r-top-party">Liberal</div>
-      <div class="result-sub" id="r-top-desc">Your answers most closely align with the Liberal Party of Canada.</div>
+      <div class="result-sub" id="r-top-desc">Your answers most closely align with the Liberal Party.</div>
     </div>
+
+    <!-- Party alignment bars -->
     <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Party alignment</div>
     <div class="party-results" id="party-results"></div>
+
+    <!-- Compass + axis -->
     <div class="results-grid">
       <div class="res-card">
         <div class="res-card-title">Political compass position</div>
         <div class="compass-wrap">
-          <svg width="300" height="300" viewBox="0 0 300 300">
-            <rect x="10" y="10" width="135" height="135" rx="5" fill="#4B8EF1" opacity="0.11"/>
-            <rect x="155" y="10" width="135" height="135" rx="5" fill="#F5A623" opacity="0.11"/>
-            <rect x="10" y="155" width="135" height="135" rx="5" fill="#3DBF82" opacity="0.11"/>
-            <rect x="155" y="155" width="135" height="135" rx="5" fill="#E85D6B" opacity="0.11"/>
-            <line x1="150" y1="10" x2="150" y2="290" stroke="#B0B5BC" stroke-width="1.2"/>
-            <line x1="10" y1="150" x2="290" y2="150" stroke="#B0B5BC" stroke-width="1.2"/>
-            <line x1="80" y1="10" x2="80" y2="290" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
-            <line x1="220" y1="10" x2="220" y2="290" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
-            <line x1="10" y1="80" x2="290" y2="80" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
-            <line x1="10" y1="220" x2="290" y2="220" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
-            <text x="80" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
-            <text x="80" y="298" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
-            <text x="8" y="154" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 154)">Left</text>
-            <text x="296" y="154" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 296 154)">Right</text>
-            <circle id="cdot-ring" cx="150" cy="150" r="18" fill="#1E4D8C" opacity="0.15"/>
-            <circle id="cdot" cx="150" cy="150" r="9" fill="#1E4D8C"/>
+          <svg width="340" height="340" viewBox="0 0 340 340">
+            <rect x="10" y="10" width="155" height="155" rx="5" fill="#4B8EF1" opacity="0.11"/>
+            <rect x="175" y="10" width="155" height="155" rx="5" fill="#F5A623" opacity="0.11"/>
+            <rect x="10" y="175" width="155" height="155" rx="5" fill="#3DBF82" opacity="0.11"/>
+            <rect x="175" y="175" width="155" height="155" rx="5" fill="#E85D6B" opacity="0.11"/>
+            <line x1="170" y1="10" x2="170" y2="330" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="10" y1="170" x2="330" y2="170" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="90" y1="10" x2="90" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="250" y1="10" x2="250" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="90" x2="330" y2="90" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="250" x2="330" y2="250" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <text x="90" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
+            <text x="90" y="338" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
+            <text x="8" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 174)">Left</text>
+            <text x="336" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 336 174)">Right</text>
+            <circle id="cdot-ring" cx="170" cy="170" r="20" fill="#1E4D8C" opacity="0.15"/>
+            <circle id="cdot" cx="170" cy="170" r="10" fill="#1E4D8C"/>
           </svg>
         </div>
         <div class="axis-block">
@@ -357,16 +277,19 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
           </div>
         </div>
       </div>
+
       <div class="res-card">
         <div class="res-card-title">What this means</div>
         <div id="r-insight" style="font-size:14px;color:var(--ink-muted);line-height:1.8;font-weight:300;"></div>
       </div>
     </div>
+
     <!-- WHERE YOU DISAGREE -->
     <div id="disagree-section" style="display:none;margin-bottom:28px;">
       <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Where you disagree with <span id="disagree-party-name">your top party</span></div>
       <div id="disagree-list"></div>
     </div>
+
     <!-- BIAS SCORE CARD -->
     <div id="bias-card" style="background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;">
       <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;">
@@ -380,6 +303,7 @@ select:focus,input:focus{outline:none;border-color:var(--navy);}
         </div>
       </div>
       <div id="bias-rows" style="display:flex;flex-direction:column;gap:10px;"></div>
+      <div id="bias-faceoff" style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border-soft);display:none;"></div>
     </div>
     <div class="save-panel">
       <div class="save-title">Save your results</div>
@@ -407,9 +331,7 @@ async function sbInsert(table,data){
   return res.json();
 }
 
-// Party scores: lib, con, ndp, grn, blq, ppc
 const BANK=[
-
   // US TRADE WAR
   {id:'us1',nl:'Canada-US relations',pair:'us-a',fr:'pro',type:'sc',
    ctx:'Donald Trump imposed 25% tariffs on Canadian goods and called Canada the 51st state. Mark Carney campaigned on economic sovereignty and won.',
@@ -419,7 +341,6 @@ const BANK=[
      {t:'We should stand firm and negotiate hard, but ultimately the US relationship is irreplaceable.',e:0,g:0,lib:1,con:1,ndp:0,grn:0,blq:0,ppc:0},
      {t:'Trade protectionism and economic nationalism will make Canadians poorer.',e:2,g:-1,lib:-1,con:1,ndp:-2,grn:-1,blq:-1,ppc:1}
    ]},
-
   {id:'us2',nl:'Canada-US relations',pair:'us-a',fr:'con',type:'s',
    q:'Canada should never allow retaliation against the United States to trigger a trade war that hurts Canadian workers and families.',
    opts:[
@@ -436,7 +357,6 @@ const BANK=[
      {t:'The principle is sound but the rebate system has failed to bring public support.',e:0,g:0,lib:0,con:-1,ndp:0,grn:1,blq:0,ppc:-1},
      {t:'No. It raises the cost of living for ordinary Canadians and should be eliminated.',e:1,g:-1,lib:-2,con:2,ndp:-1,grn:-2,blq:-1,ppc:2}
    ]},
-
   {id:'ct2',nl:'Carbon pricing',pair:'ct-a',fr:'con',type:'s',
    q:'The carbon tax hits rural Canadians, farmers, and truckers hardest while doing almost nothing to change global emissions.',
    opts:[
@@ -454,7 +374,6 @@ const BANK=[
      {t:'Zoning reform and removing barriers to private construction is the right approach.',e:1,g:-1,lib:0,con:2,ndp:-1,grn:-1,blq:0,ppc:1},
      {t:'Both are needed. Supply reform and targeted public investment simultaneously.',e:-1,g:1,lib:2,con:0,ndp:1,grn:1,blq:1,ppc:-1}
    ]},
-
   {id:'hs2',nl:'Housing',pair:'hs-a',fr:'con',type:'s',
    q:'Immigration at current levels is driving up housing costs faster than we can build. Reducing intake is part of the housing solution.',
    opts:[
@@ -472,7 +391,6 @@ const BANK=[
      {t:'Transfer more to provinces with strings attached. Outcomes-based funding.',e:-1,g:1,lib:1,con:0,ndp:1,grn:1,blq:0,ppc:-1},
      {t:'The system needs structural reform, not more money poured into the same model.',e:1,g:0,lib:-1,con:2,ndp:-1,grn:-1,blq:-1,ppc:1}
    ]},
-
   {id:'hc2',nl:'Healthcare',pair:'hc-a',fr:'con',type:'s',
    q:'Allowing more private delivery of publicly funded healthcare services would reduce wait times without undermining the principle of universal access.',
    opts:[
@@ -489,7 +407,6 @@ const BANK=[
      {t:'Fill the gaps with targeted coverage for those who have nothing, not a full replacement of private plans.',e:-1,g:1,lib:1,con:0,ndp:0,grn:1,blq:1,ppc:-1},
      {t:'No. Universal programs crowd out private insurance and reduce drug availability.',e:2,g:-1,lib:-1,con:2,ndp:-2,grn:-2,blq:-1,ppc:2}
    ]},
-
   {id:'ph2',nl:'Social programs',pair:'ph-a',fr:'con',type:'s',
    q:'The NDP-Liberal dental care program is a fiscal reckless expansion of government that Canada cannot afford.',
    opts:[
@@ -507,7 +424,6 @@ const BANK=[
      {t:'Targeted reductions in specific categories, especially temporary foreign workers.',e:0,g:0,lib:0,con:1,ndp:0,grn:0,blq:1,ppc:1},
      {t:'No. Canada needs immigrants to grow the economy and fund aging social programs.',e:-1,g:-1,lib:1,con:-1,ndp:1,grn:1,blq:0,ppc:-2}
    ]},
-
   {id:'im2',nl:'Immigration',pair:'im-a',fr:'pro',type:'s',
    q:'Canada has always been built by immigration. Turning against newcomers now is short-sighted and contrary to who we are.',
    opts:[
@@ -525,7 +441,6 @@ const BANK=[
      {t:'A managed transition is needed. Abrupt shutdowns would devastate Alberta and workers.',e:-1,g:0,lib:1,con:0,ndp:1,grn:0,blq:0,ppc:-1},
      {t:'Canadian oil is ethical and replacing it with imports would achieve nothing on climate.',e:2,g:-1,lib:-1,con:2,ndp:-2,grn:-2,blq:-1,ppc:2}
    ]},
-
   {id:'cl2',nl:'Climate and energy',pair:'cl-a',fr:'con',type:'s',
    q:'Alberta oil and gas workers and communities deserve the same respect that coastal or urban Canadians demand for their industries.',
    opts:[
@@ -543,7 +458,6 @@ const BANK=[
      {t:'Progress has been slow but real. The process requires partnership, not speed.',e:0,g:0,lib:1,con:0,ndp:1,grn:1,blq:0,ppc:-1},
      {t:'Reconciliation should not override resource development that benefits all Canadians.',e:1,g:1,lib:-1,con:1,ndp:-2,grn:-2,blq:-1,ppc:1}
    ]},
-
   {id:'ir2',nl:'Indigenous reconciliation',pair:'ir-a',fr:'con',type:'s',
    q:'The duty to consult with Indigenous communities should not give any group an effective veto over national infrastructure projects.',
    opts:[
@@ -561,7 +475,6 @@ const BANK=[
      {t:'Deficits must come down, but not through cuts that harm services.',e:0,g:0,lib:1,con:0,ndp:0,grn:0,blq:0,ppc:-1},
      {t:'No. The trajectory is unsustainable. Future generations will pay for today.',e:2,g:0,lib:-1,con:2,ndp:-2,grn:-1,blq:-1,ppc:2}
    ]},
-
   {id:'tx2',nl:'Tax and spending',pair:'tx-a',fr:'con',type:'s',
    q:'The capital gains inclusion rate hike punished entrepreneurs, investors, and anyone who built something. It should be reversed.',
    opts:[
@@ -569,7 +482,6 @@ const BANK=[
      {t:'Taxing capital gains more like income is fairer. The critics are protecting privilege.',e:-2,g:1,lib:1,con:-2,ndp:2,grn:2,blq:0,ppc:-2},
      {t:'A more targeted approach would be better than a blanket reversal.',e:0,g:0,lib:0,con:0,ndp:0,grn:0,blq:0,ppc:0}
    ]},
-
   {id:'tx3',nl:'Tax and spending',pair:'tx-b',fr:'neutral',type:'s',
    q:'Canada should introduce a wealth tax on assets above 10 million dollars to fund public services and reduce inequality.',
    opts:[
@@ -586,13 +498,12 @@ const BANK=[
      {t:'Only with a clear question and a clear majority threshold, as the Clarity Act requires.',e:0,g:0,lib:1,con:1,ndp:1,grn:0,blq:-1,ppc:0},
      {t:'No. The 1995 vote settled this. Canada is not divisible.',e:0,g:1,lib:0,con:1,ndp:0,grn:0,blq:-2,ppc:0}
    ]},
-
   {id:'nu2',nl:'National unity and Quebec',pair:'nu-a',fr:'con',type:'s',
    q:'Federal spending in Quebec through the equalization formula subsidises policies that undermine national cohesion.',
    opts:[
      {t:'Yes. Equalization requires reform to reflect contribution, not just need.',e:1,g:1,lib:-1,con:1,ndp:-1,grn:-1,blq:-2,ppc:2},
      {t:'Equalization is a constitutional commitment. Attacking it threatens national unity.',e:-1,g:-1,lib:1,con:-1,ndp:1,grn:1,blq:1,ppc:-1},
-     {t:'The formula should be reformed to account for resource revenues more fairly.',e:0,g:0,lib:0,con:1,ndp:0,grn:0,blq:-1,ppc:1}
+     {t:'The formula should be reformed to account for resource revenues more fairly.',e:0,g:0,lib:0,con:1,ndp:0,grn:-1,blq:-1,ppc:1}
    ]},
 
   // WORKERS RIGHTS AND LABOUR
@@ -603,7 +514,6 @@ const BANK=[
      {t:'A new category with some protections but not full employment rights makes more sense.',e:0,g:0,lib:1,con:0,ndp:0,grn:0,blq:0,ppc:-1},
      {t:'No. Flexibility is the point. Forced reclassification kills the model and the jobs.',e:2,g:-1,lib:-1,con:2,ndp:-2,grn:-2,blq:-1,ppc:2}
    ]},
-
   {id:'wr2',nl:'Workers rights',pair:'wr-a',fr:'con',type:'s',
    q:'The federal government should use back-to-work legislation more readily to end strikes in essential services.',
    opts:[
@@ -630,7 +540,6 @@ const BANK=[
      {t:'Reform is needed but PR often produces unstable minority governments.',e:0,g:0,lib:0,con:1,ndp:0,grn:0,blq:0,ppc:0},
      {t:'FPTP produces strong governments. The current system works well enough.',e:0,g:1,lib:-1,con:2,ndp:-1,grn:-1,blq:-1,ppc:-1}
    ]},
-
   {id:'dr2',nl:'Democratic reform',pair:'dr-a',fr:'con',type:'s',
    q:'Senate reform is long overdue. An appointed upper house with no democratic mandate is an embarrassment.',
    opts:[
@@ -647,7 +556,6 @@ const BANK=[
      {t:'Diversity is valuable but government promotion of cultural division is not.',e:0,g:0,lib:0,con:1,ndp:0,grn:0,blq:0,ppc:1},
      {t:'Multiculturalism has undermined social cohesion. Integration, not celebration of separation.',e:1,g:1,lib:-2,con:1,ndp:-2,grn:-2,blq:-1,ppc:2}
    ]},
-
   {id:'si2',nl:'Social issues',pair:'si-a',fr:'con',type:'s',
    q:'Medical assistance in dying has been expanded too far. Approving MAID for mental illness alone crosses a line.',
    opts:[
@@ -664,7 +572,6 @@ const BANK=[
      {t:'Some government is too large but public services and social programs are the right size or too small.',e:-1,g:0,lib:1,con:-1,ndp:1,grn:1,blq:1,ppc:-1},
      {t:'No. The state builds the foundations of prosperity. Cutting it cuts the floor out from under Canadians.',e:-2,g:2,lib:1,con:-2,ndp:2,grn:2,blq:1,ppc:-2}
    ]},
-
   {id:'rg2',nl:'Role of government',pair:'rg-a',fr:'neutral',type:'s',
    q:'The gap between the wealthiest Canadians and everyone else has grown to a level that threatens social cohesion and economic mobility.',
    opts:[
@@ -681,7 +588,6 @@ const BANK=[
      {t:'Smart defence spending yes, but raw percentage targets miss the point.',e:0,g:0,lib:1,con:0,ndp:0,grn:0,blq:0,ppc:0},
      {t:'Canada should pursue peace through diplomacy, not military spending increases.',e:-1,g:-1,lib:0,con:-2,ndp:1,grn:2,blq:0,ppc:-1}
    ]},
-
   {id:'fp2',nl:'Foreign policy and defence',pair:'fp-a',fr:'con',type:'s',
    q:'Canada should prioritise its relationship with the US above all other foreign policy considerations, including relations with the EU and China.',
    opts:[
@@ -699,7 +605,6 @@ const BANK=[
      {t:'Profits reflect inflation and supply chain costs, not gouging. More competition is the answer.',e:1,g:-1,lib:0,con:2,ndp:-1,grn:0,blq:0,ppc:2},
      {t:'The government caused inflation through deficit spending. It should not pretend otherwise.',e:2,g:-1,lib:-2,con:2,ndp:-2,grn:-1,blq:-1,ppc:2}
    ]},
-
   {id:'co2',nl:'Cost of living',pair:'co-a',fr:'con',type:'s',
    q:'The fastest way to reduce the cost of living is to reduce the regulatory and tax burden on businesses so they can compete and lower prices.',
    opts:[
@@ -734,180 +639,15 @@ const BANK=[
      {t:'In the current moment, distinguishing ourselves from the US direction is essential.',e:0,g:0,lib:2,con:-1,ndp:1,grn:1,blq:1,ppc:-1},
      {t:'Quebec and Indigenous nations both offer richer foundations for identity than pan-Canadian nationalism.',e:0,g:-1,lib:-1,con:-1,ndp:1,grn:1,blq:2,ppc:-1}
    ]},
-
   {id:'ni2',nl:'National identity',pair:'ni-a',fr:'con',type:'s',
    q:'Woke ideology has captured Canadian institutions — the CBC, universities, the civil service — and is making the country less free.',
    opts:[
      {t:'Yes. There is an ideological conformism that does not tolerate dissent.',e:1,g:1,lib:-2,con:2,ndp:-2,grn:-2,blq:-1,ppc:2},
      {t:'Some institutions lean left but the word woke is used to dismiss legitimate concerns.',e:0,g:0,lib:0,con:0,ndp:-1,grn:-1,blq:0,ppc:1},
      {t:'No. This is a culture war import from the US and should be resisted.',e:-1,g:-1,lib:2,con:-2,ndp:2,grn:2,blq:1,ppc:-2}
-   ]}
-];
+   ]},
 
-function buildOrder(bank){
-  function strength(q){return Math.max(...q.opts.flatMap(o=>[Math.abs(o.e),Math.abs(o.g),Math.abs(o.lib),Math.abs(o.con),Math.abs(o.ndp),Math.abs(o.grn),Math.abs(o.blq),Math.abs(o.ppc)]));}
-  const s=[...bank].sort((a,b)=>strength(b)-strength(a)+(Math.random()-0.5)*0.5);
-  const G=Math.max(6,Math.floor(bank.length*0.25));
-  for(let p=0;p<60;p++){let m=false;for(let i=0;i<s.length;i++){for(let j=i+1;j<s.length;j++){if(s[i].pair===s[j].pair&&(j-i)<G){for(let k=Math.min(i+G,s.length-1);k<s.length;k++){if(k===j)continue;let ok=true;for(let n=0;n<s.length;n++){if(n===k||n===j)continue;if(s[n].pair===s[k].pair&&Math.abs(n-j)<G){ok=false;break;}}if(ok){[s[j],s[k]]=[s[k],s[j]];m=true;break;}}if(m)break;}}if(m)break;}if(!m)break;}
-  return s;
-}
-
-let qi=0,picked=-1,answers=[],qs=[];
-function goTo(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
-function startTest(){qi=0;picked=-1;answers=[];qs=buildOrder(BANK);document.getElementById('save-status').textContent='';document.getElementById('save-email').value='';renderQ();goTo('page-test');}
-function renderQ(){
-  const q=qs[qi],total=qs.length;
-  document.getElementById('prog-fill').style.width=((qi/total)*100).toFixed(1)+'%';
-  document.getElementById('prog-txt').textContent=(qi+1)+' of '+total;
-  document.getElementById('q-topic').textContent=q.nl;
-  const sw=document.getElementById('q-scen-wrap');
-  if(q.ctx){sw.style.display='block';document.getElementById('q-scen-body').textContent=q.ctx;}else{sw.style.display='none';}
-  document.getElementById('q-text').textContent=q.q;
-  const c=document.getElementById('q-opts');c.innerHTML='';
-  q.opts.forEach((o,i)=>{const d=document.createElement('div');d.className='q-opt';d.textContent=o.t;d.onclick=()=>pickOpt(i,d);c.appendChild(d);});
-  const prev=answers.find(a=>a.id===q.id);
-  if(prev){picked=prev.pick;c.children[prev.pick].classList.add('picked');}else{picked=-1;}
-  const bb=document.getElementById('btn-back');if(bb)bb.disabled=(qi===0);
-}
-function pickOpt(i,el){document.querySelectorAll('.q-opt').forEach(o=>o.classList.remove('picked'));el.classList.add('picked');picked=i;}
-function nextQ(){const q=qs[qi];if(picked>=0){answers=answers.filter(a=>a.id!==q.id);answers.push({id:q.id,pick:picked,...q.opts[picked]});}picked=-1;qi++;if(qi>=qs.length){goTo('page-demo');return;}renderQ();}
-function prevQ(){if(qi<=0)return;qi--;renderQ();}
-function skipQ(){picked=-1;qi++;if(qi>=qs.length){goTo('page-demo');return;}renderQ();}
-
-function score(){
-  let eSum=0,gSum=0,eMaxT=0,gMaxT=0;
-  const pT={lib:0,con:0,ndp:0,grn:0,blq:0,ppc:0},pM={lib:0,con:0,ndp:0,grn:0,blq:0,ppc:0};
-  answers.forEach(a=>{
-    const q=qs.find(q=>q.id===a.id);if(!q)return;
-    eSum+=a.e;gSum+=a.g;
-    eMaxT+=Math.max(...q.opts.map(o=>Math.abs(o.e)));
-    gMaxT+=Math.max(...q.opts.map(o=>Math.abs(o.g)));
-    ['lib','con','ndp','grn','blq','ppc'].forEach(p=>{pT[p]+=(a[p]||0);pM[p]+=Math.max(...q.opts.map(o=>Math.abs(o[p]||0)));});
-  });
-  const eScore=eMaxT>0?Math.max(-1,Math.min(1,eSum/eMaxT)):0;
-  const gScore=gMaxT>0?Math.max(-1,Math.min(1,gSum/gMaxT)):0;
-  const pScores={};
-  ['lib','con','ndp','grn','blq','ppc'].forEach(p=>{const raw=pM[p]>0?pT[p]/pM[p]:0;pScores[p]=Math.round(((raw+1)/2)*100);});
-  // ── FRAMING BIAS SCORE ──────────────────────────────────────────
-  // For each pair: if the two answers point in opposite ideological
-  // directions (using e as primary signal, g as fallback), that pair
-  // shows framing sensitivity.
-  const pairMap = {};
-  answers.forEach(a => {
-    if (!a.pair) return;
-    // Position signal: economic axis primary, governance secondary
-    const pos = a.e !== 0 ? a.e : (a.g !== 0 ? -a.g : 0);
-    if (!pairMap[a.pair]) pairMap[a.pair] = { nl: a.nl, positions: [] };
-    if (pos !== 0) pairMap[a.pair].positions.push(pos);
-  });
-
-  const topicBias = {};
-  Object.keys(pairMap).forEach(pk => {
-    const { nl, positions } = pairMap[pk];
-    if (positions.length < 2) return;
-    const posCount = positions.filter(x => x > 0).length;
-    const negCount = positions.filter(x => x < 0).length;
-    const tot = posCount + negCount;
-    if (tot < 2) return;
-    const maj = Math.max(posCount, negCount);
-    const bScore = Math.min(100, Math.max(0, Math.round((1 - maj / tot) * 200)));
-    // Group by nl (topic label)
-    if (!topicBias[nl]) topicBias[nl] = [];
-    topicBias[nl].push(bScore);
-  });
-
-  const biasValues = Object.values(topicBias).map(arr =>
-    Math.round(arr.reduce((a, b) => a + b, 0) / arr.length)
-  );
-  const overallBias = biasValues.length
-    ? Math.round(biasValues.reduce((a, b) => a + b, 0) / biasValues.length)
-    : 0;
-  const topicBiasAgg = {};
-  Object.keys(topicBias).forEach(k => {
-    topicBiasAgg[k] = Math.round(topicBias[k].reduce((a,b)=>a+b,0)/topicBias[k].length);
-  });
-  return{overallBias,topicBiasAgg,eScore,gScore,pScores};
-}
-
-const PMETA={
-  lib:{name:'Liberal',color:'#CC0000',desc:'Your answers most closely match the Liberal Party. You tend to support managed trade, social programs, climate action, and a strong federal role in the economy.'},
-  con:{name:'Conservative',color:'#003F7F',desc:'Your answers most closely match the Conservative Party. You favour lower taxes, smaller government, axing the carbon tax, and reducing federal spending.'},
-  ndp:{name:'NDP',color:'#F37021',desc:'Your answers most closely match the NDP. You support pharmacare, dental care, workers rights, wealth taxes, and a more activist government on inequality and climate.'},
-  grn:{name:'Green',color:'#3D9B35',desc:'Your answers most closely match the Green Party. You prioritise strong climate action, proportional representation, and a systemic challenge to corporate power.'},
-  blq:{name:'Bloc Québécois',color:'#003DA5',desc:'Your answers most closely match the Bloc. You support Quebec autonomy, French language protection, and a centre-left social model on federal matters.'},
-  ppc:{name:'PPC',color:'#4B0082',desc:'Your answers most closely match the PPC. You want radical cuts to immigration, elimination of climate policy, and a rejection of mainstream conservative incrementalism.'}
-};
-
-function renderResults(){
-  const{eScore,gScore,pScores,overallBias,topicBiasAgg}=score();
-  const ranked=Object.entries(pScores).sort((a,b)=>b[1]-a[1]);
-  const topKey=ranked[0][0];const meta=PMETA[topKey];
-  document.getElementById('r-top-party').textContent=meta.name;
-  document.getElementById('r-top-desc').textContent=meta.desc;
-  const c=document.getElementById('party-results');c.innerHTML='';
-  ranked.forEach(([party,pct],i)=>{
-    const m=PMETA[party];const row=document.createElement('div');row.className='party-row'+(i===0?' top-match':'');
-    row.innerHTML=`<div class="party-row-rank">${i+1}</div><div class="party-row-info"><div class="party-row-name">${m.name}</div><div class="party-row-sub">${pct}% alignment</div></div><div class="party-row-bar-wrap"><div class="party-row-bar" style="width:0%;background:${m.color}" data-w="${pct}%"></div></div><div class="party-row-pct">${pct}%</div>`;
-    c.appendChild(row);
-  });
-  const dotX=(150+eScore*132).toFixed(1);const dotY=(150-gScore*132).toFixed(1);
-  document.getElementById('cdot').setAttribute('cx',dotX);document.getElementById('cdot').setAttribute('cy',dotY);
-  document.getElementById('cdot-ring').setAttribute('cx',dotX);document.getElementById('cdot-ring').setAttribute('cy',dotY);
-  setTimeout(()=>{
-    document.getElementById('ax-econ').style.left=(((eScore+1)/2)*100).toFixed(1)+'%';
-    document.getElementById('ax-gov').style.left=(((gScore+1)/2)*100).toFixed(1)+'%';
-    document.querySelectorAll('.party-row-bar[data-w]').forEach(el=>{el.style.width=el.dataset.w;});
-  },200);
-  const gap=ranked[0][1]-ranked[1][1];
-  const gapText=gap<8?`Only ${gap} points separates you from ${PMETA[ranked[1][0]].name}. You likely hold views that straddle both traditions.`:gap<20?`You also align meaningfully with ${PMETA[ranked[1][0]].name} at ${ranked[1][1]}%.`:`Your alignment with ${meta.name} is clear, ${gap} points ahead of ${PMETA[ranked[1][0]].name}.`;
-  document.getElementById('r-insight').innerHTML=`<p style="margin-bottom:14px">${meta.desc}</p><p>${gapText}</p>`;
-
-// Render bias score
-  const biasVerdicts = [
-    [0,  0,  'No detectable bias', 'Your answers were completely consistent regardless of how questions were framed. That level of logical consistency is rare.'],
-    [1,  15, 'Very low bias', 'Your answers were highly consistent. The framing of a question had almost no influence on your position.'],
-    [16, 35, 'Low bias', 'Minor framing effects. Your positions are mostly stable but shifted slightly depending on how a question was worded.'],
-    [36, 60, 'Moderate bias', 'You showed noticeable framing sensitivity on several topics. Your views shifted depending on whether the question pushed you toward or against a position.'],
-    [61, 80, 'High bias', 'Framing had a significant influence on many of your answers. The same policy question, worded differently, often produced different responses.'],
-    [81, 100,'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
-  ];
-  const bv = biasVerdicts.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || biasVerdicts[0];
-  document.getElementById('bias-num').textContent = overallBias + '%';
-  document.getElementById('bias-verdict').textContent = bv[2];
-  document.getElementById('bias-explain').textContent = bv[3];
-
-  const biasRowsEl = document.getElementById('bias-rows');
-  biasRowsEl.innerHTML = '';
-  const sortedTopics = Object.entries(topicBiasAgg).sort((a,b) => b[1]-a[1]);
-  sortedTopics.forEach(([topic, score]) => {
-    const color = score < 20 ? '#2D9B5F' : score < 50 ? '#E8A020' : '#C0392B';
-    const row = document.createElement('div');
-    row.style.cssText = 'display:flex;align-items:center;gap:16px';
-    row.innerHTML = `<div style="font-size:13px;color:var(--ink-soft);min-width:200px;font-weight:300">${topic}</div><div style="flex:1;height:6px;background:var(--parchment-warm);border-radius:3px;overflow:hidden"><div style="height:100%;width:0%;background:${color};border-radius:3px;transition:width 1.1s cubic-bezier(0.22,1,0.36,1)" data-w="${score}%"></div></div><div style="font-size:13px;color:var(--ink-muted);min-width:36px;text-align:right;font-variant-numeric:tabular-nums">${score}%</div>`;
-    biasRowsEl.appendChild(row);
-  });
-  setTimeout(() => document.querySelectorAll('#bias-rows [data-w]').forEach(el => {el.style.width=el.dataset.w;
-  renderDisagreements(topKey, meta.name, ranked[0][1]);
-  document.getElementById('disagree-party-name').textContent = meta.name;}), 250);
-}
-
-function goCalc(){goTo('page-calc');setTimeout(()=>{renderResults();goTo('page-results');},1800);}
-
-async function saveResults(){
-  const email=document.getElementById('save-email').value.trim();
-  const s=document.getElementById('save-status');
-  if(!email||!email.includes('@')){s.style.color='#9B2335';s.textContent='Please enter a valid email.';return;}
-  s.style.color='var(--ink-muted)';s.textContent='Saving...';
-  const{pScores}=score();
-  try{
-    await sbInsert('coreopinion_results',{email,mode:'ca',archetype:Object.entries(pScores).sort((a,b)=>b[1]-a[1])[0][0],bias_breakdown:pScores,age:document.getElementById('d-age').value||null,country:'Canada',political_id:document.getElementById('d-party').value||null});
-    s.style.color='#2D6A4F';s.textContent='Saved. We will email your results to '+email;
-  }catch(e){s.style.color='#9B2335';s.textContent='Something went wrong. Please try again.';}
-}
-
-function copyLink(){
-  const{pScores}=score();const top=Object.entries(pScores).sort((a,b)=>b[1]-a[1])[0,
-
+  // ENVIRONMENT AND CONSERVATION ADDITIONS
   {id:'en2',nl:'Environment and conservation',pair:'en-a',fr:'con',type:'s',
    q:'Shutting down Canadian resource industries to meet emissions targets just exports the pollution and the jobs to countries with lower standards.',
    opts:[
@@ -916,21 +656,17 @@ function copyLink(){
      {t:'No. It is a fossil fuel lobby argument used to justify every new pipeline and mine.',e:-2,g:1,lib:1,con:-2,ndp:1,grn:2,blq:0,ppc:-2}
    ]},
 
+  // MEDIA AND DEMOCRACY ADDITIONS
   {id:'me2',nl:'Media and democracy',pair:'me-a',fr:'con',type:'s',
    q:'The CBC receives over 1.4 billion dollars in public funding annually. That money would be better spent elsewhere.',
    opts:[
      {t:'Yes. Defund the CBC and let the market support journalism.',e:2,g:-1,lib:-2,con:2,ndp:-2,grn:-2,blq:-1,ppc:2},
      {t:'Reform it and reduce its budget but do not eliminate public broadcasting.',e:0,g:0,lib:0,con:1,ndp:-1,grn:0,blq:0,ppc:0},
      {t:'No. Public broadcasting is essential infrastructure for democracy and national identity.',e:-2,g:1,lib:2,con:-2,ndp:2,grn:2,blq:1,ppc:-2}
-   ]}
-];
-  const text=`My Canadian political alignment: ${PMETA[top[0]].name} ${top[1]}% | coreopinion.org/ca`;
-  navigator.clipboard.writeText(text).then(()=>{document.getElementById('save-status').style.color='#2D6A4F';document.getElementById('save-status').textContent='Copied to clipboard.';});
-}
+   ]},
 
-function buildDisagreements(topParty) {
-  const disagree = [,
-{id:'ex1',nl:'Canada-US sovereignty',pair:'ex-a',fr:'pro',type:'s',
+  // CANADA SOVEREIGNTY AND CRISIS COGNITIVE MATCHES
+  {id:'ex1',nl:'Canada-US sovereignty',pair:'ex-a',fr:'pro',type:'s',
    q:'Donald Trump called Canada the 51st state. Any Canadian politician who does not treat that as a declaration of economic war is not fit for office.',
    opts:[
      {t:'Yes. Canada must respond with full force — retaliatory tariffs, economic diversification, and a rejection of dependence.',e:-1,g:1,lib:2,con:-1,ndp:1,grn:1,blq:2,ppc:-2},
@@ -960,73 +696,28 @@ function buildDisagreements(topParty) {
    opts:[
      {t:'Yes. Full implementation of TRC Calls to Action, not another commission, not another apology.',e:-1,g:0,lib:1,con:-1,ndp:2,grn:2,blq:0,ppc:-2},
      {t:'No. The calls to action are being implemented gradually. Real change takes time.',e:0,g:0,lib:0,con:1,ndp:-1,grn:-1,blq:0,ppc:0}
-   ]}
-,
-{id:'id1',nl:'National and cultural identity',pair:'ident-a',fr:'pro',type:'s',
+   ]},
+  {id:'id1',nl:'National and cultural identity',pair:'ident-a',fr:'pro',type:'s',
    q:'Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.',
    opts:[{t:'Yes. Pride in your own culture and heritage is natural and healthy.',e:0,g:1,lib:-1,con:2,ndp:-1,grn:-2,blq:1,ppc:2},
          {t:'Pride is fine but claims of superiority over others make me uncomfortable.',e:0,g:0,lib:1,con:0,ndp:1,grn:0,blq:0,ppc:-1},
          {t:'No. Ranking cultures above each other is where dangerous thinking begins.',e:0,g:-1,lib:1,con:-2,ndp:2,grn:2,blq:-1,ppc:-2}]},
-
   {id:'id2',nl:'National and cultural identity',pair:'ident-a',fr:'con',type:'s',
    q:'People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.',
    opts:[{t:'Yes. Acknowledging inherited wrongs is part of being honest about who we are.',e:0,g:-1,lib:1,con:-2,ndp:2,grn:2,blq:0,ppc:-2},
          {t:'We should acknowledge history honestly without demanding personal shame.',e:0,g:0,lib:1,con:0,ndp:0,grn:0,blq:0,ppc:-1},
          {t:'No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.',e:0,g:1,lib:-1,con:2,ndp:-2,grn:-2,blq:0,ppc:2}]}
 ];
-  answers.forEach(a => {
-    const q = qs.find(q => q.id === a.id);
-    if (!q) return;
-    // Find best option for topParty
-    let bestScore = -Infinity, bestOpt = null;
-    q.opts.forEach(o => {
-      const ps = o[topParty] || 0;
-      if (ps > bestScore) { bestScore = ps; bestOpt = o; }
-    });
-    const userScore = a[topParty] || 0;
-    const gap = bestScore - userScore;
-    if (gap >= 2 && bestOpt && bestOpt.t !== a.t) {
-      disagree.push({
-        topic: q.nl,
-        question: q.q,
-        userAnswer: a.t,
-        partyAnswer: bestOpt.t,
-        gap
-      });
-    }
-  });
-  return disagree.sort((a, b) => b.gap - a.gap).slice(0, 5);
-}
 
-function renderDisagreements(topParty, partyName, topPct) {
-  const el = document.getElementById('disagree-section');
-  if (!el) return;
-  if (topPct >= 100) { el.style.display = 'none'; return; }
-  const items = buildDisagreements(topParty);
-  if (!items.length) { el.style.display = 'none'; return; }
-  el.style.display = 'block';
-  const list = document.getElementById('disagree-list');
-  list.innerHTML = '';
-  items.forEach(item => {
-    const card = document.createElement('div');
-    card.style.cssText = 'border:1px solid var(--border-soft);border-radius:8px;padding:18px 22px;background:var(--white);margin-bottom:12px;';
-    card.innerHTML = `
-      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px">${item.topic}</div>
-      <div style="font-size:14px;color:var(--ink);font-weight:400;margin-bottom:14px;font-family:'Cormorant Garamond',serif;font-size:16px">${item.question}</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <div style="padding:12px 14px;background:var(--parchment-warm);border-radius:6px;border-left:3px solid #B0B5BC">
-          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px">Your answer</div>
-          <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">${item.userAnswer}</div>
-        </div>
-        <div style="padding:12px 14px;background:var(--navy-soft);border-radius:6px;border-left:3px solid #2A5DB0">
-          <div style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:6px">${partyName} position</div>
-          <div style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5">${item.partyAnswer}</div>
-        </div>
-      </div>`;
-    list.appendChild(card);
-  });
-}
-
+const PARTY_META={
+  lib:{name:'Liberal',color:'#CC0000',desc:'Your answers most closely match the Liberal Party. You tend to support managed trade, social programs, climate action, and a strong federal role in the economy.'},
+  con:{name:'Conservative',color:'#003F7F',desc:'Your answers most closely match the Conservative Party. You favour lower taxes, smaller government, axing the carbon tax, and reducing federal spending.'},
+  ndp:{name:'NDP',color:'#F37021',desc:'Your answers most closely match the NDP. You support pharmacare, dental care, workers rights, wealth taxes, and a more activist government on inequality and climate.'},
+  grn:{name:'Green',color:'#3D9B35',desc:'Your answers most closely match the Green Party. You prioritise strong climate action, proportional representation, and a systemic challenge to corporate power.'},
+  blq:{name:'Bloc Québécois',color:'#003DA5',desc:'Your answers most closely match the Bloc. You support Quebec autonomy, French language protection, and a centre-left social model on federal matters.'},
+  ppc:{name:'PPC',color:'#4B0082',desc:'Your answers most closely match the PPC. You want radical cuts to immigration, elimination of climate policy, and a rejection of mainstream conservative incrementalism.'}
+};
 </script>
+<script src="/engine.js"></script>
 </body>
 </html>

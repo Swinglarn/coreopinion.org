@@ -1,8 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- General Test / Home -->
   <url>
     <loc>https://coreopinion.org/</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- United States -->
+  <url>
+    <loc>https://coreopinion.org/us</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- United Kingdom -->
+  <url>
+    <loc>https://coreopinion.org/uk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Canada -->
+  <url>
+    <loc>https://coreopinion.org/ca</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Australia -->
+  <url>
+    <loc>https://coreopinion.org/au</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sweden -->
+  <url>
+    <loc>https://coreopinion.org/se</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Germany -->
+  <url>
+    <loc>https://coreopinion.org/de</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- France -->
+  <url>
+    <loc>https://coreopinion.org/fr</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Ireland -->
+  <url>
+    <loc>https://coreopinion.org/ie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Netherlands -->
+  <url>
+    <loc>https://coreopinion.org/nl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
