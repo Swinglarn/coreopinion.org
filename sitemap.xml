@@ -70,4 +70,32 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Austria -->
+  <url>
+    <loc>https://coreopinion.org/at</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Spain -->
+  <url>
+    <loc>https://coreopinion.org/es</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Italy -->
+  <url>
+    <loc>https://coreopinion.org/it</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- New Zealand -->
+  <url>
+    <loc>https://coreopinion.org/nz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

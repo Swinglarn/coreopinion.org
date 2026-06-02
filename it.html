@@ -1,0 +1,3098 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bussola Politica Italia 2026: Quale partito si allinea con te? | CoreOpinion</title>
+<meta name="description" content="Trova la tua posizione sulla bussola politica. 47 domande basate su scenari reali su temi italiani. Vedi la tua affinità con Fratelli d'Italia, PD, M5S, Lega, Forza Italia e AVS.">
+<meta name="keywords" content="bussola politica Italia, test politico Italia, wahl-o-mat Italia, per chi votare Italia, partiti politici italiani, Fratelli d'Italia, PD, M5S, Lega, Forza Italia, AVS">
+<meta name="author" content="CoreOpinion">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://coreopinion.org/it">
+<meta name="theme-color" content="#F9F8F6">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coreopinion.org/it">
+<meta property="og:title" content="Bussola Politica Italia 2026: Quale partito si allinea con te? | CoreOpinion">
+<meta property="og:description" content="Trova la tua posizione sulla bussola politica. 47 domande basate su scenari reali su temi italiani. Vedi la tua affinità con Fratelli d'Italia, PD, M5S, Lega, Forza Italia e AVS.">
+<meta property="og:site_name" content="CoreOpinion">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bussola Politica Italia 2026: Quale partito si allinea con te? | CoreOpinion">
+<meta name="twitter:description" content="Trova la tua posizione sulla bussola politica. 47 domande basate su scenari reali su temi italiani. Vedi la tua affinità con Fratelli d'Italia, PD, M5S, Lega, Forza Italia e AVS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- LANDING -->
+<div class="page active" id="page-landing">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links">
+      <a href="/">General</a>
+      <a href="/us">US</a>
+      <a href="/uk">UK</a>
+      <a href="/ca">Canada</a>
+      <a href="/au">Australia</a>
+      <a href="/nz">New Zealand</a>
+      <a href="/de">Germany</a>
+      <a href="/at">Austria</a>
+      <a href="/fr">France</a>
+      <a href="/es">Spain</a>
+      <a href="/it">Italy</a>
+      <a href="/se">Sweden</a>
+      <a href="/ie">Ireland</a>
+      <a href="/nl">Netherlands</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">English</button>
+      <div class="flag-badge">
+        <span class="flag">🇮🇹</span>
+        <span id="lang-label">Italia</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-bg">🇮🇹</div>
+    <div class="eyebrow">Italy Political Test</div>
+    <h1>Qual è la tua posizione nella<br><em>politica italiana</em>?</h1>
+    <p class="hero-sub">47 domande basate su scenari reali sulle questioni che definiscono l'Italia oggi. Criminalità, immigrazione, welfare, debito ed energia. Vedi la tua affinità con tutti i partiti.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="startTest()">Inizia il test</button>
+      <button class="btn-secondary" onclick="goTo('page-landing')">How it works</button>
+    </div>
+  </div>
+
+  <div class="party-strip">
+    <div class="party-cell">
+      <div class="party-dot" style="background:#0B3B60"></div>
+      <div class="party-name">Fratelli d'Italia</div>
+      <div class="party-desc">Conservatore nazionale. Sovranità nazionale, valori familiari tradizionali, freno all'immigrazione.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:#EF3E36"></div>
+      <div class="party-name">Partito Democratico</div>
+      <div class="party-desc">Centrosinistra. Diritti civili e sociali, integrazione europea, welfare pubblico.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:#F7DF1E"></div>
+      <div class="party-name">Movimento 5 Stelle</div>
+      <div class="party-desc">Populista / Catch-all. Sostegno al reddito, tutela ecologica, lotta alla corruzione.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:#008C45"></div>
+      <div class="party-name">Lega</div>
+      <div class="party-desc">Populismo di destra. Autonomia delle regioni, flat tax, contrasto all'immigrazione.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:#0054A5"></div>
+      <div class="party-name">Forza Italia</div>
+      <div class="party-desc">Centrodestra liberale. Pro-business, difesa della proprietà privata, garantismo.</div>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <div class="info-block">
+      <h3>Scenario-based, not a survey</h3>
+      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
+    </div>
+    <div class="info-block">
+      <h3>Party alignment, not party loyalty</h3>
+      <p>The result shows how closely your answers match each party's platform across all issues, not just the ones you feel strongly about. You might find you align with a party you didn't expect, or that you're genuinely split between two.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUESTION -->
+<div class="page" id="page-test">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div></div>
+    <div class="flag-badge"><span class="flag">🇮🇹</span> Italy</div>
+  </nav>
+  <div class="q-shell">
+    <div class="prog-row">
+      <div class="prog-track">
+        <div class="prog-fill" id="prog-fill" style="width:0%"></div>
+        <div class="prog-tip"></div>
+      </div>
+      <span class="prog-txt" id="prog-txt">1 of 47</span>
+    </div>
+    <div class="q-topic-tag" id="q-topic"></div>
+    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
+      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-body" id="q-scen-body"></div>
+    </div>
+    <div class="q-question" id="q-text"></div>
+    <div class="q-opts" id="q-opts"></div>
+    <div class="q-foot">
+      <button class="btn-skip" onclick="skipQ()">Salta</button>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="btn-back" onclick="prevQ()" id="btn-back">Indietro</button>
+        <button class="btn-primary" onclick="nextQ()" style="padding:12px 30px;font-size:14px">Avanti</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DEMOGRAPHICS -->
+<div class="page" id="page-demo">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="demo-outer">
+    <div class="page-title">Quasi finito.</div>
+    <p class="page-sub">Alcune brevi domande prima dei tuoi risultati. Tutto è anonimo.</p>
+    <div class="demo-fields">
+      <div>
+        <div class="field-label">Età</div>
+        <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
+      </div>
+      <div>
+        <div class="field-label">Regione <span>(opzionale)</span></div>
+        <select id="d-country">
+          <option value="">Select...</option>
+          <option>Abruzzo</option>
+          <option>Basilicata</option>
+          <option>Calabria</option>
+          <option>Campania</option>
+          <option>Emilia-Romagna</option>
+          <option>Friuli-Venezia Giulia</option>
+          <option>Lazio</option>
+          <option>Liguria</option>
+          <option>Lombardia</option>
+          <option>Marche</option>
+          <option>Molise</option>
+          <option>Piemonte</option>
+          <option>Puglia</option>
+          <option>Sardegna</option>
+          <option>Sicilia</option>
+          <option>Toscana</option>
+          <option>Trentino-Alto Adige</option>
+          <option>Umbria</option>
+          <option>Valle d'Aosta</option>
+          <option>Veneto</option>
+        </select>
+      </div>
+      <div>
+        <div class="field-label">Come ti identifichi politicamente? <span>(opzionale)</span></div>
+        <select id="d-party">
+          <option value="">Preferisco non dirlo</option>
+<option>Fratelli d'Italia</option>
+<option>Partito Democratico</option>
+<option>Movimento 5 Stelle</option>
+<option>Lega</option>
+<option>Forza Italia</option>
+<option>Alleanza Verdi e Sinistra</option>
+<option>Indipendente / Altro</option>
+        </select>
+      </div>
+      <div>
+        <div class="field-label">Genere <span>(opzionale)</span></div>
+        <select id="d-gender">
+          <option value="">Select...</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+      <div>
+        <div class="field-label">Nazionalità <span>(opzionale)</span></div>
+        <select id="d-nationality">
+          <option value="">Select...</option>
+          <option>United States</option>
+          <option>United Kingdom</option>
+          <option>Canada</option>
+          <option>Australia</option>
+          <option>New Zealand</option>
+          <option>Germany</option>
+          <option>Austria</option>
+          <option>France</option>
+          <option>Spain</option>
+          <option selected>Italy</option>
+          <option>Sweden</option>
+          <option>Ireland</option>
+          <option>Netherlands</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <p class="demo-note">This is never linked to your answers. It helps us understand who takes the test.</p>
+    <div style="display:flex;gap:12px;align-items:flex-start;margin-top:20px;margin-bottom:24px;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px 20px;box-shadow:0 1px 4px rgba(10,12,15,0.02);text-align:left;">
+      <input type="checkbox" id="d-consent" checked style="width:20px;height:20px;margin-top:2px;cursor:pointer;">
+      <label for="d-consent" style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.5;cursor:pointer;user-select:none;">
+        <strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.
+      </label>
+    </div>
+    <button class="btn-primary" onclick="goCalc()">Vedi i risultati</button>
+  </div>
+</div>
+
+<!-- CALCULATING -->
+<div class="page" id="page-calc">
+  <nav><a class="logo" href="/">Core<span>opinion</span></a><div></div><div></div></nav>
+  <div class="calc-shell">
+    <div class="spin-ring"></div>
+    <div class="calc-h">Mapping your answers</div>
+    <p class="calc-p">This will only take a moment.</p>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="page" id="page-results">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div class="nav-links">
+      <a href="/">General</a>
+      <a href="/us">US</a>
+      <a href="/uk">UK</a>
+      <a href="/ca">Canada</a>
+      <a href="/au">Australia</a>
+      <a href="/nz">New Zealand</a>
+      <a href="/de">Germany</a>
+      <a href="/at">Austria</a>
+      <a href="/fr">France</a>
+      <a href="/es">Spain</a>
+      <a href="/it">Italy</a>
+      <a href="/se">Sweden</a>
+      <a href="/ie">Ireland</a>
+      <a href="/nl">Netherlands</a>
+    </div>
+    <div class="flag-badge"><span class="flag">🇮🇹</span> Italy</div>
+  </nav>
+  <div class="results-shell">
+    <div class="results-head">
+      <div class="result-eyebrow">Your Italy political alignment</div>
+      <div class="result-headline" id="r-top-party">Democrat</div>
+      <div class="result-sub" id="r-top-desc">Your answers most closely align with the Democratic Party platform.</div>
+    </div>
+
+    <!-- Party alignment bars -->
+    <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Party alignment</div>
+    <div class="party-results" id="party-results"></div>
+
+    <!-- Compass + axis -->
+    <div class="results-grid">
+      <div class="res-card">
+        <div class="res-card-title">Political compass position</div>
+        <div class="compass-wrap">
+          <svg width="340" height="340" viewBox="0 0 340 340">
+            <rect x="10" y="10" width="155" height="155" rx="5" fill="#4B8EF1" opacity="0.11"/>
+            <rect x="175" y="10" width="155" height="155" rx="5" fill="#F5A623" opacity="0.11"/>
+            <rect x="10" y="175" width="155" height="155" rx="5" fill="#3DBF82" opacity="0.11"/>
+            <rect x="175" y="175" width="155" height="155" rx="5" fill="#E85D6B" opacity="0.11"/>
+            <line x1="170" y1="10" x2="170" y2="330" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="10" y1="170" x2="330" y2="170" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="90" y1="10" x2="90" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="250" y1="10" x2="250" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="90" x2="330" y2="90" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="250" x2="330" y2="250" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <text x="90" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
+            <text x="90" y="338" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
+            <text x="8" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 174)">Left</text>
+            <text x="336" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 336 174)">Right</text>
+            <circle id="cdot-ring" cx="170" cy="170" r="20" fill="#1E4D8C" opacity="0.15"/>
+            <circle id="cdot" cx="170" cy="170" r="10" fill="#1E4D8C"/>
+          </svg>
+        </div>
+        <div class="axis-block">
+          <div class="axis-item">
+            <div class="axis-name">Economic</div>
+            <div class="axis-row-labels"><span>Left</span><span>Right</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-econ" style="left:50%"></div></div>
+          </div>
+          <div class="axis-item">
+            <div class="axis-name">Governance</div>
+            <div class="axis-row-labels"><span>Libertarian</span><span>Authoritarian</span></div>
+            <div class="axis-track"><div class="axis-marker" id="ax-gov" style="left:50%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-card">
+        <div class="res-card-title">What this means</div>
+        <div id="r-insight" style="font-size:14px;color:var(--ink-muted);line-height:1.8;font-weight:300;"></div>
+      </div>
+    </div>
+
+    <!-- WHERE YOU DISAGREE -->
+    <div id="disagree-section" style="display:none;margin-bottom:28px;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Where you disagree with <span id="disagree-party-name">your top party</span></div>
+      <div id="disagree-list"></div>
+    </div>
+
+    <!-- BIAS SCORE CARD -->
+    <div id="bias-card" style="background:var(--white);border:1px solid var(--border-soft);border-radius:10px;padding:28px;margin-bottom:28px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;">
+        <div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Framing Bias Score</div>
+          <div style="font-size:48px;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ink);letter-spacing:-2px;line-height:1" id="bias-num">0%</div>
+          <div style="font-size:14px;color:var(--ink-muted);margin-top:6px;font-weight:300" id="bias-verdict">Calculating...</div>
+        </div>
+        <div style="background:var(--parchment);border-radius:8px;padding:16px 20px;max-width:340px;">
+          <div style="font-size:12px;color:var(--ink-muted);font-weight:300;line-height:1.65" id="bias-explain"></div>
+        </div>
+      </div>
+      <div id="bias-rows" style="display:flex;flex-direction:column;gap:10px;"></div>
+      <div id="bias-faceoff" style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border-soft);display:none;"></div>
+    </div>
+    <div class="save-panel">
+      <div class="save-title">Save your results</div>
+      <div class="save-desc">Enter your email and we will send you a link to these results. Never shared.</div>
+      <div class="save-row">
+        <input type="email" id="save-email" placeholder="your@email.com">
+        <button class="btn-primary" onclick="saveResults()" style="padding:13px 24px;font-size:14px;white-space:nowrap">Send results</button>
+      </div>
+      <div class="save-status" id="save-status"></div>
+      <div class="share-row">
+        <button class="btn-ghost" onclick="copyLink()">Copy results link</button>
+        <button class="btn-ghost" onclick="startTest()">Retake test</button>
+        <a href="/" style="text-decoration:none"><button class="btn-ghost">Take general test</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const LOCAL_QUESTIONS = {
+  "hc1": {
+    "q": "Quest'uomo dovrebbe fallire o morire perché ha perso il lavoro?",
+    "ctx": "Ha lavorato per tutta la vita. Ha perso il lavoro a 58 anni e con esso la sua assicurazione sanitaria. Cancro al terzo stadio. Il conto è di 400.000 dollari.",
+    "opts": [
+      "No. La sanità universale pubblica è l'unica risposta.",
+      "No. Ampliare i sussidi pubblici e proteggere le persone nella sua situazione.",
+      "Il sistema attuale è sufficiente. Avrebbe dovuto mantenere la sua copertura privatamente.",
+      "Questo è un fallimento personale. Lo Stato non dovrebbe gestire la sanità."
+    ]
+  },
+  "hc2": {
+    "q": "Una sanità gestita dallo Stato distruggerebbe l'innovazione medica, ridurrebbe la qualità delle cure e porterebbe al razionamento dei servizi.",
+    "opts": [
+      "Sì. Il libero mercato guida le migliori innovazioni nel settore sanitario.",
+      "Ci sono rischi reali, ma regolamentazioni di base potrebbero prevenirli.",
+      "No. Altre nazioni avanzate pagano la metà per ottenere risultati migliori con sistemi pubblici universali."
+    ]
+  },
+  "hc3": {
+    "q": "Il debito medico dovrebbe essere trattato dalla legge in modo diverso rispetto al debito di consumo, con limiti severi su interessi e pignoramenti.",
+    "opts": [
+      "Sì. Nessuno sceglie di ammalarsi. È una necessità primaria, non un acquisto.",
+      "Alcune tutele hanno senso, ma i creditori devono comunque poter riscuotere.",
+      "No. I contratti devono essere applicati allo stesso modo per tutti. Fare eccezioni danneggia i mercati del credito."
+    ]
+  },
+  "gn1": {
+    "q": "La Costituzione non è un patto di suicidio collettivo. Dobbiamo vietare le armi d'assalto per proteggere i nostri figli.",
+    "ctx": "Dalla strage di Columbine, oltre 350.000 studenti hanno vissuto la violenza delle armi a scuola. Le esercitazioni in caso di sparatoria sono ormai parte della quotidianità scolastica.",
+    "opts": [
+      "Sì. Queste sono armi da guerra e non dovrebbero circolare nelle nostre strade.",
+      "I divieti sulle armi d'assalto sono complessi. Controlli dei precedenti penali e leggi di allerta preventiva sono più efficaci.",
+      "No. Concentriamoci sulla salute mentale e sulla sicurezza scolastica. Non puniamo i cittadini rispettosi della legge."
+    ]
+  },
+  "gn2": {
+    "q": "Vietare tipi specifici di armi da fuoco finisce per disarmare solo i cittadini onesti, lasciandoli indifesi contro i criminali che ignorano la legge.",
+    "opts": [
+      "Sì. L'unica cosa che ferma un uomo malvagio armato è un uomo buono armato.",
+      "L'autodifesa è un diritto, ma alcune restrizioni sui caricatori ad alta capacità sono ragionevoli.",
+      "No. I paesi con leggi severe sulle armi hanno una frazione del nostro tasso di omicidi."
+    ]
+  },
+  "gn3": {
+    "q": "Dovremmo imporre un periodo di attesa obbligatorio di 10 giorni per tutti gli acquisti di armi da fuoco per prevenire atti impulsivi di violenza.",
+    "ctx": "Circa 48.000 persone sono morte per ferite da arma da fuoco nel 2022. Più della metà di questi decessi sono stati suicidi.",
+    "opts": [
+      "Sì. Un periodo di raffreddamento è una misura di buon senso che salva vite umane.",
+      "I periodi di attesa dovrebbero applicarsi solo a chi acquista per la prima volta o ai giovani adulti.",
+      "No. Un diritto ritardato è un diritto negato. Le vittime di stalking hanno bisogno di protezione immediata."
+    ]
+  },
+  "im1": {
+    "q": "Un paese senza confini non è un paese. Dobbiamo rendere sicura la frontiera e deportare chi entra illegalmente.",
+    "ctx": "Milioni di immigrati regolari e irregolari vivono nel paese. Gli ingressi illegali hanno raggiunto massimi storici, sovraccaricando le risorse comunali.",
+    "opts": [
+      "Sì. La legge e l'ordine devono essere ripristinati. La sicurezza dei confini è sicurezza nazionale.",
+      "Rendere sicura la frontiera, ma offrire un percorso di regolarizzazione per chi è già qui.",
+      "Concentrarsi su una gestione umana, affrontare le cause profonde e ampliare le vie di immigrazione legale."
+    ]
+  },
+  "im2": {
+    "q": "Dividere le famiglie attraverso deportazioni di massa è un'abominazione morale. Abbiamo bisogno di un percorso verso la cittadinanza.",
+    "ctx": "Gli immigrati senza documenti pagano miliardi di tasse, raccolgono il cibo, assistono i nostri anziani e costruiscono le nostre case.",
+    "opts": [
+      "Sì. Sono i nostri vicini e colleghi di lavoro. Meritano dignità e uno status legale.",
+      "Fornire uno status legale e permessi di lavoro, ma l'accesso alla cittadinanza deve essere un processo lungo e rigoroso.",
+      "No. Premiare chi infrange la legge incoraggia l'immigrazione clandestina. Le espulsioni sono necessarie."
+    ]
+  },
+  "im3": {
+    "q": "Il paese dovrebbe aumentare in modo significativo il numero di visti per lavoratori altamente qualificati per attrarre i migliori talenti mondiali.",
+    "opts": [
+      "Sì. L'immigrazione qualificata stimola l'innovazione e crea posti di lavoro interni.",
+      "Un aumento moderato va bene, ma dobbiamo proteggere i professionisti locali dal dumping salariale.",
+      "No. Le aziende dovrebbero investire nella formazione della forza lavoro locale invece di importare manodopera a basso costo."
+    ]
+  },
+  "tx1": {
+    "q": "L'estrema disuguaglianza nella distribuzione della ricchezza minaccia la democrazia. Dobbiamo introdurre una tassa patrimoniale sui grandi patrimoni sopra i 50 milioni.",
+    "ctx": "Le tre persone più ricche possiedono più ricchezza della metà più povera dell'intera popolazione combinata.",
+    "opts": [
+      "Sì. I miliardari non dovrebbero esistere in una società con bambini senza casa.",
+      "Le tasse patrimoniali sono difficili da attuare. Meglio aumentare le aliquote dell'imposta sul reddito più alte.",
+      "No. La ridistribuzione forzata è un furto. La ricchezza si crea, non si ruba."
+    ]
+  },
+  "tx2": {
+    "q": "Tassare pesantemente i capitali e i redditi più alti spinge solo gli investitori all'estero, riduce la produttività e danneggia i lavoratori.",
+    "opts": [
+      "Sì. Tasse più basse stimolano investimenti, crescita aziendale e creazione di posti di lavoro.",
+      "Alcune tasse sono necessarie, ma aliquote marginali troppo elevate distorcono le scelte economiche.",
+      "No. La teoria dell'effetto a cascata (trickle-down) è una bugia smentita dai fatti. La crescita trainata dalla domanda è l'unica realtà."
+    ]
+  },
+  "tx3": {
+    "q": "L'aliquota dell'imposta sulle società per le grandi imprese dovrebbe essere innalzata al 35% per garantire che paghino la loro giusta quota.",
+    "opts": [
+      "Sì. Le multinazionali hanno registrato profitti record pagando aliquote fiscali storicamente basse.",
+      "Un'aliquota moderata intorno al 25-28% è un compromesso competitivo.",
+      "No. Un'aliquota elevata rende le nostre imprese non competitive e si scarica sui consumatori."
+    ]
+  },
+  "cl1": {
+    "q": "Siamo in un'emergenza climatica. Lo Stato deve eliminare rapidamente i combustibili fossili e investire in un Green New Deal.",
+    "ctx": "Gli ultimi anni sono stati i più caldi mai registrati. Incendi, siccità e alluvioni storiche costano miliardi all'economia.",
+    "opts": [
+      "Sì. La transizione verso le energie rinnovabili è l'imperativo morale ed economico del nostro tempo.",
+      "Abbandonare bruscamente i combustibili fossili devasterebbe l'economia. Sussidiamo invece la tecnologia verde.",
+      "No. L'indipendenza energetica richiede petrolio, gas e carbone. Il Green New Deal è una fantasia socialista."
+    ]
+  },
+  "cl2": {
+    "q": "I divieti unilaterali sui combustibili fossili distruggono posti di lavoro ben retribuiti e ci rendono dipendenti da rivali stranieri per la tecnologia solare e delle batterie.",
+    "opts": [
+      "Sì. Dobbiamo sfruttare l'energia tradizionale per garantire energia economica e abbondante come motore dell'economia.",
+      "Dovremmo perseguire tutte le opzioni energetiche, incluse l'energia nucleare e il gas naturale pulito.",
+      "No. La transizione è inevitabile. Guidarla è il modo in cui creeremo i posti di lavoro industriali del futuro."
+    ]
+  },
+  "ab1": {
+    "q": "L'aborto fa parte della tutela della salute. Il parlamento deve approvare leggi per garantire il diritto all'aborto a livello nazionale.",
+    "ctx": "Le limitazioni all'accesso all'aborto in varie regioni costringono le donne a lunghi viaggi per ricevere assistenza riproduttiva di base.",
+    "opts": [
+      "Sì. La libertà riproduttiva è un diritto umano fondamentale.",
+      "Sostenere l'accesso, ma con limiti standard sugli aborti tardivi.",
+      "No. La questione spetta alle singole autonomie regionali o locali.",
+      "No. L'aborto è l'interruzione di una vita umana e dovrebbe essere vietato."
+    ]
+  },
+  "ab2": {
+    "q": "La decisione sull'aborto appartiene al processo democratico di ciascuna regione o Stato, piuttosto che a decisioni di giudici non eletti.",
+    "opts": [
+      "Sì. La legge fondamentale non menziona l'aborto. Le regioni hanno il diritto di proteggere la vita nascente.",
+      "Le regioni dovrebbero decidere, ma i divieti dovrebbero prevedere eccezioni per stupro, incesto e pericolo di vita per la madre.",
+      "No. I diritti umani non dovrebbero essere soggetti a confini geografici o a parlamenti locali."
+    ]
+  },
+  "sd1": {
+    "q": "L'istruzione superiore è un bene pubblico. Lo Stato dovrebbe cancellare il debito studentesco e rendere gratuite le università pubbliche.",
+    "ctx": "Molti giovani sono gravati da debiti contratti per studiare. Un'intera generazione rimanda l'acquisto della casa o la nascita di figli sotto questo peso.",
+    "opts": [
+      "Sì. L'istruzione gratuita è un investimento nel nostro futuro comune.",
+      "Cancellare il debito per gli studenti a basso reddito e riformare i tassi di interesse, ma l'università gratuita per tutti è troppo costosa.",
+      "No. Si tratta di un massiccio trasferimento di ricchezza dai contribuenti della classe operaia alle élite scolarizzate."
+    ]
+  },
+  "sd2": {
+    "q": "Cancellare il debito studentesco è profondamente ingiusto nei confronti di milioni di cittadini che hanno lavorato duramente per pagare i propri studi o hanno scelto di non andare all'università.",
+    "opts": [
+      "Sì. Chi firma un contratto lo rispetta e lo ripaga. La responsabilità personale è fondamentale.",
+      "Il sistema ha dei problemi, ma la cancellazione totale è lo strumento sbagliato.",
+      "No. I costi universitari sono esplosi. I prestiti studenteschi sono spesso speculativi."
+    ]
+  },
+  "rj1": {
+    "q": "Il razzismo sistemico è reale. Dobbiamo riformare strutturalmente le forze dell'ordine, porre fine alle immunità ingiustificate e investire nelle comunità minoritarie.",
+    "ctx": "Le minoranze vengono incarcerate a tassi notevolmente più alti e sono vittime sproporzionate della violenza della polizia e del sistema giudiziario.",
+    "opts": [
+      "Sì. Il sistema giudiziario penale si basa su disuguaglianze e richiede una riforma radicale.",
+      "Riformare la polizia, ma senza definanziare o indebolire le forze dell'ordine.",
+      "No. Il razzismo sistemico è una narrativa divisiva. Il problema reale è la criminalità e la disgregazione familiare."
+    ]
+  },
+  "rj2": {
+    "q": "La costante focalizzazione sulle divisioni razziali da parte di politici e media mina l'unità nazionale e ci mette gli uni contro gli altri.",
+    "opts": [
+      "Sì. Dovremmo giudicare le persone per il contenuto del loro carattere, non per il colore della pelle.",
+      "I divari razziali sono reali, ma il nostro discorso dovrebbe concentrarsi su soluzioni economiche unificanti.",
+      "No. Ignorare la storia non cancella l'eredità del razzismo e della discriminazione. Dobbiamo nominarli per smantellarli."
+    ]
+  },
+  "vt1": {
+    "q": "Dovremmo stabilire standard nazionali per la registrazione automatica degli elettori, estendere il voto per corrispondenza e rendere festivo il giorno delle elezioni.",
+    "opts": [
+      "Sì. Il voto è un diritto. Dovremmo rendere la partecipazione più semplice possibile per ogni cittadino.",
+      "Rendere festivo il giorno delle elezioni sì, ma le regole di registrazione e voto dovrebbero rimanere di competenza regionale.",
+      "No. Abbiamo bisogno di leggi più severe sull'identificazione degli elettori per garantire l'integrità del voto e prevenire frodi."
+    ]
+  },
+  "vt2": {
+    "q": "Allentare le regole di registrazione degli elettori ed estendere il voto per corrispondenza apre la porta a frodi e mina la fiducia dei cittadini nelle elezioni.",
+    "opts": [
+      "Sì. Ogni voto deve essere verificato. Leggi di identificazione più severe proteggono la nostra democrazia.",
+      "L'integrità è importante, ma le regole non devono essere usate come strumenti di soppressione del voto.",
+      "No. Le frodi elettorali sono praticamente inesistenti. Queste leggi servono a ridurre l'affluenza delle minoranze."
+    ]
+  },
+  "fp1": {
+    "q": "Dobbiamo proiettare forza. Un esercito forte è l'unica garanzia di stabilità globale e di protezione dei valori democratici.",
+    "ctx": "La spesa militare assorbe enormi risorse pubbliche, che molti ritengono dovrebbero essere reindirizzate verso bisogni interni e servizi sociali.",
+    "opts": [
+      "Sì. Pace attraverso la forza. Dobbiamo sostenere i nostri alleati e gli impegni internazionali.",
+      "Difendere i nostri alleati, ma evitare costosi interventi militari e ricostruzioni di altre nazioni.",
+      "No. Il complesso militare-industriale ci rende meno sicuri e sottrae risorse alle necessità interne."
+    ]
+  },
+  "fp2": {
+    "q": "Dovremmo smettere di spendere miliardi per guerre all'estero e concentrarci invece sulla ricostruzione delle nostre comunità.",
+    "opts": [
+      "Sì. Prima i nostri cittadini. La priorità deve essere il lavoro interno e la stabilità del paese.",
+      "Un approccio equilibrato. Dobbiamo impegnarci a livello globale per proteggere i nostri stessi interessi.",
+      "No. L'isolazionismo è una pericolosa illusione. La stabilità globale influisce direttamente sulla nostra economia."
+    ]
+  },
+  "si1": {
+    "q": "Le terapie di affermazione di genere sono una questione di salute e libertà medica. Lo Stato non ha il diritto di vietarle.",
+    "ctx": "I giovani transgender affrontano tassi elevati di depressione. Le principali associazioni mediche sostengono queste cure come necessarie.",
+    "opts": [
+      "Sì. Le decisioni devono essere prese da pazienti, famiglie e medici, non dai politici.",
+      "Si tratta di cure sanitarie, ma alcuni limiti di età per procedure chirurgiche irreversibili sono ragionevoli.",
+      "No. Dobbiamo proteggere i minori da procedure sperimentali e difendere i valori tradizionali."
+    ]
+  },
+  "si2": {
+    "q": "Consentire ai minori di sottoporsi a procedure di transizione di genere irreversibili è una forma di negligenza medica che lo Stato deve vietare.",
+    "opts": [
+      "Sì. I minori non hanno la maturità per acconsentire a decisioni che cambiano la vita in modo definitivo.",
+      "È necessaria una rigorosa valutazione medica, ma i divieti totali vanno troppo oltre.",
+      "No. Le decisioni mediche spettano alle famiglie e ai medici. I divieti sono guidati da pregiudizi."
+    ]
+  },
+  "gi1": {
+    "q": "Lo Stato dovrebbe imporre rigide regolamentazioni alle piattaforme di social media per combattere la disinformazione, l'incitamento all'odio e l'interferenza nelle elezioni.",
+    "opts": [
+      "Sì. I monopoli tecnologici non regolamentati hanno danneggiato la nostra democrazia e la salute pubblica.",
+      "La disinformazione è una minaccia, ma la regolamentazione statale comporta alti rischi di censura politica.",
+      "No. La Costituzione tutela la libera espressione di ogni opinione. Il dibattito libero è l'unica via."
+    ]
+  },
+  "gi2": {
+    "q": "La pressione del governo sui social media per oscurare opinioni sgradite è una forma di censura statale indiretta.",
+    "ctx": "Emergono rapporti secondo cui uffici governativi comunicano con le piattaforme per segnalare o etichettare contenuti relativi a salute pubblica o elezioni.",
+    "opts": [
+      "Sì. Le pressioni governative su piattaforme private per sopprimere contenuti violano la libertà di parola.",
+      "La piattaforma dovrebbe applicare le proprie regole, ma la comunicazione con lo Stato deve essere trasparente.",
+      "No. Lo Stato ha il dovere di avvisare le piattaforme di campagne straniere pericolose o minacce alla sicurezza pubblica."
+    ]
+  },
+  "ss1": {
+    "q": "Dovremmo mettere in sicurezza le pensioni pubbliche e la sanità eliminando il tetto ai contributi previdenziali in modo che i redditi più alti paghino di più.",
+    "opts": [
+      "Sì. I più ricchi dovrebbero pagare i contributi sull'intero reddito, proprio come i lavoratori medi.",
+      "Innalzare il tetto dei contributi, ma adeguare anche gradualmente l'età pensionabile per le future generazioni.",
+      "No. Dovremmo spostarci verso fondi pensione privati e lasciare la previdenza al mercato."
+    ]
+  },
+  "ss2": {
+    "q": "Espandere i programmi di assistenza sociale statale mentre cresce il debito pubblico è irresponsabile dal punto di vista finanziario.",
+    "opts": [
+      "Sì. Dobbiamo tagliare la spesa pubblica e rafforzare la previdenza privata per evitare il dissesto finanziario.",
+      "I programmi di welfare vanno riformati e contenuti, ma la rete di sicurezza sociale deve restare intatta.",
+      "No. Questi programmi sono impegni per cui i lavoratori hanno pagato contributi. Tagliate piuttosto i sussidi alle imprese."
+    ]
+  },
+  "tr1": {
+    "q": "Il libero commercio ha rappresentato un massiccio trasferimento di ricchezza dai lavoratori alle multinazionali. Dobbiamo proteggere l'industria nazionale.",
+    "ctx": "Per decenni, i posti di lavoro manifatturieri sono stati delocalizzati in paesi a basso salario. Intere aree industriali si sono impoverite, mentre le aziende registravano profitti record.",
+    "opts": [
+      "Sì. Dazi e politiche industriali sono necessari per ricostruire la classe media.",
+      "Dazi mirati solo su settori strategici (come i microchip). Dazi generalizzati danneggiano i consumatori.",
+      "No. Il protezionismo aumenta i prezzi e scatena guerre commerciali che ci rendono tutti più poveri."
+    ]
+  },
+  "ed1": {
+    "q": "I finanziamenti alle scuole pubbliche dovrebbero basarsi strettamente sul fabbisogno, reindirizzando fondi dai distretti più ricchi alle scuole in zone svantaggiate.",
+    "opts": [
+      "Sì. Ogni bambino merita pari opportunità nella vita, indipendentemente dal suo codice postale.",
+      "Finanziamenti in base alle necessità sì, ma senza penalizzare le scuole che ricevono più fondi locali dai propri residenti.",
+      "No. I buoni scuola dovrebbero consentire ai genitori di mandare i propri figli in qualsiasi istituto, pubblico o privato."
+    ]
+  },
+  "ed2": {
+    "q": "I buoni scuola consentono ai genitori di utilizzare fondi pubblici per le scuole private. Questo sottrae risorse vitali a una scuola pubblica già in difficoltà.",
+    "opts": [
+      "Sì. Il denaro pubblico deve andare alla scuola pubblica. I programmi di buoni scuola alimentano le disuguaglianze.",
+      "I buoni scuola hanno un valore, ma dovrebbero essere riservati solo a studenti a basso reddito in scuole in difficoltà.",
+      "No. La concorrenza migliora tutte le scuole. I genitori devono essere liberi di scegliere il meglio per i propri figli."
+    ]
+  },
+  "co1": {
+    "q": "La Corte Suprema è diventata un organo politico di parte. Dovremmo stabilire limiti di mandato a 18 anni e un codice etico vincolante per i giudici.",
+    "opts": [
+      "Sì. Incarichi a vita senza responsabilità etica sono una minaccia per la legittimità democratica.",
+      "Un codice etico vincolante sì, ma i limiti di mandato richiedono modifiche costituzionali troppo complesse.",
+      "No. Il sistema ha funzionato per secoli. Cambiare le regole è solo un tentativo di controllo politico."
+    ]
+  },
+  "co2": {
+    "q": "La Costituzione è un documento vivo che deve essere interpretato alla luce dei valori moderni e del progresso sociale.",
+    "opts": [
+      "Sì. I padri fondatori non potevano prevedere internet, armi moderne o diritti civili. L'originalismo stretto è anacronistico.",
+      "L'interpretazione deve adattarsi leggermente, ma i principi costituzionali fondamentali devono rimanere stabili.",
+      "No. L'intenzione originale è l'unica garanzia del diritto. Se si vuole cambiare la Costituzione, si approvi una riforma."
+    ]
+  },
+  "bt1": {
+    "q": "I monopoli tecnologici come Google, Meta e Amazon sono cresciuti troppo e dovrebbero essere smembrati in base alle leggi antitrust.",
+    "ctx": "Una manciata di colossi tecnologici controlla il flusso delle informazioni moderne, possiede la piazza pubblica digitale e ha un'influenza enorme sulle elezioni.",
+    "opts": [
+      "Sì. Smembrateli. Soffocano la concorrenza, raccolgono dati privati e censurano il dibattito.",
+      "Regolamentazione e leggi sulla privacy dei dati sono strumenti migliori. Smembrarli indebolisce la nostra competitività tecnologica.",
+      "No. Hanno successo perché forniscono servizi eccellenti. Lasciamo che decida il mercato."
+    ]
+  },
+  "br1": {
+    "q": "Lo Stato centrale è troppo grande, costoso e invadente. Uno Stato più snello renderebbe il paese più libero e produttivo.",
+    "opts": [
+      "Sì. Tagliare la spesa, ridurre le normative e fidarsi della libera iniziativa dei cittadini.",
+      "Alcune parti dello Stato sono eccessive, ma i servizi pubblici e i programmi sociali sono della giusta dimensione.",
+      "No. Lo Stato getta le fondamenta del benessere. Ridurlo significa togliere tutele ai cittadini comuni."
+    ]
+  },
+  "br2": {
+    "q": "Il divario tra i cittadini più ricchi e tutti gli altri ha raggiunto un livello tale da minacciare la coesione sociale e la mobilità economica.",
+    "opts": [
+      "Sì. Sono necessarie tasse progressive, tutele sociali più forti e imposte sui grandi patrimoni.",
+      "La disuguaglianza è reale, ma le opportunità e la crescita contano di più rispetto alla redistribuzione.",
+      "La disuguaglianza riflette un impegno differente. L'uguaglianza forzata soffoca l'ambizione."
+    ]
+  },
+  "br3": {
+    "q": "Le minacce principali alla libertà dei cittadini provengono dall'interno: l'ingerenza dello Stato, la sorveglianza pubblica e l'erosione delle libertà civili.",
+    "opts": [
+      "Sì. La sorveglianza di massa e il controllo statale sulla vita privata sono le vere minacce.",
+      "Anche le minacce esterne sono reali. Bilanciare sicurezza e libertà è estremamente complesso.",
+      "Le minacce da potenze straniere e dal terrorismo richiedono una forte sicurezza interna."
+    ]
+  },
+  "br4": {
+    "q": "Le grandi aziende hanno troppa influenza sulla politica, sull'economia e sulla vita quotidiana del paese.",
+    "opts": [
+      "Sì. Il finanziamento illimitato della politica e le lobby sono un disastro da limitare rigorosamente.",
+      "L'influenza delle grandi aziende è un problema, ma regolamenti troppo severi creano abusi da parte della burocrazia statale.",
+      "La libertà d'impresa è libertà economica. Lo Stato è una minaccia di gran lunga superiore a qualsiasi azienda privata."
+    ]
+  },
+  "ex1": {
+    "q": "Avere un gran numero di miliardari non è un successo. È il segno di un sistema truccato a loro favore.",
+    "opts": [
+      "Sì. La ricchezza estrema a questi livelli è un fallimento politico e sociale, non un traguardo.",
+      "No. La ricchezza accumulata in cima non viene sottratta a chi sta in basso. La crescita crea benessere per tutti."
+    ]
+  },
+  "ex2": {
+    "q": "Tassare i ricchi per finanziare i programmi pubblici penalizza il successo e allontana chi crea posti di lavoro.",
+    "opts": [
+      "Sì. I capitali fuggono dai paesi a tassazione elevata. Non si può creare prosperità punendo chi la produce.",
+      "No. I ricchi hanno costruito le loro fortune sulla base delle infrastrutture pubbliche. Devono contribuire di più."
+    ]
+  },
+  "ex3": {
+    "q": "Il sistema penitenziario rinchiude troppe persone. Non è giustizia, è un sistema industriale di punizione.",
+    "opts": [
+      "Sì. L'incarcerazione di massa è una catastrofe morale e va riformata alla radice.",
+      "No. L'alto tasso di incarcerazione riflette il tasso di criminalità. La sicurezza pubblica non è negoziabile."
+    ]
+  },
+  "ex4": {
+    "q": "La criminalità violenta è aumentata nelle città che hanno ridotto i fondi alla polizia. Definanziare le forze dell'ordine è stato un errore disastroso.",
+    "opts": [
+      "Sì. La sicurezza è calata e a pagarne il prezzo sono state le comunità più deboli.",
+      "No. La mancanza di investimenti in salute mentale, casa e istruzione crea il crimine. Più agenti non sono la soluzione."
+    ]
+  },
+  "ex5": {
+    "q": "Lo Stato non ha il diritto di monitorare i propri cittadini senza un mandato esplicito del giudice. La sorveglianza di massa deve finire.",
+    "opts": [
+      "Sì. Uno Stato che spia tutti dimostra di non fidarsi di nessuno.",
+      "No. I servizi di sicurezza necessitano di accessi ampi. Le minacce alla sicurezza non aspettano i tempi dei giudici."
+    ]
+  },
+  "id1": {
+    "q": "Ogni cultura ha prodotto cose di cui andare fieri. Sono orgoglioso della mia e non intendo scusarmi per questo.",
+    "opts": [
+      "Sì. L'orgoglio per la propria cultura e il proprio patrimonio è naturale e sano.",
+      "L'orgoglio va bene, ma le pretese di superiorità rispetto agli altri mi mettono a disagio.",
+      "No. Classificare le culture stabilendo gerarchie è l'inizio di derive pericolose."
+    ]
+  },
+  "id2": {
+    "q": "Le persone che vivono oggi dovrebbero portare un senso di colpa per ciò che la loro nazione o cultura ha fatto nel passato (schiavitù, genocidio, colonialismo).",
+    "opts": [
+      "Sì. Riconoscere i torti storici ereditati fa parte dell'essere onesti su chi siamo.",
+      "Dovremmo riconoscere la storia con onestà senza pretendere un senso di colpa individuale.",
+      "No. Non si può essere colpevoli di cose che non si sono commesse. La colpa collettiva è ingiusta e divisiva."
+    ]
+  }
+};
+
+const BANK = [
+  {
+    "id": "hc1",
+    "nl": "Healthcare",
+    "pair": "hc-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "He worked his whole life. Lost his job at 58. Lost his insurance with it. Stage 3 cancer. The bill is 400,000 dollars.",
+    "q": "Should this man go bankrupt or die because he lost his job?",
+    "opts": [
+      {
+        "t": "No. Universal healthcare is the only answer. Medicare for All.",
+        "e": -2,
+        "g": 2,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": -1,
+        "avs": 2
+      },
+      {
+        "t": "No. Expand the ACA and protect people in his situation.",
+        "e": -1,
+        "g": 1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "The ACA is enough. He should have kept his coverage through COBRA.",
+        "e": 1,
+        "g": 0,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": -1
+      },
+      {
+        "t": "This is a personal failure. The government should not run healthcare.",
+        "e": 2,
+        "g": -1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "hc2",
+    "nl": "Healthcare",
+    "pair": "hc-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Government-run healthcare would destroy medical innovation, decrease care quality, and lead to rationing.",
+    "opts": [
+      {
+        "t": "Yes. The free market drives the best healthcare innovation.",
+        "e": 2,
+        "g": -1,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": -1,
+        "avs": 2
+      },
+      {
+        "t": "There are real risks, but standard regulations could prevent them.",
+        "e": 1,
+        "g": 0,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": -1
+      },
+      {
+        "t": "No. Other advanced nations pay half as much for better outcomes under universal systems.",
+        "e": -2,
+        "g": 2,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "hc3",
+    "nl": "Healthcare",
+    "pair": "hc-b",
+    "fr": "neutral",
+    "type": "s",
+    "ctx": null,
+    "q": "Medical debt should be treated differently from consumer debt under the law, with strict limits on interest and collections.",
+    "opts": [
+      {
+        "t": "Yes. No one chooses to be sick. It is a necessity, not a purchase.",
+        "e": -1,
+        "g": 1,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": -1,
+        "avs": 2
+      },
+      {
+        "t": "Some protections make sense, but lenders must still be able to collect.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Contracts must be enforced equally. Carving out exemptions hurts credit markets.",
+        "e": 1,
+        "g": -1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "gn1",
+    "nl": "Gun policy",
+    "pair": "gn-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Since Columbine, over 350,000 students have experienced gun violence at school. Active shooter drills are now a standard part of American childhood.",
+    "q": "The Second Amendment is not a suicide pact. We must ban assault weapons to protect our children.",
+    "opts": [
+      {
+        "t": "Yes. These are weapons of war and have no place on our streets.",
+        "e": 0,
+        "g": 2,
+        "fdi": -1,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": 0,
+        "avs": 2
+      },
+      {
+        "t": "Assault weapons bans are complex. Background checks and red flag laws are more effective.",
+        "e": 0,
+        "g": 1,
+        "fdi": -1,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": 0,
+        "avs": 2
+      },
+      {
+        "t": "No. Focus on mental health and school security. Do not punish law-abiding citizens.",
+        "e": 0,
+        "g": -1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "gn2",
+    "nl": "Gun policy",
+    "pair": "gn-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Banning specific types of firearms only disarms law-abiding citizens, leaving them defenceless against criminals who ignore the law.",
+    "opts": [
+      {
+        "t": "Yes. The only thing that stops a bad guy with a gun is a good guy with a gun.",
+        "e": 0,
+        "g": -2,
+        "fdi": -1,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": 0,
+        "avs": 2
+      },
+      {
+        "t": "Self-defence is a right, but some restrictions on high-capacity magazines are reasonable.",
+        "e": 0,
+        "g": -1,
+        "fdi": -1,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": 0,
+        "avs": 2
+      },
+      {
+        "t": "No. Countries with strict gun laws have a fraction of our homicide rates.",
+        "e": 0,
+        "g": 2,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "gn3",
+    "nl": "Gun policy",
+    "pair": "gn-b",
+    "fr": "neutral",
+    "type": "sc",
+    "ctx": "Roughly 48,000 Americans died from gun-related injuries in 2022. More than half were suicides.",
+    "q": "We should require a mandatory 10-day waiting period for all firearm purchases to prevent impulsive acts of violence.",
+    "opts": [
+      {
+        "t": "Yes. A cooling-off period is a common-sense measure that saves lives.",
+        "e": 0,
+        "g": 1,
+        "fdi": -1,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": 0,
+        "avs": 2
+      },
+      {
+        "t": "Waiting periods should apply only to first-time buyers or young adults.",
+        "e": 0,
+        "g": 0,
+        "fdi": -1,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -1,
+        "fi": 0,
+        "avs": 2
+      },
+      {
+        "t": "No. A right delayed is a right denied. Victims of stalking need protection immediately.",
+        "e": 0,
+        "g": -1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "im1",
+    "nl": "Immigration",
+    "pair": "im-a",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "Millions of undocumented immigrants live in the United States. Border crossings have reached historic highs. Municipal resources are overwhelmed.",
+    "q": "A country without borders is not a country. We must secure the southern border and deport those here illegally.",
+    "opts": [
+      {
+        "t": "Yes. Law and order must be restored. Border security is national security.",
+        "e": 0,
+        "g": 2,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      },
+      {
+        "t": "Secure the border, but provide a pathway to legal status for those already here.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Focus on humane processing, addressing root causes, and expanding legal pathways.",
+        "e": -1,
+        "g": 0,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      }
+    ]
+  },
+  {
+    "id": "im2",
+    "nl": "Immigration",
+    "pair": "im-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Undocumented immigrants pay billions in taxes, harvest our food, care for our elderly, and build our homes.",
+    "q": "Tearing families apart through mass deportations is a moral abomination. We need a pathway to citizenship.",
+    "opts": [
+      {
+        "t": "Yes. These are our neighbours and co-workers. They deserve dignity and legal status.",
+        "e": -1,
+        "g": -1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      },
+      {
+        "t": "Provide legal status and work permits, but citizenship should be a long and strict process.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Rewarding law-breaking encourages more illegal immigration. Deportations are necessary.",
+        "e": 0,
+        "g": 2,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      }
+    ]
+  },
+  {
+    "id": "im3",
+    "nl": "Immigration",
+    "pair": "im-b",
+    "fr": "neutral",
+    "type": "s",
+    "ctx": null,
+    "q": "The United States should significantly increase the number of highly-skilled visas (H-1B) to attract the best talent globally.",
+    "opts": [
+      {
+        "t": "Yes. High-skill immigration drives innovation and creates American jobs.",
+        "e": 1,
+        "g": -1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      },
+      {
+        "t": "Some increase is fine, but we must protect American tech workers from wage suppression.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Corporations should invest in training American workers instead of importing cheap talent.",
+        "e": -1,
+        "g": 1,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      }
+    ]
+  },
+  {
+    "id": "tx1",
+    "nl": "Taxes and economy",
+    "pair": "tx-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "The three richest Americans hold more wealth than the bottom 50% of the entire population combined.",
+    "q": "Extreme wealth inequality is a threat to democracy. We must introduce a wealth tax on fortunes over $50 million.",
+    "opts": [
+      {
+        "t": "Yes. Billionaires should not exist in a society with homeless children.",
+        "e": -2,
+        "g": 2,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Wealth taxes are unconstitutional. Raise the top income tax bracket instead.",
+        "e": -1,
+        "g": 1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Forced redistribution is theft. Wealth is created, not stolen.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "tx2",
+    "nl": "Taxes and economy",
+    "pair": "tx-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Taxing capital and high earners only drives investment offshore, reduces productivity, and hurts the workers it claims to help.",
+    "opts": [
+      {
+        "t": "Yes. Lower taxes stimulate investment, business growth, and job creation.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      },
+      {
+        "t": "Some taxes are necessary, but high marginal rates distort economic decisions.",
+        "e": 1,
+        "g": 0,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": -1
+      },
+      {
+        "t": "No. Trickle-down economics is a proven lie. Demand-side growth is the only reality.",
+        "e": -2,
+        "g": 1,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 1,
+        "lega": 0,
+        "fi": 0,
+        "avs": 1
+      }
+    ]
+  },
+  {
+    "id": "tx3",
+    "nl": "Taxes and economy",
+    "pair": "tx-b",
+    "fr": "neutral",
+    "type": "s",
+    "ctx": null,
+    "q": "The federal corporate income tax rate should be returned to 35% to ensure large corporations pay their fair share.",
+    "opts": [
+      {
+        "t": "Yes. Corporations have enjoyed record profits while paying historically low tax rates.",
+        "e": -2,
+        "g": 1,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 1,
+        "lega": 0,
+        "fi": 0,
+        "avs": 1
+      },
+      {
+        "t": "A moderate rate around 25-28% is a competitive compromise.",
+        "e": -1,
+        "g": 0,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 1
+      },
+      {
+        "t": "No. A high rate makes American businesses uncompetitive and is passed on to consumers.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "cl1",
+    "nl": "Climate and energy",
+    "pair": "cl-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "2023 was the hottest year on record. Wildfires, droughts, and historic flooding have cost the US economy billions in disaster relief.",
+    "q": "We are in a climate emergency. The federal government must rapidly phase out fossil fuels and invest in a Green New Deal.",
+    "opts": [
+      {
+        "t": "Yes. Transitioning to renewable energy is the moral and economic imperitive of our time.",
+        "e": -2,
+        "g": 2,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "Phasing out fossil fuels abruptly would devastate the economy. Subsidise green tech instead.",
+        "e": -1,
+        "g": 1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. American energy independence requires oil, gas, and coal. The Green New Deal is socialist fantasy.",
+        "e": 2,
+        "g": -1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "cl2",
+    "nl": "Climate and energy",
+    "pair": "cl-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Unilateral bans on fossil fuels destroy high-paying American jobs and make us dependent on foreign adversaries like China for solar and battery tech.",
+    "opts": [
+      {
+        "t": "Yes. Drill, baby, drill. Cheap, abundant energy is the engine of the economy.",
+        "e": 2,
+        "g": 0,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "We should pursue all energy options, including nuclear and clean natural gas.",
+        "e": 1,
+        "g": 0,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": -1
+      },
+      {
+        "t": "No. The transition is inevitable. Leading it is how we create the manufacturing jobs of the future.",
+        "e": -2,
+        "g": 1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "ab1",
+    "nl": "Abortion rights",
+    "pair": "ab-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Since Roe v. Wade was overturned, over a dozen states have enacted near-total bans on abortion, forcing women to travel thousands of miles for basic reproductive healthcare.",
+    "q": "Abortion is healthcare. Congress must pass federal legislation to codify the protections of Roe v. Wade nationwide.",
+    "opts": [
+      {
+        "t": "Yes. Reproductive freedom is a fundamental human right.",
+        "e": 0,
+        "g": -2,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "Support federal access, but with standard limits on late-term abortions.",
+        "e": 0,
+        "g": -1,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": 0,
+        "avs": 1
+      },
+      {
+        "t": "No. The issue belongs with the states, in accordance with the Constitution.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Abortion is the taking of a human life and should be banned nationwide.",
+        "e": 0,
+        "g": 2,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": -2,
+        "fi": -2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "ab2",
+    "nl": "Abortion rights",
+    "pair": "ab-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "The Dobbs decision correctly returned the issue of abortion to the democratic process in each state, rather than leaving it to unelected judges.",
+    "opts": [
+      {
+        "t": "Yes. The Constitution does not mention abortion. States have the right to protect unborn life.",
+        "e": 0,
+        "g": 2,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "States should decide, but bans should have exceptions for rape, incest, and the life of the mother.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Human rights should not be subject to geographical boundaries or state legislatures.",
+        "e": 0,
+        "g": -2,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": -1,
+        "avs": 1
+      }
+    ]
+  },
+  {
+    "id": "sd1",
+    "nl": "Student debt and education",
+    "pair": "sd-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Over 43 million Americans carry student loan debt, totalling more than 1.7 trillion dollars. A generation is delaying buying homes, starting businesses, and having children under this burden.",
+    "q": "Higher education is a public good. The federal government should cancel student debt and make public colleges tuition-free.",
+    "opts": [
+      {
+        "t": "Yes. Free education is an investment in our national future.",
+        "e": -2,
+        "g": 2,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "Cancel debt for lower-income students and reform interest rates, but free tuition is too costly.",
+        "e": -1,
+        "g": 1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. This is a massive wealth transfer from working-class taxpayers to college-educated elites.",
+        "e": 2,
+        "g": -1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "sd2",
+    "nl": "Student debt and education",
+    "pair": "sd-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Forgiving student debt is deeply unfair to the millions of Americans who worked to pay off their loans or chose not to attend college.",
+    "opts": [
+      {
+        "t": "Yes. You sign a contract, you pay it back. Personal responsibility matters.",
+        "e": 2,
+        "g": -1,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "The system has issues, but outright cancellation is the wrong tool.",
+        "e": 1,
+        "g": 0,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": -1
+      },
+      {
+        "t": "No. The cost of college has skyrocketed due to state disinvestment. The contract was predatory.",
+        "e": -2,
+        "g": 1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "rj1",
+    "nl": "Race and justice",
+    "pair": "rj-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Black Americans are incarcerated at roughly five times the rate of white Americans and are disproportionately targeted by police and the judicial system.",
+    "q": "Systemic racism is real. We must structurally reform policing, end qualified immunity, and invest in Black communities.",
+    "opts": [
+      {
+        "t": "Yes. The criminal justice system is built on racial inequality and requires radical reform.",
+        "e": -1,
+        "g": -2,
+        "fdi": -2,
+        "pd": 0,
+        "m5s": 1,
+        "lega": -2,
+        "fi": -1,
+        "avs": 2
+      },
+      {
+        "t": "Reform policing and qualified immunity, but do not defund or weaken law enforcement.",
+        "e": 0,
+        "g": -1,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": 0,
+        "avs": 1
+      },
+      {
+        "t": "No. Systemic racism is a divisive narrative. The problem is crime and breakdown of the family.",
+        "e": 1,
+        "g": 2,
+        "fdi": 2,
+        "pd": 0,
+        "m5s": -1,
+        "lega": 2,
+        "fi": 1,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "rj2",
+    "nl": "Race and justice",
+    "pair": "rj-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "The constant focus on racial divisions by politicians and the media undermines American unity and turns us against each other.",
+    "opts": [
+      {
+        "t": "Yes. We should judge people by the content of their character, not the color of their skin.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Racial gaps are real, but our language should focus on unifying economic solutions.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Ignoring history does not erase the legacy of slavery and Jim Crow. We must name systemic racism to dismantle it.",
+        "e": -1,
+        "g": -2,
+        "fdi": -2,
+        "pd": 0,
+        "m5s": 1,
+        "lega": -2,
+        "fi": -1,
+        "avs": 2
+      }
+    ]
+  },
+  {
+    "id": "vt1",
+    "nl": "Voting and democracy",
+    "pair": "vt-a",
+    "fr": "pro",
+    "type": "s",
+    "ctx": null,
+    "q": "We should establish federal standards for automatic voter registration, expand mail-in voting, and make Election Day a national holiday.",
+    "opts": [
+      {
+        "t": "Yes. Voting is a right. We should make it as easy as possible for every citizen to participate.",
+        "e": 0,
+        "g": -2,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": -1,
+        "avs": 1
+      },
+      {
+        "t": "National holiday yes, but registration and voting rules should remain with the states.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. We need stricter voter ID laws to ensure election integrity and prevent fraud.",
+        "e": 0,
+        "g": 2,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "vt2",
+    "nl": "Voting and democracy",
+    "pair": "vt-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Loosening voter registration rules and expanding mail-in voting opens the door to fraud and undermines public trust in elections.",
+    "opts": [
+      {
+        "t": "Yes. Every vote must be verified. Stricter voter ID laws protect the integrity of our democracy.",
+        "e": 0,
+        "g": 2,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 1,
+        "avs": -1
+      },
+      {
+        "t": "Integrity is important, but rules should not be used as tools for voter suppression.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Voter fraud is virtually non-existent. These laws are designed to suppress minority turnout.",
+        "e": 0,
+        "g": -2,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": -1,
+        "avs": 1
+      }
+    ]
+  },
+  {
+    "id": "fp1",
+    "nl": "Foreign policy",
+    "pair": "fp-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "The United States has hundreds of military bases globally and spends more on defence than the next ten countries combined.",
+    "q": "We must project strength. A strong military is the only guarantee of global stability and the protection of democratic values.",
+    "opts": [
+      {
+        "t": "Yes. Peace through strength. We must support our allies in NATO and the Pacific.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Defend our allies, but avoid costly foreign interventions and nation-building.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. The military-industrial complex makes us less safe and drains resources from domestic needs.",
+        "e": -1,
+        "g": -2,
+        "fdi": -2,
+        "pd": 0,
+        "m5s": 1,
+        "lega": -2,
+        "fi": -1,
+        "avs": 2
+      }
+    ]
+  },
+  {
+    "id": "fp2",
+    "nl": "Foreign policy",
+    "pair": "fp-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "The United States should stop spending billions of dollars on foreign wars and instead focus on rebuilding our own communities.",
+    "opts": [
+      {
+        "t": "Yes. America First. Our priority must be the American worker and domestic stability.",
+        "e": 1,
+        "g": 0,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": -1
+      },
+      {
+        "t": "A balanced approach. We must engage globally to protect our own interests.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Isolationism is a dangerous illusion. Global stability directly affects our economy and security.",
+        "e": -1,
+        "g": 1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "si1",
+    "nl": "Social and cultural issues",
+    "pair": "si-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "Transgender youths face high rates of depression, anxiety, and suicide. Major medical associations support gender-affirming care as medically necessary.",
+    "q": "Gender-affirming care is a matter of basic healthcare and medical freedom. Government has no right to ban it.",
+    "opts": [
+      {
+        "t": "Yes. Decisions should be made by patients, families, and doctors, not politicians.",
+        "e": 0,
+        "g": -2,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "Care is healthcare, but some age-limits on irreversible surgical procedures are reasonable.",
+        "e": 0,
+        "g": -1,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": 0,
+        "avs": 1
+      },
+      {
+        "t": "No. We must protect children from experimental procedures and defend traditional values.",
+        "e": 0,
+        "g": 2,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "si2",
+    "nl": "Social and cultural issues",
+    "pair": "si-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Allowing minors to undergo irreversible gender transition procedures is a form of medical malpractice that the state must prohibit.",
+    "opts": [
+      {
+        "t": "Yes. Children do not have the maturity to consent to such life-altering decisions.",
+        "e": 0,
+        "g": 2,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "Strict medical evaluation is needed, but total bans go too far.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Medical decisions belong with families and doctors. Bans are built on transphobia.",
+        "e": 0,
+        "g": -2,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "gi1",
+    "nl": "Government and institutions",
+    "pair": "gi-a",
+    "fr": "pro",
+    "type": "s",
+    "ctx": null,
+    "q": "The federal government should establish strict regulations on social media platforms to combat misinformation, hate speech, and foreign election interference.",
+    "opts": [
+      {
+        "t": "Yes. Unregulated tech monopolies have damaged our democracy and public health.",
+        "e": -1,
+        "g": 2,
+        "fdi": 1,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Misinformation is a threat, but government regulation carries high risks of political censorship.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. The First Amendment protects all speech, including offensive speech. Free debate is the only answer.",
+        "e": 1,
+        "g": -2,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "gi2",
+    "nl": "Government and institutions",
+    "pair": "gi-a",
+    "fr": "con",
+    "type": "sc",
+    "ctx": "The federal government works behind the scenes with social media platforms to flag, suppress, and label content regarding public health, elections, and political opinions.",
+    "q": "This is not regulation. It is a modern, digital Ministry of Truth violating the First Amendment through the back door.",
+    "opts": [
+      {
+        "t": "Yes. Government pressure on private platforms to suppress speech is state censorship.",
+        "e": 1,
+        "g": -2,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "The platform should moderate its own rules, but government communication must be transparent.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. The state has an obligation to warn platforms about dangerous foreign campaigns or threats to public safety.",
+        "e": -1,
+        "g": 2,
+        "fdi": 1,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "ss1",
+    "nl": "Social Security and Medicare",
+    "pair": "ss-a",
+    "fr": "pro",
+    "type": "s",
+    "ctx": null,
+    "q": "We should secure Social Security and Medicare for future generations by raising the cap on taxable income so high earners contribute more.",
+    "opts": [
+      {
+        "t": "Yes. The wealthy should pay into the system on all of their income, just like average workers.",
+        "e": -1,
+        "g": 1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Raise the cap, but also gradually adjust the retirement age for future generations.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. We should move toward privatised personal accounts and let the market manage retirement.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "ss2",
+    "nl": "Social Security and Medicare",
+    "pair": "ss-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Expanding government entitlement programs like Social Security and Medicare as the national debt grows is fiscally irresponsible.",
+    "opts": [
+      {
+        "t": "Yes. We must cut spending and look at privatisation to prevent national insolvency.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      },
+      {
+        "t": "Entitlements must be reformed and capped, but the safety net should remain intact.",
+        "e": 1,
+        "g": 0,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": -1
+      },
+      {
+        "t": "No. These programs are promises that working class Americans paid into. Cut military or corporate subsidies instead.",
+        "e": -2,
+        "g": 1,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 1,
+        "lega": 0,
+        "fi": 0,
+        "avs": 1
+      }
+    ]
+  },
+  {
+    "id": "tr1",
+    "nl": "Trade and jobs",
+    "pair": "tr-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "For forty years, manufacturing jobs were outsourced to low-wage nations. American towns were hollowed out, while corporations posted record profits.",
+    "q": "Free trade was a massive transfer of wealth from American workers to multinational corporations. We must protect domestic industries.",
+    "opts": [
+      {
+        "t": "Yes. Tariffs and industrial policy are necessary to rebuild the American middle class.",
+        "e": -1,
+        "g": 1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Targeted tariffs on strategic sectors only (like microchips). Broad tariffs hurt consumers.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Protectionism raises prices and leads to trade wars that make everyone poorer.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "ed1",
+    "nl": "Education",
+    "pair": "ed-a",
+    "fr": "pro",
+    "type": "s",
+    "ctx": null,
+    "q": "Public school funding should be strictly needs-based, with additional federal funding redirected from wealthy districts to low-income schools.",
+    "opts": [
+      {
+        "t": "Yes. Every child deserves an equal start in life, regardless of their zip code.",
+        "e": -1,
+        "g": 1,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Needs-based funding yes, but do not penalise districts that choose to fund their schools more.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Educational vouchers should allow parents to send their children to any school, public or private.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "ed2",
+    "nl": "Education",
+    "pair": "ed-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "School choice vouchers allow parents to use public funds for private schooling. This siphons vital resources from a struggling public school system.",
+    "opts": [
+      {
+        "t": "Yes. Public money belongs in public schools. Voucher programs create inequality.",
+        "e": -2,
+        "g": 1,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 1,
+        "lega": 0,
+        "fi": 0,
+        "avs": 1
+      },
+      {
+        "t": "Vouchers have some value, but they must be targeted only at low-income students in failing schools.",
+        "e": -1,
+        "g": 0,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 1
+      },
+      {
+        "t": "No. Competition improves all schools. Parents should have the freedom to choose what is best for their children.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "co1",
+    "nl": "Courts and Constitution",
+    "pair": "co-a",
+    "fr": "pro",
+    "type": "s",
+    "ctx": null,
+    "q": "The Supreme Court has become a partisan political body. We should establish 18-year term limits and a binding code of ethics for all justices.",
+    "opts": [
+      {
+        "t": "Yes. Lifelong appointments with no ethical accountability are a threat to democratic legitimacy.",
+        "e": 0,
+        "g": -2,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": -1,
+        "avs": 1
+      },
+      {
+        "t": "Binding ethics code yes, but term limits require a constitutional amendment and are too risky.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. The system has worked for 240 years. Changing the rules is just court-packing by another name.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "co2",
+    "nl": "Courts and Constitution",
+    "pair": "co-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "The Constitution is a living document that must be interpreted in light of modern values and social progress.",
+    "opts": [
+      {
+        "t": "Yes. The founders could not foresee the internet, modern weapons, or civil rights. Strict originalism is anachronistic.",
+        "e": 0,
+        "g": -2,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": -1,
+        "avs": 1
+      },
+      {
+        "t": "Interpretation must adapt slightly, but fundamental constitutional principles must remain stable.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Original intent is the only guarantee of law. If you want to change the Constitution, pass an amendment.",
+        "e": 0,
+        "g": 2,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "bt1",
+    "nl": "Big Tech",
+    "pair": "bt-a",
+    "fr": "pro",
+    "type": "sc",
+    "ctx": "A handful of tech conglomerates control the flow of modern information, own the digital public square, and hold massive influence over elections.",
+    "q": "Tech monopolies like Google, Meta, and Amazon have grown too large and must be broken up under antitrust laws.",
+    "opts": [
+      {
+        "t": "Yes. Break them up. They stifle competition, harvest private data, and suppress speech.",
+        "e": -1,
+        "g": 2,
+        "fdi": 1,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Regulation and data privacy laws are better tools. Breaking them up hurts US tech dominance.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. They are successful because they provide great services. Let the market decide.",
+        "e": 2,
+        "g": -2,
+        "fdi": 0,
+        "pd": -1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "br1",
+    "nl": "Role of government",
+    "pair": "br-a",
+    "fr": "neutral",
+    "type": "s",
+    "ctx": null,
+    "q": "The federal government is too large, too expensive, and too intrusive. A smaller state would make America more free and more productive.",
+    "opts": [
+      {
+        "t": "Yes. Cut spending, reduce regulations, trust citizens to make their own decisions.",
+        "e": 2,
+        "g": -2,
+        "fdi": 0,
+        "pd": -1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Some government is too large, but public services and social programs are the right size.",
+        "e": -1,
+        "g": 0,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 1
+      },
+      {
+        "t": "No. The state builds the foundations of prosperity. Cutting it cuts the floor out from under Americans.",
+        "e": -2,
+        "g": 2,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "br2",
+    "nl": "Role of government",
+    "pair": "br-a",
+    "fr": "neutral",
+    "type": "s",
+    "ctx": null,
+    "q": "The gap between the wealthiest Americans and everyone else has grown to a level that threatens social cohesion and economic mobility.",
+    "opts": [
+      {
+        "t": "Yes. Progressive taxation, stronger social programs, and wealth taxes are needed.",
+        "e": -2,
+        "g": 2,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Inequality is real, but opportunity and growth matter more than redistribution.",
+        "e": 1,
+        "g": 0,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": -1
+      },
+      {
+        "t": "Inequality reflects different efforts. Forced equality stifles ambition.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "br3",
+    "nl": "Individual rights",
+    "pair": "br-b",
+    "fr": "neutral",
+    "type": "s",
+    "ctx": null,
+    "q": "The greatest threats to American freedom come from within — government overreach, surveillance, and the erosion of civil liberties.",
+    "opts": [
+      {
+        "t": "Yes. The Patriot Act, NSA surveillance, and the war on drugs are the real threats.",
+        "e": -1,
+        "g": -2,
+        "fdi": -2,
+        "pd": 0,
+        "m5s": 1,
+        "lega": -2,
+        "fi": -1,
+        "avs": 2
+      },
+      {
+        "t": "External threats are real too. Balancing security and liberty is genuinely hard.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Threats from China, Russia, and terrorism require strong internal security.",
+        "e": 1,
+        "g": 2,
+        "fdi": 2,
+        "pd": 0,
+        "m5s": -1,
+        "lega": 2,
+        "fi": 1,
+        "avs": -2
+      }
+    ]
+  },
+  {
+    "id": "br4",
+    "nl": "Individual rights",
+    "pair": "br-b",
+    "fr": "neutral",
+    "type": "s",
+    "ctx": null,
+    "q": "Corporations have too much influence over American politics, the economy, and daily life.",
+    "opts": [
+      {
+        "t": "Yes. Citizens United was a catastrophe. Public financing, strict lobbying limits.",
+        "e": -2,
+        "g": 2,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Corporate influence is a real problem but heavy-handed regulation creates its own abuses.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Corporate freedom is economic freedom. Government is a bigger threat than any company.",
+        "e": 2,
+        "g": -2,
+        "fdi": 0,
+        "pd": -1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "ex1",
+    "nl": "Economy and inequality",
+    "pair": "ex-a",
+    "fr": "pro",
+    "type": "s",
+    "ctx": null,
+    "q": "America has more billionaires than any country on earth. That is not success. That is a system rigged in their favour.",
+    "opts": [
+      {
+        "t": "Yes. Extreme wealth at this scale is a political failure, not an achievement.",
+        "e": -2,
+        "g": 2,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Wealth at the top does not take from the bottom. Growth benefits everyone.",
+        "e": 2,
+        "g": -2,
+        "fdi": 0,
+        "pd": -1,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      }
+    ]
+  },
+  {
+    "id": "ex2",
+    "nl": "Economy and inequality",
+    "pair": "ex-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Taxing the rich to fund government programmes punishes success and drives away the people who create jobs.",
+    "opts": [
+      {
+        "t": "Yes. Capital flees high-tax environments. You cannot build prosperity by punishing it.",
+        "e": 2,
+        "g": -1,
+        "fdi": 1,
+        "pd": -1,
+        "m5s": -1,
+        "lega": 0,
+        "fi": 1,
+        "avs": -1
+      },
+      {
+        "t": "No. The wealthy built their fortunes on public infrastructure. They owe more back.",
+        "e": -2,
+        "g": 1,
+        "fdi": 0,
+        "pd": 1,
+        "m5s": 1,
+        "lega": 0,
+        "fi": 0,
+        "avs": 1
+      }
+    ]
+  },
+  {
+    "id": "ex3",
+    "nl": "Criminal justice",
+    "pair": "ex-b",
+    "fr": "pro",
+    "type": "s",
+    "ctx": null,
+    "q": "The American prison system locks up more people than any country on earth. That is not justice. It is industrial punishment.",
+    "opts": [
+      {
+        "t": "Yes. Mass incarceration is a moral catastrophe and must be dismantled.",
+        "e": -1,
+        "g": -2,
+        "fdi": -2,
+        "pd": 0,
+        "m5s": 1,
+        "lega": -2,
+        "fi": -1,
+        "avs": 2
+      },
+      {
+        "t": "No. High incarceration reflects high crime rates. Public safety is not negotiable.",
+        "e": 0,
+        "g": 2,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "ex4",
+    "nl": "Criminal justice",
+    "pair": "ex-b",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "Violent crime surged in cities that cut police funding. Defunding the police was a catastrophic mistake.",
+    "opts": [
+      {
+        "t": "Yes. The experiment failed and communities of colour paid the price.",
+        "e": 0,
+        "g": 2,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 1,
+        "avs": -1
+      },
+      {
+        "t": "No. Underfunding mental health, housing, and schools created the conditions. More cops is not the answer.",
+        "e": 0,
+        "g": -1,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": 0,
+        "avs": 1
+      }
+    ]
+  },
+  {
+    "id": "ex5",
+    "nl": "Civil liberties",
+    "pair": "ex-c",
+    "fr": "neutral",
+    "type": "s",
+    "ctx": null,
+    "q": "The government has no right to monitor its own citizens without a court order. Mass surveillance must end.",
+    "opts": [
+      {
+        "t": "Yes. A government that watches everyone trusts no one.",
+        "e": 0,
+        "g": -2,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": -1,
+        "avs": 1
+      },
+      {
+        "t": "No. Security services need broad access. Terrorism does not wait for warrants.",
+        "e": 0,
+        "g": 2,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 1,
+        "avs": -1
+      }
+    ]
+  },
+  {
+    "id": "id1",
+    "nl": "National and cultural identity",
+    "pair": "ident-a",
+    "fr": "pro",
+    "type": "s",
+    "ctx": null,
+    "q": "Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.",
+    "opts": [
+      {
+        "t": "Yes. Pride in your own culture and heritage is natural and healthy.",
+        "e": 0,
+        "g": 1,
+        "fdi": 1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 1,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "Pride is fine but claims of superiority over others make me uncomfortable.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. Ranking cultures above each other is where dangerous thinking begins.",
+        "e": 0,
+        "g": -1,
+        "fdi": -1,
+        "pd": 0,
+        "m5s": 0,
+        "lega": -1,
+        "fi": 0,
+        "avs": 1
+      }
+    ]
+  },
+  {
+    "id": "id2",
+    "nl": "National and cultural identity",
+    "pair": "ident-a",
+    "fr": "con",
+    "type": "s",
+    "ctx": null,
+    "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+    "opts": [
+      {
+        "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",
+        "e": 0,
+        "g": -1,
+        "fdi": -2,
+        "pd": 2,
+        "m5s": 2,
+        "lega": -2,
+        "fi": -2,
+        "avs": 2
+      },
+      {
+        "t": "We should acknowledge history honestly without demanding personal shame.",
+        "e": 0,
+        "g": 0,
+        "fdi": 0,
+        "pd": 0,
+        "m5s": 0,
+        "lega": 0,
+        "fi": 0,
+        "avs": 0
+      },
+      {
+        "t": "No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.",
+        "e": 0,
+        "g": 1,
+        "fdi": 2,
+        "pd": -2,
+        "m5s": -2,
+        "lega": 2,
+        "fi": 2,
+        "avs": -2
+      }
+    ]
+  }
+];
+
+const PARTY_META = {
+  "fdi": {
+    "name": {
+      "it": "Fratelli d'Italia",
+      "en": "Brothers of Italy (FdI)"
+    },
+    "color": "#0B3B60",
+    "barClass": "bar-fdi",
+    "desc": {
+      "it": "Le tue risposte sono più vicine a Fratelli d'Italia. Sostieni la sovranità nazionale, la tutela della famiglia tradizionale, il controllo rigoroso dell'immigrazione e politiche economiche di centro-destra.",
+      "en": "Your answers most closely match Brothers of Italy (FdI). You support national sovereignty, traditional family values, strict immigration control, and centre-right economic policies."
+    }
+  },
+  "pd": {
+    "name": {
+      "it": "Partito Democratico",
+      "en": "Democratic Party (PD)"
+    },
+    "color": "#EF3E36",
+    "barClass": "bar-pd",
+    "desc": {
+      "it": "Le tue risposte sono più vicine al Partito Democratico. Sostieni l'integrazione europea, i diritti civili e sociali, il welfare pubblico e una transizione ecologica equilibrata.",
+      "en": "Your answers most closely match the Democratic Party (PD). You support European integration, civil and social rights, public welfare, and a balanced green transition."
+    }
+  },
+  "m5s": {
+    "name": {
+      "it": "Movimento 5 Stelle",
+      "en": "Five Star Movement (M5S)"
+    },
+    "color": "#F7DF1E",
+    "barClass": "bar-m5s",
+    "desc": {
+      "it": "Le tue risposte sono più vicine al Movimento 5 Stelle. Sostieni misure di sostegno al reddito (come il reddito di cittadinanza), la democrazia diretta, la lotta alla corruzione e forti politiche ecologiche.",
+      "en": "Your answers most closely match the Five Star Movement (M5S). You support income support measures, direct democracy, anti-corruption initiatives, and active green policies."
+    }
+  },
+  "lega": {
+    "name": {
+      "it": "Lega",
+      "en": "League (Lega)"
+    },
+    "color": "#008C45",
+    "barClass": "bar-lega",
+    "desc": {
+      "it": "Le tue risposte sono più vicine alla Lega. Sostieni l'autonomia regionale, la flat tax, il controllo severo delle frontiere e una forte impronta identitaria.",
+      "en": "Your answers most closely match the League (Lega). You support regional autonomy, the flat tax, strict border controls, and strong regional identity protection."
+    }
+  },
+  "fi": {
+    "name": {
+      "it": "Forza Italia",
+      "en": "Forza Italia (FI)"
+    },
+    "color": "#0054A5",
+    "barClass": "bar-fi",
+    "desc": {
+      "it": "Le tue risposte sono più vicine a Forza Italia. Sostieni un approccio liberale in economia, la tutela della proprietà privata, il federalismo europeo moderato e riforme della giustizia in senso garantista.",
+      "en": "Your answers most closely match Forza Italia (FI). You support a pro-business economy, private property protection, moderate European federalism, and justice reforms."
+    }
+  },
+  "avs": {
+    "name": {
+      "it": "Alleanza Verdi e Sinistra",
+      "en": "Green-Left Alliance (AVS)"
+    },
+    "color": "#4F9B28",
+    "barClass": "bar-avs",
+    "desc": {
+      "it": "Le tue risposte sono più vicine ad Alleanza Verdi e Sinistra. Sostieni una forte giustizia ambientale e sociale, una patrimoniale sulle grandi ricchezze, diritti LGBTQ+ completi e la transizione ecologica rapida.",
+      "en": "Your answers most closely match the Green-Left Alliance (AVS). You support environmental and social justice, wealth taxes, comprehensive LGBTQ+ rights, and rapid green transition."
+    }
+  },
+  "ind": {
+    "name": {
+      "it": "Indipendente",
+      "en": "Independent"
+    },
+    "color": "#7A7F88",
+    "barClass": "bar-ind",
+    "desc": {
+      "it": "Le tue posizioni sono varie e non si allineano chiaramente con un unico partito. Mostri un approccio moderato e tematico.",
+      "en": "Your views are mixed and do not align strongly with a single party. You show a moderate, issue-specific approach."
+    }
+  }
+};
+
+
+let currentLang = 'it';
+    
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'it' : 'en';
+  document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'Italia' : 'English';
+  document.getElementById('lang-label').textContent = currentLang === 'en' ? 'Italy' : 'Italia';
+  
+  // Set in window scope for the engine.js to pick up
+  window.currentLang = currentLang;
+  
+  applyLang();
+  
+  if (document.getElementById('page-test').classList.contains('active')) renderQ();
+}
+
+function t(en, local) { return currentLang === 'en' ? en : local; }
+
+function getQuestion(q) {
+  if (currentLang === 'en') return q;
+  const localQ = LOCAL_QUESTIONS[q.id];
+  if (!localQ) return q;
+  return {
+    ...q,
+    q: localQ.q || q.q,
+    ctx: localQ.ctx || q.ctx,
+    opts: q.opts.map((o, i) => ({
+      ...o,
+      t: (localQ.opts && localQ.opts[i]) ? localQ.opts[i] : o.t
+    }))
+  };
+}
+
+// Bind function to window scope for engine.js integration
+window.getQuestion = getQuestion;
+window.currentLang = currentLang;
+
+function applyLang() {
+  const isEn = currentLang === 'en';
+  
+  // Translate Hero Title & Sub
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) {
+    heroTitle.innerHTML = isEn ? "Where do you stand in<br><em>Italian</em> politics?" : "Qual è la tua posizione nella<br><em>politica italiana</em>?";
+  }
+  
+  const heroSub = document.querySelector('.hero-sub');
+  if (heroSub) {
+    heroSub.textContent = isEn ? "47 scenario-based questions on the issues defining Italy right now. Crime, immigration, welfare, debt, and energy. See your alignment across all parties." : "47 domande basate su scenari reali sulle questioni che definiscono l'Italia oggi. Criminalità, immigrazione, welfare, debito ed energia. Vedi la tua affinità con tutti i partiti.";
+  }
+
+  // Start & Control Buttons
+  const startBtn = document.querySelector('.hero-cta .btn-primary');
+  if (startBtn) startBtn.textContent = isEn ? 'Start the test' : "Inizia il test";
+  
+  const skipBtn = document.querySelector('.btn-skip');
+  if (skipBtn) skipBtn.textContent = isEn ? 'Skip' : "Salta";
+  
+  const backBtn = document.getElementById('btn-back');
+  if (backBtn) backBtn.textContent = isEn ? 'Back' : "Indietro";
+  
+  const nextBtn = document.querySelector('.q-foot .btn-primary');
+  if (nextBtn) nextBtn.textContent = isEn ? 'Next' : "Avanti";
+
+  // Demographics Titles
+  const demoTitle = document.querySelector('#page-demo .page-title');
+  if (demoTitle) demoTitle.textContent = isEn ? 'Almost there.' : "Quasi finito.";
+  
+  const demoSub = document.querySelector('#page-demo .page-sub');
+  if (demoSub) demoSub.textContent = isEn 
+    ? 'A few quick questions before your results. Everything is anonymous.' 
+    : "Alcune brevi domande prima dei tuoi risultati. Tutto è anonimo.";
+    
+  const seeResultsBtn = document.querySelector('#page-demo .btn-primary');
+  if (seeResultsBtn) seeResultsBtn.textContent = isEn ? 'See my results' : "Vedi i miei risultati";
+
+  // Demographics Field Labels
+  const lblAge = document.getElementById('d-age')?.previousElementSibling;
+  if (lblAge) lblAge.textContent = isEn ? 'Age' : "Età";
+  
+  const lblCountry = document.getElementById('d-country')?.previousElementSibling || document.getElementById('d-county')?.previousElementSibling;
+  if (lblCountry) lblCountry.innerHTML = isEn ? 'Region <span>(optional)</span>' : "Regione <span>(opzionale)</span>";
+  
+  const lblParty = document.getElementById('d-party')?.previousElementSibling;
+  if (lblParty) lblParty.innerHTML = isEn ? 'How do you currently identify? <span>(optional)</span>' : "Come ti identifichi politicamente? <span>(opzionale)</span>";
+  
+  const lblGender = document.getElementById('d-gender')?.previousElementSibling;
+  if (lblGender) lblGender.innerHTML = isEn ? 'Gender <span>(optional)</span>' : "Genere <span>(opzionale)</span>";
+  
+  const lblNat = document.getElementById('d-nationality')?.previousElementSibling;
+  if (lblNat) lblNat.innerHTML = isEn ? 'Nationality <span>(optional)</span>' : "Nazionalità <span>(opzionale)</span>";
+
+  // Demographics Select Options
+  const optSelect = isEn ? 'Select...' : "Seleziona...";
+  const optPreferNot = isEn ? 'Prefer not to say' : "Preferisco non dirlo";
+
+  // Update options inside selects
+  const ageSelect = document.getElementById('d-age');
+  if (ageSelect) {
+    ageSelect.options[0].textContent = optSelect;
+    const ageTexts = isEn 
+      ? ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 or older']
+      : (currentLang === 'de' 
+         ? ['Unter 18', '18 bis 24', '25 bis 34', '35 bis 44', '45 bis 54', '55 bis 64', '65 oder älter']
+         : (currentLang === 'es'
+            ? ['Menor de 18', '18 a 24', '25 a 34', '35 a 44', '45 a 54', '55 a 64', '65 o más']
+            : ['Sotto i 18', 'da 18 a 24', 'da 25 a 34', 'da 35 a 44', 'da 45 a 54', 'da 55 a 64', '65 o più']));
+    for (let i = 1; i < ageSelect.options.length; i++) {
+      if (ageTexts[i-1]) ageSelect.options[i].textContent = ageTexts[i-1];
+    }
+  }
+
+  const genderSelect = document.getElementById('d-gender');
+  if (genderSelect) {
+    genderSelect.options[0].textContent = optSelect;
+    const genTexts = isEn 
+      ? ['Male', 'Female', 'Other', 'Prefer not to say']
+      : (currentLang === 'de'
+         ? ['Männlich', 'Weiblich', 'Sonstiges', 'Lieber nicht sagen']
+         : (currentLang === 'es'
+            ? ['Masculino', 'Femenino', 'Otro', 'Prefiero no decirlo']
+            : ['Maschile', 'Femminile', 'Altro', 'Preferisco non dirlo']));
+    for (let i = 1; i < genderSelect.options.length; i++) {
+      if (genTexts[i-1]) genderSelect.options[i].textContent = genTexts[i-1];
+    }
+  }
+
+  const partySelect = document.getElementById('d-party');
+  if (partySelect) {
+    partySelect.options[0].textContent = optPreferNot;
+    const lastOpt = partySelect.options[partySelect.options.length - 1];
+    if (lastOpt) {
+      if (isEn) {
+        lastOpt.textContent = 'Independent / Other';
+      } else {
+        lastOpt.textContent = "Indipendente / Altro";
+      }
+    }
+  }
+
+  const countrySelect = document.getElementById('d-country') || document.getElementById('d-county');
+  if (countrySelect) countrySelect.options[0].textContent = optSelect;
+
+  const natSelect = document.getElementById('d-nationality');
+  if (natSelect) {
+    natSelect.options[0].textContent = optSelect;
+    const natNames = {
+      'United States': isEn ? 'United States' : "Stati Uniti",
+      'United Kingdom': isEn ? 'United Kingdom' : "Regno Unito",
+      'Canada': isEn ? 'Canada' : "Canada",
+      'Australia': isEn ? 'Australia' : "Australia",
+      'New Zealand': isEn ? 'New Zealand' : "Nuova Zelanda",
+      'Sweden': isEn ? 'Sweden' : "Svezia",
+      'Germany': isEn ? 'Germany' : "Germania",
+      'Austria': isEn ? 'Austria' : "Austria",
+      'France': isEn ? 'France' : "Francia",
+      'Spain': isEn ? 'Spain' : "Spagna",
+      'Italy': isEn ? 'Italy' : "Italia",
+      'Ireland': isEn ? 'Ireland' : "Irlanda",
+      'Netherlands': isEn ? 'Netherlands' : "Paesi Bassi",
+      'Other': isEn ? 'Other' : "Altro"
+    };
+    for (let i = 1; i < natSelect.options.length; i++) {
+      const opt = natSelect.options[i];
+      const enVal = opt.getAttribute('data-en') || opt.value || opt.textContent;
+      if (!opt.getAttribute('data-en')) opt.setAttribute('data-en', enVal);
+      if (natNames[enVal]) opt.textContent = natNames[enVal];
+    }
+  }
+
+  // Demographics Note and Consent
+  const demoNote = document.querySelector('.demo-note');
+  if (demoNote) demoNote.textContent = isEn 
+    ? 'This is never linked to your answers. It helps us understand who takes the test.' 
+    : "Questo non è mai collegato alle tue risposte. Ci aiuta a capire chi effettua il test.";
+  
+  const lblConsent = document.querySelector('label[for="d-consent"]');
+  if (lblConsent) {
+    if (isEn) {
+      lblConsent.innerHTML = '<strong>Research Consent:</strong> I allow CoreOpinion to save my anonymous answers and demographics for research, statistics, and public polling dashboards.';
+    } else {
+      lblConsent.innerHTML = "<strong>Consenso alla ricerca:</strong> Consento a CoreOpinion di salvare le mie risposte anonime e i miei dati demografici per ricerca, statistiche e cruscotti di sondaggio pubblici.";
+    }
+  }
+
+  // Calculating page
+  const calcTitle = document.querySelector('.calc-h');
+  if (calcTitle) calcTitle.textContent = isEn ? 'Mapping your answers' : "Valutazione delle risposte";
+  
+  const calcSub = document.querySelector('.calc-p');
+  if (calcSub) calcSub.textContent = isEn ? 'This will only take a moment.' : "Ci vorrà solo un momento.";
+
+  // Results Dashboard titles
+  const rEyebrow = document.querySelector('.result-eyebrow');
+  if (rEyebrow) rEyebrow.textContent = isEn 
+    ? 'Your Italy political alignment' 
+    : "La tua affinità politica in Italia";
+
+  // Save Panel titles
+  const saveTitle = document.querySelector('.save-title');
+  if (saveTitle) saveTitle.textContent = isEn ? 'Save your results' : "Salva i tuoi risultati";
+  
+  const saveDesc = document.querySelector('.save-desc');
+  if (saveDesc) saveDesc.textContent = isEn 
+    ? 'Enter your email and we will send you a link to these results. Never shared.' 
+    : "Inserisci la tua email e ti invieremo un link a questi risultati. Mai condivisa.";
+    
+  const sendBtn = document.querySelector('.save-row .btn-primary');
+  if (sendBtn) sendBtn.textContent = isEn ? 'Send results' : "Invia risultati";
+
+  // Action Buttons
+  const copyBtn = document.querySelector('.share-row button:nth-child(1)');
+  if (copyBtn) copyBtn.textContent = isEn ? 'Copy results link' : "Copia link dei risultati";
+  
+  const retakeBtn = document.querySelector('.share-row button:nth-child(2)');
+  if (retakeBtn) retakeBtn.textContent = isEn ? 'Retake' : "Ripeti";
+  
+  const genBtn = document.querySelector('.share-row a button');
+  if (genBtn) genBtn.textContent = isEn ? 'General test' : "Test generale";
+}
+
+</script>
+<script src="/engine.js"></script>
+</body>
+</html>
