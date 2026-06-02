@@ -555,7 +555,6 @@ window.renderResults = function() {
   }, 200);
 
   // --- Render Framing Bias Panel ---
-  const lang = window.currentLang || 'en';
   
   let verdictTitle = '';
   let verdictDesc = '';
