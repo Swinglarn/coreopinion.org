@@ -3038,5 +3038,5 @@
   ],
   "heroTitle": "A political compass test<br>built for <em>nuance.</em>",
   "heroSub": "Answer scenario-based questions. Go on record across 8 political topics. See exactly where you land and why.",
-  "partyStripHtml": "<div class=\"stats-strip\">\r\n    <div class=\"stat-cell\"><div class=\"stat-num\">100</div>"
+  "partyStripHtml": "<div class=\"stats-strip\">\n    <div class=\"stat-cell\"><div class=\"stat-num\">100</div><div class=\"stat-desc\">Scenario-based questions in the full test</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">3</div><div class=\"stat-desc\">Political axes, including Nationalist vs Globalist</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">2</div><div class=\"stat-desc\">Results. You get more than just a dot on a compass.</div></div>\n  </div>"
 }
