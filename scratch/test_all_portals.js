@@ -19,45 +19,81 @@ const createMockOption = (text, val = '') => {
   return opt;
 };
 
+const createMockElement = (tag) => {
+  return {
+    tagName: tag.toUpperCase(),
+    className: '',
+    textContent: '',
+    innerHTML: '',
+    onclick: null,
+    style: {},
+    dataset: {},
+    children: [],
+    appendChild: (child) => {},
+    classList: {
+      add: (cls) => {},
+      remove: (cls) => {},
+      contains: (cls) => false
+    },
+    setAttribute: (name, value) => {},
+    getAttribute: (name) => ''
+  };
+};
+
 // Set up mock window and document objects
 const mockDocument = {
+  createElement: createMockElement,
   getElementById: (id) => {
-    return {
-      textContent: '',
-      value: '',
-      options: [
-        createMockOption('Select...'),
-        createMockOption('Opt1'),
-        createMockOption('Opt2'),
-        createMockOption('Opt3'),
-        createMockOption('Opt4'),
-        createMockOption('Opt5'),
-        createMockOption('Opt6'),
-        createMockOption('Opt7'),
-        createMockOption('Opt8')
-      ],
-      classList: {
-        contains: (cls) => false,
-        remove: (cls) => {},
-        add: (cls) => {}
-      },
-      style: { display: '' }
-    };
+    if (id === 'd-age') {
+      return {
+        options: [
+          createMockOption('Select...'),
+          createMockOption('Under 18'),
+          createMockOption('18 to 24'),
+          createMockOption('25 to 34')
+        ]
+      };
+    }
+    if (id === 'd-gender') {
+      return {
+        options: [
+          createMockOption('Select...'),
+          createMockOption('Male'),
+          createMockOption('Female')
+        ]
+      };
+    }
+    if (id === 'd-party') {
+      return {
+        options: [
+          createMockOption('Select...'),
+          createMockOption('Party1'),
+          createMockOption('Independent')
+        ]
+      };
+    }
+    if (id === 'd-nationality') {
+      return {
+        options: [
+          createMockOption('Select...'),
+          createMockOption('Sweden'),
+          createMockOption('Other')
+        ]
+      };
+    }
+    if (id === 'd-country' || id === 'd-county') {
+      return {
+        options: [
+          createMockOption('Select...'),
+          createMockOption('Region1'),
+          createMockOption('Region2')
+        ]
+      };
+    }
+    return createMockElement('div');
   },
   querySelector: (sel) => {
-    return {
-      textContent: '',
-      innerHTML: '',
-      style: {},
-      options: [createMockOption('QuerySelect')],
-      getAttribute: (attr) => '',
-      setAttribute: (attr, val) => {},
-      classList: {
-        contains: (cls) => false,
-        remove: (cls) => {},
-        add: (cls) => {}
-      }
-    };
+    return createMockElement('div');
   },
   querySelectorAll: (sel) => {
     return [];
@@ -73,11 +109,6 @@ const mockWindow = {
 // Bind to global
 global.window = mockWindow;
 global.document = mockDocument;
-
-// Create globals so variables like LOCAL_QUESTIONS, etc. are accessible
-global.LOCAL_QUESTIONS = {};
-global.BANK = [];
-global.PARTY_META = {};
 
 function runScript(code) {
   const indirectEval = eval;
@@ -97,23 +128,36 @@ htmlFiles.forEach(file => {
     return;
   }
 
-  const inlineScript = scriptMatch[1];
+  let inlineScript = scriptMatch[1];
+  
+  // Replace const/let with global assignments to bind them to the node global context
+  inlineScript = inlineScript.replace(/const LOCAL_QUESTIONS\s*=/g, 'global.LOCAL_QUESTIONS =');
+  inlineScript = inlineScript.replace(/const BANK\s*=/g, 'global.BANK =');
+  inlineScript = inlineScript.replace(/const PARTY_META\s*=/g, 'global.PARTY_META =');
+  inlineScript = inlineScript.replace(/let currentLang\s*=/g, 'global.currentLang =');
+  inlineScript = inlineScript.replace(/const engCountryName\s*=/g, 'global.engCountryName =');
+  inlineScript = inlineScript.replace(/const localCountryName\s*=/g, 'global.localCountryName =');
   
   try {
     // Reset global state
     global.LOCAL_QUESTIONS = {};
     global.BANK = [];
     global.PARTY_META = {};
+    global.currentLang = 'en';
     
-    // Run inline script
+    // Run modified inline script
     runScript(inlineScript);
+
+    // Bind other variables to window object
+    global.window.currentLang = global.currentLang;
+    global.window.getQuestion = global.getQuestion;
 
     // Run engine script
     runScript(engineScript);
 
     // Call startTest
     global.window.startTest();
-    console.log(`[PASS] ${file} loaded and startTest() executed successfully.`);
+    console.log(`[PASS] ${file} loaded and startTest() executed successfully with ${global.BANK.length} questions.`);
   } catch (e) {
     console.error(`[FAIL] ${file} threw error:`, e.stack || e);
     hasErrors = true;

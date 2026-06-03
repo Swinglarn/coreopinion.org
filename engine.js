@@ -97,38 +97,45 @@ window.buildOrder = function(bank, totalCount) {
 // 3. QUIZ CONTROLLER & PLAYER RENDER
 // ============================================================
 window.startTest = function(m) {
-  qi = 0;
-  picked = -1;
-  answers = [];
-  lastScore = null;
-  
-  // Reset Save Status
-  const sStatus = document.getElementById('save-status');
-  if (sStatus) sStatus.textContent = '';
-  const sEmail = document.getElementById('save-email');
-  if (sEmail) sEmail.value = '';
+  console.log("startTest initialized with mode:", m);
+  try {
+    qi = 0;
+    picked = -1;
+    answers = [];
+    lastScore = null;
+    
+    // Reset Save Status
+    const sStatus = document.getElementById('save-status');
+    if (sStatus) sStatus.textContent = '';
+    const sEmail = document.getElementById('save-email');
+    if (sEmail) sEmail.value = '';
 
-  // Determine actual target question count based on mode selection
-  let total = BANK.length;
-  if (m === 'short') { total = 30; mode = 'short'; }
-  else if (m === 'medium') { total = 60; mode = 'medium'; }
-  else if (m === 'long') { total = 100; mode = 'long'; }
-  else { mode = 'fixed'; }
+    // Determine actual target question count based on mode selection
+    let total = BANK.length;
+    if (m === 'short') { total = 30; mode = 'short'; }
+    else if (m === 'medium') { total = 60; mode = 'medium'; }
+    else if (m === 'long') { total = 100; mode = 'long'; }
+    else { mode = 'fixed'; }
 
-  const actualTotal = Math.min(total, BANK.length);
-  qs = window.buildOrder(BANK, actualTotal);
+    const actualTotal = Math.min(total, BANK.length);
+    qs = window.buildOrder(BANK, actualTotal);
 
-  // Update badge if exists
-  const badge = document.getElementById('mode-badge');
-  if (badge) {
-    badge.textContent = m === 'short' ? 'Short test (30 q)' 
-                      : m === 'medium' ? 'Medium test (60 q)' 
-                      : m === 'long' ? 'Long test (100 q)' 
-                      : 'Standard test';
+    // Update badge if exists
+    const badge = document.getElementById('mode-badge');
+    if (badge) {
+      badge.textContent = m === 'short' ? 'Short test (30 q)' 
+                        : m === 'medium' ? 'Medium test (60 q)' 
+                        : m === 'long' ? 'Long test (100 q)' 
+                        : 'Standard test';
+    }
+
+    console.log(`Setting up ${qs.length} questions.`);
+    window.renderQ();
+    window.goTo('page-test');
+    console.log("startTest transition completed successfully.");
+  } catch (err) {
+    console.error("CRITICAL ERROR inside startTest:", err);
   }
-
-  window.renderQ();
-  window.goTo('page-test');
 };
 
 window.renderQ = function() {
