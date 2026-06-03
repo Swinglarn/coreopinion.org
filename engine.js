@@ -112,8 +112,8 @@ window.startTest = function(m) {
 
     // Determine actual target question count based on mode selection
     let total = BANK.length;
-    if (m === 'short') { total = 30; mode = 'short'; }
-    else if (m === 'medium') { total = 60; mode = 'medium'; }
+    if (m === 'short') { total = 25; mode = 'short'; }
+    else if (m === 'medium') { total = 50; mode = 'medium'; }
     else if (m === 'long') { total = 100; mode = 'long'; }
     else { mode = 'fixed'; }
 
@@ -123,8 +123,8 @@ window.startTest = function(m) {
     // Update badge if exists
     const badge = document.getElementById('mode-badge');
     if (badge) {
-      badge.textContent = m === 'short' ? 'Short test (30 q)' 
-                        : m === 'medium' ? 'Medium test (60 q)' 
+      badge.textContent = m === 'short' ? 'Short test (25 q)' 
+                        : m === 'medium' ? 'Medium test (50 q)' 
                         : m === 'long' ? 'Long test (100 q)' 
                         : 'Standard test';
     }

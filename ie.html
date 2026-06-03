@@ -65,7 +65,7 @@
     <h1>Where do you stand in<br><em>Irish</em> politics?</h1>
     <p class="hero-sub">47 scenario-based questions on the core issues defining Ireland right now, from housing and health to corporate tax and neutral foreign policy. Check your alignment with all main parties.</p>
     <div class="hero-cta">
-      <button class="btn-primary" onclick="startTest()">Start the test</button>
+      <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
       <button class="btn-secondary" onclick="goTo('page-landing')">How it works</button>
     </div>
   </div>
@@ -105,6 +105,49 @@
     <div class="info-block">
       <h3>Party alignment, not party loyalty</h3>
       <p>The result shows how closely your answers match each party's platform across all issues, not just the ones you feel strongly about. You might find you align with a party you didn't expect, or that you're genuinely split between two.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TEST MODE SELECTION -->
+<div class="page" id="page-mode">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div></div>
+    <div class="flag-badge"><span class="flag">🇮🇪</span> IE</div>
+  </nav>
+  <div class="mode-outer">
+    <div class="page-title">Choose your test length</div>
+    <p class="page-sub">Select how deep you want to analyze your political alignment and cognitive framing bias.</p>
+    
+    <div class="mode-cards">
+      <div class="mode-card" onclick="startTest('short')">
+        <div class="mode-card-badge" id="mode-badge-short">Quick</div>
+        <div class="mode-card-title" id="mode-title-short">Short Test</div>
+        <div class="mode-card-q" id="mode-q-short">25 questions</div>
+        <p class="mode-card-desc" id="mode-desc-short">Provides a fast estimation of your political coordinates and general alignment.</p>
+        <button class="btn-primary mode-card-btn" id="mode-btn-short">Select</button>
+      </div>
+      
+      <div class="mode-card popular" onclick="startTest('medium')">
+        <div class="mode-card-badge" id="mode-badge-medium">Recommended</div>
+        <div class="mode-card-title" id="mode-title-medium">Medium Test</div>
+        <div class="mode-card-q" id="mode-q-medium">50 questions</div>
+        <p class="mode-card-desc" id="mode-desc-medium">Our standard length. Delivers a reliable political quadrant and detailed cognitive framing analysis.</p>
+        <button class="btn-primary mode-card-btn" id="mode-btn-medium">Select</button>
+      </div>
+      
+      <div class="mode-card" onclick="startTest('long')">
+        <div class="mode-card-badge" id="mode-badge-long">Thorough</div>
+        <div class="mode-card-title" id="mode-title-long">Long Test</div>
+        <div class="mode-card-q" id="mode-q-long">100 questions</div>
+        <p class="mode-card-desc" id="mode-desc-long">Deep ideological dive. Analyzes edge cases, complex policy tradeoffs, and full bias metrics.</p>
+        <button class="btn-primary mode-card-btn" id="mode-btn-long">Select</button>
+      </div>
+    </div>
+    
+    <div style="margin-top:24px;text-align:center">
+      <button class="btn-ghost" onclick="goTo('page-landing')" id="mode-back-btn">Back to home</button>
     </div>
   </div>
 </div>
@@ -151,27 +194,6 @@
       <div>
         <div class="field-label">Age</div>
         <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
-      </div>
-      <div>
-        <div class="field-label">Region <span>(optional)</span></div>
-        <select id="d-country">
-          <option value="">Select...</option>
-          <option>Leinster</option>
-          <option>Munster</option>
-          <option>Connacht</option>
-          <option>Ulster (Republic of Ireland part)</option>        </select>
-      </div>
-      <div>
-        <div class="field-label">How do you currently identify? <span>(optional)</span></div>
-        <select id="d-party">
-          <option value="">Select...</option>
-          <option>Fine Gael</option>
-          <option>Fianna Fáil</option>
-          <option>Sinn Féin</option>
-          <option>Green Party</option>
-          <option>Labour Party</option>
-          <option>Social Democrats</option>
-          <option>Independent</option>        </select>
       </div>
       <div>
         <div class="field-label">Gender <span>(optional)</span></div>

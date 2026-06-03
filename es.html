@@ -65,7 +65,7 @@
     <h1>¿Dónde te sitúas en la<br><em>política española</em>?</h1>
     <p class="hero-sub">47 preguntas basadas en escenarios reales sobre los temas que definen a España hoy. Delincuencia, inmigración, bienestar, deuda y energía. Mira tu alineación con todos los partidos.</p>
     <div class="hero-cta">
-      <button class="btn-primary" onclick="startTest()">Start the test</button>
+      <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
       <button class="btn-secondary" onclick="goTo('page-landing')">How it works</button>
     </div>
   </div>
@@ -105,6 +105,49 @@
     <div class="info-block">
       <h3>Party alignment, not party loyalty</h3>
       <p>The result shows how closely your answers match each party's platform across all issues, not just the ones you feel strongly about. You might find you align with a party you didn't expect, or that you're genuinely split between two.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TEST MODE SELECTION -->
+<div class="page" id="page-mode">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div></div>
+    <div class="flag-badge"><span class="flag">🇪🇸</span> España</div>
+  </nav>
+  <div class="mode-outer">
+    <div class="page-title">Choose your test length</div>
+    <p class="page-sub">Select how deep you want to analyze your political alignment and cognitive framing bias.</p>
+    
+    <div class="mode-cards">
+      <div class="mode-card" onclick="startTest('short')">
+        <div class="mode-card-badge" id="mode-badge-short">Quick</div>
+        <div class="mode-card-title" id="mode-title-short">Short Test</div>
+        <div class="mode-card-q" id="mode-q-short">25 questions</div>
+        <p class="mode-card-desc" id="mode-desc-short">Provides a fast estimation of your political coordinates and general alignment.</p>
+        <button class="btn-primary mode-card-btn" id="mode-btn-short">Select</button>
+      </div>
+      
+      <div class="mode-card popular" onclick="startTest('medium')">
+        <div class="mode-card-badge" id="mode-badge-medium">Recommended</div>
+        <div class="mode-card-title" id="mode-title-medium">Medium Test</div>
+        <div class="mode-card-q" id="mode-q-medium">50 questions</div>
+        <p class="mode-card-desc" id="mode-desc-medium">Our standard length. Delivers a reliable political quadrant and detailed cognitive framing analysis.</p>
+        <button class="btn-primary mode-card-btn" id="mode-btn-medium">Select</button>
+      </div>
+      
+      <div class="mode-card" onclick="startTest('long')">
+        <div class="mode-card-badge" id="mode-badge-long">Thorough</div>
+        <div class="mode-card-title" id="mode-title-long">Long Test</div>
+        <div class="mode-card-q" id="mode-q-long">100 questions</div>
+        <p class="mode-card-desc" id="mode-desc-long">Deep ideological dive. Analyzes edge cases, complex policy tradeoffs, and full bias metrics.</p>
+        <button class="btn-primary mode-card-btn" id="mode-btn-long">Select</button>
+      </div>
+    </div>
+    
+    <div style="margin-top:24px;text-align:center">
+      <button class="btn-ghost" onclick="goTo('page-landing')" id="mode-back-btn">Back to home</button>
     </div>
   </div>
 </div>
@@ -151,40 +194,6 @@
       <div>
         <div class="field-label">Age</div>
         <select id="d-age"><option value="">Select...</option><option>Under 18</option><option>18 to 24</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 or older</option></select>
-      </div>
-      <div>
-        <div class="field-label">Region <span>(optional)</span></div>
-        <select id="d-country">
-          <option value="">Seleccionar...</option>
-          <option>Andalucía</option>
-          <option>Aragón</option>
-          <option>Asturias</option>
-          <option>Baleares</option>
-          <option>Canarias</option>
-          <option>Cantabria</option>
-          <option>Castilla-La Mancha</option>
-          <option>Castilla y León</option>
-          <option>Cataluña</option>
-          <option>Extremadura</option>
-          <option>Galicia</option>
-          <option>La Rioja</option>
-          <option>Madrid</option>
-          <option>Murcia</option>
-          <option>Navarra</option>
-          <option>País Vasco</option>
-          <option>Comunidad Valenciana</option>
-          <option>Ceuta y Melilla</option>        </select>
-      </div>
-      <div>
-        <div class="field-label">How do you currently identify? <span>(optional)</span></div>
-        <select id="d-party">
-          <option value="">Seleccionar...</option>
-          <option>PP</option>
-          <option>PSOE</option>
-          <option>Vox</option>
-          <option>Sumar</option>
-          <option>Podemos</option>
-          <option>Independiente</option>        </select>
       </div>
       <div>
         <div class="field-label">Gender <span>(optional)</span></div>
@@ -2739,8 +2748,6 @@ const STATIC_TRANSLATIONS = {
   "demoSub": "A few quick questions before your results. Everything is anonymous.",
   "seeResultsBtn": "See my results",
   "lblAge": "Age",
-  "lblCountry": "Region <span>(optional)</span>",
-  "lblParty": "How do you currently identify? <span>(optional)</span>",
   "lblGender": "Gender <span>(optional)</span>",
   "lblNat": "Nationality <span>(optional)</span>",
   "optSelect": "Select...",
@@ -2772,6 +2779,20 @@ const STATIC_TRANSLATIONS = {
   "copyBtn": "Copy results link",
   "retakeBtn": "Retake",
   "genBtn": "General test",
+  "modeTitle": "Choose your test length",
+  "modeSub": "Select how deep you want to analyze your political alignment and cognitive framing bias.",
+  "modeBadgeShort": "Quick",
+  "modeTitleShort": "Short Test",
+  "modeDescShort": "Provides a fast estimation of your political coordinates and general alignment.",
+  "modeBadgeMedium": "Recommended",
+  "modeTitleMedium": "Medium Test",
+  "modeDescMedium": "Our standard length. Delivers a reliable political quadrant and detailed cognitive framing analysis.",
+  "modeBadgeLong": "Thorough",
+  "modeTitleLong": "Long Test",
+  "modeDescLong": "Deep ideological dive. Analyzes edge cases, complex policy tradeoffs, and full bias metrics.",
+  "modeBtnSelect": "Select",
+  "modeBackBtn": "Back to home",
+  "questionsText": "questions",
   "natNames": {
     "United States": "United States",
     "United Kingdom": "United Kingdom",
@@ -2799,8 +2820,6 @@ const STATIC_TRANSLATIONS = {
   "demoSub": "Unas pocas preguntas rápidas antes de ver tus resultados. Todo es anónimo.",
   "seeResultsBtn": "Ver mis resultados",
   "lblAge": "Edad",
-  "lblCountry": "Región <span>(opcional)</span>",
-  "lblParty": "¿Cómo te identificas políticamente? <span>(opcional)</span>",
   "lblGender": "Género <span>(opcional)</span>",
   "lblNat": "Nacionalidad <span>(opcional)</span>",
   "optSelect": "Seleccionar...",
@@ -2832,6 +2851,20 @@ const STATIC_TRANSLATIONS = {
   "copyBtn": "Copiar enlace de resultados",
   "retakeBtn": "Repetir",
   "genBtn": "Test general",
+  "modeTitle": "Elige la duración del test",
+  "modeSub": "Selecciona qué tan profundo deseas analizar tu alineación política y tu sesgo de encuadre cognitivo.",
+  "modeBadgeShort": "Rápido",
+  "modeTitleShort": "Test corto",
+  "modeDescShort": "Proporciona una estimación rápida de tus coordenadas políticas y alineación general.",
+  "modeBadgeMedium": "Recomendado",
+  "modeTitleMedium": "Test medio",
+  "modeDescMedium": "Nuestra duración estándar. Ofrece un cuadrante político confiable y un análisis detallado del encuadre.",
+  "modeBadgeLong": "Completo",
+  "modeTitleLong": "Test largo",
+  "modeDescLong": "Inmersión ideológica profunda. Analiza casos límite, compensaciones de políticas complejas y métricas de sesgo.",
+  "modeBtnSelect": "Seleccionar",
+  "modeBackBtn": "Volver al inicio",
+  "questionsText": "preguntas",
   "natNames": {
     "United States": "Estados Unidos",
     "United Kingdom": "Reino Unido",
@@ -2882,6 +2915,51 @@ function applyLang() {
   const isEn = currentLang === 'en';
   const strings = STATIC_TRANSLATIONS[currentLang];
   if (!strings) return;
+
+  const modeTitle = document.querySelector('#page-mode .page-title');
+  if (modeTitle) modeTitle.textContent = strings.modeTitle;
+
+  const modeSub = document.querySelector('#page-mode .page-sub');
+  if (modeSub) modeSub.textContent = strings.modeSub;
+
+  const modeBackBtn = document.getElementById('mode-back-btn');
+  if (modeBackBtn) modeBackBtn.textContent = strings.modeBackBtn;
+
+  const badgeShort = document.getElementById('mode-badge-short');
+  if (badgeShort) badgeShort.textContent = strings.modeBadgeShort;
+  const badgeMedium = document.getElementById('mode-badge-medium');
+  if (badgeMedium) badgeMedium.textContent = strings.modeBadgeMedium;
+  const badgeLong = document.getElementById('mode-badge-long');
+  if (badgeLong) badgeLong.textContent = strings.modeBadgeLong;
+
+  const titleShort = document.getElementById('mode-title-short');
+  if (titleShort) titleShort.textContent = strings.modeTitleShort;
+  const titleMedium = document.getElementById('mode-title-medium');
+  if (titleMedium) titleMedium.textContent = strings.modeTitleMedium;
+  const titleLong = document.getElementById('mode-title-long');
+  if (titleLong) titleLong.textContent = strings.modeTitleLong;
+
+  const descShort = document.getElementById('mode-desc-short');
+  if (descShort) descShort.textContent = strings.modeDescShort;
+  const descMedium = document.getElementById('mode-desc-medium');
+  if (descMedium) descMedium.textContent = strings.modeDescMedium;
+  const descLong = document.getElementById('mode-desc-long');
+  if (descLong) descLong.textContent = strings.modeDescLong;
+
+  const btnShort = document.getElementById('mode-btn-short');
+  if (btnShort) btnShort.textContent = strings.modeBtnSelect;
+  const btnMedium = document.getElementById('mode-btn-medium');
+  if (btnMedium) btnMedium.textContent = strings.modeBtnSelect;
+  const btnLong = document.getElementById('mode-btn-long');
+  if (btnLong) btnLong.textContent = strings.modeBtnSelect;
+
+  const totalQ = typeof BANK !== 'undefined' ? BANK.length : 0;
+  const qShort = document.getElementById('mode-q-short');
+  if (qShort) qShort.textContent = Math.min(25, totalQ) + ' ' + strings.questionsText;
+  const qMedium = document.getElementById('mode-q-medium');
+  if (qMedium) qMedium.textContent = Math.min(50, totalQ) + ' ' + strings.questionsText;
+  const qLong = document.getElementById('mode-q-long');
+  if (qLong) qLong.textContent = Math.min(100, totalQ) + ' ' + strings.questionsText;
 
   const heroTitle = document.querySelector('.hero h1');
   if (heroTitle) heroTitle.innerHTML = isEn ? heroTitleEn : heroTitleLocal;

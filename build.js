@@ -73,9 +73,7 @@ const englishHeroTexts = {
     heroTitle: "Where do you stand in<br><em>Swedish</em> politics?",
     heroSub: "47 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties."
   }
-};
-
-const staticUiTranslations = {
+};const staticUiTranslations = {
   en: {
     startBtn: "Start the test",
     howItWorks: "How it works",
@@ -86,8 +84,6 @@ const staticUiTranslations = {
     demoSub: "A few quick questions before your results. Everything is anonymous.",
     seeResultsBtn: "See my results",
     lblAge: "Age",
-    lblCountry: "Region <span>(optional)</span>",
-    lblParty: "How do you currently identify? <span>(optional)</span>",
     lblGender: "Gender <span>(optional)</span>",
     lblNat: "Nationality <span>(optional)</span>",
     optSelect: "Select...",
@@ -106,6 +102,20 @@ const staticUiTranslations = {
     copyBtn: "Copy results link",
     retakeBtn: "Retake",
     genBtn: "General test",
+    modeTitle: "Choose your test length",
+    modeSub: "Select how deep you want to analyze your political alignment and cognitive framing bias.",
+    modeBadgeShort: "Quick",
+    modeTitleShort: "Short Test",
+    modeDescShort: "Provides a fast estimation of your political coordinates and general alignment.",
+    modeBadgeMedium: "Recommended",
+    modeTitleMedium: "Medium Test",
+    modeDescMedium: "Our standard length. Delivers a reliable political quadrant and detailed cognitive framing analysis.",
+    modeBadgeLong: "Thorough",
+    modeTitleLong: "Long Test",
+    modeDescLong: "Deep ideological dive. Analyzes edge cases, complex policy tradeoffs, and full bias metrics.",
+    modeBtnSelect: "Select",
+    modeBackBtn: "Back to home",
+    questionsText: "questions",
     natNames: {
       'United States': 'United States',
       'United Kingdom': 'United Kingdom',
@@ -133,8 +143,6 @@ const staticUiTranslations = {
     demoSub: "Einige kurze Fragen vor deinen Ergebnissen. Alles ist vollkommen anonym.",
     seeResultsBtn: "Ergebnisse ansehen",
     lblAge: "Alter",
-    lblCountry: "Region <span>(optional)</span>",
-    lblParty: "Wie identifizierst du dich politisch? <span>(optional)</span>",
     lblGender: "Geschlecht <span>(optional)</span>",
     lblNat: "Nationalität <span>(optional)</span>",
     optSelect: "Auswählen...",
@@ -153,6 +161,20 @@ const staticUiTranslations = {
     copyBtn: "Ergebnis-Link kopieren",
     retakeBtn: "Wiederholen",
     genBtn: "Allgemeiner Test",
+    modeTitle: "Wähle deine Testlänge",
+    modeSub: "Wähle, wie tiefgehend du deine politische Übereinstimmung und kognitive Framing-Verzerrung analysieren möchtest.",
+    modeBadgeShort: "Schnell",
+    modeTitleShort: "Kurzer Test",
+    modeDescShort: "Bietet eine schnelle Einschätzung deiner politischen Koordinaten und der allgemeinen Ausrichtung.",
+    modeBadgeMedium: "Empfohlen",
+    modeTitleMedium: "Mittlerer Test",
+    modeDescMedium: "Unsere Standardlänge. Liefert einen zuverlässigen politischen Quadranten und eine detaillierte Framing-Analyse.",
+    modeBadgeLong: "Gründlich",
+    modeTitleLong: "Langer Test",
+    modeDescLong: "Tiefer ideologischer Einblick. Analysiert Grenzfälle, komplexe politische Abwägungen und vollständige Metriken.",
+    modeBtnSelect: "Auswählen",
+    modeBackBtn: "Zurück zur Startseite",
+    questionsText: "Fragen",
     natNames: {
       'United States': "Vereinigte Staaten",
       'United Kingdom': "Vereinigtes Königreich",
@@ -180,8 +202,6 @@ const staticUiTranslations = {
     demoSub: "Quelques questions rapides avant vos résultats. Tout est anonyme.",
     seeResultsBtn: "Voir mes résultats",
     lblAge: "Âge",
-    lblCountry: "Région <span>(facultatif)</span>",
-    lblParty: "Comment vous identifiez-vous politiquement ? <span>(facultatif)</span>",
     lblGender: "Genre <span>(facultatif)</span>",
     lblNat: "Nationalité <span>(facultatif)</span>",
     optSelect: "Sélectionner...",
@@ -200,6 +220,20 @@ const staticUiTranslations = {
     copyBtn: "Copier le lien des résultats",
     retakeBtn: "Recommencer",
     genBtn: "Test général",
+    modeTitle: "Choisissez la longueur du test",
+    modeSub: "Sélectionnez le niveau de profondeur pour analyser votre alignement politique et votre biais de cadrage cognitif.",
+    modeBadgeShort: "Rapide",
+    modeTitleShort: "Test court",
+    modeDescShort: "Fournit une estimation rapide de vos coordonnées politiques et de votre alignement général.",
+    modeBadgeMedium: "Recommandé",
+    modeTitleMedium: "Test moyen",
+    modeDescMedium: "Notre longueur standard. Fournit un quadrant politique fiable et une analyse détaillée du cadrage.",
+    modeBadgeLong: "Approfondi",
+    modeTitleLong: "Test long",
+    modeDescLong: "Plongée idéologique profonde. Analyse les cas limites, les compromis politiques complexes et les biais complets.",
+    modeBtnSelect: "Sélectionner",
+    modeBackBtn: "Retour à l'accueil",
+    questionsText: "questions",
     natNames: {
       'United States': "États-Unis",
       'United Kingdom': "Royaume-Uni",
@@ -227,8 +261,6 @@ const staticUiTranslations = {
     demoSub: "Unas pocas preguntas rápidas antes de ver tus resultados. Todo es anónimo.",
     seeResultsBtn: "Ver mis resultados",
     lblAge: "Edad",
-    lblCountry: "Región <span>(opcional)</span>",
-    lblParty: "¿Cómo te identificas políticamente? <span>(opcional)</span>",
     lblGender: "Género <span>(opcional)</span>",
     lblNat: "Nacionalidad <span>(opcional)</span>",
     optSelect: "Seleccionar...",
@@ -247,6 +279,20 @@ const staticUiTranslations = {
     copyBtn: "Copiar enlace de resultados",
     retakeBtn: "Repetir",
     genBtn: "Test general",
+    modeTitle: "Elige la duración del test",
+    modeSub: "Selecciona qué tan profundo deseas analizar tu alineación política y tu sesgo de encuadre cognitivo.",
+    modeBadgeShort: "Rápido",
+    modeTitleShort: "Test corto",
+    modeDescShort: "Proporciona una estimación rápida de tus coordenadas políticas y alineación general.",
+    modeBadgeMedium: "Recomendado",
+    modeTitleMedium: "Test medio",
+    modeDescMedium: "Nuestra duración estándar. Ofrece un cuadrante político confiable y un análisis detallado del encuadre.",
+    modeBadgeLong: "Completo",
+    modeTitleLong: "Test largo",
+    modeDescLong: "Inmersión ideológica profunda. Analiza casos límite, compensaciones de políticas complejas y métricas de sesgo.",
+    modeBtnSelect: "Seleccionar",
+    modeBackBtn: "Volver al inicio",
+    questionsText: "preguntas",
     natNames: {
       'United States': "Estados Unidos",
       'United Kingdom': "Reino Unido",
@@ -274,8 +320,6 @@ const staticUiTranslations = {
     demoSub: "Qualche rapida domanda prima dei tuoi risultati. Tutto è anonimo.",
     seeResultsBtn: "Vedi i miei risultati",
     lblAge: "Età",
-    lblCountry: "Regione <span>(opzionale)</span>",
-    lblParty: "Come ti identifichi politicamente? <span>(opzionale)</span>",
     lblGender: "Genere <span>(opzionale)</span>",
     lblNat: "Nazionalità <span>(opzionale)</span>",
     optSelect: "Seleziona...",
@@ -294,6 +338,20 @@ const staticUiTranslations = {
     copyBtn: "Copia link dei risultati",
     retakeBtn: "Rifare",
     genBtn: "Test generale",
+    modeTitle: "Scegli la durata del test",
+    modeSub: "Seleziona quanto approfondire l'analisi del tuo allineamento politico e del tuo bias di incorniciamento cognitivo.",
+    modeBadgeShort: "Rapido",
+    modeTitleShort: "Test breve",
+    modeDescShort: "Fornisce una stima rapida delle tue coordinate politiche e dell'allineamento generale.",
+    modeBadgeMedium: "Consigliato",
+    modeTitleMedium: "Test medio",
+    modeDescMedium: "La nostra durata standard. Rileva un quadrante politico affidabile e un'analisi dettagliata del bias.",
+    modeBadgeLong: "Approfondito",
+    modeTitleLong: "Test lungo",
+    modeDescLong: "Analisi ideologica profonda. Esamina casi limite, compromessi politici complessi e metriche complete del bias.",
+    modeBtnSelect: "Seleziona",
+    modeBackBtn: "Torna alla home",
+    questionsText: "domande",
     natNames: {
       'United States': "Stati Uniti",
       'United Kingdom': "Regno Unito",
@@ -321,8 +379,6 @@ const staticUiTranslations = {
     demoSub: "Een paar snelle vragen voor je resultaten. Alles is anoniem.",
     seeResultsBtn: "Bekijk mijn resultaten",
     lblAge: "Leeftijd",
-    lblCountry: "Regio <span>(optioneel)</span>",
-    lblParty: "Hoe identificeer je jezelf politiek? <span>(optioneel)</span>",
     lblGender: "Geslacht <span>(optioneel)</span>",
     lblNat: "Nationaliteit <span>(optioneel)</span>",
     optSelect: "Selecteer...",
@@ -341,6 +397,20 @@ const staticUiTranslations = {
     copyBtn: "Resultatenlink kopiëren",
     retakeBtn: "Opnieuw doen",
     genBtn: "Algemene test",
+    modeTitle: "Kies de lengte van de test",
+    modeSub: "Selecteer hoe diep je je politieke partijvoorkeur en cognitieve formuleringseffecten wilt analyseren.",
+    modeBadgeShort: "Snel",
+    modeTitleShort: "Korte test",
+    modeDescShort: "Biedt een snelle schatting van je politieke coördinaten en algemene overeenkomst.",
+    modeBadgeMedium: "Aanbevolen",
+    modeTitleMedium: "Gemiddelde test",
+    modeDescMedium: "Onze standaardlengte. Biedt een betrouwbaar politiek kwadrant en gedetailleerde formuleringseffectenanalyse.",
+    modeBadgeLong: "Grondig",
+    modeTitleLong: "Lange test",
+    modeDescLong: "Diepe ideologische duik. Analyseert grensgevallen, complexe beleidsafwegingen en volledige beïnvloedingsscores.",
+    modeBtnSelect: "Selecteer",
+    modeBackBtn: "Terug naar startpagina",
+    questionsText: "vragen",
     natNames: {
       'United States': "Verenigde Staten",
       'United Kingdom': "Verenigd Koninkrijk",
@@ -368,8 +438,6 @@ const staticUiTranslations = {
     demoSub: "Några snabba frågor innan dina resultat. Allt är anonymt.",
     seeResultsBtn: "Se mina resultat",
     lblAge: "Ålder",
-    lblCountry: "Län <span>(valfritt)</span>",
-    lblParty: "Vilket parti identifierar du dig med? <span>(valfritt)</span>",
     lblGender: "Kön <span>(valfritt)</span>",
     lblNat: "Nationalitet <span>(valfritt)</span>",
     optSelect: "Välj...",
@@ -388,6 +456,20 @@ const staticUiTranslations = {
     copyBtn: "Kopiera resultatlänk",
     retakeBtn: "Gör om testet",
     genBtn: "Allmänt test",
+    modeTitle: "Välj testlängd",
+    modeSub: "Välj hur djupt du vill analysera din politiska överensstämmelse och kognitiva formuleringspartiskhet.",
+    modeBadgeShort: "Snabb",
+    modeTitleShort: "Kort test",
+    modeDescShort: "Ger en snabb uppskattning av dina politiska koordinater och allmänna matchning.",
+    modeBadgeMedium: "Rekommenderas",
+    modeTitleMedium: "Medeltest",
+    modeDescMedium: "Vår standardlängd. Ger en pålitlig politisk kvadrant och detaljerad analys av formuleringseffekter.",
+    modeBadgeLong: "Grundlig",
+    modeTitleLong: "Långt test",
+    modeDescLong: "Djup ideologisk analys. Analyserar gränsfall, komplexa politiska avvägningar och fullständiga partiskhetsmått.",
+    modeBtnSelect: "Välj",
+    modeBackBtn: "Tillbaka till start",
+    questionsText: "frågor",
     natNames: {
       'United States': "USA",
       'United Kingdom': "Storbritannien",
@@ -501,6 +583,51 @@ function applyLang() {
   const isEn = currentLang === 'en';
   const strings = STATIC_TRANSLATIONS[currentLang];
   if (!strings) return;
+
+  const modeTitle = document.querySelector('#page-mode .page-title');
+  if (modeTitle) modeTitle.textContent = strings.modeTitle;
+
+  const modeSub = document.querySelector('#page-mode .page-sub');
+  if (modeSub) modeSub.textContent = strings.modeSub;
+
+  const modeBackBtn = document.getElementById('mode-back-btn');
+  if (modeBackBtn) modeBackBtn.textContent = strings.modeBackBtn;
+
+  const badgeShort = document.getElementById('mode-badge-short');
+  if (badgeShort) badgeShort.textContent = strings.modeBadgeShort;
+  const badgeMedium = document.getElementById('mode-badge-medium');
+  if (badgeMedium) badgeMedium.textContent = strings.modeBadgeMedium;
+  const badgeLong = document.getElementById('mode-badge-long');
+  if (badgeLong) badgeLong.textContent = strings.modeBadgeLong;
+
+  const titleShort = document.getElementById('mode-title-short');
+  if (titleShort) titleShort.textContent = strings.modeTitleShort;
+  const titleMedium = document.getElementById('mode-title-medium');
+  if (titleMedium) titleMedium.textContent = strings.modeTitleMedium;
+  const titleLong = document.getElementById('mode-title-long');
+  if (titleLong) titleLong.textContent = strings.modeTitleLong;
+
+  const descShort = document.getElementById('mode-desc-short');
+  if (descShort) descShort.textContent = strings.modeDescShort;
+  const descMedium = document.getElementById('mode-desc-medium');
+  if (descMedium) descMedium.textContent = strings.modeDescMedium;
+  const descLong = document.getElementById('mode-desc-long');
+  if (descLong) descLong.textContent = strings.modeDescLong;
+
+  const btnShort = document.getElementById('mode-btn-short');
+  if (btnShort) btnShort.textContent = strings.modeBtnSelect;
+  const btnMedium = document.getElementById('mode-btn-medium');
+  if (btnMedium) btnMedium.textContent = strings.modeBtnSelect;
+  const btnLong = document.getElementById('mode-btn-long');
+  if (btnLong) btnLong.textContent = strings.modeBtnSelect;
+
+  const totalQ = typeof BANK !== 'undefined' ? BANK.length : 0;
+  const qShort = document.getElementById('mode-q-short');
+  if (qShort) qShort.textContent = Math.min(25, totalQ) + ' ' + strings.questionsText;
+  const qMedium = document.getElementById('mode-q-medium');
+  if (qMedium) qMedium.textContent = Math.min(50, totalQ) + ' ' + strings.questionsText;
+  const qLong = document.getElementById('mode-q-long');
+  if (qLong) qLong.textContent = Math.min(100, totalQ) + ' ' + strings.questionsText;
 
   const heroTitle = document.querySelector('.hero h1');
   if (heroTitle) heroTitle.innerHTML = isEn ? heroTitleEn : heroTitleLocal;
