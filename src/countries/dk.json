@@ -1,0 +1,1969 @@
+{
+  "code": "dk",
+  "name": "Danmark",
+  "localLabel": "Danmark",
+  "flag": "🇩🇰",
+  "title": "Politisk Kompas Danmark 2026 | CoreOpinion",
+  "desc": "Find din position på det politiske kompas. 30 scenariebaserede spørgsmål for at se din overensstemmelse med de største partier i Folketinget.",
+  "keywords": "politisk kompas danmark, hvilket parti skal jeg stemme på, valgtest 2026, socialdemokratiet venstre valg, folketinget quiz, politisk test",
+  "canonical": "https://coreopinion.org/dk",
+  "regions": [
+    "Hovedstaden",
+    "Sjælland",
+    "Syddanmark",
+    "Midtjylland",
+    "Nordjylland"
+  ],
+  "parties": [
+    "A",
+    "V",
+    "M",
+    "F",
+    "Æ",
+    "I",
+    "C",
+    "Ø"
+  ],
+  "partyMeta": {
+    "A": {
+      "name": {
+        "da": "Socialdemokratiet",
+        "en": "Social Democrats"
+      },
+      "color": "#E41A22",
+      "barClass": "bar-dk-a",
+      "desc": {
+        "da": "Dine svar passer bedst med Socialdemokratiet (A). Du støtter en stærk velfærdsstat, offentlige ydelser finansieret af progressiv beskatning og en reguleret markedsøkonomi.",
+        "en": "Your answers align closely with the Social Democrats (A). You support a strong welfare state, public services funded by progressive taxation, and a regulated market economy."
+      }
+    },
+    "V": {
+      "name": {
+        "da": "Venstre",
+        "en": "Liberals"
+      },
+      "color": "#004F7E",
+      "barClass": "bar-dk-v",
+      "desc": {
+        "da": "Dine svar passer bedst med Venstre (V). Du støtter personlig frihed, lavere skatter, markedsbaserede løsninger og finansiel disciplin i den offentlige sektor.",
+        "en": "Your answers align closely with Venstre (V). You support personal freedom, lower taxes, market-based solutions, and fiscal discipline in the public sector."
+      }
+    },
+    "M": {
+      "name": {
+        "da": "Moderaterne",
+        "en": "Moderates"
+      },
+      "color": "#6F3F7A",
+      "barClass": "bar-dk-m",
+      "desc": {
+        "da": "Dine svar passer bedst med Moderaterne (M). Du foretrækker pragmatiske, midtsøgende reformer, samarbejde på tværs af blokkene og økonomisk modernisering.",
+        "en": "Your answers align closely with the Moderates (M). You prefer pragmatic, centrist reforms, cross-bloc cooperation, and economic modernization."
+      }
+    },
+    "F": {
+      "name": {
+        "da": "Socialistisk Folkeparti",
+        "en": "Socialist People's Party"
+      },
+      "color": "#CE1126",
+      "barClass": "bar-dk-f",
+      "desc": {
+        "da": "Dine svar passer bedst med Socialistisk Folkeparti (SF). Du prioriterer grøn omstilling, klimaforanstaltninger, social retfærdighed og udbygning af velfærden.",
+        "en": "Your answers align closely with the Socialist People's Party (SF). You prioritize green transition, climate action, social justice, and expanding the welfare system."
+      }
+    },
+    "Æ": {
+      "name": {
+        "da": "Danmarksdemokraterne",
+        "en": "Denmark Democrats"
+      },
+      "color": "#003865",
+      "barClass": "bar-dk-ae",
+      "desc": {
+        "da": "Dine svar passer bedst med Danmarksdemokraterne (Æ). Du støtter stram indvandringspolitik, decentralisering, fokus på landdistrikter og traditionelle værdier.",
+        "en": "Your answers align closely with the Denmark Democrats (Æ). You support strict immigration control, decentralization, focus on rural areas, and traditional values."
+      }
+    },
+    "I": {
+      "name": {
+        "da": "Liberal Alliance",
+        "en": "Liberal Alliance"
+      },
+      "color": "#3F3F3F",
+      "barClass": "bar-dk-i",
+      "desc": {
+        "da": "Dine svar passer bedst med Liberal Alliance (I). Du går ind for vidtgående skattelettelser, deregulering, en væsentligt mindre offentlig sektor og personligt ansvar.",
+        "en": "Your answers align closely with the Liberal Alliance (I). You advocate for extensive tax cuts, deregulation, a significantly smaller public sector, and personal responsibility."
+      }
+    },
+    "C": {
+      "name": {
+        "da": "Det Konservative Folkeparti",
+        "en": "Conservative People's Party"
+      },
+      "color": "#00583C",
+      "barClass": "bar-dk-c",
+      "desc": {
+        "da": "Dine svar passer bedst med Det Konservative Folkeparti (C). Du vægter ret og orden, erhvervsvenlig politik, bevarelse af kulturarven og stærkt forsvar.",
+        "en": "Your answers align closely with the Conservative People's Party (C). You value law and order, business-friendly policies, preservation of cultural heritage, and a strong defense."
+      }
+    },
+    "Ø": {
+      "name": {
+        "da": "Enhedslisten",
+        "en": "Red-Green Alliance"
+      },
+      "color": "#F04D23",
+      "barClass": "bar-dk-oe",
+      "desc": {
+        "da": "Dine svar passer bedst med Enhedslisten (Ø). Du støtter en demokratisk socialistisk økonomi, markant omfordeling, bekæmpelse af ulighed og kompromisløs klimahandling.",
+        "en": "Your answers align closely with the Red-Green Alliance (Ø). You support a democratic socialist economy, significant redistribution, fighting inequality, and uncompromising climate action."
+      }
+    }
+  },
+  "heroTitle": "Hvor står du i <em>dansk</em> politik?",
+  "heroSub": "30 scenariebaserede spørgsmål om emnerne, der definerer Danmark lige nu. Velfærd, indvandring, klima og skatter. Se din overensstemmelse med alle partierne i Folketinget.",
+  "bank": [
+    {
+      "id": "im1",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Denmark received over 160,000 asylum seekers in 2015 alone. Integration has been uneven. Gang violence has increased sharply in certain areas.",
+      "q": "Denmark let in far too many people too quickly. The consequences are still being paid today.",
+      "opts": [
+        {
+          "t": "Yes. Immigration must be reduced sharply and integration demands must be much stricter.",
+          "e": 0,
+          "g": 2,
+          "s": -2,
+          "A": -2,
+          "V": 1,
+          "Æ": 2,
+          "M": -1,
+          "Ø": -2,
+          "F": -2,
+          "I": -1,
+          "C": 1
+        },
+        {
+          "t": "The intake was high but the failure was in integration policy, not the numbers themselves.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "No. Denmark benefited from immigration. The narrative of failure is driven by prejudice.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "A": 1,
+          "V": -1,
+          "Æ": -2,
+          "M": 1,
+          "Ø": 2,
+          "F": 2,
+          "I": 1,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "im2",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Temporary protection status should be made permanent for refugees who have built lives in Denmark, regardless of conditions in their home country.",
+      "opts": [
+        {
+          "t": "Yes. Forcing people back to countries they fled is cruel and counterproductive.",
+          "e": 0,
+          "g": -2,
+          "s": 1,
+          "A": 1,
+          "V": -1,
+          "Æ": -2,
+          "M": 1,
+          "Ø": 2,
+          "F": 2,
+          "I": 1,
+          "C": -1
+        },
+        {
+          "t": "Conditional on integration milestones, yes.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": -1,
+          "M": 0,
+          "Ø": 1,
+          "F": 1,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "No. Temporary status must mean temporary. Otherwise the system loses credibility.",
+          "e": 0,
+          "g": 2,
+          "s": -1,
+          "A": -1,
+          "V": 1,
+          "Æ": 2,
+          "M": -1,
+          "Ø": -2,
+          "F": -1,
+          "I": -1,
+          "C": 1
+        }
+      ]
+    },
+    {
+      "id": "im3",
+      "nl": "Immigration",
+      "pair": "im-b",
+      "fr": "con",
+      "type": "s",
+      "q": "Denmark should pay people to return to their countries of origin if they are willing to leave voluntarily.",
+      "opts": [
+        {
+          "t": "Yes. Voluntary return programs save money and reduce social tension.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "A": -1,
+          "V": 1,
+          "Æ": 2,
+          "M": -1,
+          "Ø": -2,
+          "F": -2,
+          "I": -1,
+          "C": 1
+        },
+        {
+          "t": "As a last resort with genuine safeguards, such programs exist elsewhere.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": -1,
+          "F": -1,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "No. Paying people to leave is incompatible with human dignity.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "A": 1,
+          "V": -1,
+          "Æ": -2,
+          "M": 1,
+          "Ø": 2,
+          "F": 2,
+          "I": 1,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "im4",
+      "nl": "Immigration",
+      "pair": "im-b",
+      "fr": "pro",
+      "type": "s",
+      "q": "Language requirements, citizenship tests, and integration contracts are reasonable demands that respect both newcomers and the host society.",
+      "opts": [
+        {
+          "t": "Yes. Integration obligations are a sign of taking newcomers seriously.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "A": 1,
+          "V": 1,
+          "Æ": 1,
+          "M": 0,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "Voluntary programs work better than coercive ones.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": -1,
+          "M": 1,
+          "Ø": 1,
+          "F": 1,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Support and opportunity integrate people better than contracts and tests.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "A": 0,
+          "V": -1,
+          "Æ": -2,
+          "M": 0,
+          "Ø": 1,
+          "F": 2,
+          "I": -1,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "cr1",
+      "nl": "Crime and justice",
+      "pair": "cr-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Denmark had more than 400 shootings in 2023. Gang-related explosions reached record levels. Several European countries now warn their citizens about travelling to certain Danish cities.",
+      "q": "The gang violence crisis is a national emergency that requires a fundamentally tougher response.",
+      "opts": [
+        {
+          "t": "Yes. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.",
+          "e": 0,
+          "g": 2,
+          "s": 0,
+          "A": 0,
+          "V": 2,
+          "Æ": 2,
+          "M": -1,
+          "Ø": -2,
+          "F": -2,
+          "I": -1,
+          "C": 2
+        },
+        {
+          "t": "Enforcement matters but the root causes lie in poverty, segregation, and exclusion.",
+          "e": -1,
+          "g": 0,
+          "s": 2,
+          "A": 2,
+          "V": -1,
+          "Æ": -1,
+          "M": 0,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Both tougher enforcement now and long-term investment in inclusion.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "A": 1,
+          "V": 1,
+          "Æ": 1,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 1,
+          "C": 1
+        }
+      ]
+    },
+    {
+      "id": "cr2",
+      "nl": "Crime and justice",
+      "pair": "cr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Criminalising membership in gangs, rather than just criminal acts, is necessary to break the cycle of violence.",
+      "opts": [
+        {
+          "t": "Yes. Gang structures must be dismantled and membership itself made illegal.",
+          "e": 0,
+          "g": 2,
+          "s": 0,
+          "A": 0,
+          "V": 2,
+          "Æ": 2,
+          "M": -1,
+          "Ø": -2,
+          "F": -2,
+          "I": -2,
+          "C": 1
+        },
+        {
+          "t": "Only with very narrow definitions to avoid criminalising association.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": 1,
+          "M": 0,
+          "Ø": -1,
+          "F": -1,
+          "I": -1,
+          "C": 0
+        },
+        {
+          "t": "No. Criminalising membership without criminal acts violates fundamental legal principles.",
+          "e": 0,
+          "g": -2,
+          "s": 0,
+          "A": 0,
+          "V": -1,
+          "Æ": -1,
+          "M": 1,
+          "Ø": 2,
+          "F": 2,
+          "I": 2,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "wl1",
+      "nl": "Welfare and social policy",
+      "pair": "wl-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The Danish welfare state is the foundation of a successful society. Cuts to it in the name of fiscal discipline are ideological, not economic.",
+      "opts": [
+        {
+          "t": "Yes. The welfare state is what makes Denmark work. Protect and strengthen it.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "A": 2,
+          "V": -1,
+          "Æ": 0,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "The welfare state is essential but it needs reform to remain sustainable.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "The welfare state has grown too large and crowds out individual responsibility.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "A": -2,
+          "V": 2,
+          "Æ": 1,
+          "M": 1,
+          "Ø": -2,
+          "F": -2,
+          "I": 1,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "wl2",
+      "nl": "Welfare and social policy",
+      "pair": "wl-a",
+      "fr": "con",
+      "type": "s",
+      "q": "People who have never paid into the Danish welfare system should not receive the same benefits as those who have contributed for decades.",
+      "opts": [
+        {
+          "t": "Yes. Contribution should determine entitlement.",
+          "e": 1,
+          "g": 1,
+          "s": 0,
+          "A": 0,
+          "V": 2,
+          "Æ": 2,
+          "M": 0,
+          "Ø": -2,
+          "F": -2,
+          "I": 0,
+          "C": 1
+        },
+        {
+          "t": "Need must also matter, but some contribution-linked elements are reasonable.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "No. Need, not contribution history, must be the basis of a fair system.",
+          "e": -2,
+          "g": -1,
+          "s": 2,
+          "A": 2,
+          "V": -1,
+          "Æ": -2,
+          "M": 0,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "hc1",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Danish healthcare queues are among the longest in the EU. The 90-day guarantee is routinely breached. Regional inequalities in care quality are significant.",
+      "q": "The healthcare crisis demands more public investment, not private alternatives.",
+      "opts": [
+        {
+          "t": "Yes. Public healthcare must be properly funded and staffed.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "A": 2,
+          "V": -1,
+          "Æ": 0,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Private providers alongside public can reduce queues without threatening equality.",
+          "e": 1,
+          "g": 0,
+          "s": -1,
+          "A": -1,
+          "V": 2,
+          "Æ": 1,
+          "M": 2,
+          "Ø": -2,
+          "F": -1,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "More funding and better organisation of the public system is the only real answer.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 1,
+          "F": 1,
+          "I": 0,
+          "C": 1
+        }
+      ]
+    },
+    {
+      "id": "hc2",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Profit-driven healthcare companies siphon money from patient care to shareholders. They should not be allowed to operate within the public system.",
+      "opts": [
+        {
+          "t": "Yes. Healthcare profit extraction is incompatible with equal care.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "A": 2,
+          "V": -2,
+          "Æ": -1,
+          "M": -2,
+          "Ø": 2,
+          "F": 2,
+          "I": -1,
+          "C": -1
+        },
+        {
+          "t": "Some private delivery is efficient if properly regulated and quality-monitored.",
+          "e": 0,
+          "g": 0,
+          "s": -1,
+          "A": -1,
+          "V": 1,
+          "Æ": 0,
+          "M": 1,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "No. Competition improves quality and efficiency.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "A": -2,
+          "V": 2,
+          "Æ": 0,
+          "M": 2,
+          "Ø": -2,
+          "F": -2,
+          "I": 1,
+          "C": 1
+        }
+      ]
+    },
+    {
+      "id": "ed1",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "PISA results show Danish school performance has declined significantly. Segregation between schools is among the worst in the OECD. The free school system has come under intense scrutiny.",
+      "q": "The free school reform has increased segregation and undermined equal education. It needs to be reversed.",
+      "opts": [
+        {
+          "t": "Yes. Vinstdrivna friskolor har misslyckats and should be abolished.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "A": 2,
+          "V": -2,
+          "Æ": -1,
+          "M": -2,
+          "Ø": 2,
+          "F": 2,
+          "I": -1,
+          "C": -1
+        },
+        {
+          "t": "Reform free schools strictly but keep the freedom of choice element.",
+          "e": 0,
+          "g": 0,
+          "s": -1,
+          "A": -1,
+          "V": 1,
+          "Æ": 0,
+          "M": 1,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "No. Free schools offer parents choice and competition that raises standards.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "A": -2,
+          "V": 2,
+          "Æ": 1,
+          "M": 2,
+          "Ø": -2,
+          "F": -2,
+          "I": 1,
+          "C": 1
+        }
+      ]
+    },
+    {
+      "id": "ed2",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Teachers need more authority in the classroom. Student disruption and behavioural problems are undermining the learning environment.",
+      "opts": [
+        {
+          "t": "Yes. Teacher authority and clear discipline are necessary for learning.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "A": 0,
+          "V": 2,
+          "Æ": 2,
+          "M": 0,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 2
+        },
+        {
+          "t": "More support for teachers yes, but framing it as discipline misses the deeper causes.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 1,
+          "F": 1,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Trauma-informed, resource-rich teaching is more effective than discipline frameworks.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "A": 0,
+          "V": -1,
+          "Æ": -1,
+          "M": 0,
+          "Ø": 2,
+          "F": 2,
+          "I": -1,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "tx1",
+      "nl": "Tax and economy",
+      "pair": "tx-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Denmark should reintroduce a wealth tax on assets above 3 million kroner. The abolition in 2007 was a gift to the rich.",
+      "opts": [
+        {
+          "t": "Yes. Wealth taxes reduce inequality and fund public services.",
+          "e": -2,
+          "g": 2,
+          "s": 1,
+          "A": 1,
+          "V": -2,
+          "Æ": -1,
+          "M": -2,
+          "Ø": 2,
+          "F": 2,
+          "I": -1,
+          "C": -1
+        },
+        {
+          "t": "Close loopholes and raise capital gains taxes before adding new taxes.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "A": 1,
+          "V": -1,
+          "Æ": -1,
+          "M": -1,
+          "Ø": 1,
+          "F": 1,
+          "I": -1,
+          "C": 0
+        },
+        {
+          "t": "No. The wealth tax drove capital out of Denmark. It should not return.",
+          "e": 2,
+          "g": -1,
+          "s": -1,
+          "A": -1,
+          "V": 2,
+          "Æ": 1,
+          "M": 2,
+          "Ø": -2,
+          "F": -2,
+          "I": 1,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "tx2",
+      "nl": "Tax and economy",
+      "pair": "tx-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Denmark has among the highest taxes in the world. Reducing them would increase growth and improve competitiveness.",
+      "opts": [
+        {
+          "t": "Yes. High taxes harm investment, entrepreneurship, and attract fewer high earners.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "A": -2,
+          "V": 2,
+          "Æ": 1,
+          "M": 2,
+          "Ø": -2,
+          "F": -2,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "Targeted reductions in work-related taxes make sense but broad cuts weaken services.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": 0,
+          "M": 1,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "No. High taxes fund the world-class public services that make Denmark competitive.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "A": 2,
+          "V": -2,
+          "Æ": -1,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": -1,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "en1",
+      "nl": "Climate and energy",
+      "pair": "en-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Denmark has committed to net zero by 2045. The current government eased some environmental regulations to stimulate investment and energy security.",
+      "q": "Weakening climate regulation in the name of competitiveness is a betrayal of future generations.",
+      "opts": [
+        {
+          "t": "Yes. Climate commitments must not be traded for short-term economic gains.",
+          "e": -2,
+          "g": 2,
+          "s": 1,
+          "A": 1,
+          "V": -1,
+          "Æ": -1,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Some regulatory flexibility is reasonable as long as the net zero target is kept.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": 0,
+          "M": 1,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "Competitiveness and energy security are legitimate concerns that must be balanced.",
+          "e": 1,
+          "g": -1,
+          "s": -1,
+          "A": -1,
+          "V": 1,
+          "Æ": 1,
+          "M": 1,
+          "Ø": -2,
+          "F": -2,
+          "I": 0,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "en2",
+      "nl": "Climate and energy",
+      "pair": "en-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Denmark should expand nuclear power. It is safe, low-carbon, and the country has been energy-poor without it.",
+      "opts": [
+        {
+          "t": "Yes. Nuclear is the most reliable low-carbon baseload available.",
+          "e": 1,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 2,
+          "Æ": 2,
+          "M": 1,
+          "Ø": -1,
+          "F": -2,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "New reactor types merit consideration but the costs and timelines are uncertain.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": 1,
+          "M": 0,
+          "Ø": -1,
+          "F": -1,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "No. Renewables plus storage are faster, cheaper, and safer.",
+          "e": -1,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": -1,
+          "Æ": -1,
+          "M": 0,
+          "Ø": 1,
+          "F": 2,
+          "I": 0,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "na1",
+      "nl": "NATO and defence",
+      "pair": "na-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Denmark was right to join NATO. The Russian invasion of Ukraine made the security case unanswerable.",
+      "opts": [
+        {
+          "t": "Yes. NATO membership is the foundation of Danish security.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "A": 1,
+          "V": 2,
+          "Æ": 2,
+          "M": 1,
+          "Ø": -1,
+          "F": -1,
+          "I": 2,
+          "C": 2
+        },
+        {
+          "t": "The decision was understandable but Denmark should maintain maximum strategic independence within NATO.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "NATO membership makes Denmark a target and ends 200 years of neutrality.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "A": 0,
+          "V": -1,
+          "Æ": -1,
+          "M": -1,
+          "Ø": 2,
+          "F": 1,
+          "I": -1,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "na2",
+      "nl": "NATO and defence",
+      "pair": "na-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Denmark should increase defence spending to 2.5% of GDP to meet NATO obligations and deter Russian aggression.",
+      "opts": [
+        {
+          "t": "Yes. Underinvestment in defence over decades must now be corrected.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "A": 0,
+          "V": 2,
+          "Æ": 2,
+          "M": 0,
+          "Ø": -2,
+          "F": -1,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "A credible defence requires investment but the level must be balanced against social needs.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": 1,
+          "M": 0,
+          "Ø": -1,
+          "F": -1,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Military spending competes with welfare, healthcare and schools. Diplomacy must come first.",
+          "e": -1,
+          "g": -1,
+          "s": 0,
+          "A": 0,
+          "V": -2,
+          "Æ": -1,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": -1,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "hs1",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Stockholm has one of the longest housing queues in Europe, often 10 to 20 years for a rental. Young people are locked out. Prices have risen sharply.",
+      "q": "The housing market is failing an entire generation. The state must build massively.",
+      "opts": [
+        {
+          "t": "Yes. Large-scale public housing construction is the only real solution.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "A": 2,
+          "V": -1,
+          "Æ": 0,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Reform the rental regulation system so private builders have incentive to construct.",
+          "e": 1,
+          "g": -1,
+          "s": -1,
+          "A": -1,
+          "V": 2,
+          "Æ": 1,
+          "M": 2,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "Both construction incentives and long-overdue rental reform are needed.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": 0,
+          "M": 1,
+          "Ø": 0,
+          "F": 0,
+          "I": 1,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "hs2",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Rent regulation keeps housing affordable for those who have it but prevents the construction of new rental housing.",
+      "opts": [
+        {
+          "t": "Yes. Avreglera hyror så att fler vill bygga nya hyresrätter.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "A": -2,
+          "V": 2,
+          "Æ": 0,
+          "M": 2,
+          "Ø": -2,
+          "F": -2,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "Partial deregulation of new builds while protecting existing tenants is the right balance.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": 0,
+          "M": 1,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "No. Deregulation would price out lower earners from rental housing entirely.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "A": 2,
+          "V": -2,
+          "Æ": -1,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": -1,
+          "C": -1
+        }
+      ]
+    },
+    {
+      "id": "wr1",
+      "nl": "Workers and labour",
+      "pair": "wr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The Danish model of strong unions and collective bargaining is the most effective way to set fair wages without government interference.",
+      "opts": [
+        {
+          "t": "Yes. The model works and must be defended.",
+          "e": -1,
+          "g": -1,
+          "s": 2,
+          "A": 2,
+          "V": 0,
+          "Æ": 1,
+          "M": 0,
+          "Ø": 2,
+          "F": 1,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "The model is valuable but weakening union density means it needs updating.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 1,
+          "F": 1,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Government minimum wages and individual contracts can replace collective models.",
+          "e": 1,
+          "g": 0,
+          "s": -2,
+          "A": -2,
+          "V": 1,
+          "Æ": 0,
+          "M": 2,
+          "Ø": -2,
+          "F": -1,
+          "I": 1,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "wr2",
+      "nl": "Workers and labour",
+      "pair": "wr-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Denmark should introduce an official minimum wage set by law rather than leaving wages entirely to collective bargaining.",
+      "opts": [
+        {
+          "t": "Yes. A legal floor protects workers in industries with weak union coverage.",
+          "e": -1,
+          "g": 1,
+          "s": 0,
+          "A": 0,
+          "V": -1,
+          "Æ": 1,
+          "M": -1,
+          "Ø": 1,
+          "F": 1,
+          "I": 0,
+          "C": 1
+        },
+        {
+          "t": "The collective bargaining model works. A statutory minimum would undermine it.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 1,
+          "F": 0,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "No. The Danish model is more flexible and produces better outcomes than statutory minimums.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": 0,
+          "M": 1,
+          "Ø": 0,
+          "F": 0,
+          "I": 0,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "in1",
+      "nl": "Integration policy",
+      "pair": "in-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Areas in Gothenburg, Malmo, and Stockholm where integration has failed are experiencing persistent unemployment, school failure, and over-representation in crime statistics.",
+      "q": "Segregation has been allowed to harden into permanent underclasses. Integration policy has comprehensively failed.",
+      "opts": [
+        {
+          "t": "Yes. The failure demands a fundamentally different approach, including housing dispersal.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "A": 1,
+          "V": 1,
+          "Æ": 2,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 1,
+          "C": 1
+        },
+        {
+          "t": "Investment in schools, jobs, and services in deprived areas is the right response.",
+          "e": -2,
+          "g": 0,
+          "s": 2,
+          "A": 2,
+          "V": -1,
+          "Æ": -1,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "Both better support in deprived areas and dispersal mechanisms are needed.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": 1,
+          "M": 0,
+          "Ø": 1,
+          "F": 1,
+          "I": 1,
+          "C": 1
+        }
+      ]
+    },
+    {
+      "id": "in2",
+      "nl": "Integration policy",
+      "pair": "in-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The state must do more to ensure refugees and immigrants have real access to the labour market within the first year of arrival.",
+      "opts": [
+        {
+          "t": "Yes. Early employment is the most effective integration tool.",
+          "e": -1,
+          "g": 0,
+          "s": 2,
+          "A": 2,
+          "V": 0,
+          "Æ": 0,
+          "M": 1,
+          "Ø": 1,
+          "F": 1,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "Language and skills training first, then employment. Rushing the process backfires.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": 1,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 0,
+          "C": 1
+        },
+        {
+          "t": "If integration is so difficult, intake levels must be reduced until we can do it properly.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "A": -1,
+          "V": 0,
+          "Æ": 2,
+          "M": -1,
+          "Ø": -1,
+          "F": -1,
+          "I": -1,
+          "C": 1
+        }
+      ]
+    },
+    {
+      "id": "eu1",
+      "nl": "EU and foreign policy",
+      "pair": "eu-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Denmark should support deeper EU integration, including a common defence policy and more qualified majority voting.",
+      "opts": [
+        {
+          "t": "Yes. A stronger EU is in the interest of all member states, especially smaller ones.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "A": 1,
+          "V": 0,
+          "Æ": -2,
+          "M": 1,
+          "Ø": -1,
+          "F": 1,
+          "I": 2,
+          "C": 0
+        },
+        {
+          "t": "Cooperation on specific issues yes. Federal ambitions go too far.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": -1,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "No. National sovereignty and intergovernmentalism must remain the basis of the EU.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "A": -1,
+          "V": 0,
+          "Æ": 2,
+          "M": 0,
+          "Ø": 0,
+          "F": -1,
+          "I": -1,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "eu2",
+      "nl": "EU and foreign policy",
+      "pair": "eu-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Denmark should increase bilateral aid and development assistance, even in a period of tight fiscal policy.",
+      "opts": [
+        {
+          "t": "Yes. Development assistance is a moral obligation and builds long-term stability.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "A": 1,
+          "V": -1,
+          "Æ": -2,
+          "M": 0,
+          "Ø": 1,
+          "F": 2,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "Maintain current levels but ensure effectiveness rather than just increasing spending.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": -1,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "No. Denmark must prioritise its own citizens in a period of fiscal pressure.",
+          "e": 1,
+          "g": 1,
+          "s": -1,
+          "A": -1,
+          "V": 1,
+          "Æ": 2,
+          "M": 0,
+          "Ø": -2,
+          "F": -2,
+          "I": -1,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "gs1",
+      "nl": "Gender and social policy",
+      "pair": "gs-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Denmark should maintain its status as one of the most progressive countries in the world on gender equality, LGBTQ rights, and social liberalism.",
+      "opts": [
+        {
+          "t": "Yes. Protecting and advancing these rights is central to Danish identity.",
+          "e": 0,
+          "g": -2,
+          "s": 2,
+          "A": 2,
+          "V": 0,
+          "Æ": -2,
+          "M": 1,
+          "Ø": 2,
+          "F": 2,
+          "I": 2,
+          "C": -2
+        },
+        {
+          "t": "Rights should be protected but the state should not be prescriptive about social norms.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": -1,
+          "M": 1,
+          "Ø": 0,
+          "F": 1,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "The pace of social change has been too rapid and has damaged social cohesion.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "A": -1,
+          "V": 0,
+          "Æ": 2,
+          "M": -1,
+          "Ø": -2,
+          "F": -2,
+          "I": -1,
+          "C": 1
+        }
+      ]
+    },
+    {
+      "id": "gs2",
+      "nl": "Gender and social policy",
+      "pair": "gs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Parental leave should be equally split between parents by default rather than allowing families to choose their own arrangement.",
+      "opts": [
+        {
+          "t": "Yes. Equal leave changes workplace norms and is worth the mandate.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "A": 1,
+          "V": -1,
+          "Æ": -1,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": -2
+        },
+        {
+          "t": "Strong incentives to share, but the final choice should be the family's.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": 0,
+          "M": 1,
+          "Ø": 0,
+          "F": 0,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "No. Families should decide without government dictating how to raise children.",
+          "e": 0,
+          "g": -1,
+          "s": -1,
+          "A": -1,
+          "V": 1,
+          "Æ": 1,
+          "M": 1,
+          "Ø": -1,
+          "F": -1,
+          "I": 0,
+          "C": 2
+        }
+      ]
+    },
+    {
+      "id": "rg1",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The Danish model of a large, active state providing universal services is the most effective social arrangement ever devised.",
+      "opts": [
+        {
+          "t": "Yes. The model delivers equality and security at a level no other country matches.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "A": 2,
+          "V": -1,
+          "Æ": 0,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "The model has strengths but requires ongoing modernisation to stay effective.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 0,
+          "Æ": 0,
+          "M": 0,
+          "Ø": 0,
+          "F": 0,
+          "I": 0,
+          "C": 0
+        },
+        {
+          "t": "The model has become too paternalistic and stifles individual initiative.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "A": -2,
+          "V": 2,
+          "Æ": 0,
+          "M": 2,
+          "Ø": -2,
+          "F": -2,
+          "I": 1,
+          "C": 0
+        }
+      ]
+    },
+    {
+      "id": "rg2",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Inequality in Denmark has grown significantly since the 1990s. Reversing this trend should be a primary political priority.",
+      "opts": [
+        {
+          "t": "Yes. Denmark's egalitarian character is being eroded and must be restored.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "A": 2,
+          "V": -1,
+          "Æ": 0,
+          "M": -1,
+          "Ø": 2,
+          "F": 2,
+          "I": 0,
+          "C": -1
+        },
+        {
+          "t": "Inequality has grown but opportunity and mobility matter more than statistical gaps.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "A": 0,
+          "V": 1,
+          "Æ": 0,
+          "M": 1,
+          "Ø": -1,
+          "F": -1,
+          "I": 1,
+          "C": 0
+        },
+        {
+          "t": "Some inequality reflects different contributions. Forced equality reduces incentive.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "A": -2,
+          "V": 2,
+          "Æ": 1,
+          "M": 1,
+          "Ø": -2,
+          "F": -2,
+          "I": 1,
+          "C": 0
+        }
+      ]
+    }
+  ],
+  "translations": {
+    "im1": {
+      "q": "Danmark lod alt for mange mennesker komme ind for hurtigt. Konsekvenserne betales der stadig for i dag.",
+      "ctx": "Danmark har oplevet markant indvandring de seneste årtier, hvilket har udfordret integrationen og ført til debatter om bandekriminalitet.",
+      "opts": [
+        "Ja. Indvandringen skal reduceres markant, og integrationskravene skal skærpes.",
+        "Modtagelsen var høj, men fejlen lå i integrationspolitikken, ikke i selve antallet.",
+        "Nej. Danmark har nydt godt af indvandring. Fortællingen om fiasko er drevet af fordomme."
+      ]
+    },
+    "im2": {
+      "q": "Midlertidig beskyttelsesstatus bør gøres permanent for flygtninge, der har opbygget et liv i Danmark, uanset forholdene i deres hjemland.",
+      "ctx": "Flere flygtninge modtager midlertidigt ophold, som inddrages, hvis sikkerheden i hjemlandet forbedres (f.eks. 'paradigmeskiftet').",
+      "opts": [
+        "Ja, det er umenneskeligt at sende folk tilbage efter de har slået rod.",
+        "Kun hvis de opfylder strenge krav til selvforsørgelse og sprog.",
+        "Nej. Midlertidig asyl bør altid være midlertidig og inddrages, når det er sikkert."
+      ]
+    },
+    "im3": {
+      "q": "Danmark bør betale udlændinge for at vende tilbage til deres oprindelsesland, hvis de rejser frivilligt.",
+      "ctx": "Repatrieringsstøtte tilbydes allerede, men debatten går på, om beløbet skal øges markant.",
+      "opts": [
+        "Ja, det er en fornuftig investering for at reducere integrationsudfordringer.",
+        "Kun i særlige tilfælde, det bør ikke være en generel ordning.",
+        "Nej. Det sender et signal om, at de ikke er velkomne i samfundet."
+      ]
+    },
+    "im4": {
+      "q": "Sprogkrav, statsborgerskabsprøver og integrationskontrakter er rimelige krav, der respekterer både nyankomne og værtslandet.",
+      "ctx": "Danmark har indført nogle af Europas strengeste krav til statsborgerskab og permanent ophold.",
+      "opts": [
+        "Ja. Integrationskrav er nødvendige for at bevare det sociale sammenhold.",
+        "Principielt ja, men de nuværende prøver er unødigt bureaukratiske.",
+        "Nej. Kravene fungerer som eksklusionsværktøjer og hindrer integration."
+      ]
+    },
+    "cr1": {
+      "q": "Bandekriminaliteten er en national krise, der kræver et fundamentalt hårdere modsvar.",
+      "ctx": "Bandeopgør og skyderier har ført til flere bandepakker med skærpede straffe.",
+      "opts": [
+        "Ja. Bandemedlemmer skal straffes hårdere, og politiet skal have flere beføjelser.",
+        "Straf alene løser det ikke, vi skal prioritere forebyggelse og sociale indsatser.",
+        "Nej. Hårdere straffe øger blot brutaliteten. Vi skal bekæmpe de sociale årsager."
+      ]
+    },
+    "cr2": {
+      "q": "Det er nødvendigt at kriminalisere selve medlemskabet af en bande for at bryde voldsspiralen.",
+      "ctx": "Justitsministeriet har løbende vurderet forbud mod specifikke bandegrupperinger.",
+      "opts": [
+        "Ja. Bandestrukturer skal brydes ned, og medlemskab i sig selv skal gøres ulovligt.",
+        "Kun med klare regler, så almindelige foreninger ikke rammes.",
+        "Nej. At straffe folk for at tilhøre en gruppe uden konkrete kriminelle handlinger er retsstridigt."
+      ]
+    },
+    "wl1": {
+      "q": "Den danske velfærdsstat er fundamentet for et godt samfund. Besparelser i den finansielle disciplins navn er ideologiske, ikke økonomiske.",
+      "ctx": "Debatten om velfærd versus skattelettelser og budgetlovs-restriktioner præger dansk politik.",
+      "opts": [
+        "Helt enig. Velfærden skal styrkes, og der er råd til det i en sund økonomi.",
+        "Velfærden skal sikres, men vi er nødt til at prioritere og reformere pga. demografien.",
+        "Uenig. En overdimensioneret velfærdsstat hæmmer privat initiativ og vækst."
+      ]
+    },
+    "wl2": {
+      "q": "Borgere, der aldrig har indbetalt til det danske velfærdssystem, bør ikke modtage de samme ydelser som dem, der har bidraget i årtier.",
+      "ctx": "Dette vedrører optjeningsprincipper for ydelser som folkepension, børnepenge og kontanthjælp.",
+      "opts": [
+        "Ja, velfærd bør bygge på et klart optjeningsprincip for at være retfærdigt.",
+        "Kun for visse ydelser; basale sociale rettigheder skal gælde for alle.",
+        "Nej. Universel velfærd betyder lige rettigheder for alle indbyggere."
+      ]
+    },
+    "hc1": {
+      "q": "Sundhedskrisen kræver flere offentlige investeringer, ikke private alternativer.",
+      "ctx": "Lange ventelister har ført til øget brug af private hospitaler og sundhedsforsikringer.",
+      "opts": [
+        "Ja. Det offentlige sundhedsvæsen skal prioriteres frem for privatisering.",
+        "Private aktører kan supplere, så længe det er gratis for patienten.",
+        "Nej. Private alternativer skaber konkurrence og reducerer ventelister."
+      ]
+    },
+    "hc2": {
+      "q": "Kommercielle sundhedsfirmaer bør ikke have lov til at operere inden for det offentlige sundhedssystem.",
+      "ctx": "Debatten handler om, hvorvidt private velfærdsleverandører må trække overskud ud.",
+      "opts": [
+        "Enig. Skattekroner til sundhed skal gå ubeskåret til patienter, ikke profit.",
+        "Private kan levere ydelser, men overskuddet bør reguleres strammere.",
+        "Uenig. Profitmotivet driver effektivitet og gavner i sidste ende patienterne."
+      ]
+    },
+    "ed1": {
+      "q": "Friskolereformen har øget opdelingen og undermineret folkeskolen. Den bør rulles tilbage.",
+      "ctx": "Stigningen i antallet af privat- og friskoler har rejst bekymring for folkeskolens rolle.",
+      "opts": [
+        "Ja. Vi skal styrke den fælles folkeskole og begrænse støtten til privatskoler.",
+        "Forældrenes frie valg skal bevares, men folkeskolen skal gøres mere attraktiv.",
+        "Nej. Frit skolevalg og friskoler sikrer mangfoldighed og kvalitet i undervisningen."
+      ]
+    },
+    "ed2": {
+      "q": "Lærere skal have mere autoritet i klasseværelset. Uro og adfærdsproblemer underminerer læringen.",
+      "ctx": "Klasserumsuro og inklusionspolitik har ført til debat om lærernes autoritet.",
+      "opts": [
+        "Ja. Lærere har brug for stærkere redskaber til at opretholde ro og orden.",
+        "Ro er vigtigt, men det skal løses gennem pædagogik, ikke mere disciplin.",
+        "Nej. Autoritarianisme skader elevtrivsel. Skolen skal bygge på dialog."
+      ]
+    },
+    "tx1": {
+      "q": "Danmark bør genindføre en formueskat for store formuer. Afskaffelsen var en gave til de rige.",
+      "ctx": "Formueskatten i Danmark blev afskaffet i 1997. Venstrefløjen foreslår jævnligt en genindførelse.",
+      "opts": [
+        "Ja. Skat på store formuer er nødvendig for at mindske den voksende ulighed.",
+        "En formueskat er svær at administrere, vi bør hellere beskatte kapitalgevinster.",
+        "Nej. Det vil føre til kapitalflugt og skade investeringslysten i Danmark."
+      ]
+    },
+    "tx2": {
+      "q": "Danmark har et af verdens højeste skattetryk. Lavere skatter vil øge væksten og konkurrenceevnen.",
+      "ctx": "Debatten om topskattelettelser og selskabsskat er et centralt skel mellem rød og blå blok.",
+      "opts": [
+        "Uenig. Høje skatter finansierer den velfærd og infrastruktur, der gør os stærke.",
+        "Skatten på arbejde kan lempes en smule, men velfærden må ikke undermineres.",
+        "Helt enig. Lavere skatter og afgifter er afgørende for Danmarks fremtid."
+      ]
+    },
+    "en1": {
+      "q": "At svække klimareguleringen af hensyn til konkurrenceevnen er et svigt af fremtidige generationer.",
+      "ctx": "Dansk landbrug og industri advarer mod, at for strenge CO2-afgifter vil flytte job ud af landet.",
+      "opts": [
+        "Enig. Grøn omstilling skal prioriteres højest, uanset erhvervslivets klager.",
+        "Vi skal reducere udslip, men det skal ske uden at ødelægge vigtige erhverv.",
+        "Uenig. Danske arbejdspladser skal sikres først. Klimapolitikken må ikke skade væksten."
+      ]
+    },
+    "en2": {
+      "q": "Danmark bør satse på atomkraft som en del af den fremtidige energiforsyning.",
+      "ctx": "Danmark besluttede i 1985 ikke at bygge atomkraft, men debatten er genoplivet under klimakrisen.",
+      "opts": [
+        "Ja. Atomkraft er CO2-neutral, stabil og nødvendig for at nå klimamålene.",
+        "Vi bør kun investere i forskning (f.eks. fusion/thorium), ikke traditionel atomkraft.",
+        "Nej. Vi skal udelukkende satse på sol, vind og grønne teknologier."
+      ]
+    },
+    "na1": {
+      "q": "Danmark bør øge sit militære engagement i NATO og øge forsvarsbudgettet yderligere.",
+      "ctx": "Efter Ruslands invasion af Ukraine har Folketinget indgået et historisk forsvarsforlig.",
+      "opts": [
+        "Ja. Vi skal leve op til vores NATO-forpligtelser og styrke det nationale forsvar.",
+        "Forsvaret skal styrkes pga. truslen, men vi skal passe på ikke at overmilitarisere.",
+        "Nej. Vi bør prioritere diplomati, fredsarbejde og velfærd frem for våben."
+      ]
+    },
+    "na2": {
+      "q": "Forsvarsudgifterne bør hæves til mindst 2,5% af BNP for at afskrække russisk aggression.",
+      "ctx": "NATO-målet er 2%, men flere medlemslande argumenterer nu for, at 2,5% er nødvendigt.",
+      "opts": [
+        "Enig. Sikkerhedssituationen kræver, at vi investerer massivt i forsvaret.",
+        "2% er tilstrækkeligt. Yderligere militarisering fjerner penge fra velfærd.",
+        "Uenig. Forsvarsbudgetterne er allerede for høje. Vi skal søge afspænding."
+      ]
+    },
+    "hs1": {
+      "q": "Boligmarkedet svigter en hel generation i de store byer. Staten skal bygge massivt.",
+      "ctx": "Stigende ejerpriser i København og Aarhus gør det svært for unge at etablere sig.",
+      "opts": [
+        "Ja. Staten og kommunerne skal bygge og regulere flere almene boliger.",
+        "Det skal løses ved at frigive flere byggegrunde og lade markedet bygge.",
+        "Nej. Statslig indgriben forvrider boligmarkedet. Priserne reguleres bedst af udbud og efterspørgsel."
+      ]
+    },
+    "hs2": {
+      "q": "Huslejeregulering holder boliger betalelige, men bremser byggeri af nye lejeboliger.",
+      "ctx": "Dansk lejelovgivning regulerer huslejen i ældre ejendomme, hvilket jævnligt debatteres.",
+      "opts": [
+        "Uenig. Uden huslejeloft vil spekulanter drive almindelige mennesker ud af byerne.",
+        "Reguleringen kan justeres, så det bliver mere attraktivt at renovere boliger.",
+        "Enig. Fri prissætning vil tiltrække investorer og skabe flere boliger på sigt."
+      ]
+    },
+    "wr1": {
+      "q": "Den danske model med stærke fagforeninger og kollektive overenskomster er den bedste måde at sikre rimelige lønninger på.",
+      "ctx": "EU's mindstelønsdirektiv mødte stor modstand i Danmark, hvor man værner om aftalemodellen.",
+      "opts": [
+        "Helt enig. Fagbevægelsen og overenskomster skal beskyttes mod statslig indgriben.",
+        "Modellen er god, men staten må gribe ind, hvis vitale samfundsfunktioner lammes.",
+        "Uenig. Modellen er for ufleksibel og hæmmer virksomhedernes konkurrenceevne."
+      ]
+    },
+    "wr2": {
+      "q": "Danmark bør indføre en lovbestemt mindsteløn for at beskytte uorganiserede arbejdere.",
+      "ctx": "Nogle mener, at den danske model svigter sårbare grupper som østeuropæiske byggearbejdere.",
+      "opts": [
+        "Ja. En lovbestemt mindsteløn er nødvendig for at stoppe social dumping.",
+        "Nej, det vil underminere overenskomsterne og den danske model.",
+        "Uenig. Lønnen bør udelukkende aftales mellem arbejdsgiver og den enkelte medarbejder."
+      ]
+    },
+    "in1": {
+      "q": "Integrationen af ikke-vestlige indvandrere har slået fejl, og parallelsamfund har fået lov til at bide sig fast.",
+      "ctx": "Danmark har indført en såkaldt 'paralellsamfundslovgivning' (tidligere ghettoloven).",
+      "opts": [
+        "Ja, parallelsamfund skal bekæmpes med hårde midler, herunder nedrivning af boligblokke.",
+        "Der er udfordringer, men løsningen er social opbakning frem for tvang og stempling.",
+        "Nej. Integrationen går fremad på mange områder, og ghettobegrebet er stigmatiserende."
+      ]
+    },
+    "in2": {
+      "q": "Staten skal gøre langt mere for at sikre, at flygtninge og indvandrere kommer i arbejde hurtigst muligt.",
+      "ctx": "Dansk integrationspolitik fokuserer i dag stærkt på hurtig selvforsørgelse (f.eks. IGU-forløb).",
+      "opts": [
+        "Ja. Arbejde er nøglen til integration, og der skal stilles krav om aktivering.",
+        "Ja, men der skal fokuseres mere på uddannelse og sprog først.",
+        "Nej, integrationsindsatsen bør være frivillig og baseret på individuel støtte."
+      ]
+    },
+    "eu1": {
+      "q": "Danmark bør støtte dybere EU-integration, herunder afskaffelse af flere nationale forbehold.",
+      "ctx": "Danmark afskaffede forsvarsforbeholdet i 2022. Retsforbeholdet debatteres stadig.",
+      "opts": [
+        "Ja. Danmark skal være fuldt integreret i det europæiske samarbejde.",
+        "Aftaler om specifikke områder er fine, men vi skal bevare vores selvstændighed.",
+        "Nej. Vi skal beskytte det danske demokrati mod yderligere suverænitetsafgivelse."
+      ]
+    },
+    "eu2": {
+      "q": "Danmark bør øge sin udviklingsbistand, selv i en periode med stram finanspolitik.",
+      "ctx": "Dansk bistand har ligget stabilt omkring FN's målsætning på 0,7% af BNI, men venstrefløjen ønsker 1%.",
+      "opts": [
+        "Ja. Som et rigt land har vi en moralsk pligt til at hjælpe verdens fattigste.",
+        "Bistanden bør holdes på de nuværende 0,7%, men målrettes mere effektivt.",
+        "Nej. Vi skal prioritere velfærden i Danmark og reducere ulandsbistanden."
+      ]
+    },
+    "gs1": {
+      "q": "Danmark skal forblive et foregangsland for ligestilling, LGBT-rettigheder og social liberalisme.",
+      "ctx": "Debatter om kønsidentitet, normkritik i børnehaver og minoritetsrettigheder præger tidsånden.",
+      "opts": [
+        "Ja. Vi skal aktivt fremme ligestilling og beskytte minoriteters rettigheder.",
+        "Ligestilling er nået langt; vi skal passe på ikke at overregulere folks hverdag.",
+        "Nej. Woke-ideologi og kønsfokus i institutioner har taget overhånd."
+      ]
+    },
+    "gs2": {
+      "q": "Barselsorlov bør som udgangspunkt deles ligeligt mellem forældrene.",
+      "ctx": "Danmark indførte i 2022 øremærket barsel til fædre som følge af et EU-direktiv.",
+      "opts": [
+        "Ja. Øremærket barsel til fædre er nødvendigt for at sikre reel ligestilling på arbejdsmarkedet.",
+        "barsel bør aftales frit i den enkelte familie uden statslig indgriben.",
+        "Uenig. Moderen bør have ret til hovedparten af barslen af biologiske årsager."
+      ]
+    },
+    "rg1": {
+      "q": "En stor, aktiv stat, der leverer universelle ydelser, er den mest effektive samfundsmodel.",
+      "ctx": "Skal staten fylde mindre for at give plads til private initiativer?",
+      "opts": [
+        "Helt enig. Den universelle velfærdsmodel sikrer lighed og tryghed for alle.",
+        "Staten skal levere kernevelfærd, men give plads til private løsninger på andre områder.",
+        "Uenig. Staten er for dominerende. Vi har brug for mere marked og mindre bureaukrati."
+      ]
+    },
+    "rg2": {
+      "q": "Uligheden i Danmark er steget markant siden 1990'erne. At vende denne tendens bør være en hovedprioritet.",
+      "ctx": "Gini-koefficienten viser en stigning i ulighed i Danmark over de seneste årtier.",
+      "opts": [
+        "Ja. Den voksende ulighed truer det sociale sammenhængskraft og skal bekæmpes.",
+        "Noget ulighed er naturligt for at motivere folk til at arbejde og investere.",
+        "Nej. Fokus bør være på økonomisk vækst og jobskabelse, ikke kunstig omfordeling."
+      ]
+    }
+  },
+  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#E41A22\"></div>\n      <div class=\"party-name\">Socialdemokratiet</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Socialdemokratiet (A). Du støtter en stærk velfærdsstat, offentlige ydelser finansieret af progressiv beskatning og en reguleret markedsøkonomi.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#004F7E\"></div>\n      <div class=\"party-name\">Venstre</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Venstre (V). Du støtter personlig frihed, lavere skatter, markedsbaserede løsninger og finansiel disciplin i den offentlige sektor.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#6F3F7A\"></div>\n      <div class=\"party-name\">Moderaterne</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Moderaterne (M). Du foretrækker pragmatiske, midtsøgende reformer, samarbejde på tværs af blokkene og økonomisk modernisering.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#CE1126\"></div>\n      <div class=\"party-name\">Socialistisk Folkeparti</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Socialistisk Folkeparti (SF). Du prioriterer grøn omstilling, klimaforanstaltninger, social retfærdighed og udbygning af velfærden.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#003865\"></div>\n      <div class=\"party-name\">Danmarksdemokraterne</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Danmarksdemokraterne (Æ). Du støtter stram indvandringspolitik, decentralisering, fokus på landdistrikter og traditionelle værdier.</div>\n    </div>\n  </div>"
+}

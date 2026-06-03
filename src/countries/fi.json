@@ -1,0 +1,1975 @@
+{
+  "code": "fi",
+  "name": "Suomi",
+  "localLabel": "Suomi",
+  "flag": "🇫🇮",
+  "title": "Vaalikone & Poliittinen Kompassi Suomi 2026 | CoreOpinion",
+  "desc": "Löydä paikkasi poliittisella kompassilla. 30 skenaariopohjaista kysymystä kertovat, mitkä eduskuntapuolueet sopivat sinulle parhaiten.",
+  "keywords": "vaalikone 2026, poliittinen kompassi suomi, mikä puolue sopii minulle, eduskuntavaalit testi, kokoomus sdp perussuomalaiset vaalikone",
+  "canonical": "https://coreopinion.org/fi",
+  "regions": [
+    "Uusimaa",
+    "Pirkanmaa",
+    "Varsinais-Suomi",
+    "Pohjois-Pohjanmaa",
+    "Keski-Suomi",
+    "Savo",
+    "Karjala",
+    "Lappi",
+    "Satakunta",
+    "Häme",
+    "Pohjanmaa"
+  ],
+  "parties": [
+    "Kok",
+    "PS",
+    "SDP",
+    "Kesk",
+    "Vihr",
+    "Vas",
+    "RKP",
+    "KD"
+  ],
+  "partyMeta": {
+    "Kok": {
+      "name": {
+        "fi": "Kansallinen Kokoomus",
+        "en": "National Coalition"
+      },
+      "color": "#006288",
+      "barClass": "bar-fi-kok",
+      "desc": {
+        "fi": "Vastauksesi sopivat parhaiten Kansallisen Kokoomuksen (Kok) ohjelmaan. Kannatat markkinataloutta, yksilönvapautta, työn verotuksen keventämistä ja Suomen tiivistä EU- ja Nato-yhteistyötä.",
+        "en": "Your answers align closely with the National Coalition Party (Kok). You support a market economy, individual freedom, lower taxation on work, and Finland's tight integration with the EU and NATO."
+      }
+    },
+    "PS": {
+      "name": {
+        "fi": "Perussuomalaiset",
+        "en": "Finns Party"
+      },
+      "color": "#FFDE55",
+      "barClass": "bar-fi-ps",
+      "desc": {
+        "fi": "Vastauksesi sopivat parhaiten Perussuomalaisten (PS) ohjelmaan. Kannatat tiukkaa maahanmuuttopolitiikkaa, kansallista etua, perinteisiä arvoja ja suhtaudut kriittisesti EU-integraatioon.",
+        "en": "Your answers align closely with the Finns Party (PS). You support strict immigration control, national interest, traditional values, and take a critical stance on EU integration."
+      }
+    },
+    "SDP": {
+      "name": {
+        "fi": "Suomen Sosialidemokraattinen Puolue",
+        "en": "Social Democrats"
+      },
+      "color": "#E11933",
+      "barClass": "bar-fi-sdp",
+      "desc": {
+        "fi": "Vastauksesi sopivat parhaiten Suomen Sosialidemokraattisen Puolueen (SDP) ohjelmaan. Kannatat vahvaa hyvinvointivaltiota, reiluja työehtoja, julkisia palveluja ja oikeudenmukaista verotusta.",
+        "en": "Your answers align closely with the Social Democrats (SDP). You support a strong welfare state, fair working conditions, public services, and equitable taxation."
+      }
+    },
+    "Kesk": {
+      "name": {
+        "fi": "Suomen Keskusta",
+        "en": "Centre Party"
+      },
+      "color": "#009E5C",
+      "barClass": "bar-fi-kesk",
+      "desc": {
+        "fi": "Vastauksesi sopivat parhaiten Suomen Keskustan (Kesk) ohjelmaan. Korostat alueiden tasapuolista kehittämistä, kotimaista ruoantuotantoa, hajauttamista ja perheiden valinnanvapautta.",
+        "en": "Your answers align closely with the Centre Party (Kesk). You emphasize balanced regional development, domestic food production, decentralization, and families' freedom of choice."
+      }
+    },
+    "Vihr": {
+      "name": {
+        "fi": "Vihreä liitto",
+        "en": "Green League"
+      },
+      "color": "#009F4D",
+      "barClass": "bar-fi-vihr",
+      "desc": {
+        "fi": "Vastauksesi sopivat parhaiten Vihreän liiton (Vihr) ohjelmaan. Asetat ilmastonmuutoksen torjunnan ja luonnonsuojelun etusijalle, kannatat ihmisoikeuksia ja korkeaa koulutusta.",
+        "en": "Your answers align closely with the Green League (Vihr). You prioritize combating climate change and nature conservation, support human rights, and high investment in education."
+      }
+    },
+    "Vas": {
+      "name": {
+        "fi": "Vasemmistoliitto",
+        "en": "Left Alliance"
+      },
+      "color": "#A60A3D",
+      "barClass": "bar-fi-vas",
+      "desc": {
+        "fi": "Vastauksesi sopivat parhaiten Vasemmistoliiton (Vas) ohjelmaan. Kannatat tuloerojen kaventamista, vahvaa julkista sektoria ilman yksityistämistä ja kunnianhimoista ympäristöpolitiikkaa.",
+        "en": "Your answers align closely with the Left Alliance (Vas). You support narrowing income gaps, a strong public sector without privatization, and ambitious environmental policies."
+      }
+    },
+    "RKP": {
+      "name": {
+        "fi": "Suomen Ruotsalainen Kansanpuolue",
+        "en": "Swedish People's Party"
+      },
+      "color": "#004580",
+      "barClass": "bar-fi-rkp",
+      "desc": {
+        "fi": "Vastauksesi sopivat parhaiten Suomen Ruotsalaisen Kansanpuolueen (RKP) ohjelmaan. Kannatat kaksikielistä Suomea, sosiaaliliberaaleja arvoja, yrittäjyyttä ja eurooppalaista yhteistyötä.",
+        "en": "Your answers align closely with the Swedish People's Party (RKP). You support a bilingual Finland, social-liberal values, entrepreneurship, and European cooperation."
+      }
+    },
+    "KD": {
+      "name": {
+        "fi": "Suomen Kristillisdemokraatit",
+        "en": "Christian Democrats"
+      },
+      "color": "#001D6E",
+      "barClass": "bar-fi-kd",
+      "desc": {
+        "fi": "Vastauksesi sopivat parhaiten Kristillisdemokraattien (KD) ohjelmaan. Arvostat kristillisiä ja perinteisiä perhearvoja, lähiyhteisöjen tukea ja vastuullista taloudenhoitoa.",
+        "en": "Your answers align closely with the Christian Democrats (KD). You value Christian and traditional family values, support for local communities, and responsible fiscal management."
+      }
+    }
+  },
+  "heroTitle": "Missä seisot <em>Suomen</em> politiikassa?",
+  "heroSub": "30 skenaariopohjaista kysymystä asioista, jotka määrittelevät Suomea juuri nyt. Puolustus, verot, hyvinvointi ja maahanmuutto. Katso yhteensopivuutesi kaikkien eduskuntapuolueiden kanssa.",
+  "bank": [
+    {
+      "id": "im1",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Finland received over 160,000 asylum seekers in 2015 alone. Integration has been uneven. Gang violence has increased sharply in certain areas.",
+      "q": "Finland let in far too many people too quickly. The consequences are still being paid today.",
+      "opts": [
+        {
+          "t": "Yes. Immigration must be reduced sharply and integration demands must be much stricter.",
+          "e": 0,
+          "g": 2,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 1,
+          "PS": 2,
+          "Kesk": -1,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": -1,
+          "KD": 1
+        },
+        {
+          "t": "The intake was high but the failure was in integration policy, not the numbers themselves.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "No. Finland benefited from immigration. The narrative of failure is driven by prejudice.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": -1,
+          "PS": -2,
+          "Kesk": 1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 1,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "im2",
+      "nl": "Immigration",
+      "pair": "im-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Temporary protection status should be made permanent for refugees who have built lives in Finland, regardless of conditions in their home country.",
+      "opts": [
+        {
+          "t": "Yes. Forcing people back to countries they fled is cruel and counterproductive.",
+          "e": 0,
+          "g": -2,
+          "s": 1,
+          "SDP": 1,
+          "Kok": -1,
+          "PS": -2,
+          "Kesk": 1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 1,
+          "KD": -1
+        },
+        {
+          "t": "Conditional on integration milestones, yes.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": -1,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "No. Temporary status must mean temporary. Otherwise the system loses credibility.",
+          "e": 0,
+          "g": 2,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 1,
+          "PS": 2,
+          "Kesk": -1,
+          "Vas": -2,
+          "Vihr": -1,
+          "RKP": -1,
+          "KD": 1
+        }
+      ]
+    },
+    {
+      "id": "im3",
+      "nl": "Immigration",
+      "pair": "im-b",
+      "fr": "con",
+      "type": "s",
+      "q": "Finland should pay people to return to their countries of origin if they are willing to leave voluntarily.",
+      "opts": [
+        {
+          "t": "Yes. Voluntary return programs save money and reduce social tension.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 1,
+          "PS": 2,
+          "Kesk": -1,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": -1,
+          "KD": 1
+        },
+        {
+          "t": "As a last resort with genuine safeguards, such programs exist elsewhere.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "No. Paying people to leave is incompatible with human dignity.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": -1,
+          "PS": -2,
+          "Kesk": 1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 1,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "im4",
+      "nl": "Immigration",
+      "pair": "im-b",
+      "fr": "pro",
+      "type": "s",
+      "q": "Language requirements, citizenship tests, and integration contracts are reasonable demands that respect both newcomers and the host society.",
+      "opts": [
+        {
+          "t": "Yes. Integration obligations are a sign of taking newcomers seriously.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 1,
+          "PS": 1,
+          "Kesk": 0,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "Voluntary programs work better than coercive ones.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": -1,
+          "Kesk": 1,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Support and opportunity integrate people better than contracts and tests.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": -1,
+          "PS": -2,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 2,
+          "RKP": -1,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "cr1",
+      "nl": "Crime and justice",
+      "pair": "cr-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Finland had more than 400 shootings in 2023. Gang-related explosions reached record levels. Several European countries now warn their citizens about travelling to certain Finnish cities.",
+      "q": "The gang violence crisis is a national emergency that requires a fundamentally tougher response.",
+      "opts": [
+        {
+          "t": "Yes. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.",
+          "e": 0,
+          "g": 2,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 2,
+          "PS": 2,
+          "Kesk": -1,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": -1,
+          "KD": 2
+        },
+        {
+          "t": "Enforcement matters but the root causes lie in poverty, segregation, and exclusion.",
+          "e": -1,
+          "g": 0,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": 0,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Both tougher enforcement now and long-term investment in inclusion.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 1,
+          "PS": 1,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 1,
+          "KD": 1
+        }
+      ]
+    },
+    {
+      "id": "cr2",
+      "nl": "Crime and justice",
+      "pair": "cr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Criminalising membership in gangs, rather than just criminal acts, is necessary to break the cycle of violence.",
+      "opts": [
+        {
+          "t": "Yes. Gang structures must be dismantled and membership itself made illegal.",
+          "e": 0,
+          "g": 2,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 2,
+          "PS": 2,
+          "Kesk": -1,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": -2,
+          "KD": 1
+        },
+        {
+          "t": "Only with very narrow definitions to avoid criminalising association.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": 1,
+          "Kesk": 0,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": -1,
+          "KD": 0
+        },
+        {
+          "t": "No. Criminalising membership without criminal acts violates fundamental legal principles.",
+          "e": 0,
+          "g": -2,
+          "s": 0,
+          "SDP": 0,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": 1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 2,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "wl1",
+      "nl": "Welfare and social policy",
+      "pair": "wl-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The Finnish welfare state is the foundation of a successful society. Cuts to it in the name of fiscal discipline are ideological, not economic.",
+      "opts": [
+        {
+          "t": "Yes. The welfare state is what makes Finland work. Protect and strengthen it.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -1,
+          "PS": 0,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "The welfare state is essential but it needs reform to remain sustainable.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "The welfare state has grown too large and crowds out individual responsibility.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 2,
+          "PS": 1,
+          "Kesk": 1,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "wl2",
+      "nl": "Welfare and social policy",
+      "pair": "wl-a",
+      "fr": "con",
+      "type": "s",
+      "q": "People who have never paid into the Finnish welfare system should not receive the same benefits as those who have contributed for decades.",
+      "opts": [
+        {
+          "t": "Yes. Contribution should determine entitlement.",
+          "e": 1,
+          "g": 1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 2,
+          "PS": 2,
+          "Kesk": 0,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 0,
+          "KD": 1
+        },
+        {
+          "t": "Need must also matter, but some contribution-linked elements are reasonable.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "No. Need, not contribution history, must be the basis of a fair system.",
+          "e": -2,
+          "g": -1,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -1,
+          "PS": -2,
+          "Kesk": 0,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "hc1",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Finnish healthcare queues are among the longest in the EU. The 90-day guarantee is routinely breached. Regional inequalities in care quality are significant.",
+      "q": "The healthcare crisis demands more public investment, not private alternatives.",
+      "opts": [
+        {
+          "t": "Yes. Public healthcare must be properly funded and staffed.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -1,
+          "PS": 0,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Private providers alongside public can reduce queues without threatening equality.",
+          "e": 1,
+          "g": 0,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 2,
+          "PS": 1,
+          "Kesk": 2,
+          "Vas": -2,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "More funding and better organisation of the public system is the only real answer.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": 0,
+          "KD": 1
+        }
+      ]
+    },
+    {
+      "id": "hc2",
+      "nl": "Healthcare",
+      "pair": "hc-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Profit-driven healthcare companies siphon money from patient care to shareholders. They should not be allowed to operate within the public system.",
+      "opts": [
+        {
+          "t": "Yes. Healthcare profit extraction is incompatible with equal care.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -2,
+          "PS": -1,
+          "Kesk": -2,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": -1,
+          "KD": -1
+        },
+        {
+          "t": "Some private delivery is efficient if properly regulated and quality-monitored.",
+          "e": 0,
+          "g": 0,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "No. Competition improves quality and efficiency.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 2,
+          "PS": 0,
+          "Kesk": 2,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 1
+        }
+      ]
+    },
+    {
+      "id": "ed1",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "PISA results show Finnish school performance has declined significantly. Segregation between schools is among the worst in the OECD. The free school system has come under intense scrutiny.",
+      "q": "The free school reform has increased segregation and undermined equal education. It needs to be reversed.",
+      "opts": [
+        {
+          "t": "Yes. Vinstdrivna friskolor har misslyckats and should be abolished.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -2,
+          "PS": -1,
+          "Kesk": -2,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": -1,
+          "KD": -1
+        },
+        {
+          "t": "Reform free schools strictly but keep the freedom of choice element.",
+          "e": 0,
+          "g": 0,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "No. Free schools offer parents choice and competition that raises standards.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 2,
+          "PS": 1,
+          "Kesk": 2,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 1
+        }
+      ]
+    },
+    {
+      "id": "ed2",
+      "nl": "Education",
+      "pair": "ed-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Teachers need more authority in the classroom. Student disruption and behavioural problems are undermining the learning environment.",
+      "opts": [
+        {
+          "t": "Yes. Teacher authority and clear discipline are necessary for learning.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 2,
+          "PS": 2,
+          "Kesk": 0,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 2
+        },
+        {
+          "t": "More support for teachers yes, but framing it as discipline misses the deeper causes.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Trauma-informed, resource-rich teaching is more effective than discipline frameworks.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": 0,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": -1,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "tx1",
+      "nl": "Tax and economy",
+      "pair": "tx-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Finland should reintroduce a wealth tax on assets above 3 million euros. The abolition in 2007 was a gift to the rich.",
+      "opts": [
+        {
+          "t": "Yes. Wealth taxes reduce inequality and fund public services.",
+          "e": -2,
+          "g": 2,
+          "s": 1,
+          "SDP": 1,
+          "Kok": -2,
+          "PS": -1,
+          "Kesk": -2,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": -1,
+          "KD": -1
+        },
+        {
+          "t": "Close loopholes and raise capital gains taxes before adding new taxes.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": -1,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": -1,
+          "KD": 0
+        },
+        {
+          "t": "No. The wealth tax drove capital out of Finland. It should not return.",
+          "e": 2,
+          "g": -1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 2,
+          "PS": 1,
+          "Kesk": 2,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "tx2",
+      "nl": "Tax and economy",
+      "pair": "tx-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Finland has among the highest taxes in the world. Reducing them would increase growth and improve competitiveness.",
+      "opts": [
+        {
+          "t": "Yes. High taxes harm investment, entrepreneurship, and attract fewer high earners.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 2,
+          "PS": 1,
+          "Kesk": 2,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "Targeted reductions in work-related taxes make sense but broad cuts weaken services.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "No. High taxes fund the world-class public services that make Finland competitive.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -2,
+          "PS": -1,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": -1,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "en1",
+      "nl": "Climate and energy",
+      "pair": "en-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Finland has committed to net zero by 2045. The current government eased some environmental regulations to stimulate investment and energy security.",
+      "q": "Weakening climate regulation in the name of competitiveness is a betrayal of future generations.",
+      "opts": [
+        {
+          "t": "Yes. Climate commitments must not be traded for short-term economic gains.",
+          "e": -2,
+          "g": 2,
+          "s": 1,
+          "SDP": 1,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Some regulatory flexibility is reasonable as long as the net zero target is kept.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "Competitiveness and energy security are legitimate concerns that must be balanced.",
+          "e": 1,
+          "g": -1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 1,
+          "PS": 1,
+          "Kesk": 1,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 0,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "en2",
+      "nl": "Climate and energy",
+      "pair": "en-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Finland should expand nuclear power. It is safe, low-carbon, and the country has been energy-poor without it.",
+      "opts": [
+        {
+          "t": "Yes. Nuclear is the most reliable low-carbon baseload available.",
+          "e": 1,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 2,
+          "PS": 2,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "New reactor types merit consideration but the costs and timelines are uncertain.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": 1,
+          "Kesk": 0,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "No. Renewables plus storage are faster, cheaper, and safer.",
+          "e": -1,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "na1",
+      "nl": "NATO and defence",
+      "pair": "na-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Finland was right to join NATO. The Russian invasion of Ukraine made the security case unanswerable.",
+      "opts": [
+        {
+          "t": "Yes. NATO membership is the foundation of Finnish security.",
+          "e": 0,
+          "g": 1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 2,
+          "PS": 2,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 2,
+          "KD": 2
+        },
+        {
+          "t": "The decision was understandable but Finland should maintain maximum strategic independence within NATO.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "NATO membership makes Finland a target and ends 200 years of neutrality.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 1,
+          "RKP": -1,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "na2",
+      "nl": "NATO and defence",
+      "pair": "na-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Finland should increase defence spending to 2.5% of GDP to meet NATO obligations and deter Russian aggression.",
+      "opts": [
+        {
+          "t": "Yes. Underinvestment in defence over decades must now be corrected.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 2,
+          "PS": 2,
+          "Kesk": 0,
+          "Vas": -2,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "A credible defence requires investment but the level must be balanced against social needs.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": 1,
+          "Kesk": 0,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Military spending competes with welfare, healthcare and schools. Diplomacy must come first.",
+          "e": -1,
+          "g": -1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": -2,
+          "PS": -1,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": -1,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "hs1",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "pro",
+      "type": "sc",
+      "ctx": "Stockholm has one of the longest housing queues in Europe, often 10 to 20 years for a rental. Young people are locked out. Prices have risen sharply.",
+      "q": "The housing market is failing an entire generation. The state must build massively.",
+      "opts": [
+        {
+          "t": "Yes. Large-scale public housing construction is the only real solution.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -1,
+          "PS": 0,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Reform the rental regulation system so private builders have incentive to construct.",
+          "e": 1,
+          "g": -1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 2,
+          "PS": 1,
+          "Kesk": 2,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "Both construction incentives and long-overdue rental reform are needed.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 1,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "hs2",
+      "nl": "Housing",
+      "pair": "hs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Rent regulation keeps housing affordable for those who have it but prevents the construction of new rental housing.",
+      "opts": [
+        {
+          "t": "Yes. Avreglera hyror så att fler vill bygga nya hyresrätter.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 2,
+          "PS": 0,
+          "Kesk": 2,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "Partial deregulation of new builds while protecting existing tenants is the right balance.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "No. Deregulation would price out lower earners from rental housing entirely.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -2,
+          "PS": -1,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": -1,
+          "KD": -1
+        }
+      ]
+    },
+    {
+      "id": "wr1",
+      "nl": "Workers and labour",
+      "pair": "wr-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The Finnish model of strong unions and collective bargaining is the most effective way to set fair wages without government interference.",
+      "opts": [
+        {
+          "t": "Yes. The model works and must be defended.",
+          "e": -1,
+          "g": -1,
+          "s": 2,
+          "SDP": 2,
+          "Kok": 0,
+          "PS": 1,
+          "Kesk": 0,
+          "Vas": 2,
+          "Vihr": 1,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "The model is valuable but weakening union density means it needs updating.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Government minimum wages and individual contracts can replace collective models.",
+          "e": 1,
+          "g": 0,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 2,
+          "Vas": -2,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "wr2",
+      "nl": "Workers and labour",
+      "pair": "wr-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Finland should introduce an official minimum wage set by law rather than leaving wages entirely to collective bargaining.",
+      "opts": [
+        {
+          "t": "Yes. A legal floor protects workers in industries with weak union coverage.",
+          "e": -1,
+          "g": 1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": -1,
+          "PS": 1,
+          "Kesk": -1,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": 0,
+          "KD": 1
+        },
+        {
+          "t": "The collective bargaining model works. A statutory minimum would undermine it.",
+          "e": 0,
+          "g": 0,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 0,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "No. The Finnish model is more flexible and produces better outcomes than statutory minimums.",
+          "e": 0,
+          "g": -1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 0,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "in1",
+      "nl": "Integration policy",
+      "pair": "in-a",
+      "fr": "con",
+      "type": "sc",
+      "ctx": "Areas in Gothenburg, Malmo, and Stockholm where integration has failed are experiencing persistent unemployment, school failure, and over-representation in crime statistics.",
+      "q": "Segregation has been allowed to harden into permanent underclasses. Integration policy has comprehensively failed.",
+      "opts": [
+        {
+          "t": "Yes. The failure demands a fundamentally different approach, including housing dispersal.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 1,
+          "PS": 2,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 1,
+          "KD": 1
+        },
+        {
+          "t": "Investment in schools, jobs, and services in deprived areas is the right response.",
+          "e": -2,
+          "g": 0,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "Both better support in deprived areas and dispersal mechanisms are needed.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": 1,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": 1,
+          "KD": 1
+        }
+      ]
+    },
+    {
+      "id": "in2",
+      "nl": "Integration policy",
+      "pair": "in-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "The state must do more to ensure refugees and immigrants have real access to the labour market within the first year of arrival.",
+      "opts": [
+        {
+          "t": "Yes. Early employment is the most effective integration tool.",
+          "e": -1,
+          "g": 0,
+          "s": 2,
+          "SDP": 2,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": 1,
+          "Vihr": 1,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "Language and skills training first, then employment. Rushing the process backfires.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": 1,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 0,
+          "KD": 1
+        },
+        {
+          "t": "If integration is so difficult, intake levels must be reduced until we can do it properly.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 0,
+          "PS": 2,
+          "Kesk": -1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": -1,
+          "KD": 1
+        }
+      ]
+    },
+    {
+      "id": "eu1",
+      "nl": "EU and foreign policy",
+      "pair": "eu-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Finland should support deeper EU integration, including a common defence policy and more qualified majority voting.",
+      "opts": [
+        {
+          "t": "Yes. A stronger EU is in the interest of all member states, especially smaller ones.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "SDP": 1,
+          "Kok": 0,
+          "PS": -2,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": 1,
+          "RKP": 2,
+          "KD": 0
+        },
+        {
+          "t": "Cooperation on specific issues yes. Federal ambitions go too far.",
+          "e": 0,
+          "g": 1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": -1,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "No. National sovereignty and intergovernmentalism must remain the basis of the EU.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 0,
+          "PS": 2,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": -1,
+          "RKP": -1,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "eu2",
+      "nl": "EU and foreign policy",
+      "pair": "eu-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Finland should increase bilateral aid and development assistance, even in a period of tight fiscal policy.",
+      "opts": [
+        {
+          "t": "Yes. Development assistance is a moral obligation and builds long-term stability.",
+          "e": -1,
+          "g": 0,
+          "s": 1,
+          "SDP": 1,
+          "Kok": -1,
+          "PS": -2,
+          "Kesk": 0,
+          "Vas": 1,
+          "Vihr": 2,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "Maintain current levels but ensure effectiveness rather than just increasing spending.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": -1,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "No. Finland must prioritise its own citizens in a period of fiscal pressure.",
+          "e": 1,
+          "g": 1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 1,
+          "PS": 2,
+          "Kesk": 0,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": -1,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "gs1",
+      "nl": "Gender and social policy",
+      "pair": "gs-a",
+      "fr": "pro",
+      "type": "s",
+      "q": "Finland should maintain its status as one of the most progressive countries in the world on gender equality, LGBTQ rights, and social liberalism.",
+      "opts": [
+        {
+          "t": "Yes. Protecting and advancing these rights is central to Finnish identity.",
+          "e": 0,
+          "g": -2,
+          "s": 2,
+          "SDP": 2,
+          "Kok": 0,
+          "PS": -2,
+          "Kesk": 1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 2,
+          "KD": -2
+        },
+        {
+          "t": "Rights should be protected but the state should not be prescriptive about social norms.",
+          "e": 0,
+          "g": -1,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": -1,
+          "Kesk": 1,
+          "Vas": 0,
+          "Vihr": 1,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "The pace of social change has been too rapid and has damaged social cohesion.",
+          "e": 0,
+          "g": 1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 0,
+          "PS": 2,
+          "Kesk": -1,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": -1,
+          "KD": 1
+        }
+      ]
+    },
+    {
+      "id": "gs2",
+      "nl": "Gender and social policy",
+      "pair": "gs-a",
+      "fr": "con",
+      "type": "s",
+      "q": "Parental leave should be equally split between parents by default rather than allowing families to choose their own arrangement.",
+      "opts": [
+        {
+          "t": "Yes. Equal leave changes workplace norms and is worth the mandate.",
+          "e": -1,
+          "g": 1,
+          "s": 1,
+          "SDP": 1,
+          "Kok": -1,
+          "PS": -1,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": -2
+        },
+        {
+          "t": "Strong incentives to share, but the final choice should be the family's.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "No. Families should decide without government dictating how to raise children.",
+          "e": 0,
+          "g": -1,
+          "s": -1,
+          "SDP": -1,
+          "Kok": 1,
+          "PS": 1,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 0,
+          "KD": 2
+        }
+      ]
+    },
+    {
+      "id": "rg1",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "The Finnish model of a large, active state providing universal services is the most effective social arrangement ever devised.",
+      "opts": [
+        {
+          "t": "Yes. The model delivers equality and security at a level no other country matches.",
+          "e": -2,
+          "g": 1,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -1,
+          "PS": 0,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "The model has strengths but requires ongoing modernisation to stay effective.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 0,
+          "PS": 0,
+          "Kesk": 0,
+          "Vas": 0,
+          "Vihr": 0,
+          "RKP": 0,
+          "KD": 0
+        },
+        {
+          "t": "The model has become too paternalistic and stifles individual initiative.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 2,
+          "PS": 0,
+          "Kesk": 2,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 0
+        }
+      ]
+    },
+    {
+      "id": "rg2",
+      "nl": "Role of government",
+      "pair": "rg-a",
+      "fr": "neutral",
+      "type": "s",
+      "q": "Inequality in Finland has grown significantly since the 1990s. Reversing this trend should be a primary political priority.",
+      "opts": [
+        {
+          "t": "Yes. Finland's egalitarian character is being eroded and must be restored.",
+          "e": -2,
+          "g": 2,
+          "s": 2,
+          "SDP": 2,
+          "Kok": -1,
+          "PS": 0,
+          "Kesk": -1,
+          "Vas": 2,
+          "Vihr": 2,
+          "RKP": 0,
+          "KD": -1
+        },
+        {
+          "t": "Inequality has grown but opportunity and mobility matter more than statistical gaps.",
+          "e": 0,
+          "g": 0,
+          "s": 0,
+          "SDP": 0,
+          "Kok": 1,
+          "PS": 0,
+          "Kesk": 1,
+          "Vas": -1,
+          "Vihr": -1,
+          "RKP": 1,
+          "KD": 0
+        },
+        {
+          "t": "Some inequality reflects different contributions. Forced equality reduces incentive.",
+          "e": 2,
+          "g": -1,
+          "s": -2,
+          "SDP": -2,
+          "Kok": 2,
+          "PS": 1,
+          "Kesk": 1,
+          "Vas": -2,
+          "Vihr": -2,
+          "RKP": 1,
+          "KD": 0
+        }
+      ]
+    }
+  ],
+  "translations": {
+    "im1": {
+      "q": "Suomi otti vastaan aivan liian monta ihmistä liian nopeasti. Seurauksista maksetaan yhä tänä päivänä.",
+      "ctx": "Turvapaikanhakijoiden määrä ja kotoutumisen haasteet ovat herättäneet vilkasta keskustelua Suomessa.",
+      "opts": [
+        "Kyllä. Maahanmuuttoa on rajoitettava tiukasti ja kotoutumisvaatimuksia kiristettävä.",
+        "Vastaanottomäärät olivat suuria, mutta virhe tehtiin kotoutuspolitiikassa, ei määrissä.",
+        "Ei. Suomi on hyötynyt maahanmuutosta. Epäonnistumisen korostaminen johtuu ennakkoluuloista."
+      ]
+    },
+    "im2": {
+      "q": "Tilapäinen suojeluasema tulisi muuttaa pysyväksi niille pakolaisille, jotka ovat rakentaneet elämänsä Suomeen, riippumatta kotimaan tilanteesta.",
+      "ctx": "Oleskeluluvan perusteena oleva tilapäinen suojelu voidaan lakkauttaa, jos lähtömaa todetaan turvalliseksi.",
+      "opts": [
+        "Kyllä, on epäinhimillistä lähettää ihmisiä takaisin heidän juurruttuaan tänne.",
+        "Vain jos he täyttävät tiukat kielitaito- ja työllistymisvaatimukset.",
+        "Ei. Tilapäisen turvapaikan tulee olla tilapäinen ja se on peruttava heti, kun se on turvallista."
+      ]
+    },
+    "im3": {
+      "q": "Suomen tulisi maksaa maahanmuuttajille paluurahaa, jotta he palaisivat vapaaehtoisesti kotimaahansa.",
+      "ctx": "Vapaaehtoisen paluun tukea maksetaan jo nyt, mutta sen korottamista ehdotetaan julkisessa keskustelussa.",
+      "opts": [
+        "Kyllä. Se on kannattava investointi kotoutumisen haasteiden vähentämiseksi.",
+        "Vain poikkeustapauksissa, sen ei pitäisi olla yleinen järjestelmä.",
+        "Ei. Se antaa viestin, etteivät nämä ihmiset ole tervetulleita yhteiskuntaan."
+      ]
+    },
+    "im4": {
+      "q": "Kielitaitovaatimukset, kansalaisuuskoe ja kotoutumissopimukset ovat kohtuullisia vaatimuksia, jotka kunnioittavat sekä tulijaa että vastaanottavaa maata.",
+      "ctx": "Suomessa on keskusteltu kansalaisuuden saannin ehtojen kiristämisestä (esim. asumisajan pidentäminen).",
+      "opts": [
+        "Kyllä. Kotoutumisvaatimukset ovat välttämättömiä yhteiskunnan yhtenäisyydelle.",
+        "Periaatteessa kyllä, mutta nykyiset kokeet ja testit ovat turhan byrokraattisia.",
+        "Ei. Vaatimukset toimivat syrjintävälineinä ja vaikeuttavat kotoutumista."
+      ]
+    },
+    "cr1": {
+      "q": "Katujengiytyminen ja nuorisorikollisuus ovat kansallinen kriisi, joka vaatii perustavanlaatuisen tiukkaa vastausta.",
+      "ctx": "Nuorten väkivaltarikollisuus ja jengi-ilmiön leviäminen Ruotsista Suomeen huolestuttavat suomalaisia.",
+      "opts": [
+        "Kyllä. Jengiläisille on annettava kovemmat rangaistukset ja poliisille lisää valtuuksia.",
+        "Pelkkä rangaistus ei ratkaise tätä, meidän on panostettava ennaltaehkäisyyn ja nuorisotyöhön.",
+        "Ei. Kovemmat tuomiot raaistavat rikollisuutta. Meidän on puututtava sosiaalisiin syihin."
+      ]
+    },
+    "cr2": {
+      "q": "Jengin jäsenyys sinänsä on kriminalisoitava väkivallan kierteeseen puuttumiseksi, ei vain rikolliset teot.",
+      "ctx": "Eduskunnassa on keskusteltu järjestäytyneen rikollisryhmän toimintaan osallistumisen rangaistavuuden tiukentamisesta.",
+      "opts": [
+        "Kyllä. Jengirakenteet on murrettava ja jäsenyys sinänsä tehtävä laittomaksi.",
+        "Vain hyvin tarkoin säännöin, jotta tavalliset nuorisoryhmät eivät kärsi.",
+        "Ei. Ihmisten rankaiseminen pelkästä ryhmään kuulumisesta ilman konkreettista rikosta on oikeustajun vastaista."
+      ]
+    },
+    "wl1": {
+      "q": "Suomalainen hyvinvointivaltio on hyvän yhteiskunnan perusta. Säästöt valtiontalouden kurinalaisuuden nimissä ovat ideologisia, eivät taloudellisia.",
+      "ctx": "Keskustelu valtionvelasta ja julkisten menojen sopeuttamisesta jakaa puolueita voimakkaasti.",
+      "opts": [
+        "Täysin samaa mieltä. Hyvinvointipalveluja on vahvistettava eikä niistä saa leikata.",
+        "Palvelut on turvattava, mutta meidän on uudistettava rakenteita ikääntymisen vuoksi.",
+        "Eri mieltä. Liian suuri julkinen sektori haittaa talouskasvua ja yrittäjyyttä."
+      ]
+    },
+    "wl2": {
+      "q": "Kansalaisten, jotka eivät ole koskaan maksaneet veroja Suomeen, ei pitäisi saada samoja etuuksia kuin niiden, jotka ovat osallistuneet yhteiskuntaan vuosikymmeniä.",
+      "ctx": "Tämä koskee asumisperusteisen sosiaaliturvan ja vähimmäisetuuksien (esim. takuueläke) saamisen ehtoja.",
+      "opts": [
+        "Kyllä, sosiaaliturvan tulisi perustua selkeämpään vastikkeellisuuteen ollakseen reilu.",
+        "Vain tiettyjen etuuksien osalta; perusturvan ja terveydenhuollon tulee kuulua kaikille.",
+        "Ei. Yleismaailmallinen hyvinvointi tarkoittaa yhtäläisiä oikeuksia kaikille asukkaille."
+      ]
+    },
+    "hc1": {
+      "q": "Sote-kriisi vaatii enemmän julkisia investointeja, ei yksityisiä vaihtoehtoja.",
+      "ctx": "Hyvinvointialueiden talousvaikeudet ja hoitojonot ovat johtaneet keskusteluun palvelusetelien käytöstä.",
+      "opts": [
+        "Kyllä. Julkista terveydenhuoltoa on vahvistettava yksityistämisen sijaan.",
+        "Yksityiset toimijat voivat täydentää julkisia palveluja hoitojonojen purkamiseksi.",
+        "Ei. Yksityiset palvelut tuovat kilpailua ja lyhentävät hoitojonoja tehokkaasti."
+      ]
+    },
+    "hc2": {
+      "q": "Yksityisillä terveysjätillä ei tulisi olla oikeutta tehdä voittoa julkisesti rahoitetulla terveydenhuollolla.",
+      "ctx": "Keskustelua käydään siitä, pitäisikö yksityisten sote-alan yritysten voitontavoittelua rajoittaa verovaroin tuotetuissa palveluissa.",
+      "opts": [
+        "Samaa mieltä. Verovarat terveydenhuoltoon on käytettävä hoitoon, ei yritysten voittoihin.",
+        "Yksityiset voivat tuottaa palveluja, mutta voitontavoittelua pitää säädellä tiukemmin.",
+        "Eri mieltä. Voitonmahdollisuus kannustaa tehokkuuteen ja innovaatioihin sote-alalla."
+      ]
+    },
+    "ed1": {
+      "q": "Yksityiskoulujen yleistyminen ja oppilasvalinta heikentävät peruskoulua ja lisäävät eriarvoisuutta.",
+      "ctx": "Suomessa peruskoulujärjestelmä on perinteisesti ollut hyvin yhtenäinen, mutta koulushoppailu herättää huolta.",
+      "opts": [
+        "Kyllä. Meidän on turvattava yhtenäinen lähikoulu ja rajoitettava valikoivuutta.",
+        "Perheiden valinnanvapautta on kunnioitettava, mutta julkista kouluverkkoa tuettava.",
+        "Ei. Koulujen välinen kilpailu ja valinnanvapaus nostavat opetuksen yleistä tasoa."
+      ]
+    },
+    "ed2": {
+      "q": "Opettajilla on oltava enemmän auktoriteettia luokassa. Häiriökäyttäytyminen murentaa oppimisympäristöä.",
+      "ctx": "Luokkien rauhattomuus on herättänyt vaatimuksia opettajien kurinpitovaltuuksien lisäämisestä.",
+      "opts": [
+        "Kyllä. Opettajat tarvitsevat tiukempia keinoja järjestyksen ylläpitämiseen luokassa.",
+        "Rauha on tärkeää, mutta se saavutetaan pedagogisilla keinoilla, ei kurilla.",
+        "Ei. Liika kuri heikentää oppilaiden hyvinvointia. Koulun tulee perustua vuorovaikutukselle."
+      ]
+    },
+    "tx1": {
+      "q": "Suomen tulisi ottaa uudelleen käyttöön varallisuusvero kaikkein rikkaimmille. Sen poistaminen oli virhe.",
+      "ctx": "Varallisuusvero poistettiin Suomessa vuonna 2006. Vasemmisto ehdottaa toistuvasti sen palauttamista.",
+      "opts": [
+        "Kyllä. Suurten varallisuuksien verotus on välttämätöntä tuloerojen kasvun hillitsemiseksi.",
+        "Suora varallisuusvero on vaikea toteuttaa; pääomatulojen verotusta pitäisi mieluummin kiristää.",
+        "Ei. Se johtaisi pääomien pakenemiseen maasta ja vähentäisi investointeja Suomeen."
+      ]
+    },
+    "tx2": {
+      "q": "Suomessa on erittäin korkea verotus. Verojen keventäminen lisäisi kasvua, investointeja ja kilpailukykyä.",
+      "ctx": "Keskustelu ansiotuloverotuksen ja yhteisöveron tasosta on suomalaisen talouskeskustelun ydintä.",
+      "opts": [
+        "Eri mieltä. Veroilla rahoitetaan yhteiskunnan palvelut, jotka hyödyttävät kaikkia.",
+        "Työn verotusta voidaan hieman keventää, mutta hyvinvointipalveluista tinkimättä.",
+        "Täysin samaa mieltä. Verotuksen keventäminen on välttämätöntä Suomen nousulle."
+      ]
+    },
+    "en1": {
+      "q": "Klimasääntelyn löysääminen kilpailukyvyn nimissä on tulevien sukupolvien pettämistä.",
+      "ctx": "Teollisuus ja maatalous varoittavat liian kireiden päästörajojen haittaavan Suomen kilpailukykyä.",
+      "opts": [
+        "Samaa mieltä. Vihreä siirtymä on asetettava etusijalle talousintresseistä riippumatta.",
+        "Päästöjä on vähennettävä, mutta ei tavalla, joka tuhoaa suomalaisen teollisuuden.",
+        "Eri mieltä. Suomalaiset työpaikat on turvattava ensin. Ilmastotoimet eivät saa haitata kasvua."
+      ]
+    },
+    "en2": {
+      "q": "Suomen tulisi rakentaa lisää ydinvoimaa osana tulevaisuuden energiaratkaisua.",
+      "ctx": "Olkiluoto 3:n valmistumisen jälkeen ydinvoiman suosio on Suomessa erittäin korkea.",
+      "opts": [
+        "Kyllä. Ydinvoima on puhdasta, vakaata ja välttämätöntä ilmastotavoitteiden saavuttamiseksi.",
+        "Ydinvoima on hyväksyttävää, mutta meidän tulisi panostaa enemmän pienydinreaktoreihin.",
+        "Ei. Meidän tulisi tukeutua ainoastaan uusiutuviin energialähteisiin kuten tuuleen ja aurinkoon."
+      ]
+    },
+    "na1": {
+      "q": "Suomen on panostettava merkittävästi puolustukseensa ja nostettava puolustusbudjettia edelleen.",
+      "ctx": "Nato-jäsenyyden myötä Suomen puolustusmenot ovat kasvaneet uusiin ennätyslukemiin.",
+      "opts": [
+        "Kyllä. Meidän on täytettävä Nato-velvoitteemme ja vahvistettava omaa puolustustamme.",
+        "Puolustusta on vahvistettava, mutta emme saa antaa sen syödä hyvinvointipalvelujen rahoitusta.",
+        "Ei. Sotilaallinen varustelu lisää jännitteitä. Meidän pitäisi painottaa rauhaa ja diplomatiaa."
+      ]
+    },
+    "na2": {
+      "q": "Puolustusmenot tulisi nostaa vähintään 2,5 prosenttiin bruttokansantuotteesta Venäjän pelotteeksi.",
+      "ctx": "Naton suositus on 2 %, mutta muuttuneen turvallisuustilanteen vuoksi vaatimukset ovat nousseet.",
+      "opts": [
+        "Samaa mieltä. Turvallisuustilanne vaatii meiltä merkittävää lisävarustelua.",
+        "Kaksi prosenttia BKT:sta riittää. Puolustusmenot on suhteutettava muihin valtion tarpeisiin.",
+        "Eri mieltä. Puolustusmenot ovat jo nyt liian korkeat. Meidän on pyrittävä liennytykseen."
+      ]
+    },
+    "hs1": {
+      "q": "Asuntomarkkinat pettävät nuoren sukupolven suurissa kaupungeissa. Valtion ja kuntien on rakennettava enemmän.",
+      "ctx": "Asumisen korkea hinta erityisesti pääkaupunkiseudulla vaikeuttaa opiskelijoiden ja nuorten elämää.",
+      "opts": [
+        "Kyllä. Julkista ja yleishyödyllistä asuntotuotantoa on lisättävä reilusti.",
+        "Ratkaisu on helpottaa kaavoitusta ja antaa yksityisten rakennuttaa vapaammin.",
+        "Ei. Valtion puuttuminen markkinoihin vääristää niitä. Kysyntä ja tarjonta määräävät hinnat parhaiten."
+      ]
+    },
+    "hs2": {
+      "q": "Asumisen tukijärjestelmiä tulisi uudistaa ja leikata, sillä ne valuvat vuokranantajien taskuihin ja nostavat vuokratasoa.",
+      "ctx": "Yleisen asumistuen tasosta ja leikkauksista on käyty Suomessa tiukkaa poliittista vääntöä.",
+      "opts": [
+        "Eri mieltä. Asumistuen leikkaukset ajavat pienituloiset perheet ahdinkoon.",
+        "Tukea voidaan tarkistaa, mutta leikkausten sijaan pitäisi lisätä kohtuuhintaisia asuntoja.",
+        "Samaa mieltä. Nykyinen asumistukijärjestelmä ylläpitää liian korkeaa vuokratasoa."
+      ]
+    },
+    "wr1": {
+      "q": "Suomalainen sopimusyhteiskunta ja vahvat ammattiliitot ovat paras tapa sopia palkoista ja työehdoista.",
+      "ctx": "Suomessa hallituksen suunnittelemat työmarkkinauudistukset ovat johtaneet laajoihin lakkoihin.",
+      "opts": [
+        "Täysin samaa mieltä. Työehtosopimusjärjestelmää ja lakko-oikeutta on suojeltava.",
+        "Järjestelmä on hyvä, mutta hallituksella on oltava oikeus tehdä uudistuksia kriisitilanteessa.",
+        "Eri mieltä. Paikallista sopimista yrityksissä on lisättävä ja liittojen valtaa karsittava."
+      ]
+    },
+    "wr2": {
+      "q": "Suomen tulisi ottaa käyttöön lakisääteinen minimipalkka työehtosopimusten sijaan yleissitovuuden heikentyessä.",
+      "ctx": "Työehtosopimusten yleissitovuus suojaa palkansaajia, mutta sen purkamisesta keskustellaan yrittäjäjärjestöissä.",
+      "opts": [
+        "Kyllä. Lakisääteinen minimipalkka takaisi perustoimeentulon kaikille työntekijöille.",
+        "Ei, se murentaisi ay-liikkeen aseman ja johtaisi palkkojen polkemiseen yleisesti.",
+        "Eri mieltä. Palkoista tulisi sopia vapaasti työnantajan ja työntekijän välillä."
+      ]
+    },
+    "in1": {
+      "q": "Maahanmuuttajien kotouttaminen on epäonnistunut, ja joillekin alueille on muodostunut pysyviä rinnakkaisyhteiskuntia.",
+      "ctx": "Erityisesti pääkaupunkiseudun koulujen ja asuinalueiden eriytyminen (segregaatio) puhuttaa.",
+      "opts": [
+        "Kyllä. Eriytymiseen on puututtava tiukoin keinoin, kuten maahanmuuttajakiintiöin asutuksessa.",
+        "Haasteita on, mutta ratkaisu on tuki ja resurssit, ei syyttely ja pakko.",
+        "Ei. Suomessa ei ole varsinaisia rinnakkaisyhteiskuntia, ja useimmat kotoutuvat hyvin."
+      ]
+    },
+    "in2": {
+      "q": "Sosiaalituen saamisen ehdoksi tulisi asettaa velvoite osallistua suomen kielen opetukseen ja työtoimintaan.",
+      "ctx": "Maahanmuuttajien sosiaalitukien vastikkeellisuudesta ja aktiivimalleista keskustellaan säännöllisesti.",
+      "opts": [
+        "Kyllä. Tuen saamiseen on liittyttävä selkeä velvoite osallistua kotouttamistoimiin.",
+        "Kyllä, mutta tukitoimien ja opetuksen laadun pitää olla riittävää ensin.",
+        "Ei. Toimeentuloturva on perusoikeus, jota ei pidä sitoa pakottaviin ehtoihin."
+      ]
+    },
+    "eu1": {
+      "q": "Suomen tulisi tukea tiiviimpää EU-integraatiota ja luopua useammista kansallisista päätösvalloista yhteisen edun nimissä.",
+      "ctx": "Suomi on perinteisesti ollut EU:n ytimessä, mutta unionin yhteisvelka ja sääntely herättävät kritiikkiä.",
+      "opts": [
+        "Kyllä. Suomen etu on olla mukana vahvassa ja yhtenäisessä Euroopan unionissa.",
+        "Tietyillä aloilla yhteistyö on hyväksi, mutta kansallista veto-oikeutta on varjeltava.",
+        "Ei. Päätösvaltaa on palautettava Brysselistä takaisin Suomeen ja suojeltava itsenäisyyttämme."
+      ]
+    },
+    "eu2": {
+      "q": "Suomen tulisi pitää kiinni kehitysyhteistyömäärärahojen tasosta myös taloudellisesti tiukkoina aikoina.",
+      "ctx": "Kehitysapua on leikattu valtiontalouden säästötalkoissa, mikä jakaa mielipiteitä.",
+      "opts": [
+        "Kyllä. Rikkaana maana meillä on moraalinen velvollisuus auttaa heikoimmassa asemassa olevia.",
+        "Kehitysapua voidaan antaa, mutta sen tulisi olla tehokkaampaa ja ehdollisempaa.",
+        "Ei. Meidän on ensisijaisesti huolehdittava omista kansalaisistamme ja leikattava kehitysapua."
+      ]
+    },
+    "gs1": {
+      "q": "Suomen tulee pysyä edelläkävijänä tasa-arvo-, sateenkaarioikeus- ja liberaaleissa kysymyksissä.",
+      "ctx": "Uusi translaki ja sukupuolineutraali avioliitto ovat olleet merkittäviä arvokeskustelun aiheita.",
+      "opts": [
+        "Kyllä. Tasa-arvoa ja vähemmistöjen oikeuksia on edistettävä aktiivisesti edelleen.",
+        "Tasa-arvo on jo hyvällä tasolla; meidän pitäisi välttää turhaa ideologista ylisääntelyä.",
+        "Ei. Identiteettipolitiikka ja sukupuolikysymysten korostaminen koulussa on mennyt liian pitkälle."
+      ]
+    },
+    "gs2": {
+      "q": "Perhevapaat tulisi jakaa tasan vanhempien kesken lain nojalla.",
+      "ctx": "Suomessa tehtiin perhevapaauudistus vuonna 2022, joka lisäsi isille korvattavia vapaita.",
+      "opts": [
+        "Kyllä. Vanhempainvapaan tasajako edistää naisten asemaa työmarkkinoilla ja isän suhdetta lapseen.",
+        "Perheiden tulisi antaa päättää vapaasti vapaiden jaosta ilman valtion ohjausta.",
+        "Äidin pitäisi saada pitää vapaista suurin osa biologisista ja käytännön syistä."
+      ]
+    },
+    "rg1": {
+      "q": "Suuri ja aktiivinen valtio, joka tuottaa kattavat julkiset palvelut, on paras yhteiskuntamalli.",
+      "ctx": "Pohjoismainen hyvinvointimalli perustuu korkeaan verotukseen ja laajaan julkiseen sektoriin.",
+      "opts": [
+        "Täysin samaa mieltä. Se takaa tasa-arvon, turvan ja korkean keskinäisen luottamuksen.",
+        "Valtion tulee vastata perusturvasta, mutta yksityisille palveluille pitää antaa enemmän tilaa.",
+        "Eri mieltä. Julkinen sektori on liian suuri ja tehoton. Tarvitaan enemmän yksityistä yrittäjyyttä."
+      ]
+    },
+    "rg2": {
+      "q": "Tuloerojen kasvu on uhka suomalaiselle yhteiskunnalle ja sitä on torjuttava aktiivisesti.",
+      "ctx": "Keskustelu tuloerojen kasvusta ja leipäjonoista nousee esille sosiaaliturvaleikkausten yhteydessä.",
+      "opts": [
+        "Kyllä. Tuloerojen kaventamisen ja köyhyyden torjunnan tulisi olla hallituksen pääprioriteetti.",
+        "Kohtuulliset tuloerot ovat tarpeen, jotta työnteko ja yrittäminen olisivat kannattavia.",
+        "Ei. Tärkeintä on taata kaikille mahdollisuus työhön, ei keinotekoinen tasa-arvo."
+      ]
+    }
+  },
+  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#006288\"></div>\n      <div class=\"party-name\">Kansallinen Kokoomus</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Kansallisen Kokoomuksen (Kok) ohjelmaan. Kannatat markkinataloutta, yksilönvapautta, työn verotuksen keventämistä ja Suomen tiivistä EU- ja Nato-yhteistyötä.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#FFDE55\"></div>\n      <div class=\"party-name\">Perussuomalaiset</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Perussuomalaisten (PS) ohjelmaan. Kannatat tiukkaa maahanmuuttopolitiikkaa, kansallista etua, perinteisiä arvoja ja suhtaudut kriittisesti EU-integraatioon.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#E11933\"></div>\n      <div class=\"party-name\">Suomen Sosialidemokraattinen Puolue</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Suomen Sosialidemokraattisen Puolueen (SDP) ohjelmaan. Kannatat vahvaa hyvinvointivaltiota, reiluja työehtoja, julkisia palveluja ja oikeudenmukaista verotusta.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#009E5C\"></div>\n      <div class=\"party-name\">Suomen Keskusta</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Suomen Keskustan (Kesk) ohjelmaan. Korostat alueiden tasapuolista kehittämistä, kotimaista ruoantuotantoa, hajauttamista ja perheiden valinnanvapautta.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#009F4D\"></div>\n      <div class=\"party-name\">Vihreä liitto</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Vihreän liiton (Vihr) ohjelmaan. Asetat ilmastonmuutoksen torjunnan ja luonnonsuojelun etusijalle, kannatat ihmisoikeuksia ja korkeaa koulutusta.</div>\n    </div>\n  </div>"
+}

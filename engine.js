@@ -34,15 +34,13 @@ window.goTo = function(id) {
 window.buildOrder = function(bank, totalCount) {
   // Strength weight for priority sorting
   function strength(q) {
-    const partyWeights = [
-      'dem', 'rep', 'lib', 'grn', 'lab', 'con', 'ref', 'snp', 
-      'v-vanster', 's-sosse', 'sd-demokrat', 'm-moderat',
-      'spd', 'cdu', 'fdp', 'afd', 'lnk', 'bsw', 'ren', 'rn', 'lfi', 'lr', 'ps', 
-      'fg', 'ff', 'sf', 'pvv', 'glp', 'vvd', 'nsc'
-    ];
     return Math.max(...q.opts.flatMap(o => {
-      const vals = [Math.abs(o.e || 0), Math.abs(o.g || 0), Math.abs(o.n || 0)];
-      partyWeights.forEach(pw => { if (o[pw] !== undefined) vals.push(Math.abs(o[pw])); });
+      const vals = [];
+      Object.keys(o).forEach(k => {
+        if (k !== 't' && typeof o[k] === 'number') {
+          vals.push(Math.abs(o[k]));
+        }
+      });
       return vals;
     }));
   }

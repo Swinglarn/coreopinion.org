@@ -20,7 +20,10 @@ const langMap = {
   es: { langCode: 'es', localLang: 'Español', engCountry: 'Spain', localCountry: 'España', defaultSelect: 'Seleccionar...' },
   it: { langCode: 'it', localLang: 'Italiano', engCountry: 'Italy', localCountry: 'Italia', defaultSelect: 'Seleziona...' },
   nl: { langCode: 'nl', localLang: 'Nederlands', engCountry: 'Netherlands', localCountry: 'Nederland', defaultSelect: 'Selecteer...' },
-  se: { langCode: 'sv', localLang: 'Svenska', engCountry: 'Sweden', localCountry: 'Sverige', defaultSelect: 'Välj...' }
+  se: { langCode: 'sv', localLang: 'Svenska', engCountry: 'Sweden', localCountry: 'Sverige', defaultSelect: 'Välj...' },
+  dk: { langCode: 'da', localLang: 'Dansk', engCountry: 'Denmark', localCountry: 'Danmark', defaultSelect: 'Vælg...' },
+  no: { langCode: 'no', localLang: 'Norsk', engCountry: 'Norway', localCountry: 'Norge', defaultSelect: 'Velg...' },
+  fi: { langCode: 'fi', localLang: 'Suomi', engCountry: 'Finland', localCountry: 'Suomi', defaultSelect: 'Valitse...' }
 };
 
 const nationalityMap = {
@@ -36,12 +39,16 @@ const nationalityMap = {
   it: "Italy",
   se: "Sweden",
   ie: "Ireland",
-  nl: "Netherlands"
+  nl: "Netherlands",
+  dk: "Denmark",
+  no: "Norway",
+  fi: "Finland"
 };
 
 const nationalitiesList = [
   "United States", "United Kingdom", "Canada", "Australia", "New Zealand",
-  "Germany", "Austria", "France", "Spain", "Italy", "Sweden", "Ireland", "Netherlands", "Other"
+  "Germany", "Austria", "France", "Spain", "Italy", "Sweden", "Ireland", "Netherlands",
+  "Denmark", "Norway", "Finland", "Other"
 ];
 
 const englishHeroTexts = {
@@ -72,6 +79,18 @@ const englishHeroTexts = {
   se: {
     heroTitle: "Where do you stand in<br><em>Swedish</em> politics?",
     heroSub: "47 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties."
+  },
+  dk: {
+    heroTitle: "Where do you stand in<br><em>Danish</em> politics?",
+    heroSub: "30 scenario-based questions on the issues defining Denmark right now. Welfare, immigration, climate, and taxes. See your alignment across all parties."
+  },
+  no: {
+    heroTitle: "Where do you stand in<br><em>Norwegian</em> politics?",
+    heroSub: "30 scenario-based questions on the issues defining Norway right now. Taxes, welfare, oil, and immigration. See your alignment across all parties."
+  },
+  fi: {
+    heroTitle: "Where do you stand in<br><em>Finnish</em> politics?",
+    heroSub: "30 scenario-based questions on the issues defining Finland right now. Defense, taxes, welfare, and immigration. See your alignment across all parties."
   }
 };const staticUiTranslations = {
   en: {
@@ -486,6 +505,192 @@ const englishHeroTexts = {
       'Netherlands': "Nederländerna",
       'Other': "Annat"
     }
+  },
+  da: {
+    startBtn: "Start testen",
+    howItWorks: "Sådan fungerer det",
+    skipBtn: "Spring over",
+    backBtn: "Tilbage",
+    nextBtn: "Næste",
+    demoTitle: "Næsten færdig.",
+    demoSub: "Et par hurtige spørgsmål før dine resultater. Alt er anonymt.",
+    seeResultsBtn: "Se mine resultater",
+    lblAge: "Alder",
+    lblGender: "Køn <span>(valgfrit)</span>",
+    lblNat: "Nationalitet <span>(valgfrit)</span>",
+    optSelect: "Vælg...",
+    optPreferNot: "Ønsker ikke at opgive",
+    optInd: "Uafhængig / Andet",
+    ageSelectOpts: ['Under 18', '18 til 24', '25 til 34', '35 til 44', '45 til 54', '55 til 64', '65 eller ældre'],
+    genderSelectOpts: ['Mand', 'Kvinde', 'Andet', 'Ønsker ikke at opgive'],
+    lblConsent: "<strong>Samtykke til forskning:</strong> Jeg tillader CoreOpinion at gemme mine anonyme svar og demografiske data til forskning, statistik og offentlige meningsmålinger.",
+    demoNote: "Dette forbindes aldrig med dine svar. Det hjælper os med at forstå, hvem der tager testen.",
+    calcTitle: "Kortlægger dine svar",
+    calcSub: "Dette tager kun et øjeblik.",
+    rEyebrow: "Din politiske overensstemmelse i {Country}",
+    saveTitle: "Gem dine resultater",
+    saveDesc: "Indtast din e-mailadresse, så sender vi dig et link til dine resultater. Deles aldrig.",
+    sendBtn: "Send resultater",
+    copyBtn: "Kopier resultatlink",
+    retakeBtn: "Tag testen igen",
+    genBtn: "Generel test",
+    modeTitle: "Vælg testlængde",
+    modeSub: "Vælg hvor dybt du vil analysere din politiske overensstemmelse og kognitive framing-bias.",
+    modeBadgeShort: "Hurtig",
+    modeTitleShort: "Kort test",
+    modeDescShort: "Giver et hurtigt estimat af dine politiske koordinater og generelle overensstemmelse.",
+    modeBadgeMedium: "Anbefalet",
+    modeTitleMedium: "Mellemlang test",
+    modeDescMedium: "Vores standardlengde. Giver en pålidelig politisk kvadrant og detaljeret kognitiv framing-analyse.",
+    modeBadgeLong: "Grundig",
+    modeTitleLong: "Lang test",
+    modeDescLong: "Dyb ideologisk analyse. Analyserer grænsetilfælde, komplekse politiske kompromiser og fulde bias-målinger.",
+    modeBtnSelect: "Vælg",
+    modeBackBtn: "Tilbage til start",
+    questionsText: "spørgsmål",
+    natNames: {
+      'United States': "USA",
+      'United Kingdom': "Storbritannien",
+      'Canada': "Canada",
+      'Australia': "Australien",
+      'New Zealand': "New Zealand",
+      'Germany': "Tyskland",
+      'Austria': "Østrig",
+      'France': "Frankrig",
+      'Spain': "Spanien",
+      'Italy': "Italien",
+      'Sweden': "Sverige",
+      'Ireland': "Irland",
+      'Netherlands': "Holland",
+      'Denmark': "Danmark",
+      'Norway': "Norge",
+      'Finland': "Finland",
+      'Other': "Andet"
+    }
+  },
+  no: {
+    startBtn: "Start testen",
+    howItWorks: "Slik fungerer det",
+    skipBtn: "Hopp over",
+    backBtn: "Tilbake",
+    nextBtn: "Neste",
+    demoTitle: "Nesten ferdig.",
+    demoSub: "Noen raske spørsmål før resultatene dine. Alt er anonymt.",
+    seeResultsBtn: "Se mine resultater",
+    lblAge: "Alder",
+    lblGender: "Kjønn <span>(valgfritt)</span>",
+    lblNat: "Nasjonalitet <span>(valgfritt)</span>",
+    optSelect: "Velg...",
+    optPreferNot: "Vil ikke oppgi",
+    optInd: "Uavhengig / Annet",
+    ageSelectOpts: ['Under 18', '18 til 24', '25 til 34', '35 til 44', '45 til 54', '55 til 64', '65 eller eldre'],
+    genderSelectOpts: ['Mann', 'Kvinne', 'Annet', 'Vil ikke oppgi'],
+    lblConsent: "<strong>Samtykke til forskning:</strong> Jeg tillater CoreOpinion å lagre mine anonyme svar og demografiske data for forskning, statistikk og offentlige meningsmålinger.",
+    demoNote: "Dette kobles aldri til svarene dine. Det hjelper oss å forstå hvem som tar testen.",
+    calcTitle: "Kartlegger svarene dine",
+    calcSub: "Dette tar bare et øyeblik.",
+    rEyebrow: "Din politiske samsvar i {Country}",
+    saveTitle: "Lagre resultatene dine",
+    saveDesc: "Skriv inn e-postadressen din, så sender vi deg en lenke til resultatene dine. Deles aldri.",
+    sendBtn: "Send resultater",
+    copyBtn: "Kopier resultatlenke",
+    retakeBtn: "Ta testen på nytt",
+    genBtn: "Generell test",
+    modeTitle: "Velg testlengde",
+    modeSub: "Velg hvor dypt du vil analysere ditt politiske samsvar og kognitive vinklingsbias.",
+    modeBadgeShort: "Hurtig",
+    modeTitleShort: "Kort test",
+    modeDescShort: "Gir et raskt estimat av dine politiske koordinater og generelt samsvar.",
+    modeBadgeMedium: "Anbefalt",
+    modeTitleMedium: "Middels test",
+    modeDescMedium: "Vår standardlengde. Gir en pålitelig politisk kvadrant og detaljert kognitiv vinklingsanalyse.",
+    modeBadgeLong: "Grundig",
+    modeTitleLong: "Lang test",
+    modeDescLong: "Dyp ideologisk analyse. Analyserer grensetilfeller, komplekse politiske avveininger og fulle bias-målinger.",
+    modeBtnSelect: "Velg",
+    modeBackBtn: "Tilbake til start",
+    questionsText: "spørsmål",
+    natNames: {
+      'United States': "USA",
+      'United Kingdom': "Storbritannia",
+      'Canada': "Canada",
+      'Australia': "Australia",
+      'New Zealand': "New Zealand",
+      'Germany': "Tyskland",
+      'Austria': "Østerrike",
+      'France': "Frankrike",
+      'Spain': "Spania",
+      'Italy': "Italia",
+      'Sweden': "Sverige",
+      'Ireland': "Irland",
+      'Netherlands': "Nederland",
+      'Denmark': "Danmark",
+      'Norway': "Norge",
+      'Finland': "Finland",
+      'Other': "Annet"
+    }
+  },
+  fi: {
+    startBtn: "Aloita testi",
+    howItWorks: "Miten se toimii",
+    skipBtn: "Ohita",
+    backBtn: "Takaisin",
+    nextBtn: "Seuraava",
+    demoTitle: "Melkein valmis.",
+    demoSub: "Muutamia nopeita kysymyksiä ennen tuloksiasi. Kaikki on anonyymiä.",
+    seeResultsBtn: "Katso tulokseni",
+    lblAge: "Ikä",
+    lblGender: "Sukupuoli <span>(valinnainen)</span>",
+    lblNat: "Kansalaisuus <span>(valinnainen)</span>",
+    optSelect: "Valitse...",
+    optPreferNot: "En halua sanoa",
+    optInd: "Sitoutumaton / Muu",
+    ageSelectOpts: ['Alle 18', '18–24', '25–34', '35–44', '45–54', '55–64', '65 tai vanhempi'],
+    genderSelectOpts: ['Mies', 'Nainen', 'Muu', 'En halua sanoa'],
+    lblConsent: "<strong>Tutkimussuostumus:</strong> Annan CoreOpinionille luvan tallentaa anonyymit vastaukseni ja taustatietoni tutkimusta, tilastoja ja julkisia mielipidekyselyjä varten.",
+    demoNote: "Tätä ei koskaan yhdistetä vastauksiisi. Se auttaa meitä ymmärtämään testin tekijöitä.",
+    calcTitle: "Kartoitetaan vastauksiasi",
+    calcSub: "Tämä vie vain hetken.",
+    rEyebrow: "Poliittinen sopivuutesi maassa {Country}",
+    saveTitle: "Tallenna tuloksesi",
+    saveDesc: "Anna sähköpostiosoitteesi, niin lähetämme linkin tuloksiisi. Ei koskaan jaeta.",
+    sendBtn: "Lähetä tulokset",
+    copyBtn: "Kopioi tuloslinkki",
+    retakeBtn: "Tee testi uudelleen",
+    genBtn: "Yleinen testi",
+    modeTitle: "Valitse testin pituus",
+    modeSub: "Valitse, kuinka syvällisesti haluat analysoida poliittista sopivuuttasi ja kognitiivista kehystysvinoumaasi.",
+    modeBadgeShort: "Nopea",
+    modeTitleShort: "Lyhyt testi",
+    modeDescShort: "Antaa nopean arvion poliittisista koordinaateistasi ja yleisestä sopivuudestasi.",
+    modeBadgeMedium: "Suositeltu",
+    modeTitleMedium: "Keskipitkä testi",
+    modeDescMedium: "Standardipituutemme. Antaa luotettavan poliittisen nelikentän ja yksityiskohtaisen kognitiivisen kehystysanalyysin.",
+    modeBadgeLong: "Perusteellinen",
+    modeTitleLong: "Pitkä testi",
+    modeDescLong: "Syvä ideologinen analyysi. Analysoi rajatapauksia, monimutkaisia poliittisia kompromisseja ja kattavat vinoumamittaukset.",
+    modeBtnSelect: "Valitse",
+    modeBackBtn: "Takaisin aloitukseen",
+    questionsText: "kysymystä",
+    natNames: {
+      'United States': "Yhdysvallat",
+      'United Kingdom': "Iso-Britannia",
+      'Canada': "Kanada",
+      'Australia': "Australia",
+      'New Zealand': "Uusi-Seelanti",
+      'Germany': "Saksa",
+      'Austria': "Itävalta",
+      'France': "Ranska",
+      'Spain': "Espanja",
+      'Italy': "Italia",
+      'Sweden': "Ruotsi",
+      'Ireland': "Irlanti",
+      'Netherlands': "Alankomaat",
+      'Denmark': "Tanska",
+      'Norway': "Norja",
+      'Finland': "Suomi",
+      'Other': "Muu"
+    }
   }
 };
 
@@ -802,4 +1007,4 @@ window.getQuestion = q => q;`;
   console.log(`Generated ${outputName} (size: ${html.length} bytes)`);
 });
 
-console.log("SSG compilation completed successfully. 14 HTML portals built.");
+console.log(`SSG compilation completed successfully. ${configFiles.length} HTML portals built.`);

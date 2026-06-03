@@ -98,4 +98,25 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Denmark -->
+  <url>
+    <loc>https://coreopinion.org/dk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Norway -->
+  <url>
+    <loc>https://coreopinion.org/no</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Finland -->
+  <url>
+    <loc>https://coreopinion.org/fi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
