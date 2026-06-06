@@ -1,0 +1,105 @@
+const { createClient } = require('@supabase/supabase-js');
+const fs = require('fs');
+const path = require('path');
+
+const SB_URL = process.env.SUPABASE_URL || 'https://rttomfnfyjjssdqfzkaj.supabase.co';
+const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5ODcwMjEsImV4cCI6MjA4ODU2MzAyMX0.0qBogK8xywL77IFYj4IywZIhHyKjbvbVmXYvG6wAZGw';
+
+const supabase = createClient(SB_URL, SB_KEY);
+
+const nationalityMap = {
+  us: "United States",
+  uk: "United Kingdom",
+  ca: "Canada",
+  au: "Australia",
+  nz: "New Zealand",
+  de: "Germany",
+  at: "Austria",
+  fr: "France",
+  es: "Spain",
+  it: "Italy",
+  se: "Sweden",
+  ie: "Ireland",
+  nl: "Netherlands",
+  dk: "Denmark",
+  no: "Norway",
+  fi: "Finland"
+};
+
+module.exports = async function handler(req, res) {
+  const { a, b } = req.query;
+  if (!a || !b) {
+    return res.status(400).send('Missing comparison IDs');
+  }
+
+  try {
+    // 1. Fetch both results from Supabase
+    const [fetchA, fetchB] = await Promise.all([
+      supabase.from('coreopinion_results').select('*').eq('id', a).single(),
+      supabase.from('coreopinion_results').select('*').eq('id', b).single()
+    ]);
+
+    if (fetchA.error || !fetchA.data || fetchB.error || !fetchB.data) {
+      console.error("Supabase fetch error for comparison:", fetchA.error, fetchB.error);
+      return res.status(404).send('One or both results not found');
+    }
+
+    const payloadA = fetchA.data;
+    const payloadB = fetchB.data;
+
+    // 2. Read compiled compare.html
+    const templatePath = path.join(process.cwd(), 'compare.html');
+    if (!fs.existsSync(templatePath)) {
+      console.error("compare.html not found on disk!");
+      return res.status(500).send('Server Error: Template missing');
+    }
+    let html = fs.readFileSync(templatePath, 'utf8');
+
+    // 3. Dynamic metadata
+    const countryA = nationalityMap[payloadA.mode] || payloadA.mode.toUpperCase();
+    const countryB = nationalityMap[payloadB.mode] || payloadB.mode.toUpperCase();
+    
+    let title = `Political Comparison | CoreOpinion`;
+    if (payloadA.mode === payloadB.mode) {
+      title = `${countryA} Political Comparison | CoreOpinion`;
+    } else {
+      title = `${countryA} vs ${countryB} Comparison | CoreOpinion`;
+    }
+
+    const biasA = payloadA.bias_breakdown ? (payloadA.bias_breakdown.__overall_bias || 0) : 0;
+    const biasB = payloadB.bias_breakdown ? (payloadB.bias_breakdown.__overall_bias || 0) : 0;
+    const description = `Compare political compass positions and cognitive framing bias. User A: ${biasA}% bias vs User B: ${biasB}% bias. Take the test at coreopinion.org`;
+
+    const host = req.headers.host || 'coreopinion.org';
+    const protocol = host.includes('localhost') ? 'http' : 'https';
+    const canonicalUrl = `${protocol}://${host}/compare/${a}/${b}`;
+    const ogImageUrl = `${protocol}://${host}/api/og?id=${a}`; // Use first user's OG card
+
+    // Substitute metadata tags in HTML
+    html = html.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonicalUrl}">`);
+    html = html.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonicalUrl}">`);
+    html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`);
+    html = html.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${description}">`);
+    html = html.replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${ogImageUrl}">`);
+    html = html.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${title}">`);
+    html = html.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`);
+    html = html.replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${ogImageUrl}">`);
+
+    // 4. Sanitize payloads
+    const cleanA = { ...payloadA };
+    const cleanB = { ...payloadB };
+    delete cleanA.email;
+    delete cleanB.email;
+
+    // 5. Inject payload
+    const injectionScript = `<script>window.comparePayload = { a: ${JSON.stringify(cleanA)}, b: ${JSON.stringify(cleanB)} };</script>\n</head>`;
+    html = html.replace('</head>', injectionScript);
+
+    // 6. Serve HTML
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    return res.status(200).send(html);
+  } catch (err) {
+    console.error("Error in compare-page handler:", err);
+    return res.status(500).send(`Server Error: ${err.message}`);
+  }
+};

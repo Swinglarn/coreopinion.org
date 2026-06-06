@@ -8,6 +8,10 @@
     {
       "source": "/result/:id",
       "destination": "/api/result-page?id=:id"
+    },
+    {
+      "source": "/compare/:a/:b",
+      "destination": "/api/compare-page?a=:a&b=:b"
     }
   ]
 }

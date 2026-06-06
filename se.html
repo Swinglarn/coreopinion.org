@@ -455,6 +455,119 @@
   </div>
 </div>
 
+<!-- COMPARE RESULTS -->
+<div class="page" id="page-compare">
+  <nav>
+    <a class="logo" href="/">Core<span>opinion</span></a>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
+      <a href="/" style="text-decoration:none"><button class="btn-ghost" style="padding:6px 12px;font-size:12px;">Take the test</button></a>
+    </div>
+  </nav>
+  <div class="results-shell">
+    <div class="results-head">
+      <div class="result-eyebrow">Political Alignment Comparison</div>
+      <div class="result-headline" id="comp-headline">User A vs User B</div>
+      <div class="result-sub" id="comp-sub">Compare coordinates, party alignments, and framing bias.</div>
+    </div>
+
+    <!-- Compass + Profiles Grid -->
+    <div class="results-grid">
+      <div class="res-card">
+        <div class="res-card-title">Political compass alignment</div>
+        <div class="compass-wrap">
+          <svg width="340" height="340" viewBox="0 0 340 340">
+            <rect x="10" y="10" width="155" height="155" rx="5" fill="#4B8EF1" opacity="0.11"/>
+            <rect x="175" y="10" width="155" height="155" rx="5" fill="#F5A623" opacity="0.11"/>
+            <rect x="10" y="175" width="155" height="155" rx="5" fill="#3DBF82" opacity="0.11"/>
+            <rect x="175" y="175" width="155" height="155" rx="5" fill="#E85D6B" opacity="0.11"/>
+            <line x1="170" y1="10" x2="170" y2="330" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="10" y1="170" x2="330" y2="170" stroke="#B0B5BC" stroke-width="1.2"/>
+            <line x1="90" y1="10" x2="90" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="250" y1="10" x2="250" y2="330" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="90" x2="330" y2="90" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <line x1="10" y1="250" x2="330" y2="250" stroke="#E5E3DF" stroke-width="0.6" stroke-dasharray="3,5"/>
+            <text x="90" y="8" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Authoritarian</text>
+            <text x="90" y="338" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle">Libertarian</text>
+            <text x="8" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(-90 8 174)">Left</text>
+            <text x="336" y="174" font-size="10" fill="#7A7F88" font-family="Outfit,sans-serif" text-anchor="middle" transform="rotate(90 336 174)">Right</text>
+            
+            <!-- User A Dot -->
+            <circle id="cdot-a-ring" cx="170" cy="170" r="15" fill="#2A5DB0" opacity="0.15"/>
+            <circle id="cdot-a" cx="170" cy="170" r="8" fill="#2A5DB0" stroke="#FFF" stroke-width="1.5"/>
+            
+            <!-- User B Dot -->
+            <circle id="cdot-b-ring" cx="170" cy="170" r="15" fill="#B8923A" opacity="0.15"/>
+            <circle id="cdot-b" cx="170" cy="170" r="8" fill="#B8923A" stroke="#FFF" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div style="display:flex;justify-content:center;gap:24px;margin-top:16px;font-size:12px;font-family:Outfit,sans-serif;">
+          <div style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#2A5DB0;display:inline-block;"></span> <span id="comp-label-a">User A</span></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#B8923A;display:inline-block;"></span> <span id="comp-label-b">User B</span></div>
+        </div>
+      </div>
+
+      <div class="res-card" style="display:flex;flex-direction:column;gap:16px;">
+        <div class="res-card-title">Cognitive Profiles</div>
+        <!-- User A Profile -->
+        <div style="padding:14px;background:var(--navy-soft);border-radius:8px;border-left:3px solid #2A5DB0;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#2A5DB0;margin-bottom:4px;" id="comp-profile-title-a">User A Profile</div>
+          <div style="font-size:16px;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+            <span id="comp-profile-icon-a">🔬</span> <span id="comp-profile-name-a">The Analyst</span>
+            <span style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-left:auto;" id="comp-bias-a">22% bias</span>
+          </div>
+          <div style="font-size:12px;color:var(--ink-soft);font-weight:300;line-height:1.5;" id="comp-profile-desc-a">Description...</div>
+        </div>
+        <!-- User B Profile -->
+        <div style="padding:14px;background:var(--gold-soft);border-radius:8px;border-left:3px solid #B8923A;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8923A;margin-bottom:4px;" id="comp-profile-title-b">User B Profile</div>
+          <div style="font-size:16px;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+            <span id="comp-profile-icon-b">🔷</span> <span id="comp-profile-name-b">The Axiom</span>
+            <span style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-left:auto;" id="comp-bias-b">8% bias</span>
+          </div>
+          <div style="font-size:12px;color:var(--ink-soft);font-weight:300;line-height:1.5;" id="comp-profile-desc-b">Description...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparative Party Matches -->
+    <div class="res-card" id="comp-party-card" style="margin-bottom:28px;">
+      <div class="res-card-title">Party Alignment Comparison</div>
+      <div class="party-results" id="comp-party-results"></div>
+    </div>
+
+    <!-- Topic Stance Heatmap (Dual Markers) -->
+    <div class="res-card" id="comp-heatmap-card" style="margin-bottom:28px;">
+      <div class="res-card-title">Topic-by-Topic Breakdown</div>
+      <div style="font-size:13px;color:var(--ink-muted);margin-bottom:24px;font-weight:300;">Side-by-side stance comparisons across core issues.</div>
+      <div id="comp-heatmap-grid" class="topic-heatmap-grid"></div>
+    </div>
+
+    <!-- Analytical Comparison Report -->
+    <div class="res-card" id="comp-report-card" style="margin-bottom:28px;">
+      <div class="res-card-title">Comparison Analysis</div>
+      <div id="comp-report-text" style="font-size:14px;color:var(--ink-muted);line-height:1.8;font-weight:300;display:flex;flex-direction:column;gap:14px;"></div>
+    </div>
+
+    <!-- Retake / Compare panel -->
+    <div class="save-panel" style="text-align:center;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;">Ready to find your position?</div>
+      <div class="share-row" style="justify-content:center;">
+        <a href="/" style="text-decoration:none"><button class="btn-primary" style="padding:12px 28px;">Take the test yourself</button></a>
+      </div>
+    </div>
+
+    <footer style="margin-top:60px;padding-top:40px;border-top:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--ink-muted);font-weight:300;">
+      <div>&copy; 2026 CoreOpinion. All rights reserved.</div>
+      <div style="display:flex;gap:20px;">
+        <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
+        <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
+        <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</div>
+
 <script>
 const LOCAL_QUESTIONS = {
   "im1": {

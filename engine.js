@@ -1892,7 +1892,308 @@ window.renderSavedResults = function(payload) {
   window.goTo('page-results');
 };
 
+window.renderComparison = function(payload) {
+  const a = payload.a;
+  const b = payload.b;
+  
+  const eScoreA = a.econ_score !== null ? parseFloat(a.econ_score) : 0;
+  const gScoreA = a.gov_score !== null ? parseFloat(a.gov_score) : 0;
+  const eScoreB = b.econ_score !== null ? parseFloat(b.econ_score) : 0;
+  const gScoreB = b.gov_score !== null ? parseFloat(b.gov_score) : 0;
+  
+  const biasBreakdownA = a.bias_breakdown || {};
+  const biasBreakdownB = b.bias_breakdown || {};
+  
+  const overallBiasA = biasBreakdownA.__overall_bias !== undefined ? biasBreakdownA.__overall_bias : 0;
+  const overallBiasB = biasBreakdownB.__overall_bias !== undefined ? biasBreakdownB.__overall_bias : 0;
+  
+  const hasParties = a.mode && a.mode !== 'general' && typeof PARTY_META !== 'undefined';
+  const lang = window.currentLang || 'en';
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+  
+  // 1. Set titles and labels
+  const countryAName = a.country || 'User A';
+  const countryBName = b.country || 'User B';
+  
+  const hHeadline = document.getElementById('comp-headline');
+  if (hHeadline) hHeadline.textContent = `${countryAName} vs ${countryBName}`;
+  
+  const lblA = document.getElementById('comp-label-a');
+  if (lblA) lblA.textContent = countryAName;
+  const lblB = document.getElementById('comp-label-b');
+  if (lblB) lblB.textContent = countryBName;
+  
+  const titleA = document.getElementById('comp-profile-title-a');
+  if (titleA) titleA.textContent = countryAName;
+  const titleB = document.getElementById('comp-profile-title-b');
+  if (titleB) titleB.textContent = countryBName;
+
+  // 2. Render profiles
+  const profileA = window.getCognitiveProfile(overallBiasA, lang);
+  const bvA = tObj.verdicts.find(([lo, hi]) => overallBiasA >= lo && overallBiasA <= hi) || tObj.verdicts[0];
+  
+  const iconA = document.getElementById('comp-profile-icon-a');
+  if (iconA) iconA.textContent = profileA.icon;
+  const nameA = document.getElementById('comp-profile-name-a');
+  if (nameA) nameA.textContent = profileA.name;
+  const biasAEl = document.getElementById('comp-bias-a');
+  if (biasAEl) biasAEl.textContent = `${overallBiasA}% bias`;
+  const descA = document.getElementById('comp-profile-desc-a');
+  if (descA) descA.innerHTML = `<strong>${bvA[2]}:</strong> ${bvA[3]} <br><span style="color:var(--ink-muted);font-size:11px;">${profileA.desc}</span>`;
+
+  const profileB = window.getCognitiveProfile(overallBiasB, lang);
+  const bvB = tObj.verdicts.find(([lo, hi]) => overallBiasB >= lo && overallBiasB <= hi) || tObj.verdicts[0];
+  
+  const iconB = document.getElementById('comp-profile-icon-b');
+  if (iconB) iconB.textContent = profileB.icon;
+  const nameB = document.getElementById('comp-profile-name-b');
+  if (nameB) nameB.textContent = profileB.name;
+  const biasBEl = document.getElementById('comp-bias-b');
+  if (biasBEl) biasBEl.textContent = `${overallBiasB}% bias`;
+  const descB = document.getElementById('comp-profile-desc-b');
+  if (descB) descB.innerHTML = `<strong>${bvB[2]}:</strong> ${bvB[3]} <br><span style="color:var(--ink-muted);font-size:11px;">${profileB.desc}</span>`;
+
+  // 3. Compass Dots (centre=170, range=152)
+  const cDotA = document.getElementById('cdot-a');
+  const cDotARing = document.getElementById('cdot-a-ring');
+  const cDotB = document.getElementById('cdot-b');
+  const cDotBRing = document.getElementById('cdot-b-ring');
+
+  const dotXA = (170 + eScoreA * 152).toFixed(1);
+  const dotYA = (170 - gScoreA * 152).toFixed(1);
+  const dotXB = (170 + eScoreB * 152).toFixed(1);
+  const dotYB = (170 - gScoreB * 152).toFixed(1);
+
+  if (cDotA) cDotA.setAttribute('cx', dotXA);
+  if (cDotARing) cDotARing.setAttribute('cx', dotXA);
+  if (cDotA) cDotA.setAttribute('cy', dotYA);
+  if (cDotARing) cDotARing.setAttribute('cy', dotYA);
+
+  if (cDotB) cDotB.setAttribute('cx', dotXB);
+  if (cDotBRing) cDotBRing.setAttribute('cx', dotXB);
+  if (cDotB) cDotB.setAttribute('cy', dotYB);
+  if (cDotBRing) cDotBRing.setAttribute('cy', dotYB);
+
+  // 4. Comparative Party Alignments (if applicable)
+  const compPartyCard = document.getElementById('comp-party-card');
+  if (hasParties) {
+    const partyScoresA = {};
+    const partyScoresB = {};
+    Object.entries(biasBreakdownA).forEach(([k, v]) => { if (!k.startsWith('__')) partyScoresA[k] = v; });
+    Object.entries(biasBreakdownB).forEach(([k, v]) => { if (!k.startsWith('__')) partyScoresB[k] = v; });
+
+    // Find sorted unique keys of parties present
+    const allPartyKeys = [...new Set([...Object.keys(partyScoresA), ...Object.keys(partyScoresB)])];
+    
+    // Sort parties by highest average match pct
+    const rankedParties = allPartyKeys.sort((k1, k2) => {
+      const avg1 = ((partyScoresA[k1] || 0) + (partyScoresB[k1] || 0)) / 2;
+      const avg2 = ((partyScoresA[k2] || 0) + (partyScoresB[k2] || 0)) / 2;
+      return avg2 - avg1;
+    });
+
+    const pContainer = document.getElementById('comp-party-results');
+    if (pContainer) {
+      pContainer.innerHTML = '';
+      rankedParties.forEach((party, idx) => {
+        const m = PARTY_META[party];
+        if (!m) return;
+        
+        const pctA = partyScoresA[party] !== undefined ? partyScoresA[party] : 0;
+        const pctB = partyScoresB[party] !== undefined ? partyScoresB[party] : 0;
+        const mName = (typeof m.name === 'object') ? m.name[lang] : m.name;
+        const barColor = m.color || '#B0B5BC';
+
+        const row = document.createElement('div');
+        row.className = 'party-row';
+        row.innerHTML = `
+          <div class="party-row-rank">${idx + 1}</div>
+          <div class="party-row-info">
+            <div class="party-row-name">${mName}</div>
+            <div class="party-row-sub" style="font-size:10px;">${countryAName}: ${pctA}% | ${countryBName}: ${pctB}%</div>
+          </div>
+          <div class="party-row-bar-wrap" style="height: 18px; display: flex; flex-direction: column; gap: 4px; justify-content: center; background: none; border: none;">
+            <div style="height: 6px; width: 0%; background: #2A5DB0; border-radius: 3px; transition: width 1s ease;" data-w-a="${pctA}%"></div>
+            <div style="height: 6px; width: 0%; background: #B8923A; border-radius: 3px; transition: width 1s ease;" data-w-b="${pctB}%"></div>
+          </div>
+          <div class="party-row-pct" style="font-size:11px; white-space:nowrap; text-align:right;">
+            <span style="color:#2A5DB0;">${pctA}%</span> / <span style="color:#B8923A;">${pctB}%</span>
+          </div>
+        `;
+        pContainer.appendChild(row);
+      });
+      
+      setTimeout(() => {
+        pContainer.querySelectorAll('[data-w-a]').forEach(el => { el.style.width = el.getAttribute('data-w-a'); });
+        pContainer.querySelectorAll('[data-w-b]').forEach(el => { el.style.width = el.getAttribute('data-w-b'); });
+      }, 200);
+    }
+  } else {
+    if (compPartyCard) compPartyCard.style.display = 'none';
+  }
+
+  // 5. Dual-marker issue Heatmap
+  const stancesA = biasBreakdownA.__stances || {};
+  const stancesB = biasBreakdownB.__stances || {};
+  
+  const allTopics = [...new Set([...Object.keys(stancesA), ...Object.keys(stancesB)])].sort();
+  const heatmapGrid = document.getElementById('comp-heatmap-grid');
+  
+  const labelTrans = {
+    en: { left: 'Left', right: 'Right', lib: 'Libertarian', auth: 'Authoritarian' },
+    de: { left: 'Links', right: 'Rechts', lib: 'Libertär', auth: 'Autoritär' },
+    fr: { left: 'Gauche', right: 'Droite', lib: 'Libertaire', auth: 'Autoritaire' },
+    es: { left: 'Izquierda', right: 'Derecha', lib: 'Libertario', auth: 'Autoritario' },
+    it: { left: 'Sinistra', right: 'Destra', lib: 'Libertario', auth: 'Autoritario' },
+    nl: { left: 'Links', right: 'Rechts', lib: 'Libertair', auth: 'Autoritair' },
+    sv: { left: 'Vänster', right: 'Höger', lib: 'Libertär', auth: 'Auktoritär' }
+  };
+  const trans = labelTrans[lang] || labelTrans['en'];
+  
+  let closestStanceTopic = '';
+  let closestStanceGap = Infinity;
+  let biggestGapTopic = '';
+  let biggestGapValue = -Infinity;
+
+  if (heatmapGrid) {
+    heatmapGrid.innerHTML = '';
+    allTopics.forEach(topic => {
+      const stA = stancesA[topic] || { e: null, g: null };
+      const stB = stancesB[topic] || { e: null, g: null };
+      
+      if (stA.e === null && stA.g === null && stB.e === null && stB.g === null) return;
+      
+      // Compute issues distance gaps for report
+      let dist = 0, count = 0;
+      if (stA.e !== null && stB.e !== null) { dist += Math.abs(stA.e - stB.e); count++; }
+      if (stA.g !== null && stB.g !== null) { dist += Math.abs(stA.g - stB.g); count++; }
+      if (count > 0) {
+        const avgDist = dist / count;
+        if (avgDist < closestStanceGap) { closestStanceGap = avgDist; closestStanceTopic = topic; }
+        if (avgDist > biggestGapValue) { biggestGapValue = avgDist; biggestGapTopic = topic; }
+      }
+
+      const item = document.createElement('div');
+      item.className = 'topic-heatmap-item';
+      
+      const nameDiv = document.createElement('div');
+      nameDiv.className = 'topic-heatmap-name';
+      nameDiv.textContent = topic;
+      item.appendChild(nameDiv);
+      
+      // Economic Stance Comparison
+      if (stA.e !== null || stB.e !== null) {
+        const axisDiv = document.createElement('div');
+        axisDiv.className = 'topic-heatmap-axis';
+        
+        const labels = document.createElement('div');
+        labels.className = 'topic-heatmap-labels';
+        labels.innerHTML = `<span>${trans.left}</span><span>${trans.right}</span>`;
+        axisDiv.appendChild(labels);
+        
+        const track = document.createElement('div');
+        track.className = 'topic-heatmap-track';
+        
+        if (stA.e !== null) {
+          const pctA = ((stA.e + 1) / 2) * 100;
+          const markerA = document.createElement('div');
+          markerA.className = 'topic-heatmap-marker marker-a';
+          markerA.style.left = `${pctA.toFixed(1)}%`;
+          track.appendChild(markerA);
+        }
+        if (stB.e !== null) {
+          const pctB = ((stB.e + 1) / 2) * 100;
+          const markerB = document.createElement('div');
+          markerB.className = 'topic-heatmap-marker marker-b';
+          markerB.style.left = `${pctB.toFixed(1)}%`;
+          track.appendChild(markerB);
+        }
+        axisDiv.appendChild(track);
+        item.appendChild(axisDiv);
+      }
+      
+      // Governance Stance Comparison
+      if (stA.g !== null || stB.g !== null) {
+        const axisDiv = document.createElement('div');
+        axisDiv.className = 'topic-heatmap-axis';
+        
+        const labels = document.createElement('div');
+        labels.className = 'topic-heatmap-labels';
+        labels.innerHTML = `<span>${trans.lib}</span><span>${trans.auth}</span>`;
+        axisDiv.appendChild(labels);
+        
+        const track = document.createElement('div');
+        track.className = 'topic-heatmap-track';
+        
+        if (stA.g !== null) {
+          const pctA = ((stA.g + 1) / 2) * 100;
+          const markerA = document.createElement('div');
+          markerA.className = 'topic-heatmap-marker marker-a';
+          markerA.style.left = `${pctA.toFixed(1)}%`;
+          track.appendChild(markerA);
+        }
+        if (stB.g !== null) {
+          const pctB = ((stB.g + 1) / 2) * 100;
+          const markerB = document.createElement('div');
+          markerB.className = 'topic-heatmap-marker marker-b';
+          markerB.style.left = `${pctB.toFixed(1)}%`;
+          track.appendChild(markerB);
+        }
+        axisDiv.appendChild(track);
+        item.appendChild(axisDiv);
+      }
+      
+      heatmapGrid.appendChild(item);
+    });
+  }
+
+  // 6. Generate comparative analytical report text
+  const reportTextEl = document.getElementById('comp-report-text');
+  if (reportTextEl) {
+    const eDiff = Math.abs(eScoreA - eScoreB);
+    const gDiff = Math.abs(gScoreA - gScoreB);
+    const distance = Math.sqrt(eDiff * eDiff + gDiff * gDiff);
+    
+    let proximityDesc = '';
+    if (distance < 0.25) proximityDesc = `You are highly aligned ideologically, plotting in almost the exact same area on the political compass.`;
+    else if (distance < 0.6) proximityDesc = `You hold moderately aligned political views, sharing general consensus on most issues but differing on details.`;
+    else if (distance < 1.1) proximityDesc = `You have meaningful ideological divergences, holding different core alignments on key political axes.`;
+    else proximityDesc = `You have highly polarized views, plotting in completely opposite quadrants of the political compass.`;
+
+    let biasCompareDesc = '';
+    const biasGap = Math.abs(overallBiasA - overallBiasB);
+    if (biasGap < 5) {
+      biasCompareDesc = `You share a similar sensitivity to question framing effects (${overallBiasA}% vs ${overallBiasB}% bias), suggesting a comparable cognitive processing style.`;
+    } else {
+      const moreBiasedUser = overallBiasA > overallBiasB ? countryAName : countryBName;
+      const lessBiasedUser = overallBiasA > overallBiasB ? countryBName : countryAName;
+      const higherBias = Math.max(overallBiasA, overallBiasB);
+      const lowerBias = Math.min(overallBiasA, overallBiasB);
+      biasCompareDesc = `${moreBiasedUser} is more sensitive to narrative framing (${higherBias}% bias) than ${lessBiasedUser} (${lowerBias}% bias), meaning they are more easily swayed by rhetorical phrasing.`;
+    }
+
+    let stancesAnalysis = '';
+    if (closestStanceTopic && closestStanceGap < 0.25) {
+      stancesAnalysis += `<p>🤝 <strong>Greatest Agreement:</strong> You align closest on <strong>${closestStanceTopic}</strong>, showing near-identical stances.</p>`;
+    }
+    if (biggestGapTopic && biggestGapValue > 0.4) {
+      stancesAnalysis += `<p>⚡ <strong>Greatest Divergence:</strong> You have the largest policy gap on <strong>${biggestGapTopic}</strong>, suggesting completely different prioritizations or values.</p>`;
+    }
+
+    reportTextEl.innerHTML = `
+      <p>🎯 <strong>Compass Proximity:</strong> ${proximityDesc}</p>
+      <p>🧠 <strong>Cognitive Styling:</strong> ${biasCompareDesc}</p>
+      ${stancesAnalysis}
+    `;
+  }
+
+  // 7. Route to compare page
+  window.goTo('page-compare');
+};
+
 // Check for payload immediately on script load
-if (window.viewResultPayload) {
+if (window.comparePayload) {
+  window.renderComparison(window.comparePayload);
+} else if (window.viewResultPayload) {
   window.renderSavedResults(window.viewResultPayload);
 }

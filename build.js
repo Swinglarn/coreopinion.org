@@ -1009,6 +1009,10 @@ window.getQuestion = q => q;`;
     const resultPath = path.join(outputDir, 'result.html');
     fs.writeFileSync(resultPath, html, 'utf8');
     console.log(`Generated result.html (size: ${html.length} bytes)`);
+    
+    const comparePath = path.join(outputDir, 'compare.html');
+    fs.writeFileSync(comparePath, html, 'utf8');
+    console.log(`Generated compare.html (size: ${html.length} bytes)`);
   }
 });
 

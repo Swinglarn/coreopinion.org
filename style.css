@@ -1841,3 +1841,21 @@ select:focus, input:focus {
   box-shadow: 0 1px 4px rgba(30, 77, 140, 0.3);
   transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+/* --- COMPARE PAGE --- */
+#cdot-a, #cdot-a-ring {
+  transition: cx 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), cy 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#cdot-b, #cdot-b-ring {
+  transition: cx 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), cy 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.marker-a {
+  background: #2A5DB0 !important;
+  border: 1.5px solid var(--white);
+  z-index: 2;
+}
+.marker-b {
+  background: #B8923A !important;
+  border: 1.5px solid var(--white);
+  z-index: 3;
+}
