@@ -11,6 +11,555 @@ let mode = 'short';
 let lastScore = null;
 
 // ============================================================
+// ENGINE TRANSLATIONS & DICTIONARY
+// ============================================================
+const ENGINE_TRANSLATIONS = {
+  en: {
+    of: 'of',
+    alignment: 'alignment',
+    platformInsight: 'Platform Insight',
+    inspect: 'Inspect 🔍',
+    disagreeWith: 'Where you disagree with <span id="disagree-party-name">{Party}</span>',
+    yourAnswer: 'Your answer',
+    partyPosition: '{Party} position',
+    faceoffHeader: 'Cognitive Framing Face-off',
+    comparisonLabel: 'Pair Comparison',
+    shiftDetected: 'Framing Shift Detected',
+    consistentStance: 'Consistent Stance',
+    framePro: 'Support / Autonomy-framed',
+    frameCon: 'Critical / Consequence-framed',
+    frameNeutral: 'Neutral Framing',
+    yourChoice: 'Your choice',
+    skippedText: 'Skipped',
+    noPairsText: 'No framing contrasts completed for this topic yet.',
+    noPairsGeneralText: 'No completed question pairs for this topic to compare. Take the Medium or Long test to unlock detailed pair analysis.',
+    gapClose: 'Your result is close — only {gap} points separates you from {nextPartyName}. You may genuinely straddle both traditions.',
+    gapModerate: 'You align meaningfully with {nextPartyName} too, scoring {nextPct}%.',
+    gapClear: 'Your alignment with {topPartyName} is clear, with {gap} points separating you from the next closest party.',
+    profiles: {
+      axiom: { name: 'The Axiom', icon: '🔷', desc: 'Unmovable. Your principles hold regardless of framing, context, or emotional appeal.' },
+      analyst: { name: 'The Analyst', icon: '🔬', desc: 'Highly consistent with minor contextual flexibility. You distinguish policy mechanics from rhetoric.' },
+      pragmatist: { name: 'The Pragmatist', icon: '⚖️', desc: 'You hold core positions but adjust at the margins based on real-world scenarios.' },
+      empath: { name: 'The Empath', icon: '🌊', desc: 'You respond strongly to human stories and emotional context. Your positions shift with the narrative.' },
+      weathervane: { name: 'The Weathervane', icon: '🌪️', desc: "Framing significantly reshapes your stance. You may hold different positions on the same issue depending on how it's presented." },
+      mirror: { name: 'The Mirror', icon: '🪞', desc: 'Your answers reflect whatever frame is presented. You may not have stable underlying positions on many issues.' }
+    },
+    verdicts: [
+      [0, 0, 'No detectable bias', 'Your answers were completely consistent regardless of how questions were framed. That level of logical consistency is rare.'],
+      [1, 15, 'Very low bias', 'Your answers were highly consistent. The framing of a question had almost no influence on your position.'],
+      [16, 35, 'Low bias', 'Minor framing effects. Your positions are mostly stable but shifted slightly depending on how a question was worded.'],
+      [36, 60, 'Moderate bias', 'You showed noticeable framing sensitivity on several topics. Your views shifted depending on whether the question pushed you toward or against a position.'],
+      [61, 80, 'High bias', 'Framing had a significant influence on many of your answers. The same policy question, worded differently, often produced different responses.'],
+      [81, 100, 'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
+    ],
+    insightInconsistent: '💡 <strong>Cognitive Analysis:</strong> The emotional wording or scenario details in these questions successfully shifted your perspective. By swapping between an autonomous support frame and a systemic consequence frame, your choice was altered. This suggests that your beliefs in this area are contextually dependent rather than absolute, responding strongly to whatever specific narrative lens is highlighted.',
+    insightConsistent: '✅ <strong>Cognitive Analysis:</strong> Your values held firm. Whether presented with positive support framing or critical framing, you maintained identical ideological positions. This demonstrates high internal logical consistency and resistance to rhetorical framing.'
+  },
+  de: {
+    of: 'von',
+    alignment: 'Übereinstimmung',
+    platformInsight: 'Parteiplattform-Einblick',
+    inspect: 'Ansehen 🔍',
+    disagreeWith: 'Hier weichst du von der <span id="disagree-party-name">{Party}</span> ab',
+    yourAnswer: 'Deine Antwort',
+    partyPosition: 'Position der {Party}',
+    faceoffHeader: 'Framing-Vergleich',
+    comparisonLabel: 'Paarweiser Vergleich',
+    shiftDetected: 'Formulierungs-Effekt',
+    consistentStance: 'Konsistente Haltung',
+    framePro: 'Positiv / Gewinne-fokussiert',
+    frameCon: 'Kritisch / Verlust-fokussiert',
+    frameNeutral: 'Neutrale Formulierung',
+    yourChoice: 'Deine Antwort',
+    skippedText: 'Übersprungen',
+    noPairsText: 'Für dieses Thema wurden noch keine Framing-Vergleiche durchgeführt.',
+    noPairsGeneralText: 'Keine abgeschlossenen Fragenpaare für dieses Thema zum Vergleichen. Mache den mittleren oder langen Test, um die detaillierte Paaranalyse freizuschalten.',
+    gapClose: 'Dein Ergebnis ist knapp — nur {gap} Punkte trennen dich von der {nextPartyName}. Du stehst möglicherweise zwischen beiden Traditionen.',
+    gapModerate: 'Du weist auch eine deutliche Übereinstimmung mit der {nextPartyName} auf ({nextPct}%).',
+    gapClear: 'Deine Übereinstimmung mit der {topPartyName} ist eindeutig, mit {gap} Punkten Vorsprung vor der nächsten Partei.',
+    profiles: {
+      axiom: { name: 'Das Axiom', icon: '🔷', desc: 'Unerschütterlich. Deine Prinzipien gelten unabhängig von Formulierung, Kontext oder emotionalem Appell.' },
+      analyst: { name: 'Der Analyst', icon: '🔬', desc: 'Sehr konsistent mit geringer kontextueller Flexibilität. Du unterscheidest politische Mechanismen von Rhetorik.' },
+      pragmatist: { name: 'Der Pragmatiker', icon: '⚖️', desc: 'Du vertrittst feste Kernpositionen, passt sie aber in konkreten Szenarien an den Rändern an.' },
+      empath: { name: 'Der Empath', icon: '🌊', desc: 'Du reagierst stark auf menschliche Geschichten und emotionalen Kontext. Deine Positionen verschieben sich mit dem Narrativ.' },
+      weathervane: { name: 'Die Wetterfahne', icon: '🌪️', desc: 'Die Formulierung prägt deine Haltung erheblich. Du vertrittst je nach Darstellung unterschiedliche Positionen zum selben Thema.' },
+      mirror: { name: 'Der Spiegel', icon: '🪞', desc: 'Deine Antworten spiegeln den vorgegebenen Rahmen wider. Du hast bei vielen Themen keine stabilen Grundpositionen.' }
+    },
+    verdicts: [
+      [0, 0, 'Keine spürbare Verzerrung', 'Deine Antworten waren völlig konsistent, unabhängig davon, wie die Fragen formuliert waren. Ein so hohes Maß an logischer Konsistenz ist selten.'],
+      [1, 15, 'Sehr geringe Verzerrung', 'Deine Antworten waren hochgradig konsistent. Die Formulierung einer Frage hatte fast keinen Einfluss auf deine Position.'],
+      [16, 35, 'Geringe Verzerrung', 'Geringe Formulierungseffekte. Deine Positionen sind meist stabil, verschoben sich jedoch leicht je nach Wortlaut der Frage.'],
+      [36, 60, 'Mäßige Verzerrung', 'Du hast bei mehreren Themen eine spürbare Empfindlichkeit gegenüber der Formulierung gezeigt. Deine Ansichten verschoben sich je nachdem, ob die Frage dich in eine bestimmte Richtung drängte.'],
+      [61, 80, 'Hohe Verzerrung', 'Die Formulierung hatte einen erheblichen Einfluss auf viele deiner Antworten. Dieselbe politische Frage erzeugte anders formuliert oft unterschiedliche Reaktionen.'],
+      [81, 100, 'Sehr hohe Verzerrung', 'Deine Antworten wurden stark davon geprägt, wie Fragen formuliert waren, und weniger von konsistenten Grundwerten.']
+    ],
+    insightInconsistent: '💡 <strong>Kognitive Analyse:</strong> Die Formulierung oder Kontextdetails dieser Fragen haben deine Perspektive verschoben. Deine Wahl änderte sich je nachdem, ob ein positiver Aspekt oder negative Konsequenzen im Fokus standen. Dies deutet darauf hin, dass deine Überzeugungen in diesem Bereich kontextabhängig sind.',
+    insightConsistent: '✅ <strong>Kognitive Analyse:</strong> Deine Werte blieben fest. Ob positive Formulierung oder kritische Betrachtung, du hast identische Positionen beibehalten. Dies beweist hohe logische Konsistenz und Unempfindlichkeit gegenüber sprachlichen Framing-Effekten.'
+  },
+  fr: {
+    of: 'sur',
+    alignment: "d'alignement",
+    platformInsight: 'Aperçu du programme',
+    inspect: 'Inspecter 🔍',
+    disagreeWith: 'Où vous différez de <span id="disagree-party-name">{Party}</span>',
+    yourAnswer: 'Votre choix',
+    partyPosition: 'Position de {Party}',
+    faceoffHeader: "Comparatif d'effets de cadrage",
+    comparisonLabel: 'Comparaison de paires',
+    shiftDetected: 'Sensibilité au cadrage',
+    consistentStance: 'Position cohérente',
+    framePro: 'Cadrage positif (Autonomie)',
+    frameCon: 'Cadrage négatif (Conséquences)',
+    frameNeutral: 'Cadrage neutre',
+    yourChoice: 'Votre choix',
+    skippedText: 'Ignoré',
+    noPairsText: 'Aucune comparaison de cadrage effectuée pour ce sujet.',
+    noPairsGeneralText: 'Aucune paire de questions complétée pour ce sujet. Passez le test moyen ou long pour débloquer l\'analyse détaillée des paires.',
+    gapClose: 'Votre résultat est serré — seulement {gap} points vous séparent de {nextPartyName}. Vous chevauchez probablement les deux sensibilités.',
+    gapModerate: 'Vous vous alignez également de manière significative avec {nextPartyName}, avec un score de {nextPct}%.',
+    gapClear: "Votre alignement avec {topPartyName} est clair, avec {gap} points d'écart avec le parti suivant.",
+    profiles: {
+      axiom: { name: "L'Axiome", icon: '🔷', desc: "Inébranlable. Vos principes tiennent indépendamment de la formulation, du contexte ou de l'appel émotionnel." },
+      analyst: { name: "L'Analyste", icon: '🔬', desc: "Très cohérent avec une flexibilité contextuelle mineure. Vous distinguez les mécanismes politiques de la rhétorique." },
+      pragmatist: { name: 'Le Pragmatique', icon: '⚖️', desc: 'Vous maintenez des positions fondamentales mais les ajustez aux marges en fonction des scénarios réels.' },
+      empath: { name: "L'Empathe", icon: '🌊', desc: 'Vous réagissez fortement aux récits humains et au contexte émotionnel. Vos positions varient avec le récit.' },
+      weathervane: { name: 'La Girouette', icon: '🌪️', desc: "La formulation façonne considérablement votre position. Vous pouvez avoir des avis différents sur un même sujet selon sa présentation." },
+      mirror: { name: 'Le Miroir', icon: '🪞', desc: "Vos réponses reflètent le cadrage présenté. Vous n'avez pas de position stable sur de nombreux sujets." }
+    },
+    verdicts: [
+      [0, 0, 'Aucun biais détectable', 'Vos réponses étaient totalement cohérentes, quelle que soit la formulation des questions. Un tel niveau de cohérence logique est rare.'],
+      [1, 15, 'Biais très faible', 'Vos réponses étaient très cohérentes. La formulation d\'une question n\'a eu presque aucune influence sur votre position.'],
+      [16, 35, 'Biais faible', 'Effets mineurs de formulation. Vos positions sont généralement stables mais ont légèrement varié selon le choix des mots.'],
+      [36, 60, 'Biais modéré', 'Vous avez montré une sensibilité notable à la formulation sur plusieurs sujets. Vos opinions ont changé selon que la question vous poussait ou non dans une direction.'],
+      [61, 80, 'Biais élevé', 'La formulation a eu une influence significative sur beaucoup de vos réponses. La même question de politique publique a produit des réponses différentes selon sa formulation.'],
+      [81, 100, 'Biais très élevé', 'Vos réponses ont été fortement façonnées par la manière dont les questions étaient présentées plutôt que par des valeurs sous-jacentes cohérentes.']
+    ],
+    insightInconsistent: '💡 <strong>Analyse cognitive:</strong> Les mots ou les détails de scénarios dans ces questions ont réussi à décaler votre point de vue. Votre choix a changé selon le cadrage. Cela suggère que vos convictions dans ce domaine dépendent fortement du contexte.',
+    insightConsistent: '✅ <strong>Analyse cognitive:</strong> Vos valeurs sont restées fermes. Quel que soit le cadrage, vous avez maintenu des positions idéologiques identiques. Cela démontre une cohérence interne élevée.'
+  },
+  es: {
+    of: 'de',
+    alignment: 'alineación',
+    platformInsight: 'Información de plataforma',
+    inspect: 'Inspeccionar 🔍',
+    disagreeWith: 'Donde difieres de <span id="disagree-party-name">{Party}</span>',
+    yourAnswer: 'Tu respuesta',
+    partyPosition: 'Posición de {Party}',
+    faceoffHeader: 'Contraste de encuadre cognitivo',
+    comparisonLabel: 'Comparación de pares',
+    shiftDetected: 'Cambio de encuadre detectado',
+    consistentStance: 'Postura consistente',
+    framePro: 'Encuadre positivo (Autonomía)',
+    frameCon: 'Encuadre crítico (Consecuencias)',
+    frameNeutral: 'Encuadre neutro',
+    yourChoice: 'Tu elección',
+    skippedText: 'Omitida',
+    noPairsText: 'Aún no se han completado contrastes de encuadre para este tema.',
+    noPairsGeneralText: 'No hay pares de preguntas completados para comparar en este tema. Realiza el test medio o largo para desbloquear el análisis de pares detallado.',
+    gapClose: 'Tu resultado es estrecho: solo {gap} puntos te separan de {nextPartyName}. Podrías estar entre ambas tradiciones.',
+    gapModerate: 'También te alineas significativamente con {nextPartyName} ({nextPct}%).',
+    gapClear: 'Tu alineación con {topPartyName} es clara, con {gap} puntos de ventaja sobre el siguiente partido.',
+    profiles: {
+      axiom: { name: 'El Axioma', icon: '🔷', desc: 'Inamovible. Tus principios se mantienen firmes sin importar el encuadre, el contexto o el llamado emocional.' },
+      analyst: { name: 'El Analista', icon: '🔬', desc: 'Altamente consistente con una leve flexibilidad contextual. Distingues los mecanismos de política de la retórica.' },
+      pragmatist: { name: 'El Pragmático', icon: '⚖️', desc: 'Mantienes posiciones fundamentales pero las ajustas en los márgenes basándote en escenarios reales.' },
+      empath: { name: 'El Empático', icon: '🌊', desc: 'Respondes fuertemente a las historias humanas y al contexto emocional. Tus posiciones cambian con la narrativa.' },
+      weathervane: { name: 'La Veleta', icon: '🌪️', desc: 'El encuadre redefine significativamente tu postura. Puedes tener posiciones diferentes sobre el mismo tema según cómo se presente.' },
+      mirror: { name: 'El Espejo', icon: '🪞', desc: 'Tus respuestas reflejan cualquier encuadre que se presente. Podrías no tener posiciones subyacentes estables en muchos temas.' }
+    },
+    verdicts: [
+      [0, 0, 'Sin sesgo detectable', 'Tus respuestas fueron completamente consistentes sin importar el encuadre de las preguntas. Ese nivel de consistencia lógica es raro.'],
+      [1, 15, 'Sesgo muy bajo', 'Tus respuestas fueron altamente consistentes. El encuadre de las preguntas casi no influyó en tu posición.'],
+      [16, 35, 'Sesgo bajo', 'Efectos de encuadre menores. Tus posiciones son mayormente estables, pero cambiaron ligeramente según la redacción.'],
+      [36, 60, 'Sesgo moderado', 'Mostraste una sensibilidad notable al encuadre en varios temas. Tus puntos de vista variaron según si la pregunta te orientaba en una dirección.'],
+      [61, 80, 'Sesgo alto', 'El encuadre influyó significativamente en muchas de tus respuestas. La misma pregunta de política, redactada de otra forma, a menudo produjo respuestas distintas.'],
+      [81, 100, 'Sesgo muy alto', 'Tus respuestas estuvieron fuertemente influenciadas por el encuadre de las preguntas más que por valores subyacentes consistentes.']
+    ],
+    insightInconsistent: '💡 <strong>Análisis cognitivo:</strong> Las palabras o los detalles de los escenarios en estas preguntas lograron cambiar tu perspectiva. Tu elección varió según el encuadre. Esto sugiere que tus convicciones en esta área dependen en gran medida del contexto.',
+    insightConsistent: '✅ <strong>Análisis cognitivo:</strong> Tus valores se mantuvieron firmes. Sin importar el tipo de encuadre, mantuviste posiciones ideológicas idénticas. Esto demuestra una alta consistencia lógica interna.'
+  },
+  it: {
+    of: 'di',
+    alignment: 'allineamento',
+    platformInsight: 'Approfondimento politico',
+    inspect: 'Ispeziona 🔍',
+    disagreeWith: 'Dove dissenti da <span id="disagree-party-name">{Party}</span>',
+    yourAnswer: 'La tua risposta',
+    partyPosition: 'Posizione di {Party}',
+    faceoffHeader: 'Confronto di incorniciamento cognitivo',
+    comparisonLabel: 'Confronto di coppie',
+    shiftDetected: 'Cambiamento di incorniciamento rilevato',
+    consistentStance: 'Posizione coerente',
+    framePro: 'Incorniciamento positivo (Autonomia)',
+    frameCon: 'Incorniciamento critico (Conseguenze)',
+    frameNeutral: 'Incorniciamento neutro',
+    yourChoice: 'La tua scelta',
+    skippedText: 'Saltata',
+    noPairsText: 'Non sono ancora stati completati confronti di incorniciamento per questo argomento.',
+    noPairsGeneralText: 'Nessuna coppia di domande completata per questo argomento. Esegui il test medio o lungo per sbloccare l\'analisi dettagliata delle coppie.',
+    gapClose: 'Il tuo risultato è ravvicinato: solo {gap} punti ti separano da {nextPartyName}. Potresti trovarti tra le due tradizioni.',
+    gapModerate: 'Ti allinei in modo significativo anche con {nextPartyName} ({nextPct}%).',
+    gapClear: 'Il tuo allineamento con {topPartyName} è chiaro, con {gap} punti di distacco dal partito successivo.',
+    profiles: {
+      axiom: { name: "L'Assioma", icon: '🔷', desc: "Inamovibile. I tuoi principi rimangono saldi indipendentemente dall'incorniciamento, dal contesto o dal richiamo emotivo." },
+      analyst: { name: "L'Analista", icon: '🔬', desc: 'Altamente coerente con una lieve flessibilità contestuale. Distingui i meccanismi politici dalla retorica.' },
+      pragmatist: { name: 'Il Pragmatico', icon: '⚖️', desc: 'Mantieni posizioni fondamentali ma le adatti ai margini in base agli scenari reali.' },
+      empath: { name: "L'Empatico", icon: '🌊', desc: 'Rispondi fortemente alle storie umane e al contesto emotivo. Le tue posizioni cambiano con la narrazione.' },
+      weathervane: { name: 'La Banderuola', icon: '🌪️', desc: "L'incorniciamento rimodella significativamente la tua posizione. Puoi assumere posizioni diverse sullo stesso tema a seconda di come viene presentato." },
+      mirror: { name: 'Lo Specchio', icon: '🪞', desc: 'Le tue risposte riflettono qualsiasi incorniciamento venga presentato. Potresti non avere posizioni di fondo stabili su molti argomenti.' }
+    },
+    verdicts: [
+      [0, 0, 'Nessun bias rilevabile', 'Le tue risposte sono state completamente coerenti, indipendentemente dall\'incorniciamento delle domande. Questo livello di coerenza logica è raro.'],
+      [1, 15, 'Bias molto basso', 'Le tue risposte sono state altamente coerenti. L\'incorniciamento della domanda non ha quasi influenzato la tua posizione.'],
+      [16, 35, 'Bias basso', 'Effetti di incorniciamento minori. Le tue posizioni sono perlopiù stabili, ma sono cambiate leggermente in base alla formulazione.'],
+      [36, 60, 'Bias moderato', 'Hai mostrato una sensibilità all\'incorniciamento notevole su diversi argomenti. I tuoi punti di vista sono variati a seconda che la domanda ti spingesse o meno in una direzione.'],
+      [61, 80, 'Bias elevato', 'L\'incorniciamento ha influenzato in modo significativo molte delle tue risposte. La stessa domanda politica, formulata diversamente, ha spesso prodotto risposte diverse.'],
+      [81, 100, 'Bias molto elevato', 'Le tue risposte sono state fortemente modellate dall\'incorniciamento delle domande piuttosto che da valori sottostanti coerenti.']
+    ],
+    insightInconsistent: '💡 <strong>Analisi cognitiva:</strong> Le parole o i dettagli degli scenari in queste domande sono riusciti a spostare la tua prospettiva. La tua scelta è cambiata in base all\'incorniciamento. Questo suggerisce che le tue convinzioni in quest\'area dipendono molto dal contesto.',
+    insightConsistent: '✅ <strong>Analisi cognitiva:</strong> I tuoi valori si sono mantenuti saldi. Indipendentemente dal tipo di incorniciamento, hai mantenuto posizioni ideologiche identiche. Ciò dimostra un\'elevata coerenza logica interna.'
+  },
+  nl: {
+    of: 'van',
+    alignment: 'overeenkomst',
+    platformInsight: 'Partijstandpunt Inzicht',
+    inspect: 'Inspecteren 🔍',
+    disagreeWith: 'Waar je afwijkt van <span id="disagree-party-name">{Party}</span>',
+    yourAnswer: 'Jouw antwoord',
+    partyPosition: 'Standpunt {Party}',
+    faceoffHeader: 'Beïnvloedingsanalyse',
+    comparisonLabel: 'Paarvergelijking',
+    shiftDetected: 'Formuleringseffect',
+    consistentStance: 'Consistente houding',
+    framePro: 'Positief geformuleerd',
+    frameCon: 'Kritisch geformuleerd',
+    frameNeutral: 'Neutrale formulering',
+    yourChoice: 'Jouw keuze',
+    skippedText: 'Overgeslagen',
+    noPairsText: 'Nog geen formuleringseffecten getest voor dit onderwerp.',
+    noPairsGeneralText: 'Geen voltooide vragenparen voor dit onderwerp om te vergelijken. Doe de gemiddelde of lange test om gedetailleerde paaranalyses te ontgrendelen.',
+    gapClose: 'Je resultaat ligt dicht bij elkaar — slechts {gap} punten scheiden je van {nextPartyName}. Je staat mogelijk tussen beide tradities in.',
+    gapModerate: 'Je hebt ook een duidelijke overeenkomst met {nextPartyName} ({nextPct}%).',
+    gapClear: 'Je overeenkomst met {topPartyName} is duidelijk, met {gap} punten voorsprong op de volgende partij.',
+    profiles: {
+      axiom: { name: 'Het Axioma', icon: '🔷', desc: 'Onwrikbaar. Jouw principes houden stand ongeacht de formulering, context of emotionele oproep.' },
+      analyst: { name: 'De Analist', icon: '🔬', desc: 'Zeer consistent met minimale contextuele flexibiliteit. Je onderscheidt beleidsmechanismen van retoriek.' },
+      pragmatist: { name: 'De Pragmaticus', icon: '⚖️', desc: "Je houdt vast aan kernstandpunten, maar past deze in concrete scenario's aan de marges aan." },
+      empath: { name: 'De Empaat', icon: '🌊', desc: 'Je reageert sterk op menselijke verhalen en emotionele context. Je standpunten verschuiven met het narratief mee.' },
+      weathervane: { name: 'De Windvaan', icon: '🌪️', desc: 'Formulering vormt je standpunt in sterke mate. Je kunt per presentatie verschillende standpunten over hetzelfde onderwerp innemen.' },
+      mirror: { name: 'De Spiegel', icon: '🪞', desc: 'Je antwoorden weerspiegelen het gepresenteerde kader. Je hebt op veel gebieden geen stabiele onderliggende standpunten.' }
+    },
+    verdicts: [
+      [0, 0, 'Geen aantoonbare beïnvloeding', 'Je antwoorden waren volledig consistent, ongeacht hoe de vragen geformuleerd waren. Die mate van logische consistentie is zeldzaam.'],
+      [1, 15, 'Zeer lage beïnvloeding', 'Je antwoorden waren zeer consistent. De formulering van de vraag had bijna geen invloed op je standpunt.'],
+      [16, 35, 'Lage beïnvloeding', 'Geringe formuleringseffecten. Je standpunten zijn meestal stabiel, maar verschoven licht afhankelijk van de verwoording.'],
+      [36, 60, 'Matige beïnvloeding', 'Je toonde merkbare gevoeligheid voor de formulering bij verschillende onderwerpen. Je meningen verschoven afhankelijk van of de vraag sturend was.'],
+      [61, 80, 'Hoge beïnvloeding', 'De formulering had een aanzienlijke invloed op veel van je antwoorden. Dezelfde beleidsvraag leidde anders verwoord vaak tot andere antwoorden.'],
+      [81, 100, 'Zeer hoge beïnvloeding', 'Je antwoorden werden sterk bepaald door de manier waarop vragen gesteld werden, in plaats van door consistente onderliggende waarden.']
+    ],
+    insightInconsistent: '💡 <strong>Cognitieve analyse:</strong> De bewoording of scenario-details in deze vragen hebben je perspectief verschoven. Je keuze veranderde afhankelijk van de formulering. Dit suggereert dat je overtuigingen op dit gebied contextgevoelig zijn.',
+    insightConsistent: '✅ <strong>Cognitieve analyse:</strong> Je waarden bleven standvastig. Ongeacht het type formulering behield je identieke posities. Dit getuigt van een hoge interne logische consistentie.'
+  },
+  sv: {
+    of: 'av',
+    alignment: 'matchning',
+    platformInsight: 'Partiprofil Insikt',
+    inspect: 'Inspektera 🔍',
+    disagreeWith: 'Där du inte håller med <span id="disagree-party-name">{Party}</span>',
+    yourAnswer: 'Ditt svar',
+    partyPosition: '{Party} ståndpunkt',
+    faceoffHeader: 'Formuleringsjämförelse',
+    comparisonLabel: 'Parjämförelse',
+    shiftDetected: 'Formuleringseffekt',
+    consistentStance: 'Konsekvent ståndpunkt',
+    framePro: 'Positivt formulerad',
+    frameCon: 'Kritiskt formulerad',
+    frameNeutral: 'Neutral formulering',
+    yourChoice: 'Ditt val',
+    skippedText: 'Överhoppad',
+    noPairsText: 'Inga parjämförelser gjorda för detta ämne än.',
+    noPairsGeneralText: 'Inga slutförda frågepar för detta ämne att jämföra. Gör det medellånga eller långa testet för att låsa upp detaljerad paranalys.',
+    gapClose: 'Ditt resultat är jämnt — endast {gap} poäng skiljer dig från {nextPartyName}. Du står möjligen mellan båda traditionerna.',
+    gapModerate: 'Du har också en tydlig överensstämmelse med {nextPartyName} ({nextPct}%).',
+    gapClear: 'Din överensstämmelse med {topPartyName} är tydlig, med {gap} poängs marginal till nästa parti.',
+    profiles: {
+      axiom: { name: 'Axiomet', icon: '🔷', desc: 'Orubblig. Dina principer håller oavsett formulering, sammanhang eller emotionella argument.' },
+      analyst: { name: 'Analytikern', icon: '🔬', desc: 'Mycket konsekvent med mindre kontextuell flexibilitet. Du skiljer på sakpolitik och retorik.' },
+      pragmatist: { name: 'Pragmatikern', icon: '⚖️', desc: 'Du har fasta ståndpunkter i grunden men anpassar dem i marginalen utifrån verkliga scenarier.' },
+      empath: { name: 'Empaten', icon: '🌊', desc: 'Du reagerar starkt på mänskliga berättelser och känslomässiga sammanhang. Dina åsikter skiftar med narrativet.' },
+      weathervane: { name: 'Vindflöjeln', icon: '🌪️', desc: 'Formuleringen formar dina ståndpunkter avsevärt. Du kan tycka olika i samma fråga beroende på hur den presenteras.' },
+      mirror: { name: 'Spegeln', icon: '🪞', desc: 'Dina svar speglar den vinkling som presenteras. Du saknar stabila underliggande åsikter i många frågor.' }
+    },
+    verdicts: [
+      [0, 0, 'Ingen märkbar partiskhet', 'Dina svar var helt konsekventa oavsett hur frågorna var formulerade. Den nivån av logisk konsekvens är sällsyn.'],
+      [1, 15, 'Mycket låg partiskhet', 'Dina svar var mycket konsekventa. Formuleringen av en fråga hade nästan ingen inverkan på din ställning.'],
+      [16, 35, 'Låg partiskhet', 'Mindre formuleringseffekter. Dina ställningstaganden är mestadels stabila men skiftade något beroende på hur en fråga var utformad.'],
+      [36, 60, 'Måttlig partiskhet', 'Du visade märkbar känslighet för formuleringar på flera ämnen. Dina åsikter skiftade beroende på om frågan tryckte dig för eller emot en ståndpunkt.'],
+      [61, 80, 'Hög partiskhet', 'Formuleringen hade en betydande inverkan på many av dina svar. Samma politiska fråga, formulerad annorlunda, gav ofta olika svar.'],
+      [81, 100, 'Mycket hög partiskhet', 'Dina svar var starkt präglade av hur frågorna var utformade snarare än av konsekventa underliggande värderingar.']
+    ],
+    insightInconsistent: '💡 <strong>Kognitiv analys:</strong> Formuleringen eller scenariodetaljerna i dessa frågor lyckades förskjuta ditt perspektiv. Ditt val ändrades beroende på vinklingen. Detta tyder på att dina åsikter här är kontextberoende.',
+    insightConsistent: '✅ <strong>Kognitiv analys:</strong> Dina värderingar stod fast. Oavsett om vinklingen var positiv eller kritisk behöll du identiska ståndpunkter. Detta visar på hög logisk konsekvens.'
+  },
+  da: {
+    of: 'af',
+    alignment: 'overensstemmelse',
+    platformInsight: 'Partiprofil Indblik',
+    inspect: 'Inspicér 🔍',
+    disagreeWith: 'Hvor du er uenig med <span id="disagree-party-name">{Party}</span>',
+    yourAnswer: 'Dit svar',
+    partyPosition: '{Party}s holdning',
+    faceoffHeader: 'Formuleringssammenligning',
+    comparisonLabel: 'Par-sammenligning',
+    shiftDetected: 'Formuleringseffekt registreret',
+    consistentStance: 'Konsekvent holdning',
+    framePro: 'Positivt formuleret',
+    frameCon: 'Kritisk formuleret',
+    frameNeutral: 'Neutral formulering',
+    yourChoice: 'Dit valg',
+    skippedText: 'Overloppet',
+    noPairsText: 'Ingen par-sammenligninger udført for dette emne endnu.',
+    noPairsGeneralText: 'Ingen gennemførte spørgsmålspar for dette emne at sammenligne. Tag den mellemste eller lange test for at låse op for detaljeret paranalyse.',
+    gapClose: 'Dit resultat er tæt — kun {gap} point adskiller dig fra {nextPartyName}. Du står muligvis mellem begge traditioner.',
+    gapModerate: 'Du har også en tydelig overensstemmelse med {nextPartyName} ({nextPct}%).',
+    gapClear: 'Din overensstemmelse med {topPartyName} er tydelig, med en margen på {gap} point til næste parti.',
+    profiles: {
+      axiom: { name: 'Aksiomet', icon: '🔷', desc: 'Urokkelig. Dine principper holder uanset formulering, kontekst eller følelsesmæssig appel.' },
+      analyst: { name: 'Analytikeren', icon: '🔬', desc: 'Meget konsekvent med mindre kontekstuel fleksibilitet. Du skelner mellem politiske mekanismer og retorik.' },
+      pragmatist: { name: 'Pragmatikeren', icon: '⚖️', desc: 'Du har faste kerneholdninger, men tilpasser dem i marginen baseret på reelle scenarier.' },
+      empath: { name: 'Empaten', icon: '🌊', desc: 'Du reagerer stærkt på menneskelige historier og følelsesmæssig kontekst. Dine holdninger skifter med narrativet.' },
+      weathervane: { name: 'Vejrhanen', icon: '🌪️', desc: 'Formuleringen former dine holdninger betydeligt. Du kan have forskellige holdninger til samme emne afhængigt af, hvordan det præsenteres.' },
+      mirror: { name: 'Spejlet', icon: '🪞', desc: 'Dine svar afspejler den formulering, der præsenteres. Du har muligvis ikke stabile underliggende holdninger til mange emner.' }
+    },
+    verdicts: [
+      [0, 0, 'Ingen påviselig partiskhed', 'Dine svar var helt konsekvente, uanset hvordan spørgsmålene var formuleret. Den grad af logisk konsekvens er sjælden.'],
+      [1, 15, 'Meget lav partiskhed', 'Dine svar var meget konsekvente. Formuleringen af et spørgsmål havde næsten ingen indflydelse på din holdning.'],
+      [16, 35, 'Lav partiskhed', 'Mindre formuleringseffekter. Dine holdninger er for det meste stabile, men ændrede sig lidt afhængigt af ordlyden.'],
+      [36, 60, 'Moderat partiskhed', 'Du viste tydelig følsomhed over for formuleringen på flere emner. Dine synspunkter ændrede sig afhængigt af, om spørgsmålet pressede dig i en bestemt retning.'],
+      [61, 80, 'Høj partiskhed', 'Formuleringen havde en væsentlig indflydelse på mange af dine svar. Det samme politiske spørgsmål, formuleret anderledes, gav ofte forskellige svar.'],
+      [81, 100, 'Meget høj partiskhed', 'Dine svar var stærkt præget af, hvordan spørgsmålene var formuleret, snarere end af konsekvente underliggende værdier.']
+    ],
+    insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller scenariedetaljerne i disse spørgsmål formåede at forskyde dit perspektiv. Dit valg ændrede sig afhængigt af vinklingen. Dette tyder på, at dine holdninger her er kontekstafhængige.',
+    insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Dine værdier stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høj logisk konsekvens.'
+  },
+  no: {
+    of: 'av',
+    alignment: 'samsvar',
+    platformInsight: 'Partiprofil Innsikt',
+    inspect: 'Inspiser 🔍',
+    disagreeWith: 'Der du er uenig med <span id="disagree-party-name">{Party}</span>',
+    yourAnswer: 'Ditt svar',
+    partyPosition: '{Party}s standpunkt',
+    faceoffHeader: 'Formuleringssammenligning',
+    comparisonLabel: 'Par-sammenligning',
+    shiftDetected: 'Formuleringseffekt registrert',
+    consistentStance: 'Konsekvent standpunkt',
+    framePro: 'Positivt formulert',
+    frameCon: 'Kritisk formulert',
+    frameNeutral: 'Nøytral formulering',
+    yourChoice: 'Ditt valg',
+    skippedText: 'Hoppet over',
+    noPairsText: 'Ingen par-sammenligninger utført for dette emnet ennå.',
+    noPairsGeneralText: 'Ingen fullførte spørsmålspar for dette emnet å sammenligne. Ta den middels eller lange testen for å låse opp detaljert paranalyse.',
+    gapClose: 'Resultatet ditt er jevnt — bare {gap} poeg skiller deg fra {nextPartyName}. Du står muligens mellom begge tradisjonene.',
+    gapModerate: 'Du har også et tydelig samsvar med {nextPartyName} ({nextPct}%).',
+    gapClear: 'Samsvaret ditt med {topPartyName} er tydelig, med en margin på {gap} poeng til neste parti.',
+    profiles: {
+      axiom: { name: 'Aksiomet', icon: '🔷', desc: 'Urokkelig. Dine prinsipper holder uanset formulering, kontekst eller følelsesmessig appell.' },
+      analyst: { name: 'Analytikeren', icon: '🔬', desc: 'Svært konsekvent med mindre kontekstuell fleksibilitet. Du skiller mellom politiske mekanismer og retorikk.' },
+      pragmatist: { name: 'Pragmatikeren', icon: '⚖️', desc: 'Du har faste kjerneholdninger, men justerer dem i marginen basert på reelle scenarier.' },
+      empath: { name: 'Empaten', icon: '🌊', desc: 'Du reagerer sterkt på menneskelige historier og følelsesmessig kontekst. Dine holdninger skifter med narrativet.' },
+      weathervane: { name: 'Værhanen', icon: '🌪️', desc: 'Formuleringen former dine holdninger betydelig. Du kan ha ulike holdninger til samme sak avhengig av hvordan den presenteres.' },
+      mirror: { name: 'Speilet', icon: '🪞', desc: 'Dine svar gjenspeiler den formuleringen som presenteres. Du har muligens ikke stabile underliggende holdninger til mange saker.' }
+    },
+    verdicts: [
+      [0, 0, 'Ingen merkbar partiskhet', 'Svarene dine var helt konsekvente, uansett hvordan spørsmålene var formulert. En slik grad av logisk konsekvens er sjelden.'],
+      [1, 15, 'Svært lav partiskhet', 'Svarene dine var svært konsekvente. Formuleringen av et spørsmål hadde nesten ingen innflytelse på din standpunkt.'],
+      [16, 35, 'Lav partiskhet', 'Mindre formuleringseffekter. Standpunktene dine er stort sett stabile, men endret seg litt avhengig av ordlyden.'],
+      [36, 60, 'Moderat partiskhet', 'Du viste tydelig følsomhet for formuleringen på flere emner. Synspunktene dine endret seg avhengig av om spørsmålet presset deg i en bestemt retning.'],
+      [61, 80, 'Høy partiskhet', 'Formuleringen hadde en betydelig innvirkning på mange av svarene dine. Det samme politiske spørsmålet, formulert annerledes, ga ofte ulike svar.'],
+      [81, 100, 'Svært høy partiskhet', 'Svarene dine var sterkt preget av hvordan spørsmålene var formulert, snarere enn av konsekvente underliggende verdier.']
+    ],
+    insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller scenariedetaljene i disse spørsmålene formådde å forskyve ditt perspektiv. Valget ditt endret seg avhengig av vinklingen. Dette tyder på at holdningene dine her er kontekstavhengige.',
+    insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Verdiene dine stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høy logisk konsekvens.'
+  },
+  fi: {
+    of: '/',
+    alignment: 'sopivuus',
+    platformInsight: 'Puolueohjelman näkökulma',
+    inspect: 'Tarkastele 🔍',
+    disagreeWith: 'Missä olet eri mieltä puolueen <span id="disagree-party-name">{Party}</span> kanssa',
+    yourAnswer: 'Vastauksesi',
+    partyPosition: 'Puolueen {Party} kanta',
+    faceoffHeader: 'Kognitiivinen kehystysvertailu',
+    comparisonLabel: 'Parinvertailu',
+    shiftDetected: 'Kehystysvaikutus havaittu',
+    consistentStance: 'Johdonmukainen kanta',
+    framePro: 'Positiivisesti kehystetty',
+    frameCon: 'Kriittisesti kehystetty',
+    frameNeutral: 'Neutraali kehystys',
+    yourChoice: 'Valintasi',
+    skippedText: 'Ohitettu',
+    noPairsText: 'Tälle aiheelle ei ole vielä tehty kehystysvertailuja.',
+    noPairsGeneralText: 'Ei valmiita kysymyspareja vertailtavaksi tälle aiheelle. Tee keskipitkä tai pitkä testi avataksesi yksityiskohtaisen parianalyysin.',
+    gapClose: 'Tuloksesi on täpärä — vain {gap} pistettä erottaa sinut puolueesta {nextPartyName}. Saatat olla näiden kahden välillä.',
+    gapModerate: 'Sovit myös merkittävästi yhteen puolueen {nextPartyName} kanssa ({nextPct}%).',
+    gapClear: 'Yhteensopivuutesi puolueen {topPartyName} kanssa on selvä, {gap} pisteen erolla seuraavaan puolueeseen.',
+    profiles: {
+      axiom: { name: 'Aksiooma', icon: '🔷', desc: 'Horjumaton. Periaatteesi pitävät riippumatta kehystyksestä, kontekstista tai tunnevalituksista.' },
+      analyst: { name: 'Analyytikko', icon: '🔬', desc: 'Erittäin johdonmukainen vähäisellä kontekstuaalisella joustavuudella. Erotat politiikan mekaniikan retoriikasta.' },
+      pragmatist: { name: 'Pragmaatikko', icon: '⚖️', desc: 'Pidät kiinni ydinkannoistasi, mutta sopeudat niitä marginaaleissa todellisten skenaarioiden perusteella.' },
+      empath: { name: 'Empaatikko', icon: '🌊', desc: 'Reagoit voimakkaasti inhimillisiin tarinoihin ja emotionaaliseen kontekstiin. Kantasi muuttuvat narratiivin mukaan.' },
+      weathervane: { name: 'Tuuliviiri', icon: '🌪️', desc: 'Kehystys muovaa kantaasi merkittävästi. Saatat olla eri mieltä samasta asiasta riippuen siitä, miten se esitetään.' },
+      mirror: { name: 'Peili', icon: '🪞', desc: 'Vastaukset heijastavat sitä kehystystä, joka esitetään. Sinulla ei ehkä ole vakaita taustakantoja monissa asioissa.' }
+    },
+    verdicts: [
+      [0, 0, 'Ei havaittavaa vinoumaa', 'Vastauksesi olivat täysin johdonmukaisia riippumatta kysymysten kehystyksestä. Tällainen looginen johdonmukaisuus on harvinaista.'],
+      [1, 15, 'Erittäin vähäinen vinouma', 'Vastauksesi olivat erittäin johdonmukaisia. Kysymyksen kehystyksellä ei ollut juuri lainkaan vaikutusta kantaasi.'],
+      [16, 35, 'Vähäinen vinouma', 'Pieniä kehystysvaikutuksia. Kantasi ovat enimmäkseen vakaat, mutta muuttuivat hieman sanamuodon mukaan.'],
+      [36, 60, 'Kohtalainen vinouma', 'Osoitit huomattavaa kehystysherkkyyttä useissa aiheissa. Mielipiteesi muuttuivat riippuen siitä, ohjasiko kysymys sinua johonkin suuntaan.'],
+      [61, 80, 'Voimakas vinouma', 'Kehystys vaikutti merkittävästi moniin vastauksiisi. Sama politiikkakysymys toisin muotoiltuna johti usein eri vastaukseen.'],
+      [81, 100, 'Erittäin voimakas vinouma', 'Kysymysten kehystys muovasi vastauksiasi voimakkaasti pikemmin kuin johdonmukaiset taustalla olevat arvot.']
+    ],
+    insightInconsistent: '💡 <strong>Kognitiivinen analyysi:</strong> Kysymysten sanamuodot tai skenaarioiden yksityiskohdat onnistuivat muuttamaan näkökulmaasi. Valintasi muuttui kehystyksen mukaan. Tämä viittaa siihen, että kantasi tässä aiheessa ovat tilannesidonnaisia.',
+    insightConsistent: '✅ <strong>Kognitiivinen analyysi:</strong> Arvosi pysyivät vahvoina. Riippumatta kehystyksestä säilytit identtiset ideologiset kannat. Tämä osoittaa korkeaa sisäistä loogista johdonmukaisuutta.'
+  }
+};
+
+window.getCognitiveProfile = function(biasScore, lang) {
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+  const p = tObj.profiles;
+  if (biasScore <= 10) return p.axiom;
+  if (biasScore <= 25) return p.analyst;
+  if (biasScore <= 45) return p.pragmatist;
+  if (biasScore <= 65) return p.empath;
+  if (biasScore <= 85) return p.weathervane;
+  return p.mirror;
+};
+
+window.toggleTheme = function() {
+  const isDark = document.documentElement.classList.toggle('dark-mode');
+  if (isDark) {
+    document.documentElement.classList.remove('light-mode');
+    if (typeof localStorage !== 'undefined') localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.classList.add('light-mode');
+    if (typeof localStorage !== 'undefined') localStorage.setItem('theme', 'light');
+  }
+};
+
+window.shareSocial = function(platform) {
+  const lang = window.currentLang || 'en';
+  if (!lastScore) return;
+
+  const pairAnswers = answers.filter(a => a.pair);
+  const pairs = {};
+  pairAnswers.forEach(a => {
+    if (!pairs[a.pair]) pairs[a.pair] = [];
+    pairs[a.pair].push(a);
+  });
+  
+  let shiftCount = 0;
+  let pairCount = 0;
+  Object.values(pairs).forEach(arr => {
+    if (arr.length >= 2) {
+      pairCount++;
+      const pos = arr.filter(x => {
+        let val = x.n !== undefined ? x.n : (x.e !== 0 ? x.e : (x.g !== 0 ? -x.g : 0));
+        return val > 0;
+      }).length;
+      const neg = arr.filter(x => {
+        let val = x.n !== undefined ? x.n : (x.e !== 0 ? x.e : (x.g !== 0 ? -x.g : 0));
+        return val < 0;
+      }).length;
+      if (Math.max(pos, neg) / (pos + neg) < 1.0) shiftCount++;
+    }
+  });
+  
+  const biasScore = pairCount > 0 ? Math.round((shiftCount / pairCount) * 100) : 0;
+  const profile = window.getCognitiveProfile(biasScore, lang);
+  
+  const hasParties = lastScore.partyScores && Object.keys(lastScore.partyScores).length > 0;
+  let label = '';
+  if (hasParties) {
+    const ranked = Object.entries(lastScore.partyScores).sort((a, b) => b[1] - a[1]);
+    const topPartyKey = ranked[0][0];
+    const topPct = ranked[0][1];
+    const m = PARTY_META[topPartyKey];
+    const partyName = m ? ((typeof m.name === 'object') ? m.name[lang] : m.name) : 'Independent';
+    label = `${topPct}% ${partyName}`;
+  } else if (typeof window.archetype === 'function') {
+    const arch = window.archetype(lastScore.eScore, lastScore.gScore);
+    label = arch.name;
+  }
+
+  const shareUrl = window.savedResultId 
+    ? `${window.location.protocol}//${window.location.host}/result/${window.savedResultId}`
+    : window.location.href;
+  
+  let text = '';
+  if (lang === 'de') {
+    text = hasParties
+      ? `Ich habe den CoreOpinion Politischen Kompass-Test gemacht! Meine Übereinstimmung: ${label}. Kognitiver Stil: ${profile.icon} ${profile.name} (${biasScore}% Framing-Verzerrung). Test machen:`
+      : `Ich habe den CoreOpinion Politischen Kompass-Test gemacht! Mein Archetyp: ${label}. Kognitiver Stil: ${profile.icon} ${profile.name} (${biasScore}% Framing-Verzerrung). Test machen:`;
+  } else if (lang === 'fr') {
+    text = hasParties
+      ? `J'ai fait le test de boussole politique CoreOpinion ! Mon alignement : ${label}. Style cognitif : ${profile.icon} ${profile.name} (${biasScore}% de biais de cadrage). Faites le test :`
+      : `J'ai fait le test de boussole politique CoreOpinion ! Mon archétype : ${label}. Style cognitif : ${profile.icon} ${profile.name} (${biasScore}% de biais de cadrage). Faites le test :`;
+  } else if (lang === 'nl') {
+    text = hasParties
+      ? `Ik heb de CoreOpinion politieke kompas-test gedaan! Mijn match: ${label}. Cognitieve stijl: ${profile.icon} ${profile.name} (${biasScore}% beïnvloedingsbias). Doe de test:`
+      : `Ik heb de CoreOpinion politieke kompas-test gedaan! Mijn archetype: ${label}. Cognitieve stijl: ${profile.icon} ${profile.name} (${biasScore}% beïnvloedingsbias). Doe de test:`;
+  } else if (lang === 'sv') {
+    text = hasParties
+      ? `Jag gjorde CoreOpinions politiska kompass-test! Matchning: ${label}. Kognitiv stil: ${profile.icon} ${profile.name} (${biasScore}% formuleringsbias). Gör testet du med:`
+      : `Jag gjorde CoreOpinions politiska kompass-test! Min arketyp: ${label}. Kognitiv stil: ${profile.icon} ${profile.name} (${biasScore}% formuleringsbias). Gör testet du med:`;
+  } else if (lang === 'da') {
+    text = hasParties
+      ? `Jeg tog CoreOpinions politiske kompas-test! Overensstemmelse: ${label}. Kognitiv stil: ${profile.icon} ${profile.name} (${biasScore}% formuleringsbias). Tag testen:`
+      : `Jeg tog CoreOpinions politiske kompas-test! Min arketype: ${label}. Kognitiv stil: ${profile.icon} ${profile.name} (${biasScore}% formuleringsbias). Tag testen:`;
+  } else if (lang === 'no') {
+    text = hasParties
+      ? `Jeg tok CoreOpinions politiske kompass-test! Samsvar: ${label}. Kognitiv stil: ${profile.icon} ${profile.name} (${biasScore}% formuleringsbias). Ta testen:`
+      : `Jeg tok CoreOpinions politiske kompass-test! Min arketype: ${label}. Kognitiv stil: ${profile.icon} ${profile.name} (${biasScore}% formuleringsbias). Ta testen:`;
+  } else if (lang === 'fi') {
+    text = hasParties
+      ? `Tein CoreOpinion-arvokoneen! Sopivuuteni: ${label}. Kognitiivinen tyyli: ${profile.icon} ${profile.name} (${biasScore}% kehystysvinouma). Tee testi:`
+      : `Tein CoreOpinion-arvokoneen! Arkkityyppini: ${label}. Kognitiivinen tyyli: ${profile.icon} ${profile.name} (${biasScore}% kehystysvinouma). Tee testi:`;
+  } else if (lang === 'es') {
+    text = hasParties
+      ? `¡Hice el test de brújula política CoreOpinion! Mi alineación: ${label}. Estilo cognitivo: ${profile.icon} ${profile.name} (${biasScore}% de sesgo de encuadre). Haz el test:`
+      : `¡Hice el test de brújula política CoreOpinion! Mi arquetipo: ${label}. Estilo cognitivo: ${profile.icon} ${profile.name} (${biasScore}% de sesgo de encuadre). Haz el test:`;
+  } else if (lang === 'it') {
+    text = hasParties
+      ? `Ho fatto il test della bussola politica CoreOpinion! Il mio allineamento: ${label}. Stile cognitivo: ${profile.icon} ${profile.name} (${biasScore}% di bias di incorniciamento). Fai il test:`
+      : `Ho fatto il test della bussola politica CoreOpinion! Il mio archetipo: ${label}. Stile cognitivo: ${profile.icon} ${profile.name} (${biasScore}% di bias di incorniciamento). Fai il test:`;
+  } else {
+    text = hasParties
+      ? `I took the CoreOpinion political compass test! My match: ${label}. Cognitive style: ${profile.icon} ${profile.name} (${biasScore}% framing bias). Take the test:`
+      : `I took the CoreOpinion political compass test! My archetype: ${label}. Cognitive style: ${profile.icon} ${profile.name} (${biasScore}% framing bias). Take the test:`;
+  }
+  
+  let url = '';
+  switch(platform) {
+    case 'x':
+      url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`;
+      break;
+    case 'facebook':
+      url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(text)}`;
+      break;
+    case 'whatsapp':
+      url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + shareUrl)}`;
+      break;
+    case 'linkedin':
+      url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+      break;
+  }
+  
+  if (url) window.open(url, '_blank', 'width=600,height=400');
+};
+
+// ============================================================
 // 1. NAVIGATION & ROUTING
 // ============================================================
 window.goTo = function(id) {
@@ -152,11 +701,9 @@ window.renderQ = function() {
   const pTxt = document.getElementById('prog-txt');
   if (pTxt) {
     const lang = window.currentLang || 'en';
-    const ofText = lang === 'de' ? 'von'
-                 : lang === 'fr' ? 'sur'
-                 : lang === 'nl' ? 'van'
-                 : 'of';
-    pTxt.textContent = `${qi + 1} ${ofText} ${total}`;
+    const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+    const ofText = tObj.of;
+    pTxt.textContent = ofText === '/' ? `${qi + 1} / ${total}` : `${qi + 1} ${ofText} ${total}`;
   }
 
   // Topic badge
@@ -440,11 +987,8 @@ window.renderResults = function() {
         const barColor = m.color || '#B0B5BC';
         const mName = (typeof m.name === 'object') ? m.name[lang] : m.name;
         
-        const alignmentText = lang === 'de' ? 'Übereinstimmung'
-                            : lang === 'fr' ? 'd\'alignement'
-                            : lang === 'nl' ? 'overeenkomst'
-                            : lang === 'sv' ? 'matchning'
-                            : 'alignment';
+        const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+        const alignmentText = tObj.alignment;
 
         row.innerHTML = `
           <div class="party-row-rank">${idx + 1}</div>
@@ -469,44 +1013,17 @@ window.renderResults = function() {
         ? PARTY_META[ranked[1][0]].name[lang]
         : PARTY_META[ranked[1][0]].name;
 
+      const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
       let gapText = '';
-      if (lang === 'de') {
-        gapText = gap < 8
-          ? `Dein Ergebnis ist knapp — nur ${gap} Punkte trennen dich von der ${nextPartyName}. Du stehst möglicherweise zwischen beiden Traditionen.`
-          : gap < 20
-          ? `Du weist auch eine deutliche Übereinstimmung mit der ${nextPartyName} auf (${ranked[1][1]}%).`
-          : `Deine Übereinstimmung mit der ${topPartyName} ist eindeutig, mit ${gap} Punkten Vorsprung vor der nächsten Partei.`;
-      } else if (lang === 'fr') {
-        gapText = gap < 8
-          ? `Votre résultat est serré — seulement ${gap} points vous séparent de ${nextPartyName}. Vous chevauchez probablement les deux sensibilités.`
-          : gap < 20
-          ? `Vous vous alignez également de manière significative avec ${nextPartyName}, avec un score de ${ranked[1][1]}%.`
-          : `Votre alignement avec ${topPartyName} est clair, avec ${gap} points d'écart avec le parti suivant.`;
-      } else if (lang === 'nl') {
-        gapText = gap < 8
-          ? `Je resultaat ligt dicht bij elkaar — slechts ${gap} punten scheiden je van ${nextPartyName}. Je staat mogelijk tussen beide tradities in.`
-          : gap < 20
-          ? `Je hebt ook een duidelijke overeenkomst met ${nextPartyName} (${ranked[1][1]}%).`
-          : `Je overeenkomst met ${topPartyName} is duidelijk, met ${gap} punten voorsprong op de volgende partij.`;
-      } else if (lang === 'sv') {
-        gapText = gap < 8
-          ? `Ditt resultat är jämnt — endast ${gap} poäng skiljer dig från ${nextPartyName}. Du står möjligen mellan båda traditionerna.`
-          : gap < 20
-          ? `Du har också en tydlig överensstämmelse med ${nextPartyName} (${ranked[1][1]}%).`
-          : `Din överensstämmelse med ${topPartyName} är tydlig, med ${gap} poängs marginal till nästa parti.`;
-      } else { // default 'en'
-        gapText = gap < 8 
-          ? `Your result is close — only ${gap} points separates you from ${nextPartyName}. You may genuinely straddle both traditions.`
-          : gap < 20 
-          ? `You align meaningfully with ${nextPartyName} too, scoring ${ranked[1][1]}%.`
-          : `Your alignment with ${topPartyName} is clear, with ${gap} points separating you from the next closest party.`;
+      if (gap < 8) {
+        gapText = tObj.gapClose.replace('{gap}', gap).replace('{nextPartyName}', nextPartyName);
+      } else if (gap < 20) {
+        gapText = tObj.gapModerate.replace('{nextPartyName}', nextPartyName).replace('{nextPct}', ranked[1][1]);
+      } else {
+        gapText = tObj.gapClear.replace('{topPartyName}', topPartyName).replace('{gap}', gap);
       }
 
-      const platformInsightHeader = lang === 'de' ? 'Parteiplattform-Einblick'
-                                  : lang === 'fr' ? 'Aperçu du programme'
-                                  : lang === 'nl' ? 'Partijstandpunt Inzicht'
-                                  : lang === 'sv' ? 'Partiprofil Insikt'
-                                  : 'Platform Insight';
+      const platformInsightHeader = tObj.platformInsight;
 
       rInsight.innerHTML = `
         <p style="margin-bottom:14px; font-weight:500; color:var(--ink)">${topPartyName} ${platformInsightHeader}</p>
@@ -537,6 +1054,8 @@ window.renderResults = function() {
   // --- Render 2D SVG Compass Dot & Axis Sliders ---
   const cDot = document.getElementById('cdot');
   const cDotRing = document.getElementById('cdot-ring');
+  const cDotGlow = document.getElementById('cdot-glow');
+  const glowStart = document.getElementById('glow-start');
   
   // Coordinates (centre=170, range=152 on each side)
   const dotX = (170 + eScore * 152).toFixed(1);
@@ -544,8 +1063,19 @@ window.renderResults = function() {
 
   if (cDot) cDot.setAttribute('cx', dotX);
   if (cDotRing) cDotRing.setAttribute('cx', dotX);
+  if (cDotGlow) cDotGlow.setAttribute('cx', dotX);
   if (cDot) cDot.setAttribute('cy', dotY);
   if (cDotRing) cDotRing.setAttribute('cy', dotY);
+  if (cDotGlow) cDotGlow.setAttribute('cy', dotY);
+
+  if (glowStart) {
+    let color = '#1E4D8C'; // default navy
+    if (eScore <= 0 && gScore >= 0) color = '#4B8EF1'; // Auth-Left
+    else if (eScore > 0 && gScore >= 0) color = '#F5A623'; // Auth-Right
+    else if (eScore <= 0 && gScore < 0) color = '#3DBF82'; // Lib-Left
+    else if (eScore > 0 && gScore < 0) color = '#E85D6B'; // Lib-Right
+    glowStart.setAttribute('stop-color', color);
+  }
 
   // Soft slide transition for results dashboard UI
   setTimeout(() => {
@@ -561,82 +1091,31 @@ window.renderResults = function() {
 
   // --- Render Framing Bias Panel ---
   
-  let verdictTitle = '';
-  let verdictDesc = '';
-  
-  if (lang === 'de') {
-    const vDe = [
-      [0, 0, 'Keine spürbare Verzerrung', 'Deine Antworten waren völlig konsistent, unabhängig davon, wie die Fragen formuliert waren. Ein so hohes Maß an logischer Konsistenz ist selten.'],
-      [1, 15, 'Sehr geringe Verzerrung', 'Deine Antworten waren hochgradig konsistent. Die Formulierung einer Frage hatte fast keinen Einfluss auf deine Position.'],
-      [16, 35, 'Geringe Verzerrung', 'Geringe Formulierungseffekte. Deine Positionen sind meist stabil, verschoben sich jedoch leicht je nach Wortlaut der Frage.'],
-      [36, 60, 'Mäßige Verzerrung', 'Du hast bei mehreren Themen eine spürbare Empfindlichkeit gegenüber der Formulierung gezeigt. Deine Ansichten verschoben sich je nachdem, ob die Frage dich in eine bestimmte Richtung drängte.'],
-      [61, 80, 'Hohe Verzerrung', 'Die Formulierung hatte einen erheblichen Einfluss auf viele deiner Antworten. Dieselbe politische Frage erzeugte anders formuliert oft unterschiedliche Reaktionen.'],
-      [81, 100, 'Sehr hohe Verzerrung', 'Deine Antworten wurden stark davon geprägt, wie Fragen formuliert waren, und weniger von konsistenten Grundwerten.']
-    ];
-    const bv = vDe.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || vDe[0];
-    verdictTitle = bv[2];
-    verdictDesc = bv[3];
-  } else if (lang === 'fr') {
-    const vFr = [
-      [0, 0, 'Aucun biais détectable', 'Vos réponses étaient totalement cohérentes, quelle que soit la formulation des questions. Un tel niveau de cohérence logique est rare.'],
-      [1, 15, 'Biais très faible', 'Vos réponses étaient très cohérentes. La formulation d\'une question n\'a eu presque aucune influence sur votre position.'],
-      [16, 35, 'Biais faible', 'Effets mineurs de formulation. Vos positions sont généralement stables mais ont légèrement varié selon le choix des mots.'],
-      [36, 60, 'Biais modéré', 'Vous avez montré une sensibilité notable à la formulation sur plusieurs sujets. Vos opinions ont changé selon que la question vous poussait ou non dans une direction.'],
-      [61, 80, 'Biais élevé', 'La formulation a eu une influence significative sur beaucoup de vos réponses. La même question de politique publique a produit des réponses différentes selon sa formulation.'],
-      [81, 100, 'Biais très élevé', 'Vos réponses ont été fortement façonnées par la manière dont les questions étaient présentées plutôt que par des valeurs sous-jacentes cohérentes.']
-    ];
-    const bv = vFr.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || vFr[0];
-    verdictTitle = bv[2];
-    verdictDesc = bv[3];
-  } else if (lang === 'nl') {
-    const vNl = [
-      [0, 0, 'Geen aantoonbare beïnvloeding', 'Je antwoorden waren volledig consistent, ongeacht hoe de vragen geformuleerd waren. Die mate van logische consistentie is zeldzaam.'],
-      [1, 15, 'Zeer lage beïnvloeding', 'Je antwoorden waren zeer consistent. De formulering van de vraag had bijna geen invloed op je standpunt.'],
-      [16, 35, 'Lage beïnvloeding', 'Geringe formuleringseffecten. Je standpunten zijn meestal stabiel, maar verschoven licht afhankelijk van de verwoording.'],
-      [36, 60, 'Matige beïnvloeding', 'Je toonde merkbare gevoeligheid voor de formulering bij verschillende onderwerpen. Je meningen verschoven afhankelijk van of de vraag sturend was.'],
-      [61, 80, 'Hoge beïnvloeding', 'De formulering had een aanzienlijke invloed op veel van je antwoorden. Dezelfde beleidsvraag leidde anders verwoord vaak tot andere antwoorden.'],
-      [81, 100, 'Zeer hoge beïnvloeding', 'Je antwoorden werden sterk bepaald door de manier waarop vragen gesteld werden, in plaats van door consistente onderliggende waarden.']
-    ];
-    const bv = vNl.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || vNl[0];
-    verdictTitle = bv[2];
-    verdictDesc = bv[3];
-  } else if (lang === 'sv') {
-    const vSv = [
-      [0, 0, 'Ingen märkbar partiskhet', 'Dina svar var helt konsekventa oavsett hur frågorna var formulerade. Den nivån av logisk konsekvens är sällsynt.'],
-      [1, 15, 'Mycket låg partiskhet', 'Dina svar var mycket konsekventa. Formuleringen av en fråga hade nästan ingen inverkan på din ställning.'],
-      [16, 35, 'Låg partiskhet', 'Mindre formuleringseffekter. Dina ställningstaganden är mestadels stabila men skiftade något beroende på hur en fråga var utformad.'],
-      [36, 60, 'Måttlig partiskhet', 'Du visade märkbar känslighet för formuleringar på flera ämnen. Dina åsikter skiftade beroende på om frågan tryckte dig för eller emot en ståndpunkt.'],
-      [61, 80, 'Hög partiskhet', 'Formuleringen hade en betydande inverkan på many av dina svar. Samma politiska fråga, formulerad annorlunda, gav ofta olika svar.'],
-      [81, 100, 'Mycket hög partiskhet', 'Dina svar var starkt präglade av hur frågorna var utformade snarare än av konsekventa underliggande värderingar.']
-    ];
-    const bv = vSv.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || vSv[0];
-    verdictTitle = bv[2];
-    verdictDesc = bv[3];
-  } else {
-    const biasVerdicts = [
-      [0, 0, 'No detectable bias', 'Your answers were completely consistent regardless of how questions were framed. That level of logical consistency is rare.'],
-      [1, 15, 'Very low bias', 'Your answers were highly consistent. The framing of a question had almost no influence on your position.'],
-      [16, 35, 'Low bias', 'Minor framing effects. Your positions are mostly stable but shifted slightly depending on how a question was worded.'],
-      [36, 60, 'Moderate bias', 'You showed noticeable framing sensitivity on several topics. Your views shifted depending on whether the question pushed you toward or against a position.'],
-      [61, 80, 'High bias', 'Framing had a significant influence on many of your answers. The same policy question, worded differently, often produced different responses.'],
-      [81, 100, 'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
-    ];
-    const bv = biasVerdicts.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || biasVerdicts[0];
-    verdictTitle = bv[2];
-    verdictDesc = bv[3];
-  }
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+  const bv = tObj.verdicts.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || tObj.verdicts[0];
+  const verdictTitle = bv[2];
+  const verdictDesc = bv[3];
+
+  const profile = window.getCognitiveProfile(overallBias, lang);
   
   // Set bias text in UI
   const bNum = document.getElementById('bias-num') || document.getElementById('r-bias-num');
   const bVerdict = document.getElementById('bias-verdict') || document.getElementById('r-bias-verdict');
   const bExplain = document.getElementById('bias-explain');
   
+  const bProfIcon = document.getElementById('bias-profile-icon');
+  const bProfText = document.getElementById('bias-profile-text');
+  
   if (bNum) bNum.textContent = overallBias + '%';
   if (bVerdict) {
     bVerdict.textContent = verdictTitle;
     bVerdict.className = 'bias-verdict ' + (overallBias < 20 ? 'v-green' : overallBias < 60 ? 'v-amber' : 'v-red');
   }
-  if (bExplain) bExplain.textContent = verdictDesc;
+  if (bProfIcon) bProfIcon.textContent = profile.icon;
+  if (bProfText) bProfText.textContent = profile.name;
+  if (bExplain) {
+    bExplain.innerHTML = `<p style="margin-bottom:8px">${verdictDesc}</p><p style="font-weight:400;color:var(--ink-soft);font-size:11.5px;line-height:1.5;margin-top:6px;"><strong>${profile.icon} ${profile.name}:</strong> ${profile.desc}</p>`;
+  }
 
   // Renders bias rows with cursor triggers and "Inspect 🔍" links
   const biasRowsEl = document.getElementById('bias-rows') || document.getElementById('r-bias-rows');
@@ -644,11 +1123,7 @@ window.renderResults = function() {
     biasRowsEl.innerHTML = '';
     const sortedTopics = Object.entries(topicBiasAgg).sort((a, b) => b[1] - a[1]);
     
-    const inspectLabel = lang === 'de' ? 'Ansehen 🔍'
-                       : lang === 'fr' ? 'Inspecter 🔍'
-                       : lang === 'nl' ? 'Inspecteren 🔍'
-                       : lang === 'sv' ? 'Inspektera 🔍'
-                       : 'Inspect 🔍';
+    const inspectLabel = tObj.inspect;
                        
     sortedTopics.forEach(([topic, scoreVal]) => {
       const color = scoreVal < 20 ? '#2D9B5F' : scoreVal < 50 ? '#E8A020' : '#C0392B';
@@ -687,6 +1162,12 @@ window.renderResults = function() {
       dPartyName.textContent = meta.name;
     }
   }
+
+  // --- Render Topic Stance Heatmap ---
+  if (typeof window.calculateTopicStances === 'function' && typeof window.renderTopicHeatmap === 'function') {
+    const stances = window.calculateTopicStances(answers);
+    window.renderTopicHeatmap(stances);
+  }
 };
 
 // ============================================================
@@ -708,62 +1189,18 @@ window.showBiasFaceoff = function(topic) {
 
   const lang = window.currentLang || 'en';
 
-  let faceoffHeader = 'Cognitive Framing Face-off';
-  let comparisonLabel = 'Pair Comparison';
-  let shiftDetected = 'Framing Shift Detected';
-  let consistentStance = 'Consistent Stance';
-  let framePro = 'Support / Autonomy-framed';
-  let frameCon = 'Critical / Consequence-framed';
-  let frameNeutral = 'Neutral Framing';
-  let yourChoice = 'Your choice';
-  let skippedText = 'Skipped';
-  let noPairsText = 'No framing contrasts completed for this topic yet.';
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
 
-  if (lang === 'de') {
-    faceoffHeader = 'Framing-Vergleich';
-    comparisonLabel = 'Paarweiser Vergleich';
-    shiftDetected = 'Formulierungs-Effekt';
-    consistentStance = 'Konsistente Haltung';
-    framePro = 'Positiv / Gewinne-fokussiert';
-    frameCon = 'Kritisch / Verlust-fokussiert';
-    frameNeutral = 'Neutrale Formulierung';
-    yourChoice = 'Deine Antwort';
-    skippedText = 'Übersprungen';
-    noPairsText = 'Für dieses Thema wurden noch keine Framing-Vergleiche durchgeführt.';
-  } else if (lang === 'fr') {
-    faceoffHeader = 'Comparatif d\'effets de cadrage';
-    comparisonLabel = 'Comparaison de paires';
-    shiftDetected = 'Sensibilité au cadrage';
-    consistentStance = 'Position cohérente';
-    framePro = 'Cadrage positif (Autonomie)';
-    frameCon = 'Cadrage négatif (Conséquences)';
-    frameNeutral = 'Cadrage neutre';
-    yourChoice = 'Votre choix';
-    skippedText = 'Ignoré';
-    noPairsText = 'Aucune comparaison de cadrage effectuée pour ce sujet.';
-  } else if (lang === 'nl') {
-    faceoffHeader = 'Beïnvloedingsanalyse';
-    comparisonLabel = 'Paarvergelijking';
-    shiftDetected = 'Formuleringseffect';
-    consistentStance = 'Consistente houding';
-    framePro = 'Positief geformuleerd';
-    frameCon = 'Kritisch geformuleerd';
-    frameNeutral = 'Neutrale formulering';
-    yourChoice = 'Jouw keuze';
-    skippedText = 'Overgeslagen';
-    noPairsText = 'Nog geen formuleringseffecten getest voor dit onderwerp.';
-  } else if (lang === 'sv') {
-    faceoffHeader = 'Formuleringsjämförelse';
-    comparisonLabel = 'Parjämförelse';
-    shiftDetected = 'Formuleringseffekt';
-    consistentStance = 'Konsekvent ståndpunkt';
-    framePro = 'Positivt formulerad';
-    frameCon = 'Kritiskt formulerad';
-    frameNeutral = 'Neutral formulering';
-    yourChoice = 'Ditt val';
-    skippedText = 'Överhoppad';
-    noPairsText = 'Inga parjämförelser gjorda för detta ämne än.';
-  }
+  const faceoffHeader = tObj.faceoffHeader;
+  const comparisonLabel = tObj.comparisonLabel;
+  const shiftDetected = tObj.shiftDetected;
+  const consistentStance = tObj.consistentStance;
+  const framePro = tObj.framePro;
+  const frameCon = tObj.frameCon;
+  const frameNeutral = tObj.frameNeutral;
+  const yourChoice = tObj.yourChoice;
+  const skippedText = tObj.skippedText;
+  const noPairsText = tObj.noPairsText;
 
   let html = `<div style="font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink);margin-bottom:16px;">🔍 ${faceoffHeader}: ${topic}</div>`;
   let hasPairs = false;
@@ -834,31 +1271,7 @@ window.showBiasFaceoff = function(topic) {
       `;
     });
 
-    let insightDe = isInconsistent
-      ? `💡 <strong>Kognitive Analyse:</strong> Die Formulierung oder Kontextdetails dieser Fragen haben deine Perspektive verschoben. Deine Wahl änderte sich je nachdem, ob ein positiver Aspekt oder negative Konsequenzen im Fokus standen. Dies deutet darauf hin, dass deine Überzeugungen in diesem Bereich kontextabhängig sind.`
-      : `✅ <strong>Kognitive Analyse:</strong> Deine Werte blieben fest. Ob positive Formulierung oder kritische Betrachtung, du hast identische Positionen beibehalten. Dies beweist hohe logische Konsistenz und Unempfindlichkeit gegenüber sprachlichen Framing-Effekten.`;
-
-    let insightFr = isInconsistent
-      ? `💡 <strong>Analyse cognitive:</strong> Les mots ou les détails de scénarios dans ces questions ont réussi à décaler votre point de vue. Votre choix a changé selon le cadrage. Cela suggère que vos convictions dans ce domaine dépendent fortement du contexte.`
-      : `✅ <strong>Analyse cognitive:</strong> Vos valeurs sont restées fermes. Quel que soit le cadrage, vous avez maintenu des positions idéologiques identiques. Cela démontre une cohérence interne élevée.`;
-
-    let insightNl = isInconsistent
-      ? `💡 <strong>Cognitieve analyse:</strong> De bewoording of scenario-details in deze vragen hebben je perspectief verschoven. Je keuze veranderde afhankelijk van de formulering. Dit suggereert dat je overtuigingen op dit gebied contextgevoelig zijn.`
-      : `✅ <strong>Cognitieve analyse:</strong> Je waarden bleven standvastig. Ongeacht het type formulering behield je identieke posities. Dit getuigt van een hoge interne logische consistentie.`;
-
-    let insightSv = isInconsistent
-      ? `💡 <strong>Kognitiv analys:</strong> Formuleringen eller scenariodetaljerna i dessa frågor lyckades förskjuta ditt perspektiv. Ditt val ändrades beroende på vinklingen. Detta tyder på att dina åsikter här är kontextberoende.`
-      : `✅ <strong>Kognitiv analys:</strong> Dina värderingar stod fast. Oavsett om vinklingen var positiv eller kritisk behöll du identiska ståndpunkter. Detta visar på hög logisk konsekvens.`;
-
-    let insightEn = isInconsistent
-      ? `💡 <strong>Cognitive Analysis:</strong> The emotional wording or scenario details in these questions successfully shifted your perspective. By swapping between an autonomous support frame and a systemic consequence frame, your choice was altered. This suggests that your beliefs in this area are contextually dependent rather than absolute, responding strongly to whatever specific narrative lens is highlighted.`
-      : `✅ <strong>Cognitive Analysis:</strong> Your values held firm. Whether presented with positive support framing or critical framing, you maintained identical ideological positions. This demonstrates high internal logical consistency and resistance to rhetorical framing.`;
-
-    const dynamicAnalysis = lang === 'de' ? insightDe
-                          : lang === 'fr' ? insightFr
-                          : lang === 'nl' ? insightNl
-                          : lang === 'sv' ? insightSv
-                          : insightEn;
+    const dynamicAnalysis = isInconsistent ? tObj.insightInconsistent : tObj.insightConsistent;
 
     html += `
         </div>
@@ -870,7 +1283,7 @@ window.showBiasFaceoff = function(topic) {
   });
 
   if (!hasPairs) {
-    html += `<div style="font-size:13px;color:var(--ink-muted);font-weight:300;text-align:center;padding:20px;">No completed question pairs for this topic to compare. Take the Medium or Long test to unlock detailed pair analysis.</div>`;
+    html += `<div style="font-size:13px;color:var(--ink-muted);font-weight:300;text-align:center;padding:20px;">${tObj.noPairsGeneralText}</div>`;
   }
 
   container.innerHTML = html;
@@ -898,6 +1311,7 @@ window.saveResults = async function() {
   
   const { partyScores, eScore, gScore, overallBias } = window.score();
   const hasParties = (typeof PARTY_META !== 'undefined');
+  const stances = window.calculateTopicStances(answers);
 
   // Obtain demographics fields safely
   const age = document.getElementById('d-age') ? document.getElementById('d-age').value || null : null;
@@ -910,57 +1324,41 @@ window.saveResults = async function() {
     ? document.getElementById('d-nationality').value || null
     : (!hasParties && document.getElementById('d-country') ? document.getElementById('d-country').value || null : null);
 
+  const biasBreakdown = hasParties ? { ...partyScores } : {};
+  biasBreakdown.__overall_bias = overallBias;
+  biasBreakdown.__stances = stances;
+  if (gender) biasBreakdown.__gender = gender;
+  if (nationality) biasBreakdown.__nationality = nationality;
+
   const payload = {
     email,
     mode: hasParties ? 'country' : 'general',
     e_score: parseFloat(eScore.toFixed(4)),
     g_score: parseFloat(gScore.toFixed(4)),
-    bias_score: overallBias,
     age,
-    country, // keeping for backward compatibility with schema
+    country: hasParties ? country : (nationality || null),
     political_id,
-    gender,
-    nationality: nationality || (hasParties ? window.getCurrentCountryName() : null),
-    consent: true,
+    archetype: hasParties ? Object.entries(partyScores).sort((a, b) => b[1] - a[1])[0][0] : null,
+    bias_breakdown: biasBreakdown,
     created_at: new Date().toISOString()
   };
 
-  if (hasParties) {
-    payload.archetype = Object.entries(partyScores).sort((a, b) => b[1] - a[1])[0][0];
-    payload.bias_breakdown = partyScores;
-  }
-
   try {
-    if (typeof sbInsert === 'function') {
-      await sbInsert('coreopinion_results', payload);
-      
-      // Fire result email via Supabase Edge Function (non-blocking, best effort)
-      if (typeof SB_URL !== 'undefined' && typeof SB_KEY !== 'undefined') {
-        fetch(`${SB_URL}/functions/v1/send-coreopinion-email`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'apikey': SB_KEY,
-            'Authorization': `Bearer ${SB_KEY}`
-          },
-          body: JSON.stringify({
-            record: payload
-          })
-        }).catch(err => {
-          console.warn("Email Edge Function dispatch failed:", err);
-        });
-      }
+    const res = await fetch('/api/results', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error('API save failed');
+    const data = await res.json();
+    window.savedResultId = data.id;
 
-      statusEl.style.color = 'var(--green)';
-      statusEl.textContent = `Saved successfully! We have emailed your diagnostic report to ${email}.`;
-    } else {
-      // Simulate save for offline robustness
-      setTimeout(() => {
-        statusEl.style.color = 'var(--green)';
-        statusEl.textContent = `Results saved! Diagnostic report emailed to ${email}.`;
-      }, 1000);
-    }
+    statusEl.style.color = 'var(--green)';
+    statusEl.textContent = `Saved successfully! We have emailed your diagnostic report to ${email}.`;
   } catch (err) {
+    console.error("Database save failed:", err);
     statusEl.style.color = 'var(--red)';
     statusEl.textContent = 'Something went wrong. Please try again.';
   }
@@ -976,9 +1374,10 @@ window.getCurrentCountryName = function() {
 window.autoSaveAnonymousResults = async function() {
   const { partyScores, eScore, gScore, overallBias } = window.score();
   const hasParties = (typeof PARTY_META !== 'undefined');
+  const stances = window.calculateTopicStances(answers);
 
   const age = document.getElementById('d-age') ? document.getElementById('d-age').value || null : null;
-  const region = document.getElementById('d-country') ? document.getElementById('d-country').value || null : null;
+  const country = document.getElementById('d-country') ? document.getElementById('d-country').value || null : null;
   const political_id = document.getElementById('d-party') 
     ? document.getElementById('d-party').value || null 
     : (document.getElementById('d-pol') ? document.getElementById('d-pol').value || null : null);
@@ -987,33 +1386,38 @@ window.autoSaveAnonymousResults = async function() {
     ? document.getElementById('d-nationality').value || null
     : (!hasParties && document.getElementById('d-country') ? document.getElementById('d-country').value || null : null);
 
+  const biasBreakdown = hasParties ? { ...partyScores } : {};
+  biasBreakdown.__overall_bias = overallBias;
+  biasBreakdown.__stances = stances;
+  if (gender) biasBreakdown.__gender = gender;
+  if (nationality) biasBreakdown.__nationality = nationality;
+
   const payload = {
     mode: hasParties ? 'country' : 'general',
     e_score: parseFloat(eScore.toFixed(4)),
     g_score: parseFloat(gScore.toFixed(4)),
-    bias_score: overallBias,
     age,
-    region: hasParties ? region : null, // subdivisions only for countries
+    country: hasParties ? country : (nationality || null),
     political_id,
-    gender,
-    nationality: nationality || (hasParties ? window.getCurrentCountryName() : null),
-    consent: true,
+    archetype: hasParties ? Object.entries(partyScores).sort((a, b) => b[1] - a[1])[0][0] : null,
+    bias_breakdown: biasBreakdown,
     created_at: new Date().toISOString()
   };
 
-  if (hasParties) {
-    payload.archetype = Object.entries(partyScores).sort((a, b) => b[1] - a[1])[0][0];
-    payload.bias_breakdown = partyScores;
-  }
-
-  if (typeof sbInsert === 'function') {
-    // Try to auto-save to database, wrapped in try/catch to guarantee robustness
-    try {
-      await sbInsert('coreopinion_results', payload);
-      console.log("Results auto-saved successfully (anonymous).");
-    } catch (e) {
-      console.warn("Database auto-save failed. Proceeding normally:", e);
-    }
+  try {
+    const res = await fetch('/api/results', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error('API save failed');
+    const data = await res.json();
+    window.savedResultId = data.id;
+    console.log("Results auto-saved successfully (anonymous). ID:", data.id);
+  } catch (e) {
+    console.warn("Database auto-save failed. Proceeding normally:", e);
   }
 };
 
@@ -1021,19 +1425,23 @@ window.copyLink = function() {
   const { partyScores, overallBias } = window.score();
   const hasParties = (typeof PARTY_META !== 'undefined');
   
+  let shareUrl = window.savedResultId 
+    ? `${window.location.protocol}//${window.location.host}/result/${window.savedResultId}`
+    : window.location.href;
+    
   let text = '';
   if (hasParties) {
     const topMatch = Object.entries(partyScores).sort((a, b) => b[1] - a[1])[0];
-    text = `My political alignment: ${PARTY_META[topMatch[0]].name} (${topMatch[1]}% match) | Framing Bias: ${overallBias}% | Take the test at coreopinion.org`;
+    text = `My political alignment: ${PARTY_META[topMatch[0]].name} (${topMatch[1]}% match) | Framing Bias: ${overallBias}% | View my full report: ${shareUrl}`;
   } else {
-    text = `Take the political compass test that also reveals your cognitive framing bias! Mine was ${overallBias}% bias. Discover yours at coreopinion.org`;
+    text = `Take the political compass test that also reveals your cognitive framing bias! Mine was ${overallBias}% bias. Discover yours: ${shareUrl}`;
   }
   
   navigator.clipboard.writeText(text).then(() => {
     const statusEl = document.getElementById('save-status');
     if (statusEl) {
       statusEl.style.color = 'var(--green)';
-      statusEl.textContent = 'Results copied to clipboard! Share it with your friends.';
+      statusEl.textContent = 'Results link copied to clipboard! Share it with your friends.';
     }
   });
 };
@@ -1080,31 +1488,13 @@ window.renderDisagreements = function(topParty, partyName, topPct) {
   const lang = window.currentLang || 'en';
   
   const labelEl = el.querySelector('div[style*="letter-spacing:2px"]');
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
   if (labelEl) {
-    if (lang === 'de') {
-      labelEl.innerHTML = `Hier weichst du von der <span id="disagree-party-name">${partyName}</span> ab`;
-    } else if (lang === 'fr') {
-      labelEl.innerHTML = `Où vous différez de <span id="disagree-party-name">${partyName}</span>`;
-    } else if (lang === 'nl') {
-      labelEl.innerHTML = `Waar je afwijkt van <span id="disagree-party-name">${partyName}</span>`;
-    } else if (lang === 'sv') {
-      labelEl.innerHTML = `Där du inte håller med <span id="disagree-party-name">${partyName}</span>`;
-    } else {
-      labelEl.innerHTML = `Where you disagree with <span id="disagree-party-name">${partyName}</span>`;
-    }
+    labelEl.innerHTML = tObj.disagreeWith.replace('{Party}', partyName);
   }
 
-  const yourAnswerHeader = lang === 'de' ? 'Deine Antwort'
-                         : lang === 'fr' ? 'Votre choix'
-                         : lang === 'nl' ? 'Jouw antwoord'
-                         : lang === 'sv' ? 'Ditt svar'
-                         : 'Your answer';
-
-  const partyPositionHeader = lang === 'de' ? `Position der ${partyName}`
-                            : lang === 'fr' ? `Position de ${partyName}`
-                            : lang === 'nl' ? `Standpunt ${partyName}`
-                            : lang === 'sv' ? `${partyName} ståndpunkt`
-                            : `${partyName} position`;
+  const yourAnswerHeader = tObj.yourAnswer;
+  const partyPositionHeader = tObj.partyPosition.replace('{Party}', partyName);
 
   const list = document.getElementById('disagree-list');
   list.innerHTML = '';
@@ -1127,3 +1517,382 @@ window.renderDisagreements = function(topParty, partyName, topPct) {
     list.appendChild(card);
   });
 };
+
+// ============================================================
+// 10. SAVED RESULTS VIEWER & TOPIC STANCE HEATMAP RENDERER
+// ============================================================
+
+window.calculateTopicStances = function(userAnswers) {
+  const topics = {};
+  
+  userAnswers.forEach(a => {
+    const q = qs.find(x => x.id === a.id);
+    if (!q) return;
+    
+    const category = q.nl;
+    if (!topics[category]) {
+      topics[category] = {
+        eSum: 0,
+        eMax: 0,
+        gSum: 0,
+        gMax: 0,
+        count: 0
+      };
+    }
+    
+    const chosenOpt = q.opts[a.pick] || a;
+    const optE = chosenOpt.e || 0;
+    const optG = chosenOpt.g || 0;
+    
+    topics[category].eSum += optE;
+    topics[category].gSum += optG;
+    
+    topics[category].eMax += Math.max(...q.opts.map(o => Math.abs(o.e || 0)));
+    topics[category].gMax += Math.max(...q.opts.map(o => Math.abs(o.g || 0)));
+    topics[category].count++;
+  });
+  
+  const stances = {};
+  Object.keys(topics).forEach(cat => {
+    const t = topics[cat];
+    stances[cat] = {
+      e: t.eMax > 0 ? t.eSum / t.eMax : null,
+      g: t.gMax > 0 ? t.gSum / t.gMax : null
+    };
+  });
+  
+  return stances;
+};
+
+window.renderTopicHeatmap = function(stances) {
+  const grid = document.getElementById('topic-heatmap-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+  
+  const lang = window.currentLang || 'en';
+  
+  const labelTrans = {
+    en: { left: 'Left', right: 'Right', lib: 'Libertarian', auth: 'Authoritarian' },
+    de: { left: 'Links', right: 'Rechts', lib: 'Libertär', auth: 'Autoritär' },
+    fr: { left: 'Gauche', right: 'Droite', lib: 'Libertaire', auth: 'Autoritaire' },
+    es: { left: 'Izquierda', right: 'Derecha', lib: 'Libertario', auth: 'Autoritario' },
+    it: { left: 'Sinistra', right: 'Destra', lib: 'Libertario', auth: 'Autoritario' },
+    nl: { left: 'Links', right: 'Rechts', lib: 'Libertair', auth: 'Autoritair' },
+    sv: { left: 'Vänster', right: 'Höger', lib: 'Libertär', auth: 'Auktoritär' },
+    da: { left: 'Venstre', right: 'Højre', lib: 'Libertær', auth: 'Autoritær' },
+    no: { left: 'Venstre', right: 'Høyre', lib: 'Libertær', auth: 'Autoritær' },
+    fi: { left: 'Vasen', right: 'Oikea', lib: 'Libertaarinen', auth: 'Autoritaarinen' }
+  };
+  
+  const trans = labelTrans[lang] || labelTrans['en'];
+  const sortedTopics = Object.keys(stances).sort();
+  
+  if (sortedTopics.length === 0) {
+    grid.innerHTML = '<div style="font-size:13px;color:var(--ink-muted);grid-column:1/-1;text-align:center;padding:20px;">No stance data available.</div>';
+    return;
+  }
+  
+  sortedTopics.forEach(topic => {
+    const stance = stances[topic];
+    if (stance.e === null && stance.g === null) return;
+    
+    const item = document.createElement('div');
+    item.className = 'topic-heatmap-item';
+    
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'topic-heatmap-name';
+    nameDiv.textContent = topic;
+    item.appendChild(nameDiv);
+    
+    if (stance.e !== null) {
+      const axisDiv = document.createElement('div');
+      axisDiv.className = 'topic-heatmap-axis';
+      
+      const labels = document.createElement('div');
+      labels.className = 'topic-heatmap-labels';
+      labels.innerHTML = `<span>${trans.left}</span><span>${trans.right}</span>`;
+      axisDiv.appendChild(labels);
+      
+      const track = document.createElement('div');
+      track.className = 'topic-heatmap-track';
+      
+      const pct = ((stance.e + 1) / 2) * 100;
+      const marker = document.createElement('div');
+      marker.className = 'topic-heatmap-marker';
+      marker.style.left = `${pct.toFixed(1)}%`;
+      
+      track.appendChild(marker);
+      axisDiv.appendChild(track);
+      item.appendChild(axisDiv);
+    }
+    
+    if (stance.g !== null) {
+      const axisDiv = document.createElement('div');
+      axisDiv.className = 'topic-heatmap-axis';
+      
+      const labels = document.createElement('div');
+      labels.className = 'topic-heatmap-labels';
+      labels.innerHTML = `<span>${trans.lib}</span><span>${trans.auth}</span>`;
+      axisDiv.appendChild(labels);
+      
+      const track = document.createElement('div');
+      track.className = 'topic-heatmap-track';
+      
+      const pct = ((stance.g + 1) / 2) * 100;
+      const marker = document.createElement('div');
+      marker.className = 'topic-heatmap-marker';
+      marker.style.left = `${pct.toFixed(1)}%`;
+      
+      track.appendChild(marker);
+      axisDiv.appendChild(track);
+      item.appendChild(axisDiv);
+    }
+    
+    grid.appendChild(item);
+  });
+};
+
+window.archetype = function(e, g) {
+  const absE = Math.abs(e);
+  const absG = Math.abs(g);
+  
+  if (absE < 0.25 && absG < 0.25) {
+    return {
+      name: "Centrist",
+      axes: "Social Liberal / Moderate Centrist",
+      ideology: "You value pragmatic solutions over rigid ideology. You tend to favor a balanced economy with social safety nets and moderate government oversight.",
+      example: "Emmanuel Macron, Joe Biden"
+    };
+  }
+  
+  if (e <= 0 && g >= 0) {
+    return {
+      name: "State Socialist",
+      axes: "Authoritarian Left",
+      ideology: "You support strong government intervention in the economy to reduce inequality and regulate industries, coupled with traditional social order or state authority.",
+      example: "Clement Attlee, Left Nationalists"
+    };
+  } else if (e > 0 && g >= 0) {
+    return {
+      name: "Conservative",
+      axes: "Authoritarian Right",
+      ideology: "You support a market-driven economy with private enterprise and property rights, alongside strong state authority, national traditions, or social order.",
+      example: "Margaret Thatcher, Ronald Reagan"
+    };
+  } else if (e <= 0 && g < 0) {
+    return {
+      name: "Social Democrat",
+      axes: "Libertarian Left",
+      ideology: "You advocate for a strong social safety net, progressive taxation, and economic regulations, while strongly supporting individual liberties, human rights, and social freedoms.",
+      example: "Bernie Sanders, Olof Palme"
+    };
+  } else {
+    return {
+      name: "Libertarian",
+      axes: "Libertarian Right",
+      ideology: "You support free-market capitalism, minimal government intervention in the economy, and maximum individual liberty, including robust civil rights and personal freedom.",
+      example: "Milton Friedman, Ron Paul"
+    };
+  }
+};
+
+window.renderSavedResults = function(payload) {
+  const eScore = payload.econ_score !== null ? parseFloat(payload.econ_score) : 0;
+  const gScore = payload.gov_score !== null ? parseFloat(payload.gov_score) : 0;
+  
+  let biasBreakdown = payload.bias_breakdown || {};
+  let overallBias = 0;
+  if (biasBreakdown.__overall_bias !== undefined) {
+    overallBias = biasBreakdown.__overall_bias;
+  }
+  
+  const hasParties = payload.mode && payload.mode !== 'general';
+  window.savedResultId = payload.id;
+  
+  const lang = window.currentLang || 'en';
+  
+  // Hide saving panel parts
+  const saveTitle = document.querySelector('.save-title');
+  const saveDesc = document.querySelector('.save-desc');
+  const saveRow = document.querySelector('.save-row');
+  const saveStatus = document.getElementById('save-status');
+  if (saveTitle) saveTitle.style.display = 'none';
+  if (saveDesc) saveDesc.style.display = 'none';
+  if (saveRow) saveRow.style.display = 'none';
+  if (saveStatus) saveStatus.style.display = 'none';
+
+  // Render Party Matches
+  if (hasParties && typeof PARTY_META !== 'undefined') {
+    const partyScores = {};
+    Object.entries(biasBreakdown).forEach(([k, v]) => {
+      if (!k.startsWith('__')) {
+        partyScores[k] = v;
+      }
+    });
+
+    const ranked = Object.entries(partyScores).sort((a, b) => b[1] - a[1]);
+    const topPartyKey = ranked[0] ? ranked[0][0] : '';
+    const meta = topPartyKey ? PARTY_META[topPartyKey] : null;
+
+    if (meta) {
+      const topPartyName = (typeof meta.name === 'object') ? meta.name[lang] : meta.name;
+      const topPartyDesc = (typeof meta.desc === 'object') ? meta.desc[lang] : meta.desc;
+
+      const hTopParty = document.getElementById('r-top-party');
+      if (hTopParty) hTopParty.textContent = topPartyName;
+      const hTopDesc = document.getElementById('r-top-desc');
+      if (hTopDesc) hTopDesc.textContent = topPartyDesc;
+    }
+
+    const pContainer = document.getElementById('party-results');
+    if (pContainer) {
+      pContainer.innerHTML = '';
+      ranked.forEach(([party, pct], idx) => {
+        const m = PARTY_META[party];
+        if (!m) return;
+        const row = document.createElement('div');
+        row.className = 'party-row' + (idx === 0 ? ' top-match' : '');
+        
+        const barColor = m.color || '#B0B5BC';
+        const mName = (typeof m.name === 'object') ? m.name[lang] : m.name;
+        
+        const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+        const alignmentText = tObj.alignment;
+
+        row.innerHTML = `
+          <div class="party-row-rank">${idx + 1}</div>
+          <div class="party-row-info">
+            <div class="party-row-name">${mName}</div>
+            <div class="party-row-sub">${pct}% ${alignmentText}</div>
+          </div>
+          <div class="party-row-bar-wrap">
+            <div class="party-row-bar ${m.barClass || ''}" style="width:0%; background:${barColor}" data-w="${pct}%"></div>
+          </div>
+          <div class="party-row-pct">${pct}%</div>
+        `;
+        pContainer.appendChild(row);
+      });
+    }
+
+    const rInsight = document.getElementById('r-insight');
+    if (rInsight && ranked.length >= 2) {
+      const gap = ranked[0][1] - ranked[1][1];
+      const nextPartyName = PARTY_META[ranked[1][0]]
+        ? ((typeof PARTY_META[ranked[1][0]].name === 'object')
+          ? PARTY_META[ranked[1][0]].name[lang]
+          : PARTY_META[ranked[1][0]].name)
+        : '';
+
+      const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+      let gapText = '';
+      if (gap < 8) {
+        gapText = tObj.gapClose.replace('{gap}', gap).replace('{nextPartyName}', nextPartyName);
+      } else if (gap < 20) {
+        gapText = tObj.gapModerate.replace('{nextPartyName}', nextPartyName).replace('{nextPct}', ranked[1][1]);
+      } else {
+        const topPartyName = (typeof PARTY_META[ranked[0][0]].name === 'object')
+          ? PARTY_META[ranked[0][0]].name[lang]
+          : PARTY_META[ranked[0][0]].name;
+        gapText = tObj.gapClear.replace('{gap}', gap).replace('{topPartyName}', topPartyName);
+      }
+      rInsight.innerHTML = `<p style="font-weight:300;line-height:1.75;">${gapText}</p>`;
+    }
+  } else if (typeof window.archetype === 'function') {
+    const arch = window.archetype(eScore, gScore);
+    const archNameEl = document.getElementById('r-top-party');
+    if (archNameEl) archNameEl.textContent = arch.name;
+    const archAxesEl = document.getElementById('r-top-desc');
+    if (archAxesEl) archAxesEl.textContent = arch.axes;
+
+    const rInsight = document.getElementById('r-insight');
+    if (rInsight) {
+      rInsight.innerHTML = `
+        <p style="margin-bottom:14px; font-size:18px; font-weight:400; font-family:'Cormorant Garamond',serif;">Your Archetype: <strong>${arch.name}</strong></p>
+        <p style="margin-bottom:14px; line-height:1.75; font-weight:300;">${arch.ideology}</p>
+        <p style="font-weight:300; color:var(--ink-muted); line-height:1.75;"><strong>Example Figures:</strong> ${arch.example}</p>
+      `;
+    }
+    
+    const partyResultsContainer = document.getElementById('party-results');
+    if (partyResultsContainer) partyResultsContainer.innerHTML = '';
+    const partyResultsLabel = partyResultsContainer ? partyResultsContainer.previousElementSibling : null;
+    if (partyResultsLabel) partyResultsLabel.style.display = 'none';
+  }
+
+  // Render Compass Dot
+  const cDot = document.getElementById('cdot');
+  const cDotRing = document.getElementById('cdot-ring');
+  const cDotGlow = document.getElementById('cdot-glow');
+  const glowStart = document.getElementById('glow-start');
+  
+  const dotX = (170 + eScore * 152).toFixed(1);
+  const dotY = (170 - gScore * 152).toFixed(1);
+
+  if (cDot) cDot.setAttribute('cx', dotX);
+  if (cDotRing) cDotRing.setAttribute('cx', dotX);
+  if (cDotGlow) cDotGlow.setAttribute('cx', dotX);
+  if (cDot) cDot.setAttribute('cy', dotY);
+  if (cDotRing) cDotRing.setAttribute('cy', dotY);
+  if (cDotGlow) cDotGlow.setAttribute('cy', dotY);
+
+  if (glowStart) {
+    let color = '#1E4D8C';
+    if (eScore <= 0 && gScore >= 0) color = '#4B8EF1';
+    else if (eScore > 0 && gScore >= 0) color = '#F5A623';
+    else if (eScore <= 0 && gScore < 0) color = '#3DBF82';
+    else if (eScore > 0 && gScore < 0) color = '#E85D6B';
+    glowStart.setAttribute('stop-color', color);
+  }
+
+  setTimeout(() => {
+    const axEcon = document.getElementById('ax-econ');
+    const axGov = document.getElementById('ax-gov');
+    if (axEcon) axEcon.style.left = (((eScore + 1) / 2) * 100).toFixed(1) + '%';
+    if (axGov) axGov.style.left = (((gScore + 1) / 2) * 100).toFixed(1) + '%';
+    
+    document.querySelectorAll('.party-row-bar[data-w]').forEach(el => {
+      el.style.width = el.dataset.w;
+    });
+  }, 200);
+
+  // Render Framing Bias Panel
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+  const bv = tObj.verdicts.find(([lo, hi]) => overallBias >= lo && overallBias <= hi) || tObj.verdicts[0];
+  const verdictTitle = bv[2];
+  const verdictDesc = bv[3];
+
+  const profile = window.getCognitiveProfile(overallBias, lang);
+  
+  const bNum = document.getElementById('bias-num');
+  if (bNum) bNum.textContent = `${overallBias}%`;
+  const bText = document.getElementById('bias-profile-text');
+  if (bText) bText.textContent = profile.name;
+  const bIcon = document.getElementById('bias-profile-icon');
+  if (bIcon) bIcon.textContent = profile.icon;
+  const bVerdict = document.getElementById('bias-verdict');
+  if (bVerdict) bVerdict.textContent = verdictTitle;
+  const bExplain = document.getElementById('bias-explain');
+  if (bExplain) {
+    bExplain.innerHTML = `<p style="margin-bottom:8px">${verdictDesc}</p><p style="font-weight:400;color:var(--ink-soft);font-size:11.5px;line-height:1.5;margin-top:6px;"><strong>${profile.icon} ${profile.name}:</strong> ${profile.desc}</p>`;
+  }
+
+  const bRows = document.getElementById('bias-rows');
+  if (bRows) bRows.innerHTML = '';
+  const bFaceoff = document.getElementById('bias-faceoff');
+  if (bFaceoff) bFaceoff.style.display = 'none';
+
+  // Render Topic Stance Heatmap
+  if (biasBreakdown.__stances) {
+    window.renderTopicHeatmap(biasBreakdown.__stances);
+  } else {
+    const heatmapCard = document.getElementById('topic-heatmap-card');
+    if (heatmapCard) heatmapCard.style.display = 'none';
+  }
+
+  window.goTo('page-results');
+};
+
+// Check for payload immediately on script load
+if (window.viewResultPayload) {
+  window.renderSavedResults(window.viewResultPayload);
+}

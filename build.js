@@ -1005,6 +1005,40 @@ window.getQuestion = q => q;`;
   // Write output
   fs.writeFileSync(outputPath, html, 'utf8');
   console.log(`Generated ${outputName} (size: ${html.length} bytes)`);
+  if (isGeneral) {
+    const resultPath = path.join(outputDir, 'result.html');
+    fs.writeFileSync(resultPath, html, 'utf8');
+    console.log(`Generated result.html (size: ${html.length} bytes)`);
+  }
 });
+
+// Build static content pages (About, Privacy, Methodology)
+const contentDir = path.join(__dirname, 'src/content');
+const contentTemplatePath = path.join(__dirname, 'src/content-template.html');
+
+if (fs.existsSync(contentDir) && fs.existsSync(contentTemplatePath)) {
+  const contentTemplate = fs.readFileSync(contentTemplatePath, 'utf8');
+  const contentFiles = fs.readdirSync(contentDir).filter(f => f.endsWith('.json'));
+  
+  console.log(`Found ${contentFiles.length} content files. Compiling static pages...`);
+  
+  contentFiles.forEach(file => {
+    const filePath = path.join(contentDir, file);
+    const contentData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    
+    const outputName = file.replace('.json', '.html');
+    const outputPath = path.join(outputDir, outputName);
+    
+    let html = contentTemplate;
+    html = html.replace(/\{\{TITLE\}\}/g, contentData.title || '');
+    html = html.replace(/\{\{DESCRIPTION\}\}/g, contentData.desc || '');
+    html = html.replace(/\{\{HEADER\}\}/g, contentData.header || '');
+    html = html.replace(/\{\{SUBTITLE\}\}/g, contentData.subtitle || '');
+    html = html.replace(/\{\{CONTENT\}\}/g, contentData.content || '');
+    
+    fs.writeFileSync(outputPath, html, 'utf8');
+    console.log(`Generated content page: ${outputName} (size: ${html.length} bytes)`);
+  });
+}
 
 console.log(`SSG compilation completed successfully. ${configFiles.length} HTML portals built.`);

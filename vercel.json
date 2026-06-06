@@ -3,5 +3,11 @@
   "trailingSlash": false,
   "buildCommand": "node build.js",
   "outputDirectory": ".",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/result/:id",
+      "destination": "/api/result-page?id=:id"
+    }
+  ]
 }

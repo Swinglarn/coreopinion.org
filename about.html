@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-mode');
+  } else if (saved === 'light') {
+    document.documentElement.classList.add('light-mode');
+  }
+})();
+</script>
+<title>About Us | CoreOpinion</title>
+<meta name="description" content="About CoreOpinion political alignment and cognitive framing test platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=1.0.2">
+<style>
+  .content-body h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 32px;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .content-body p {
+    margin-bottom: 18px;
+  }
+  .content-body ul {
+    margin-bottom: 24px;
+    padding-left: 20px;
+  }
+  .content-body li {
+    margin-bottom: 8px;
+  }
+  .content-body strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">Core<span>opinion</span></a>
+  <div class="nav-links">
+    <a href="/">General</a>
+    <a href="/us">US</a>
+    <a href="/uk">UK</a>
+    <a href="/ca">Canada</a>
+    <a href="/au">Australia</a>
+    <a href="/nz">New Zealand</a>
+    <a href="/se">Sweden</a>
+    <a href="/dk">Denmark</a>
+    <a href="/no">Norway</a>
+    <a href="/fi">Finland</a>
+    <a href="/de">Germany</a>
+    <a href="/at">Austria</a>
+    <a href="/fr">France</a>
+    <a href="/es">Spain</a>
+    <a href="/it">Italy</a>
+    <a href="/ie">Ireland</a>
+    <a href="/nl">Netherlands</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
+  </div>
+</nav>
+
+<div class="content-shell" style="max-width:760px;margin:0 auto;padding:60px 24px;min-height:calc(100vh - 172px);">
+  <h1 style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--ink);margin-bottom:12px;letter-spacing:-1px;">About CoreOpinion</h1>
+  <p style="font-size:15px;color:var(--ink-muted);font-weight:300;margin-bottom:40px;line-height:1.6;">Discover the vision behind our scenario-based political compass test.</p>
+  <div class="content-body" style="font-size:15px;color:var(--ink-soft);line-height:1.75;font-weight:300;">
+    <p>CoreOpinion is a next-generation political compass platform created to foster political self-awareness and critical thinking. Rather than relying on abstract, survey-style questions (such as "Governments should tax the rich"), we present scenario-based choices that put you in decision-making positions. We map these choices to real-world party platforms and policy details.</p><h2>Our Mission</h2><p>In a highly polarized political landscape, we believe that understanding *why* you agree or disagree with a political stance is just as important as the stance itself. Our platform aims to clarify these alignments through clean data and objective analysis, without corporate or institutional bias.</p><h2>The Framing Bias Engine</h2><p>A central feature of CoreOpinion is our cognitive framing bias engine. By pairing identical policy issues with different rhetorical framing (e.g., support vs. critical consequences), we measure how sensitive your political alignments are to emotional phrasing. We believe this insight is crucial for navigating modern media and political messaging.</p><h2>Who We Are</h2><p>CoreOpinion is built by a small team of independent political researchers, software developers, and designers. We do not receive funding from any political party, candidate, or lobbying group. The platform is completely free to use and respects user privacy above all else.</p>
+  </div>
+</div>
+
+<footer>
+  <div style="max-width:760px;margin:0 auto;padding:40px 24px;border-top:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--ink-muted);font-weight:300;">
+    <div>&copy; 2026 CoreOpinion. All rights reserved.</div>
+    <div style="display:flex;gap:20px;">
+      <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
+      <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
+      <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/engine.js?v=1.0.2"></script>
+</body>
+</html>

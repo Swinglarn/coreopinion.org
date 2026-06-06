@@ -32,6 +32,8 @@
   --border: #DDD9D2;
   --border-soft: #EAE7E1;
 
+  --nav-bg: rgba(249, 248, 246, 0.92);
+
   /* --- Party Branding Colors (Global) --- */
   /* United States */
   --dem: #0B56A4;
@@ -57,6 +59,65 @@
   --c-center: #009933;
   --kd-demokrat: #000077;
   --l-liberal: #006AB3;
+}
+
+/* --- Dark Mode Override --- */
+html.dark-mode {
+  --ink: #E8E6E1;
+  --ink-soft: #C5BFB5;
+  --ink-muted: #8E8980;
+  --ink-faint: #5E5A54;
+  
+  --parchment: #121214;
+  --parchment-warm: #1C1C1F;
+  --white: #18181A;
+  
+  --navy: #4B8EF1;
+  --navy-soft: #1C2E4A;
+  --gold: #D4AF37;
+  --gold-soft: #3A2F18;
+  
+  --green: #48BB78;
+  --green-soft: #1C3D26;
+  --amber: #ECC94B;
+  --amber-soft: #3D3318;
+  --red: #F56565;
+  --red-soft: #421C1C;
+  
+  --border: #3A3A3D;
+  --border-soft: #27272A;
+  
+  --nav-bg: rgba(18, 18, 20, 0.92);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not(.light-mode) {
+    --ink: #E8E6E1;
+    --ink-soft: #C5BFB5;
+    --ink-muted: #8E8980;
+    --ink-faint: #5E5A54;
+    
+    --parchment: #121214;
+    --parchment-warm: #1C1C1F;
+    --white: #18181A;
+    
+    --navy: #4B8EF1;
+    --navy-soft: #1C2E4A;
+    --gold: #D4AF37;
+    --gold-soft: #3A2F18;
+    
+    --green: #48BB78;
+    --green-soft: #1C3D26;
+    --amber: #ECC94B;
+    --amber-soft: #3D3318;
+    --red: #F56565;
+    --red-soft: #421C1C;
+    
+    --border: #3A3A3D;
+    --border-soft: #27272A;
+    
+    --nav-bg: rgba(18, 18, 20, 0.92);
+  }
 }
 
 * {
@@ -117,7 +178,7 @@ nav {
   padding: 0 52px;
   height: 72px;
   border-bottom: 1px solid var(--border-soft);
-  background: rgba(249, 248, 246, 0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
@@ -1703,4 +1764,80 @@ select:focus, input:focus {
   .mode-outer {
     padding: 40px 20px;
   }
+}
+
+#cdot, #cdot-ring, #cdot-glow {
+  transition: cx 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), cy 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --- TOPIC STANCE HEATMAP --- */
+.topic-heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.topic-heatmap-item {
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(10, 12, 15, 0.01);
+}
+
+.topic-heatmap-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.1px;
+}
+
+.topic-heatmap-axis {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.topic-heatmap-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--ink-muted);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.topic-heatmap-track {
+  height: 6px;
+  background: var(--parchment-warm);
+  border-radius: 3px;
+  position: relative;
+  overflow: visible;
+  border: 1px solid var(--border-soft);
+}
+
+.topic-heatmap-track::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.topic-heatmap-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--navy);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 4px rgba(30, 77, 140, 0.3);
+  transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
