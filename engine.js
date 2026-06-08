@@ -850,7 +850,7 @@ window.score = function() {
   let eSum = 0, gSum = 0, eMaxTotal = 0, gMaxTotal = 0;
   
   // Setup country party alignment aggregates if configured
-  const hasParties = (typeof PARTY_META !== 'undefined');
+  const hasParties = (typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0);
   const partyTotals = {};
   const partyMaxes = {};
   
@@ -957,7 +957,7 @@ window.score = function() {
 // ============================================================
 window.renderResults = function() {
   const { eScore, gScore, partyScores, overallBias, topicBiasAgg } = window.score();
-  const hasParties = (typeof PARTY_META !== 'undefined');
+  const hasParties = (typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0);
 
   let topPartyKey = '';
   let meta = null;
@@ -1316,7 +1316,7 @@ window.saveResults = async function() {
   statusEl.textContent = 'Saving...';
   
   const { partyScores, eScore, gScore, overallBias } = window.score();
-  const hasParties = (typeof PARTY_META !== 'undefined');
+  const hasParties = (typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0);
   const stances = window.calculateTopicStances(answers);
 
   // Obtain demographics fields safely
@@ -1379,7 +1379,7 @@ window.getCurrentCountryName = function() {
 
 window.autoSaveAnonymousResults = async function() {
   const { partyScores, eScore, gScore, overallBias } = window.score();
-  const hasParties = (typeof PARTY_META !== 'undefined');
+  const hasParties = (typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0);
   const stances = window.calculateTopicStances(answers);
 
   const age = document.getElementById('d-age') ? document.getElementById('d-age').value || null : null;
@@ -1429,7 +1429,7 @@ window.autoSaveAnonymousResults = async function() {
 
 window.copyLink = function() {
   const { partyScores, overallBias } = window.score();
-  const hasParties = (typeof PARTY_META !== 'undefined');
+  const hasParties = (typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0);
   
   let shareUrl = window.savedResultId 
     ? `${window.location.protocol}//${window.location.host}/result/${window.savedResultId}`

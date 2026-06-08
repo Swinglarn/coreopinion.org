@@ -121,14 +121,15 @@ htmlFiles.forEach(file => {
   const filePath = path.join(rootDir, file);
   const html = fs.readFileSync(filePath, 'utf8');
 
-  // Extract script block content
-  const scriptMatch = html.match(/<script>([\s\S]*?)<\/script>/);
-  if (!scriptMatch) {
-    console.log(`[INFO] No inline script block found in ${file}`);
+  // Extract script block content containing LOCAL_QUESTIONS
+  const scriptMatches = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
+  const dataMatch = scriptMatches.find(m => m[1].includes('LOCAL_QUESTIONS'));
+  if (!dataMatch) {
+    console.log(`[INFO] No question data script block found in ${file}`);
     return;
   }
 
-  let inlineScript = scriptMatch[1];
+  let inlineScript = dataMatch[1];
   
   // Replace const/let with global assignments to bind them to the node global context
   inlineScript = inlineScript.replace(/const LOCAL_QUESTIONS\s*=/g, 'global.LOCAL_QUESTIONS =');
