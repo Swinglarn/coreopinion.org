@@ -575,6 +575,10 @@ window.goTo = function(id) {
     const faceoff = document.getElementById('bias-faceoff');
     if (faceoff) faceoff.style.display = 'none';
   }
+  
+  if (id === 'page-ideologies' && typeof window.selectIdeology === 'function') {
+    window.selectIdeology('centrism');
+  }
 };
 
 // ============================================================
@@ -982,6 +986,8 @@ window.renderResults = function() {
         const m = PARTY_META[party];
         const row = document.createElement('div');
         row.className = 'party-row' + (idx === 0 ? ' top-match' : '');
+        row.style.cursor = 'pointer';
+        row.onclick = () => window.showPartyDetail(party);
         
         // Custom inline styling fallback for dynamic countries
         const barColor = m.color || '#B0B5BC';
@@ -1516,6 +1522,161 @@ window.renderDisagreements = function(topParty, partyName, topPct) {
       </div>`;
     list.appendChild(card);
   });
+};
+
+window.buildAgreements = function(partyKey) {
+  const agree = [];
+  answers.forEach(a => {
+    const rawQ = qs.find(q => q.id === a.id);
+    if (!rawQ) return;
+    const q = (typeof window.getQuestion === 'function') ? window.getQuestion(rawQ) : rawQ;
+    
+    let bestScore = -Infinity;
+    q.opts.forEach(o => {
+      const ps = o[partyKey] || 0;
+      if (ps > bestScore) { bestScore = ps; }
+    });
+    const userScore = a[partyKey] || 0;
+    
+    if (userScore === bestScore && bestScore > 0) {
+      agree.push({
+        topic: q.nl,
+        question: q.q,
+        userAnswer: q.opts[a.pick] ? q.opts[a.pick].t : a.t
+      });
+    }
+  });
+  return agree;
+};
+
+window.buildAllDisagreements = function(partyKey) {
+  const disagree = [];
+  answers.forEach(a => {
+    const rawQ = qs.find(q => q.id === a.id);
+    if (!rawQ) return;
+    const q = (typeof window.getQuestion === 'function') ? window.getQuestion(rawQ) : rawQ;
+    
+    let bestScore = -Infinity, bestOpt = null;
+    q.opts.forEach(o => {
+      const ps = o[partyKey] || 0;
+      if (ps > bestScore) { bestScore = ps; bestOpt = o; }
+    });
+    const userScore = a[partyKey] || 0;
+    const gap = bestScore - userScore;
+    if (gap >= 2 && bestOpt && bestOpt.t !== (q.opts[a.pick] ? q.opts[a.pick].t : a.t)) {
+      disagree.push({
+        topic: q.nl,
+        question: q.q,
+        userAnswer: q.opts[a.pick] ? q.opts[a.pick].t : a.t,
+        partyAnswer: bestOpt.t,
+        gap
+      });
+    }
+  });
+  return disagree.sort((a, b) => b.gap - a.gap);
+};
+
+window.showPartyDetail = function(partyKey) {
+  const m = PARTY_META[partyKey];
+  if (!m) return;
+  const lang = window.currentLang || 'en';
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+  
+  const mName = (typeof m.name === 'object') ? m.name[lang] : m.name;
+  const barColor = m.color || '#B0B5BC';
+  
+  const { partyScores } = window.score();
+  const pct = partyScores[partyKey] || 0;
+  
+  const elName = document.getElementById('party-modal-name');
+  if (elName) elName.textContent = mName;
+  const elColor = document.getElementById('party-modal-color');
+  if (elColor) elColor.style.backgroundColor = barColor;
+  const elMatch = document.getElementById('party-modal-match');
+  if (elMatch) elMatch.textContent = `${pct}% ${tObj.alignment || 'Alignment'}`;
+  
+  const agreements = window.buildAgreements(partyKey);
+  const disagreements = window.buildAllDisagreements(partyKey);
+  
+  const elAgree = document.getElementById('party-modal-agreements');
+  if (elAgree) {
+    elAgree.innerHTML = '';
+    if (agreements.length === 0) {
+      elAgree.innerHTML = `<div style="font-size:13px; color:var(--ink-muted); text-align:center; padding:20px; font-weight:300;">No direct policy agreements found.</div>`;
+    } else {
+      agreements.forEach(item => {
+        const card = document.createElement('div');
+        card.style.cssText = 'border:1px solid var(--border-soft); border-radius:8px; padding:14px 16px; background:var(--parchment-warm); border-left:3px solid var(--green);';
+        card.innerHTML = `
+          <div style="font-size:9px; font-weight:500; letter-spacing:1px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:4px;">${item.topic}</div>
+          <div style="font-size:13.5px; color:var(--ink); font-weight:400; margin-bottom:8px; line-height:1.4;">${item.question}</div>
+          <div style="font-size:12px; color:var(--ink-soft); font-weight:300;">
+            <strong>Your aligned choice:</strong> ${item.userAnswer}
+          </div>
+        `;
+        elAgree.appendChild(card);
+      });
+    }
+  }
+  
+  const elDisagree = document.getElementById('party-modal-disagreements');
+  if (elDisagree) {
+    elDisagree.innerHTML = '';
+    if (disagreements.length === 0) {
+      elDisagree.innerHTML = `<div style="font-size:13px; color:var(--ink-muted); text-align:center; padding:20px; font-weight:300;">No policy disagreements found! You are in perfect alignment.</div>`;
+    } else {
+      const yourAnswerHeader = tObj.yourAnswer || 'Your Answer';
+      const partyPositionHeader = (tObj.partyPosition || '{Party}\'s Position').replace('{Party}', mName);
+      disagreements.forEach(item => {
+        const card = document.createElement('div');
+        card.style.cssText = 'border:1px solid var(--border-soft); border-radius:8px; padding:14px 16px; background:var(--white); border-left:3px solid var(--red);';
+        card.innerHTML = `
+          <div style="font-size:9px; font-weight:500; letter-spacing:1px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:4px;">${item.topic}</div>
+          <div style="font-size:13.5px; color:var(--ink); font-weight:400; margin-bottom:12px; line-height:1.4;">${item.question}</div>
+          <div style="display:grid; grid-template-columns:1fr; gap:8px;">
+            <div style="padding:10px; background:var(--parchment-warm); border-radius:4px; border-left:2px solid #B0B5BC">
+              <div style="font-size:8px; font-weight:500; letter-spacing:1px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:2px;">${yourAnswerHeader}</div>
+              <div style="font-size:12px; color:var(--ink-soft); font-weight:300; line-height:1.4;">${item.userAnswer}</div>
+            </div>
+            <div style="padding:10px; background:var(--navy-soft); border-radius:4px; border-left:2px solid ${barColor}">
+              <div style="font-size:8px; font-weight:500; letter-spacing:1px; text-transform:uppercase; color:${barColor}; margin-bottom:2px;">${partyPositionHeader}</div>
+              <div style="font-size:12px; color:var(--ink-soft); font-weight:300; line-height:1.4;">${item.partyAnswer}</div>
+            </div>
+          </div>
+        `;
+        elDisagree.appendChild(card);
+      });
+    }
+  }
+  
+  window.switchPartyTab('agree');
+  
+  const modal = document.getElementById('party-modal');
+  if (modal) modal.classList.add('active');
+};
+
+window.closePartyModal = function(event) {
+  const modal = document.getElementById('party-modal');
+  if (modal) modal.classList.remove('active');
+};
+
+window.switchPartyTab = function(tabName) {
+  const btnAgree = document.getElementById('tab-agree');
+  const btnDisagree = document.getElementById('tab-disagree');
+  const paneAgree = document.getElementById('pane-agree');
+  const paneDisagree = document.getElementById('pane-disagree');
+  
+  if (tabName === 'agree') {
+    if (btnAgree) btnAgree.classList.add('active');
+    if (btnDisagree) btnDisagree.classList.remove('active');
+    if (paneAgree) { paneAgree.style.display = 'block'; paneAgree.classList.add('active'); }
+    if (paneDisagree) { paneDisagree.style.display = 'none'; paneDisagree.classList.remove('active'); }
+  } else {
+    if (btnAgree) btnAgree.classList.remove('active');
+    if (btnDisagree) btnDisagree.classList.add('active');
+    if (paneAgree) { paneAgree.style.display = 'none'; paneAgree.classList.remove('active'); }
+    if (paneDisagree) { paneDisagree.style.display = 'block'; paneDisagree.classList.add('active'); }
+  }
 };
 
 // ============================================================
@@ -2197,3 +2358,154 @@ if (window.comparePayload) {
 } else if (window.viewResultPayload) {
   window.renderSavedResults(window.viewResultPayload);
 }
+
+// ============================================================
+// 11. DYNAMIC IDEOLOGIES MATRIX EXPLORER
+// ============================================================
+window.IDEOLOGIES = {
+  state_socialism: {
+    name: "State Socialism",
+    icon: "🚩",
+    color: "#4B8EF1",
+    quadrant: "Authoritarian Left",
+    e: -0.8,
+    g: 0.7,
+    axiom: "The state must direct and plan the economy to eliminate class exploitation and ensure collective equality.",
+    econ: "Centralized state planning, public ownership of all major industries and resources, and the elimination of capitalist market mechanics.",
+    gov: "Vanguard party leadership, collective social discipline, high state involvement in public life, and prioritization of social security over individual liberties.",
+    figures: "Vladimir Lenin, Leon Trotsky, Mao Zedong, Fidel Castro"
+  },
+  national_conservatism: {
+    name: "National Conservatism",
+    icon: "🦅",
+    color: "#F5A623",
+    quadrant: "Authoritarian Right",
+    e: 0.3,
+    g: 0.7,
+    axiom: "The preservation of national sovereignty, traditional culture, and social order must be the primary focus of the state.",
+    econ: "Market capitalism combined with strategic tariffs, economic nationalism, and state support for domestic industries.",
+    gov: "Centralized state authority, strict border control, preservation of traditional family units, and law-and-order policing.",
+    figures: "Alexander Hamilton, Charles de Gaulle, Viktor Orbán"
+  },
+  conservatism: {
+    name: "Conservatism",
+    icon: "🏛️",
+    color: "#F5A623",
+    quadrant: "Authoritarian Right",
+    e: 0.5,
+    g: 0.3,
+    axiom: "Society should evolve gradually, guided by established moral traditions, private property, and institutional stability.",
+    econ: "Free market capitalism, fiscal discipline, low taxes, deregulation, and minimal state interference in trade.",
+    gov: "Strong rule of law, preservation of national heritage, defense of civil society organizations, and limited central government size.",
+    figures: "Edmund Burke, Margaret Thatcher, Ronald Reagan, Thomas Sowell"
+  },
+  centrism: {
+    name: "Centrism",
+    icon: "⚖️",
+    color: "#8E9AA8",
+    quadrant: "Center / Mixed",
+    e: 0.0,
+    g: 0.0,
+    axiom: "Political decisions should be based on pragmatism, compromise, and empirical evidence rather than rigid, dogmatic ideologies.",
+    econ: "Mixed economy combining capitalist markets with sensible regulation, public investments, and social safety nets.",
+    gov: "Commitment to constitutional democracy, institutional checks and balances, moderate social reform, and political stability.",
+    figures: "Aristotle, Montesquieu, Tony Blair, Emmanuel Macron"
+  },
+  social_democracy: {
+    name: "Social Democracy",
+    icon: "🛡️",
+    color: "#3DBF82",
+    quadrant: "Libertarian Left",
+    e: -0.4,
+    g: -0.2,
+    axiom: "Capitalism can be harnessed for the common good if regulated and combined with a robust, universal welfare state.",
+    econ: "Regulated markets, strong collective bargaining/labor unions, progressive taxation, and state-funded universal healthcare and education.",
+    gov: "Liberal representative democracy, civil rights protection, social inclusivity, and international cooperation.",
+    figures: "Eduard Bernstein, Olof Palme, John Maynard Keynes, Franklin D. Roosevelt"
+  },
+  democratic_socialism: {
+    name: "Democratic Socialism",
+    icon: "🌹",
+    color: "#3DBF82",
+    quadrant: "Libertarian Left",
+    e: -0.7,
+    g: -0.3,
+    axiom: "Genuine freedom and equality require the extension of democratic principles to both the state and the economy.",
+    econ: "Social ownership of major industries, democratic workspace planning, worker cooperatives, and redistributive social security.",
+    gov: "Multi-party representative democracy, strong decentralization, absolute protections for civil liberties, and grassroots popular control.",
+    figures: "Karl Marx, Rosa Luxemburg, Clement Attlee, Bernie Sanders"
+  },
+  libertarian_socialism: {
+    name: "Libertarian Socialism",
+    icon: "🏴",
+    color: "#3DBF82",
+    quadrant: "Libertarian Left",
+    e: -0.8,
+    g: -0.8,
+    axiom: "Both state coercion and capitalist hierarchy are illegitimate structures of domination that must be replaced by voluntary mutual aid.",
+    econ: "Abolition of private property and wage labor in favor of decentralized commons, worker syndicates, and mutual aid networks.",
+    gov: "Direct democracy, community consensus councils, complete decentralization, and absolute individual and bodily autonomy.",
+    figures: "Mikhail Bakunin, Peter Kropotkin, Noam Chomsky, Emma Goldman"
+  },
+  libertarianism: {
+    name: "Libertarianism",
+    icon: "🐍",
+    color: "#E85D6B",
+    quadrant: "Libertarian Right",
+    e: 0.6,
+    g: -0.6,
+    axiom: "Individual liberty, bodily autonomy, and private property rights are absolute; state coercion should be minimized or eliminated.",
+    econ: "Pure laissez-faire capitalism, absolute contract enforcement, voluntary exchange, free trade, and zero income taxation.",
+    gov: "Minarchism (a 'night-watchman state' restricted purely to courts, police, and national defense) or anarcho-capitalism.",
+    figures: "John Locke, Adam Smith, Friedrich Hayek, Milton Friedman"
+  }
+};
+
+window.selectIdeology = function(key) {
+  const item = window.IDEOLOGIES[key];
+  if (!item) return;
+
+  // 1. Highlight active node in SVG compass
+  document.querySelectorAll('#page-ideologies .ideology-node').forEach(node => {
+    node.classList.remove('active');
+  });
+  const activeNode = document.getElementById(`node-${key.replace(/_/g, '-')}`);
+  if (activeNode) activeNode.classList.add('active');
+
+  // 2. Render details card
+  const card = document.getElementById('ideology-card');
+  if (card) {
+    card.style.borderLeft = `4px solid ${item.color}`;
+    
+    card.innerHTML = `
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom: 4px;">
+        <span style="font-size:28px;">${item.icon}</span>
+        <div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; color:var(--ink); margin:0;">${item.name}</h2>
+          <span style="font-size:10px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:${item.color};">${item.quadrant} (Econ: ${item.e >= 0 ? '+' : ''}${item.e}, Gov: ${item.g >= 0 ? '+' : ''}${item.g})</span>
+        </div>
+      </div>
+      
+      <div style="font-size:13px; color:var(--ink-soft); line-height:1.5; font-weight:300; margin-bottom:8px;">
+        <strong>Core Axiom:</strong> <em>"${item.axiom}"</em>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr; gap:12px;">
+        <div style="padding:12px; background:var(--parchment-warm); border-radius:6px; border-left:3px solid var(--border)">
+          <div style="font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--ink-muted);margin-bottom:4px;">Economic Policy</div>
+          <div style="font-size:12.5px; color:var(--ink-soft); font-weight:300; line-height:1.45;">${item.econ}</div>
+        </div>
+        
+        <div style="padding:12px; background:var(--parchment-warm); border-radius:6px; border-left:3px solid var(--border)">
+          <div style="font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--ink-muted);margin-bottom:4px;">Governance & Freedom</div>
+          <div style="font-size:12.5px; color:var(--ink-soft); font-weight:300; line-height:1.45;">${item.gov}</div>
+        </div>
+      </div>
+
+      <div style="font-size:12px; color:var(--ink-muted); font-weight:300; border-top:1px dashed var(--border-soft); padding-top:10px;">
+        <strong>Key Historical Thinkers:</strong> ${item.figures}
+      </div>
+    `;
+  }
+};
+
