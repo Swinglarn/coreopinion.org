@@ -662,21 +662,47 @@ window.startTest = function(m) {
     if (sEmail) sEmail.value = '';
 
     // Determine actual target question count based on mode selection
-    let total = BANK.length;
-    if (m === 'short') { total = 25; mode = 'short'; }
-    else if (m === 'medium') { total = 50; mode = 'medium'; }
-    else if (m === 'long') { total = 100; mode = 'long'; }
+    const totalQ = BANK.length;
+
+    function getTestLength(modeName, totalQ) {
+      if (totalQ >= 80) {
+        if (modeName === 'short') return 25;
+        if (modeName === 'medium') return 50;
+        return Math.min(100, totalQ);
+      } else if (totalQ >= 45) {
+        if (modeName === 'short') return 15;
+        if (modeName === 'medium') return 30;
+        return totalQ;
+      } else if (totalQ >= 35) {
+        if (modeName === 'short') return 15;
+        if (modeName === 'medium') return 25;
+        return totalQ;
+      } else if (totalQ >= 25) {
+        if (modeName === 'short') return 12;
+        if (modeName === 'medium') return 20;
+        return totalQ;
+      } else {
+        const s = Math.max(5, Math.floor(totalQ * 0.4));
+        if (modeName === 'short') return s;
+        if (modeName === 'medium') return Math.max(s + 2, Math.floor(totalQ * 0.7));
+        return totalQ;
+      }
+    }
+
+    let actualTotal = totalQ;
+    if (m === 'short') { actualTotal = getTestLength('short', totalQ); mode = 'short'; }
+    else if (m === 'medium') { actualTotal = getTestLength('medium', totalQ); mode = 'medium'; }
+    else if (m === 'long') { actualTotal = getTestLength('long', totalQ); mode = 'long'; }
     else { mode = 'fixed'; }
 
-    const actualTotal = Math.min(total, BANK.length);
     qs = window.buildOrder(BANK, actualTotal);
 
     // Update badge if exists
     const badge = document.getElementById('mode-badge');
     if (badge) {
-      badge.textContent = m === 'short' ? 'Short test (25 q)' 
-                        : m === 'medium' ? 'Medium test (50 q)' 
-                        : m === 'long' ? 'Long test (100 q)' 
+      badge.textContent = m === 'short' ? `Short test (${actualTotal} q)` 
+                        : m === 'medium' ? `Medium test (${actualTotal} q)` 
+                        : m === 'long' ? `Long test (${actualTotal} q)` 
                         : 'Standard test';
     }
 

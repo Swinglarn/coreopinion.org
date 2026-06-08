@@ -151,7 +151,7 @@
       <div class="mode-card" onclick="startTest('short')">
         <div class="mode-card-badge" id="mode-badge-short">Quick</div>
         <div class="mode-card-title" id="mode-title-short">Short Test</div>
-        <div class="mode-card-q" id="mode-q-short">25 questions</div>
+        <div class="mode-card-q" id="mode-q-short">15 questions</div>
         <p class="mode-card-desc" id="mode-desc-short">Provides a fast estimation of your political coordinates and general alignment.</p>
         <button class="btn-primary mode-card-btn" id="mode-btn-short">Select</button>
       </div>
@@ -159,7 +159,7 @@
       <div class="mode-card popular" onclick="startTest('medium')">
         <div class="mode-card-badge" id="mode-badge-medium">Recommended</div>
         <div class="mode-card-title" id="mode-title-medium">Medium Test</div>
-        <div class="mode-card-q" id="mode-q-medium">50 questions</div>
+        <div class="mode-card-q" id="mode-q-medium">30 questions</div>
         <p class="mode-card-desc" id="mode-desc-medium">Our standard length. Delivers a reliable political quadrant and detailed cognitive framing analysis.</p>
         <button class="btn-primary mode-card-btn" id="mode-btn-medium">Select</button>
       </div>
@@ -167,7 +167,7 @@
       <div class="mode-card" onclick="startTest('long')">
         <div class="mode-card-badge" id="mode-badge-long">Thorough</div>
         <div class="mode-card-title" id="mode-title-long">Long Test</div>
-        <div class="mode-card-q" id="mode-q-long">100 questions</div>
+        <div class="mode-card-q" id="mode-q-long">47 questions</div>
         <p class="mode-card-desc" id="mode-desc-long">Deep ideological dive. Analyzes edge cases, complex policy tradeoffs, and full bias metrics.</p>
         <button class="btn-primary mode-card-btn" id="mode-btn-long">Select</button>
       </div>
@@ -3585,14 +3585,39 @@ function applyLang() {
   if (btnMedium) btnMedium.textContent = strings.modeBtnSelect;
   const btnLong = document.getElementById('mode-btn-long');
   if (btnLong) btnLong.textContent = strings.modeBtnSelect;
-
   const totalQ = typeof BANK !== 'undefined' ? BANK.length : 0;
+
+  function getTestLength(modeName, totalQ) {
+    if (totalQ >= 80) {
+      if (modeName === 'short') return 25;
+      if (modeName === 'medium') return 50;
+      return Math.min(100, totalQ);
+    } else if (totalQ >= 45) {
+      if (modeName === 'short') return 15;
+      if (modeName === 'medium') return 30;
+      return totalQ;
+    } else if (totalQ >= 35) {
+      if (modeName === 'short') return 15;
+      if (modeName === 'medium') return 25;
+      return totalQ;
+    } else if (totalQ >= 25) {
+      if (modeName === 'short') return 12;
+      if (modeName === 'medium') return 20;
+      return totalQ;
+    } else {
+      const s = Math.max(5, Math.floor(totalQ * 0.4));
+      if (modeName === 'short') return s;
+      if (modeName === 'medium') return Math.max(s + 2, Math.floor(totalQ * 0.7));
+      return totalQ;
+    }
+  }
+
   const qShort = document.getElementById('mode-q-short');
-  if (qShort) qShort.textContent = Math.min(25, totalQ) + ' ' + strings.questionsText;
+  if (qShort) qShort.textContent = getTestLength('short', totalQ) + ' ' + strings.questionsText;
   const qMedium = document.getElementById('mode-q-medium');
-  if (qMedium) qMedium.textContent = Math.min(50, totalQ) + ' ' + strings.questionsText;
+  if (qMedium) qMedium.textContent = getTestLength('medium', totalQ) + ' ' + strings.questionsText;
   const qLong = document.getElementById('mode-q-long');
-  if (qLong) qLong.textContent = Math.min(100, totalQ) + ' ' + strings.questionsText;
+  if (qLong) qLong.textContent = getTestLength('long', totalQ) + ' ' + strings.questionsText;
 
   const heroTitle = document.querySelector('.hero h1');
   if (heroTitle) heroTitle.innerHTML = isEn ? heroTitleEn : heroTitleLocal;

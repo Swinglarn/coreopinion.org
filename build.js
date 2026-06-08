@@ -727,7 +727,41 @@ configFiles.forEach(file => {
   html = html.replace(/\{\{LABEL\}\}/g, config.localLabel || '');
   html = html.replace(/\{\{HERO_TITLE\}\}/g, config.heroTitle || '');
   html = html.replace(/\{\{HERO_SUB\}\}/g, config.heroSub || '');
-  
+
+  // 1.5 Dynamic card question count replacement at build time
+  const totalQ = config.bank ? config.bank.length : 0;
+  function getTestLengthStatic(modeName, totalQ) {
+    if (totalQ >= 80) {
+      if (modeName === 'short') return 25;
+      if (modeName === 'medium') return 50;
+      return Math.min(100, totalQ);
+    } else if (totalQ >= 45) {
+      if (modeName === 'short') return 15;
+      if (modeName === 'medium') return 30;
+      return totalQ;
+    } else if (totalQ >= 35) {
+      if (modeName === 'short') return 15;
+      if (modeName === 'medium') return 25;
+      return totalQ;
+    } else if (totalQ >= 25) {
+      if (modeName === 'short') return 12;
+      if (modeName === 'medium') return 20;
+      return totalQ;
+    } else {
+      const s = Math.max(5, Math.floor(totalQ * 0.4));
+      if (modeName === 'short') return s;
+      if (modeName === 'medium') return Math.max(s + 2, Math.floor(totalQ * 0.7));
+      return totalQ;
+    }
+  }
+  const sCount = getTestLengthStatic('short', totalQ);
+  const mCount = getTestLengthStatic('medium', totalQ);
+  const lCount = getTestLengthStatic('long', totalQ);
+
+  html = html.replace(/<div class="mode-card-q" id="mode-q-short">25 questions<\/div>/g, `<div class="mode-card-q" id="mode-q-short">${sCount} questions</div>`);
+  html = html.replace(/<div class="mode-card-q" id="mode-q-medium">50 questions<\/div>/g, `<div class="mode-card-q" id="mode-q-medium">${mCount} questions</div>`);
+  html = html.replace(/<div class="mode-card-q" id="mode-q-long">100 questions<\/div>/g, `<div class="mode-card-q" id="mode-q-long">${lCount} questions</div>`);
+
   // 2. Party Strip replacement (Replace the whole div to support stats-strip vs party-strip)
   html = html.replace(/<div class="party-strip">[\s\S]*?<\/div>/, config.partyStripHtml || '');
   
@@ -825,14 +859,39 @@ function applyLang() {
   if (btnMedium) btnMedium.textContent = strings.modeBtnSelect;
   const btnLong = document.getElementById('mode-btn-long');
   if (btnLong) btnLong.textContent = strings.modeBtnSelect;
-
   const totalQ = typeof BANK !== 'undefined' ? BANK.length : 0;
+
+  function getTestLength(modeName, totalQ) {
+    if (totalQ >= 80) {
+      if (modeName === 'short') return 25;
+      if (modeName === 'medium') return 50;
+      return Math.min(100, totalQ);
+    } else if (totalQ >= 45) {
+      if (modeName === 'short') return 15;
+      if (modeName === 'medium') return 30;
+      return totalQ;
+    } else if (totalQ >= 35) {
+      if (modeName === 'short') return 15;
+      if (modeName === 'medium') return 25;
+      return totalQ;
+    } else if (totalQ >= 25) {
+      if (modeName === 'short') return 12;
+      if (modeName === 'medium') return 20;
+      return totalQ;
+    } else {
+      const s = Math.max(5, Math.floor(totalQ * 0.4));
+      if (modeName === 'short') return s;
+      if (modeName === 'medium') return Math.max(s + 2, Math.floor(totalQ * 0.7));
+      return totalQ;
+    }
+  }
+
   const qShort = document.getElementById('mode-q-short');
-  if (qShort) qShort.textContent = Math.min(25, totalQ) + ' ' + strings.questionsText;
+  if (qShort) qShort.textContent = getTestLength('short', totalQ) + ' ' + strings.questionsText;
   const qMedium = document.getElementById('mode-q-medium');
-  if (qMedium) qMedium.textContent = Math.min(50, totalQ) + ' ' + strings.questionsText;
+  if (qMedium) qMedium.textContent = getTestLength('medium', totalQ) + ' ' + strings.questionsText;
   const qLong = document.getElementById('mode-q-long');
-  if (qLong) qLong.textContent = Math.min(100, totalQ) + ' ' + strings.questionsText;
+  if (qLong) qLong.textContent = getTestLength('long', totalQ) + ' ' + strings.questionsText;
 
   const heroTitle = document.querySelector('.hero h1');
   if (heroTitle) heroTitle.innerHTML = isEn ? heroTitleEn : heroTitleLocal;
