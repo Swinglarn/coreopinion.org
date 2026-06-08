@@ -1,9 +1,4 @@
-const { createClient } = require('@supabase/supabase-js');
-
-const SB_URL = process.env.SUPABASE_URL || 'https://rttomfnfyjjssdqfzkaj.supabase.co';
-const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5ODcwMjEsImV4cCI6MjA4ODU2MzAyMX0.0qBogK8xywL77IFYj4IywZIhHyKjbvbVmXYvG6wAZGw';
-
-const supabase = createClient(SB_URL, SB_KEY);
+const { supabase } = require('./utils');
 
 module.exports = async function handler(req, res) {
   // CORS Headers

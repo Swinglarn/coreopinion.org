@@ -1,30 +1,6 @@
-const { createClient } = require('@supabase/supabase-js');
+const { supabase, nationalityMap } = require('./utils');
 const fs = require('fs');
 const path = require('path');
-
-const SB_URL = process.env.SUPABASE_URL || 'https://rttomfnfyjjssdqfzkaj.supabase.co';
-const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5ODcwMjEsImV4cCI6MjA4ODU2MzAyMX0.0qBogK8xywL77IFYj4IywZIhHyKjbvbVmXYvG6wAZGw';
-
-const supabase = createClient(SB_URL, SB_KEY);
-
-const nationalityMap = {
-  us: "United States",
-  uk: "United Kingdom",
-  ca: "Canada",
-  au: "Australia",
-  nz: "New Zealand",
-  de: "Germany",
-  at: "Austria",
-  fr: "France",
-  es: "Spain",
-  it: "Italy",
-  se: "Sweden",
-  ie: "Ireland",
-  nl: "Netherlands",
-  dk: "Denmark",
-  no: "Norway",
-  fi: "Finland"
-};
 
 module.exports = async function handler(req, res) {
   const { a, b } = req.query;

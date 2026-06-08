@@ -1,39 +1,6 @@
-const { createClient } = require('@supabase/supabase-js');
+const { supabase, nationalityMap, modeToLang, PROFILES } = require('./utils');
 const fs = require('fs');
 const path = require('path');
-
-const SB_URL = process.env.SUPABASE_URL || 'https://rttomfnfyjjssdqfzkaj.supabase.co';
-const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dG9tZm5meWpqc3NkcWZ6a2FqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5ODcwMjEsImV4cCI6MjA4ODU2MzAyMX0.0qBogK8xywL77IFYj4IywZIhHyKjbvbVmXYvG6wAZGw';
-
-const supabase = createClient(SB_URL, SB_KEY);
-
-const nationalityMap = {
-  us: "United States",
-  uk: "United Kingdom",
-  ca: "Canada",
-  au: "Australia",
-  nz: "New Zealand",
-  de: "Germany",
-  at: "Austria",
-  fr: "France",
-  es: "Spain",
-  it: "Italy",
-  se: "Sweden",
-  ie: "Ireland",
-  nl: "Netherlands",
-  dk: "Denmark",
-  no: "Norway",
-  fi: "Finland"
-};
-
-const PROFILES = {
-  "axiom": "The Axiom 🔷",
-  "analyst": "The Analyst 🔬",
-  "pragmatist": "The Pragmatist ⚖️",
-  "empath": "The Empath 🌊",
-  "weathervane": "The Weathervane 🌪️",
-  "mirror": "The Mirror 🪞"
-};
 
 module.exports = async function handler(req, res) {
   const { id } = req.query;
@@ -80,7 +47,9 @@ module.exports = async function handler(req, res) {
     else if (overallBias <= 85) profileKey = 'weathervane';
     else profileKey = 'mirror';
 
-    const profileName = PROFILES[profileKey] || "The Analyst 🔬";
+    const lang = result.mode && modeToLang[result.mode] ? modeToLang[result.mode] : 'en';
+    const profile = (PROFILES[lang] && PROFILES[lang][profileKey]) ? PROFILES[lang][profileKey] : PROFILES['en'][profileKey];
+    const profileName = `${profile.name} ${profile.icon}`;
 
     let title = `CoreOpinion Political Compass Result`;
     let description = `Cognitive Profile: ${profileName} | Framing Bias: ${overallBias}% | Compass Position: Econ ${eScore.toFixed(1)}, Gov ${gScore.toFixed(1)}`;
