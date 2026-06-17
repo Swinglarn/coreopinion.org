@@ -2535,3 +2535,100 @@ window.selectIdeology = function(key) {
   }
 };
 
+
+// ============================================================
+// HERO VIDEO BACKGROUND SLIDESHOW LOOP
+// ============================================================
+(function() {
+  const HERO_VIDEOS = ['handshake', 'arbitration', 'taipei', 'people', 'nyc', 'berlin', 'agriculture'];
+  let currentIdx = 0;
+  let activeVideoEl = null;
+
+  function createVideoElement(name) {
+    const video = document.createElement('video');
+    video.muted = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.loop = true;
+    video.setAttribute('preload', 'auto');
+    
+    // Add sources (WebM is primary, MP4 is fallback)
+    const webmSource = document.createElement('source');
+    webmSource.src = `/videos/${name}.webm`;
+    webmSource.type = 'video/webm';
+    
+    const mp4Source = document.createElement('source');
+    mp4Source.src = `/videos/${name}.mp4`;
+    mp4Source.type = 'video/mp4';
+    
+    video.appendChild(webmSource);
+    video.appendChild(mp4Source);
+    
+    return video;
+  }
+
+  function startSlideshow() {
+    const container = document.getElementById('hero-video-slides');
+    if (!container) return;
+
+    // Create and play first video
+    const firstVideoName = HERO_VIDEOS[currentIdx];
+    activeVideoEl = createVideoElement(firstVideoName);
+    container.appendChild(activeVideoEl);
+    
+    // Force play and fade in
+    activeVideoEl.play().catch(e => console.log("Autoplay blocked/failed: ", e));
+    setTimeout(() => {
+      activeVideoEl.classList.add('active');
+    }, 50);
+
+    const slideDuration = 8000; // 8 seconds per video
+    const fadeDuration = 1500;  // 1.5 seconds cross-fade (matches CSS)
+    const preloadLeadTime = 2000; // Preload next video 2 seconds before transition
+
+    function transitionToNext() {
+      const nextIdx = (currentIdx + 1) % HERO_VIDEOS.length;
+      const nextVideoName = HERO_VIDEOS[nextIdx];
+
+      // Preload next video in background (opacity 0)
+      const nextVideoEl = createVideoElement(nextVideoName);
+      container.appendChild(nextVideoEl);
+      nextVideoEl.play().catch(e => console.log("Autoplay failed: ", e));
+
+      // After 2 seconds of preloading/buffering, execute the fade transition
+      setTimeout(() => {
+        nextVideoEl.classList.add('active');
+        if (activeVideoEl) {
+          activeVideoEl.classList.remove('active');
+          const oldVideo = activeVideoEl;
+          // Clean up old video after transition completes to save memory
+          setTimeout(() => {
+            oldVideo.pause();
+            oldVideo.remove();
+          }, fadeDuration);
+        }
+        activeVideoEl = nextVideoEl;
+        currentIdx = nextIdx;
+
+        // Schedule next transition
+        scheduleNext();
+      }, preloadLeadTime);
+    }
+
+    function scheduleNext() {
+      setTimeout(transitionToNext, slideDuration - preloadLeadTime);
+    }
+
+    // Schedule the first transition
+    scheduleNext();
+  }
+
+  // Run on DOMContentLoaded or immediately if already loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startSlideshow);
+  } else {
+    startSlideshow();
+  }
+})();
+
+
