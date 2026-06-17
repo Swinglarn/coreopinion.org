@@ -702,6 +702,34 @@ function getDisplayName(val, langCode) {
   return '';
 }
 
+// hreflang configuration for localized portals
+const hreflangMap = {
+  general: 'x-default',
+  us: 'en-us',
+  uk: 'en-gb',
+  ca: 'en-ca',
+  au: 'en-au',
+  nz: 'en-nz',
+  se: 'sv-se',
+  dk: 'da-dk',
+  no: 'no-no',
+  fi: 'fi-fi',
+  de: 'de-de',
+  at: 'de-at',
+  fr: 'fr-fr',
+  es: 'es-es',
+  it: 'it-it',
+  ie: 'en-ie',
+  nl: 'nl-nl'
+};
+
+let hreflangLinks = '';
+Object.keys(hreflangMap).forEach(key => {
+  const code = hreflangMap[key];
+  const urlPath = key === 'general' ? '' : key;
+  hreflangLinks += `<link rel="alternate" hreflang="${code}" href="https://coreopinion.org/${urlPath}" />\n`;
+});
+
 // Read all configurations
 const configFiles = fs.readdirSync(countriesDir).filter(f => f.endsWith('.json'));
 
@@ -711,6 +739,7 @@ configFiles.forEach(file => {
   const filePath = path.join(countriesDir, file);
   const config = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const isGeneral = config.code === 'general';
+  const langConfig = langMap[config.code];
   
   const outputName = isGeneral ? 'index.html' : `${config.code}.html`;
   const outputPath = path.join(outputDir, outputName);
@@ -727,6 +756,59 @@ configFiles.forEach(file => {
   html = html.replace(/\{\{LABEL\}\}/g, config.localLabel || '');
   html = html.replace(/\{\{HERO_TITLE\}\}/g, config.heroTitle || '');
   html = html.replace(/\{\{HERO_SUB\}\}/g, config.heroSub || '');
+
+  // Hreflang and Lang substitutions
+  const lang = (langConfig && langConfig.langCode) ? langConfig.langCode : 'en';
+  html = html.replace(/\{\{LANG\}\}/g, lang);
+  html = html.replace(/\{\{HREFLANG_LINKS\}\}/g, hreflangLinks);
+
+  // Dynamic JSON-LD Schema Graph
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://coreopinion.org/#website",
+        "url": "https://coreopinion.org/",
+        "name": "CoreOpinion",
+        "publisher": {
+          "@id": "https://coreopinion.org/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://coreopinion.org/#organization",
+        "name": "CoreOpinion",
+        "url": "https://coreopinion.org/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://coreopinion.org/og-image.svg"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@coreopinion.org",
+          "contactType": "customer support"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${config.canonical || 'https://coreopinion.org/'}#application`,
+        "name": config.title || "Political Compass Test with Bias Score",
+        "url": config.canonical || "https://coreopinion.org/",
+        "operatingSystem": "All",
+        "applicationCategory": "EducationalApplication",
+        "description": config.desc || "Take the political compass test that reveals your framing bias.",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  };
+  const schemaScript = `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>`;
+  html = html.replace(/\{\{SCHEMA_MARKUP\}\}/g, schemaScript);
 
   // 1.5 Dynamic card question count replacement at build time
   const totalQ = config.bank ? config.bank.length : 0;
@@ -771,7 +853,6 @@ configFiles.forEach(file => {
   html = html.replace(/\{\{PARTY_META\}\}/g, JSON.stringify(config.partyMeta || {}, null, 2));
   
   // 4. Language Toggler Setup
-  const langConfig = langMap[config.code];
   if (langConfig) {
     // Generate Toggle Lang Button HTML
     const buttonHtml = `<button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">English</button>`;
@@ -1098,6 +1179,51 @@ if (fs.existsSync(contentDir) && fs.existsSync(contentTemplatePath)) {
     html = html.replace(/\{\{HEADER\}\}/g, contentData.header || '');
     html = html.replace(/\{\{SUBTITLE\}\}/g, contentData.subtitle || '');
     html = html.replace(/\{\{CONTENT\}\}/g, contentData.content || '');
+    
+    // Dynamic lang and schema graph
+    const contentName = file.replace('.json', '');
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://coreopinion.org/#website",
+          "url": "https://coreopinion.org/",
+          "name": "CoreOpinion",
+          "publisher": {
+            "@id": "https://coreopinion.org/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://coreopinion.org/#organization",
+          "name": "CoreOpinion",
+          "url": "https://coreopinion.org/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://coreopinion.org/og-image.svg"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@coreopinion.org",
+            "contactType": "customer support"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `https://coreopinion.org/${contentName}#webpage`,
+          "url": `https://coreopinion.org/${contentName}`,
+          "name": contentData.title || "",
+          "description": contentData.desc || "",
+          "isPartOf": {
+            "@id": "https://coreopinion.org/#website"
+          }
+        }
+      ]
+    };
+    const schemaScript = `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>`;
+    html = html.replace(/\{\{LANG\}\}/g, 'en');
+    html = html.replace(/\{\{SCHEMA_MARKUP\}\}/g, schemaScript);
     
     fs.writeFileSync(outputPath, html, 'utf8');
     console.log(`Generated content page: ${outputName} (size: ${html.length} bytes)`);

@@ -562,13 +562,19 @@ window.shareSocial = function(platform) {
 // ============================================================
 // 1. NAVIGATION & ROUTING
 // ============================================================
-window.goTo = function(id) {
+window.goTo = function(id, pushState = true) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   const target = document.getElementById(id);
   if (target) {
     target.classList.add('active');
   }
   window.scrollTo(0, 0);
+  
+  if (pushState) {
+    const stateName = id.replace('page-', '');
+    const hash = stateName === 'landing' ? '' : `#${stateName}`;
+    history.pushState({ pageId: id }, '', window.location.pathname + hash);
+  }
   
   // Clean up dynamic panels
   if (id === 'page-landing' || id === 'page-mode') {
@@ -580,6 +586,37 @@ window.goTo = function(id) {
     window.selectIdeology('centrism');
   }
 };
+
+// Listen for back/forward browser navigation
+window.addEventListener('popstate', function(event) {
+  if (event.state && event.state.pageId) {
+    window.goTo(event.state.pageId, false);
+  } else {
+    const hash = window.location.hash;
+    if (hash) {
+      const pageId = `page-${hash.replace('#', '')}`;
+      if (document.getElementById(pageId)) {
+        window.goTo(pageId, false);
+        return;
+      }
+    }
+    window.goTo('page-landing', false);
+  }
+});
+
+// Handle initial deep-linking on page load
+window.addEventListener('DOMContentLoaded', function() {
+  const hash = window.location.hash;
+  if (hash) {
+    const pageId = `page-${hash.replace('#', '')}`;
+    if (document.getElementById(pageId)) {
+      window.goTo(pageId, false);
+      history.replaceState({ pageId: pageId }, '', window.location.href);
+      return;
+    }
+  }
+  history.replaceState({ pageId: 'page-landing' }, '', window.location.pathname);
+});
 
 // ============================================================
 // 2. SHUFFLER & QUESTION SCHEDULING (MINIMUM GAP ALGORITHM)
@@ -2568,6 +2605,10 @@ window.selectIdeology = function(key) {
   }
 
   function startSlideshow() {
+    if (window.innerWidth <= 768) {
+      // Disable video backgrounds on mobile to save battery, data, and CPU
+      return;
+    }
     const container = document.getElementById('hero-video-slides');
     if (!container) return;
 

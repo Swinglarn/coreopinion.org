@@ -2025,4 +2025,10 @@ select:focus, input:focus {
   border-bottom-color: var(--ink);
 }
 
+/* --- RESPONSIVE COMPASS SVG --- */
+.compass-wrap svg {
+  max-width: 100%;
+  height: auto;
+}
+
 
