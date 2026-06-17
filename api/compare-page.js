@@ -23,10 +23,17 @@ module.exports = async function handler(req, res) {
     const payloadA = fetchA.data;
     const payloadB = fetchB.data;
 
-    // 2. Read compiled compare.html
-    const templatePath = path.join(process.cwd(), 'compare.html');
+    // 2. Read compiled template
+    let templateName = 'compare.html';
+    if (payloadA.mode && payloadA.mode === payloadB.mode && payloadA.mode !== 'general') {
+      const countryFile = `${payloadA.mode}.html`;
+      if (fs.existsSync(path.join(process.cwd(), countryFile))) {
+        templateName = countryFile;
+      }
+    }
+    const templatePath = path.join(process.cwd(), templateName);
     if (!fs.existsSync(templatePath)) {
-      console.error("compare.html not found on disk!");
+      console.error(`${templateName} not found on disk!`);
       return res.status(500).send('Server Error: Template missing');
     }
     let html = fs.readFileSync(templatePath, 'utf8');

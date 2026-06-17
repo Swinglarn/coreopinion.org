@@ -16,7 +16,7 @@
 })();
 </script>
 <title>Political Compass Test with Bias Score | CoreOpinion</title>
-<meta name="description" content="Take the political compass test that reveals your framing bias. 102 scenario-based questions to find your ideology and check your response consistency.">
+<meta name="description" content="Take the political compass test that reveals your framing bias. 102 policy-focused questions and statements to find your ideology and check your response consistency.">
 <meta name="keywords" content="political compass test, political quiz, political ideology test, framing bias, where do I stand politically, political compass 2026, libertarian authoritarian quiz, economic left right test, free political test, am I liberal or conservative, political spectrum quiz, political compass with bias score">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -44,7 +44,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/">
 <meta property="og:title" content="Political Compass Test with Bias Score | CoreOpinion">
-<meta property="og:description" content="Take the political compass test that reveals your framing bias. 102 scenario-based questions to find your ideology and check your response consistency.">
+<meta property="og:description" content="Take the political compass test that reveals your framing bias. 102 policy-focused questions and statements to find your ideology and check your response consistency.">
 <meta property="og:site_name" content="CoreOpinion">
 <meta property="og:image" content="https://coreopinion.org/og-image.svg">
 <meta property="og:image:width" content="1200">
@@ -52,7 +52,7 @@
 <meta property="og:image:alt" content="CoreOpinion political compass test">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Political Compass Test with Bias Score | CoreOpinion">
-<meta name="twitter:description" content="Take the political compass test that reveals your framing bias. 102 scenario-based questions to find your ideology and check your response consistency.">
+<meta name="twitter:description" content="Take the political compass test that reveals your framing bias. 102 policy-focused questions and statements to find your ideology and check your response consistency.">
 <meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +93,7 @@
       "url": "https://coreopinion.org/",
       "operatingSystem": "All",
       "applicationCategory": "EducationalApplication",
-      "description": "Take the political compass test that reveals your framing bias. 102 scenario-based questions to find your ideology and check your response consistency.",
+      "description": "Take the political compass test that reveals your framing bias. 102 policy-focused questions and statements to find your ideology and check your response consistency.",
       "browserRequirements": "Requires JavaScript. Requires HTML5.",
       "offers": {
         "@type": "Offer",
@@ -147,7 +147,7 @@
     <div class="hero-bg"></div>
     <div class="eyebrow">General Political Test</div>
     <h1>A political compass test<br>built for <em>nuance.</em></h1>
-    <p class="hero-sub">Answer scenario-based questions. Go on record across 8 political topics. See exactly where you land and why.</p>
+    <p class="hero-sub">Answer policy-focused questions and statements. Go on record across 8 political topics. See exactly where you land and why.</p>
     <div class="hero-cta">
       <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
       <button class="btn-secondary" onclick="document.querySelector('.info-section').scrollIntoView({ behavior: 'smooth' })">How it works</button>
@@ -156,14 +156,14 @@
   </div>
 
   <div class="stats-strip">
-    <div class="stat-cell"><div class="stat-num">100</div><div class="stat-desc">Scenario-based questions in the full test</div></div>
+    <div class="stat-cell"><div class="stat-num">100</div><div class="stat-desc">Policy questions & statements in the full test</div></div>
     <div class="stat-cell"><div class="stat-num">3</div><div class="stat-desc">Political axes, including Nationalist vs Globalist</div></div>
     <div class="stat-cell"><div class="stat-num">2</div><div class="stat-desc">Results. You get more than just a dot on a compass.</div></div>
   </div>
   <div class="info-section">
     <div class="info-block">
-      <h3>Scenario-based, not a survey</h3>
-      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
+      <h3>Policy-focused & statement-based</h3>
+      <p>Every question asks you to take a position on real-world policy issues or evaluate core ideological statements. No simple agree/disagree sliders. You select the option that closest aligns with your view, mapping directly to actual party platforms.</p>
     </div>
     <div class="info-block">
       <h3>Party alignment, not party loyalty</h3>
@@ -247,7 +247,7 @@
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
     <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-tag">Context</div>
       <div class="q-scenario-body" id="q-scen-body"></div>
     </div>
     <div class="q-question" id="q-text"></div>
@@ -3790,6 +3790,7 @@ const BANK = [
 
 const PARTY_META = {};
 
+window.portalCode = 'general';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>

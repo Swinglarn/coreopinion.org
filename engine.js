@@ -39,7 +39,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: 'The Axiom', icon: '🔷', desc: 'Unmovable. Your principles hold regardless of framing, context, or emotional appeal.' },
       analyst: { name: 'The Analyst', icon: '🔬', desc: 'Highly consistent with minor contextual flexibility. You distinguish policy mechanics from rhetoric.' },
-      pragmatist: { name: 'The Pragmatist', icon: '⚖️', desc: 'You hold core positions but adjust at the margins based on real-world scenarios.' },
+      pragmatist: { name: 'The Pragmatist', icon: '⚖️', desc: 'You hold core positions but adjust at the margins based on real-world situations.' },
       empath: { name: 'The Empath', icon: '🌊', desc: 'You respond strongly to human stories and emotional context. Your positions shift with the narrative.' },
       weathervane: { name: 'The Weathervane', icon: '🌪️', desc: "Framing significantly reshapes your stance. You may hold different positions on the same issue depending on how it's presented." },
       mirror: { name: 'The Mirror', icon: '🪞', desc: 'Your answers reflect whatever frame is presented. You may not have stable underlying positions on many issues.' }
@@ -52,7 +52,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'High bias', 'Framing had a significant influence on many of your answers. The same policy question, worded differently, often produced different responses.'],
       [81, 100, 'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
     ],
-    insightInconsistent: '💡 <strong>Cognitive Analysis:</strong> The emotional wording or scenario details in these questions successfully shifted your perspective. By swapping between an autonomous support frame and a systemic consequence frame, your choice was altered. This suggests that your beliefs in this area are contextually dependent rather than absolute, responding strongly to whatever specific narrative lens is highlighted.',
+    insightInconsistent: '💡 <strong>Cognitive Analysis:</strong> The emotional wording or situational details in these questions successfully shifted your perspective. By swapping between an autonomous support frame and a systemic consequence frame, your choice was altered. This suggests that your beliefs in this area are contextually dependent rather than absolute, responding strongly to whatever specific narrative lens is highlighted.',
     insightConsistent: '✅ <strong>Cognitive Analysis:</strong> Your values held firm. Whether presented with positive support framing or critical framing, you maintained identical ideological positions. This demonstrates high internal logical consistency and resistance to rhetorical framing.'
   },
   de: {
@@ -80,7 +80,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: 'Das Axiom', icon: '🔷', desc: 'Unerschütterlich. Deine Prinzipien gelten unabhängig von Formulierung, Kontext oder emotionalem Appell.' },
       analyst: { name: 'Der Analyst', icon: '🔬', desc: 'Sehr konsistent mit geringer kontextueller Flexibilität. Du unterscheidest politische Mechanismen von Rhetorik.' },
-      pragmatist: { name: 'Der Pragmatiker', icon: '⚖️', desc: 'Du vertrittst feste Kernpositionen, passt sie aber in konkreten Szenarien an den Rändern an.' },
+      pragmatist: { name: 'Der Pragmatiker', icon: '⚖️', desc: 'Du vertrittst feste Kernpositionen, passt sie aber in konkreten Situationen an den Rändern an.' },
       empath: { name: 'Der Empath', icon: '🌊', desc: 'Du reagierst stark auf menschliche Geschichten und emotionalen Kontext. Deine Positionen verschieben sich mit dem Narrativ.' },
       weathervane: { name: 'Die Wetterfahne', icon: '🌪️', desc: 'Die Formulierung prägt deine Haltung erheblich. Du vertrittst je nach Darstellung unterschiedliche Positionen zum selben Thema.' },
       mirror: { name: 'Der Spiegel', icon: '🪞', desc: 'Deine Antworten spiegeln den vorgegebenen Rahmen wider. Du hast bei vielen Themen keine stabilen Grundpositionen.' }
@@ -121,7 +121,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: "L'Axiome", icon: '🔷', desc: "Inébranlable. Vos principes tiennent indépendamment de la formulation, du contexte ou de l'appel émotionnel." },
       analyst: { name: "L'Analyste", icon: '🔬', desc: "Très cohérent avec une flexibilité contextuelle mineure. Vous distinguez les mécanismes politiques de la rhétorique." },
-      pragmatist: { name: 'Le Pragmatique', icon: '⚖️', desc: 'Vous maintenez des positions fondamentales mais les ajustez aux marges en fonction des scénarios réels.' },
+      pragmatist: { name: 'Le Pragmatique', icon: '⚖️', desc: 'Vous maintenez des positions fondamentales mais les ajustez aux marges en fonction des situations réelles.' },
       empath: { name: "L'Empathe", icon: '🌊', desc: 'Vous réagissez fortement aux récits humains et au contexte émotionnel. Vos positions varient avec le récit.' },
       weathervane: { name: 'La Girouette', icon: '🌪️', desc: "La formulation façonne considérablement votre position. Vous pouvez avoir des avis différents sur un même sujet selon sa présentation." },
       mirror: { name: 'Le Miroir', icon: '🪞', desc: "Vos réponses reflètent le cadrage présenté. Vous n'avez pas de position stable sur de nombreux sujets." }
@@ -134,7 +134,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'Biais élevé', 'La formulation a eu une influence significative sur beaucoup de vos réponses. La même question de politique publique a produit des réponses différentes selon sa formulation.'],
       [81, 100, 'Biais très élevé', 'Vos réponses ont été fortement façonnées par la manière dont les questions étaient présentées plutôt que par des valeurs sous-jacentes cohérentes.']
     ],
-    insightInconsistent: '💡 <strong>Analyse cognitive:</strong> Les mots ou les détails de scénarios dans ces questions ont réussi à décaler votre point de vue. Votre choix a changé selon le cadrage. Cela suggère que vos convictions dans ce domaine dépendent fortement du contexte.',
+    insightInconsistent: '💡 <strong>Analyse cognitive:</strong> Les mots ou les détails de situations dans ces questions ont réussi à décaler votre point de vue. Votre choix a changé selon le cadrage. Cela suggère que vos convictions dans ce domaine dépendent fortement du contexte.',
     insightConsistent: '✅ <strong>Analyse cognitive:</strong> Vos valeurs sont restées fermes. Quel que soit le cadrage, vous avez maintenu des positions idéologiques identiques. Cela démontre une cohérence interne élevée.'
   },
   es: {
@@ -162,7 +162,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: 'El Axioma', icon: '🔷', desc: 'Inamovible. Tus principios se mantienen firmes sin importar el encuadre, el contexto o el llamado emocional.' },
       analyst: { name: 'El Analista', icon: '🔬', desc: 'Altamente consistente con una leve flexibilidad contextual. Distingues los mecanismos de política de la retórica.' },
-      pragmatist: { name: 'El Pragmático', icon: '⚖️', desc: 'Mantienes posiciones fundamentales pero las ajustas en los márgenes basándote en escenarios reales.' },
+      pragmatist: { name: 'El Pragmático', icon: '⚖️', desc: 'Mantienes posiciones fundamentales pero las ajustas en los márgenes basándote en situaciones reales.' },
       empath: { name: 'El Empático', icon: '🌊', desc: 'Respondes fuertemente a las historias humanas y al contexto emocional. Tus posiciones cambian con la narrativa.' },
       weathervane: { name: 'La Veleta', icon: '🌪️', desc: 'El encuadre redefine significativamente tu postura. Puedes tener posiciones diferentes sobre el mismo tema según cómo se presente.' },
       mirror: { name: 'El Espejo', icon: '🪞', desc: 'Tus respuestas reflejan cualquier encuadre que se presente. Podrías no tener posiciones subyacentes estables en muchos temas.' }
@@ -175,7 +175,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'Sesgo alto', 'El encuadre influyó significativamente en muchas de tus respuestas. La misma pregunta de política, redactada de otra forma, a menudo produjo respuestas distintas.'],
       [81, 100, 'Sesgo muy alto', 'Tus respuestas estuvieron fuertemente influenciadas por el encuadre de las preguntas más que por valores subyacentes consistentes.']
     ],
-    insightInconsistent: '💡 <strong>Análisis cognitivo:</strong> Las palabras o los detalles de los escenarios en estas preguntas lograron cambiar tu perspectiva. Tu elección varió según el encuadre. Esto sugiere que tus convicciones en esta área dependen en gran medida del contexto.',
+    insightInconsistent: '💡 <strong>Análisis cognitivo:</strong> Las palabras o los detalles de las situaciones en estas preguntas lograron cambiar tu perspectiva. Tu elección varió según el encuadre. Esto sugiere que tus convicciones en esta área dependen en gran medida del contexto.',
     insightConsistent: '✅ <strong>Análisis cognitivo:</strong> Tus valores se mantuvieron firmes. Sin importar el tipo de encuadre, mantuviste posiciones ideológicas idénticas. Esto demuestra una alta consistencia lógica interna.'
   },
   it: {
@@ -203,7 +203,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: "L'Assioma", icon: '🔷', desc: "Inamovibile. I tuoi principi rimangono saldi indipendentemente dall'incorniciamento, dal contesto o dal richiamo emotivo." },
       analyst: { name: "L'Analista", icon: '🔬', desc: 'Altamente coerente con una lieve flessibilità contestuale. Distingui i meccanismi politici dalla retorica.' },
-      pragmatist: { name: 'Il Pragmatico', icon: '⚖️', desc: 'Mantieni posizioni fondamentali ma le adatti ai margini in base agli scenari reali.' },
+      pragmatist: { name: 'Il Pragmatico', icon: '⚖️', desc: 'Mantieni posizioni fondamentali ma le adatti ai margini in base alle situazioni reali.' },
       empath: { name: "L'Empatico", icon: '🌊', desc: 'Rispondi fortemente alle storie umane e al contesto emotivo. Le tue posizioni cambiano con la narrazione.' },
       weathervane: { name: 'La Banderuola', icon: '🌪️', desc: "L'incorniciamento rimodella significativamente la tua posizione. Puoi assumere posizioni diverse sullo stesso tema a seconda di come viene presentato." },
       mirror: { name: 'Lo Specchio', icon: '🪞', desc: 'Le tue risposte riflettono qualsiasi incorniciamento venga presentato. Potresti non avere posizioni di fondo stabili su molti argomenti.' }
@@ -216,7 +216,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'Bias elevato', 'L\'incorniciamento ha influenzato in modo significativo molte delle tue risposte. La stessa domanda politica, formulata diversamente, ha spesso prodotto risposte diverse.'],
       [81, 100, 'Bias molto elevato', 'Le tue risposte sono state fortemente modellate dall\'incorniciamento delle domande piuttosto che da valori sottostanti coerenti.']
     ],
-    insightInconsistent: '💡 <strong>Analisi cognitiva:</strong> Le parole o i dettagli degli scenari in queste domande sono riusciti a spostare la tua prospettiva. La tua scelta è cambiata in base all\'incorniciamento. Questo suggerisce che le tue convinzioni in quest\'area dipendono molto dal contesto.',
+    insightInconsistent: '💡 <strong>Analisi cognitiva:</strong> Le parole o i dettagli delle situazioni in queste domande sono riusciti a spostare la tua prospettiva. La tua scelta è cambiata in base all\'incorniciamento. Questo suggerisce che le tue convinzioni in quest\'area dipendono molto dal contesto.',
     insightConsistent: '✅ <strong>Analisi cognitiva:</strong> I tuoi valori si sono mantenuti saldi. Indipendentemente dal tipo di incorniciamento, hai mantenuto posizioni ideologiche identiche. Ciò dimostra un\'elevata coerenza logica interna.'
   },
   nl: {
@@ -244,7 +244,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: 'Het Axioma', icon: '🔷', desc: 'Onwrikbaar. Jouw principes houden stand ongeacht de formulering, context of emotionele oproep.' },
       analyst: { name: 'De Analist', icon: '🔬', desc: 'Zeer consistent met minimale contextuele flexibiliteit. Je onderscheidt beleidsmechanismen van retoriek.' },
-      pragmatist: { name: 'De Pragmaticus', icon: '⚖️', desc: "Je houdt vast aan kernstandpunten, maar past deze in concrete scenario's aan de marges aan." },
+      pragmatist: { name: 'De Pragmaticus', icon: '⚖️', desc: "Je houdt vast aan kernstandpunten, maar past deze in concrete situaties aan de marges aan." },
       empath: { name: 'De Empaat', icon: '🌊', desc: 'Je reageert sterk op menselijke verhalen en emotionele context. Je standpunten verschuiven met het narratief mee.' },
       weathervane: { name: 'De Windvaan', icon: '🌪️', desc: 'Formulering vormt je standpunt in sterke mate. Je kunt per presentatie verschillende standpunten over hetzelfde onderwerp innemen.' },
       mirror: { name: 'De Spiegel', icon: '🪞', desc: 'Je antwoorden weerspiegelen het gepresenteerde kader. Je hebt op veel gebieden geen stabiele onderliggende standpunten.' }
@@ -257,7 +257,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'Hoge beïnvloeding', 'De formulering had een aanzienlijke invloed op veel van je antwoorden. Dezelfde beleidsvraag leidde anders verwoord vaak tot andere antwoorden.'],
       [81, 100, 'Zeer hoge beïnvloeding', 'Je antwoorden werden sterk bepaald door de manier waarop vragen gesteld werden, in plaats van door consistente onderliggende waarden.']
     ],
-    insightInconsistent: '💡 <strong>Cognitieve analyse:</strong> De bewoording of scenario-details in deze vragen hebben je perspectief verschoven. Je keuze veranderde afhankelijk van de formulering. Dit suggereert dat je overtuigingen op dit gebied contextgevoelig zijn.',
+    insightInconsistent: '💡 <strong>Cognitieve analyse:</strong> De bewoording of situatie-details in deze vragen hebben je perspectief verschoven. Je keuze veranderde afhankelijk van de formulering. Dit suggereert dat je overtuigingen op dit gebied contextgevoelig zijn.',
     insightConsistent: '✅ <strong>Cognitieve analyse:</strong> Je waarden bleven standvastig. Ongeacht het type formulering behield je identieke posities. Dit getuigt van een hoge interne logische consistentie.'
   },
   sv: {
@@ -285,7 +285,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: 'Axiomet', icon: '🔷', desc: 'Orubblig. Dina principer håller oavsett formulering, sammanhang eller emotionella argument.' },
       analyst: { name: 'Analytikern', icon: '🔬', desc: 'Mycket konsekvent med mindre kontextuell flexibilitet. Du skiljer på sakpolitik och retorik.' },
-      pragmatist: { name: 'Pragmatikern', icon: '⚖️', desc: 'Du har fasta ståndpunkter i grunden men anpassar dem i marginalen utifrån verkliga scenarier.' },
+      pragmatist: { name: 'Pragmatikern', icon: '⚖️', desc: 'Du har fasta ståndpunkter i grunden men anpassar dem i marginalen utifrån verkliga situationer.' },
       empath: { name: 'Empaten', icon: '🌊', desc: 'Du reagerar starkt på mänskliga berättelser och känslomässiga sammanhang. Dina åsikter skiftar med narrativet.' },
       weathervane: { name: 'Vindflöjeln', icon: '🌪️', desc: 'Formuleringen formar dina ståndpunkter avsevärt. Du kan tycka olika i samma fråga beroende på hur den presenteras.' },
       mirror: { name: 'Spegeln', icon: '🪞', desc: 'Dina svar speglar den vinkling som presenteras. Du saknar stabila underliggande åsikter i många frågor.' }
@@ -298,7 +298,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'Hög partiskhet', 'Formuleringen hade en betydande inverkan på many av dina svar. Samma politiska fråga, formulerad annorlunda, gav ofta olika svar.'],
       [81, 100, 'Mycket hög partiskhet', 'Dina svar var starkt präglade av hur frågorna var utformade snarare än av konsekventa underliggande värderingar.']
     ],
-    insightInconsistent: '💡 <strong>Kognitiv analys:</strong> Formuleringen eller scenariodetaljerna i dessa frågor lyckades förskjuta ditt perspektiv. Ditt val ändrades beroende på vinklingen. Detta tyder på att dina åsikter här är kontextberoende.',
+    insightInconsistent: '💡 <strong>Kognitiv analys:</strong> Formuleringen eller situationsdetaljerna i dessa frågor lyckades förskjuta ditt perspektiv. Ditt val ändrades beroende på vinklingen. Detta tyder på att dina åsikter här är kontextberoende.',
     insightConsistent: '✅ <strong>Kognitiv analys:</strong> Dina värderingar stod fast. Oavsett om vinklingen var positiv eller kritisk behöll du identiska ståndpunkter. Detta visar på hög logisk konsekvens.'
   },
   da: {
@@ -326,7 +326,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: 'Aksiomet', icon: '🔷', desc: 'Urokkelig. Dine principper holder uanset formulering, kontekst eller følelsesmæssig appel.' },
       analyst: { name: 'Analytikeren', icon: '🔬', desc: 'Meget konsekvent med mindre kontekstuel fleksibilitet. Du skelner mellem politiske mekanismer og retorik.' },
-      pragmatist: { name: 'Pragmatikeren', icon: '⚖️', desc: 'Du har faste kerneholdninger, men tilpasser dem i marginen baseret på reelle scenarier.' },
+      pragmatist: { name: 'Pragmatikeren', icon: '⚖️', desc: 'Du har faste kerneholdninger, men tilpasser dem i marginen baseret på reelle situationer.' },
       empath: { name: 'Empaten', icon: '🌊', desc: 'Du reagerer stærkt på menneskelige historier og følelsesmæssig kontekst. Dine holdninger skifter med narrativet.' },
       weathervane: { name: 'Vejrhanen', icon: '🌪️', desc: 'Formuleringen former dine holdninger betydeligt. Du kan have forskellige holdninger til samme emne afhængigt af, hvordan det præsenteres.' },
       mirror: { name: 'Spejlet', icon: '🪞', desc: 'Dine svar afspejler den formulering, der præsenteres. Du har muligvis ikke stabile underliggende holdninger til mange emner.' }
@@ -339,7 +339,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'Høj partiskhed', 'Formuleringen havde en væsentlig indflydelse på mange af dine svar. Det samme politiske spørgsmål, formuleret anderledes, gav ofte forskellige svar.'],
       [81, 100, 'Meget høj partiskhed', 'Dine svar var stærkt præget af, hvordan spørgsmålene var formuleret, snarere end af konsekvente underliggende værdier.']
     ],
-    insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller scenariedetaljerne i disse spørgsmål formåede at forskyde dit perspektiv. Dit valg ændrede sig afhængigt af vinklingen. Dette tyder på, at dine holdninger her er kontekstafhængige.',
+    insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller situationsdetaljerne i disse spørgsmål formåede at forskyde dit perspektiv. Dit valg ændrede sig afhængigt af vinklingen. Dette tyder på, at dine holdninger her er kontekstafhængige.',
     insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Dine værdier stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høj logisk konsekvens.'
   },
   no: {
@@ -361,13 +361,13 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Hoppet over',
     noPairsText: 'Ingen par-sammenligninger utført for dette emnet ennå.',
     noPairsGeneralText: 'Ingen fullførte spørsmålspar for dette emnet å sammenligne. Ta den middels eller lange testen for å låse opp detaljert paranalyse.',
-    gapClose: 'Resultatet ditt er jevnt — bare {gap} poeg skiller deg fra {nextPartyName}. Du står muligens mellom begge tradisjonene.',
+    gapClose: 'Resultatet ditt er jevnt — bare {gap} poeng skiller deg fra {nextPartyName}. Du står muligens mellom begge tradisjonene.',
     gapModerate: 'Du har også et tydelig samsvar med {nextPartyName} ({nextPct}%).',
     gapClear: 'Samsvaret ditt med {topPartyName} er tydelig, med en margin på {gap} poeng til neste parti.',
     profiles: {
       axiom: { name: 'Aksiomet', icon: '🔷', desc: 'Urokkelig. Dine prinsipper holder uanset formulering, kontekst eller følelsesmessig appell.' },
       analyst: { name: 'Analytikeren', icon: '🔬', desc: 'Svært konsekvent med mindre kontekstuell fleksibilitet. Du skiller mellom politiske mekanismer og retorikk.' },
-      pragmatist: { name: 'Pragmatikeren', icon: '⚖️', desc: 'Du har faste kjerneholdninger, men justerer dem i marginen basert på reelle scenarier.' },
+      pragmatist: { name: 'Pragmatikeren', icon: '⚖️', desc: 'Du har faste kjerneholdninger, men justerer dem i marginen basert på reelle situasjoner.' },
       empath: { name: 'Empaten', icon: '🌊', desc: 'Du reagerer sterkt på menneskelige historier og følelsesmessig kontekst. Dine holdninger skifter med narrativet.' },
       weathervane: { name: 'Værhanen', icon: '🌪️', desc: 'Formuleringen former dine holdninger betydelig. Du kan ha ulike holdninger til samme sak avhengig av hvordan den presenteres.' },
       mirror: { name: 'Speilet', icon: '🪞', desc: 'Dine svar gjenspeiler den formuleringen som presenteres. Du har muligens ikke stabile underliggende holdninger til mange saker.' }
@@ -380,7 +380,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'Høy partiskhet', 'Formuleringen hadde en betydelig innvirkning på mange av svarene dine. Det samme politiske spørsmålet, formulert annerledes, ga ofte ulike svar.'],
       [81, 100, 'Svært høy partiskhet', 'Svarene dine var sterkt preget av hvordan spørsmålene var formulert, snarere enn av konsekvente underliggende verdier.']
     ],
-    insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller scenariedetaljene i disse spørsmålene formådde å forskyve ditt perspektiv. Valget ditt endret seg avhengig av vinklingen. Dette tyder på at holdningene dine her er kontekstavhengige.',
+    insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller situasjonsdetaljene i disse spørsmålene formådde å forskyve ditt perspektiv. Valget ditt endret seg avhengig av vinklingen. Dette tyder på at holdningene dine her er kontekstavhengige.',
     insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Verdiene dine stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høy logisk konsekvens.'
   },
   fi: {
@@ -408,7 +408,7 @@ const ENGINE_TRANSLATIONS = {
     profiles: {
       axiom: { name: 'Aksiooma', icon: '🔷', desc: 'Horjumaton. Periaatteesi pitävät riippumatta kehystyksestä, kontekstista tai tunnevalituksista.' },
       analyst: { name: 'Analyytikko', icon: '🔬', desc: 'Erittäin johdonmukainen vähäisellä kontekstuaalisella joustavuudella. Erotat politiikan mekaniikan retoriikasta.' },
-      pragmatist: { name: 'Pragmaatikko', icon: '⚖️', desc: 'Pidät kiinni ydinkannoistasi, mutta sopeudat niitä marginaaleissa todellisten skenaarioiden perusteella.' },
+      pragmatist: { name: 'Pragmaatikko', icon: '⚖️', desc: 'Pidät kiinni ydinkannoistasi, mutta sopeudat niitä marginaaleissa todellisten tilanteiden perusteella.' },
       empath: { name: 'Empaatikko', icon: '🌊', desc: 'Reagoit voimakkaasti inhimillisiin tarinoihin ja emotionaaliseen kontekstiin. Kantasi muuttuvat narratiivin mukaan.' },
       weathervane: { name: 'Tuuliviiri', icon: '🌪️', desc: 'Kehystys muovaa kantaasi merkittävästi. Saatat olla eri mieltä samasta asiasta riippuen siitä, miten se esitetään.' },
       mirror: { name: 'Peili', icon: '🪞', desc: 'Vastaukset heijastavat sitä kehystystä, joka esitetään. Sinulla ei ehkä ole vakaita taustakantoja monissa asioissa.' }
@@ -421,7 +421,7 @@ const ENGINE_TRANSLATIONS = {
       [61, 80, 'Voimakas vinouma', 'Kehystys vaikutti merkittävästi moniin vastauksiisi. Sama politiikkakysymys toisin muotoiltuna johti usein eri vastaukseen.'],
       [81, 100, 'Erittäin voimakas vinouma', 'Kysymysten kehystys muovasi vastauksiasi voimakkaasti pikemmin kuin johdonmukaiset taustalla olevat arvot.']
     ],
-    insightInconsistent: '💡 <strong>Kognitiivinen analyysi:</strong> Kysymysten sanamuodot tai skenaarioiden yksityiskohdat onnistuivat muuttamaan näkökulmaasi. Valintasi muuttui kehystyksen mukaan. Tämä viittaa siihen, että kantasi tässä aiheessa ovat tilannesidonnaisia.',
+    insightInconsistent: '💡 <strong>Kognitiivinen analyysi:</strong> Kysymysten sanamuodot tai tilanteiden yksityiskohdat onnistuivat muuttamaan näkökulmaasi. Valintasi muuttui kehystyksen mukaan. Tämä viittaa siihen, että kantasi tässä aiheessa ovat tilannesidonnaisia.',
     insightConsistent: '✅ <strong>Kognitiivinen analyysi:</strong> Arvosi pysyivät vahvoina. Riippumatta kehystyksestä säilytit identtiset ideologiset kannat. Tämä osoittaa korkeaa sisäistä loogista johdonmukaisuutta.'
   }
 };
@@ -777,7 +777,7 @@ window.renderQ = function() {
   const qTopic = document.getElementById('q-topic');
   if (qTopic) qTopic.textContent = q.nl;
 
-  // Context scenario card
+  // Context situation card
   const scenWrap = document.getElementById('q-scen-wrap');
   const scenBody = document.getElementById('q-scen-body');
   if (q.ctx) {
@@ -1401,7 +1401,7 @@ window.saveResults = async function() {
 
   const payload = {
     email,
-    mode: hasParties ? 'country' : 'general',
+    mode: window.portalCode || 'general',
     e_score: parseFloat(eScore.toFixed(4)),
     g_score: parseFloat(gScore.toFixed(4)),
     age,
@@ -1462,7 +1462,7 @@ window.autoSaveAnonymousResults = async function() {
   if (nationality) biasBreakdown.__nationality = nationality;
 
   const payload = {
-    mode: hasParties ? 'country' : 'general',
+    mode: window.portalCode || 'general',
     e_score: parseFloat(eScore.toFixed(4)),
     g_score: parseFloat(gScore.toFixed(4)),
     age,

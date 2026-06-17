@@ -4,7 +4,7 @@
   "localLabel": "Nederland",
   "flag": "🇳🇱",
   "title": "Kieskompas Nederland 2026 | CoreOpinion",
-  "desc": "Ontdek je positie op het politieke kompas. 47 scenario-gebaseerde vragen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.",
+  "desc": "Ontdek je positie op het politieke kompas. 47 beleidsgerichte vragen en stellingen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.",
   "keywords": "Kieskompas Nederland, Stemwijzer alternatief 2026, politieke partij test, politiek kompas, kieswijzer, PVV GL-PvdA VVD NSC D66 BBB CDA",
   "canonical": "https://coreopinion.org/nl",
   "regions": [
@@ -4000,6 +4000,6 @@
     }
   ],
   "heroTitle": "Waar sta jij in de<br><em>Nederlandse</em> politiek?",
-  "heroSub": "47 realistische scenario-vragen over de belangrijkste thema's van de Nederlandse politiek. Zie je positie op de boussole en je aansluiting met de grote partijen.",
+  "heroSub": "47 beleidsgerichte vragen en stellingen over de belangrijkste thema's van de Nederlandse politiek. Zie je positie op de boussole en je aansluiting met de grote partijen.",
   "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#002D62\"></div>\n      <div class=\"party-name\">PVV</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met de PVV. Je pleit voor een asielstop, strenge wetshandhaving, stopzetting van klimaatmaatregelen, en behoud van de nationale identiteit.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#E60000\"></div>\n      <div class=\"party-name\">GL-PvdA</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met GroenLinks-PvdA. Je steunt een ambitieus klimaatbeleid, inkomensherverdeling via belastingen, en investeringen in openbare voorzieningen.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#FF6600\"></div>\n      <div class=\"party-name\">VVD</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met de VVD. Je bent voorstander van lagere lasten voor bedrijven, economische vrijheid, kernenergie, en een selectief immigratiebeleid.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#00A3A0\"></div>\n      <div class=\"party-name\">NSC</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met Nieuw Sociaal Contract. Je stelt goed bestuur, bestaanszekerheid en constitutionele toetsing centraal.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#00AE41\"></div>\n      <div class=\"party-name\">D66</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met D66. Je bent progressief op het gebied van persoonlijke vrijheden (euthanasie), pro-klimaatactie en voorstander van Europese federatie.</div>\n    </div>\n  </div>"
 }

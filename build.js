@@ -54,43 +54,43 @@ const nationalitiesList = [
 const englishHeroTexts = {
   de: {
     heroTitle: "Where do you stand in<br><em>German</em> politics?",
-    heroSub: "47 scenario-based questions on the issues defining Germany right now. Crime, immigration, welfare, debt brakes, and energy. See your alignment across all parties."
+    heroSub: "47 policy-focused questions and statements on the issues defining Germany right now. Crime, immigration, welfare, debt brakes, and energy. See your alignment across all parties."
   },
   at: {
     heroTitle: "Where do you stand in<br><em>Austrian</em> politics?",
-    heroSub: "47 scenario-based questions on the issues defining Austria right now. Migration, economy, neutrality, and climate. See your alignment across all parties."
+    heroSub: "47 policy-focused questions and statements on the issues defining Austria right now. Migration, economy, neutrality, and climate. See your alignment across all parties."
   },
   fr: {
     heroTitle: "Where do you stand in<br><em>French</em> politics?",
-    heroSub: "47 scenario-based questions on the issues defining France right now. Economy, security, environment, pensions, and EU. See your alignment across all parties."
+    heroSub: "47 policy-focused questions and statements on the issues defining France right now. Economy, security, environment, pensions, and EU. See your alignment across all parties."
   },
   es: {
     heroTitle: "Where do you stand in<br><em>Spanish</em> politics?",
-    heroSub: "47 scenario-based questions on the issues defining Spain right now. Unemployment, regional autonomy, housing, and social policy. See your alignment across all parties."
+    heroSub: "47 policy-focused questions and statements on the issues defining Spain right now. Unemployment, regional autonomy, housing, and social policy. See your alignment across all parties."
   },
   it: {
     heroTitle: "Where do you stand in<br><em>Italian</em> politics?",
-    heroSub: "47 scenario-based questions on the issues defining Italy right now. Economic growth, migration, justice, and EU relations. See your alignment across all parties."
+    heroSub: "47 policy-focused questions and statements on the issues defining Italy right now. Economic growth, migration, justice, and EU relations. See your alignment across all parties."
   },
   nl: {
     heroTitle: "Where do you stand in<br><em>Dutch</em> politics?",
-    heroSub: "47 scenario-based questions on the issues defining Netherlands right now. Housing, climate policy, migration, and healthcare. See your alignment across all parties."
+    heroSub: "47 policy-focused questions and statements on the issues defining Netherlands right now. Housing, climate policy, migration, and healthcare. See your alignment across all parties."
   },
   se: {
     heroTitle: "Where do you stand in<br><em>Swedish</em> politics?",
-    heroSub: "47 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties."
+    heroSub: "47 policy-focused questions and statements on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties."
   },
   dk: {
     heroTitle: "Where do you stand in<br><em>Danish</em> politics?",
-    heroSub: "30 scenario-based questions on the issues defining Denmark right now. Welfare, immigration, climate, and taxes. See your alignment across all parties."
+    heroSub: "30 policy-focused questions and statements on the issues defining Denmark right now. Welfare, immigration, climate, and taxes. See your alignment across all parties."
   },
   no: {
     heroTitle: "Where do you stand in<br><em>Norwegian</em> politics?",
-    heroSub: "30 scenario-based questions on the issues defining Norway right now. Taxes, welfare, oil, and immigration. See your alignment across all parties."
+    heroSub: "30 policy-focused questions and statements on the issues defining Norway right now. Taxes, welfare, oil, and immigration. See your alignment across all parties."
   },
   fi: {
     heroTitle: "Where do you stand in<br><em>Finnish</em> politics?",
-    heroSub: "30 scenario-based questions on the issues defining Finland right now. Defense, taxes, welfare, and immigration. See your alignment across all parties."
+    heroSub: "30 policy-focused questions and statements on the issues defining Finland right now. Defense, taxes, welfare, and immigration. See your alignment across all parties."
   }
 };const staticUiTranslations = {
   en: {
@@ -859,7 +859,8 @@ configFiles.forEach(file => {
     html = html.replace(/\{\{TOGGLE_LANG_BUTTON\}\}/g, buttonHtml);
     
     // Generate Toggle Script
-    const script = `let currentLang = '${langConfig.langCode}';
+    const script = `window.portalCode = '${config.code}';
+let currentLang = '${langConfig.langCode}';
 const engCountryName = '${langConfig.engCountry}';
 const localCountryName = '${langConfig.localCountry}';
 const heroTitleEn = ${JSON.stringify(englishHeroTexts[config.code]?.heroTitle || '')};
@@ -1103,7 +1104,8 @@ applyLang();`;
     // English-only/General
     html = html.replace(/\{\{TOGGLE_LANG_BUTTON\}\}/g, '');
     
-    const fallbackScript = `window.currentLang = 'en';
+    const fallbackScript = `window.portalCode = '${config.code}';
+window.currentLang = 'en';
 window.getQuestion = q => q;`;
     html = html.replace(/\{\{TOGGLE_LANG_SCRIPT\}\}/g, fallbackScript);
   }

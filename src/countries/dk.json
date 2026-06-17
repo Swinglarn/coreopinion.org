@@ -4,7 +4,7 @@
   "localLabel": "Danmark",
   "flag": "🇩🇰",
   "title": "Politisk Kompas Danmark 2026 | CoreOpinion",
-  "desc": "Find din position på det politiske kompas. 30 scenariebaserede spørgsmål for at se din overensstemmelse med de største partier i Folketinget.",
+  "desc": "Find din position på det politiske kompas. 30 politiske spørgsmål og stillinger for at se din overensstemmelse med de største partier i Folketinget.",
   "keywords": "politisk kompas danmark, hvilket parti skal jeg stemme på, valgtest 2026, socialdemokratiet venstre valg, folketinget quiz, politisk test",
   "canonical": "https://coreopinion.org/dk",
   "regions": [
@@ -123,7 +123,7 @@
     }
   },
   "heroTitle": "Hvor står du i <em>dansk</em> politik?",
-  "heroSub": "30 scenariebaserede spørgsmål om emnerne, der definerer Danmark lige nu. Velfærd, indvandring, klima og skatter. Se din overensstemmelse med alle partierne i Folketinget.",
+  "heroSub": "30 politiske spørgsmål og stillinger om emnerne, der definerer Danmark lige nu. Velfærd, indvandring, klima og skatter. Se din overensstemmelse med alle partierne i Folketinget.",
   "bank": [
     {
       "id": "im1",

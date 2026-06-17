@@ -16,7 +16,7 @@
 })();
 </script>
 <title>Politisk Kompass Sverige 2026 | CoreOpinion</title>
-<meta name="description" content="Hitta din position på den politiska kompassen. 47 scenarioräknade frågor för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.">
+<meta name="description" content="Hitta din position på den politiska kompassen. 47 frågor och ställningstaganden för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.">
 <meta name="keywords" content="Swedish political quiz, Sverige politisk kompass, political compass Sweden, Socialdemokraterna Moderaterna test, Sverigedemokraterna quiz, Swedish election quiz, political alignment Sweden, vilket parti passar mig, riksdagspartierna quiz 2026">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -44,7 +44,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/se">
 <meta property="og:title" content="Politisk Kompass Sverige 2026 | CoreOpinion">
-<meta property="og:description" content="Hitta din position på den politiska kompassen. 47 scenarioräknade frågor för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.">
+<meta property="og:description" content="Hitta din position på den politiska kompassen. 47 frågor och ställningstaganden för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.">
 <meta property="og:site_name" content="CoreOpinion">
 <meta property="og:image" content="https://coreopinion.org/og-image.svg">
 <meta property="og:image:width" content="1200">
@@ -52,7 +52,7 @@
 <meta property="og:image:alt" content="CoreOpinion political compass test">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Politisk Kompass Sverige 2026 | CoreOpinion">
-<meta name="twitter:description" content="Hitta din position på den politiska kompassen. 47 scenarioräknade frågor för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.">
+<meta name="twitter:description" content="Hitta din position på den politiska kompassen. 47 frågor och ställningstaganden för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.">
 <meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +93,7 @@
       "url": "https://coreopinion.org/se",
       "operatingSystem": "All",
       "applicationCategory": "EducationalApplication",
-      "description": "Hitta din position på den politiska kompassen. 47 scenarioräknade frågor för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.",
+      "description": "Hitta din position på den politiska kompassen. 47 frågor och ställningstaganden för att se din överensstämmelse med S, M, SD, C, V, MP, KD och L.",
       "browserRequirements": "Requires JavaScript. Requires HTML5.",
       "offers": {
         "@type": "Offer",
@@ -147,7 +147,7 @@
     <div class="hero-bg">🇸🇪</div>
     <div class="eyebrow">Sverige Political Test</div>
     <h1>Var står du i <em>svensk</em> politik?</h1>
-    <p class="hero-sub">47 scenariobaserade frågor om ämnena som definierar Sverige just nu. Brottslighet, migration, välfärd, Nato, bostäder med mera. Se din överensstämmelse med alla åtta riksdagspartier.</p>
+    <p class="hero-sub">47 frågor och ställningstaganden om ämnena som definierar Sverige just nu. Brottslighet, migration, välfärd, Nato, bostäder med mera. Se din överensstämmelse med alla åtta riksdagspartier.</p>
     <div class="hero-cta">
       <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
       <button class="btn-secondary" onclick="document.querySelector('.info-section').scrollIntoView({ behavior: 'smooth' })">How it works</button>
@@ -184,8 +184,8 @@
   </div>
   <div class="info-section">
     <div class="info-block">
-      <h3>Scenario-based, not a survey</h3>
-      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
+      <h3>Policy-focused & statement-based</h3>
+      <p>Every question asks you to take a position on real-world policy issues or evaluate core ideological statements. No simple agree/disagree sliders. You select the option that closest aligns with your view, mapping directly to actual party platforms.</p>
     </div>
     <div class="info-block">
       <h3>Party alignment, not party loyalty</h3>
@@ -269,7 +269,7 @@
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
     <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-tag">Context</div>
       <div class="q-scenario-body" id="q-scen-body"></div>
     </div>
     <div class="q-question" id="q-text"></div>
@@ -2746,13 +2746,14 @@ const PARTY_META = {
   }
 };
 
+window.portalCode = 'se';
 let currentLang = 'sv';
 const engCountryName = 'Sweden';
 const localCountryName = 'Sverige';
 const heroTitleEn = "Where do you stand in<br><em>Swedish</em> politics?";
-const heroSubEn = "47 scenario-based questions on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties.";
+const heroSubEn = "47 policy-focused questions and statements on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties.";
 const heroTitleLocal = "Var står du i <em>svensk</em> politik?";
-const heroSubLocal = "47 scenariobaserade frågor om ämnena som definierar Sverige just nu. Brottslighet, migration, välfärd, Nato, bostäder med mera. Se din överensstämmelse med alla åtta riksdagspartier.";
+const heroSubLocal = "47 frågor och ställningstaganden om ämnena som definierar Sverige just nu. Brottslighet, migration, välfärd, Nato, bostäder med mera. Se din överensstämmelse med alla åtta riksdagspartier.";
 
 const STATIC_TRANSLATIONS = {
   en: {

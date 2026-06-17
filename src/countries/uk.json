@@ -4,7 +4,7 @@
   "localLabel": "UK",
   "flag": "🇬🇧",
   "title": "UK Political Quiz 2026 | CoreOpinion",
-  "desc": "Take the free UK political compass quiz. 47 scenario questions to find where you stand and check your alignment with British political parties.",
+  "desc": "Take the free UK political compass quiz. 47 policy questions and statements to find where you stand and check your alignment with British political parties.",
   "keywords": "UK political quiz, British political compass test, Labour Conservative quiz 2026, Reform UK test, where do I stand in British politics, political alignment test UK, which party should I vote for UK, party quiz Britain",
   "canonical": "https://coreopinion.org/uk",
   "regions": [],
@@ -2645,6 +2645,6 @@
     }
   ],
   "heroTitle": "Where do you stand in <em>British</em> politics?",
-  "heroSub": "47 scenario-based questions on the issues defining UK politics right now. See your position on the compass and your alignment with every major party.",
+  "heroSub": "47 policy issues and statements on the issues defining UK politics right now. See your position on the compass and your alignment with every major party.",
   "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--lab)\"></div>\n      <div class=\"party-name\">Labour</div>\n      <div class=\"party-desc\">Your answers most closely match the Labour Party. You tend to support public services, workers rights, and government intervention to reduce inequality.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--con)\"></div>\n      <div class=\"party-name\">Conservative</div>\n      <div class=\"party-desc\">Your answers most closely match the Conservative Party. You tend to favour lower taxes, a smaller state, and traditional institutions.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--lib)\"></div>\n      <div class=\"party-name\">Liberal Democrats</div>\n      <div class=\"party-desc\">Your answers most closely match the Liberal Democrats. You favour individual freedom, strong public services, and closer ties with Europe.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--ref)\"></div>\n      <div class=\"party-name\">Reform UK</div>\n      <div class=\"party-desc\">Your answers most closely match Reform UK. You want radical cuts to immigration, NHS reform, and a rejection of the mainstream political consensus.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--grn)\"></div>\n      <div class=\"party-name\">Green Party</div>\n      <div class=\"party-desc\">Your answers most closely match the Green Party. You prioritise environmental action, wealth redistribution, and systemic economic change.</div>\n    </div>\n  </div>"
 }

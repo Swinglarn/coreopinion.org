@@ -21,10 +21,17 @@ module.exports = async function handler(req, res) {
       return res.status(404).send('Result not found');
     }
 
-    // 2. Read compiled result.html
-    const templatePath = path.join(process.cwd(), 'result.html');
+    // 2. Read compiled template
+    let templateName = 'result.html';
+    if (result.mode && result.mode !== 'general') {
+      const countryFile = `${result.mode}.html`;
+      if (fs.existsSync(path.join(process.cwd(), countryFile))) {
+        templateName = countryFile;
+      }
+    }
+    const templatePath = path.join(process.cwd(), templateName);
     if (!fs.existsSync(templatePath)) {
-      console.error("result.html not found on disk!");
+      console.error(`${templateName} not found on disk!`);
       return res.status(500).send('Server Error: Template missing');
     }
     let html = fs.readFileSync(templatePath, 'utf8');

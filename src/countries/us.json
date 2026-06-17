@@ -4,7 +4,7 @@
   "localLabel": "US",
   "flag": "🇺🇸",
   "title": "US Political Quiz 2026 | CoreOpinion",
-  "desc": "Take the free US political compass quiz. 47 scenario questions to find where you stand and check your alignment with US political parties.",
+  "desc": "Take the free US political compass quiz. 47 policy questions and statements to find where you stand and check your alignment with US political parties.",
   "keywords": "US political quiz, American political compass test, Democrat Republican quiz, where do I stand in American politics, political alignment test USA, libertarian quiz, US party quiz 2026, am I a Democrat or Republican, political ideology test America",
   "canonical": "https://coreopinion.org/us",
   "regions": [
@@ -2753,6 +2753,6 @@
     }
   ],
   "heroTitle": "Where do you stand<br>in <em>American</em> politics?",
-  "heroSub": "47 scenario-based questions on the issues that define US politics right now. See your position on the compass and how closely you align with each major party.",
+  "heroSub": "47 policy issues and statements on the issues that define US politics right now. See your position on the compass and how closely you align with each major party.",
   "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--dem)\"></div>\n      <div class=\"party-name\">Democrat</div>\n      <div class=\"party-desc\">Your answers most closely match the Democratic Party platform. You tend to favour government intervention to reduce inequality, protect civil rights, and address climate change.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--rep)\"></div>\n      <div class=\"party-name\">Republican</div>\n      <div class=\"party-desc\">Your answers most closely match the Republican Party platform. You tend to favour lower taxes, strong borders, traditional values, and a powerful national defence.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--lib)\"></div>\n      <div class=\"party-name\">Libertarian</div>\n      <div class=\"party-desc\">Your answers most closely match the Libertarian Party platform. You want maximum freedom in both economic and personal life, with minimal government intervention in either.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:var(--grn)\"></div>\n      <div class=\"party-name\">Green</div>\n      <div class=\"party-desc\">Your answers most closely match the Green Party platform. You prioritise environmental justice, corporate accountability, and a fundamental restructuring of the economy.</div>\n    </div>\n  </div>"
 }

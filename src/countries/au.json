@@ -4,7 +4,7 @@
   "localLabel": "AU",
   "flag": "🇦🇺",
   "title": "Australia Political Quiz 2026 | CoreOpinion",
-  "desc": "Take the free Australian political compass quiz. 39 scenario questions to find where you stand and check your alignment with major Australian parties.",
+  "desc": "Take the free Australian political compass quiz. 39 policy questions and statements to find where you stand and check your alignment with major Australian parties.",
   "keywords": "Australian political quiz, Australia political compass test, Labor Liberal Greens quiz, where do I stand in Australian politics, political alignment test Australia, which party should I vote for Australia, Albanese Dutton quiz, Australian election 2025 quiz",
   "canonical": "https://coreopinion.org/au",
   "regions": [
@@ -2439,6 +2439,6 @@
     }
   ],
   "heroTitle": "Where do you stand in <em>Australian</em> politics?",
-  "heroSub": "39 scenario-based questions on the issues defining Australia right now. Cost of living, housing, climate, Indigenous rights, AUKUS and more. Find your full party alignment.",
+  "heroSub": "39 policy issues and statements on the issues defining Australia right now. Cost of living, housing, climate, Indigenous rights, AUKUS and more. Find your full party alignment.",
   "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#CC0000\"></div>\n      <div class=\"party-name\">Labor</div>\n      <div class=\"party-desc\">Your answers most closely match the Australian Labor Party. You favour workers rights, Medicare, clean energy transition, and a stronger role for government in reducing inequality.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#003DA5\"></div>\n      <div class=\"party-name\">Liberal</div>\n      <div class=\"party-desc\">Your answers most closely match the Liberal Party. You favour lower taxes, smaller government, strong borders, and a market-led approach to the economy.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#006400\"></div>\n      <div class=\"party-name\">Nationals</div>\n      <div class=\"party-desc\">Your answers most closely match the Nationals. You prioritise regional Australia, farming communities, resource industries, and scepticism of city-centric climate policy.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#008000\"></div>\n      <div class=\"party-name\">Greens</div>\n      <div class=\"party-desc\">Your answers most closely match the Greens. You support treating climate as an emergency, ending fossil fuel extraction, wealth taxes, and strong renters rights.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#007777\"></div>\n      <div class=\"party-name\">Teal Independents</div>\n      <div class=\"party-desc\">Your answers most closely match the Teal independents. You support strong integrity reforms, climate action, and pragmatic centrist economics, outside the major party blocs.</div>\n    </div>\n  </div>"
 }

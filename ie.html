@@ -16,7 +16,7 @@
 })();
 </script>
 <title>Irish Political Quiz 2026 | CoreOpinion</title>
-<meta name="description" content="Take the free Irish political compass quiz. 47 scenario questions to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
+<meta name="description" content="Take the free Irish political compass quiz. 47 policy questions and statements to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
 <meta name="keywords" content="Irish political quiz, Ireland compass test, Sinn Féin Fine Gael Fianna Fáil, Ireland election 2026, political alignment test Ireland, Irish party quiz">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -44,7 +44,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/ie">
 <meta property="og:title" content="Irish Political Quiz 2026 | CoreOpinion">
-<meta property="og:description" content="Take the free Irish political compass quiz. 47 scenario questions to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
+<meta property="og:description" content="Take the free Irish political compass quiz. 47 policy questions and statements to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
 <meta property="og:site_name" content="CoreOpinion">
 <meta property="og:image" content="https://coreopinion.org/og-image.svg">
 <meta property="og:image:width" content="1200">
@@ -52,7 +52,7 @@
 <meta property="og:image:alt" content="CoreOpinion political compass test">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Irish Political Quiz 2026 | CoreOpinion">
-<meta name="twitter:description" content="Take the free Irish political compass quiz. 47 scenario questions to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
+<meta name="twitter:description" content="Take the free Irish political compass quiz. 47 policy questions and statements to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.">
 <meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +93,7 @@
       "url": "https://coreopinion.org/ie",
       "operatingSystem": "All",
       "applicationCategory": "EducationalApplication",
-      "description": "Take the free Irish political compass quiz. 47 scenario questions to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.",
+      "description": "Take the free Irish political compass quiz. 47 policy questions and statements to find your stance and check alignment with Fine Gael, Sinn Féin, Fianna Fáil, etc.",
       "browserRequirements": "Requires JavaScript. Requires HTML5.",
       "offers": {
         "@type": "Offer",
@@ -147,7 +147,7 @@
     <div class="hero-bg">🇮🇪</div>
     <div class="eyebrow">IE Political Test</div>
     <h1>Where do you stand in<br><em>Irish</em> politics?</h1>
-    <p class="hero-sub">47 scenario-based questions on the core issues defining Ireland right now, from housing and health to corporate tax and neutral foreign policy. Check your alignment with all main parties.</p>
+    <p class="hero-sub">47 policy issues and statements on the core issues defining Ireland right now, from housing and health to corporate tax and neutral foreign policy. Check your alignment with all main parties.</p>
     <div class="hero-cta">
       <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
       <button class="btn-secondary" onclick="document.querySelector('.info-section').scrollIntoView({ behavior: 'smooth' })">How it works</button>
@@ -184,8 +184,8 @@
   </div>
   <div class="info-section">
     <div class="info-block">
-      <h3>Scenario-based, not a survey</h3>
-      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
+      <h3>Policy-focused & statement-based</h3>
+      <p>Every question asks you to take a position on real-world policy issues or evaluate core ideological statements. No simple agree/disagree sliders. You select the option that closest aligns with your view, mapping directly to actual party platforms.</p>
     </div>
     <div class="info-block">
       <h3>Party alignment, not party loyalty</h3>
@@ -269,7 +269,7 @@
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
     <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-tag">Context</div>
       <div class="q-scenario-body" id="q-scen-body"></div>
     </div>
     <div class="q-question" id="q-text"></div>
@@ -2851,6 +2851,7 @@ const PARTY_META = {
   }
 };
 
+window.portalCode = 'ie';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>

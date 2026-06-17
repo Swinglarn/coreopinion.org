@@ -4,7 +4,7 @@
   "localLabel": "Norge",
   "flag": "🇳🇴",
   "title": "Politisk Kompass Norge 2026 | CoreOpinion",
-  "desc": "Finn din posisjon på det politiske kompasset. 30 scenariebaserte spørsmål for å se din overensstemmelse med de største partiene på Stortinget.",
+  "desc": "Finn din posisjon på det politiske kompasset. 30 politiske spørsmål og påstander for å se din overensstemmelse med de største partiene på Stortinget.",
   "keywords": "politisk kompass norge, valgomat 2026, hvilket parti passer meg, stortingsvalg test, høyre arbeiderpartiet quiz, politisk test norge",
   "canonical": "https://coreopinion.org/no",
   "regions": [
@@ -125,7 +125,7 @@
     }
   },
   "heroTitle": "Hvor står du i <em>norsk</em> politikk?",
-  "heroSub": "30 scenariebaserte spørsmål om temaene som definerer Norge akkurat nå. Skatter, velferd, olje og innvandring. Se din overensstemmelse med alle partiene på Stortinget.",
+  "heroSub": "30 politiske spørsmål og påstander om temaene som definerer Norge akkurat nå. Skatter, velferd, olje og innvandring. Se din overensstemmelse med alle partiene på Stortinget.",
   "bank": [
     {
       "id": "im1",

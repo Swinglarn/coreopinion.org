@@ -16,7 +16,7 @@
 })();
 </script>
 <title>Politisk Kompass Norge 2026 | CoreOpinion</title>
-<meta name="description" content="Finn din posisjon på det politiske kompasset. 30 scenariebaserte spørsmål for å se din overensstemmelse med de største partiene på Stortinget.">
+<meta name="description" content="Finn din posisjon på det politiske kompasset. 30 politiske spørsmål og påstander for å se din overensstemmelse med de største partiene på Stortinget.">
 <meta name="keywords" content="politisk kompass norge, valgomat 2026, hvilket parti passer meg, stortingsvalg test, høyre arbeiderpartiet quiz, politisk test norge">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -44,7 +44,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/no">
 <meta property="og:title" content="Politisk Kompass Norge 2026 | CoreOpinion">
-<meta property="og:description" content="Finn din posisjon på det politiske kompasset. 30 scenariebaserte spørsmål for å se din overensstemmelse med de største partiene på Stortinget.">
+<meta property="og:description" content="Finn din posisjon på det politiske kompasset. 30 politiske spørsmål og påstander for å se din overensstemmelse med de største partiene på Stortinget.">
 <meta property="og:site_name" content="CoreOpinion">
 <meta property="og:image" content="https://coreopinion.org/og-image.svg">
 <meta property="og:image:width" content="1200">
@@ -52,7 +52,7 @@
 <meta property="og:image:alt" content="CoreOpinion political compass test">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Politisk Kompass Norge 2026 | CoreOpinion">
-<meta name="twitter:description" content="Finn din posisjon på det politiske kompasset. 30 scenariebaserte spørsmål for å se din overensstemmelse med de største partiene på Stortinget.">
+<meta name="twitter:description" content="Finn din posisjon på det politiske kompasset. 30 politiske spørsmål og påstander for å se din overensstemmelse med de største partiene på Stortinget.">
 <meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +93,7 @@
       "url": "https://coreopinion.org/no",
       "operatingSystem": "All",
       "applicationCategory": "EducationalApplication",
-      "description": "Finn din posisjon på det politiske kompasset. 30 scenariebaserte spørsmål for å se din overensstemmelse med de største partiene på Stortinget.",
+      "description": "Finn din posisjon på det politiske kompasset. 30 politiske spørsmål og påstander for å se din overensstemmelse med de største partiene på Stortinget.",
       "browserRequirements": "Requires JavaScript. Requires HTML5.",
       "offers": {
         "@type": "Offer",
@@ -147,7 +147,7 @@
     <div class="hero-bg">🇳🇴</div>
     <div class="eyebrow">Norge Political Test</div>
     <h1>Hvor står du i <em>norsk</em> politikk?</h1>
-    <p class="hero-sub">30 scenariebaserte spørsmål om temaene som definerer Norge akkurat nå. Skatter, velferd, olje og innvandring. Se din overensstemmelse med alle partiene på Stortinget.</p>
+    <p class="hero-sub">30 politiske spørsmål og påstander om temaene som definerer Norge akkurat nå. Skatter, velferd, olje og innvandring. Se din overensstemmelse med alle partiene på Stortinget.</p>
     <div class="hero-cta">
       <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
       <button class="btn-secondary" onclick="document.querySelector('.info-section').scrollIntoView({ behavior: 'smooth' })">How it works</button>
@@ -184,8 +184,8 @@
   </div>
   <div class="info-section">
     <div class="info-block">
-      <h3>Scenario-based, not a survey</h3>
-      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
+      <h3>Policy-focused & statement-based</h3>
+      <p>Every question asks you to take a position on real-world policy issues or evaluate core ideological statements. No simple agree/disagree sliders. You select the option that closest aligns with your view, mapping directly to actual party platforms.</p>
     </div>
     <div class="info-block">
       <h3>Party alignment, not party loyalty</h3>
@@ -269,7 +269,7 @@
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
     <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-tag">Context</div>
       <div class="q-scenario-body" id="q-scen-body"></div>
     </div>
     <div class="q-question" id="q-text"></div>
@@ -2740,13 +2740,14 @@ const PARTY_META = {
   }
 };
 
+window.portalCode = 'no';
 let currentLang = 'no';
 const engCountryName = 'Norway';
 const localCountryName = 'Norge';
 const heroTitleEn = "Where do you stand in<br><em>Norwegian</em> politics?";
-const heroSubEn = "30 scenario-based questions on the issues defining Norway right now. Taxes, welfare, oil, and immigration. See your alignment across all parties.";
+const heroSubEn = "30 policy-focused questions and statements on the issues defining Norway right now. Taxes, welfare, oil, and immigration. See your alignment across all parties.";
 const heroTitleLocal = "Hvor står du i <em>norsk</em> politikk?";
-const heroSubLocal = "30 scenariebaserte spørsmål om temaene som definerer Norge akkurat nå. Skatter, velferd, olje og innvandring. Se din overensstemmelse med alle partiene på Stortinget.";
+const heroSubLocal = "30 politiske spørsmål og påstander om temaene som definerer Norge akkurat nå. Skatter, velferd, olje og innvandring. Se din overensstemmelse med alle partiene på Stortinget.";
 
 const STATIC_TRANSLATIONS = {
   en: {

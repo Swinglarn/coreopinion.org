@@ -4,7 +4,7 @@
   "localLabel": "General",
   "flag": "",
   "title": "Political Compass Test with Bias Score | CoreOpinion",
-  "desc": "Take the political compass test that reveals your framing bias. 102 scenario-based questions to find your ideology and check your response consistency.",
+  "desc": "Take the political compass test that reveals your framing bias. 102 policy-focused questions and statements to find your ideology and check your response consistency.",
   "keywords": "political compass test, political quiz, political ideology test, framing bias, where do I stand politically, political compass 2026, libertarian authoritarian quiz, economic left right test, free political test, am I liberal or conservative, political spectrum quiz, political compass with bias score",
   "canonical": "https://coreopinion.org/",
   "regions": [
@@ -3037,6 +3037,6 @@
     }
   ],
   "heroTitle": "A political compass test<br>built for <em>nuance.</em>",
-  "heroSub": "Answer scenario-based questions. Go on record across 8 political topics. See exactly where you land and why.",
-  "partyStripHtml": "<div class=\"stats-strip\">\n    <div class=\"stat-cell\"><div class=\"stat-num\">100</div><div class=\"stat-desc\">Scenario-based questions in the full test</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">3</div><div class=\"stat-desc\">Political axes, including Nationalist vs Globalist</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">2</div><div class=\"stat-desc\">Results. You get more than just a dot on a compass.</div></div>\n  </div>"
+  "heroSub": "Answer policy-focused questions and statements. Go on record across 8 political topics. See exactly where you land and why.",
+  "partyStripHtml": "<div class=\"stats-strip\">\n    <div class=\"stat-cell\"><div class=\"stat-num\">100</div><div class=\"stat-desc\">Policy questions & statements in the full test</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">3</div><div class=\"stat-desc\">Political axes, including Nationalist vs Globalist</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">2</div><div class=\"stat-desc\">Results. You get more than just a dot on a compass.</div></div>\n  </div>"
 }

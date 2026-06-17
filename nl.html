@@ -16,7 +16,7 @@
 })();
 </script>
 <title>Kieskompas Nederland 2026 | CoreOpinion</title>
-<meta name="description" content="Ontdek je positie op het politieke kompas. 47 scenario-gebaseerde vragen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.">
+<meta name="description" content="Ontdek je positie op het politieke kompas. 47 beleidsgerichte vragen en stellingen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.">
 <meta name="keywords" content="Kieskompas Nederland, Stemwijzer alternatief 2026, politieke partij test, politiek kompas, kieswijzer, PVV GL-PvdA VVD NSC D66 BBB CDA">
 <meta name="author" content="CoreOpinion">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -44,7 +44,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coreopinion.org/nl">
 <meta property="og:title" content="Kieskompas Nederland 2026 | CoreOpinion">
-<meta property="og:description" content="Ontdek je positie op het politieke kompas. 47 scenario-gebaseerde vragen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.">
+<meta property="og:description" content="Ontdek je positie op het politieke kompas. 47 beleidsgerichte vragen en stellingen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.">
 <meta property="og:site_name" content="CoreOpinion">
 <meta property="og:image" content="https://coreopinion.org/og-image.svg">
 <meta property="og:image:width" content="1200">
@@ -52,7 +52,7 @@
 <meta property="og:image:alt" content="CoreOpinion political compass test">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kieskompas Nederland 2026 | CoreOpinion">
-<meta name="twitter:description" content="Ontdek je positie op het politieke kompas. 47 scenario-gebaseerde vragen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.">
+<meta name="twitter:description" content="Ontdek je positie op het politieke kompas. 47 beleidsgerichte vragen en stellingen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.">
 <meta name="twitter:image" content="https://coreopinion.org/og-image.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +93,7 @@
       "url": "https://coreopinion.org/nl",
       "operatingSystem": "All",
       "applicationCategory": "EducationalApplication",
-      "description": "Ontdek je positie op het politieke kompas. 47 scenario-gebaseerde vragen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.",
+      "description": "Ontdek je positie op het politieke kompas. 47 beleidsgerichte vragen en stellingen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.",
       "browserRequirements": "Requires JavaScript. Requires HTML5.",
       "offers": {
         "@type": "Offer",
@@ -147,7 +147,7 @@
     <div class="hero-bg">🇳🇱</div>
     <div class="eyebrow">Nederland Political Test</div>
     <h1>Waar sta jij in de<br><em>Nederlandse</em> politiek?</h1>
-    <p class="hero-sub">47 realistische scenario-vragen over de belangrijkste thema's van de Nederlandse politiek. Zie je positie op de boussole en je aansluiting met de grote partijen.</p>
+    <p class="hero-sub">47 beleidsgerichte vragen en stellingen over de belangrijkste thema's van de Nederlandse politiek. Zie je positie op de boussole en je aansluiting met de grote partijen.</p>
     <div class="hero-cta">
       <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
       <button class="btn-secondary" onclick="document.querySelector('.info-section').scrollIntoView({ behavior: 'smooth' })">How it works</button>
@@ -184,8 +184,8 @@
   </div>
   <div class="info-section">
     <div class="info-block">
-      <h3>Scenario-based, not a survey</h3>
-      <p>Every question puts you in a real situation or asks you to take a position on something specific. No agree/disagree sliders. No abstract statements. You make decisions and your answers map to where the parties actually stand.</p>
+      <h3>Policy-focused & statement-based</h3>
+      <p>Every question asks you to take a position on real-world policy issues or evaluate core ideological statements. No simple agree/disagree sliders. You select the option that closest aligns with your view, mapping directly to actual party platforms.</p>
     </div>
     <div class="info-block">
       <h3>Party alignment, not party loyalty</h3>
@@ -269,7 +269,7 @@
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
     <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Scenario</div>
+      <div class="q-scenario-tag">Context</div>
       <div class="q-scenario-body" id="q-scen-body"></div>
     </div>
     <div class="q-question" id="q-text"></div>
@@ -3432,13 +3432,14 @@ const PARTY_META = {
   }
 };
 
+window.portalCode = 'nl';
 let currentLang = 'nl';
 const engCountryName = 'Netherlands';
 const localCountryName = 'Nederland';
 const heroTitleEn = "Where do you stand in<br><em>Dutch</em> politics?";
-const heroSubEn = "47 scenario-based questions on the issues defining Netherlands right now. Housing, climate policy, migration, and healthcare. See your alignment across all parties.";
+const heroSubEn = "47 policy-focused questions and statements on the issues defining Netherlands right now. Housing, climate policy, migration, and healthcare. See your alignment across all parties.";
 const heroTitleLocal = "Waar sta jij in de<br><em>Nederlandse</em> politiek?";
-const heroSubLocal = "47 realistische scenario-vragen over de belangrijkste thema's van de Nederlandse politiek. Zie je positie op de boussole en je aansluiting met de grote partijen.";
+const heroSubLocal = "47 beleidsgerichte vragen en stellingen over de belangrijkste thema's van de Nederlandse politiek. Zie je positie op de boussole en je aansluiting met de grote partijen.";
 
 const STATIC_TRANSLATIONS = {
   en: {
