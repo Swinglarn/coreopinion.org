@@ -816,7 +816,7 @@ configFiles.forEach(file => {
     if (totalQ >= 80) {
       if (modeName === 'short') return 25;
       if (modeName === 'medium') return 50;
-      return Math.min(100, totalQ);
+      return totalQ;
     } else if (totalQ >= 45) {
       if (modeName === 'short') return 15;
       if (modeName === 'medium') return 30;

@@ -53,7 +53,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Very high bias', 'Your answers were strongly shaped by how questions were framed rather than by consistent underlying values.']
     ],
     insightInconsistent: '💡 <strong>Cognitive Analysis:</strong> The emotional wording or situational details in these questions successfully shifted your perspective. By swapping between an autonomous support frame and a systemic consequence frame, your choice was altered. This suggests that your beliefs in this area are contextually dependent rather than absolute, responding strongly to whatever specific narrative lens is highlighted.',
-    insightConsistent: '✅ <strong>Cognitive Analysis:</strong> Your values held firm. Whether presented with positive support framing or critical framing, you maintained identical ideological positions. This demonstrates high internal logical consistency and resistance to rhetorical framing.'
+    insightConsistent: '✅ <strong>Cognitive Analysis:</strong> Your values held firm. Whether presented with positive support framing or critical framing, you maintained identical ideological positions. This demonstrates high internal logical consistency and resistance to rhetorical framing.',
+    shortTestCaveat: '<strong>Note:</strong> You took the Short Test. With fewer question pairs completed, this framing bias analysis is less reliable than on the Medium or Long tests.'
   },
   de: {
     of: 'von',
@@ -94,7 +95,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Sehr hohe Verzerrung', 'Deine Antworten wurden stark davon geprägt, wie Fragen formuliert waren, und weniger von konsistenten Grundwerten.']
     ],
     insightInconsistent: '💡 <strong>Kognitive Analyse:</strong> Die Formulierung oder Kontextdetails dieser Fragen haben deine Perspektive verschoben. Deine Wahl änderte sich je nachdem, ob ein positiver Aspekt oder negative Konsequenzen im Fokus standen. Dies deutet darauf hin, dass deine Überzeugungen in diesem Bereich kontextabhängig sind.',
-    insightConsistent: '✅ <strong>Kognitive Analyse:</strong> Deine Werte blieben fest. Ob positive Formulierung oder kritische Betrachtung, du hast identische Positionen beibehalten. Dies beweist hohe logische Konsistenz und Unempfindlichkeit gegenüber sprachlichen Framing-Effekten.'
+    insightConsistent: '✅ <strong>Kognitive Analyse:</strong> Deine Werte blieben fest. Ob positive Formulierung oder kritische Betrachtung, du hast identische Positionen beibehalten. Dies beweist hohe logische Konsistenz und Unempfindlichkeit gegenüber sprachlichen Framing-Effekten.',
+    shortTestCaveat: '<strong>Hinweis:</strong> Sie haben den Kurztest gewählt. Da weniger Fragenpaare beantwortet wurden, ist diese Analyse des Formulierungseffekts weniger zuverlässig als beim mittleren oder langen Test.'
   },
   fr: {
     of: 'sur',
@@ -135,7 +137,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Biais très élevé', 'Vos réponses ont été fortement façonnées par la manière dont les questions étaient présentées plutôt que par des valeurs sous-jacentes cohérentes.']
     ],
     insightInconsistent: '💡 <strong>Analyse cognitive:</strong> Les mots ou les détails de situations dans ces questions ont réussi à décaler votre point de vue. Votre choix a changé selon le cadrage. Cela suggère que vos convictions dans ce domaine dépendent fortement du contexte.',
-    insightConsistent: '✅ <strong>Analyse cognitive:</strong> Vos valeurs sont restées fermes. Quel que soit le cadrage, vous avez maintenu des positions idéologiques identiques. Cela démontre une cohérence interne élevée.'
+    insightConsistent: '✅ <strong>Analyse cognitive:</strong> Vos valeurs sont restées fermes. Quel que soit le cadrage, vous avez maintenu des positions idéologiques identiques. Cela démontre une cohérence interne élevée.',
+    shortTestCaveat: '<strong>Note :</strong> Vous avez passé le test court. Avec moins de paires de questions complétées, cette analyse du biais de cadrage est moins fiable que sur les tests moyen ou long.'
   },
   es: {
     of: 'de',
@@ -176,7 +179,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Sesgo muy alto', 'Tus respuestas estuvieron fuertemente influenciadas por el encuadre de las preguntas más que por valores subyacentes consistentes.']
     ],
     insightInconsistent: '💡 <strong>Análisis cognitivo:</strong> Las palabras o los detalles de las situaciones en estas preguntas lograron cambiar tu perspectiva. Tu elección varió según el encuadre. Esto sugiere que tus convicciones en esta área dependen en gran medida del contexto.',
-    insightConsistent: '✅ <strong>Análisis cognitivo:</strong> Tus valores se mantuvieron firmes. Sin importar el tipo de encuadre, mantuviste posiciones ideológicas idénticas. Esto demuestra una alta consistencia lógica interna.'
+    insightConsistent: '✅ <strong>Análisis cognitivo:</strong> Tus valores se mantuvieron firmes. Sin importar el tipo de encuadre, mantuviste posiciones ideológicas idénticas. Esto demuestra una alta consistencia lógica interna.',
+    shortTestCaveat: '<strong>Nota:</strong> Realizaste la prueba corta. Con menos parejas de preguntas completadas, este análisis del sesgo de encuadre es menos confiable que en las pruebas de tamaño medio o largo.'
   },
   it: {
     of: 'di',
@@ -217,7 +221,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Bias molto elevato', 'Le tue risposte sono state fortemente modellate dall\'incorniciamento delle domande piuttosto che da valori sottostanti coerenti.']
     ],
     insightInconsistent: '💡 <strong>Analisi cognitiva:</strong> Le parole o i dettagli delle situazioni in queste domande sono riusciti a spostare la tua prospettiva. La tua scelta è cambiata in base all\'incorniciamento. Questo suggerisce che le tue convinzioni in quest\'area dipendono molto dal contesto.',
-    insightConsistent: '✅ <strong>Analisi cognitiva:</strong> I tuoi valori si sono mantenuti saldi. Indipendentemente dal tipo di incorniciamento, hai mantenuto posizioni ideologiche identiche. Ciò dimostra un\'elevata coerenza logica interna.'
+    insightConsistent: '✅ <strong>Analisi cognitiva:</strong> I tuoi valori si sono mantenuti saldi. Indipendentemente dal tipo di incorniciamento, hai mantenuto posizioni ideologiche identiche. Ciò dimostra un\'elevata coerenza logica interna.',
+    shortTestCaveat: '<strong>Nota:</strong> Hai fatto il test breve. Con meno coppie di domande completate, questa analisi del bias di incorniciamento è meno affidabile rispetto ai test medio o lungo.'
   },
   nl: {
     of: 'van',
@@ -258,7 +263,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Zeer hoge beïnvloeding', 'Je antwoorden werden sterk bepaald door de manier waarop vragen gesteld werden, in plaats van door consistente onderliggende waarden.']
     ],
     insightInconsistent: '💡 <strong>Cognitieve analyse:</strong> De bewoording of situatie-details in deze vragen hebben je perspectief verschoven. Je keuze veranderde afhankelijk van de formulering. Dit suggereert dat je overtuigingen op dit gebied contextgevoelig zijn.',
-    insightConsistent: '✅ <strong>Cognitieve analyse:</strong> Je waarden bleven standvastig. Ongeacht het type formulering behield je identieke posities. Dit getuigt van een hoge interne logische consistentie.'
+    insightConsistent: '✅ <strong>Cognitieve analyse:</strong> Je waarden bleven standvastig. Ongeacht het type formulering behield je identieke posities. Dit getuigt van een hoge interne logische consistentie.',
+    shortTestCaveat: '<strong>Let op:</strong> Je hebt de korte test gedaan. Met minder beantwoorde vragenparen is deze beïnvloedingsbias-analyse minder betrouwbaar dan bij de gemiddelde of lange test.'
   },
   sv: {
     of: 'av',
@@ -299,7 +305,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Mycket hög partiskhet', 'Dina svar var starkt präglade av hur frågorna var utformade snarare än av konsekventa underliggande värderingar.']
     ],
     insightInconsistent: '💡 <strong>Kognitiv analys:</strong> Formuleringen eller situationsdetaljerna i dessa frågor lyckades förskjuta ditt perspektiv. Ditt val ändrades beroende på vinklingen. Detta tyder på att dina åsikter här är kontextberoende.',
-    insightConsistent: '✅ <strong>Kognitiv analys:</strong> Dina värderingar stod fast. Oavsett om vinklingen var positiv eller kritisk behöll du identiska ståndpunkter. Detta visar på hög logisk konsekvens.'
+    insightConsistent: '✅ <strong>Kognitiv analys:</strong> Dina värderingar stod fast. Oavsett om vinklingen var positiv eller kritisk behöll du identiska ståndpunkter. Detta visar på hög logisk konsekvens.',
+    shortTestCaveat: '<strong>Obs:</strong> Du gjorde det korta testet. Med färre besvarade frågepar är denna formuleringsbias-analys mindre tillförlitlig än i det medellånga eller långa testet.'
   },
   da: {
     of: 'af',
@@ -340,7 +347,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Meget høj partiskhed', 'Dine svar var stærkt præget af, hvordan spørgsmålene var formuleret, snarere end af konsekvente underliggende værdier.']
     ],
     insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller situationsdetaljerne i disse spørgsmål formåede at forskyde dit perspektiv. Dit valg ændrede sig afhængigt af vinklingen. Dette tyder på, at dine holdninger her er kontekstafhængige.',
-    insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Dine værdier stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høj logisk konsekvens.'
+    insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Dine værdier stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høj logisk konsekvens.',
+    shortTestCaveat: '<strong>Bemærk:</strong> Du tog den korte test. Med færre besvarede spørgsmålspar er denne formuleringsbias-analyse mindre pålidelig end i den mellemlange eller lange test.'
   },
   no: {
     of: 'av',
@@ -381,7 +389,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Svært høy partiskhet', 'Svarene dine var sterkt preget av hvordan spørsmålene var formulert, snarere enn av konsekvente underliggende verdier.']
     ],
     insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller situasjonsdetaljene i disse spørsmålene formådde å forskyve ditt perspektiv. Valget ditt endret seg avhengig av vinklingen. Dette tyder på at holdningene dine her er kontekstavhengige.',
-    insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Verdiene dine stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høy logisk konsekvens.'
+    insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Verdiene dine stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høy logisk konsekvens.',
+    shortTestCaveat: '<strong>Merk:</strong> Du tok den korte testen. Med færre besvarte spørsmålspar er denne formuleringsbias-analysen mindre pålitelig enn i den mellomlange eller lange testen.'
   },
   fi: {
     of: '/',
@@ -422,7 +431,8 @@ const ENGINE_TRANSLATIONS = {
       [81, 100, 'Erittäin voimakas vinouma', 'Kysymysten kehystys muovasi vastauksiasi voimakkaasti pikemmin kuin johdonmukaiset taustalla olevat arvot.']
     ],
     insightInconsistent: '💡 <strong>Kognitiivinen analyysi:</strong> Kysymysten sanamuodot tai tilanteiden yksityiskohdat onnistuivat muuttamaan näkökulmaasi. Valintasi muuttui kehystyksen mukaan. Tämä viittaa siihen, että kantasi tässä aiheessa ovat tilannesidonnaisia.',
-    insightConsistent: '✅ <strong>Kognitiivinen analyysi:</strong> Arvosi pysyivät vahvoina. Riippumatta kehystyksestä säilytit identtiset ideologiset kannat. Tämä osoittaa korkeaa sisäistä loogista johdonmukaisuutta.'
+    insightConsistent: '✅ <strong>Kognitiivinen analyysi:</strong> Arvosi pysyivät vahvoina. Riippumatta kehystyksestä säilytit identtiset ideologiset kannat. Tämä osoittaa korkeaa sisäistä loogista johdonmukaisuutta.',
+    shortTestCaveat: '<strong>Huomautus:</strong> Teit lyhyen testin. Koska kysymyspareja on vastattu vähemmän, tämä kehystysvinouma-analyysi on vähemmän luotettava kuin keskitason tai pitkässä testissä.'
   }
 };
 
@@ -705,7 +715,7 @@ window.startTest = function(m) {
       if (totalQ >= 80) {
         if (modeName === 'short') return 25;
         if (modeName === 'medium') return 50;
-        return Math.min(100, totalQ);
+        return totalQ;
       } else if (totalQ >= 45) {
         if (modeName === 'short') return 15;
         if (modeName === 'medium') return 30;
@@ -1183,7 +1193,12 @@ window.renderResults = function() {
   if (bProfIcon) bProfIcon.textContent = profile.icon;
   if (bProfText) bProfText.textContent = profile.name;
   if (bExplain) {
-    bExplain.innerHTML = `<p style="margin-bottom:8px">${verdictDesc}</p><p style="font-weight:400;color:var(--ink-soft);font-size:11.5px;line-height:1.5;margin-top:6px;"><strong>${profile.icon} ${profile.name}:</strong> ${profile.desc}</p>`;
+    let explanationHtml = `<p style="margin-bottom:8px">${verdictDesc}</p><p style="font-weight:400;color:var(--ink-soft);font-size:11.5px;line-height:1.5;margin-top:6px;"><strong>${profile.icon} ${profile.name}:</strong> ${profile.desc}</p>`;
+    if (mode === 'short') {
+      const caveatText = tObj.shortTestCaveat || '<strong>Note:</strong> You took the Short Test. With fewer question pairs completed, this framing bias analysis is less reliable than on the Medium or Long tests.';
+      explanationHtml += `<div style="margin-top:12px;padding:10px 12px;background:var(--parchment);border-left:3px solid var(--amber);border-radius:4px;font-size:11px;color:var(--ink-muted);line-height:1.4;">${caveatText}</div>`;
+    }
+    bExplain.innerHTML = explanationHtml;
   }
 
   // Renders bias rows with cursor triggers and "Inspect 🔍" links

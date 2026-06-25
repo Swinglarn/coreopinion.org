@@ -1276,23 +1276,23 @@
       "pair": "dp-b",
       "fr": "neutral",
       "type": "sc",
-      "ctx": "Portugal decriminalised drugs. Taxed them. Funded treatment. Drug deaths fell 80%. Black market collapsed by 60%.",
-      "q": "The evidence is in. The war on drugs is over and we lost.",
+      "ctx": "Several countries and US states have legalized, regulated, and taxed recreational cannabis, using the sales tax revenue to fund public services and healthcare.",
+      "q": "Rather than enrichment of criminals, drug sales should be legally regulated and taxed by the state.",
       "opts": [
         {
-          "t": "Yes. Portugal alone makes the case for reform.",
+          "t": "Yes. Legal regulation reduces crime and generates valuable public revenue.",
           "e": -2,
           "g": -2,
           "n": -2
         },
         {
-          "t": "Portugal is small. Scale and culture make direct comparisons difficult.",
+          "t": "It works for cannabis, but harder drugs must remain strictly prohibited.",
           "e": 0,
           "g": 0,
           "n": 0
         },
         {
-          "t": "No. Some lines should not be crossed regardless of the numbers.",
+          "t": "No. Legalization increases availability and signals state approval of drug use.",
           "e": 0,
           "g": 2,
           "n": 2
@@ -3038,5 +3038,5 @@
   ],
   "heroTitle": "A political compass test<br>built for <em>nuance.</em>",
   "heroSub": "Answer policy-focused questions and statements. Go on record across 8 political topics. See exactly where you land and why.",
-  "partyStripHtml": "<div class=\"stats-strip\">\n    <div class=\"stat-cell\"><div class=\"stat-num\">100</div><div class=\"stat-desc\">Policy questions & statements in the full test</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">3</div><div class=\"stat-desc\">Political axes, including Nationalist vs Globalist</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">2</div><div class=\"stat-desc\">Results. You get more than just a dot on a compass.</div></div>\n  </div>"
+  "partyStripHtml": "<div class=\"stats-strip\">\n    <div class=\"stat-cell\"><div class=\"stat-num\">102</div><div class=\"stat-desc\">Policy questions & statements in the full test</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">3</div><div class=\"stat-desc\">Political axes, including Nationalist vs Globalist</div></div>\n    <div class=\"stat-cell\"><div class=\"stat-num\">2</div><div class=\"stat-desc\">Results. You get more than just a dot on a compass.</div></div>\n  </div>"
 }
