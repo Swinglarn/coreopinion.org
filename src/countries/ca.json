@@ -2032,8 +2032,6 @@
     {
       "id": "tx3",
       "nl": "Tax and spending",
-      "pair": "tx-b",
-      "fr": "neutral",
       "type": "s",
       "q": "Canada should introduce a wealth tax on assets above 10 million dollars to fund public services and reduce inequality.",
       "opts": [
@@ -2722,8 +2720,6 @@
     {
       "id": "in1",
       "nl": "Innovation and economy",
-      "pair": "in-a",
-      "fr": "neutral",
       "type": "s",
       "q": "Canada is falling behind in artificial intelligence, biotech, and clean tech. The government must invest directly in strategic industries or lose out.",
       "opts": [
@@ -3109,8 +3105,6 @@
     {
       "id": "ex5",
       "nl": "Reconciliation",
-      "pair": "ex-c",
-      "fr": "neutral",
       "type": "s",
       "q": "Canada has apologised to Indigenous peoples many times and changed very little. Words without action are an insult.",
       "opts": [
