@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
-    "@supabase/supabase-js": "^2.107.0"
+    "@supabase/supabase-js": "^2.107.0",
+    "resend": "^6.14.0"
   }
 }
