@@ -1,4 +1,5 @@
 const { supabase } = require('./utils');
+const { sendResultEmail } = require('./send-result-email');
 
 module.exports = async function handler(req, res) {
   // CORS Headers
@@ -17,7 +18,7 @@ module.exports = async function handler(req, res) {
   try {
     if (req.method === 'POST') {
       const payload = req.body;
-      
+
       // Map frontend keys to database columns
       const dbPayload = {
         mode: payload.mode || 'general',
@@ -42,9 +43,20 @@ module.exports = async function handler(req, res) {
         return res.status(500).json({ error: error.message });
       }
 
+      // Fire the result email if the user provided an address.
+      // sendResultEmail never throws and a failure must not affect the save,
+      // so we await it only to log the outcome, then return success regardless.
+      if (data && data.email) {
+        const host = req.headers.host || 'coreopinion.org';
+        const emailResult = await sendResultEmail(data, host);
+        if (!emailResult.sent) {
+          console.warn(`Result saved (id=${data.id}) but email not sent:`, emailResult.error);
+        }
+      }
+
       return res.status(200).json(data);
     }
-    
+
     if (req.method === 'GET') {
       const { id } = req.query;
       if (!id) {
