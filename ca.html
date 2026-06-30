@@ -145,8 +145,11 @@
           <a href="/nl">Netherlands Test</a>
         </div>
       </div>
+      <a href="/us" class="nav-shortcut">US</a>
+      <a href="/uk" class="nav-shortcut">UK</a>
+      <a href="/fr" class="nav-shortcut">France</a>
+      <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
-      <a href="/methodology">Methodology</a>
       <a href="/about">About</a>
     </div>
     <div style="display:flex;align-items:center;gap:12px">
@@ -166,7 +169,7 @@
     <div class="hero-bg">🇨🇦</div>
     <div class="eyebrow">CA Political Test</div>
     <h1>Where do you stand in <em>Canadian</em> politics?</h1>
-    <p class="hero-sub">47 policy issues and statements on the issues defining Canada right now — from the trade war with the US to housing, healthcare, and national identity. See your full party alignment.</p>
+    <p class="hero-sub">47 policy issues and statements on the issues defining Canada right now - from the trade war with the US to housing, healthcare, and national identity. See your full party alignment.</p>
     <div class="hero-cta">
       <button class="btn-primary" onclick="goTo('page-mode')">Start the test</button>
       <button class="btn-secondary" onclick="document.querySelector('.info-section').scrollIntoView({ behavior: 'smooth' })">How it works</button>
@@ -200,6 +203,11 @@
       <div class="party-name">Bloc Québécois</div>
       <div class="party-desc">Your answers most closely match the Bloc. You support Quebec autonomy, French language protection, and a centre-left social model on federal matters.</div>
     </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:#4B0082"></div>
+      <div class="party-name">PPC</div>
+      <div class="party-desc">Your answers most closely match the PPC. You want radical cuts to immigration, elimination of climate policy, and a rejection of mainstream conservative incrementalism.</div>
+    </div>
   </div>
   <div class="info-section">
     <div class="info-block">
@@ -216,7 +224,6 @@
     <div style="display:flex;gap:20px;">
       <a href="#" onclick="event.preventDefault(); goTo('page-ideologies')" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Explore Ideologies</a>
       <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
-      <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
       <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
       <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
     </div>
@@ -411,8 +418,11 @@
           <a href="/nl">Netherlands Test</a>
         </div>
       </div>
+      <a href="/us" class="nav-shortcut">US</a>
+      <a href="/uk" class="nav-shortcut">UK</a>
+      <a href="/fr" class="nav-shortcut">France</a>
+      <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
-      <a href="/methodology">Methodology</a>
       <a href="/about">About</a>
     </div>
     <div style="display:flex;align-items:center;gap:12px">
@@ -551,7 +561,6 @@
       <div style="display:flex;gap:20px;">
         <a href="#" onclick="event.preventDefault(); goTo('page-ideologies')" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Explore Ideologies</a>
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
-        <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
@@ -666,7 +675,6 @@
       <div style="display:flex;gap:20px;">
         <a href="#" onclick="event.preventDefault(); goTo('page-ideologies')" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Explore Ideologies</a>
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
-        <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
@@ -793,7 +801,6 @@
       <div style="display:flex;gap:20px;">
         <a href="#" onclick="event.preventDefault(); goTo('page-ideologies')" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Explore Ideologies</a>
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
-        <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
@@ -2437,7 +2444,7 @@ const BANK = [
     "pair": "ni-a",
     "fr": "con",
     "type": "s",
-    "q": "Woke ideology has captured Canadian institutions — the CBC, universities, the civil service — and is making the country less free.",
+    "q": "Woke ideology has captured Canadian institutions - the CBC, universities, the civil service - and is making the country less free.",
     "opts": [
       {
         "t": "Yes. There is an ideological conformism that does not tolerate dissent.",
@@ -2569,7 +2576,7 @@ const BANK = [
     "q": "Donald Trump called Canada the 51st state. Any Canadian politician who does not treat that as a declaration of economic war is not fit for office.",
     "opts": [
       {
-        "t": "Yes. Canada must respond with full force — retaliatory tariffs, economic diversification, and a rejection of dependence.",
+        "t": "Yes. Canada must respond with full force - retaliatory tariffs, economic diversification, and a rejection of dependence.",
         "e": -1,
         "g": 1,
         "lib": 2,
@@ -2768,7 +2775,7 @@ const BANK = [
     "pair": "ident-a",
     "fr": "con",
     "type": "s",
-    "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+    "q": "People alive today should carry a sense of shame for what their nation or culture did in the past - slavery, genocide, colonialism.",
     "opts": [
       {
         "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",

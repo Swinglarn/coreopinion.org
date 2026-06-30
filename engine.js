@@ -33,7 +33,7 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Skipped',
     noPairsText: 'No framing contrasts completed for this topic yet.',
     noPairsGeneralText: 'No completed question pairs for this topic to compare. Take the Medium or Long test to unlock detailed pair analysis.',
-    gapClose: 'Your result is close — only {gap} points separates you from {nextPartyName}. You may genuinely straddle both traditions.',
+    gapClose: 'Your result is close - only {gap} points separates you from {nextPartyName}. You may genuinely straddle both traditions.',
     gapModerate: 'You align meaningfully with {nextPartyName} too, scoring {nextPct}%.',
     gapClear: 'Your alignment with {topPartyName} is clear, with {gap} points separating you from the next closest party.',
     profiles: {
@@ -75,7 +75,7 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Übersprungen',
     noPairsText: 'Für dieses Thema wurden noch keine Framing-Vergleiche durchgeführt.',
     noPairsGeneralText: 'Keine abgeschlossenen Fragenpaare für dieses Thema zum Vergleichen. Mache den mittleren oder langen Test, um die detaillierte Paaranalyse freizuschalten.',
-    gapClose: 'Dein Ergebnis ist knapp — nur {gap} Punkte trennen dich von der {nextPartyName}. Du stehst möglicherweise zwischen beiden Traditionen.',
+    gapClose: 'Dein Ergebnis ist knapp - nur {gap} Punkte trennen dich von der {nextPartyName}. Du stehst möglicherweise zwischen beiden Traditionen.',
     gapModerate: 'Du weist auch eine deutliche Übereinstimmung mit der {nextPartyName} auf ({nextPct}%).',
     gapClear: 'Deine Übereinstimmung mit der {topPartyName} ist eindeutig, mit {gap} Punkten Vorsprung vor der nächsten Partei.',
     profiles: {
@@ -117,7 +117,7 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Ignoré',
     noPairsText: 'Aucune comparaison de cadrage effectuée pour ce sujet.',
     noPairsGeneralText: 'Aucune paire de questions complétée pour ce sujet. Passez le test moyen ou long pour débloquer l\'analyse détaillée des paires.',
-    gapClose: 'Votre résultat est serré — seulement {gap} points vous séparent de {nextPartyName}. Vous chevauchez probablement les deux sensibilités.',
+    gapClose: 'Votre résultat est serré - seulement {gap} points vous séparent de {nextPartyName}. Vous chevauchez probablement les deux sensibilités.',
     gapModerate: 'Vous vous alignez également de manière significative avec {nextPartyName}, avec un score de {nextPct}%.',
     gapClear: "Votre alignement avec {topPartyName} est clair, avec {gap} points d'écart avec le parti suivant.",
     profiles: {
@@ -243,7 +243,7 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Overgeslagen',
     noPairsText: 'Nog geen formuleringseffecten getest voor dit onderwerp.',
     noPairsGeneralText: 'Geen voltooide vragenparen voor dit onderwerp om te vergelijken. Doe de gemiddelde of lange test om gedetailleerde paaranalyses te ontgrendelen.',
-    gapClose: 'Je resultaat ligt dicht bij elkaar — slechts {gap} punten scheiden je van {nextPartyName}. Je staat mogelijk tussen beide tradities in.',
+    gapClose: 'Je resultaat ligt dicht bij elkaar - slechts {gap} punten scheiden je van {nextPartyName}. Je staat mogelijk tussen beide tradities in.',
     gapModerate: 'Je hebt ook een duidelijke overeenkomst met {nextPartyName} ({nextPct}%).',
     gapClear: 'Je overeenkomst met {topPartyName} is duidelijk, met {gap} punten voorsprong op de volgende partij.',
     profiles: {
@@ -285,7 +285,7 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Överhoppad',
     noPairsText: 'Inga parjämförelser gjorda för detta ämne än.',
     noPairsGeneralText: 'Inga slutförda frågepar för detta ämne att jämföra. Gör det medellånga eller långa testet för att låsa upp detaljerad paranalys.',
-    gapClose: 'Ditt resultat är jämnt — endast {gap} poäng skiljer dig från {nextPartyName}. Du står möjligen mellan båda traditionerna.',
+    gapClose: 'Ditt resultat är jämnt - endast {gap} poäng skiljer dig från {nextPartyName}. Du står möjligen mellan båda traditionerna.',
     gapModerate: 'Du har också en tydlig överensstämmelse med {nextPartyName} ({nextPct}%).',
     gapClear: 'Din överensstämmelse med {topPartyName} är tydlig, med {gap} poängs marginal till nästa parti.',
     profiles: {
@@ -327,7 +327,7 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Overloppet',
     noPairsText: 'Ingen par-sammenligninger udført for dette emne endnu.',
     noPairsGeneralText: 'Ingen gennemførte spørgsmålspar for dette emne at sammenligne. Tag den mellemste eller lange test for at låse op for detaljeret paranalyse.',
-    gapClose: 'Dit resultat er tæt — kun {gap} point adskiller dig fra {nextPartyName}. Du står muligvis mellem begge traditioner.',
+    gapClose: 'Dit resultat er tæt - kun {gap} point adskiller dig fra {nextPartyName}. Du står muligvis mellem begge traditioner.',
     gapModerate: 'Du har også en tydelig overensstemmelse med {nextPartyName} ({nextPct}%).',
     gapClear: 'Din overensstemmelse med {topPartyName} er tydelig, med en margen på {gap} point til næste parti.',
     profiles: {
@@ -369,7 +369,7 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Hoppet over',
     noPairsText: 'Ingen par-sammenligninger utført for dette emnet ennå.',
     noPairsGeneralText: 'Ingen fullførte spørsmålspar for dette emnet å sammenligne. Ta den middels eller lange testen for å låse opp detaljert paranalyse.',
-    gapClose: 'Resultatet ditt er jevnt — bare {gap} poeng skiller deg fra {nextPartyName}. Du står muligens mellom begge tradisjonene.',
+    gapClose: 'Resultatet ditt er jevnt - bare {gap} poeng skiller deg fra {nextPartyName}. Du står muligens mellom begge tradisjonene.',
     gapModerate: 'Du har også et tydelig samsvar med {nextPartyName} ({nextPct}%).',
     gapClear: 'Samsvaret ditt med {topPartyName} er tydelig, med en margin på {gap} poeng til neste parti.',
     profiles: {
@@ -411,7 +411,7 @@ const ENGINE_TRANSLATIONS = {
     skippedText: 'Ohitettu',
     noPairsText: 'Tälle aiheelle ei ole vielä tehty kehystysvertailuja.',
     noPairsGeneralText: 'Ei valmiita kysymyspareja vertailtavaksi tälle aiheelle. Tee keskipitkä tai pitkä testi avataksesi yksityiskohtaisen parianalyysin.',
-    gapClose: 'Tuloksesi on täpärä — vain {gap} pistettä erottaa sinut puolueesta {nextPartyName}. Saatat olla näiden kahden välillä.',
+    gapClose: 'Tuloksesi on täpärä - vain {gap} pistettä erottaa sinut puolueesta {nextPartyName}. Saatat olla näiden kahden välillä.',
     gapModerate: 'Sovit myös merkittävästi yhteen puolueen {nextPartyName} kanssa ({nextPct}%).',
     gapClear: 'Yhteensopivuutesi puolueen {topPartyName} kanssa on selvä, {gap} pisteen erolla seuraavaan puolueeseen.',
     profiles: {

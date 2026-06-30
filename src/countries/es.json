@@ -3134,7 +3134,7 @@
       "fr": "neutral",
       "type": "s",
       "ctx": null,
-      "q": "The greatest threats to American freedom come from within — government overreach, surveillance, and the erosion of civil liberties.",
+      "q": "The greatest threats to American freedom come from within - government overreach, surveillance, and the erosion of civil liberties.",
       "opts": [
         {
           "t": "Yes. The Patriot Act, NSA surveillance, and the war on drugs are the real threats.",
@@ -3410,7 +3410,7 @@
       "fr": "con",
       "type": "s",
       "ctx": null,
-      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past - slavery, genocide, colonialism.",
       "opts": [
         {
           "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",

@@ -145,8 +145,11 @@
           <a href="/nl">Netherlands Test</a>
         </div>
       </div>
+      <a href="/us" class="nav-shortcut">US</a>
+      <a href="/uk" class="nav-shortcut">UK</a>
+      <a href="/fr" class="nav-shortcut">France</a>
+      <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
-      <a href="/methodology">Methodology</a>
       <a href="/about">About</a>
     </div>
     <div style="display:flex;align-items:center;gap:12px">
@@ -196,9 +199,19 @@
       <div class="party-desc">Your answers most closely match Reform UK. You want radical cuts to immigration, NHS reform, and a rejection of the mainstream political consensus.</div>
     </div>
     <div class="party-cell">
+      <div class="party-dot" style="background:var(--res)"></div>
+      <div class="party-name">Restore Britain</div>
+      <div class="party-desc">Your answers most closely match Restore Britain. You support secure borders, low taxes, small government, national pride, and traditional Christian principles.</div>
+    </div>
+    <div class="party-cell">
       <div class="party-dot" style="background:var(--grn)"></div>
       <div class="party-name">Green Party</div>
       <div class="party-desc">Your answers most closely match the Green Party. You prioritise environmental action, wealth redistribution, and systemic economic change.</div>
+    </div>
+    <div class="party-cell">
+      <div class="party-dot" style="background:var(--snp-dark)"></div>
+      <div class="party-name">SNP</div>
+      <div class="party-desc">Your answers most closely match the SNP. You support Scottish independence, centre-left economics, and a closer relationship with Europe.</div>
     </div>
   </div>
   <div class="info-section">
@@ -216,7 +229,6 @@
     <div style="display:flex;gap:20px;">
       <a href="#" onclick="event.preventDefault(); goTo('page-ideologies')" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Explore Ideologies</a>
       <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
-      <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
       <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
       <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
     </div>
@@ -411,8 +423,11 @@
           <a href="/nl">Netherlands Test</a>
         </div>
       </div>
+      <a href="/us" class="nav-shortcut">US</a>
+      <a href="/uk" class="nav-shortcut">UK</a>
+      <a href="/fr" class="nav-shortcut">France</a>
+      <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
-      <a href="/methodology">Methodology</a>
       <a href="/about">About</a>
     </div>
     <div style="display:flex;align-items:center;gap:12px">
@@ -551,7 +566,6 @@
       <div style="display:flex;gap:20px;">
         <a href="#" onclick="event.preventDefault(); goTo('page-ideologies')" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Explore Ideologies</a>
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
-        <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
@@ -666,7 +680,6 @@
       <div style="display:flex;gap:20px;">
         <a href="#" onclick="event.preventDefault(); goTo('page-ideologies')" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Explore Ideologies</a>
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
-        <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
@@ -793,7 +806,6 @@
       <div style="display:flex;gap:20px;">
         <a href="#" onclick="event.preventDefault(); goTo('page-ideologies')" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Explore Ideologies</a>
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
-        <a href="/methodology" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Methodology</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
@@ -2482,6 +2494,12 @@ const PARTY_META = {
     "color": "var(--snp-dark)",
     "barClass": "bar-snp",
     "desc": "Your answers most closely match the SNP. You support Scottish independence, centre-left economics, and a closer relationship with Europe."
+  },
+  "res": {
+    "name": "Restore Britain",
+    "color": "var(--res)",
+    "barClass": "bar-res",
+    "desc": "Your answers most closely match Restore Britain. You support secure borders, low taxes, small government, national pride, and traditional Christian principles."
   }
 };
 

@@ -1793,7 +1793,7 @@
       ]
     },
     "br3": {
-      "q": "Die größten Gefahren für die Freiheit kommen von innen — staatliche Überwachung und der Abbau von Bürgerrechten.",
+      "q": "Die größten Gefahren für die Freiheit kommen von innen - staatliche Überwachung und der Abbau von Bürgerrechten.",
       "opts": [
         "Ja. Massenüberwachung und Einschränkungen der Bürgerrechte sind die wahren Bedrohungen.",
         "Externe Bedrohungen sind real. Die Balance zwischen Sicherheit und Freiheit ist schwer.",
@@ -3642,7 +3642,7 @@
       "pair": "br-b",
       "fr": "neutral",
       "type": "s",
-      "q": "The greatest threats to American freedom come from within — government overreach, surveillance, and the erosion of civil liberties.",
+      "q": "The greatest threats to American freedom come from within - government overreach, surveillance, and the erosion of civil liberties.",
       "opts": [
         {
           "t": "Yes. The Patriot Act, NSA surveillance, and the war on drugs are the real threats.",
@@ -3948,7 +3948,7 @@
       "pair": "ident-a",
       "fr": "con",
       "type": "s",
-      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past - slavery, genocide, colonialism.",
       "opts": [
         {
           "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",
@@ -3991,5 +3991,5 @@
   ],
   "heroTitle": "Wo stehst du in der<br><em>deutschen</em> Politik?",
   "heroSub": "47 praxisnahe Szenario-Fragen zu den drängenden Themen der Bundespolitik. Ermittle deine Position auf dem Kompass und sieh die Übereinstimmung mit allen großen Parteien.",
-  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#EB001F\"></div>\n      <div class=\"party-name\">SPD</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der SPD (Sozialdemokratische Partei Deutschlands) überein. Du befürwortest einen starken Sozialstaat (wie das Bürgergeld), Arbeitnehmerrechte, öffentliche Investitionen und eine engagierte Umweltpolitik.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#1C1C1C\"></div>\n      <div class=\"party-name\">CDU/CSU</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der CDU/CSU (Union) überein. Du befürwortest wirtschaftliche Stabilität, die Einhaltung der Schuldenbremse, moderate Steuern, solide Finanzen und starke innere Sicherheit.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#46962B\"></div>\n      <div class=\"party-name\">Grüne</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit Bündnis 90/Die Grünen überein. Du legst großen Wert auf konsequenten Klimaschutz, den schnellen Ausstieg aus fossilen Energieträgern und gesellschaftliche Vielfalt.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#FFED00\"></div>\n      <div class=\"party-name\">FDP</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der FDP (Freie Demokratische Partei) überein. Du trittst für eine liberale Wirtschaftspolitik, Steuersenkungen, Bürokratieabbau sowie individuelle Freiheit ein.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#009EE0\"></div>\n      <div class=\"party-name\">AfD</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der AfD (Alternative für Deutschland) überein. Du forderst eine restriktive Asylpolitik, den Austritt aus der EU oder starke Beschränkung und Klimaskepsis.</div>\n    </div>\n  </div>"
+  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#EB001F\"></div>\n      <div class=\"party-name\">SPD</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der SPD (Sozialdemokratische Partei Deutschlands) überein. Du befürwortest einen starken Sozialstaat (wie das Bürgergeld), Arbeitnehmerrechte, öffentliche Investitionen und eine engagierte Umweltpolitik.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#1C1C1C\"></div>\n      <div class=\"party-name\">CDU/CSU</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der CDU/CSU (Union) überein. Du befürwortest wirtschaftliche Stabilität, die Einhaltung der Schuldenbremse, moderate Steuern, solide Finanzen und starke innere Sicherheit.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#46962B\"></div>\n      <div class=\"party-name\">Grüne</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit Bündnis 90/Die Grünen überein. Du legst großen Wert auf konsequenten Klimaschutz, den schnellen Ausstieg aus fossilen Energieträgern und gesellschaftliche Vielfalt.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#FFED00\"></div>\n      <div class=\"party-name\">FDP</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der FDP (Freie Demokratische Partei) überein. Du trittst für eine liberale Wirtschaftspolitik, Steuersenkungen, Bürokratieabbau sowie individuelle Freiheit ein.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#009EE0\"></div>\n      <div class=\"party-name\">AfD</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der AfD (Alternative für Deutschland) überein. Du forderst eine restriktive Asylpolitik, den Austritt aus der EU oder starke Beschränkung und Klimaskepsis.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#BE3075\"></div>\n      <div class=\"party-name\">Die Linke</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit der Partei Die Linke überein. Du forderst eine umfassende Reichensteuer, die Rekommunalisierung der Daseinsvorsorge und eine friedensorientierte Außenpolitik.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#9B2335\"></div>\n      <div class=\"party-name\">BSW</div>\n      <div class=\"party-desc\">Deine Antworten stimmen am ehesten mit dem BSW (Bündnis Sahra Wagenknecht) überein. Du verbindest eine gerechte Wirtschaftspolitik mit einer restriktiven Haltung in der Migrationspolitik.</div>\n    </div>\n  </div>"
 }

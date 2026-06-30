@@ -2850,7 +2850,7 @@
       "pair": "ni-a",
       "fr": "con",
       "type": "s",
-      "q": "Woke ideology has captured Canadian institutions — the CBC, universities, the civil service — and is making the country less free.",
+      "q": "Woke ideology has captured Canadian institutions - the CBC, universities, the civil service - and is making the country less free.",
       "opts": [
         {
           "t": "Yes. There is an ideological conformism that does not tolerate dissent.",
@@ -2982,7 +2982,7 @@
       "q": "Donald Trump called Canada the 51st state. Any Canadian politician who does not treat that as a declaration of economic war is not fit for office.",
       "opts": [
         {
-          "t": "Yes. Canada must respond with full force — retaliatory tariffs, economic diversification, and a rejection of dependence.",
+          "t": "Yes. Canada must respond with full force - retaliatory tariffs, economic diversification, and a rejection of dependence.",
           "e": -1,
           "g": 1,
           "lib": 2,
@@ -3181,7 +3181,7 @@
       "pair": "ident-a",
       "fr": "con",
       "type": "s",
-      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past — slavery, genocide, colonialism.",
+      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past - slavery, genocide, colonialism.",
       "opts": [
         {
           "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",
@@ -3220,6 +3220,6 @@
     }
   ],
   "heroTitle": "Where do you stand in <em>Canadian</em> politics?",
-  "heroSub": "47 policy issues and statements on the issues defining Canada right now — from the trade war with the US to housing, healthcare, and national identity. See your full party alignment.",
-  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#CC0000\"></div>\n      <div class=\"party-name\">Liberal</div>\n      <div class=\"party-desc\">Your answers most closely match the Liberal Party. You tend to support managed trade, social programs, climate action, and a strong federal role in the economy.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#003F7F\"></div>\n      <div class=\"party-name\">Conservative</div>\n      <div class=\"party-desc\">Your answers most closely match the Conservative Party. You favour lower taxes, smaller government, axing the carbon tax, and reducing federal spending.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#F37021\"></div>\n      <div class=\"party-name\">NDP</div>\n      <div class=\"party-desc\">Your answers most closely match the NDP. You support pharmacare, dental care, workers rights, wealth taxes, and a more activist government on inequality and climate.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#3D9B35\"></div>\n      <div class=\"party-name\">Green</div>\n      <div class=\"party-desc\">Your answers most closely match the Green Party. You prioritise strong climate action, proportional representation, and a systemic challenge to corporate power.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#003DA5\"></div>\n      <div class=\"party-name\">Bloc Québécois</div>\n      <div class=\"party-desc\">Your answers most closely match the Bloc. You support Quebec autonomy, French language protection, and a centre-left social model on federal matters.</div>\n    </div>\n  </div>"
+  "heroSub": "47 policy issues and statements on the issues defining Canada right now - from the trade war with the US to housing, healthcare, and national identity. See your full party alignment.",
+  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#CC0000\"></div>\n      <div class=\"party-name\">Liberal</div>\n      <div class=\"party-desc\">Your answers most closely match the Liberal Party. You tend to support managed trade, social programs, climate action, and a strong federal role in the economy.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#003F7F\"></div>\n      <div class=\"party-name\">Conservative</div>\n      <div class=\"party-desc\">Your answers most closely match the Conservative Party. You favour lower taxes, smaller government, axing the carbon tax, and reducing federal spending.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#F37021\"></div>\n      <div class=\"party-name\">NDP</div>\n      <div class=\"party-desc\">Your answers most closely match the NDP. You support pharmacare, dental care, workers rights, wealth taxes, and a more activist government on inequality and climate.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#3D9B35\"></div>\n      <div class=\"party-name\">Green</div>\n      <div class=\"party-desc\">Your answers most closely match the Green Party. You prioritise strong climate action, proportional representation, and a systemic challenge to corporate power.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#003DA5\"></div>\n      <div class=\"party-name\">Bloc Québécois</div>\n      <div class=\"party-desc\">Your answers most closely match the Bloc. You support Quebec autonomy, French language protection, and a centre-left social model on federal matters.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#4B0082\"></div>\n      <div class=\"party-name\">PPC</div>\n      <div class=\"party-desc\">Your answers most closely match the PPC. You want radical cuts to immigration, elimination of climate policy, and a rejection of mainstream conservative incrementalism.</div>\n    </div>\n  </div>"
 }

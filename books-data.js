@@ -25,8 +25,8 @@ const BOOKS_DATA = [
     author: "Niccolò Machiavelli",
     year: 1532,
     category: "Political Strategy",
-    description: "The original handbook on political power. Machiavelli's unflinching analysis of leadership, pragmatism, and the tension between morality and effective governance remains endlessly debated — and disturbingly relevant.",
-    isbn: "9781954839144",
+    description: "The original handbook on political power. Machiavelli's unflinching analysis of leadership, pragmatism, and the tension between morality and effective governance remains endlessly debated - and disturbingly relevant.",
+    isbn: "9780140449150",
     links: {
       us: "https://amzn.to/441JjuH"
     }
@@ -37,8 +37,8 @@ const BOOKS_DATA = [
     author: "George Orwell",
     year: 1949,
     category: "Political Fiction",
-    description: "The defining dystopian novel on totalitarianism, surveillance, and the manipulation of truth. Orwell's vision of Oceania — with its Thought Police, Newspeak, and perpetual war — remains disturbingly relevant to modern political debates.",
-    isbn: "9781840228229",
+    description: "The defining dystopian novel on totalitarianism, surveillance, and the manipulation of truth. Orwell's vision of Oceania - with its Thought Police, Newspeak, and perpetual war - remains disturbingly relevant to modern political debates.",
+    isbn: "9780141187761",
     links: {
       us: "https://amzn.to/4oZOB3x"
     }
@@ -49,7 +49,7 @@ const BOOKS_DATA = [
     author: "Plato",
     year: -375,
     category: "Philosophy",
-    description: "The foundational text of Western political philosophy. Through Socratic dialogue, Plato explores justice, the ideal state, the nature of the soul, and why philosophers should rule — arguments that still shape how we think about governance.",
+    description: "The foundational text of Western political philosophy. Through Socratic dialogue, Plato explores justice, the ideal state, the nature of the soul, and why philosophers should rule - arguments that still shape how we think about governance.",
     isbn: "9780140455113",
     links: {
       us: "https://amzn.to/4wp8Fih"
@@ -61,7 +61,7 @@ const BOOKS_DATA = [
     author: "Thomas Hobbes",
     year: 1651,
     category: "Political Philosophy",
-    description: "Hobbes argues that without a powerful sovereign, human life would be 'solitary, poor, nasty, brutish, and short.' His social contract theory — trading freedom for security — remains the bedrock of modern state legitimacy debates.",
+    description: "Hobbes argues that without a powerful sovereign, human life would be 'solitary, poor, nasty, brutish, and short.' His social contract theory - trading freedom for security - remains the bedrock of modern state legitimacy debates.",
     isbn: "9780140431957",
     links: {
       us: "https://amzn.to/4wns4QE"
@@ -109,7 +109,7 @@ const BOOKS_DATA = [
     author: "Alexander Hamilton, James Madison & John Jay",
     year: 1788,
     category: "Constitutional Theory",
-    description: "The 85 essays that argued for ratification of the U.S. Constitution. A masterclass in republican government design — separation of powers, federalism, checks and balances — that shaped the world's most influential democracy.",
+    description: "The 85 essays that argued for ratification of the U.S. Constitution. A masterclass in republican government design - separation of powers, federalism, checks and balances - that shaped the world's most influential democracy.",
     isbn: "9780451528810",
     links: {
       us: "https://amzn.to/4oVPIBd"
@@ -133,7 +133,7 @@ const BOOKS_DATA = [
     author: "Bruce Bueno de Mesquita & Alastair Smith",
     year: 2011,
     category: "Political Science",
-    description: "Why bad behavior is almost always good politics. A provocative, data-driven framework explaining why leaders — from dictators to democrats — act the way they do. It's not about ideology; it's about staying in power.",
+    description: "Why bad behavior is almost always good politics. A provocative, data-driven framework explaining why leaders - from dictators to democrats - act the way they do. It's not about ideology; it's about staying in power.",
     isbn: "9781610390446",
     links: {
       us: "https://amzn.to/4ggB2dx"
@@ -142,7 +142,7 @@ const BOOKS_DATA = [
 ];
 
 /**
- * Region configuration — maps region codes to display info and Amazon domains.
+ * Region configuration - maps region codes to display info and Amazon domains.
  * Used by the books page to build the region selector and construct fallback URLs.
  */
 const REGIONS = {

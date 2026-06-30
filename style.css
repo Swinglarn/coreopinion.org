@@ -49,6 +49,7 @@
   --ref: #12B6CF;
   --grn-uk: #02A95B;
   --snp: #6B6100;
+  --res: #0B2240;
   
   /* Sweden */
   --s-sosse: #E8112D;
@@ -569,8 +570,8 @@ html.dark-mode .nav-badge {
   gap: 16px;
 }
 
-/* Party Strip / Stats strip */
-.stats-strip, .party-strip {
+/* Stats strip */
+.stats-strip {
   border-top: 1px solid var(--border-soft);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -578,20 +579,28 @@ html.dark-mode .nav-badge {
   margin: 0 auto;
 }
 
-.party-strip {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.stat-cell, .party-cell {
+.stat-cell {
   padding: 44px 52px;
   border-right: 1px solid var(--border-soft);
 }
 
-.party-cell {
-  padding: 24px 28px;
+.stat-cell:last-child {
+  border-right: none;
 }
 
-.stat-cell:last-child, .party-cell:last-child {
+/* Party Strip (Responsive grid layout to support any number of parties cleanly) */
+.party-strip {
+  border-top: 1px solid var(--border-soft);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px 24px;
+  max-width: 1140px;
+  margin: 40px auto 0;
+  padding: 24px 20px;
+}
+
+.party-cell {
+  padding: 12px 0;
   border-right: none;
 }
 
@@ -1260,6 +1269,7 @@ select:focus, input:focus {
 .bar-ref { background: var(--ref); }
 .bar-grn-uk { background: var(--grn-uk); }
 .bar-snp { background: var(--snp); }
+.bar-res { background: var(--res); }
 
 /* --- COMPASS MAP & AXIS GRAPHICS --- */
 .results-grid {
@@ -2409,5 +2419,16 @@ body:has(#books-grid) .content-shell {
   body:has(#books-grid) .books-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
+  }
+}
+
+/* --- Navigation Shortcuts --- */
+.nav-shortcut {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .nav-shortcut {
+    display: inline-block;
   }
 }

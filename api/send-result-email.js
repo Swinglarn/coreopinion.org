@@ -178,14 +178,14 @@ function buildSubject(result) {
   return `Your CoreOpinion result: ${profile.name}`;
 }
 
-// Sends the result email. Designed to be awaited but to NEVER throw —
+// Sends the result email. Designed to be awaited but to NEVER throw  - 
 // a failure here must not break the save flow. Returns {sent, error}.
 async function sendResultEmail(result, host) {
   if (!result || !result.email) {
     return { sent: false, error: 'no_email' };
   }
   if (!resend) {
-    console.warn('RESEND_API_KEY missing — skipping result email.');
+    console.warn('RESEND_API_KEY missing - skipping result email.');
     return { sent: false, error: 'no_api_key' };
   }
   try {
