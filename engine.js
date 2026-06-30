@@ -597,36 +597,7 @@ window.goTo = function(id, pushState = true) {
   }
 };
 
-// Listen for back/forward browser navigation
-window.addEventListener('popstate', function(event) {
-  if (event.state && event.state.pageId) {
-    window.goTo(event.state.pageId, false);
-  } else {
-    const hash = window.location.hash;
-    if (hash) {
-      const pageId = `page-${hash.replace('#', '')}`;
-      if (document.getElementById(pageId)) {
-        window.goTo(pageId, false);
-        return;
-      }
-    }
-    window.goTo('page-landing', false);
-  }
-});
-
-// Handle initial deep-linking on page load
-window.addEventListener('DOMContentLoaded', function() {
-  const hash = window.location.hash;
-  if (hash) {
-    const pageId = `page-${hash.replace('#', '')}`;
-    if (document.getElementById(pageId)) {
-      window.goTo(pageId, false);
-      history.replaceState({ pageId: pageId }, '', window.location.href);
-      return;
-    }
-  }
-  history.replaceState({ pageId: 'page-landing' }, '', window.location.pathname);
-});
+// Initial routing and popstate listeners moved to the end of the file to prevent execution order issues.
 
 // ============================================================
 // 2. SHUFFLER & QUESTION SCHEDULING (MINIMUM GAP ALGORITHM)
@@ -2709,5 +2680,45 @@ document.addEventListener('click', function(e) {
     }
   });
 });
+
+// ============================================================
+// INITIAL ROUTING & POPSTATE EVENT LISTENERS
+// ============================================================
+// Listen for back/forward browser navigation
+window.addEventListener('popstate', function(event) {
+  if (event.state && event.state.pageId) {
+    window.goTo(event.state.pageId, false);
+  } else {
+    const hash = window.location.hash;
+    if (hash) {
+      const pageId = `page-${hash.replace('#', '')}`;
+      if (document.getElementById(pageId)) {
+        window.goTo(pageId, false);
+        return;
+      }
+    }
+    window.goTo('page-landing', false);
+  }
+});
+
+// Handle initial deep-linking on page load (race-condition safe)
+function handleInitialHash() {
+  const hash = window.location.hash;
+  if (hash) {
+    const pageId = `page-${hash.replace('#', '')}`;
+    if (document.getElementById(pageId)) {
+      window.goTo(pageId, false);
+      history.replaceState({ pageId: pageId }, '', window.location.href);
+      return;
+    }
+  }
+  history.replaceState({ pageId: 'page-landing' }, '', window.location.pathname);
+}
+
+if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', handleInitialHash);
+} else {
+  handleInitialHash();
+}
 
 
