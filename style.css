@@ -2032,3 +2032,241 @@ select:focus, input:focus {
 }
 
 
+/* ============================================================
+   BOOKS / RECOMMENDED READING PAGE
+   ============================================================ */
+
+/* --- Affiliate Disclosure --- */
+.books-affiliate-disclosure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  background: var(--parchment-warm);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.books-affiliate-disclosure svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+/* --- Region Selector Bar --- */
+.books-region-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.books-region-bar label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+.books-region-bar select {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 32px 8px 12px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%237A7F88' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.books-region-bar select:hover {
+  border-color: var(--navy);
+}
+.books-region-bar select:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px var(--navy-soft);
+}
+
+/* --- Book Grid --- */
+.books-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* --- Book Card --- */
+.book-card {
+  display: flex;
+  gap: 20px;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  animation: bookFadeIn 0.4s ease both;
+}
+.book-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--border);
+}
+html.dark-mode .book-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes bookFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Book Cover --- */
+.book-cover-wrap {
+  flex-shrink: 0;
+  width: 100px;
+  min-height: 140px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--parchment-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-soft);
+}
+.book-cover-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.book-cover-wrap.cover-fallback {
+  padding: 12px;
+}
+.book-cover-wrap.cover-fallback img {
+  display: none;
+}
+.book-cover-wrap.cover-fallback::after {
+  content: attr(data-title, '📖');
+  content: '📖';
+  font-size: 32px;
+  opacity: 0.4;
+}
+
+/* --- Book Info --- */
+.book-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.book-category {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--navy);
+  background: var(--navy-soft);
+  padding: 3px 10px;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+
+.book-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 4px 0;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+}
+
+.book-author {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink-muted);
+  margin: 0 0 10px 0;
+}
+
+.book-desc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin: 0 0 14px 0;
+  flex: 1;
+}
+
+.book-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy);
+  transition: gap 0.2s ease;
+}
+.book-card:hover .book-cta {
+  gap: 10px;
+}
+.book-cta svg {
+  transition: transform 0.2s ease;
+}
+.book-card:hover .book-cta svg {
+  transform: translate(2px, -2px);
+}
+
+/* --- Books Page Responsive --- */
+@media (max-width: 600px) {
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 20px;
+  }
+  .book-cover-wrap {
+    width: 120px;
+    min-height: 170px;
+  }
+  .book-info {
+    align-items: center;
+  }
+  .book-category {
+    align-self: center;
+  }
+  .book-desc {
+    text-align: center;
+  }
+  .books-region-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .books-region-bar label {
+    text-align: center;
+  }
+}
