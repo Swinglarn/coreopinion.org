@@ -202,11 +202,12 @@ nav {
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 24px;
 }
 
 .nav-links a {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink-muted);
   text-decoration: none;
   cursor: pointer;
@@ -221,7 +222,8 @@ nav {
 /* --- Elegant Dropdown Menu for Navigation --- */
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 
 .dropdown-toggle {
@@ -229,7 +231,7 @@ nav {
   border: none;
   color: var(--ink-muted);
   font-family: 'Outfit', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   padding: 6px 12px;
@@ -674,12 +676,12 @@ html.dark-mode .nav-badge {
 }
 
 .info-block h3 {
-  font-size: 26px;
+  font-size: 28px;
   letter-spacing: -0.5px;
 }
 
 .tease-text, .info-block p {
-  font-size: 15px;
+  font-size: 16.5px;
   color: var(--ink-muted);
   line-height: 1.75;
   font-weight: 300;
@@ -877,7 +879,7 @@ html.dark-mode .nav-badge {
 }
 
 .q-scenario-body {
-  font-size: 16px;
+  font-size: 17.5px;
   color: var(--ink-soft);
   line-height: 1.75;
   font-weight: 300;
@@ -885,7 +887,7 @@ html.dark-mode .nav-badge {
 
 .q-question {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 27px;
+  font-size: 30px;
   font-weight: 500;
   color: var(--ink);
   line-height: 1.38;
@@ -905,7 +907,7 @@ html.dark-mode .nav-badge {
   border-radius: 7px;
   padding: 18px 22px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16.5px;
   color: var(--ink-soft);
   line-height: 1.55;
   font-weight: 400;
@@ -1606,7 +1608,7 @@ select:focus, input:focus {
   }
   
   .nav-links a {
-    font-size: 14px;
+    font-size: 15px;
     display: inline-block;
   }
 
@@ -1702,15 +1704,15 @@ select:focus, input:focus {
   }
   
   .q-question {
-    font-size: 21px;
+    font-size: 24px;
   }
   
   .q-scenario-body {
-    font-size: 15px;
+    font-size: 16.5px;
   }
   
   .q-opt {
-    font-size: 14px;
+    font-size: 15px;
     padding: 15px 16px;
   }
   
@@ -2316,7 +2318,7 @@ html.dark-mode .book-card:hover {
 
 .book-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 600;
   color: var(--ink);
   margin: 0 0 4px 0;
@@ -2326,7 +2328,7 @@ html.dark-mode .book-card:hover {
 
 .book-author {
   font-family: 'Outfit', sans-serif;
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 300;
   color: var(--ink-muted);
   margin: 0 0 10px 0;
@@ -2334,7 +2336,7 @@ html.dark-mode .book-card:hover {
 
 .book-desc {
   font-family: 'Outfit', sans-serif;
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 300;
   color: var(--ink-soft);
   line-height: 1.65;
@@ -2347,7 +2349,7 @@ html.dark-mode .book-card:hover {
   align-items: center;
   gap: 6px;
   font-family: 'Outfit', sans-serif;
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 500;
   color: var(--navy);
   transition: gap 0.2s ease;
@@ -2390,5 +2392,22 @@ html.dark-mode .book-card:hover {
   }
   .books-region-bar label {
     text-align: center;
+  }
+}
+
+/* --- Content Subpages Layout & Books Page Layout Enhancements --- */
+.content-shell {
+  max-width: 760px;
+  width: 100%;
+}
+
+body:has(#books-grid) .content-shell {
+  max-width: 1140px;
+}
+
+@media (min-width: 769px) {
+  body:has(#books-grid) .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
 }
