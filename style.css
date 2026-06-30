@@ -218,6 +218,140 @@ nav {
   color: var(--ink);
 }
 
+/* --- Elegant Dropdown Menu for Navigation --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: var(--ink-muted);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.dropdown-toggle:hover,
+.dropdown.open .dropdown-toggle {
+  color: var(--ink);
+  background: var(--parchment-warm);
+}
+
+.dropdown-toggle .arrow {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.dropdown.open .dropdown-toggle .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  min-width: 220px;
+  max-height: 380px;
+  overflow-y: auto;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+}
+
+/* Scrollbar styling for the dropdown menu */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-faint);
+}
+
+/* Desktop Hover Trigger */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 4px);
+  }
+  .dropdown:hover .dropdown-toggle .arrow {
+    transform: rotate(180deg);
+  }
+}
+
+/* Click-open trigger state (for mobile & fallback) */
+.dropdown.open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 4px);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 14px;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.dropdown-menu a:hover {
+  background: var(--navy-soft);
+  color: var(--navy);
+}
+
+/* --- Books Highlight Link --- */
+.nav-link-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.nav-badge {
+  background: var(--gold-soft);
+  color: var(--gold);
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+html.dark-mode .nav-badge {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.nav-link-highlight:hover .nav-badge {
+  background: var(--gold);
+  color: var(--white);
+}
+
 .flag-badge {
   display: inline-flex;
   align-items: center;
@@ -402,15 +536,6 @@ nav {
   color: #2A5DB0;
   margin-bottom: 28px;
 }
-
-.eyebrow::before {
-  content: '';
-  display: block;
-  width: 28px;
-  height: 1px;
-  background: #2A5DB0;
-}
-
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 76px;
@@ -1471,16 +1596,13 @@ select:focus, input:focus {
   .nav-links {
     order: 3;
     width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 16px;
+    overflow: visible;
+    white-space: normal;
     padding-bottom: 4px;
-    scrollbar-width: none;
-  }
-  
-  .nav-links::-webkit-scrollbar {
-    display: none;
   }
   
   .nav-links a {

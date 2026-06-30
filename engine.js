@@ -2687,4 +2687,27 @@ window.selectIdeology = function(key) {
   }
 })();
 
+// --- Dropdown Navigation Logic ---
+window.toggleNavDropdown = function(e, id) {
+  if (e) e.stopPropagation();
+  const dropdown = document.getElementById(id);
+  if (dropdown) {
+    dropdown.classList.toggle('open');
+  }
+  // Close any other open dropdowns
+  document.querySelectorAll('.dropdown').forEach(d => {
+    if (d.id !== id) {
+      d.classList.remove('open');
+    }
+  });
+};
+
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.dropdown').forEach(d => {
+    if (!d.contains(e.target)) {
+      d.classList.remove('open');
+    }
+  });
+});
+
 

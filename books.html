@@ -103,23 +103,33 @@
 <nav>
   <a class="logo" href="/">Core<span>opinion</span></a>
   <div class="nav-links">
-    <a href="/">General</a>
-    <a href="/us">US</a>
-    <a href="/uk">UK</a>
-    <a href="/ca">Canada</a>
-    <a href="/au">Australia</a>
-    <a href="/nz">New Zealand</a>
-    <a href="/se">Sweden</a>
-    <a href="/dk">Denmark</a>
-    <a href="/no">Norway</a>
-    <a href="/fi">Finland</a>
-    <a href="/de">Germany</a>
-    <a href="/at">Austria</a>
-    <a href="/fr">France</a>
-    <a href="/es">Spain</a>
-    <a href="/it">Italy</a>
-    <a href="/ie">Ireland</a>
-    <a href="/nl">Netherlands</a>
+    <div class="dropdown" id="nav-dropdown-content">
+      <button class="dropdown-toggle" onclick="window.toggleNavDropdown(event, 'nav-dropdown-content')">
+        Political Tests <span class="arrow">▾</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="/">🌐 General Test</a>
+        <a href="/us">🇺🇸 US Test</a>
+        <a href="/uk">🇬🇧 UK Test</a>
+        <a href="/ca">🇨🇦 Canada Test</a>
+        <a href="/au">🇦🇺 Australia Test</a>
+        <a href="/nz">🇳🇿 New Zealand Test</a>
+        <a href="/se">🇸🇪 Sweden Test</a>
+        <a href="/dk">🇩🇰 Denmark Test</a>
+        <a href="/no">🇳🇴 Norway Test</a>
+        <a href="/fi">🇫🇮 Finland Test</a>
+        <a href="/de">🇩🇪 Germany Test</a>
+        <a href="/at">🇦🇹 Austria Test</a>
+        <a href="/fr">🇫🇷 France Test</a>
+        <a href="/es">🇪🇸 Spain Test</a>
+        <a href="/it">🇮🇹 Italy Test</a>
+        <a href="/ie">🇮🇪 Ireland Test</a>
+        <a href="/nl">🇳🇱 Netherlands Test</a>
+      </div>
+    </div>
+    <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+    <a href="/methodology">Methodology</a>
+    <a href="/about">About</a>
   </div>
   <div style="display:flex;align-items:center;gap:12px">
     <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
