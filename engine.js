@@ -583,7 +583,11 @@ window.goTo = function(id, pushState = true) {
   if (pushState) {
     const stateName = id.replace('page-', '');
     const hash = stateName === 'landing' ? '' : `#${stateName}`;
-    history.pushState({ pageId: id }, '', window.location.pathname + hash);
+    try {
+      history.pushState({ pageId: id }, '', window.location.pathname + hash);
+    } catch (e) {
+      console.warn('History API not supported/allowed in this context:', e);
+    }
   }
   
   // Clean up dynamic panels
@@ -2708,11 +2712,19 @@ function handleInitialHash() {
     const pageId = `page-${hash.replace('#', '')}`;
     if (document.getElementById(pageId)) {
       window.goTo(pageId, false);
-      history.replaceState({ pageId: pageId }, '', window.location.href);
+      try {
+        history.replaceState({ pageId: pageId }, '', window.location.href);
+      } catch (e) {
+        console.warn('History API not supported/allowed in this context:', e);
+      }
       return;
     }
   }
-  history.replaceState({ pageId: 'page-landing' }, '', window.location.pathname);
+  try {
+    history.replaceState({ pageId: 'page-landing' }, '', window.location.pathname);
+  } catch (e) {
+    console.warn('History API not supported/allowed in this context:', e);
+  }
 }
 
 if (document.readyState === 'loading') {
