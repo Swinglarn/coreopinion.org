@@ -6,6 +6,10 @@
   "framework": null,
   "rewrites": [
     {
+      "source": "/ideology/:slug",
+      "destination": "/ideology"
+    },
+    {
       "source": "/result/:id",
       "destination": "/api/result-page?id=:id"
     },

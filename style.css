@@ -2432,3 +2432,625 @@ body:has(#books-grid) .content-shell {
     display: inline-block;
   }
 }
+
+/* ============================================================
+   IDEOLOGY PAGES
+   ============================================================ */
+
+/* --- Page Shell --- */
+.ideology-page-shell {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 24px 60px;
+  min-height: calc(100vh - 172px);
+}
+
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.breadcrumbs a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.breadcrumbs a:hover {
+  color: var(--ink);
+}
+.bc-sep {
+  margin: 0 8px;
+  color: var(--ink-faint);
+}
+
+/* --- Article Header --- */
+.ideology-header {
+  margin-bottom: 36px;
+}
+.ideology-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.ideology-subtitle {
+  font-size: 17.5px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 680px;
+}
+.ideology-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+/* --- Two-Column Layout (Content + TOC) --- */
+.ideology-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 960px) {
+  .ideology-layout {
+    grid-template-columns: 1fr 200px;
+  }
+}
+
+/* --- Table of Contents --- */
+.toc {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .toc {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: sticky;
+    top: 96px;
+    align-self: start;
+    order: 2;
+  }
+}
+
+.toc-title {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+  padding-left: 12px;
+}
+
+.toc-link {
+  font-size: 13px;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-left: 2px solid transparent;
+  transition: all 0.15s;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.toc-link:hover {
+  color: var(--ink);
+  border-left-color: var(--border);
+}
+
+.toc-link.active {
+  color: var(--ink);
+  border-left-color: var(--navy);
+  font-weight: 400;
+}
+
+/* --- Content Area --- */
+.ideology-content {
+  order: 1;
+  max-width: 760px;
+}
+
+.ideology-content section {
+  margin-bottom: 40px;
+}
+
+.ideology-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.ideology-content p {
+  font-size: 16.5px;
+  color: var(--ink-soft);
+  line-height: 1.78;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+/* --- Axiom Blockquote --- */
+.axiom-quote {
+  border-left: 4px solid var(--navy);
+  padding: 20px 24px;
+  margin: 24px 0;
+  background: var(--parchment-warm);
+  border-radius: 0 8px 8px 0;
+}
+
+.axiom-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.axiom-quote cite {
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Policy Cards --- */
+.policy-card {
+  padding: 16px 20px;
+  background: var(--parchment-warm);
+  border-radius: 8px;
+  border-left: 3px solid var(--border);
+  margin-top: 16px;
+}
+
+.policy-card-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
+}
+
+.policy-card p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-weight: 300;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* --- Ideology Images / Figures --- */
+.ideology-figure {
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+}
+
+.ideology-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ideology-figure figcaption {
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  background: var(--parchment-warm);
+  border-top: 1px solid var(--border-soft);
+}
+
+.ideology-hero-img {
+  margin-top: 0;
+}
+
+/* --- Compass Embed --- */
+.compass-embed {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+  padding: 24px;
+  background: var(--parchment-warm);
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+}
+
+.compass-svg {
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+}
+
+.compass-caption {
+  font-size: 13px !important;
+  color: var(--ink-muted) !important;
+  font-style: italic;
+  text-align: center;
+}
+
+/* --- Figures Grid --- */
+.figures-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 580px) {
+  .figures-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.figure-card {
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.figure-card:hover {
+  border-color: var(--border);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.figure-img-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: var(--parchment-warm);
+  border: 2px solid var(--border-soft);
+}
+
+.figure-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.figure-img-wrap.fig-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  text-align: center;
+  padding: 8px;
+}
+
+.figure-img-wrap.fig-fallback img {
+  display: none;
+}
+
+.figure-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.figure-dates {
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.figure-role {
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.figure-desc {
+  font-size: 14px !important;
+  color: var(--ink-soft);
+  font-weight: 300;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+/* --- Inline Book Cards --- */
+.books-inline-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.book-card-inline {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.book-card-inline:hover {
+  border-color: var(--border);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.book-cover-sm {
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.book-cover-sm img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.book-info-sm {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-cat-sm {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.book-info-sm h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 2px 0 4px;
+}
+
+.book-author-sm {
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+
+.book-desc-sm {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 300;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.books-affiliate-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-weight: 300;
+  margin-top: 12px;
+}
+
+.cta-link {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 400;
+  margin-top: 12px;
+  transition: opacity 0.15s;
+}
+
+.cta-link:hover {
+  opacity: 0.7;
+}
+
+/* --- CTA Panel --- */
+.cta-panel {
+  text-align: center;
+  padding: 40px 32px;
+  background: var(--parchment-warm);
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  margin: 48px 0;
+}
+
+.cta-panel h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.cta-panel p {
+  font-size: 15px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* --- Other Ideologies Grid --- */
+.ideology-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+@media (min-width: 580px) {
+  .ideology-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ideology-nav-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.ideology-nav-card:hover {
+  border-color: var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.ideology-nav-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.ideology-nav-card strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+}
+
+.ideology-nav-quad {
+  font-size: 11px;
+  color: var(--ink-muted);
+  font-weight: 300;
+}
+
+/* --- Ideology Index Grid (listing page) --- */
+.ideology-index-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+@media (min-width: 580px) {
+  .ideology-index-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .ideology-index-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ideology-index-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.ideology-index-card:hover {
+  border-color: var(--border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+}
+
+.ideology-index-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.ideology-index-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.ideology-index-quad {
+  font-size: 11px;
+  color: var(--ink-muted);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ideology-index-card p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+/* --- Loading State --- */
+.ideology-loading {
+  text-align: center;
+  padding: 80px 24px;
+  font-size: 15px;
+  color: var(--ink-muted);
+  font-weight: 300;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 580px) {
+  .ideology-header h1 {
+    font-size: 34px;
+  }
+  .ideology-subtitle {
+    font-size: 15px;
+  }
+  .ideology-content h2 {
+    font-size: 24px;
+  }
+  .figure-img-wrap {
+    width: 60px;
+    height: 60px;
+  }
+}
