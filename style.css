@@ -5,9 +5,9 @@
 :root {
   /* Ink Colors */
   --ink: #0A0C0F;
-  --ink-soft: #3D4147;
-  --ink-muted: #7A7F88;
-  --ink-faint: #B0B5BC;
+  --ink-soft: #2D3035;
+  --ink-muted: #555860;
+  --ink-faint: #7C8089;
   
   /* Parchment Colors */
   --parchment: #F9F8F6;
@@ -2054,9 +2054,9 @@ select:focus, input:focus {
   font-family: 'Outfit', sans-serif;
   font-size: 8.5px;
   fill: var(--ink-soft);
-  font-weight: 400;
+  font-weight: 500;
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 0.85;
   transition: opacity 0.2s ease, font-weight 0.2s ease, fill 0.2s ease;
 }
 .ideology-node:hover .node-label, .ideology-node.active .node-label {

@@ -2510,7 +2510,42 @@ window.IDEOLOGIES = {
     axiom: "Individual liberty, bodily autonomy, and private property rights are absolute; state coercion should be minimized or eliminated.",
     econ: "Pure laissez-faire capitalism, absolute contract enforcement, voluntary exchange, free trade, and zero income taxation.",
     gov: "Minarchism (a 'night-watchman state' restricted purely to courts, police, and national defense) or anarcho-capitalism.",
-    figures: "John Locke, Adam Smith, Friedrich Hayek, Milton Friedman"
+  },
+  national_socialism: {
+    name: "National Socialism",
+    icon: "⚔️",
+    color: "#5E5A54",
+    quadrant: "Authoritarian Right",
+    e: -0.15,
+    g: 0.9,
+    axiom: "The state must subordinate all individual, social, and economic activity to the preservation and expansion of the racial nation.",
+    econ: "State-directed capitalism where private property is maintained but completely subordinated to national rearmament and state production targets.",
+    gov: "Totalitarian dictatorship, absolute suppression of democratic institutions and civil liberties, and systemic racial discrimination.",
+    figures: "Adolf Hitler, Joseph Goebbels, Alfred Rosenberg, Gregor Strasser"
+  },
+  communism: {
+    name: "Communism",
+    icon: "☭",
+    color: "#D9232F",
+    quadrant: "Authoritarian Left",
+    e: -1.0,
+    g: 0.85,
+    axiom: "The abolition of private property and class divisions through collective ownership of the means of production is necessary to establish a classless, stateless society.",
+    econ: "Complete state or public ownership of all resources and enterprises, total elimination of market mechanism and wage labor.",
+    gov: "Single-party dictatorship of the proletariat, centralized state control, and the planned transition toward a stateless, classless society.",
+    figures: "Karl Marx, Friedrich Engels, Vladimir Lenin, Joseph Stalin"
+  },
+  monarchism: {
+    name: "Monarchism",
+    icon: "👑",
+    color: "#B8923A",
+    quadrant: "Authoritarian Right",
+    e: 0.2,
+    g: 0.7,
+    axiom: "The political stability, moral unity, and historical continuity of a nation are best preserved by a sovereign monarch.",
+    econ: "Traditional property rights, regulated markets, and historically mercantilist or capitalist frameworks supported by royal charters.",
+    gov: "Rule by a hereditary monarch, varying from absolute royal sovereignty to constitutional monarchies with representative institutions.",
+    figures: "Thomas Hobbes, Jacques-Bénigne Bossuet, Robert Filmer, Charles Maurras"
   }
 };
 
