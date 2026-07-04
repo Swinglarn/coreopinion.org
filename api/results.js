@@ -29,6 +29,8 @@ module.exports = async function handler(req, res) {
         political_id: payload.political_id || null,
         archetype: payload.archetype || null,
         email: payload.email || null,
+        gender: payload.gender || null,
+        nationality: payload.nationality || null,
         bias_breakdown: payload.bias_breakdown || null
       };
 

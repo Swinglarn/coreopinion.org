@@ -1351,6 +1351,156 @@ window.showBiasFaceoff = function(topic) {
 };
 
 // ============================================================
+// 7.5 DEMOGRAPHICS: CANONICAL VALUES + NATIONALITY SEARCH
+// ============================================================
+// Canonical English values stored in the database regardless of the
+// portal language shown in the UI. Age/gender selects keep a fixed
+// option order across every portal, so the index maps to the value.
+const AGE_CANON = ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 or older'];
+const GENDER_CANON = ['Male', 'Female', 'Other', 'Prefer not to say'];
+
+const COUNTRY_LIST = [
+  'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia',
+  'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium',
+  'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria',
+  'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad',
+  'Chile', 'China', 'Colombia', 'Comoros', 'Congo (Republic)', 'Congo (DRC)', 'Costa Rica', 'Croatia', 'Cuba',
+  'Cyprus', 'Czechia', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador',
+  'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gabon',
+  'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana',
+  'Haiti', 'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland',
+  'Israel', 'Italy', 'Ivory Coast', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Kosovo',
+  'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein',
+  'Lithuania', 'Luxembourg', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands',
+  'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco',
+  'Mozambique', 'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger',
+  'Nigeria', 'North Korea', 'North Macedonia', 'Norway', 'Oman', 'Pakistan', 'Palau', 'Palestine', 'Panama',
+  'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Qatar', 'Romania', 'Russia',
+  'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino',
+  'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
+  'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain',
+  'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan', 'Tanzania',
+  'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan',
+  'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay',
+  'Uzbekistan', 'Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
+];
+
+// Read a fixed-order select and return the canonical English value
+function canonFromSelect(el, canonList) {
+  if (!el || el.selectedIndex <= 0) return null;
+  return canonList[el.selectedIndex - 1] || el.value || null;
+}
+
+// Single source of truth for the demographics payload fields
+window.collectDemographics = function() {
+  const hasParties = (typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0);
+  const age = canonFromSelect(document.getElementById('d-age'), AGE_CANON);
+  const gender = canonFromSelect(document.getElementById('d-gender'), GENDER_CANON);
+  const country = document.getElementById('d-country') ? document.getElementById('d-country').value || null : null;
+  const political_id = document.getElementById('d-party')
+    ? document.getElementById('d-party').value || null
+    : (document.getElementById('d-pol') ? document.getElementById('d-pol').value || null : null);
+
+  const natEl = document.getElementById('d-nationality');
+  let nationality = null;
+  if (natEl && natEl.selectedIndex > 0) {
+    const opt = natEl.options[natEl.selectedIndex];
+    // data-en holds the English name when the portal has renamed options to a local language
+    nationality = opt.getAttribute('data-en') || opt.value || opt.textContent || null;
+  }
+  if (!nationality && !hasParties && country) nationality = country;
+
+  return { hasParties, age, gender, country, political_id, nationality };
+};
+
+// Upgrade the nationality select to a searchable picker with every country
+window.enhanceNationalityPicker = function() {
+  const sel = document.getElementById('d-nationality');
+  if (!sel || sel.dataset.enhanced) return;
+  sel.dataset.enhanced = '1';
+
+  const placeholder = sel.options.length ? sel.options[0].textContent : 'Select...';
+  const presetOpt = sel.selectedIndex > 0 ? sel.options[sel.selectedIndex] : null;
+  const preset = presetOpt ? (presetOpt.getAttribute('data-en') || presetOpt.value) : '';
+  const allNames = COUNTRY_LIST.concat(['Other']);
+
+  // Rebuild the hidden select with the full list; it stays the value holder
+  sel.innerHTML = '';
+  sel.add(new Option(placeholder, ''));
+  allNames.forEach(c => {
+    const o = new Option(c, c);
+    if (c === preset) o.selected = true;
+    sel.add(o);
+  });
+
+  const wrap = document.createElement('div');
+  wrap.className = 'nat-combo';
+  sel.parentNode.insertBefore(wrap, sel);
+  wrap.appendChild(sel);
+  sel.style.display = 'none';
+
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.id = 'd-nationality-search';
+  input.placeholder = placeholder;
+  input.autocomplete = 'off';
+  input.value = sel.value;
+  const list = document.createElement('div');
+  list.className = 'nat-combo-list';
+  wrap.appendChild(input);
+  wrap.appendChild(list);
+
+  function choose(c) {
+    sel.value = c;
+    input.value = c;
+    list.style.display = 'none';
+  }
+
+  function render(filter) {
+    const q = (filter || '').trim().toLowerCase();
+    const matches = q ? allNames.filter(c => c.toLowerCase().includes(q)) : allNames;
+    list.innerHTML = '';
+    matches.forEach(c => {
+      const item = document.createElement('div');
+      item.className = 'nat-combo-item' + (c === sel.value ? ' active' : '');
+      item.textContent = c;
+      item.addEventListener('mousedown', e => { e.preventDefault(); choose(c); });
+      list.appendChild(item);
+    });
+    list.style.display = matches.length ? 'block' : 'none';
+  }
+
+  input.addEventListener('focus', () => { input.select(); render(''); });
+  input.addEventListener('input', () => {
+    render(input.value);
+    const exact = allNames.find(c => c.toLowerCase() === input.value.trim().toLowerCase());
+    sel.value = exact || '';
+  });
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const q = input.value.trim().toLowerCase();
+      const first = allNames.find(c => c.toLowerCase().includes(q));
+      if (first) choose(first);
+    } else if (e.key === 'Escape') {
+      list.style.display = 'none';
+    }
+  });
+  input.addEventListener('blur', () => {
+    setTimeout(() => {
+      list.style.display = 'none';
+      input.value = sel.value;
+    }, 120);
+  });
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', window.enhanceNationalityPicker);
+} else {
+  window.enhanceNationalityPicker();
+}
+
+// ============================================================
 // 8. SYNCHRONIZATION AND SHARE SERVICES
 // ============================================================
 window.saveResults = async function() {
@@ -1369,19 +1519,8 @@ window.saveResults = async function() {
   statusEl.textContent = 'Saving...';
   
   const { partyScores, eScore, gScore, overallBias } = window.score();
-  const hasParties = (typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0);
   const stances = window.calculateTopicStances(answers);
-
-  // Obtain demographics fields safely
-  const age = document.getElementById('d-age') ? document.getElementById('d-age').value || null : null;
-  const country = document.getElementById('d-country') ? document.getElementById('d-country').value || null : null;
-  const political_id = document.getElementById('d-party') 
-    ? document.getElementById('d-party').value || null 
-    : (document.getElementById('d-pol') ? document.getElementById('d-pol').value || null : null);
-  const gender = document.getElementById('d-gender') ? document.getElementById('d-gender').value || null : null;
-  const nationality = document.getElementById('d-nationality')
-    ? document.getElementById('d-nationality').value || null
-    : (!hasParties && document.getElementById('d-country') ? document.getElementById('d-country').value || null : null);
+  const { hasParties, age, gender, country, political_id, nationality } = window.collectDemographics();
 
   const biasBreakdown = hasParties ? { ...partyScores } : {};
   biasBreakdown.__overall_bias = overallBias;
@@ -1395,6 +1534,8 @@ window.saveResults = async function() {
     e_score: parseFloat(eScore.toFixed(4)),
     g_score: parseFloat(gScore.toFixed(4)),
     age,
+    gender,
+    nationality,
     country: hasParties ? country : (nationality || null),
     political_id,
     archetype: hasParties ? Object.entries(partyScores).sort((a, b) => b[1] - a[1])[0][0] : null,
@@ -1432,18 +1573,8 @@ window.getCurrentCountryName = function() {
 
 window.autoSaveAnonymousResults = async function() {
   const { partyScores, eScore, gScore, overallBias } = window.score();
-  const hasParties = (typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0);
   const stances = window.calculateTopicStances(answers);
-
-  const age = document.getElementById('d-age') ? document.getElementById('d-age').value || null : null;
-  const country = document.getElementById('d-country') ? document.getElementById('d-country').value || null : null;
-  const political_id = document.getElementById('d-party') 
-    ? document.getElementById('d-party').value || null 
-    : (document.getElementById('d-pol') ? document.getElementById('d-pol').value || null : null);
-  const gender = document.getElementById('d-gender') ? document.getElementById('d-gender').value || null : null;
-  const nationality = document.getElementById('d-nationality')
-    ? document.getElementById('d-nationality').value || null
-    : (!hasParties && document.getElementById('d-country') ? document.getElementById('d-country').value || null : null);
+  const { hasParties, age, gender, country, political_id, nationality } = window.collectDemographics();
 
   const biasBreakdown = hasParties ? { ...partyScores } : {};
   biasBreakdown.__overall_bias = overallBias;
@@ -1456,6 +1587,8 @@ window.autoSaveAnonymousResults = async function() {
     e_score: parseFloat(eScore.toFixed(4)),
     g_score: parseFloat(gScore.toFixed(4)),
     age,
+    gender,
+    nationality,
     country: hasParties ? country : (nationality || null),
     political_id,
     archetype: hasParties ? Object.entries(partyScores).sort((a, b) => b[1] - a[1])[0][0] : null,
