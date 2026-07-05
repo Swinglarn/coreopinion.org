@@ -1,4 +1,4 @@
-const { supabase, sanitizeResultPayload, PUBLIC_RESULT_COLUMNS } = require('./utils');
+const { supabase, sanitizeResultPayload, PUBLIC_RESULT_COLUMNS, checkRateLimit } = require('./utils');
 const { sendResultEmail } = require('./send-result-email');
 
 module.exports = async function handler(req, res) {
@@ -17,6 +17,14 @@ module.exports = async function handler(req, res) {
 
   try {
     if (req.method === 'POST') {
+      // Throttle writes per IP to block scripted junk inserts. Kept lenient
+      // so shared/CGNAT mobile IPs aren't blocked during a legit traffic
+      // spike. Fails open, so a limiter issue never blocks real saves.
+      const { allowed } = await checkRateLimit(req, { limit: 20, windowSeconds: 60, scope: 'results' });
+      if (!allowed) {
+        return res.status(429).json({ error: 'Too many requests. Please wait a moment and try again.' });
+      }
+
       // Coerce the untrusted body to safe types/shapes before it touches
       // the DB or, later, the server-rendered result pages.
       const dbPayload = sanitizeResultPayload(req.body);
@@ -39,6 +47,14 @@ module.exports = async function handler(req, res) {
       // sendResultEmail never throws and a failure must not affect the save,
       // so we await it only to log the outcome, then return success regardless.
       if (data && data.email) {
+        // Email is the real abuse/cost vector, so gate it with a stricter
+        // per-IP limit. Over the limit we still keep the saved result and
+        // return success — we just skip the send, never block the user.
+        const emailQuota = await checkRateLimit(req, { limit: 5, windowSeconds: 60, scope: 'results-email' });
+        if (!emailQuota.allowed) {
+          console.warn(`Result saved (id=${data.id}) but email skipped: rate limit`);
+          return res.status(200).json(data);
+        }
         const host = req.headers.host || 'coreopinion.org';
         const emailResult = await sendResultEmail(data, host);
         if (!emailResult.sent) {

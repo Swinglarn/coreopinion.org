@@ -1,6 +1,7 @@
 const { createClient } = require('@supabase/supabase-js');
+const crypto = require('crypto');
 
-const SB_URL = process.env.SUPABASE_URL || 'https://rttomfnfyjjssdqfzkaj.supabase.co';
+const SB_URL = process.env.SUPABASE_URL || 'https://dpubdgnwpjxyirpcgzjo.supabase.co';
 const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY;
 
 if (!SB_KEY) {
@@ -228,6 +229,43 @@ function sanitizeResultPayload(payload) {
   };
 }
 
+// Best-effort client IP from Vercel's proxy headers.
+function getClientIp(req) {
+  const xff = req.headers['x-forwarded-for'];
+  if (xff) return String(xff).split(',')[0].trim();
+  return req.headers['x-real-ip'] ||
+    (req.socket && req.socket.remoteAddress) ||
+    'unknown';
+}
+
+// Fixed-window rate limit keyed by a salted IP hash (never the raw IP).
+// Backed by the rl_check Postgres function so it works across the
+// stateless serverless instances. Fails OPEN on any error so a limiter
+// hiccup can never take the save flow down.
+async function checkRateLimit(req, { limit = 8, windowSeconds = 60, scope = 'results' } = {}) {
+  if (!supabase) return { allowed: true };
+  try {
+    const ip = getClientIp(req);
+    const salt = process.env.RATE_LIMIT_SALT || 'coreopinion-rl-v1';
+    const hash = crypto.createHash('sha256').update(salt + ip).digest('hex').slice(0, 32);
+    const key = `${scope}:${hash}`;
+
+    const { data, error } = await supabase.rpc('rl_check', {
+      p_key: key,
+      p_limit: limit,
+      p_window_seconds: windowSeconds
+    });
+    if (error) {
+      console.warn('Rate limit check failed (allowing request):', error.message);
+      return { allowed: true };
+    }
+    return { allowed: data !== false };
+  } catch (err) {
+    console.warn('Rate limit check threw (allowing request):', err.message);
+    return { allowed: true };
+  }
+}
+
 module.exports = {
   supabase,
   nationalityMap,
@@ -237,5 +275,6 @@ module.exports = {
   PUBLIC_RESULT_COLUMNS,
   escapeHtml,
   safeJsonForScript,
-  sanitizeResultPayload
+  sanitizeResultPayload,
+  checkRateLimit
 };
