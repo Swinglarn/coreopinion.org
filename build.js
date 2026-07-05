@@ -1197,15 +1197,18 @@ if (fs.existsSync(contentDir) && fs.existsSync(contentTemplatePath)) {
     const outputName = file.replace('.json', '.html');
     const outputPath = path.join(outputDir, outputName);
     
+    const contentName = file.replace('.json', '');
+    const canonicalUrl = contentData.canonical || `https://coreopinion.org/${contentName}`;
+
     let html = contentTemplate;
     html = html.replace(/\{\{TITLE\}\}/g, contentData.title || '');
     html = html.replace(/\{\{DESCRIPTION\}\}/g, contentData.desc || '');
+    html = html.replace(/\{\{CANONICAL\}\}/g, canonicalUrl);
     html = html.replace(/\{\{HEADER\}\}/g, contentData.header || '');
     html = html.replace(/\{\{SUBTITLE\}\}/g, contentData.subtitle || '');
     html = html.replace(/\{\{CONTENT\}\}/g, contentData.content || '');
-    
+
     // Dynamic lang and schema graph
-    const contentName = file.replace('.json', '');
     const schema = {
       "@context": "https://schema.org",
       "@graph": [

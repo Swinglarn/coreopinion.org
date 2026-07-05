@@ -1,4 +1,4 @@
-const { supabase, nationalityMap } = require('./utils');
+const { supabase, nationalityMap, escapeHtml, safeJsonForScript } = require('./utils');
 const fs = require('fs');
 const path = require('path');
 
@@ -58,14 +58,17 @@ module.exports = async function handler(req, res) {
     const canonicalUrl = `${protocol}://${host}/compare/${a}/${b}`;
     const ogImageUrl = `${protocol}://${host}/api/og?id=${a}`; // Use first user's OG card
 
-    // Substitute metadata tags in HTML
+    // Substitute metadata tags in HTML. Escape DB-derived title/description
+    // so a poisoned row can't break out of the content="" attribute.
+    const safeTitle = escapeHtml(title);
+    const safeDescription = escapeHtml(description);
     html = html.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonicalUrl}">`);
     html = html.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonicalUrl}">`);
-    html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`);
-    html = html.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${description}">`);
+    html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${safeTitle}">`);
+    html = html.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${safeDescription}">`);
     html = html.replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${ogImageUrl}">`);
-    html = html.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${title}">`);
-    html = html.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`);
+    html = html.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${safeTitle}">`);
+    html = html.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${safeDescription}">`);
     html = html.replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${ogImageUrl}">`);
 
     // 4. Sanitize payloads
@@ -74,8 +77,9 @@ module.exports = async function handler(req, res) {
     delete cleanA.email;
     delete cleanB.email;
 
-    // 5. Inject payload
-    const injectionScript = `<script>window.comparePayload = { a: ${JSON.stringify(cleanA)}, b: ${JSON.stringify(cleanB)} };</script>\n</head>`;
+    // 5. Inject payload — safeJsonForScript neutralizes </script> and raw
+    // line terminators so an attacker-controlled row can't inject script.
+    const injectionScript = `<script>window.comparePayload = { a: ${safeJsonForScript(cleanA)}, b: ${safeJsonForScript(cleanB)} };</script>\n</head>`;
     html = html.replace('</head>', injectionScript);
 
     // 6. Serve HTML

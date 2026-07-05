@@ -1,4 +1,4 @@
-const { supabase, nationalityMap, modeToLang, PROFILES } = require('./utils');
+const { supabase, nationalityMap, modeToLang, PROFILES, escapeHtml, safeJsonForScript } = require('./utils');
 const fs = require('fs');
 const path = require('path');
 
@@ -90,22 +90,27 @@ module.exports = async function handler(req, res) {
     const ogImageUrl = `${protocol}://${host}/api/og?id=${id}`;
     const canonicalUrl = `${protocol}://${host}/result/${id}`;
 
-    // 4. Substitute metadata tags in HTML
+    // 4. Substitute metadata tags in HTML.
+    // title/description embed DB-derived values; escape them so a poisoned
+    // row can't break out of the content="" attribute.
+    const safeTitle = escapeHtml(title);
+    const safeDescription = escapeHtml(description);
     html = html.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonicalUrl}">`);
     html = html.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonicalUrl}">`);
-    html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`);
-    html = html.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${description}">`);
+    html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${safeTitle}">`);
+    html = html.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${safeDescription}">`);
     html = html.replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${ogImageUrl}">`);
-    html = html.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${title}">`);
-    html = html.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`);
+    html = html.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${safeTitle}">`);
+    html = html.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${safeDescription}">`);
     html = html.replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${ogImageUrl}">`);
 
     // 5. Sanitize payload for client-side security
     const clientPayload = { ...result };
     delete clientPayload.email; // Omit email for privacy
 
-    // 6. Inject payload
-    const injectionScript = `<script>window.viewResultPayload = ${JSON.stringify(clientPayload)};</script>\n</head>`;
+    // 6. Inject payload — safeJsonForScript neutralizes </script> and raw
+    // line terminators so an attacker-controlled row can't inject script.
+    const injectionScript = `<script>window.viewResultPayload = ${safeJsonForScript(clientPayload)};</script>\n</head>`;
     html = html.replace('</head>', injectionScript);
 
     // 7. Serve HTML

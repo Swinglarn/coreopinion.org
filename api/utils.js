@@ -124,9 +124,118 @@ const PROFILES = {
   }
 };
 
+// Every valid portal mode. Anything else is rejected on insert so `mode`
+// can be trusted downstream (it drives file lookups and meta output).
+const VALID_MODES = new Set([
+  'general', 'us', 'uk', 'ca', 'au', 'nz', 'se', 'de', 'fr', 'ie',
+  'nl', 'at', 'es', 'it', 'dk', 'no', 'fi'
+]);
+
+// Columns safe to expose publicly (shared result/compare links). Never
+// includes `email` — result links are public by design.
+const PUBLIC_RESULT_COLUMNS =
+  'id, created_at, mode, econ_score, gov_score, age, country, political_id, archetype, gender, nationality, bias_breakdown';
+
+// HTML-escape a value destined for an attribute or text node.
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// JSON for embedding inside an inline <script>. Escapes the characters
+// that could otherwise break out of the script context (</script>) or,
+// as raw line terminators, break the surrounding JS.
+function safeJsonForScript(obj) {
+  return JSON.stringify(obj)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/&/g, '\\u0026')
+    .replace(/[\u2028\u2029]/g, ch => '\\u' + ch.charCodeAt(0).toString(16));
+}
+
+// Clamp a value to a finite number in [min, max], or null.
+function toNumberOrNull(v, min, max) {
+  const n = typeof v === 'number' ? v : parseFloat(v);
+  if (!Number.isFinite(n)) return null;
+  if (n < min) return min;
+  if (n > max) return max;
+  return n;
+}
+
+// Trim + length-cap a string field, or null.
+function toStringOrNull(v, maxLen) {
+  if (v === undefined || v === null) return null;
+  const s = String(v).trim();
+  if (!s) return null;
+  return s.slice(0, maxLen);
+}
+
+// Produce a DB-ready row from an untrusted POST body. Coerces every field
+// to a safe type/shape so nothing arbitrary reaches the table or, later,
+// the server-rendered result pages.
+function sanitizeResultPayload(payload) {
+  if (!payload || typeof payload !== 'object') return null;
+
+  const modeRaw = String(payload.mode || 'general');
+  const mode = VALID_MODES.has(modeRaw) ? modeRaw : 'general';
+
+  // bias_breakdown: keep meta keys we control, coerce party scores to numbers.
+  let biasBreakdown = null;
+  const rawBias = payload.bias_breakdown;
+  if (rawBias && typeof rawBias === 'object' && !Array.isArray(rawBias)) {
+    biasBreakdown = {};
+    let keyCount = 0;
+    for (const [k, v] of Object.entries(rawBias)) {
+      if (keyCount++ > 200) break; // hard cap on number of keys
+      const key = String(k).slice(0, 64);
+      if (key === '__stances' && v && typeof v === 'object') {
+        biasBreakdown[key] = v; // opaque nested object, never rendered as HTML
+      } else if (key === '__overall_bias') {
+        biasBreakdown[key] = toNumberOrNull(v, 0, 100) ?? 0;
+      } else if (key === '__gender' || key === '__nationality') {
+        biasBreakdown[key] = toStringOrNull(v, 64);
+      } else {
+        // Party score: must be a number, otherwise drop the key entirely.
+        const n = toNumberOrNull(v, -1000, 1000);
+        if (n !== null) biasBreakdown[key] = n;
+      }
+    }
+  }
+
+  const emailRaw = toStringOrNull(payload.email, 254);
+  const email = emailRaw && emailRaw.includes('@') ? emailRaw : null;
+
+  return {
+    mode,
+    econ_score: toNumberOrNull(
+      payload.econ_score !== undefined ? payload.econ_score : payload.e_score, -100, 100
+    ),
+    gov_score: toNumberOrNull(
+      payload.gov_score !== undefined ? payload.gov_score : payload.g_score, -100, 100
+    ),
+    age: toStringOrNull(payload.age, 32),
+    country: toStringOrNull(payload.country !== undefined ? payload.country : payload.nationality, 64),
+    political_id: toStringOrNull(payload.political_id, 64),
+    archetype: toStringOrNull(payload.archetype, 64),
+    email,
+    gender: toStringOrNull(payload.gender, 32),
+    nationality: toStringOrNull(payload.nationality, 64),
+    bias_breakdown: biasBreakdown
+  };
+}
+
 module.exports = {
   supabase,
   nationalityMap,
   modeToLang,
-  PROFILES
+  PROFILES,
+  VALID_MODES,
+  PUBLIC_RESULT_COLUMNS,
+  escapeHtml,
+  safeJsonForScript,
+  sanitizeResultPayload
 };

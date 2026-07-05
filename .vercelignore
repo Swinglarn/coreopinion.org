@@ -1,0 +1,6 @@
+# Vercel does not honor .gitignore, so exclude non-production files here.
+# NOTE: do NOT exclude src/countries or src/content — the serverless API
+# functions read those JSON files at request time via process.cwd().
+scratch
+files.zip
+.git

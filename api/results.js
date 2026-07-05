@@ -1,4 +1,4 @@
-const { supabase } = require('./utils');
+const { supabase, sanitizeResultPayload, PUBLIC_RESULT_COLUMNS } = require('./utils');
 const { sendResultEmail } = require('./send-result-email');
 
 module.exports = async function handler(req, res) {
@@ -17,22 +17,12 @@ module.exports = async function handler(req, res) {
 
   try {
     if (req.method === 'POST') {
-      const payload = req.body;
-
-      // Map frontend keys to database columns
-      const dbPayload = {
-        mode: payload.mode || 'general',
-        econ_score: payload.econ_score !== undefined ? payload.econ_score : (payload.e_score !== undefined ? payload.e_score : null),
-        gov_score: payload.gov_score !== undefined ? payload.gov_score : (payload.g_score !== undefined ? payload.g_score : null),
-        age: payload.age || null,
-        country: payload.country || payload.nationality || null,
-        political_id: payload.political_id || null,
-        archetype: payload.archetype || null,
-        email: payload.email || null,
-        gender: payload.gender || null,
-        nationality: payload.nationality || null,
-        bias_breakdown: payload.bias_breakdown || null
-      };
+      // Coerce the untrusted body to safe types/shapes before it touches
+      // the DB or, later, the server-rendered result pages.
+      const dbPayload = sanitizeResultPayload(req.body);
+      if (!dbPayload) {
+        return res.status(400).json({ error: 'Invalid payload' });
+      }
 
       const { data, error } = await supabase
         .from('coreopinion_results')
@@ -65,9 +55,10 @@ module.exports = async function handler(req, res) {
         return res.status(400).json({ error: 'Missing id parameter' });
       }
 
+      // Result links are public — never expose the owner's email here.
       const { data, error } = await supabase
         .from('coreopinion_results')
-        .select('*')
+        .select(PUBLIC_RESULT_COLUMNS)
         .eq('id', id)
         .single();
 
