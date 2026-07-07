@@ -9,9 +9,9 @@
   --ink-muted: #555860;
   --ink-faint: #7C8089;
   
-  /* Parchment Colors */
-  --parchment: #F9F8F6;
-  --parchment-warm: #F3F1EE;
+  /* Base surfaces (neutral, no warm tint) */
+  --parchment: #FFFFFF;
+  --parchment-warm: #F5F6F7;
   --white: #FFFFFF;
   
   /* Theme Accents */
@@ -28,11 +28,11 @@
   --red: #9B2335;
   --red-soft: #FBE8EB;
   
-  /* Borders */
-  --border: #DDD9D2;
-  --border-soft: #EAE7E1;
+  /* Borders (neutral gray, no beige tint) */
+  --border: #DEDFE2;
+  --border-soft: #ECEDEF;
 
-  --nav-bg: rgba(249, 248, 246, 0.92);
+  --nav-bg: rgba(255, 255, 255, 0.92);
 
   /* --- Party Branding Colors (Global) --- */
   /* United States */
