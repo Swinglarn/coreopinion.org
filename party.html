@@ -172,6 +172,35 @@
   .party-hub-card .ph-sum { font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 12px; }
   .party-hub-card .ph-link { font-size: 13.5px; color: var(--navy); font-weight: 500; }
   .country-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .party-portrait {
+    margin: 0 0 26px;
+    max-width: 300px;
+  }
+  .party-portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    background: var(--parchment-warm);
+  }
+  .party-portrait figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-muted);
+  }
+  .party-portrait .pc-credit { display: block; font-size: 11.5px; color: var(--ink-faint); margin-top: 2px; }
+  .party-portrait .pc-credit a { color: inherit; text-decoration: underline; }
+  .ph-thumb {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center 22%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: var(--parchment-warm);
+  }
 </style>
 </head>
 <body>
@@ -309,6 +338,22 @@
     if (v >= 0.3) return highLabel;
     return midLabel;
   }
+  function buildPortrait(slug) {
+    var img = (typeof PARTY_IMAGES !== 'undefined') ? PARTY_IMAGES[slug] : null;
+    if (!img) return '';
+    var creditInner = img.source
+      ? '<a href="' + esc(img.source) + '" target="_blank" rel="noopener noreferrer">' + esc(img.credit) + '</a>'
+      : esc(img.credit);
+    var licInner = img.licenseUrl
+      ? '<a href="' + esc(img.licenseUrl) + '" target="_blank" rel="noopener noreferrer">' + esc(img.license) + '</a>'
+      : esc(img.license);
+    return '<figure class="party-portrait">' +
+      '<img src="' + esc(img.src) + '" alt="' + esc(img.alt) + '" loading="lazy" width="300" height="385">' +
+      '<figcaption>' + esc(img.caption) +
+        '<span class="pc-credit">Image: ' + creditInner + ' / ' + licInner + '</span>' +
+      '</figcaption>' +
+    '</figure>';
+  }
 
   var article = document.getElementById('party-article');
 
@@ -358,6 +403,7 @@
           "headline": data.title,
           "description": data.metaDesc,
           "url": "https://coreopinion.org/party/" + data.slug,
+          "image": "https://coreopinion.org" + ((typeof PARTY_IMAGES !== 'undefined' && PARTY_IMAGES[data.slug]) ? PARTY_IMAGES[data.slug].src : "/og-image.svg"),
           "about": { "@type": "PoliticalParty", "name": data.name },
           "author": { "@id": "https://coreopinion.org/#organization" },
           "publisher": { "@id": "https://coreopinion.org/#organization" },
@@ -458,6 +504,7 @@
         '<div class="ideology-content" style="--check-color:' + esc(data.color) + '">' +
           '<section id="overview">' +
             '<h2>Overview</h2>' +
+            buildPortrait(data.slug) +
             infobox +
             fmt(data.intro) +
           '</section>' +
@@ -578,7 +625,10 @@
 
     var cards = ctry.order.map(function(key) {
       var d = PARTY_DATA[key];
+      var img = (typeof PARTY_IMAGES !== 'undefined') ? PARTY_IMAGES[key] : null;
+      var thumb = img ? '<img class="ph-thumb" src="' + esc(img.src) + '" alt="' + esc(img.alt) + '" loading="lazy">' : '';
       return '<a href="/party/' + d.slug + '" class="party-hub-card" style="border-left-color:' + esc(d.color) + '">' +
+        thumb +
         '<p class="ph-name">' + esc(d.name) + '</p>' +
         '<p class="ph-pos">' + esc(d.position) + ' &middot; Founded ' + esc(d.founded) + '</p>' +
         '<p class="ph-sum">' + esc(d.summary) + '</p>' +

@@ -512,6 +512,91 @@ const PARTY_DATA = {
 
 };
 
+// Portrait imagery, sourced from Wikimedia Commons under free licenses.
+// Each carries the photographer, license, and a link back to the source
+// file so the on-page credit line meets the attribution terms. Parties with
+// no single leader use their most recent presidential nominee, captioned as
+// such. All images are real photographs, not generated.
+const PARTY_IMAGES = {
+  "democratic-party": {
+    src: "/images/party/democratic-party.webp",
+    alt: "Kamala Harris, the Democratic Party's 2024 presidential nominee",
+    caption: "Kamala Harris, the party's 2024 presidential nominee",
+    credit: "Lawrence Jackson", license: "Public domain", licenseUrl: "",
+    source: "https://commons.wikimedia.org/wiki/File:Kamala_Harris_Vice_Presidential_Portrait.jpg"
+  },
+  "republican-party": {
+    src: "/images/party/republican-party.webp",
+    alt: "Donald Trump, US President and the Republican Party's dominant figure",
+    caption: "Donald Trump, US President and the party's dominant figure",
+    credit: "Daniel Torok", license: "Public domain", licenseUrl: "",
+    source: "https://commons.wikimedia.org/wiki/File:Official_Presidential_Portrait_of_President_Donald_J._Trump_(2025)_(cropped)(2).jpg"
+  },
+  "libertarian-party-us": {
+    src: "/images/party/libertarian-party-us.webp",
+    alt: "Chase Oliver, the Libertarian Party's 2024 presidential nominee",
+    caption: "Chase Oliver, the party's 2024 presidential nominee",
+    credit: "Gage Skidmore", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+    source: "https://commons.wikimedia.org/wiki/File:Chase_Oliver_by_Gage_Skidmore_2.jpg"
+  },
+  "green-party-us": {
+    src: "/images/party/green-party-us.webp",
+    alt: "Jill Stein, the Green Party's 2024 presidential nominee",
+    caption: "Jill Stein, the party's 2024 presidential nominee",
+    credit: "Gage Skidmore", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+    source: "https://commons.wikimedia.org/wiki/File:Jill_Stein_by_Gage_Skidmore_3.jpg"
+  },
+  "labour-party": {
+    src: "/images/party/labour-party.webp",
+    alt: "Keir Starmer, Prime Minister and leader of the Labour Party",
+    caption: "Keir Starmer, Prime Minister and Labour leader",
+    credit: "Prime Minister's Office", license: "OGL v3.0", licenseUrl: "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    source: "https://commons.wikimedia.org/wiki/File:Prime_Minister_Keir_Starmer_Portrait_(cropped).jpg"
+  },
+  "conservative-party": {
+    src: "/images/party/conservative-party.webp",
+    alt: "Kemi Badenoch, Leader of the Opposition and Conservative Party leader",
+    caption: "Kemi Badenoch, Leader of the Opposition",
+    credit: "Roger Harris, UK Parliament", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0",
+    source: "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Kemi_Badenoch_MP,_2024_(3x4_cropped).jpg"
+  },
+  "liberal-democrats": {
+    src: "/images/party/liberal-democrats.webp",
+    alt: "Ed Davey, leader of the Liberal Democrats",
+    caption: "Ed Davey, leader of the Liberal Democrats",
+    credit: "UK Parliament", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0",
+    source: "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Ed_Davey_MP_crop_2,_2024.jpg"
+  },
+  "reform-uk": {
+    src: "/images/party/reform-uk.webp",
+    alt: "Nigel Farage, leader of Reform UK",
+    caption: "Nigel Farage, leader of Reform UK",
+    credit: "Laurie Noble, UK Parliament", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0",
+    source: "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Nigel_Farage_MP_(3x4_cropped).jpg"
+  },
+  "green-party-ew": {
+    src: "/images/party/green-party-ew.webp",
+    alt: "Zack Polanski, leader of the Green Party of England and Wales",
+    caption: "Zack Polanski, leader of the Green Party of England and Wales",
+    credit: "Bristol Green Party", license: "CC0", licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+    source: "https://commons.wikimedia.org/wiki/File:Green_Party_Group_Shot_6_(cropped2).jpg"
+  },
+  "snp": {
+    src: "/images/party/snp.webp",
+    alt: "John Swinney, First Minister of Scotland and SNP leader",
+    caption: "John Swinney, First Minister of Scotland and SNP leader",
+    credit: "Scottish Government", license: "CC BY 4.0", licenseUrl: "https://creativecommons.org/licenses/by/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:First_Minister_John_Swinney_(cropped).jpg"
+  },
+  "restore-britain": {
+    src: "/images/party/restore-britain.webp",
+    alt: "Rupert Lowe, founder and leader of Restore Britain",
+    caption: "Rupert Lowe, founder and leader of Restore Britain",
+    credit: "UK Parliament", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0",
+    source: "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Rupert_Lowe_MP_crop_2.jpg"
+  }
+};
+
 const PARTY_COUNTRIES = {
   us: {
     code: "us",
