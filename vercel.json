@@ -10,6 +10,18 @@
       "destination": "/ideology"
     },
     {
+      "source": "/party/:slug",
+      "destination": "/party"
+    },
+    {
+      "source": "/parties",
+      "destination": "/party"
+    },
+    {
+      "source": "/parties/:country",
+      "destination": "/party"
+    },
+    {
       "source": "/result/:id",
       "destination": "/api/result-page?id=:id"
     },

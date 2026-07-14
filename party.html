@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9G2BSHWJH0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9G2BSHWJH0');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9210546368748348"
+     crossorigin="anonymous"></script>
+<script>
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-mode');
+  } else if (saved === 'light') {
+    document.documentElement.classList.add('light-mode');
+  }
+})();
+</script>
+<!-- Dynamic SEO tags injected by JS -->
+<title>Political Parties Explained | CoreOpinion</title>
+<meta id="page-desc" name="description" content="Clear, up-to-date guides to the major political parties: their history, ideology, and where they stand on the economy, social issues, and foreign policy.">
+<meta id="page-keywords" name="keywords" content="political parties explained, party ideologies, political parties guide, us political parties, uk political parties">
+<meta name="author" content="CoreOpinion">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link id="page-canonical" rel="canonical" href="https://coreopinion.org/parties">
+<meta property="og:type" content="article">
+<meta id="og-url" property="og:url" content="https://coreopinion.org/parties">
+<meta id="og-title" property="og:title" content="Political Parties Explained | CoreOpinion">
+<meta id="og-desc" property="og:description" content="Clear, up-to-date guides to the major political parties: their history, ideology, and where they stand.">
+<meta property="og:site_name" content="CoreOpinion">
+<meta property="og:image" content="https://coreopinion.org/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta id="tw-title" name="twitter:title" content="Political Parties Explained | CoreOpinion">
+<meta id="tw-desc" name="twitter:description" content="Clear, up-to-date guides to the major political parties: their history, ideology, and where they stand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=1.0.4">
+<script id="page-schema" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://coreopinion.org/#website",
+      "url": "https://coreopinion.org/",
+      "name": "CoreOpinion",
+      "publisher": { "@id": "https://coreopinion.org/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://coreopinion.org/#organization",
+      "name": "CoreOpinion",
+      "url": "https://coreopinion.org/"
+    }
+  ]
+}
+</script>
+<style>
+  /* Party-specific presentation, built on the shared ideology layout classes */
+  .party-infobox {
+    background: var(--parchment-warm);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 0 0 28px;
+  }
+  .party-infobox dl { margin: 0; }
+  .party-infobox .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 14px;
+  }
+  .party-infobox .row:last-child { border-bottom: none; }
+  .party-infobox dt { color: var(--ink-muted); font-weight: 400; }
+  .party-infobox dd { margin: 0; color: var(--ink); text-align: right; font-weight: 400; }
+  .party-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .party-tag {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--navy-soft);
+    color: var(--navy);
+    font-weight: 400;
+  }
+  .positions-list { list-style: none; padding: 0; margin: 0; }
+  .positions-list li {
+    position: relative;
+    padding: 10px 0 10px 26px;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 15.5px;
+    line-height: 1.55;
+  }
+  .positions-list li:last-child { border-bottom: none; }
+  .positions-list li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 17px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--check-color, var(--navy));
+  }
+  .compass-readout { margin: 8px 0 4px; }
+  .compass-axis { margin-bottom: 16px; }
+  .compass-axis-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    margin-bottom: 6px;
+  }
+  .compass-track {
+    position: relative;
+    height: 8px;
+    border-radius: 6px;
+    background: var(--parchment-warm);
+    border: 1px solid var(--border-soft);
+  }
+  .compass-dot {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--white);
+    box-shadow: 0 1px 4px rgba(10,12,15,0.25);
+  }
+  .sources-list { list-style: none; padding: 0; margin: 0; }
+  .sources-list li { padding: 8px 0; border-bottom: 1px solid var(--border-soft); font-size: 15px; }
+  .sources-list li:last-child { border-bottom: none; }
+  .sources-list a { color: var(--navy); text-decoration: none; }
+  .sources-list a:hover { text-decoration: underline; }
+  .sources-list .src-ext { font-size: 12px; color: var(--ink-faint); margin-left: 6px; }
+  .party-figure {
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 18px 20px;
+    background: var(--white);
+  }
+  .party-figure h3 { margin: 0 0 2px; font-size: 17px; }
+  .party-figure .figure-role { color: var(--ink-muted); font-size: 13px; margin: 0 0 8px; }
+  .party-figure .figure-desc { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+  .party-hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; margin-top: 8px; }
+  .party-hub-card {
+    display: block;
+    border: 1px solid var(--border-soft);
+    border-left: 4px solid var(--navy);
+    border-radius: 10px;
+    padding: 20px 22px;
+    background: var(--white);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .party-hub-card:hover { box-shadow: 0 6px 20px rgba(10,12,15,0.07); transform: translateY(-2px); }
+  .party-hub-card .ph-name { font-size: 18px; font-weight: 500; color: var(--ink); margin: 0 0 3px; }
+  .party-hub-card .ph-pos { font-size: 12.5px; color: var(--ink-muted); margin: 0 0 10px; }
+  .party-hub-card .ph-sum { font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 12px; }
+  .party-hub-card .ph-link { font-size: 13.5px; color: var(--navy); font-weight: 500; }
+  .country-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">Core<span>opinion</span></a>
+  <div class="nav-links">
+    <div class="dropdown" id="nav-dropdown-tests">
+      <button class="dropdown-toggle" onclick="window.toggleNavDropdown(event, 'nav-dropdown-tests')">
+        Political Tests <span class="arrow">▾</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="/">General</a>
+        <a href="/us">US</a>
+        <a href="/uk">UK</a>
+        <a href="/ca">Canada</a>
+        <a href="/au">Australia</a>
+        <a href="/nz">New Zealand</a>
+        <a href="/se">Sweden</a>
+        <a href="/dk">Denmark</a>
+        <a href="/no">Norway</a>
+        <a href="/fi">Finland</a>
+        <a href="/de">Germany</a>
+        <a href="/at">Austria</a>
+        <a href="/fr">France</a>
+        <a href="/es">Spain</a>
+        <a href="/it">Italy</a>
+        <a href="/ie">Ireland</a>
+        <a href="/nl">Netherlands</a>
+      </div>
+    </div>
+    <div class="dropdown" id="nav-dropdown-parties">
+      <button class="dropdown-toggle" onclick="window.toggleNavDropdown(event, 'nav-dropdown-parties')">
+        Parties <span class="arrow">▾</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="/parties/us">US Parties</a>
+        <a href="/parties/uk">UK Parties</a>
+      </div>
+    </div>
+    <div class="dropdown" id="nav-dropdown-ideologies">
+      <button class="dropdown-toggle" onclick="window.toggleNavDropdown(event, 'nav-dropdown-ideologies')">
+        Ideologies <span class="arrow">▾</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="/ideology/state-socialism">State Socialism</a>
+        <a href="/ideology/national-conservatism">National Conservatism</a>
+        <a href="/ideology/conservatism">Conservatism</a>
+        <a href="/ideology/centrism">Centrism</a>
+        <a href="/ideology/social-democracy">Social Democracy</a>
+        <a href="/ideology/democratic-socialism">Democratic Socialism</a>
+        <a href="/ideology/libertarian-socialism">Libertarian Socialism</a>
+        <a href="/ideology/libertarianism">Libertarianism</a>
+        <a href="/ideology/national-socialism">National Socialism</a>
+        <a href="/ideology/communism">Communism</a>
+        <a href="/ideology/monarchism">Monarchism</a>
+      </div>
+    </div>
+    <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+    <a href="/about">About</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
+  </div>
+</nav>
+
+<div class="ideology-page-shell">
+  <div class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="bc-sep">/</span>
+    <span id="bc-current">Parties</span>
+  </div>
+
+  <article class="ideology-article" id="party-article">
+    <div class="ideology-loading">Loading...</div>
+  </article>
+</div>
+
+<footer>
+  <div style="max-width:760px;margin:0 auto;padding:40px 24px;border-top:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--ink-muted);font-weight:300;">
+    <div>&copy; 2026 CoreOpinion. All rights reserved. &middot; <a href="https://webbitar.com" target="_blank" style="color:inherit;text-decoration:none;opacity:0.8;">Owned &amp; operated by Webbitar</a></div>
+    <div style="display:flex;gap:20px;">
+      <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
+      <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+      <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/party-data.js"></script>
+<script>
+(function() {
+  // --- Theme Toggle ---
+  window.toggleTheme = function() {
+    const html = document.documentElement;
+    if (html.classList.contains('dark-mode')) {
+      html.classList.remove('dark-mode');
+      html.classList.add('light-mode');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.remove('light-mode');
+      html.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    }
+  };
+
+  // --- Dropdown Toggle ---
+  window.toggleNavDropdown = function(e, id) {
+    e.stopPropagation();
+    var el = document.getElementById(id);
+    if (!el) return;
+    var isOpen = el.classList.contains('open');
+    document.querySelectorAll('.dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+    if (!isOpen) el.classList.add('open');
+  };
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+  });
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+  function fmt(text) {
+    if (!text) return '';
+    return text.split('\n\n').map(function(p) { return '<p>' + esc(p.trim()) + '</p>'; }).join('');
+  }
+  function setMeta(id, attr, val) {
+    var el = document.getElementById(id);
+    if (el) el.setAttribute(attr, val);
+  }
+  function positionLabel(v, lowLabel, highLabel, midLabel) {
+    if (v <= -0.3) return lowLabel;
+    if (v >= 0.3) return highLabel;
+    return midLabel;
+  }
+
+  var article = document.getElementById('party-article');
+
+  // --- Routing ---
+  // Primary routing is by clean path (/party/:slug, /parties/:country), which
+  // Vercel rewrites to this file. A ?party= / ?country= query fallback keeps
+  // the page working if a rewrite is ever missing, and aids local testing.
+  var path = window.location.pathname.replace(/\/+$/, '');
+  var parts = path.split('/').filter(Boolean);
+  var qs = new URLSearchParams(window.location.search);
+
+  var slug = (parts[0] === 'party' && parts[1]) ? parts[1] : qs.get('party');
+  if (slug) {
+    for (var k in PARTY_DATA) {
+      if (PARTY_DATA[k].slug === slug) { renderParty(PARTY_DATA[k]); return; }
+    }
+  }
+  var countryCode = (parts[0] === 'parties' && parts[1]) ? parts[1] : qs.get('country');
+  if (countryCode && PARTY_COUNTRIES[countryCode]) {
+    renderCountry(PARTY_COUNTRIES[countryCode]); return;
+  }
+  renderIndex();
+
+  // ================= Individual party =================
+  function renderParty(data) {
+    var testUrl = data.country === 'us' ? '/us' : '/uk';
+    var countryHub = '/parties/' + data.country;
+
+    document.title = data.title + ' | CoreOpinion';
+    setMeta('page-desc', 'content', data.metaDesc);
+    setMeta('page-keywords', 'content', data.keywords);
+    setMeta('page-canonical', 'href', 'https://coreopinion.org/party/' + data.slug);
+    setMeta('og-url', 'content', 'https://coreopinion.org/party/' + data.slug);
+    setMeta('og-title', 'content', data.title + ' | CoreOpinion');
+    setMeta('og-desc', 'content', data.metaDesc);
+    setMeta('tw-title', 'content', data.title + ' | CoreOpinion');
+    setMeta('tw-desc', 'content', data.metaDesc);
+
+    var schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        { "@type": "WebSite", "@id": "https://coreopinion.org/#website", "url": "https://coreopinion.org/", "name": "CoreOpinion", "publisher": { "@id": "https://coreopinion.org/#organization" } },
+        { "@type": "Organization", "@id": "https://coreopinion.org/#organization", "name": "CoreOpinion", "url": "https://coreopinion.org/" },
+        {
+          "@type": "Article",
+          "@id": "https://coreopinion.org/party/" + data.slug + "#article",
+          "headline": data.title,
+          "description": data.metaDesc,
+          "url": "https://coreopinion.org/party/" + data.slug,
+          "about": { "@type": "PoliticalParty", "name": data.name },
+          "author": { "@id": "https://coreopinion.org/#organization" },
+          "publisher": { "@id": "https://coreopinion.org/#organization" },
+          "keywords": data.keywords,
+          "articleSection": "Political Parties",
+          "inLanguage": "en",
+          "datePublished": "2026-07-01T00:00:00+00:00",
+          "dateModified": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://coreopinion.org" },
+            { "@type": "ListItem", "position": 2, "name": data.countryName + " Parties", "item": "https://coreopinion.org" + countryHub },
+            { "@type": "ListItem", "position": 3, "name": data.name, "item": "https://coreopinion.org/party/" + data.slug }
+          ]
+        }
+      ]
+    };
+    document.getElementById('page-schema').textContent = JSON.stringify(schema);
+
+    document.getElementById('bc-current').innerHTML =
+      '<a href="' + countryHub + '">' + esc(data.countryName) + ' Parties</a> <span class="bc-sep">/</span> ' + esc(data.name);
+
+    var tags = (data.ideologyTags || []).map(function(t) { return '<span class="party-tag">' + esc(t) + '</span>'; }).join('');
+
+    var infobox =
+      '<div class="party-infobox" style="border-left:4px solid ' + esc(data.color) + '">' +
+        '<dl>' +
+          '<div class="row"><dt>Country</dt><dd>' + esc(data.countryName) + '</dd></div>' +
+          '<div class="row"><dt>Founded</dt><dd>' + esc(data.founded) + '</dd></div>' +
+          '<div class="row"><dt>Position</dt><dd>' + esc(data.position) + '</dd></div>' +
+          '<div class="row"><dt>Leader</dt><dd>' + esc(data.leader) + '</dd></div>' +
+          '<div class="row"><dt>Headquarters</dt><dd>' + esc(data.headquarters) + '</dd></div>' +
+        '</dl>' +
+        '<div class="party-tags">' + tags + '</div>' +
+      '</div>';
+
+    var positions = (data.positions || []).map(function(p) {
+      return '<li>' + esc(p) + '</li>';
+    }).join('');
+
+    var figures = (data.figures || []).map(function(f) {
+      return '<div class="party-figure">' +
+        '<h3>' + esc(f.name) + '</h3>' +
+        '<p class="figure-role">' + esc(f.role) + '</p>' +
+        '<p class="figure-desc">' + esc(f.desc) + '</p>' +
+      '</div>';
+    }).join('');
+
+    var sources = (data.sources || []).map(function(s) {
+      var ext = '';
+      try { ext = new URL(s.url).hostname.replace(/^www\./, ''); } catch (e) {}
+      return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener noreferrer">' + esc(s.label) + '</a>' +
+        (ext ? '<span class="src-ext">' + esc(ext) + '</span>' : '') + '</li>';
+    }).join('');
+
+    var econLeft = ((data.e + 1) / 2) * 100;
+    var govLeft = ((data.g + 1) / 2) * 100;
+    var econWord = positionLabel(data.e, 'left-leaning', 'right-leaning', 'centrist');
+    var govWord = positionLabel(data.g, 'more libertarian', 'more authoritarian', 'moderate');
+
+    // Related parties in the same country
+    var related = '';
+    var ctry = PARTY_COUNTRIES[data.country];
+    if (ctry) {
+      ctry.order.forEach(function(key) {
+        var d = PARTY_DATA[key];
+        if (!d || d.slug === data.slug) return;
+        related += '<a href="/party/' + d.slug + '" class="ideology-nav-card" style="border-left:4px solid ' + esc(d.color) + '">' +
+          '<span class="ideology-nav-quad">' + esc(d.position) + '</span>' +
+          '<strong>' + esc(d.name) + '</strong>' +
+        '</a>';
+      });
+    }
+
+    article.innerHTML =
+      '<header class="ideology-header">' +
+        '<div class="ideology-icon-badge" style="background:' + esc(data.color) + '20; color:' + esc(data.color) + '">' + esc(data.position) + '</div>' +
+        '<h1>' + esc(data.name) + '</h1>' +
+        '<p class="ideology-subtitle">' + esc(data.metaDesc) + '</p>' +
+      '</header>' +
+
+      '<div class="ideology-layout">' +
+        '<aside class="toc" id="toc">' +
+          '<div class="toc-title">Contents</div>' +
+          '<a href="#overview" class="toc-link">Overview</a>' +
+          '<a href="#history" class="toc-link">History</a>' +
+          '<a href="#economic" class="toc-link">Economic Policy</a>' +
+          '<a href="#social" class="toc-link">Social Policy</a>' +
+          '<a href="#foreign" class="toc-link">Foreign Policy</a>' +
+          '<a href="#positions" class="toc-link">Where They Stand</a>' +
+          '<a href="#compass" class="toc-link">Compass Position</a>' +
+          '<a href="#figures" class="toc-link">Key Figures</a>' +
+          '<a href="#sources" class="toc-link">Sources</a>' +
+        '</aside>' +
+
+        '<div class="ideology-content" style="--check-color:' + esc(data.color) + '">' +
+          '<section id="overview">' +
+            '<h2>Overview</h2>' +
+            infobox +
+            fmt(data.intro) +
+          '</section>' +
+
+          '<section id="history">' +
+            '<h2>History</h2>' +
+            fmt(data.history) +
+          '</section>' +
+
+          '<section id="economic">' +
+            '<h2>Economic Policy</h2>' +
+            fmt(data.economic) +
+          '</section>' +
+
+          '<section id="social">' +
+            '<h2>Social Policy</h2>' +
+            fmt(data.social) +
+          '</section>' +
+
+          '<section id="foreign">' +
+            '<h2>Foreign Policy</h2>' +
+            fmt(data.foreign) +
+          '</section>' +
+
+          '<section id="positions">' +
+            '<h2>Where They Stand</h2>' +
+            '<ul class="positions-list">' + positions + '</ul>' +
+          '</section>' +
+
+          '<section id="electoral">' +
+            '<h2>Electoral Record</h2>' +
+            fmt(data.electoral) +
+          '</section>' +
+
+          '<section id="compass">' +
+            '<h2>Position on the Political Compass</h2>' +
+            '<p>' + esc(data.name) + ' sits on the <strong>' + econWord + '</strong> side on economics and is <strong>' + govWord + '</strong> on questions of social freedom and authority.</p>' +
+            '<div class="compass-readout">' +
+              '<div class="compass-axis">' +
+                '<div class="compass-axis-label"><span>Economic left</span><span>Economic right</span></div>' +
+                '<div class="compass-track"><div class="compass-dot" style="left:' + econLeft + '%; background:' + esc(data.color) + '"></div></div>' +
+              '</div>' +
+              '<div class="compass-axis">' +
+                '<div class="compass-axis-label"><span>Libertarian</span><span>Authoritarian</span></div>' +
+                '<div class="compass-track"><div class="compass-dot" style="left:' + govLeft + '%; background:' + esc(data.color) + '"></div></div>' +
+              '</div>' +
+            '</div>' +
+            '<p class="compass-caption" style="font-size:13px;color:var(--ink-faint)">These positions are approximate and meant as a guide. Take the test to see how your own views compare.</p>' +
+          '</section>' +
+
+          '<section id="figures">' +
+            '<h2>Key Figures</h2>' +
+            '<div class="figures-grid">' + figures + '</div>' +
+          '</section>' +
+
+          '<section id="sources">' +
+            '<h2>Sources and Further Reading</h2>' +
+            '<ul class="sources-list">' + sources + '</ul>' +
+          '</section>' +
+
+          '<div class="cta-panel">' +
+            '<h3>Where do you stand?</h3>' +
+            '<p>Take the CoreOpinion ' + esc(data.countryName) + ' political test to see how your views compare with ' + esc(data.name) + ' and the other parties.</p>' +
+            '<a href="' + testUrl + '" class="btn-primary" style="text-decoration:none">Take the ' + esc(data.countryName) + ' Test</a>' +
+          '</div>' +
+
+          (related ? '<section id="other-parties">' +
+            '<h2>Other ' + esc(data.countryName) + ' Parties</h2>' +
+            '<div class="ideology-nav-grid">' + related + '</div>' +
+          '</section>' : '') +
+        '</div>' +
+      '</div>';
+
+    setupTocScroll();
+  }
+
+  // ================= Country hub =================
+  function renderCountry(ctry) {
+    document.title = ctry.title + ' | CoreOpinion';
+    setMeta('page-desc', 'content', ctry.metaDesc);
+    setMeta('page-keywords', 'content', ctry.keywords);
+    setMeta('page-canonical', 'href', 'https://coreopinion.org/parties/' + ctry.code);
+    setMeta('og-url', 'content', 'https://coreopinion.org/parties/' + ctry.code);
+    setMeta('og-title', 'content', ctry.title + ' | CoreOpinion');
+    setMeta('og-desc', 'content', ctry.metaDesc);
+    setMeta('tw-title', 'content', ctry.title + ' | CoreOpinion');
+    setMeta('tw-desc', 'content', ctry.metaDesc);
+
+    var itemList = ctry.order.map(function(key, i) {
+      var d = PARTY_DATA[key];
+      return { "@type": "ListItem", "position": i + 1, "name": d.name, "item": "https://coreopinion.org/party/" + d.slug };
+    });
+    var schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        { "@type": "WebSite", "@id": "https://coreopinion.org/#website", "url": "https://coreopinion.org/", "name": "CoreOpinion", "publisher": { "@id": "https://coreopinion.org/#organization" } },
+        { "@type": "Organization", "@id": "https://coreopinion.org/#organization", "name": "CoreOpinion", "url": "https://coreopinion.org/" },
+        { "@type": "CollectionPage", "@id": "https://coreopinion.org/parties/" + ctry.code + "#page", "url": "https://coreopinion.org/parties/" + ctry.code, "name": ctry.title, "description": ctry.metaDesc },
+        { "@type": "ItemList", "itemListElement": itemList },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://coreopinion.org" },
+            { "@type": "ListItem", "position": 2, "name": "Parties", "item": "https://coreopinion.org/parties" },
+            { "@type": "ListItem", "position": 3, "name": ctry.name + " Parties", "item": "https://coreopinion.org/parties/" + ctry.code }
+          ]
+        }
+      ]
+    };
+    document.getElementById('page-schema').textContent = JSON.stringify(schema);
+
+    document.getElementById('bc-current').innerHTML =
+      '<a href="/parties">Parties</a> <span class="bc-sep">/</span> ' + esc(ctry.name);
+
+    var testUrl = '/' + ctry.code;
+    var otherCode = ctry.code === 'us' ? 'uk' : 'us';
+    var otherName = PARTY_COUNTRIES[otherCode].name;
+
+    var cards = ctry.order.map(function(key) {
+      var d = PARTY_DATA[key];
+      return '<a href="/party/' + d.slug + '" class="party-hub-card" style="border-left-color:' + esc(d.color) + '">' +
+        '<p class="ph-name">' + esc(d.name) + '</p>' +
+        '<p class="ph-pos">' + esc(d.position) + ' &middot; Founded ' + esc(d.founded) + '</p>' +
+        '<p class="ph-sum">' + esc(d.summary) + '</p>' +
+        '<span class="ph-link">Read full profile &rarr;</span>' +
+      '</a>';
+    }).join('');
+
+    article.innerHTML =
+      '<header class="ideology-header">' +
+        '<div class="ideology-icon-badge">' + ctry.flag + ' ' + esc(ctry.name) + '</div>' +
+        '<h1>' + esc(ctry.name) + ' Political Parties</h1>' +
+        '<p class="ideology-subtitle">' + esc(ctry.metaDesc) + '</p>' +
+      '</header>' +
+      '<div class="ideology-content" style="max-width:820px;margin:0 auto">' +
+        fmt(ctry.intro) +
+        '<div class="party-hub-grid">' + cards + '</div>' +
+        '<div class="cta-panel" style="margin-top:36px">' +
+          '<h3>Where do you stand?</h3>' +
+          '<p>Take the CoreOpinion ' + esc(ctry.name) + ' political test to see how your views compare with these parties.</p>' +
+          '<a href="' + testUrl + '" class="btn-primary" style="text-decoration:none">Take the ' + esc(ctry.name) + ' Test</a>' +
+        '</div>' +
+        '<p style="margin-top:28px;font-size:15px"><a href="/parties/' + otherCode + '" class="cta-link">Explore ' + esc(otherName) + ' parties &rarr;</a></p>' +
+      '</div>';
+  }
+
+  // ================= Index =================
+  function renderIndex() {
+    document.title = 'Political Parties Explained | CoreOpinion';
+    setMeta('page-canonical', 'href', 'https://coreopinion.org/parties');
+    document.getElementById('bc-current').textContent = 'Parties';
+
+    var cards = Object.keys(PARTY_COUNTRIES).map(function(code) {
+      var c = PARTY_COUNTRIES[code];
+      var names = c.order.map(function(k) { return PARTY_DATA[k].shortName; }).join(', ');
+      return '<a href="/parties/' + c.code + '" class="party-hub-card">' +
+        '<p class="ph-name">' + c.flag + ' ' + esc(c.name) + '</p>' +
+        '<p class="ph-sum">' + esc(names) + '</p>' +
+        '<span class="ph-link">Explore ' + esc(c.name) + ' parties &rarr;</span>' +
+      '</a>';
+    }).join('');
+
+    article.innerHTML =
+      '<header class="ideology-header">' +
+        '<div class="ideology-icon-badge">Reference</div>' +
+        '<h1>Political Parties Explained</h1>' +
+        '<p class="ideology-subtitle">Clear, up-to-date guides to the major political parties: their history, ideology, and where they stand on the economy, social issues, and foreign policy.</p>' +
+      '</header>' +
+      '<div class="ideology-content" style="max-width:820px;margin:0 auto">' +
+        '<p>Choose a country to explore its political parties. Each guide explains a party in plain language and links out to primary sources so you can go deeper.</p>' +
+        '<div class="country-cards" style="margin-top:20px">' + cards + '</div>' +
+      '</div>';
+  }
+
+  // Smooth-scroll + active state for the contents sidebar
+  function setupTocScroll() {
+    var links = [].slice.call(document.querySelectorAll('.toc-link'));
+    links.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(link.getAttribute('href'));
+        if (target) window.scrollTo({ top: target.offsetTop - 90, behavior: 'smooth' });
+      });
+    });
+    window.addEventListener('scroll', function() {
+      var scrollPos = window.scrollY + 120;
+      var current = '';
+      document.querySelectorAll('.ideology-content section').forEach(function(sec) {
+        if (sec.offsetTop <= scrollPos) current = sec.id;
+      });
+      links.forEach(function(l) {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
