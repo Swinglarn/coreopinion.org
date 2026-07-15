@@ -1494,10 +1494,45 @@ window.enhanceNationalityPicker = function() {
   });
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', window.enhanceNationalityPicker);
-} else {
+// Inject a "party you identify with" dropdown into the demographics form so
+// political_id gets captured. Built in JS from the portal's PARTY_META so it
+// appears on every party portal without editing each portal's HTML. Portals
+// with no parties (e.g. the general test) render nothing. Value stored is the
+// party id (matching archetype), so it stays consistent downstream.
+window.enhancePartyPicker = function() {
+  if (typeof PARTY_META === 'undefined' || !PARTY_META) return;
+  const parties = Object.entries(PARTY_META);
+  if (!parties.length) return;
+  if (document.getElementById('d-party')) return; // already present
+  const fields = document.querySelector('.demo-fields');
+  if (!fields) return;
+
+  const wrap = document.createElement('div');
+  const label = document.createElement('div');
+  label.className = 'field-label';
+  label.innerHTML = 'Party you identify with <span>(optional)</span>';
+
+  const sel = document.createElement('select');
+  sel.id = 'd-party';
+  sel.add(new Option('Select...', ''));
+  parties.forEach(([id, meta]) => {
+    sel.add(new Option((meta && meta.name) || id, id));
+  });
+
+  wrap.appendChild(label);
+  wrap.appendChild(sel);
+  fields.appendChild(wrap);
+};
+
+function initDemographicPickers() {
   window.enhanceNationalityPicker();
+  window.enhancePartyPicker();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initDemographicPickers);
+} else {
+  initDemographicPickers();
 }
 
 // ============================================================
