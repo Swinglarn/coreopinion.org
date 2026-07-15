@@ -508,6 +508,767 @@ const PARTY_DATA = {
       { label: "Official party website", url: "https://www.restorebritain.org.uk/" },
       { label: "Electoral Commission registration", url: "https://search.electoralcommission.org.uk/Registrations/PP18382" }
     ]
+  },
+
+  // ===================================================================
+  //  CANADA
+  // ===================================================================
+
+  "liberal-party-canada": {
+    slug: "liberal-party-canada",
+    country: "ca",
+    countryName: "Canada",
+    name: "Liberal Party of Canada",
+    shortName: "Liberals",
+    color: "#D71920",
+    position: "Centre to centre-left",
+    founded: "1867",
+    leader: "Mark Carney",
+    leaderRole: "Prime Minister of Canada since 2025",
+    headquarters: "Ottawa",
+    e: -0.2,
+    g: 0.0,
+    ideologyTags: ["Liberalism", "Social liberalism", "Centrism"],
+    title: "The Liberal Party of Canada: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the Liberal Party of Canada: its history, its centrist and socially liberal ideology, where it stands on the economy and social issues, and its record in government under Mark Carney.",
+    keywords: "liberal party of canada, what do canadian liberals believe, liberal party canada ideology, mark carney, canada liberals explained",
+    summary: "Canada's traditional governing party of the centre, socially liberal and pragmatic, returned to power for a fourth term in 2025 under Mark Carney.",
+    intro: "The Liberal Party of Canada is one of the country's two historically dominant parties and has governed Canada for more of its history than any other. It sits in the centre of Canadian politics, combining social liberalism with a pragmatic, managerial approach to the economy. It returned to power for a fourth consecutive term at the 2025 federal election under Mark Carney, who leads a minority government.\n\nThe party has long presented itself as a broad, unifying force able to govern from the centre, balancing market economics with an active federal role in areas such as healthcare, social policy, and national unity.",
+    history: "The Liberals emerged in the years around Confederation in 1867 and became a natural governing party through the twentieth century under leaders such as Wilfrid Laurier, William Lyon Mackenzie King, and Pierre Trudeau, who patriated the constitution and introduced the Charter of Rights and Freedoms in 1982.\n\nAfter a period in opposition, the party returned to power in 2015 under Justin Trudeau. When Trudeau stood down in early 2025, Mark Carney, a former governor of both the Bank of Canada and the Bank of England, won the leadership and then led the party to a come-from-behind election victory shaped heavily by trade tensions with the United States.",
+    economic: "The Liberals support a market economy with an active federal government. They favour targeted public investment, a national approach to issues such as childcare and healthcare funding, and carbon pricing as part of climate policy, though the details have shifted over time. Under Mark Carney the party has emphasised economic resilience, investment, and managing the relationship with the United States.",
+    social: "The party is socially liberal. It supports abortion rights, LGBT equality, a points-based but relatively open immigration system, and official bilingualism. It generally positions itself as a defender of the Charter of Rights and of a pluralistic, multicultural Canada.",
+    foreign: "The Liberals support multilateralism, NATO, and close ties with democratic allies, while managing an often difficult relationship with the United States, Canada's largest trading partner. The 2025 election was dominated by that relationship, and the party campaigned on defending Canadian sovereignty and economic interests.",
+    electoral: "The Liberals have formed government for much of Canadian history. After winning majorities and minorities under Justin Trudeau from 2015, they won a fourth consecutive term in April 2025 under Mark Carney, taking 169 seats and forming a minority government just short of a majority.",
+    positions: [
+      "Supports a market economy with an active federal role in social programmes",
+      "Backs national frameworks for childcare and healthcare funding",
+      "Supports carbon pricing and climate action, with shifting details",
+      "Socially liberal on abortion, LGBT rights, and immigration",
+      "Defends official bilingualism and multiculturalism",
+      "Prioritises managing the relationship with the United States"
+    ],
+    figures: [
+      { name: "Pierre Trudeau", role: "Prime Minister, 1968 to 1979 and 1980 to 1984", desc: "A defining Liberal leader who patriated the constitution and introduced the Charter of Rights and Freedoms, shaping modern Canadian identity." },
+      { name: "Justin Trudeau", role: "Prime Minister, 2015 to 2025", desc: "Returned the Liberals to power in 2015 and led three governments before standing down in early 2025." },
+      { name: "Mark Carney", role: "Prime Minister since 2025", desc: "A former central banker who won the Liberal leadership in 2025 and led the party to a fourth consecutive election victory amid trade tensions with the United States." }
+    ],
+    sources: [
+      { label: "Liberal Party of Canada (Wikipedia)", url: "https://en.wikipedia.org/wiki/Liberal_Party_of_Canada" },
+      { label: "Official party website", url: "https://liberal.ca/" },
+      { label: "2025 Canadian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Canadian_federal_election" }
+    ]
+  },
+
+  "conservative-party-canada": {
+    slug: "conservative-party-canada",
+    country: "ca",
+    countryName: "Canada",
+    name: "Conservative Party of Canada",
+    shortName: "Conservatives",
+    color: "#1A4782",
+    position: "Centre-right",
+    founded: "2003",
+    leader: "Pierre Poilievre",
+    leaderRole: "Leader of the Opposition",
+    headquarters: "Ottawa",
+    e: 0.45,
+    g: 0.25,
+    ideologyTags: ["Conservatism", "Economic liberalism", "Federalism"],
+    title: "The Conservative Party of Canada: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the Conservative Party of Canada: its history, its centre-right ideology, where it stands on the economy and social issues, and its role in opposition under Pierre Poilievre.",
+    keywords: "conservative party of canada, what do canadian conservatives believe, conservative party canada ideology, pierre poilievre, canada conservatives explained",
+    summary: "Canada's main centre-right party, favouring lower taxes, smaller government, and resource development, and the official opposition under Pierre Poilievre.",
+    intro: "The Conservative Party of Canada is the country's main centre-right party and the principal alternative to the Liberals. It favours lower taxes, a smaller federal government, free enterprise, and support for the natural resources sector. It is the official opposition, led by Pierre Poilievre.\n\nThe party brings together fiscal conservatives, social conservatives, and populist strands, and it draws particular strength in the Prairie provinces and rural Canada while competing hard in suburban areas.",
+    history: "The modern party was formed in 2003 by the merger of the Progressive Conservative Party and the Canadian Alliance, uniting the right after years of division. Under Stephen Harper it governed from 2006 to 2015, first in minority and then in majority.\n\nAfter losing power in 2015, the party went through several leaders before Pierre Poilievre won the leadership in 2022 on a populist, anti-establishment message focused on affordability. The party led in the polls for much of the following period but fell short at the 2025 election, though it made significant gains and remained the official opposition.",
+    economic: "The Conservatives favour lower taxes, balanced budgets, and reduced regulation. They support the oil, gas, and mining sectors and pipeline development, and they have strongly opposed the federal carbon tax on affordability grounds. The party emphasises housing supply, cost of living, and cutting what it sees as wasteful federal spending.",
+    social: "The party spans a range of social views. Its leadership under Poilievre has focused on economic and affordability themes rather than social issues, while the base includes both socially moderate and socially conservative members. It emphasises law and order and a firm approach to crime.",
+    foreign: "The Conservatives support NATO, a strong military, and close ties with the United States and other allies, while emphasising Canadian sovereignty, particularly in the Arctic. They generally favour free trade and a robust defence of national economic interests.",
+    electoral: "The party governed under Stephen Harper from 2006 to 2015. After leading in the polls for much of 2023 and 2024, it improved its position at the 2025 election but did not win, remaining the official opposition. Poilievre lost his own seat at that election and later returned to Parliament through a by-election.",
+    positions: [
+      "Favours lower taxes, balanced budgets, and less regulation",
+      "Strongly supports oil, gas, mining, and pipeline development",
+      "Opposes the federal carbon tax on affordability grounds",
+      "Emphasises housing supply and the cost of living",
+      "Stresses law and order and a firm approach to crime",
+      "Supports NATO, a strong military, and Arctic sovereignty"
+    ],
+    figures: [
+      { name: "Stephen Harper", role: "Prime Minister, 2006 to 2015", desc: "The first leader of the united Conservative Party to govern, overseeing tax cuts, free trade deals, and a cautious response to the global financial crisis." },
+      { name: "Pierre Poilievre", role: "Leader of the Opposition", desc: "Won the leadership in 2022 on a populist, affordability-focused message, leading the party to significant gains at the 2025 election though not to government." }
+    ],
+    sources: [
+      { label: "Conservative Party of Canada (Wikipedia)", url: "https://en.wikipedia.org/wiki/Conservative_Party_of_Canada" },
+      { label: "Official party website", url: "https://www.conservative.ca/" },
+      { label: "2025 Canadian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Canadian_federal_election" }
+    ]
+  },
+
+  "new-democratic-party": {
+    slug: "new-democratic-party",
+    country: "ca",
+    countryName: "Canada",
+    name: "New Democratic Party",
+    shortName: "NDP",
+    color: "#F58220",
+    position: "Left-wing",
+    founded: "1961",
+    leader: "Don Davies",
+    leaderRole: "Interim leader following the 2025 election",
+    headquarters: "Ottawa",
+    e: -0.55,
+    g: -0.1,
+    ideologyTags: ["Social democracy", "Democratic socialism", "Labour movement"],
+    title: "The New Democratic Party: History, Ideology, and Policies",
+    metaDesc: "A clear guide to Canada's New Democratic Party (NDP): its history, its social democratic ideology, where it stands on the economy and social issues, and its position after the 2025 election.",
+    keywords: "new democratic party, ndp canada, what does the ndp believe, ndp ideology, ndp policies, canada ndp explained",
+    summary: "Canada's main left-wing party, rooted in the labour and social democratic tradition, campaigning for expanded public services and workers' rights.",
+    intro: "The New Democratic Party, usually called the NDP, is Canada's main left-wing party. It grew out of the labour and social democratic movements and campaigns for expanded public services, workers' rights, and a stronger social safety net. It has never formed a national government but has often held influence, particularly in minority parliaments.\n\nThe party has governed several provinces and helped shape national policy, most famously by pressing for the introduction of public healthcare. After the 2025 federal election it lost official party status and was led on an interim basis while it rebuilt.",
+    history: "The NDP was founded in 1961 through an alliance of the Co-operative Commonwealth Federation and the Canadian Labour Congress. Its first leader, Tommy Douglas, had earlier introduced public healthcare in Saskatchewan, a model later adopted nationwide.\n\nThe party reached its federal high point in 2011, when it became the official opposition under Jack Layton. Under Jagmeet Singh from 2017 it supported Liberal minority governments through a confidence agreement. At the 2025 election the party lost heavily, falling below the threshold for official party status, and Singh resigned after losing his own seat.",
+    economic: "The NDP supports a strong role for government in the economy. It favours higher taxes on the wealthy and large corporations, expanded public services including pharmacare and dental care, stronger labour protections, and public investment in housing and green energy. It is generally critical of corporate concentration and emphasises affordability for working people.",
+    social: "The party is firmly progressive. It supports LGBT rights, reconciliation with Indigenous peoples, a welcoming immigration policy, and expanded civil rights. It emphasises social justice, equality, and public provision as central to its identity.",
+    foreign: "The NDP favours diplomacy, human rights, and international cooperation, and it has often been more sceptical than other parties of military interventions and large defence commitments. It supports development aid and a foreign policy grounded in multilateral institutions.",
+    electoral: "The party became the official opposition for the first time in 2011 and held significant influence during Liberal minority governments after 2019. The 2025 election was a severe setback, costing it official party status and prompting a leadership transition and rebuild.",
+    positions: [
+      "Supports higher taxes on the wealthy and large corporations",
+      "Backs expanded public services such as pharmacare and dental care",
+      "Champions stronger labour protections and workers' rights",
+      "Emphasises reconciliation with Indigenous peoples",
+      "Supports public investment in housing and green energy",
+      "Favours diplomacy and is cautious about military commitments"
+    ],
+    figures: [
+      { name: "Tommy Douglas", role: "First NDP leader and father of Medicare", desc: "Introduced public healthcare in Saskatchewan before it became a national programme, and is often named among the most admired figures in Canadian history." },
+      { name: "Jack Layton", role: "Leader, 2003 to 2011", desc: "Led the NDP to become the official opposition for the first time in 2011, its best ever federal result, shortly before his death." },
+      { name: "Jagmeet Singh", role: "Leader, 2017 to 2025", desc: "Led the party through Liberal minority parliaments and a confidence agreement before resigning after the 2025 election." }
+    ],
+    sources: [
+      { label: "New Democratic Party (Wikipedia)", url: "https://en.wikipedia.org/wiki/New_Democratic_Party" },
+      { label: "Official party website", url: "https://www.ndp.ca/" },
+      { label: "2025 Canadian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Canadian_federal_election" }
+    ]
+  },
+
+  "green-party-canada": {
+    slug: "green-party-canada",
+    country: "ca",
+    countryName: "Canada",
+    name: "Green Party of Canada",
+    shortName: "Greens",
+    color: "#3D9B35",
+    position: "Left-wing",
+    founded: "1983",
+    leader: "Elizabeth May",
+    leaderRole: "Parliamentary leader of the Green Party of Canada",
+    headquarters: "Ottawa",
+    e: -0.5,
+    g: -0.2,
+    ideologyTags: ["Green politics", "Environmentalism", "Social justice"],
+    title: "The Green Party of Canada: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the Green Party of Canada: its history, its environmental and social justice ideology, where it stands on the economy and climate, and its role in federal politics.",
+    keywords: "green party of canada, what do canadian greens believe, green party canada ideology, elizabeth may, canada greens explained",
+    summary: "Canada's environmental party, focused on climate action and social justice, holding a small number of seats in Parliament.",
+    intro: "The Green Party of Canada is the country's main environmental party. It places climate action and ecological sustainability at the centre of its politics, combined with a broadly left-wing social platform. It has held a small number of federal seats and has its strongest support on the west coast and in parts of Atlantic Canada.\n\nThe party is closely associated with Elizabeth May, who became its first member of Parliament and has led it for much of its recent history, latterly as co-leader.",
+    history: "The party was founded in 1983 as part of the wider growth of green movements around the world. For years it contested elections without winning seats, gradually building its vote.\n\nIts breakthrough came in 2011 when Elizabeth May won the British Columbia seat of Saanich-Gulf Islands, becoming the party's first MP. The Greens have since held a handful of seats, with May remaining their central figure through several leadership arrangements.",
+    economic: "The Greens support an economy reorganised around environmental sustainability. They back a rapid shift to renewable energy, investment in public transit and green infrastructure, higher taxes on pollution and wealth, and stronger social provision. They are critical of continued expansion of fossil fuel production.",
+    social: "The party is progressive on social issues, supporting Indigenous reconciliation, LGBT rights, a welcoming immigration policy, and expanded civil liberties. It emphasises participatory democracy and often gives its MPs freedom to vote according to conscience rather than a strict party line.",
+    foreign: "The Greens favour a foreign policy centred on peace, human rights, climate justice, and international cooperation. They generally support lower military spending and emphasise diplomacy and global environmental agreements.",
+    electoral: "The party won its first seat in 2011 and has since held a small number of federal seats. Its influence rests less on numbers in Parliament than on keeping environmental issues prominent in national debate.",
+    positions: [
+      "Places climate action and sustainability at the centre of policy",
+      "Backs a rapid shift to renewable energy and green infrastructure",
+      "Supports higher taxes on pollution and wealth",
+      "Champions Indigenous reconciliation and civil liberties",
+      "Emphasises participatory democracy and conscience voting",
+      "Favours peace, human rights, and climate justice abroad"
+    ],
+    figures: [
+      { name: "Elizabeth May", role: "Co-leader and long-standing MP", desc: "Became the party's first member of Parliament in 2011 and has been its defining figure, leading it through several arrangements including as co-leader." }
+    ],
+    sources: [
+      { label: "Green Party of Canada (Wikipedia)", url: "https://en.wikipedia.org/wiki/Green_Party_of_Canada" },
+      { label: "Official party website", url: "https://www.greenparty.ca/" },
+      { label: "2025 Canadian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Canadian_federal_election" }
+    ]
+  },
+
+  "bloc-quebecois": {
+    slug: "bloc-quebecois",
+    country: "ca",
+    countryName: "Canada",
+    name: "Bloc Québécois",
+    shortName: "Bloc",
+    color: "#0088CE",
+    position: "Centre-left, Quebec nationalist",
+    founded: "1991",
+    leader: "Yves-François Blanchet",
+    leaderRole: "Leader of the Bloc Québécois",
+    headquarters: "Montreal",
+    e: -0.3,
+    g: 0.0,
+    ideologyTags: ["Quebec nationalism", "Sovereigntism", "Social democracy"],
+    title: "The Bloc Québécois: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the Bloc Québécois: its history, its mission to defend Quebec's interests and sovereignty, its centre-left social platform, and its role in the Canadian Parliament.",
+    keywords: "bloc quebecois, what does the bloc quebecois believe, bloc quebecois ideology, yves-francois blanchet, quebec sovereignty party",
+    summary: "A party that runs only in Quebec, defending Quebec's interests and its right to sovereignty, with a broadly centre-left social platform.",
+    intro: "The Bloc Québécois is a federal party that runs candidates only in the province of Quebec. Its purpose is to defend Quebec's interests in the Canadian Parliament and to promote Quebec sovereignty, the idea that Quebec should become an independent country. On social and economic questions it is broadly centre-left.\n\nBecause it stands only in Quebec, the Bloc can never form a national government, but it has at times held a large share of Quebec's seats and significant influence in minority parliaments.",
+    history: "The party was founded in 1991 by Members of Parliament who left other parties after the failure of constitutional efforts to recognise Quebec as a distinct society. It rose quickly and was briefly the official opposition in the mid-1990s, at the height of the sovereignty movement.\n\nIts fortunes have risen and fallen with support for Quebec independence. Under Yves-François Blanchet, leader since 2019, the party recovered strongly and again became a major force among Quebec's federal seats.",
+    economic: "The Bloc supports a social democratic economic approach, favouring public services, environmental protection, and policies it argues serve Quebec's specific interests. It presses Ottawa for greater transfers and autonomy for Quebec and defends the province's distinct social model.",
+    social: "The party reflects Quebec's generally progressive social attitudes on questions such as LGBT rights and secularism, while strongly defending the French language and Quebec's cultural distinctiveness. It supports Quebec's own approach to immigration and integration.",
+    foreign: "As a party focused on Quebec, the Bloc has a limited foreign policy platform, but it generally favours multilateralism, environmental agreements, and a foreign policy that reflects Quebec's values. Its central external goal remains recognition of Quebec's right to self-determination.",
+    electoral: "The Bloc was briefly the official opposition in the 1990s and has since fluctuated with the sovereignty movement. Under Blanchet it rebounded to hold a large bloc of Quebec's federal seats and remains a significant presence in the Commons.",
+    positions: [
+      "Runs only in Quebec and exists to defend Quebec's interests",
+      "Promotes Quebec sovereignty and the right to self-determination",
+      "Holds a broadly social democratic economic position",
+      "Strongly defends the French language and Quebec culture",
+      "Supports Quebec's distinct approach to immigration and secularism",
+      "Presses Ottawa for greater autonomy and transfers for Quebec"
+    ],
+    figures: [
+      { name: "Lucien Bouchard", role: "Founding leader", desc: "Led the Bloc to become the official opposition in 1993 at the height of the sovereignty movement, before returning to Quebec provincial politics." },
+      { name: "Yves-François Blanchet", role: "Leader since 2019", desc: "Revived the party's fortunes after a period of decline, leading it back to a strong share of Quebec's federal seats." }
+    ],
+    sources: [
+      { label: "Bloc Québécois (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bloc_Qu%C3%A9b%C3%A9cois" },
+      { label: "Official party website", url: "https://www.blocquebecois.org/" },
+      { label: "2025 Canadian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Canadian_federal_election" }
+    ]
+  },
+
+  "peoples-party-canada": {
+    slug: "peoples-party-canada",
+    country: "ca",
+    countryName: "Canada",
+    name: "People's Party of Canada",
+    shortName: "PPC",
+    color: "#4B306A",
+    position: "Right-wing populist",
+    founded: "2018",
+    leader: "Maxime Bernier",
+    leaderRole: "Founder and leader of the People's Party of Canada",
+    headquarters: "Gatineau",
+    e: 0.6,
+    g: 0.3,
+    ideologyTags: ["Right-wing populism", "National conservatism", "Libertarian conservatism"],
+    title: "The People's Party of Canada: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the People's Party of Canada (PPC): its founding by Maxime Bernier, its right-wing populist ideology, and where it stands on immigration, the economy, and government.",
+    keywords: "peoples party of canada, ppc canada, what does the ppc believe, ppc ideology, maxime bernier, canada ppc explained",
+    summary: "A right-wing populist party founded by Maxime Bernier, campaigning for sharply reduced immigration, lower taxes, and a smaller state.",
+    intro: "The People's Party of Canada, known as the PPC, is a right-wing populist party founded and led by Maxime Bernier. It campaigns for sharply reduced immigration, lower taxes, a smaller federal government, and the rejection of what it describes as political correctness and globalism. It has attracted a notable share of the vote but has not won seats in Parliament.\n\nThe party positions itself to the right of the Conservatives and appeals to voters who feel the main parties have moved too far toward the political centre.",
+    history: "The party was founded in 2018 by Maxime Bernier, a former Conservative cabinet minister who narrowly lost that party's 2017 leadership race and then left to form his own movement. It contested its first general election in 2019.\n\nThe PPC gained wider attention during the COVID-19 period, when its opposition to lockdowns and vaccine mandates lifted its vote share to around five percent in 2021, though it still won no seats. It has continued to run nationally on a populist platform.",
+    economic: "The PPC favours sharply lower taxes, deep cuts to federal spending, balanced budgets, and a much smaller government. It supports free markets, opposes corporate subsidies and supply management in agriculture, and calls for the removal of interprovincial trade barriers. It is strongly opposed to carbon pricing.",
+    social: "The party is nationalist and socially conservative in emphasis, with immigration as its central issue. It calls for large reductions in immigration levels and a tighter approach to the border, and it emphasises Canadian identity and free speech while opposing what it describes as identity politics.",
+    foreign: "The PPC emphasises national sovereignty and is sceptical of international institutions and agreements it views as against Canadian interests. It favours a foreign policy focused tightly on national interests and controlled borders.",
+    electoral: "The PPC has never won a seat in Parliament. Its best result came in 2021, when it took around five percent of the national vote, boosted by opposition to pandemic restrictions. It continues to contest elections across the country.",
+    positions: [
+      "Calls for sharp reductions in immigration levels",
+      "Favours deep cuts to taxes and federal spending",
+      "Opposes carbon pricing and corporate subsidies",
+      "Wants to remove interprovincial trade barriers",
+      "Emphasises free speech and opposes identity politics",
+      "Stresses national sovereignty and controlled borders"
+    ],
+    figures: [
+      { name: "Maxime Bernier", role: "Founder and leader", desc: "A former Conservative cabinet minister who founded the PPC in 2018 after narrowly losing the Conservative leadership, and has led it ever since on a populist platform." }
+    ],
+    sources: [
+      { label: "People's Party of Canada (Wikipedia)", url: "https://en.wikipedia.org/wiki/People%27s_Party_of_Canada" },
+      { label: "Official party website", url: "https://www.peoplespartyofcanada.ca/" },
+      { label: "2025 Canadian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Canadian_federal_election" }
+    ]
+  },
+
+  // ===================================================================
+  //  AUSTRALIA
+  // ===================================================================
+
+  "labor-party-australia": {
+    slug: "labor-party-australia",
+    country: "au",
+    countryName: "Australia",
+    name: "Australian Labor Party",
+    shortName: "Labor",
+    color: "#E13940",
+    position: "Centre-left",
+    founded: "1901",
+    leader: "Anthony Albanese",
+    leaderRole: "Prime Minister of Australia since 2022",
+    headquarters: "Canberra",
+    e: -0.35,
+    g: 0.1,
+    ideologyTags: ["Social democracy", "Labourism", "Progressivism"],
+    title: "The Australian Labor Party: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the Australian Labor Party (ALP): its history, its centre-left ideology, where it stands on the economy and social issues, and its record in government under Anthony Albanese.",
+    keywords: "australian labor party, alp, what does labor believe, labor party australia ideology, anthony albanese, australia labor explained",
+    summary: "Australia's main centre-left party, rooted in the union movement, returned for a large second term in 2025 under Anthony Albanese.",
+    intro: "The Australian Labor Party, known as the ALP or simply Labor, is one of Australia's two major parties and the main force on the centre-left. It grew out of the labour and trade union movement and supports an active government role in the economy, a strong social safety net, and workers' rights. It won a large second-term majority at the 2025 federal election under Anthony Albanese.\n\nLabor is one of the oldest political parties in Australia and has alternated in government with the Liberal-National Coalition for more than a century.",
+    history: "Labor formed in the 1890s out of the trade union movement and first held federal office in the early years of the Commonwealth after 1901. It built much of Australia's welfare state and, under Gough Whitlam in the 1970s, introduced universal healthcare and expanded higher education.\n\nUnder Bob Hawke and Paul Keating in the 1980s and 1990s the party modernised the economy while keeping a strong social agenda. After a period in opposition, Labor returned to power in 2022 under Anthony Albanese and then won a commanding second-term majority in 2025.",
+    economic: "Labor supports a market economy guided by an active government. It favours investment in health, education, and clean energy, stronger workers' rights and wage growth, and a role for government in easing the cost of living. It created and defends Medicare, Australia's universal health system, and supports the superannuation retirement savings scheme.",
+    social: "The party is broadly progressive. It supports action on climate change, reconciliation with Indigenous Australians, LGBT equality, and multicultural immigration. It generally takes a more liberal position than the Coalition on social and environmental questions while managing a range of views within its own ranks.",
+    foreign: "Labor supports the alliance with the United States, including the AUKUS defence partnership, while seeking stable relations with China and closer engagement with Pacific and Southeast Asian neighbours. It emphasises regional diplomacy alongside a strong defence.",
+    electoral: "Labor has formed many federal governments since Federation. It returned to power in 2022 and won a large second-term majority in 2025, one of its strongest results, as the Coalition suffered heavy losses.",
+    positions: [
+      "Supports a market economy with active government investment",
+      "Created and defends Medicare, the universal health system",
+      "Backs stronger workers' rights and wage growth",
+      "Supports climate action and investment in clean energy",
+      "Favours reconciliation with Indigenous Australians",
+      "Supports the US alliance and AUKUS while engaging the region"
+    ],
+    figures: [
+      { name: "Gough Whitlam", role: "Prime Minister, 1972 to 1975", desc: "Led a reforming government that introduced universal healthcare, expanded higher education, and modernised Australian social policy." },
+      { name: "Bob Hawke", role: "Prime Minister, 1983 to 1991", desc: "Australia's longest-serving Labor prime minister, who modernised the economy while maintaining a strong social agenda and consensus style." },
+      { name: "Anthony Albanese", role: "Prime Minister since 2022", desc: "Returned Labor to power in 2022 and led it to a commanding second-term majority in 2025." }
+    ],
+    sources: [
+      { label: "Australian Labor Party (Wikipedia)", url: "https://en.wikipedia.org/wiki/Australian_Labor_Party" },
+      { label: "Official party website", url: "https://www.alp.org.au/" },
+      { label: "2025 Australian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Australian_federal_election" }
+    ]
+  },
+
+  "liberal-party-australia": {
+    slug: "liberal-party-australia",
+    country: "au",
+    countryName: "Australia",
+    name: "Liberal Party of Australia",
+    shortName: "Liberals",
+    color: "#0A52A0",
+    position: "Centre-right",
+    founded: "1944",
+    leader: "Sussan Ley",
+    leaderRole: "Leader of the Opposition since 2025",
+    headquarters: "Canberra",
+    e: 0.45,
+    g: 0.25,
+    ideologyTags: ["Liberal conservatism", "Economic liberalism", "Conservatism"],
+    title: "The Liberal Party of Australia: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the Liberal Party of Australia: its history, its centre-right ideology, where it stands on the economy and social issues, and its role in opposition under Sussan Ley.",
+    keywords: "liberal party of australia, what do australian liberals believe, liberal party australia ideology, sussan ley, australia liberals explained",
+    summary: "Australia's main centre-right party, favouring free enterprise and lower taxes, now in opposition under Sussan Ley, the first woman to lead it.",
+    intro: "The Liberal Party of Australia is the country's main centre-right party. Despite its name it is a conservative and pro-market party, favouring free enterprise, lower taxes, and individual responsibility. It usually governs in coalition with the smaller National Party. After a heavy defeat in 2025 it is in opposition, led by Sussan Ley, the first woman to lead the party.\n\nThe Liberals and their Coalition partner have alternated in government with Labor throughout Australia's modern history.",
+    history: "The party was founded in 1944 by Robert Menzies, who went on to become Australia's longest-serving prime minister. It drew together earlier anti-Labor and liberal groups into a durable centre-right force.\n\nThe party governed for long stretches, including under John Howard from 1996 to 2007 and, most recently, under a Coalition government from 2013 to 2022. After returning to opposition in 2022, it suffered one of its worst defeats in 2025, losing many seats including that of its then leader, and subsequently elected Sussan Ley.",
+    economic: "The Liberals favour free markets, lower taxes, and a smaller government. They support private enterprise, budget restraint, and deregulation, and they present themselves as stronger economic managers. They have generally been more cautious than Labor on climate measures, emphasising cost and energy reliability.",
+    social: "The party spans liberal and conservative strands on social issues. In recent years it has faced debate about its direction, particularly after losing formerly safe urban seats to socially liberal independents. Its base includes both moderates and social conservatives.",
+    foreign: "The Liberals strongly support the alliance with the United States, including AUKUS, and a robust defence posture. They emphasise national security, border control, and close ties with traditional allies while managing the relationship with China.",
+    electoral: "The party governed under Menzies, Howard, and most recently in Coalition from 2013 to 2022. Its 2025 defeat was among its worst, reducing it to around forty seats and prompting a period of rebuilding under new leadership.",
+    positions: [
+      "Favours free markets, lower taxes, and a smaller government",
+      "Presents itself as the stronger economic manager",
+      "Emphasises energy reliability and cost in climate policy",
+      "Stresses national security and border control",
+      "Strongly supports the US alliance and AUKUS",
+      "Usually governs in coalition with the National Party"
+    ],
+    figures: [
+      { name: "Robert Menzies", role: "Prime Minister, 1939 to 1941 and 1949 to 1966", desc: "Founded the Liberal Party in 1944 and became Australia's longest-serving prime minister, establishing the modern centre-right." },
+      { name: "John Howard", role: "Prime Minister, 1996 to 2007", desc: "Australia's second longest-serving prime minister, who cut taxes, introduced a goods and services tax, and took a firm stance on border control." },
+      { name: "Sussan Ley", role: "Leader of the Opposition since 2025", desc: "Became the first woman to lead the Liberal Party after its 2025 defeat, tasked with rebuilding it in opposition." }
+    ],
+    sources: [
+      { label: "Liberal Party of Australia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Liberal_Party_of_Australia" },
+      { label: "Official party website", url: "https://www.liberal.org.au/" },
+      { label: "2025 Australian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Australian_federal_election" }
+    ]
+  },
+
+  "national-party-australia": {
+    slug: "national-party-australia",
+    country: "au",
+    countryName: "Australia",
+    name: "National Party of Australia",
+    shortName: "Nationals",
+    color: "#0A612B",
+    position: "Centre-right, agrarian",
+    founded: "1920",
+    leader: "David Littleproud",
+    leaderRole: "Leader of the National Party",
+    headquarters: "Canberra",
+    e: 0.4,
+    g: 0.3,
+    ideologyTags: ["Agrarianism", "Conservatism", "Regionalism"],
+    title: "The National Party of Australia: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the National Party of Australia: its history representing rural and regional Australia, its centre-right agrarian ideology, and its long-standing coalition with the Liberals.",
+    keywords: "national party of australia, the nationals, what do the nationals believe, nationals ideology, david littleproud, australia nationals explained",
+    summary: "A centre-right party representing rural and regional Australia, the long-standing coalition partner of the Liberal Party.",
+    intro: "The National Party of Australia, usually called the Nationals, is a centre-right party that represents rural and regional Australia. It has been the junior partner in coalition with the Liberal Party for most of the past century, and together they form the main alternative to Labor.\n\nThe party focuses on the interests of farmers, regional communities, and resource industries, and it combines economic conservatism with a strong regional and agrarian identity.",
+    history: "The party was founded in 1920 as the Country Party, growing out of farmers' movements seeking a distinct voice in national politics. It quickly established the coalition arrangement with the main non-Labor party that has largely endured ever since.\n\nRenamed the National Party, it has provided several deputy prime ministers and held key portfolios in Coalition governments, particularly those affecting agriculture, resources, and regional development. It has generally maintained its rural base even as Australia has urbanised.",
+    economic: "The Nationals support free enterprise and lower taxes but also favour targeted government support for regional Australia, including infrastructure, drought assistance, and services for rural communities. They strongly back agriculture, mining, and resource development, and have often pressed for practical rather than ambitious climate measures on cost grounds.",
+    social: "The party is generally socially conservative, reflecting the values of its regional base. It emphasises community, tradition, and the concerns of country Australia, and it often takes more traditional positions than its urban Coalition partner on social questions.",
+    foreign: "The Nationals support the US alliance and a strong defence, and they place particular emphasis on trade access for Australian agricultural and resource exports. They favour a foreign and trade policy that protects the interests of regional producers.",
+    electoral: "As a smaller party the Nationals do not aim to govern alone, but through the Coalition they have long shared in government and held senior positions. Their support is concentrated in rural and regional seats, which they have generally held even through difficult national elections.",
+    positions: [
+      "Represents rural and regional Australia",
+      "Strongly backs agriculture, mining, and resource industries",
+      "Supports targeted government investment in regional infrastructure",
+      "Favours practical, cost-focused climate measures",
+      "Generally socially conservative in emphasis",
+      "Governs in long-standing coalition with the Liberals"
+    ],
+    figures: [
+      { name: "John McEwen", role: "Long-serving leader and briefly Prime Minister in 1967", desc: "A dominant figure who shaped the Country Party's economic protectionism and its central role in Coalition governments." },
+      { name: "David Littleproud", role: "Leader of the National Party", desc: "Leads the Nationals as the junior Coalition partner, focusing on regional Australia, agriculture, and resource industries." }
+    ],
+    sources: [
+      { label: "National Party of Australia (Wikipedia)", url: "https://en.wikipedia.org/wiki/National_Party_of_Australia" },
+      { label: "Official party website", url: "https://www.nationals.org.au/" },
+      { label: "2025 Australian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Australian_federal_election" }
+    ]
+  },
+
+  "australian-greens": {
+    slug: "australian-greens",
+    country: "au",
+    countryName: "Australia",
+    name: "Australian Greens",
+    shortName: "Greens",
+    color: "#009C3D",
+    position: "Left-wing",
+    founded: "1992",
+    leader: "Larissa Waters",
+    leaderRole: "Leader of the Australian Greens since 2025",
+    headquarters: "Canberra",
+    e: -0.6,
+    g: -0.2,
+    ideologyTags: ["Green politics", "Eco-socialism", "Progressivism"],
+    title: "The Australian Greens: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the Australian Greens: their history, their left-wing environmental ideology, where they stand on climate, the economy, and social justice, and their role in the Senate.",
+    keywords: "australian greens, what do the greens believe, greens australia ideology, larissa waters, australia greens explained",
+    summary: "Australia's main left-wing party, built on environmentalism and social justice, holding significant influence through the Senate.",
+    intro: "The Australian Greens are the country's main left-wing party, built around environmentalism, social justice, and grassroots democracy. They stand to the left of Labor on most issues and have their greatest influence in the Senate, where they often hold the balance of power. Larissa Waters became leader in 2025.\n\nThe party draws strong support among younger and urban voters and has become an established part of the Australian political landscape.",
+    history: "The Greens formed as a national party in 1992, drawing together earlier state-level environmental parties, with roots in Tasmania's pioneering environmental movement. Under Bob Brown they grew into a significant force, particularly in the Senate.\n\nThe party reached a peak in the House of Representatives at the 2022 election, winning several lower-house seats, before being reduced again in 2025 even as it retained substantial Senate representation and influence.",
+    economic: "The Greens support an economy reorganised around sustainability and equality. They back a rapid transition away from fossil fuels, large public investment in renewable energy and housing, higher taxes on corporations and wealth, and expanded public services including dental care in Medicare. They are strongly critical of new coal and gas projects.",
+    social: "The party is firmly progressive. It supports treaty and truth-telling processes with Indigenous Australians, LGBT rights, a humane refugee policy, and expanded civil liberties. It emphasises participatory democracy and social equality.",
+    foreign: "The Greens favour an independent foreign policy centred on peace, human rights, and climate justice. They have been critical of AUKUS and high defence spending, and they emphasise diplomacy, disarmament, and global climate action.",
+    electoral: "The Greens hold significant representation in the Senate, where they frequently hold the balance of power, and have at times won seats in the House of Representatives. Their national vote has grown over the decades to make them a durable third force.",
+    positions: [
+      "Places climate action at the centre, opposing new coal and gas",
+      "Backs large public investment in renewables and housing",
+      "Supports higher taxes on corporations and wealth",
+      "Wants dental care included in Medicare",
+      "Supports treaty processes with Indigenous Australians",
+      "Critical of AUKUS and high defence spending"
+    ],
+    figures: [
+      { name: "Bob Brown", role: "Founding parliamentary leader", desc: "A Tasmanian environmental campaigner who led the Greens to national prominence and established them as a lasting force in the Senate." },
+      { name: "Larissa Waters", role: "Leader since 2025", desc: "A Queensland senator who became leader of the Greens in 2025, continuing the party's focus on climate action and social justice." }
+    ],
+    sources: [
+      { label: "Australian Greens (Wikipedia)", url: "https://en.wikipedia.org/wiki/Australian_Greens" },
+      { label: "Official party website", url: "https://greens.org.au/" },
+      { label: "2025 Australian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Australian_federal_election" }
+    ]
+  },
+
+  "teal-independents": {
+    slug: "teal-independents",
+    country: "au",
+    countryName: "Australia",
+    name: "Teal Independents",
+    shortName: "Teals",
+    color: "#159B9B",
+    position: "Centre, socially liberal",
+    founded: "2022",
+    leader: "No leader (independents)",
+    leaderRole: "A movement of unaligned independent MPs, not a formal party",
+    headquarters: "None",
+    e: 0.0,
+    g: -0.2,
+    ideologyTags: ["Independent politics", "Climate action", "Political integrity"],
+    title: "The Teal Independents: History, Ideology, and What They Stand For",
+    metaDesc: "A clear guide to Australia's Teal Independents: who they are, why they emerged in 2022, and what unites this group of climate-focused, socially liberal independent MPs.",
+    keywords: "teal independents, what are the teals, teal independents australia, climate 200, australia teals explained, independent mps australia",
+    summary: "A loose movement of socially liberal, climate-focused independent MPs, not a formal party, who won former Liberal urban seats from 2022.",
+    intro: "The Teal Independents are not a formal political party but a loose movement of independent members of parliament who share a broadly similar outlook. They are socially liberal, strongly focused on climate action and political integrity, and generally fiscally moderate. The name comes from the blue-green colour many of them adopted, blending the blue associated with the Liberals and the green of environmental politics.\n\nThe teals emerged as a significant force in 2022, when several of them won affluent urban seats that had long been safe for the Liberal Party, and they have since become a notable presence in Parliament.",
+    history: "The movement grew out of community campaigns in wealthy, traditionally Liberal-voting electorates whose voters wanted stronger action on climate change and higher standards in politics. Many teal candidates were backed by the fundraising group Climate 200, though each ran as an independent.\n\nAt the 2022 federal election a group of teal independents defeated prominent Liberal MPs in seats across Sydney, Melbourne, Perth, and beyond. Because they are independents rather than a party, they do not have a single leader or a binding platform, but they vote together on many issues.",
+    economic: "The teals are generally fiscally moderate and pro-market, reflecting the affluent electorates they represent, while supporting a strong economic response to climate change. They tend to favour sensible budget management alongside investment in the transition to clean energy, and they do not share the more redistributive agenda of the left.",
+    social: "The teals are socially liberal. They support gender equality, integrity in government including a strong federal anti-corruption body, and progressive positions on many social questions. Their appeal rests heavily on combining economic moderation with social liberalism and climate ambition.",
+    foreign: "As independents the teals do not have a common foreign policy, though they generally support Australia's alliances while emphasising climate diplomacy and higher standards of transparency and accountability in government decision-making.",
+    electoral: "The teals won a cluster of formerly safe Liberal seats in 2022 and have contested subsequent elections as independents. Their significance lies in reshaping competition in affluent urban electorates and in pressing the major parties on climate and integrity.",
+    positions: [
+      "Operate as independents, not a formal party with a single leader",
+      "Strongly focused on climate action and clean energy",
+      "Champion integrity in government and anti-corruption measures",
+      "Socially liberal on gender and equality questions",
+      "Generally fiscally moderate and pro-market",
+      "Draw support in affluent, formerly Liberal urban seats"
+    ],
+    figures: [
+      { name: "Climate 200", role: "Fundraising and support network", desc: "A community funding group that backed many teal candidates, though each stood as an independent rather than as part of a party." }
+    ],
+    sources: [
+      { label: "Teal independents (Wikipedia)", url: "https://en.wikipedia.org/wiki/Teal_independents" },
+      { label: "Climate 200 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Climate_200" },
+      { label: "2025 Australian federal election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2025_Australian_federal_election" }
+    ]
+  },
+
+  // ===================================================================
+  //  NEW ZEALAND
+  // ===================================================================
+
+  "national-party-nz": {
+    slug: "national-party-nz",
+    country: "nz",
+    countryName: "New Zealand",
+    name: "New Zealand National Party",
+    shortName: "National",
+    color: "#00529F",
+    position: "Centre-right",
+    founded: "1936",
+    leader: "Christopher Luxon",
+    leaderRole: "Prime Minister of New Zealand since 2023",
+    headquarters: "Wellington",
+    e: 0.4,
+    g: 0.2,
+    ideologyTags: ["Liberal conservatism", "Economic liberalism", "Conservatism"],
+    title: "The New Zealand National Party: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the New Zealand National Party: its history, its centre-right ideology, where it stands on the economy and social issues, and its record in government under Christopher Luxon.",
+    keywords: "new zealand national party, what does national believe, national party nz ideology, christopher luxon, nz national explained",
+    summary: "New Zealand's main centre-right party, favouring free enterprise and lower taxes, leading the current coalition government under Christopher Luxon.",
+    intro: "The New Zealand National Party is one of the country's two largest parties and the main force on the centre-right. It favours free enterprise, lower taxes, and fiscal discipline, combined with a generally pragmatic approach to social policy. It has led the government since late 2023 under Christopher Luxon, in coalition with the ACT and New Zealand First parties.\n\nNational has alternated in power with the Labour Party for decades and draws broad support across provincial and suburban New Zealand.",
+    history: "The party was formed in 1936 from the merger of earlier conservative and liberal groups to oppose the first Labour government. It became a natural party of government, holding office for long stretches through the twentieth century.\n\nUnder leaders such as Keith Holyoake, Jim Bolger, and John Key, National governed during major periods of economic reform and stability. After a spell in opposition, it returned to power at the 2023 election under Christopher Luxon, forming a three-party coalition government.",
+    economic: "National favours free markets, lower taxes, and restrained public spending. It supports private enterprise and infrastructure investment, and it has emphasised restoring economic growth and easing the cost of living. It is generally more cautious than the left on the size of the state and on new spending.",
+    social: "The party is broadly pragmatic on social issues, spanning liberal and conservative members. It emphasises law and order, education standards, and welfare settings that encourage work, while generally accepting established social reforms.",
+    foreign: "National supports New Zealand's traditional partnerships, trade liberalisation, and an independent foreign policy including the country's long-standing nuclear-free stance. It places strong emphasis on trade access for New Zealand exports and stable relations across the Asia-Pacific region.",
+    electoral: "National has formed many governments since 1936. It returned to power at the 2023 election and leads a coalition with ACT and New Zealand First. The next general election is scheduled for November 2026.",
+    positions: [
+      "Favours free markets, lower taxes, and restrained spending",
+      "Emphasises economic growth and easing the cost of living",
+      "Stresses law and order and education standards",
+      "Supports welfare settings that encourage work",
+      "Backs trade liberalisation and export access",
+      "Maintains New Zealand's nuclear-free foreign policy"
+    ],
+    figures: [
+      { name: "John Key", role: "Prime Minister, 2008 to 2016", desc: "A popular National leader who governed through the global financial crisis and the Christchurch earthquakes, emphasising pragmatic centre-right management." },
+      { name: "Christopher Luxon", role: "Prime Minister since 2023", desc: "A former airline chief executive who led National back to power in 2023 at the head of a three-party coalition government." }
+    ],
+    sources: [
+      { label: "New Zealand National Party (Wikipedia)", url: "https://en.wikipedia.org/wiki/New_Zealand_National_Party" },
+      { label: "Official party website", url: "https://www.national.org.nz/" },
+      { label: "Sixth National Government of New Zealand (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sixth_National_Government_of_New_Zealand" }
+    ]
+  },
+
+  "labour-party-nz": {
+    slug: "labour-party-nz",
+    country: "nz",
+    countryName: "New Zealand",
+    name: "New Zealand Labour Party",
+    shortName: "Labour",
+    color: "#D82A20",
+    position: "Centre-left",
+    founded: "1916",
+    leader: "Chris Hipkins",
+    leaderRole: "Leader of the Opposition",
+    headquarters: "Wellington",
+    e: -0.35,
+    g: 0.1,
+    ideologyTags: ["Social democracy", "Labourism", "Progressivism"],
+    title: "The New Zealand Labour Party: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the New Zealand Labour Party: its history, its centre-left ideology, where it stands on the economy and social issues, and its position in opposition under Chris Hipkins.",
+    keywords: "new zealand labour party, what does labour believe, labour party nz ideology, chris hipkins, nz labour explained",
+    summary: "New Zealand's main centre-left party, rooted in the labour movement, now in opposition under Chris Hipkins.",
+    intro: "The New Zealand Labour Party is one of the country's two largest parties and the main force on the centre-left. It grew out of the labour movement and supports an active government role in the economy, public services, and workers' rights. After leading the government from 2017, it returned to opposition following the 2023 election and is led by Chris Hipkins.\n\nLabour has alternated in power with National for most of the past century and built much of New Zealand's welfare state.",
+    history: "The party was founded in 1916 and formed its first government in 1935, creating a comprehensive welfare state and public housing programme that shaped modern New Zealand. It governed at key moments through the century, including a period of sweeping market reforms in the 1980s that divided the party.\n\nUnder Jacinda Ardern from 2017 the party led a government known internationally for its handling of major crises, and it won an outright majority in 2020. After Ardern resigned in early 2023, Chris Hipkins became leader, and Labour lost the 2023 election to National.",
+    economic: "Labour supports a market economy guided by an active government. It favours investment in health, education, and housing, stronger workers' rights, and a role for government in reducing inequality and the cost of living. It generally supports a more expansive public sector than National.",
+    social: "The party is broadly progressive. It supports action on climate change, the rights and settlements owed to Māori under the Treaty of Waitangi, LGBT equality, and a welcoming approach to diversity. It generally takes more liberal positions than National on social and environmental questions.",
+    foreign: "Labour supports New Zealand's independent foreign policy, including the nuclear-free stance, and emphasises trade, multilateralism, and engagement with the Pacific. It balances traditional partnerships with an emphasis on regional relationships and climate diplomacy.",
+    electoral: "Labour has formed many governments since 1935. It won a rare outright majority in 2020 under Jacinda Ardern before losing power at the 2023 election. It now sits in opposition ahead of the November 2026 general election.",
+    positions: [
+      "Supports a market economy with active government investment",
+      "Backs investment in health, education, and housing",
+      "Supports stronger workers' rights and reducing inequality",
+      "Supports climate action and Treaty of Waitangi settlements",
+      "More liberal than National on social questions",
+      "Maintains New Zealand's independent, nuclear-free foreign policy"
+    ],
+    figures: [
+      { name: "Michael Joseph Savage", role: "Prime Minister, 1935 to 1940", desc: "Led New Zealand's first Labour government and built the welfare state, remaining one of the country's most revered political figures." },
+      { name: "Jacinda Ardern", role: "Prime Minister, 2017 to 2023", desc: "Led the party to an outright majority in 2020 and gained international attention for her handling of major national crises before resigning in 2023." },
+      { name: "Chris Hipkins", role: "Leader of the Opposition", desc: "Became prime minister after Ardern's resignation in 2023 and now leads Labour in opposition." }
+    ],
+    sources: [
+      { label: "New Zealand Labour Party (Wikipedia)", url: "https://en.wikipedia.org/wiki/New_Zealand_Labour_Party" },
+      { label: "Official party website", url: "https://www.labour.org.nz/" },
+      { label: "2026 New Zealand general election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2026_New_Zealand_general_election" }
+    ]
+  },
+
+  "green-party-nz": {
+    slug: "green-party-nz",
+    country: "nz",
+    countryName: "New Zealand",
+    name: "Green Party of Aotearoa New Zealand",
+    shortName: "Greens",
+    color: "#098137",
+    position: "Left-wing",
+    founded: "1990",
+    leader: "Marama Davidson and Chlöe Swarbrick",
+    leaderRole: "Co-leaders of the Green Party",
+    headquarters: "Wellington",
+    e: -0.6,
+    g: -0.2,
+    ideologyTags: ["Green politics", "Eco-socialism", "Progressivism"],
+    title: "The Green Party of Aotearoa New Zealand: History, Ideology, and Policies",
+    metaDesc: "A clear guide to the Green Party of Aotearoa New Zealand: its history, its left-wing environmental ideology, and where it stands on climate, the economy, and social justice.",
+    keywords: "green party new zealand, what do the greens believe, green party nz ideology, chloe swarbrick, nz greens explained",
+    summary: "New Zealand's left-wing environmental party, combining climate action with social justice and Treaty-based politics.",
+    intro: "The Green Party of Aotearoa New Zealand is the country's main environmental party and stands on the left of the political spectrum. It combines strong climate and environmental policy with a progressive social agenda and a commitment to the Treaty of Waitangi. The party is led by co-leaders and has become an established part of Parliament.\n\nThe Greens draw particular support among younger and urban voters and have at times supported or partnered with Labour-led governments.",
+    history: "The party has its roots in the Values Party of the 1970s, one of the world's first national environmental parties, and became the Green Party in 1990. It later entered Parliament under New Zealand's proportional voting system introduced in 1996.\n\nThe Greens have grown steadily and have supported Labour-led governments through cooperation agreements, while retaining their independence. In recent years the party has continued to expand its vote and parliamentary presence under a co-leadership model.",
+    economic: "The Greens support an economy reorganised around sustainability and fairness. They back strong climate action, large investment in public transport and clean energy, higher taxes on wealth and pollution, and expanded public services. They emphasise reducing inequality and protecting the natural environment.",
+    social: "The party is firmly progressive. It supports Treaty-based partnership with Māori, LGBT rights, a humane approach to welfare and housing, and expanded civil liberties. It emphasises participatory democracy and social equality alongside environmental protection.",
+    foreign: "The Greens favour a foreign policy centred on peace, human rights, disarmament, and climate justice. They strongly support New Zealand's nuclear-free stance and generally advocate lower military spending and an emphasis on diplomacy and the Pacific.",
+    electoral: "The Greens have been represented in Parliament since the late 1990s and have grown into a durable third force. They have supported Labour-led governments through cooperation agreements while sitting outside or on the edge of cabinet, and they contest the 2026 election as an established party.",
+    positions: [
+      "Places climate and environmental action at the centre of policy",
+      "Backs investment in public transport and clean energy",
+      "Supports higher taxes on wealth and pollution",
+      "Champions Treaty-based partnership with Māori",
+      "Emphasises reducing inequality and improving housing",
+      "Strongly supports the nuclear-free foreign policy"
+    ],
+    figures: [
+      { name: "Rod Donald and Jeanette Fitzsimons", role: "Founding co-leaders", desc: "Led the modern Green Party into Parliament under proportional representation and established its enduring co-leadership tradition." },
+      { name: "Chlöe Swarbrick", role: "Co-leader", desc: "A prominent younger co-leader known for campaigns on climate, housing, and youth engagement, who has helped broaden the party's appeal." }
+    ],
+    sources: [
+      { label: "Green Party of Aotearoa NZ (Wikipedia)", url: "https://en.wikipedia.org/wiki/Green_Party_of_Aotearoa_New_Zealand" },
+      { label: "Official party website", url: "https://www.greens.org.nz/" },
+      { label: "2026 New Zealand general election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2026_New_Zealand_general_election" }
+    ]
+  },
+
+  "act-new-zealand": {
+    slug: "act-new-zealand",
+    country: "nz",
+    countryName: "New Zealand",
+    name: "ACT New Zealand",
+    shortName: "ACT",
+    color: "#FDB912",
+    position: "Right-wing, classical liberal",
+    founded: "1994",
+    leader: "David Seymour",
+    leaderRole: "Leader of ACT and Deputy Prime Minister",
+    headquarters: "Auckland",
+    e: 0.6,
+    g: -0.5,
+    ideologyTags: ["Classical liberalism", "Libertarianism", "Free-market economics"],
+    title: "ACT New Zealand: History, Ideology, and Policies",
+    metaDesc: "A clear guide to ACT New Zealand: its history, its classical liberal and free-market ideology, where it stands on the economy and personal freedom, and its role in the coalition government.",
+    keywords: "act new zealand, act party nz, what does act believe, act ideology, david seymour, nz act explained",
+    summary: "A free-market, classical liberal party favouring lower taxes, smaller government, and individual freedom, and a partner in the current coalition government.",
+    intro: "ACT New Zealand is a classical liberal and free-market party. It favours lower taxes, a much smaller government, individual freedom, and personal responsibility, combining economic liberalism with a generally liberal stance on personal choice. It is a partner in the coalition government led by the National Party, and its leader David Seymour serves as Deputy Prime Minister.\n\nThe party sits on the right of the economic spectrum while emphasising individual liberty, and it has grown significantly in recent elections.",
+    history: "ACT was founded in 1994, its name drawn from the Association of Consumers and Taxpayers. It grew out of the market reforms of the 1980s and 1990s and entered Parliament under proportional representation, championing free-market economics and lower taxes.\n\nAfter a period as a very small party, ACT expanded markedly under David Seymour, becoming a significant force. Following the 2023 election it joined the National-led coalition government, with Seymour taking senior roles including, under the coalition agreement, the position of Deputy Prime Minister.",
+    economic: "ACT strongly favours free markets, lower and flatter taxes, reduced government spending, and deregulation. It supports fiscal discipline, competition, and cutting what it sees as unnecessary bureaucracy. It is generally the most consistently free-market party in Parliament.",
+    social: "On personal questions ACT leans liberal, emphasising individual freedom and choice. At the same time it has taken firm positions on law and order and has been prominent in debates about the role of the Treaty of Waitangi in law and policy, arguing for what it calls equal citizenship. Its overall emphasis is on individual rather than group rights.",
+    foreign: "ACT supports free trade, the traditional partnerships of New Zealand, and a foreign policy grounded in national interests and open markets. It generally favours an outward-looking, trade-focused approach.",
+    electoral: "ACT has been in Parliament since 1996, for years as a very small party, before expanding significantly under David Seymour. It entered government as part of the National-led coalition after the 2023 election and contests the 2026 election as an established partner of the centre-right.",
+    positions: [
+      "Strongly favours free markets and lower, flatter taxes",
+      "Wants a much smaller government and less regulation",
+      "Emphasises individual freedom and personal responsibility",
+      "Argues for equal citizenship over group-based rights",
+      "Takes firm positions on law and order",
+      "Supports free trade and open markets"
+    ],
+    figures: [
+      { name: "Roger Douglas", role: "Founder and reformer", desc: "A former Labour finance minister behind the sweeping market reforms of the 1980s who helped found ACT to continue that free-market agenda." },
+      { name: "David Seymour", role: "Leader and Deputy Prime Minister", desc: "Grew ACT from a single seat into a significant party and brought it into government, taking senior roles including Deputy Prime Minister under the coalition agreement." }
+    ],
+    sources: [
+      { label: "ACT New Zealand (Wikipedia)", url: "https://en.wikipedia.org/wiki/ACT_New_Zealand" },
+      { label: "Official party website", url: "https://www.act.org.nz/" },
+      { label: "Sixth National Government of New Zealand (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sixth_National_Government_of_New_Zealand" }
+    ]
+  },
+
+  "nz-first": {
+    slug: "nz-first",
+    country: "nz",
+    countryName: "New Zealand",
+    name: "New Zealand First",
+    shortName: "NZ First",
+    color: "#000000",
+    position: "Populist, centrist to right",
+    founded: "1993",
+    leader: "Winston Peters",
+    leaderRole: "Leader of New Zealand First and Minister of Foreign Affairs",
+    headquarters: "Wellington",
+    e: 0.1,
+    g: 0.4,
+    ideologyTags: ["Populism", "Nationalism", "Economic nationalism"],
+    title: "New Zealand First: History, Ideology, and Policies",
+    metaDesc: "A clear guide to New Zealand First: its history, its populist and nationalist positioning, where it stands on immigration and the economy, and its role in the coalition government under Winston Peters.",
+    keywords: "new zealand first, nz first party, what does nz first believe, nz first ideology, winston peters, nz first explained",
+    summary: "A populist, nationalist party led by veteran politician Winston Peters, often a kingmaker in coalition governments.",
+    intro: "New Zealand First is a populist and nationalist party led by Winston Peters, one of the country's most experienced and enduring politicians. It combines economic nationalism, a focus on the regions and older voters, and a firm stance on immigration and national identity. It is a partner in the coalition government led by the National Party.\n\nBecause of New Zealand's proportional voting system, New Zealand First has often held the balance of power, allowing it to choose which larger party governs and to shape policy from a central position.",
+    history: "The party was founded in 1993 by Winston Peters after he broke from the National Party. It quickly established itself as a pivotal force, entering coalition with both major parties at different times over the following decades.\n\nNew Zealand First has moved in and out of Parliament as its vote has risen and fallen, but Peters has remained its constant leader. After the 2023 election it again entered government, this time in coalition with National and ACT, with Peters taking the role of Deputy Prime Minister for part of the term and the foreign affairs portfolio.",
+    economic: "New Zealand First favours economic nationalism, supporting domestic industry, the regions, and older New Zealanders. It has backed measures such as regional development funds and protections for local ownership, and it tends to be sceptical of unrestrained globalisation. Its economic positioning is broadly centrist but shaped by a nationalist emphasis.",
+    social: "The party is socially conservative in emphasis and nationalist in outlook. Immigration is one of its central issues, where it calls for tighter controls, and it stresses national identity, traditional values, and the interests of what it presents as ordinary New Zealanders against distant elites.",
+    foreign: "New Zealand First supports an independent foreign policy and the country's traditional partnerships, with Peters serving as foreign minister in coalition governments. It emphasises national sovereignty, the Pacific, and a pragmatic approach to major powers.",
+    electoral: "New Zealand First has repeatedly held the balance of power under proportional representation, entering coalition with both major parties over the years. It returned to government after the 2023 election alongside National and ACT and contests the 2026 election as an established coalition partner.",
+    positions: [
+      "Combines economic nationalism with a focus on the regions",
+      "Calls for tighter controls on immigration",
+      "Emphasises national identity and traditional values",
+      "Supports domestic industry and local ownership",
+      "Often holds the balance of power in coalition talks",
+      "Backs an independent, sovereignty-focused foreign policy"
+    ],
+    figures: [
+      { name: "Winston Peters", role: "Founder and long-standing leader", desc: "Founded New Zealand First in 1993 and has led it ever since, repeatedly holding the balance of power and serving in senior roles including Deputy Prime Minister and foreign minister." }
+    ],
+    sources: [
+      { label: "New Zealand First (Wikipedia)", url: "https://en.wikipedia.org/wiki/New_Zealand_First" },
+      { label: "Official party website", url: "https://www.nzfirst.nz/" },
+      { label: "Sixth National Government of New Zealand (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sixth_National_Government_of_New_Zealand" }
+    ]
+  },
+
+  "te-pati-maori": {
+    slug: "te-pati-maori",
+    country: "nz",
+    countryName: "New Zealand",
+    name: "Te Pāti Māori",
+    shortName: "Te Pāti Māori",
+    color: "#C8102E",
+    position: "Left-wing, Indigenous rights",
+    founded: "2004",
+    leader: "Rawiri Waititi and Debbie Ngarewa-Packer",
+    leaderRole: "Co-leaders of Te Pāti Māori",
+    headquarters: "New Zealand",
+    e: -0.5,
+    g: -0.1,
+    ideologyTags: ["Māori rights", "Indigenous politics", "Left-wing"],
+    title: "Te Pāti Māori: History, Ideology, and Policies",
+    metaDesc: "A clear guide to Te Pāti Māori, the Māori Party: its history, its focus on Māori rights and self-determination, and where it stands on the economy and social justice.",
+    keywords: "te pati maori, maori party, what does te pati maori believe, te pati maori ideology, maori party nz explained",
+    summary: "A party dedicated to Māori rights and self-determination, standing on the left and holding the Māori electorate seats.",
+    intro: "Te Pāti Māori, also known as the Māori Party, is a party dedicated to advancing the rights, self-determination, and wellbeing of Māori, the Indigenous people of New Zealand. It stands on the left of the political spectrum and is led by co-leaders. It contests and holds several of the dedicated Māori electorate seats.\n\nThe party centres its politics on tino rangatiratanga, the principle of Māori self-determination, and on honouring the Treaty of Waitangi, the founding agreement between Māori and the Crown.",
+    history: "The party was founded in 2004 after a dispute over foreshore and seabed legislation that many Māori felt disregarded their rights. It entered Parliament in 2005 and at times supported National-led governments while pursuing gains for Māori.\n\nAfter a period out of Parliament, the party returned in 2020 and grew its representation in the Māori electorates, becoming a prominent and often outspoken voice on Māori rights, particularly in debates over the place of the Treaty of Waitangi in law and policy.",
+    economic: "Te Pāti Māori supports an economy that addresses inequality and delivers for Māori communities. It backs redistribution, investment in housing, health, and education for Māori, and economic development rooted in Māori enterprise and values. It generally favours a strong government role in reducing poverty and disadvantage.",
+    social: "The party is progressive and centres Māori rights and culture. It champions the Treaty of Waitangi, the Māori language, and self-determination, alongside broadly progressive positions on social questions. It has been a leading voice against policies it sees as undermining Māori rights.",
+    foreign: "As a party focused on Māori and domestic questions, Te Pāti Māori has a limited foreign policy platform, but it emphasises Indigenous solidarity internationally, human rights, and an independent foreign policy consistent with its values.",
+    electoral: "The party first entered Parliament in 2005, left in 2017, and returned in 2020, since building its presence in the Māori electorate seats. Its influence rests on its strong voice for Māori rights and its potential role in close parliaments.",
+    positions: [
+      "Centres Māori rights and self-determination",
+      "Champions the Treaty of Waitangi and the Māori language",
+      "Supports redistribution and investment in Māori communities",
+      "Backs strong action to reduce poverty and inequality",
+      "Holds a progressive position on social questions",
+      "Contests and holds the dedicated Māori electorate seats"
+    ],
+    figures: [
+      { name: "Tariana Turia", role: "Founding co-leader", desc: "Left the Labour Party over foreshore and seabed legislation to help found the Māori Party in 2004, becoming a defining voice for Māori self-determination." },
+      { name: "Rawiri Waititi", role: "Co-leader", desc: "A prominent co-leader known for his outspoken advocacy of Māori rights and self-determination in Parliament and public debate." }
+    ],
+    sources: [
+      { label: "Te Pāti Māori (Wikipedia)", url: "https://en.wikipedia.org/wiki/M%C4%81ori_Party" },
+      { label: "Official party website", url: "https://www.maoriparty.org/" },
+      { label: "2026 New Zealand general election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2026_New_Zealand_general_election" }
+    ]
   }
 
 };
@@ -594,6 +1355,128 @@ const PARTY_IMAGES = {
     caption: "Rupert Lowe, founder and leader of Restore Britain",
     credit: "UK Parliament", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0",
     source: "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Rupert_Lowe_MP_crop_2.jpg"
+  },
+
+  "liberal-party-canada": {
+    src: "/images/party/liberal-party-canada.webp",
+    alt: "Mark Carney, Prime Minister of Canada and Liberal leader",
+    caption: "Mark Carney, Prime Minister and Liberal leader",
+    credit: "Lea-Kim", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:2025-11-14_InaugurationREM_Deux-Montagnes_Mark_Carney.jpg"
+  },
+  "conservative-party-canada": {
+    src: "/images/party/conservative-party-canada.webp",
+    alt: "Pierre Poilievre, Leader of the Opposition and Conservative Party of Canada leader",
+    caption: "Pierre Poilievre, Leader of the Opposition",
+    credit: "Humberland", license: "CC0", licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+    source: "https://commons.wikimedia.org/wiki/File:Pierre_Poilievre_in_2023_(edited).jpg"
+  },
+  "new-democratic-party": {
+    src: "/images/party/new-democratic-party.webp",
+    alt: "The Parliament of Canada on Parliament Hill in Ottawa",
+    caption: "The Parliament of Canada in Ottawa. The NDP is rebuilding under an interim leader.",
+    credit: "Wladyslaw", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+    source: "https://commons.wikimedia.org/wiki/File:Ottawa_-_ON_-_Stadtansicht.jpg"
+  },
+  "green-party-canada": {
+    src: "/images/party/green-party-canada.webp",
+    alt: "Elizabeth May, parliamentary leader of the Green Party of Canada",
+    caption: "Elizabeth May, the party's long-standing leader",
+    credit: "Marcus Redivo / Green Party of Canada", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:Elizabeth_May_in_July_2014.jpg"
+  },
+  "bloc-quebecois": {
+    src: "/images/party/bloc-quebecois.webp",
+    alt: "Yves-François Blanchet, leader of the Bloc Québécois",
+    caption: "Yves-François Blanchet, leader of the Bloc Québécois",
+    credit: "TVA Nouvelles", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0",
+    source: "https://commons.wikimedia.org/wiki/File:Yves-Fran%C3%A7ois_Blanchet_Entrevue_no_smile_2023_(cropped).png"
+  },
+  "peoples-party-canada": {
+    src: "/images/party/peoples-party-canada.webp",
+    alt: "Maxime Bernier, founder and leader of the People's Party of Canada",
+    caption: "Maxime Bernier, founder and leader of the party",
+    credit: "Yan Parisien", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:Maxime_Bernier_portrait_by_Yan_Parisien_2023_(3x4_cropped).png"
+  },
+
+  "labor-party-australia": {
+    src: "/images/party/labor-party-australia.webp",
+    alt: "Anthony Albanese, Prime Minister of Australia and Labor leader",
+    caption: "Anthony Albanese, Prime Minister and Labor leader",
+    credit: "Australian Government", license: "CC BY 4.0", licenseUrl: "https://creativecommons.org/licenses/by/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:Anthony_Albanese_portrait_(re-crop).jpg"
+  },
+  "liberal-party-australia": {
+    src: "/images/party/liberal-party-australia.webp",
+    alt: "Sussan Ley, Leader of the Opposition and Liberal Party of Australia leader",
+    caption: "Sussan Ley, Leader of the Opposition",
+    credit: "Commonwealth of Australia", license: "CC BY 3.0 AU", licenseUrl: "https://creativecommons.org/licenses/by/3.0/au/",
+    source: "https://commons.wikimedia.org/wiki/File:Sussan_Ley_2019_(Higher_Quality).jpg"
+  },
+  "national-party-australia": {
+    src: "/images/party/national-party-australia.webp",
+    alt: "David Littleproud, leader of the National Party of Australia",
+    caption: "David Littleproud, leader of the National Party",
+    credit: "Commonwealth of Australia", license: "CC BY 3.0 AU", licenseUrl: "https://creativecommons.org/licenses/by/3.0/au/",
+    source: "https://commons.wikimedia.org/wiki/File:David_Littleproud.jpg"
+  },
+  "australian-greens": {
+    src: "/images/party/australian-greens.webp",
+    alt: "Larissa Waters, leader of the Australian Greens",
+    caption: "Larissa Waters, leader of the Australian Greens",
+    credit: "The Australian Greens", license: "CC BY-SA 2.5 AU", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.5/au/",
+    source: "https://commons.wikimedia.org/wiki/File:Larissa_Waters_2025_campaign_portrait.jpg"
+  },
+  "teal-independents": {
+    src: "/images/party/teal-independents.webp",
+    alt: "Parliament House in Canberra, Australia",
+    caption: "Parliament House in Canberra. The teals are independents, not a single party.",
+    credit: "Thennicke", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:Parliament_House_at_dusk,_Canberra_ACT.jpg"
+  },
+
+  "national-party-nz": {
+    src: "/images/party/national-party-nz.webp",
+    alt: "Christopher Luxon, Prime Minister of New Zealand and National Party leader",
+    caption: "Christopher Luxon, Prime Minister and National leader",
+    credit: "New Zealand National Party", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:LUXON,_Christopher_-_Botany_(cropped).png"
+  },
+  "labour-party-nz": {
+    src: "/images/party/labour-party-nz.webp",
+    alt: "Chris Hipkins, Leader of the Opposition and New Zealand Labour Party leader",
+    caption: "Chris Hipkins, Leader of the Opposition",
+    credit: "New Zealand Labour Party", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:Chris_Hipkins_NZ_Labour_(2).jpg"
+  },
+  "green-party-nz": {
+    src: "/images/party/green-party-nz.webp",
+    alt: "Chlöe Swarbrick, co-leader of the Green Party of Aotearoa New Zealand",
+    caption: "Chlöe Swarbrick, Green Party co-leader",
+    credit: "R100gsrider", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:Chl%C3%B6e_Swarbrick_headshot.jpg"
+  },
+  "act-new-zealand": {
+    src: "/images/party/act-new-zealand.webp",
+    alt: "David Seymour, ACT New Zealand leader and Deputy Prime Minister",
+    caption: "David Seymour, ACT leader and Deputy Prime Minister",
+    credit: "Doug Mountain", license: "CC0", licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+    source: "https://commons.wikimedia.org/wiki/File:David_Seymour_2023_(cropped)_(cropped).jpg"
+  },
+  "nz-first": {
+    src: "/images/party/nz-first.webp",
+    alt: "Winston Peters, leader of New Zealand First and Minister of Foreign Affairs",
+    caption: "Winston Peters, leader of New Zealand First",
+    credit: "US Embassy, New Zealand", license: "Public domain", licenseUrl: "",
+    source: "https://commons.wikimedia.org/wiki/File:Winston_Peters_2024_US_Deputy_Secretary_visit_(further_crop).jpg"
+  },
+  "te-pati-maori": {
+    src: "/images/party/te-pati-maori.webp",
+    alt: "Rawiri Waititi, co-leader of Te Pāti Māori",
+    caption: "Rawiri Waititi, co-leader of Te Pāti Māori",
+    credit: "Ministry of Foreign Affairs of Japan", license: "CC BY 4.0", licenseUrl: "https://creativecommons.org/licenses/by/4.0",
+    source: "https://commons.wikimedia.org/wiki/File:Rawiri_Waititi_August_2025.jpg"
   }
 };
 
@@ -617,5 +1500,35 @@ const PARTY_COUNTRIES = {
     keywords: "uk political parties, british political parties explained, labour vs conservative, reform uk, uk parties ideology, political parties britain",
     intro: "The United Kingdom has a multi-party system dominated historically by the Labour Party and the Conservative Party, but with a growing number of significant challengers. The Liberal Democrats occupy the centre, Reform UK and Restore Britain compete on the right, the Greens on the left, and the SNP dominates in Scotland. The devolved nations of Scotland and Wales have their own distinctive party landscapes.\n\nThis guide sets out where each party stands: its history, its core ideology, and its positions on the economy, social questions, and foreign policy. Use it to understand the British political landscape, then take the test to see where your own views fall.",
     order: ["labour-party", "conservative-party", "liberal-democrats", "reform-uk", "green-party-ew", "snp", "restore-britain"]
+  },
+  ca: {
+    code: "ca",
+    name: "Canada",
+    flag: "\u{1F1E8}\u{1F1E6}",
+    title: "Canadian Political Parties Explained: Liberals, Conservatives, and More",
+    metaDesc: "A clear, up-to-date guide to the political parties of Canada. Compare the Liberals, Conservatives, NDP, Greens, Bloc Québécois, and the People's Party: their ideologies and where they stand.",
+    keywords: "canadian political parties, canada political parties explained, liberals vs conservatives canada, canada parties ideology",
+    intro: "Canada has a multi-party system in which the Liberal Party and the Conservative Party are the two largest forces and the main contenders for government. The New Democratic Party sits on the left, the Greens focus on the environment, the Bloc Québécois runs only in Quebec on a sovereigntist platform, and the People's Party competes on the populist right. Canada's parliamentary system frequently produces minority governments in which smaller parties hold influence.\n\nThis guide sets out where each party stands: its history, its core ideology, and its positions on the economy, social questions, and foreign policy. Use it to understand the Canadian political landscape, then take the test to see where your own views fall.",
+    order: ["liberal-party-canada", "conservative-party-canada", "new-democratic-party", "green-party-canada", "bloc-quebecois", "peoples-party-canada"]
+  },
+  au: {
+    code: "au",
+    name: "Australia",
+    flag: "\u{1F1E6}\u{1F1FA}",
+    title: "Australian Political Parties Explained: Labor, Liberals, and More",
+    metaDesc: "A clear, up-to-date guide to the political parties of Australia. Compare Labor, the Liberals, the Nationals, the Greens, and the Teal Independents: their ideologies and where they stand.",
+    keywords: "australian political parties, australia political parties explained, labor vs liberal australia, australia parties ideology",
+    intro: "Australia has a two-party contest at its core, between the centre-left Australian Labor Party and the centre-right Liberal-National Coalition, but with important smaller forces. The Nationals represent rural and regional Australia in coalition with the Liberals, the Greens lead on the left, and the Teal Independents have reshaped competition in affluent urban seats. Australia's preferential voting system shapes how these parties compete and cooperate.\n\nThis guide sets out where each party stands: its history, its core ideology, and its positions on the economy, social questions, and foreign policy. Use it to understand the Australian political landscape, then take the test to see where your own views fall.",
+    order: ["labor-party-australia", "liberal-party-australia", "national-party-australia", "australian-greens", "teal-independents"]
+  },
+  nz: {
+    code: "nz",
+    name: "New Zealand",
+    flag: "\u{1F1F3}\u{1F1FF}",
+    title: "New Zealand Political Parties Explained: National, Labour, and More",
+    metaDesc: "A clear, up-to-date guide to the political parties of New Zealand. Compare National, Labour, the Greens, ACT, New Zealand First, and Te Pāti Māori: their ideologies and where they stand.",
+    keywords: "new zealand political parties, nz political parties explained, national vs labour nz, new zealand parties ideology",
+    intro: "New Zealand uses a proportional voting system that supports a genuine multi-party landscape. The centre-right National Party and centre-left Labour Party are the two largest, but government usually depends on coalitions. ACT sits on the free-market right, New Zealand First occupies a populist and nationalist space, the Greens lead on the left, and Te Pāti Māori champions Māori rights. The current government is a coalition of National, ACT, and New Zealand First.\n\nThis guide sets out where each party stands: its history, its core ideology, and its positions on the economy, social questions, and foreign policy. Use it to understand the New Zealand political landscape, then take the test to see where your own views fall.",
+    order: ["national-party-nz", "labour-party-nz", "green-party-nz", "act-new-zealand", "nz-first", "te-pati-maori"]
   }
 };

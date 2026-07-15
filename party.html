@@ -239,6 +239,9 @@
       <div class="dropdown-menu">
         <a href="/parties/us">US Parties</a>
         <a href="/parties/uk">UK Parties</a>
+        <a href="/parties/ca">Canada Parties</a>
+        <a href="/parties/au">Australia Parties</a>
+        <a href="/parties/nz">New Zealand Parties</a>
       </div>
     </div>
     <div class="dropdown" id="nav-dropdown-ideologies">
@@ -379,7 +382,7 @@
 
   // ================= Individual party =================
   function renderParty(data) {
-    var testUrl = data.country === 'us' ? '/us' : '/uk';
+    var testUrl = '/' + data.country;
     var countryHub = '/parties/' + data.country;
 
     document.title = data.title + ' | CoreOpinion';
