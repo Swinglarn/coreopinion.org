@@ -220,6 +220,48 @@ nav {
   color: var(--ink);
 }
 
+/* Language / theme / flag cluster on the right of the nav. */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Hamburger — hidden until the mobile breakpoint takes over. */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background: var(--ink-muted);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+nav.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+nav.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+nav.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
 /* --- Elegant Dropdown Menu for Navigation --- */
 .dropdown {
   position: relative;
@@ -1634,25 +1676,124 @@ select:focus, input:focus {
     order: 1;
   }
   
-  nav > div:last-child {
+  nav {
+    justify-content: flex-start;
+  }
+
+  /* Navs without a menu (quiz, calculating) keep their controls inline, so
+     the cluster has to stay narrow enough to share the row with the logo. */
+  .nav-controls {
     order: 2;
+    margin-left: auto;
+    gap: 8px;
   }
-  
-  .nav-links {
-    order: 3;
-    width: 100%;
+
+  .flag-badge {
+    padding: 5px 10px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .nav-toggle {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    overflow: visible;
-    white-space: normal;
-    padding-bottom: 4px;
+    order: 3;
+    margin-left: auto;
+    margin-right: -10px;
   }
-  
-  .nav-links a {
+
+  /* Where a menu exists, the language/theme/flag cluster moves into the
+     expanded panel. Keeping it in the top bar overflowed the row on locales
+     with a language toggle (for example Österreich + "English"). */
+  nav:has(.nav-toggle) .nav-controls {
+    order: 5;
+    width: 100%;
+    display: none;
+    margin-left: 0;
+    justify-content: flex-end;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  nav.nav-open .nav-controls {
+    display: flex;
+  }
+
+
+  /* Links collapse behind the hamburger and expand as a full-width panel. */
+  .nav-links {
+    order: 4;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 8px;
+    padding-bottom: 4px;
+    border-top: 1px solid var(--border-soft);
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  nav.nav-open .nav-links {
+    display: flex;
+  }
+
+  .nav-links > a,
+  .dropdown-toggle {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    padding: 0 4px;
+    border-radius: 0;
+  }
+
+  /* Country shortcuts duplicate entries already inside the Political Tests
+     dropdown, so they only add noise in a vertical menu. */
+  .nav-links > a.nav-shortcut {
+    display: none;
+  }
+
+  /* Dropdowns become inline accordions rather than floating panels. */
+  .dropdown {
+    position: static;
+    display: block;
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    background: none;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    min-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    transition: max-height 0.25s ease;
+  }
+
+  .dropdown.open .dropdown-menu {
+    /* Also cancels the desktop rule's translate(-50%) centring. */
+    transform: none;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-bottom: 6px;
+  }
+
+  .dropdown-menu a {
+    padding: 11px 4px 11px 18px;
     font-size: 15px;
-    display: inline-block;
   }
 
   .hero {
@@ -1795,10 +1936,18 @@ select:focus, input:focus {
     letter-spacing: -1px;
   }
   
+  /* Grid items default to min-width:auto, so the fixed-size compass forced
+     the card wider than its column and knocked it off centre. */
+  .results-grid > *,
+  .res-card,
+  .compass-wrap {
+    min-width: 0;
+  }
+
   .res-card {
     padding: 22px;
   }
-  
+
   .bias-big {
     font-size: 52px;
   }
@@ -1984,7 +2133,8 @@ select:focus, input:focus {
 /* --- TOPIC STANCE HEATMAP --- */
 .topic-heatmap-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* min() keeps the track from forcing a 300px floor on narrow screens. */
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 20px;
 }
 
@@ -2166,7 +2316,14 @@ select:focus, input:focus {
   cursor: pointer;
   color: var(--ink-muted);
   transition: color 0.15s;
-  padding: 4px;
+  /* Sized for a comfortable touch target rather than the glyph alone. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: -10px -10px 0 0;
 }
 .modal-close:hover {
   color: var(--ink);

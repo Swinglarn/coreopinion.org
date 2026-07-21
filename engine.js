@@ -2866,6 +2866,40 @@ window.selectIdeology = function(key) {
 })();
 
 // --- Dropdown Navigation Logic ---
+window.toggleMobileNav = function(e) {
+  if (e) e.stopPropagation();
+  const nav = e && e.currentTarget ? e.currentTarget.closest('nav') : document.querySelector('nav');
+  if (!nav) return;
+  const open = nav.classList.toggle('nav-open');
+  const btn = nav.querySelector('.nav-toggle');
+  if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  // Collapse any expanded accordion when the menu itself closes
+  if (!open) {
+    nav.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+  }
+};
+
+// Close the mobile menu after navigating to a link inside it
+document.addEventListener('click', function(e) {
+  const link = e.target.closest ? e.target.closest('.nav-links a') : null;
+  if (!link) return;
+  const nav = link.closest('nav');
+  if (!nav || !nav.classList.contains('nav-open')) return;
+  nav.classList.remove('nav-open');
+  const btn = nav.querySelector('.nav-toggle');
+  if (btn) btn.setAttribute('aria-expanded', 'false');
+});
+
+// Tapping outside the nav closes the mobile menu
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('nav.nav-open').forEach(nav => {
+    if (nav.contains(e.target)) return;
+    nav.classList.remove('nav-open');
+    const btn = nav.querySelector('.nav-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  });
+});
+
 window.toggleNavDropdown = function(e, id) {
   if (e) e.stopPropagation();
   const dropdown = document.getElementById(id);

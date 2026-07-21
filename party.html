@@ -43,7 +43,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.0.4">
+<link rel="stylesheet" href="/style.css?v=1.0.8">
 <script id="page-schema" type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -207,6 +207,7 @@
 
 <nav>
   <a class="logo" href="/">Core<span>opinion</span></a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links" onclick="window.toggleMobileNav(event)"><span></span><span></span><span></span></button>
   <div class="nav-links">
     <div class="dropdown" id="nav-dropdown-tests">
       <button class="dropdown-toggle" onclick="window.toggleNavDropdown(event, 'nav-dropdown-tests')">
@@ -265,7 +266,7 @@
     <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
     <a href="/about">About</a>
   </div>
-  <div style="display:flex;align-items:center;gap:12px">
+  <div class="nav-controls">
     <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
   </div>
 </nav>
@@ -309,6 +310,29 @@
       localStorage.setItem('theme', 'dark');
     }
   };
+
+  // --- Mobile Nav Toggle ---
+  window.toggleMobileNav = function(e) {
+    if (e) e.stopPropagation();
+    var nav = e && e.currentTarget ? e.currentTarget.closest('nav') : document.querySelector('nav');
+    if (!nav) return;
+    var open = nav.classList.toggle('nav-open');
+    var btn = nav.querySelector('.nav-toggle');
+    if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (!open) {
+      nav.querySelectorAll('.dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+    }
+  };
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest ? e.target.closest('.nav-links a') : null;
+    var nav = link ? link.closest('nav') : null;
+    document.querySelectorAll('nav.nav-open').forEach(function(n) {
+      if (n !== nav && n.contains(e.target)) return;
+      n.classList.remove('nav-open');
+      var btn = n.querySelector('.nav-toggle');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  });
 
   // --- Dropdown Toggle ---
   window.toggleNavDropdown = function(e, id) {
