@@ -10,6 +10,12 @@ let qs = [];
 let mode = 'short';
 let lastScore = null;
 
+// 6-point Likert response values (index matches rendered button order)
+const LIKERT_VALUES = [3, 2, 1, -1, -2, -3];
+
+function isLikertQ(q) { return q && q.type === 'l'; }
+function isLikertBank(bank) { return Array.isArray(bank) && bank.length > 0 && bank[0].type === 'l'; }
+
 // ============================================================
 // ENGINE TRANSLATIONS & DICTIONARY
 // ============================================================
@@ -54,7 +60,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Cognitive Analysis:</strong> The emotional wording or situational details in these questions successfully shifted your perspective. By swapping between an autonomous support frame and a systemic consequence frame, your choice was altered. This suggests that your beliefs in this area are contextually dependent rather than absolute, responding strongly to whatever specific narrative lens is highlighted.',
     insightConsistent: '✅ <strong>Cognitive Analysis:</strong> Your values held firm. Whether presented with positive support framing or critical framing, you maintained identical ideological positions. This demonstrates high internal logical consistency and resistance to rhetorical framing.',
-    shortTestCaveat: '<strong>Note:</strong> You took the Short Test. With fewer question pairs completed, this framing bias analysis is less reliable than on the Medium or Long tests.'
+    shortTestCaveat: '<strong>Note:</strong> You took the Short Test. With fewer question pairs completed, this framing bias analysis is less reliable than on the Medium or Long tests.',
+    likert: ['Strongly agree', 'Agree', 'Slightly agree', 'Slightly disagree', 'Disagree', 'Strongly disagree'],
+    wouldAgree: 'Would agree with this statement',
+    wouldDisagree: 'Would reject this statement',
+    driftLabel: 'Framing drift'
   },
   de: {
     of: 'von',
@@ -96,7 +106,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Kognitive Analyse:</strong> Die Formulierung oder Kontextdetails dieser Fragen haben deine Perspektive verschoben. Deine Wahl änderte sich je nachdem, ob ein positiver Aspekt oder negative Konsequenzen im Fokus standen. Dies deutet darauf hin, dass deine Überzeugungen in diesem Bereich kontextabhängig sind.',
     insightConsistent: '✅ <strong>Kognitive Analyse:</strong> Deine Werte blieben fest. Ob positive Formulierung oder kritische Betrachtung, du hast identische Positionen beibehalten. Dies beweist hohe logische Konsistenz und Unempfindlichkeit gegenüber sprachlichen Framing-Effekten.',
-    shortTestCaveat: '<strong>Hinweis:</strong> Sie haben den Kurztest gewählt. Da weniger Fragenpaare beantwortet wurden, ist diese Analyse des Formulierungseffekts weniger zuverlässig als beim mittleren oder langen Test.'
+    shortTestCaveat: '<strong>Hinweis:</strong> Sie haben den Kurztest gewählt. Da weniger Fragenpaare beantwortet wurden, ist diese Analyse des Formulierungseffekts weniger zuverlässig als beim mittleren oder langen Test.',
+    likert: ['Stimme voll zu', 'Stimme zu', 'Stimme eher zu', 'Lehne eher ab', 'Lehne ab', 'Lehne völlig ab'],
+    wouldAgree: 'Würde dieser Aussage zustimmen',
+    wouldDisagree: 'Würde diese Aussage ablehnen',
+    driftLabel: 'Formulierungsdrift'
   },
   fr: {
     of: 'sur',
@@ -138,7 +152,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Analyse cognitive:</strong> Les mots ou les détails de situations dans ces questions ont réussi à décaler votre point de vue. Votre choix a changé selon le cadrage. Cela suggère que vos convictions dans ce domaine dépendent fortement du contexte.',
     insightConsistent: '✅ <strong>Analyse cognitive:</strong> Vos valeurs sont restées fermes. Quel que soit le cadrage, vous avez maintenu des positions idéologiques identiques. Cela démontre une cohérence interne élevée.',
-    shortTestCaveat: '<strong>Note :</strong> Vous avez passé le test court. Avec moins de paires de questions complétées, cette analyse du biais de cadrage est moins fiable que sur les tests moyen ou long.'
+    shortTestCaveat: '<strong>Note :</strong> Vous avez passé le test court. Avec moins de paires de questions complétées, cette analyse du biais de cadrage est moins fiable que sur les tests moyen ou long.',
+    likert: ['Tout à fait d’accord', 'D’accord', 'Plutôt d’accord', 'Plutôt pas d’accord', 'Pas d’accord', 'Pas du tout d’accord'],
+    wouldAgree: 'Serait d’accord avec cette affirmation',
+    wouldDisagree: 'Rejetterait cette affirmation',
+    driftLabel: 'Écart de cadrage'
   },
   es: {
     of: 'de',
@@ -180,7 +198,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Análisis cognitivo:</strong> Las palabras o los detalles de las situaciones en estas preguntas lograron cambiar tu perspectiva. Tu elección varió según el encuadre. Esto sugiere que tus convicciones en esta área dependen en gran medida del contexto.',
     insightConsistent: '✅ <strong>Análisis cognitivo:</strong> Tus valores se mantuvieron firmes. Sin importar el tipo de encuadre, mantuviste posiciones ideológicas idénticas. Esto demuestra una alta consistencia lógica interna.',
-    shortTestCaveat: '<strong>Nota:</strong> Realizaste la prueba corta. Con menos parejas de preguntas completadas, este análisis del sesgo de encuadre es menos confiable que en las pruebas de tamaño medio o largo.'
+    shortTestCaveat: '<strong>Nota:</strong> Realizaste la prueba corta. Con menos parejas de preguntas completadas, este análisis del sesgo de encuadre es menos confiable que en las pruebas de tamaño medio o largo.',
+    likert: ['Totalmente de acuerdo', 'De acuerdo', 'Algo de acuerdo', 'Algo en desacuerdo', 'En desacuerdo', 'Totalmente en desacuerdo'],
+    wouldAgree: 'Estaría de acuerdo con esta afirmación',
+    wouldDisagree: 'Rechazaría esta afirmación',
+    driftLabel: 'Desviación por encuadre'
   },
   it: {
     of: 'di',
@@ -222,7 +244,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Analisi cognitiva:</strong> Le parole o i dettagli delle situazioni in queste domande sono riusciti a spostare la tua prospettiva. La tua scelta è cambiata in base all\'incorniciamento. Questo suggerisce che le tue convinzioni in quest\'area dipendono molto dal contesto.',
     insightConsistent: '✅ <strong>Analisi cognitiva:</strong> I tuoi valori si sono mantenuti saldi. Indipendentemente dal tipo di incorniciamento, hai mantenuto posizioni ideologiche identiche. Ciò dimostra un\'elevata coerenza logica interna.',
-    shortTestCaveat: '<strong>Nota:</strong> Hai fatto il test breve. Con meno coppie di domande completate, questa analisi del bias di incorniciamento è meno affidabile rispetto ai test medio o lungo.'
+    shortTestCaveat: '<strong>Nota:</strong> Hai fatto il test breve. Con meno coppie di domande completate, questa analisi del bias di incorniciamento è meno affidabile rispetto ai test medio o lungo.',
+    likert: ['Del tutto d’accordo', 'D’accordo', 'Un po’ d’accordo', 'Un po’ in disaccordo', 'In disaccordo', 'Del tutto in disaccordo'],
+    wouldAgree: 'Sarebbe d’accordo con questa affermazione',
+    wouldDisagree: 'Rifiuterebbe questa affermazione',
+    driftLabel: 'Scostamento da incorniciamento'
   },
   nl: {
     of: 'van',
@@ -264,7 +290,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Cognitieve analyse:</strong> De bewoording of situatie-details in deze vragen hebben je perspectief verschoven. Je keuze veranderde afhankelijk van de formulering. Dit suggereert dat je overtuigingen op dit gebied contextgevoelig zijn.',
     insightConsistent: '✅ <strong>Cognitieve analyse:</strong> Je waarden bleven standvastig. Ongeacht het type formulering behield je identieke posities. Dit getuigt van een hoge interne logische consistentie.',
-    shortTestCaveat: '<strong>Let op:</strong> Je hebt de korte test gedaan. Met minder beantwoorde vragenparen is deze beïnvloedingsbias-analyse minder betrouwbaar dan bij de gemiddelde of lange test.'
+    shortTestCaveat: '<strong>Let op:</strong> Je hebt de korte test gedaan. Met minder beantwoorde vragenparen is deze beïnvloedingsbias-analyse minder betrouwbaar dan bij de gemiddelde of lange test.',
+    likert: ['Helemaal mee eens', 'Mee eens', 'Enigszins mee eens', 'Enigszins mee oneens', 'Mee oneens', 'Helemaal mee oneens'],
+    wouldAgree: 'Zou het met deze stelling eens zijn',
+    wouldDisagree: 'Zou deze stelling verwerpen',
+    driftLabel: 'Framingafwijking'
   },
   sv: {
     of: 'av',
@@ -306,7 +336,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Kognitiv analys:</strong> Formuleringen eller situationsdetaljerna i dessa frågor lyckades förskjuta ditt perspektiv. Ditt val ändrades beroende på vinklingen. Detta tyder på att dina åsikter här är kontextberoende.',
     insightConsistent: '✅ <strong>Kognitiv analys:</strong> Dina värderingar stod fast. Oavsett om vinklingen var positiv eller kritisk behöll du identiska ståndpunkter. Detta visar på hög logisk konsekvens.',
-    shortTestCaveat: '<strong>Obs:</strong> Du gjorde det korta testet. Med färre besvarade frågepar är denna formuleringsbias-analys mindre tillförlitlig än i det medellånga eller långa testet.'
+    shortTestCaveat: '<strong>Obs:</strong> Du gjorde det korta testet. Med färre besvarade frågepar är denna formuleringsbias-analys mindre tillförlitlig än i det medellånga eller långa testet.',
+    likert: ['Instämmer helt', 'Instämmer', 'Instämmer delvis', 'Tar delvis avstånd', 'Tar avstånd', 'Tar helt avstånd'],
+    wouldAgree: 'Skulle instämma i påståendet',
+    wouldDisagree: 'Skulle avvisa påståendet',
+    driftLabel: 'Formuleringsdrift'
   },
   da: {
     of: 'af',
@@ -348,7 +382,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller situationsdetaljerne i disse spørgsmål formåede at forskyde dit perspektiv. Dit valg ændrede sig afhængigt af vinklingen. Dette tyder på, at dine holdninger her er kontekstafhængige.',
     insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Dine værdier stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høj logisk konsekvens.',
-    shortTestCaveat: '<strong>Bemærk:</strong> Du tog den korte test. Med færre besvarede spørgsmålspar er denne formuleringsbias-analyse mindre pålidelig end i den mellemlange eller lange test.'
+    shortTestCaveat: '<strong>Bemærk:</strong> Du tog den korte test. Med færre besvarede spørgsmålspar er denne formuleringsbias-analyse mindre pålidelig end i den mellemlange eller lange test.',
+    likert: ['Helt enig', 'Enig', 'Delvist enig', 'Delvist uenig', 'Uenig', 'Helt uenig'],
+    wouldAgree: 'Ville være enig i udsagnet',
+    wouldDisagree: 'Ville afvise udsagnet',
+    driftLabel: 'Formuleringsudsving'
   },
   no: {
     of: 'av',
@@ -390,7 +428,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Kognitiv analyse:</strong> Formuleringen eller situasjonsdetaljene i disse spørsmålene formådde å forskyve ditt perspektiv. Valget ditt endret seg avhengig av vinklingen. Dette tyder på at holdningene dine her er kontekstavhengige.',
     insightConsistent: '✅ <strong>Kognitiv analyse:</strong> Verdiene dine stod fast. Uanset om vinklingen var positiv eller kritisk, beholdt du identiske holdninger. Dette viser høy logisk konsekvens.',
-    shortTestCaveat: '<strong>Merk:</strong> Du tok den korte testen. Med færre besvarte spørsmålspar er denne formuleringsbias-analysen mindre pålitelig enn i den mellomlange eller lange testen.'
+    shortTestCaveat: '<strong>Merk:</strong> Du tok den korte testen. Med færre besvarte spørsmålspar er denne formuleringsbias-analysen mindre pålitelig enn i den mellomlange eller lange testen.',
+    likert: ['Helt enig', 'Enig', 'Delvis enig', 'Delvis uenig', 'Uenig', 'Helt uenig'],
+    wouldAgree: 'Ville vært enig i påstanden',
+    wouldDisagree: 'Ville avvist påstanden',
+    driftLabel: 'Formuleringsavvik'
   },
   fi: {
     of: '/',
@@ -432,7 +474,11 @@ const ENGINE_TRANSLATIONS = {
     ],
     insightInconsistent: '💡 <strong>Kognitiivinen analyysi:</strong> Kysymysten sanamuodot tai tilanteiden yksityiskohdat onnistuivat muuttamaan näkökulmaasi. Valintasi muuttui kehystyksen mukaan. Tämä viittaa siihen, että kantasi tässä aiheessa ovat tilannesidonnaisia.',
     insightConsistent: '✅ <strong>Kognitiivinen analyysi:</strong> Arvosi pysyivät vahvoina. Riippumatta kehystyksestä säilytit identtiset ideologiset kannat. Tämä osoittaa korkeaa sisäistä loogista johdonmukaisuutta.',
-    shortTestCaveat: '<strong>Huomautus:</strong> Teit lyhyen testin. Koska kysymyspareja on vastattu vähemmän, tämä kehystysvinouma-analyysi on vähemmän luotettava kuin keskitason tai pitkässä testissä.'
+    shortTestCaveat: '<strong>Huomautus:</strong> Teit lyhyen testin. Koska kysymyspareja on vastattu vähemmän, tämä kehystysvinouma-analyysi on vähemmän luotettava kuin keskitason tai pitkässä testissä.',
+    likert: ['Täysin samaa mieltä', 'Samaa mieltä', 'Osittain samaa mieltä', 'Osittain eri mieltä', 'Eri mieltä', 'Täysin eri mieltä'],
+    wouldAgree: 'Olisi samaa mieltä väitteen kanssa',
+    wouldDisagree: 'Hylkäisi väitteen',
+    driftLabel: 'Kehystyspoikkeama'
   }
 };
 
@@ -462,31 +508,7 @@ window.shareSocial = function(platform) {
   const lang = window.currentLang || 'en';
   if (!lastScore) return;
 
-  const pairAnswers = answers.filter(a => a.pair);
-  const pairs = {};
-  pairAnswers.forEach(a => {
-    if (!pairs[a.pair]) pairs[a.pair] = [];
-    pairs[a.pair].push(a);
-  });
-  
-  let shiftCount = 0;
-  let pairCount = 0;
-  Object.values(pairs).forEach(arr => {
-    if (arr.length >= 2) {
-      pairCount++;
-      const pos = arr.filter(x => {
-        let val = x.n !== undefined ? x.n : (x.e !== 0 ? x.e : (x.g !== 0 ? -x.g : 0));
-        return val > 0;
-      }).length;
-      const neg = arr.filter(x => {
-        let val = x.n !== undefined ? x.n : (x.e !== 0 ? x.e : (x.g !== 0 ? -x.g : 0));
-        return val < 0;
-      }).length;
-      if (Math.max(pos, neg) / (pos + neg) < 1.0) shiftCount++;
-    }
-  });
-  
-  const biasScore = pairCount > 0 ? Math.round((shiftCount / pairCount) * 100) : 0;
+  const biasScore = lastScore.overallBias || 0;
   const profile = window.getCognitiveProfile(biasScore, lang);
   
   const hasParties = lastScore.partyScores && Object.keys(lastScore.partyScores).length > 0;
@@ -606,7 +628,140 @@ window.goTo = function(id, pushState = true) {
 // ============================================================
 // 2. SHUFFLER & QUESTION SCHEDULING (MINIMUM GAP ALGORITHM)
 // ============================================================
-window.buildOrder = function(bank, totalCount) {
+// Reorders a pool so that partner statements of the same pair never sit close together
+function applyMinGap(pool) {
+  const MIN_GAP = Math.max(4, Math.floor(pool.length * 0.25));
+  for (let pass = 0; pass < 60; pass++) {
+    let moved = false;
+    for (let i = 0; i < pool.length; i++) {
+      for (let j = i + 1; j < pool.length; j++) {
+        if (pool[i].pair && pool[i].pair === pool[j].pair && (j - i) < MIN_GAP) {
+          for (let k = Math.min(i + MIN_GAP, pool.length - 1); k < pool.length; k++) {
+            if (k === j) continue;
+            let ok = true;
+            for (let m = 0; m < pool.length; m++) {
+              if (m === k || m === j) continue;
+              if (pool[m].pair && pool[m].pair === pool[k].pair && Math.abs(m - j) < MIN_GAP) {
+                ok = false;
+                break;
+              }
+            }
+            if (ok) {
+              [pool[j], pool[k]] = [pool[k], pool[j]];
+              moved = true;
+              break;
+            }
+          }
+          if (moved) break;
+        }
+      }
+      if (moved) break;
+    }
+    if (!moved) break;
+  }
+  return pool;
+}
+
+// Likert banks: the long test runs every pair twice; medium keeps 10 full
+// pairs plus one side of other pairs; short keeps only the decisive pairs
+// (dec flag) plus singles for topic breadth.
+function buildLikertOrder(bank, modeName) {
+  const pairMap = {};
+  const loose = [];
+  bank.forEach(q => {
+    if (q.pair) {
+      if (!pairMap[q.pair]) pairMap[q.pair] = [];
+      pairMap[q.pair].push(q);
+    } else {
+      loose.push(q);
+    }
+  });
+
+  let pool;
+  if (modeName === 'short' || modeName === 'medium') {
+    const fullPairTarget = modeName === 'short' ? 2 : 10;
+    const totalTarget = modeName === 'short' ? 15 : 30;
+
+    const pairIds = Object.keys(pairMap).sort(() => Math.random() - 0.5);
+    // Decisive pairs first so the short test always bias-checks the hottest topics
+    pairIds.sort((a, b) => (pairMap[b].some(q => q.dec) ? 1 : 0) - (pairMap[a].some(q => q.dec) ? 1 : 0));
+
+    pool = [];
+    pairIds.slice(0, fullPairTarget).forEach(pid => pool.push(...pairMap[pid]));
+    const rest = pairIds.slice(fullPairTarget);
+    for (let i = 0; i < rest.length && pool.length < totalTarget; i++) {
+      const arr = pairMap[rest[i]];
+      pool.push(arr[Math.floor(Math.random() * arr.length)]);
+    }
+    for (let i = 0; i < loose.length && pool.length < totalTarget; i++) {
+      pool.push(loose[i]);
+    }
+  } else {
+    pool = [...bank];
+  }
+
+  return orderLikertPool(pool);
+}
+
+// Places one side of every completed pair in the first half of the running
+// order and its partner in the second half, so the two framings sit far
+// apart. A repair sweep then pushes any stragglers below the gap threshold.
+function orderLikertPool(pool) {
+  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+
+  const byPair = {};
+  const rest = [];
+  pool.forEach(q => {
+    if (q.pair) {
+      if (!byPair[q.pair]) byPair[q.pair] = [];
+      byPair[q.pair].push(q);
+    } else {
+      rest.push(q);
+    }
+  });
+
+  const firstHalf = [];
+  const secondHalf = [];
+  Object.values(byPair).forEach(arr => {
+    if (arr.length >= 2) {
+      const flip = Math.random() < 0.5;
+      firstHalf.push(arr[flip ? 1 : 0]);
+      secondHalf.push(arr[flip ? 0 : 1]);
+      for (let i = 2; i < arr.length; i++) rest.push(arr[i]);
+    } else {
+      rest.push(arr[0]);
+    }
+  });
+  rest.forEach(q => (Math.random() < 0.5 ? firstHalf : secondHalf).push(q));
+  shuffle(firstHalf);
+  shuffle(secondHalf);
+
+  const order = [...firstHalf, ...secondHalf];
+  const G = Math.max(4, Math.floor(order.length / 6));
+  for (let pass = 0; pass < 300; pass++) {
+    let violated = false;
+    const pos = {};
+    for (let i = 0; i < order.length; i++) {
+      const p = order[i].pair;
+      if (!p) continue;
+      if (pos[p] !== undefined && i - pos[p] < G) {
+        const j = i + 1 + Math.floor(Math.random() * (order.length - i - 1));
+        if (j < order.length) {
+          [order[i], order[j]] = [order[j], order[i]];
+          violated = true;
+        }
+        break;
+      }
+      pos[p] = i;
+    }
+    if (!violated) break;
+  }
+  return order;
+}
+
+window.buildOrder = function(bank, totalCount, modeName) {
+  if (isLikertBank(bank)) return buildLikertOrder(bank, modeName || 'long');
+
   // Strength weight for priority sorting
   function strength(q) {
     return Math.max(...q.opts.flatMap(o => {
@@ -633,37 +788,7 @@ window.buildOrder = function(bank, totalCount) {
   }
 
   // Minimum separation filter to prevent same-pair questions from appearing consecutively
-  const MIN_GAP = Math.max(4, Math.floor(pool.length * 0.25));
-  for (let pass = 0; pass < 60; pass++) {
-    let moved = false;
-    for (let i = 0; i < pool.length; i++) {
-      for (let j = i + 1; j < pool.length; j++) {
-        if (pool[i].pair && pool[i].pair === pool[j].pair && (j - i) < MIN_GAP) {
-          // Find another element to swap with
-          for (let k = Math.min(i + MIN_GAP, pool.length - 1); k < pool.length; k++) {
-            if (k === j) continue;
-            let ok = true;
-            for (let m = 0; m < pool.length; m++) {
-              if (m === k || m === j) continue;
-              if (pool[m].pair && pool[m].pair === pool[k].pair && Math.abs(m - j) < MIN_GAP) {
-                ok = false;
-                break;
-              }
-            }
-            if (ok) {
-              [pool[j], pool[k]] = [pool[k], pool[j]];
-              moved = true;
-              break;
-            }
-          }
-          if (moved) break;
-        }
-      }
-      if (moved) break;
-    }
-    if (!moved) break;
-  }
-  return pool;
+  return applyMinGap(pool);
 };
 
 // ============================================================
@@ -687,6 +812,11 @@ window.startTest = function(m) {
     const totalQ = BANK.length;
 
     function getTestLength(modeName, totalQ) {
+      if (isLikertBank(BANK)) {
+        if (modeName === 'short') return 15;
+        if (modeName === 'medium') return 30;
+        return totalQ;
+      }
       if (totalQ >= 80) {
         if (modeName === 'short') return 25;
         if (modeName === 'medium') return 50;
@@ -717,7 +847,7 @@ window.startTest = function(m) {
     else if (m === 'long') { actualTotal = getTestLength('long', totalQ); mode = 'long'; }
     else { mode = 'fixed'; }
 
-    qs = window.buildOrder(BANK, actualTotal);
+    qs = window.buildOrder(BANK, actualTotal, mode);
 
     // Update badge if exists
     const badge = document.getElementById('mode-badge');
@@ -780,14 +910,29 @@ window.renderQ = function() {
   const container = document.getElementById('q-opts');
   if (container) {
     container.innerHTML = '';
-    q.opts.forEach((o, i) => {
-      const d = document.createElement('div');
-      d.className = 'q-opt';
-      d.textContent = o.t;
-      d.onclick = () => window.pickOpt(i, d);
-      container.appendChild(d);
-    });
-    
+    if (isLikertQ(q)) {
+      container.classList.add('likert');
+      const lang = window.currentLang || 'en';
+      const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+      const labels = tObj.likert || ENGINE_TRANSLATIONS['en'].likert;
+      labels.forEach((label, i) => {
+        const d = document.createElement('div');
+        d.className = 'q-opt q-opt-likert';
+        d.textContent = label;
+        d.onclick = () => window.pickOpt(i, d);
+        container.appendChild(d);
+      });
+    } else {
+      container.classList.remove('likert');
+      q.opts.forEach((o, i) => {
+        const d = document.createElement('div');
+        d.className = 'q-opt';
+        d.textContent = o.t;
+        d.onclick = () => window.pickOpt(i, d);
+        container.appendChild(d);
+      });
+    }
+
     // Auto-select previous choice if user clicked "Back"
     const prev = answers.find(a => a.id === q.id);
     if (prev) {
@@ -823,16 +968,30 @@ window.nextQ = function() {
   if (picked >= 0) {
     // Overwrite previous choice if existed
     answers = answers.filter(a => a.id !== q.id);
-    // Push the option and include question's framing metadata (pair, nl, fr)
-    answers.push({
-      id: q.id,
-      pair: q.pair,
-      nl: q.nl,
-      fr: q.fr,
-      node: q.node,
-      pick: picked,
-      ...q.opts[picked]
-    });
+    if (isLikertQ(q)) {
+      answers.push({
+        id: q.id,
+        pair: q.pair,
+        nl: q.nl,
+        fr: q.fr,
+        node: q.node,
+        type: 'l',
+        pick: picked,
+        v: LIKERT_VALUES[picked],
+        w: q.w || {}
+      });
+    } else {
+      // Push the option and include question's framing metadata (pair, nl, fr)
+      answers.push({
+        id: q.id,
+        pair: q.pair,
+        nl: q.nl,
+        fr: q.fr,
+        node: q.node,
+        pick: picked,
+        ...q.opts[picked]
+      });
+    }
   }
 
   picked = -1;
@@ -910,12 +1069,30 @@ window.score = function() {
   }
 
   answers.forEach(a => {
+    if (a.type === 'l') {
+      // Likert: statement weight vector scaled by response strength (-1..1)
+      const w = a.w || {};
+      const f = a.v / 3;
+      eSum += f * (w.e || 0);
+      gSum += f * (w.g || 0);
+      eMaxTotal += Math.abs(w.e || 0);
+      gMaxTotal += Math.abs(w.g || 0);
+      if (hasParties) {
+        Object.keys(PARTY_META).forEach(p => {
+          if (p === 'ind') return;
+          partyTotals[p] += f * (w[p] || 0);
+          partyMaxes[p] += Math.abs(w[p] || 0);
+        });
+      }
+      return;
+    }
+
     const q = qs.find(q => q.id === a.id);
     if (!q) return;
 
     eSum += (a.e || 0);
     gSum += (a.g || 0);
-    
+
     // Normalise against max possible value on each axis to maintain scoring purity
     eMaxTotal += Math.max(...q.opts.map(o => Math.abs(o.e || 0)));
     gMaxTotal += Math.max(...q.opts.map(o => Math.abs(o.g || 0)));
@@ -950,7 +1127,17 @@ window.score = function() {
   const pairMap = {};
   answers.forEach(a => {
     if (!a.pair) return;
-    
+
+    if (!pairMap[a.pair]) pairMap[a.pair] = { nl: a.nl, node: a.node || a.nl, positions: [], stances: [] };
+
+    if (a.type === 'l') {
+      // Normalised stance on the underlying proposition: agreeing with the con
+      // framing means opposing the proposition, so its sign is inverted
+      const stance = (a.fr === 'con' ? -1 : 1) * (a.v / 3);
+      pairMap[a.pair].stances.push(stance);
+      return;
+    }
+
     // Ideological direction signal (economic primary, governance secondary)
     let posVal = 0;
     if (a.n !== undefined) {
@@ -958,25 +1145,30 @@ window.score = function() {
     } else {
       posVal = a.e !== 0 ? a.e : (a.g !== 0 ? -a.g : 0);
     }
-    
-    if (!pairMap[a.pair]) pairMap[a.pair] = { nl: a.nl, node: a.node || a.nl, positions: [] };
     if (posVal !== 0) pairMap[a.pair].positions.push(posVal);
   });
 
   const topicBias = {};
   Object.keys(pairMap).forEach(pk => {
-    const { nl, node, positions } = pairMap[pk];
-    if (positions.length < 2) return;
-    
-    const posCount = positions.filter(x => x > 0).length;
-    const negCount = positions.filter(x => x < 0).length;
-    const tot = posCount + negCount;
-    if (tot < 2) return;
+    const { nl, node, positions, stances } = pairMap[pk];
+    let bScore = null;
 
-    const maj = Math.max(posCount, negCount);
-    // Consistency calculation: 100% split = 100% bias score; perfectly consistent = 0% bias score
-    const bScore = Math.min(100, Math.max(0, Math.round((1 - maj / tot) * 200)));
-    
+    if (stances.length >= 2) {
+      // Graded drift: distance between the stance under each framing (0..2 → 0..100%)
+      const drift = (Math.max(...stances) - Math.min(...stances)) / 2;
+      bScore = Math.min(100, Math.max(0, Math.round(drift * 100)));
+    } else if (positions.length >= 2) {
+      const posCount = positions.filter(x => x > 0).length;
+      const negCount = positions.filter(x => x < 0).length;
+      const tot = posCount + negCount;
+      if (tot < 2) return;
+      const maj = Math.max(posCount, negCount);
+      // Consistency calculation: 100% split = 100% bias score; perfectly consistent = 0% bias score
+      bScore = Math.min(100, Math.max(0, Math.round((1 - maj / tot) * 200)));
+    }
+
+    if (bScore === null) return;
+
     // Group bias scores by high-level category name
     const category = node || nl;
     if (!topicBias[category]) topicBias[category] = [];
@@ -1214,11 +1406,12 @@ window.renderResults = function() {
   if (hasParties && typeof window.renderDisagreements === 'function') {
     const disagreeSec = document.getElementById('disagree-section');
     const dPartyName = document.getElementById('disagree-party-name');
+    const topName = (typeof meta.name === 'object') ? meta.name[lang] || meta.name.en : meta.name;
     if (disagreeSec) {
-      window.renderDisagreements(topPartyKey, meta.name, ranked[0][1]);
+      window.renderDisagreements(topPartyKey, topName, ranked[0][1]);
     }
     if (dPartyName) {
-      dPartyName.textContent = meta.name;
+      dPartyName.textContent = topName;
     }
   }
 
@@ -1270,33 +1463,45 @@ window.showBiasFaceoff = function(topic) {
     if (pairAnswers.length < 2) return;
 
     hasPairs = true;
-    
-    // Check if user contradictions occur (opposing directions picked)
-    const pos = pairAnswers.filter(x => {
-      let val = 0;
-      if (x.n !== undefined) val = x.n;
-      else val = x.e !== 0 ? x.e : (x.g !== 0 ? -x.g : 0);
-      return val > 0;
-    }).length;
-    
-    const neg = pairAnswers.filter(x => {
-      let val = 0;
-      if (x.n !== undefined) val = x.n;
-      else val = x.e !== 0 ? x.e : (x.g !== 0 ? -x.g : 0);
-      return val < 0;
-    }).length;
 
-    const tot = pos + neg;
-    if (tot < 2) return;
-    const maj = Math.max(pos, neg);
-    const isInconsistent = maj / tot < 1.0;
+    const isLikertPair = pairAnswers[0].type === 'l';
+    let isInconsistent = false;
+    let driftPct = null;
+
+    if (isLikertPair) {
+      const stances = pairAnswers.map(a => (a.fr === 'con' ? -1 : 1) * (a.v / 3));
+      driftPct = Math.min(100, Math.max(0, Math.round(((Math.max(...stances) - Math.min(...stances)) / 2) * 100)));
+      isInconsistent = driftPct >= 25;
+    } else {
+      // Check if user contradictions occur (opposing directions picked)
+      const pos = pairAnswers.filter(x => {
+        let val = 0;
+        if (x.n !== undefined) val = x.n;
+        else val = x.e !== 0 ? x.e : (x.g !== 0 ? -x.g : 0);
+        return val > 0;
+      }).length;
+
+      const neg = pairAnswers.filter(x => {
+        let val = 0;
+        if (x.n !== undefined) val = x.n;
+        else val = x.e !== 0 ? x.e : (x.g !== 0 ? -x.g : 0);
+        return val < 0;
+      }).length;
+
+      const tot = pos + neg;
+      if (tot < 2) return;
+      const maj = Math.max(pos, neg);
+      isInconsistent = maj / tot < 1.0;
+    }
+
+    const driftTag = driftPct !== null ? ` · ${tObj.driftLabel || ENGINE_TRANSLATIONS['en'].driftLabel}: ${driftPct}%` : '';
 
     html += `
       <div style="background:var(--parchment);border:1px solid ${isInconsistent ? 'var(--amber)' : 'var(--border-soft)'};border-left:4px solid ${isInconsistent ? 'var(--amber)' : 'var(--green)'};border-radius:6px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.02);">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
           <span style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-muted);">${comparisonLabel}: ${pairId.toUpperCase()}</span>
           <span style="font-size:10px;font-weight:500;padding:4px 8px;border-radius:3px;${isInconsistent ? 'background:var(--amber-soft);color:var(--amber);' : 'background:var(--green-soft);color:var(--green);'}">
-            ${isInconsistent ? shiftDetected : consistentStance}
+            ${isInconsistent ? shiftDetected : consistentStance}${driftTag}
           </span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
@@ -1310,7 +1515,15 @@ window.showBiasFaceoff = function(topic) {
       
       const frameColor = isPro ? 'var(--navy)' : isCon ? 'var(--red)' : 'var(--ink-muted)';
       const frameText = isPro ? framePro : isCon ? frameCon : frameNeutral;
-      const ansText = ans ? (q.opts[ans.pick] ? q.opts[ans.pick].t : ans.t) : skippedText;
+      const likertLabels = tObj.likert || ENGINE_TRANSLATIONS['en'].likert;
+      let ansText = skippedText;
+      if (ans) {
+        if (ans.type === 'l') {
+          ansText = likertLabels[ans.pick] || '';
+        } else {
+          ansText = q.opts && q.opts[ans.pick] ? q.opts[ans.pick].t : ans.t;
+        }
+      }
 
       html += `
         <div style="display:flex;flex-direction:column;justify-content:space-between;background:var(--white);border:1px solid var(--border-soft);border-radius:6px;padding:16px;">
@@ -1676,32 +1889,28 @@ window.copyLink = function() {
 // ============================================================
 // 9. PARTY DISAGREEMENTS CALCULATOR & RENDERER
 // ============================================================
+// Likert helper: compare the user's stance on a statement with a party's
+// expected stance (the sign of the party weight). Returns null when the
+// party has no meaningful position on that statement.
+function likertPartyDelta(a, partyKey) {
+  const w = (a.w || {})[partyKey];
+  if (!w || Math.abs(w) < 1) return null;
+  const f = a.v / 3;
+  return {
+    contribution: f * w,
+    max: Math.abs(w),
+    partyAgrees: w > 0
+  };
+}
+
+function likertAnswerText(a, lang) {
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+  const labels = tObj.likert || ENGINE_TRANSLATIONS['en'].likert;
+  return labels[a.pick] || '';
+}
+
 window.buildDisagreements = function(topParty) {
-  const disagree = [];
-  answers.forEach(a => {
-    const rawQ = qs.find(q => q.id === a.id);
-    if (!rawQ) return;
-    const q = (typeof window.getQuestion === 'function') ? window.getQuestion(rawQ) : rawQ;
-    
-    // Find best option for topParty
-    let bestScore = -Infinity, bestOpt = null;
-    q.opts.forEach(o => {
-      const ps = o[topParty] || 0;
-      if (ps > bestScore) { bestScore = ps; bestOpt = o; }
-    });
-    const userScore = a[topParty] || 0;
-    const gap = bestScore - userScore;
-    if (gap >= 2 && bestOpt && bestOpt.t !== (q.opts[a.pick] ? q.opts[a.pick].t : a.t)) {
-      disagree.push({
-        topic: q.nl,
-        question: q.q,
-        userAnswer: q.opts[a.pick] ? q.opts[a.pick].t : a.t,
-        partyAnswer: bestOpt.t,
-        gap
-      });
-    }
-  });
-  return disagree.sort((a, b) => b.gap - a.gap).slice(0, 5);
+  return window.buildAllDisagreements(topParty).slice(0, 5);
 };
 
 window.renderDisagreements = function(topParty, partyName, topPct) {
@@ -1747,18 +1956,31 @@ window.renderDisagreements = function(topParty, partyName, topPct) {
 
 window.buildAgreements = function(partyKey) {
   const agree = [];
+  const lang = window.currentLang || 'en';
   answers.forEach(a => {
     const rawQ = qs.find(q => q.id === a.id);
     if (!rawQ) return;
     const q = (typeof window.getQuestion === 'function') ? window.getQuestion(rawQ) : rawQ;
-    
+
+    if (a.type === 'l') {
+      const d = likertPartyDelta(a, partyKey);
+      if (d && d.contribution >= 0.67 * d.max) {
+        agree.push({
+          topic: q.nl,
+          question: q.q,
+          userAnswer: likertAnswerText(a, lang)
+        });
+      }
+      return;
+    }
+
     let bestScore = -Infinity;
     q.opts.forEach(o => {
       const ps = o[partyKey] || 0;
       if (ps > bestScore) { bestScore = ps; }
     });
     const userScore = a[partyKey] || 0;
-    
+
     if (userScore === bestScore && bestScore > 0) {
       agree.push({
         topic: q.nl,
@@ -1772,11 +1994,29 @@ window.buildAgreements = function(partyKey) {
 
 window.buildAllDisagreements = function(partyKey) {
   const disagree = [];
+  const lang = window.currentLang || 'en';
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
   answers.forEach(a => {
     const rawQ = qs.find(q => q.id === a.id);
     if (!rawQ) return;
     const q = (typeof window.getQuestion === 'function') ? window.getQuestion(rawQ) : rawQ;
-    
+
+    if (a.type === 'l') {
+      const d = likertPartyDelta(a, partyKey);
+      if (d && d.contribution <= -0.5 * d.max) {
+        disagree.push({
+          topic: q.nl,
+          question: q.q,
+          userAnswer: likertAnswerText(a, lang),
+          partyAnswer: d.partyAgrees
+            ? (tObj.wouldAgree || ENGINE_TRANSLATIONS['en'].wouldAgree)
+            : (tObj.wouldDisagree || ENGINE_TRANSLATIONS['en'].wouldDisagree),
+          gap: d.max - d.contribution
+        });
+      }
+      return;
+    }
+
     let bestScore = -Infinity, bestOpt = null;
     q.opts.forEach(o => {
       const ps = o[partyKey] || 0;
@@ -1908,9 +2148,24 @@ window.calculateTopicStances = function(userAnswers) {
   const topics = {};
   
   userAnswers.forEach(a => {
+    if (a.type === 'l') {
+      const category = a.nl;
+      if (!topics[category]) {
+        topics[category] = { eSum: 0, eMax: 0, gSum: 0, gMax: 0, count: 0 };
+      }
+      const w = a.w || {};
+      const f = a.v / 3;
+      topics[category].eSum += f * (w.e || 0);
+      topics[category].gSum += f * (w.g || 0);
+      topics[category].eMax += Math.abs(w.e || 0);
+      topics[category].gMax += Math.abs(w.g || 0);
+      topics[category].count++;
+      return;
+    }
+
     const q = qs.find(x => x.id === a.id);
     if (!q) return;
-    
+
     const category = q.nl;
     if (!topics[category]) {
       topics[category] = {
@@ -1921,14 +2176,14 @@ window.calculateTopicStances = function(userAnswers) {
         count: 0
       };
     }
-    
+
     const chosenOpt = q.opts[a.pick] || a;
     const optE = chosenOpt.e || 0;
     const optG = chosenOpt.g || 0;
-    
+
     topics[category].eSum += optE;
     topics[category].gSum += optG;
-    
+
     topics[category].eMax += Math.max(...q.opts.map(o => Math.abs(o.e || 0)));
     topics[category].gMax += Math.max(...q.opts.map(o => Math.abs(o.g || 0)));
     topics[category].count++;
@@ -2088,7 +2343,11 @@ window.renderSavedResults = function(payload) {
     overallBias = biasBreakdown.__overall_bias;
   }
   
-  const hasParties = payload.mode && payload.mode !== 'general';
+  // A saved result carries party/ideology matches when its breakdown holds
+  // keys that exist in this portal's PARTY_META (general saves ideology keys)
+  const breakdownKeys = Object.keys(biasBreakdown).filter(k => !k.startsWith('__'));
+  const hasParties = (payload.mode && payload.mode !== 'general')
+    || (typeof PARTY_META !== 'undefined' && breakdownKeys.some(k => PARTY_META[k]));
   window.savedResultId = payload.id;
   
   const lang = window.currentLang || 'en';

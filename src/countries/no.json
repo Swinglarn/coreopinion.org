@@ -4,7 +4,7 @@
   "localLabel": "Norge",
   "flag": "🇳🇴",
   "title": "Politisk Kompass Norge 2026 | CoreOpinion",
-  "desc": "Finn din posisjon på det politiske kompasset. 30 politiske spørsmål og påstander for å se din overensstemmelse med de største partiene på Stortinget.",
+  "desc": "Hvor står du i norsk politikk? 70 utsagn for å se din overensstemmelse med Ap, Høyre, FrP, Sp, SV, Rødt, Venstre og MDG, pluss din formuleringsbias.",
   "keywords": "politisk kompass norge, valgomat 2026, hvilket parti passer meg, stortingsvalg test, høyre arbeiderpartiet quiz, politisk test norge",
   "canonical": "https://coreopinion.org/no",
   "regions": [
@@ -125,1847 +125,1669 @@
     }
   },
   "heroTitle": "Hvor står du i <em>norsk</em> politikk?",
-  "heroSub": "30 politiske spørsmål og påstander om temaene som definerer Norge akkurat nå. Skatter, velferd, olje og innvandring. Se din overensstemmelse med alle partiene på Stortinget.",
+  "heroSub": "70 utsagn om sakene som preger Norge nå: olje og strøm, formuesskatt, innvandring, distrikt og klima. Hver holdning stilles to ganger med motsatt vinkling, som viser både din parti-overensstemmelse og din formuleringsbias.",
   "bank": [
     {
-      "id": "im1",
-      "nl": "Immigration",
-      "pair": "im-a",
-      "fr": "con",
-      "type": "sc",
-      "ctx": "Norway received over 160,000 asylum seekers in 2015 alone. Integration has been uneven. Gang violence has increased sharply in certain areas.",
-      "q": "Norway let in far too many people too quickly. The consequences are still being paid today.",
-      "opts": [
-        {
-          "t": "Yes. Immigration must be reduced sharply and integration demands must be much stricter.",
-          "e": 0,
-          "g": 2,
-          "s": -2,
-          "Ap": -2,
-          "H": 1,
-          "FrP": 2,
-          "Sp": -1,
-          "R": -2,
-          "MDG": -2,
-          "V": -1,
-          "SV": 1
-        },
-        {
-          "t": "The intake was high but the failure was in integration policy, not the numbers themselves.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "No. Norway benefited from immigration. The narrative of failure is driven by prejudice.",
-          "e": 0,
-          "g": -1,
-          "s": 1,
-          "Ap": 1,
-          "H": -1,
-          "FrP": -2,
-          "Sp": 1,
-          "R": 2,
-          "MDG": 2,
-          "V": 1,
-          "SV": -1
-        }
-      ]
-    },
-    {
-      "id": "im2",
-      "nl": "Immigration",
-      "pair": "im-a",
+      "id": "no1a",
+      "nl": "Energy",
+      "node": "energy",
+      "pair": "nop1",
       "fr": "pro",
-      "type": "s",
-      "q": "Temporary protection status should be made permanent for refugees who have built lives in Norway, regardless of conditions in their home country.",
-      "opts": [
-        {
-          "t": "Yes. Forcing people back to countries they fled is cruel and counterproductive.",
-          "e": 0,
-          "g": -2,
-          "s": 1,
-          "Ap": 1,
-          "H": -1,
-          "FrP": -2,
-          "Sp": 1,
-          "R": 2,
-          "MDG": 2,
-          "V": 1,
-          "SV": -1
-        },
-        {
-          "t": "Conditional on integration milestones, yes.",
-          "e": 0,
-          "g": 0,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": -1,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 1,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "No. Temporary status must mean temporary. Otherwise the system loses credibility.",
-          "e": 0,
-          "g": 2,
-          "s": -1,
-          "Ap": -1,
-          "H": 1,
-          "FrP": 2,
-          "Sp": -1,
-          "R": -2,
-          "MDG": -1,
-          "V": -1,
-          "SV": 1
-        }
-      ]
+      "type": "l",
+      "q": "Norway should keep exploring for and producing oil and gas for decades to come.",
+      "w": {
+        "e": 1,
+        "g": 0,
+        "Ap": 1,
+        "H": 1.5,
+        "FrP": 2,
+        "Sp": 1,
+        "SV": -2,
+        "R": -2,
+        "V": -1,
+        "MDG": -2
+      },
+      "dec": true
     },
     {
-      "id": "im3",
+      "id": "no1b",
+      "nl": "Energy",
+      "node": "energy",
+      "pair": "nop1",
+      "fr": "con",
+      "type": "l",
+      "q": "Norway must wind down oil and gas and stop searching for new fields.",
+      "w": {
+        "e": -1,
+        "g": 0,
+        "Ap": -1,
+        "H": -1.5,
+        "FrP": -2,
+        "Sp": -1,
+        "SV": 2,
+        "R": 2,
+        "V": 1,
+        "MDG": 2
+      },
+      "dec": true
+    },
+    {
+      "id": "no2a",
+      "nl": "Electricity",
+      "node": "energy",
+      "pair": "nop2",
+      "fr": "pro",
+      "type": "l",
+      "q": "The state should cap electricity prices and take political control of power exports.",
+      "w": {
+        "e": -1,
+        "g": 0.5,
+        "Ap": 0.5,
+        "H": -1,
+        "FrP": 1.5,
+        "Sp": 1.5,
+        "SV": 1.5,
+        "R": 2,
+        "V": -1.5,
+        "MDG": -0.5
+      },
+      "dec": true
+    },
+    {
+      "id": "no2b",
+      "nl": "Electricity",
+      "node": "energy",
+      "pair": "nop2",
+      "fr": "con",
+      "type": "l",
+      "q": "Interfering with the power market and exports would undermine investment and our allies.",
+      "w": {
+        "e": 1,
+        "g": -0.5,
+        "Ap": -0.5,
+        "H": 1,
+        "FrP": -1.5,
+        "Sp": -1.5,
+        "SV": -1.5,
+        "R": -2,
+        "V": 1.5,
+        "MDG": 0.5
+      },
+      "dec": true
+    },
+    {
+      "id": "no3a",
+      "nl": "Tax",
+      "node": "tax",
+      "pair": "nop3",
+      "fr": "pro",
+      "type": "l",
+      "q": "The wealth tax (formuesskatt) on the richest should be kept and increased.",
+      "w": {
+        "e": -1.5,
+        "Ap": 1,
+        "H": -2,
+        "FrP": -1.5,
+        "Sp": 0.5,
+        "SV": 2,
+        "R": 2,
+        "V": -1.5,
+        "MDG": 1,
+        "g": 0
+      },
+      "dec": true
+    },
+    {
+      "id": "no3b",
+      "nl": "Tax",
+      "node": "tax",
+      "pair": "nop3",
+      "fr": "con",
+      "type": "l",
+      "q": "The wealth tax is driving Norway’s entrepreneurs abroad and should be abolished.",
+      "w": {
+        "e": 1.5,
+        "Ap": -1,
+        "H": 2,
+        "FrP": 1.5,
+        "Sp": -0.5,
+        "SV": -2,
+        "R": -2,
+        "V": 1.5,
+        "MDG": -1,
+        "g": 0
+      },
+      "dec": true
+    },
+    {
+      "id": "no4a",
       "nl": "Immigration",
-      "pair": "im-b",
-      "fr": "con",
-      "type": "s",
-      "q": "Norway should pay people to return to their countries of origin if they are willing to leave voluntarily.",
-      "opts": [
-        {
-          "t": "Yes. Voluntary return programs save money and reduce social tension.",
-          "e": 0,
-          "g": 1,
-          "s": -1,
-          "Ap": -1,
-          "H": 1,
-          "FrP": 2,
-          "Sp": -1,
-          "R": -2,
-          "MDG": -2,
-          "V": -1,
-          "SV": 1
-        },
-        {
-          "t": "As a last resort with genuine safeguards, such programs exist elsewhere.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": -1,
-          "MDG": -1,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "No. Paying people to leave is incompatible with human dignity.",
-          "e": 0,
-          "g": -1,
-          "s": 1,
-          "Ap": 1,
-          "H": -1,
-          "FrP": -2,
-          "Sp": 1,
-          "R": 2,
-          "MDG": 2,
-          "V": 1,
-          "SV": -1
-        }
-      ]
+      "node": "immig",
+      "pair": "nop4",
+      "fr": "pro",
+      "type": "l",
+      "q": "Immigration to Norway is too high and should be cut sharply.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "H": 0.5,
+        "FrP": 2,
+        "Sp": 0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -1,
+        "MDG": -1.5
+      },
+      "dec": true
     },
     {
-      "id": "im4",
+      "id": "no4b",
       "nl": "Immigration",
-      "pair": "im-b",
-      "fr": "pro",
-      "type": "s",
-      "q": "Language requirements, citizenship tests, and integration contracts are reasonable demands that respect both newcomers and the host society.",
-      "opts": [
-        {
-          "t": "Yes. Integration obligations are a sign of taking newcomers seriously.",
-          "e": 0,
-          "g": 1,
-          "s": 1,
-          "Ap": 1,
-          "H": 1,
-          "FrP": 1,
-          "Sp": 0,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "Voluntary programs work better than coercive ones.",
-          "e": 0,
-          "g": -1,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": -1,
-          "Sp": 1,
-          "R": 1,
-          "MDG": 1,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Support and opportunity integrate people better than contracts and tests.",
-          "e": 0,
-          "g": -1,
-          "s": 0,
-          "Ap": 0,
-          "H": -1,
-          "FrP": -2,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 2,
-          "V": -1,
-          "SV": -1
-        }
-      ]
-    },
-    {
-      "id": "cr1",
-      "nl": "Crime and justice",
-      "pair": "cr-a",
+      "node": "immig",
+      "pair": "nop4",
       "fr": "con",
-      "type": "sc",
-      "ctx": "Norway had more than 400 shootings in 2023. Gang-related explosions reached record levels. Several European countries now warn their citizens about travelling to certain Norwegian cities.",
-      "q": "The gang violence crisis is a national emergency that requires a fundamentally tougher response.",
-      "opts": [
-        {
-          "t": "Yes. Hårdare straff, fler poliser och snabbare utvisning av dömda kriminella.",
-          "e": 0,
-          "g": 2,
-          "s": 0,
-          "Ap": 0,
-          "H": 2,
-          "FrP": 2,
-          "Sp": -1,
-          "R": -2,
-          "MDG": -2,
-          "V": -1,
-          "SV": 2
-        },
-        {
-          "t": "Enforcement matters but the root causes lie in poverty, segregation, and exclusion.",
-          "e": -1,
-          "g": 0,
-          "s": 2,
-          "Ap": 2,
-          "H": -1,
-          "FrP": -1,
-          "Sp": 0,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Both tougher enforcement now and long-term investment in inclusion.",
-          "e": 0,
-          "g": 1,
-          "s": 1,
-          "Ap": 1,
-          "H": 1,
-          "FrP": 1,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 1,
-          "SV": 1
-        }
-      ]
+      "type": "l",
+      "q": "Immigrants strengthen Norway’s economy and society, and asylum is a humanitarian duty.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "H": -0.5,
+        "FrP": -2,
+        "Sp": -0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 1,
+        "MDG": 1.5
+      },
+      "dec": true
     },
     {
-      "id": "cr2",
-      "nl": "Crime and justice",
-      "pair": "cr-a",
+      "id": "no5a",
+      "nl": "Districts",
+      "node": "civic",
+      "pair": "nop5",
       "fr": "pro",
-      "type": "s",
-      "q": "Criminalising membership in gangs, rather than just criminal acts, is necessary to break the cycle of violence.",
-      "opts": [
-        {
-          "t": "Yes. Gang structures must be dismantled and membership itself made illegal.",
-          "e": 0,
-          "g": 2,
-          "s": 0,
-          "Ap": 0,
-          "H": 2,
-          "FrP": 2,
-          "Sp": -1,
-          "R": -2,
-          "MDG": -2,
-          "V": -2,
-          "SV": 1
-        },
-        {
-          "t": "Only with very narrow definitions to avoid criminalising association.",
-          "e": 0,
-          "g": 1,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": 1,
-          "Sp": 0,
-          "R": -1,
-          "MDG": -1,
-          "V": -1,
-          "SV": 0
-        },
-        {
-          "t": "No. Criminalising membership without criminal acts violates fundamental legal principles.",
-          "e": 0,
-          "g": -2,
-          "s": 0,
-          "Ap": 0,
-          "H": -1,
-          "FrP": -1,
-          "Sp": 1,
-          "R": 2,
-          "MDG": 2,
-          "V": 2,
-          "SV": -1
-        }
-      ]
+      "type": "l",
+      "q": "Power, jobs, and services should be moved out of Oslo and back to the districts.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": 0.5,
+        "H": -1,
+        "FrP": 0.5,
+        "Sp": 2,
+        "SV": 0.5,
+        "R": 1,
+        "V": -1,
+        "MDG": -0.5
+      }
     },
     {
-      "id": "wl1",
-      "nl": "Welfare and social policy",
-      "pair": "wl-a",
-      "fr": "pro",
-      "type": "s",
-      "q": "The Norwegian welfare state is the foundation of a successful society. Cuts to it in the name of fiscal discipline are ideological, not economic.",
-      "opts": [
-        {
-          "t": "Yes. The welfare state is what makes Norway work. Protect and strengthen it.",
-          "e": -2,
-          "g": 1,
-          "s": 2,
-          "Ap": 2,
-          "H": -1,
-          "FrP": 0,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "The welfare state is essential but it needs reform to remain sustainable.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "The welfare state has grown too large and crowds out individual responsibility.",
-          "e": 2,
-          "g": -1,
-          "s": -2,
-          "Ap": -2,
-          "H": 2,
-          "FrP": 1,
-          "Sp": 1,
-          "R": -2,
-          "MDG": -2,
-          "V": 1,
-          "SV": 0
-        }
-      ]
-    },
-    {
-      "id": "wl2",
-      "nl": "Welfare and social policy",
-      "pair": "wl-a",
+      "id": "no5b",
+      "nl": "Districts",
+      "node": "civic",
+      "pair": "nop5",
       "fr": "con",
-      "type": "s",
-      "q": "People who have never paid into the Norwegian welfare system should not receive the same benefits as those who have contributed for decades.",
-      "opts": [
-        {
-          "t": "Yes. Contribution should determine entitlement.",
-          "e": 1,
-          "g": 1,
-          "s": 0,
-          "Ap": 0,
-          "H": 2,
-          "FrP": 2,
-          "Sp": 0,
-          "R": -2,
-          "MDG": -2,
-          "V": 0,
-          "SV": 1
-        },
-        {
-          "t": "Need must also matter, but some contribution-linked elements are reasonable.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "No. Need, not contribution history, must be the basis of a fair system.",
-          "e": -2,
-          "g": -1,
-          "s": 2,
-          "Ap": 2,
-          "H": -1,
-          "FrP": -2,
-          "Sp": 0,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": -1
-        }
-      ]
+      "type": "l",
+      "q": "Concentrating activity where people actually live and work is more efficient than propping up the districts.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": -0.5,
+        "H": 1,
+        "FrP": -0.5,
+        "Sp": -2,
+        "SV": -0.5,
+        "R": -1,
+        "V": 1,
+        "MDG": 0.5
+      }
     },
     {
-      "id": "hc1",
+      "id": "no6a",
+      "nl": "Tolls",
+      "node": "welfare",
+      "pair": "nop6",
+      "fr": "pro",
+      "type": "l",
+      "q": "Road tolls (bompenger) are an unfair burden on ordinary people and should be scrapped.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": -0.5,
+        "H": -0.5,
+        "FrP": 2,
+        "Sp": 1,
+        "SV": -1,
+        "R": 0.5,
+        "V": -1.5,
+        "MDG": -2
+      }
+    },
+    {
+      "id": "no6b",
+      "nl": "Tolls",
+      "node": "welfare",
+      "pair": "nop6",
+      "fr": "con",
+      "type": "l",
+      "q": "Tolls make polluters and road users pay their fair share and fund the roads.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": 0.5,
+        "H": 0.5,
+        "FrP": -2,
+        "Sp": -1,
+        "SV": 1,
+        "R": -0.5,
+        "V": 1.5,
+        "MDG": 2
+      }
+    },
+    {
+      "id": "no7a",
+      "nl": "Europe",
+      "node": "eu",
+      "pair": "nop7",
+      "fr": "pro",
+      "type": "l",
+      "q": "Norway should keep the EEA agreement (EØS) that ties it closely to the EU.",
+      "w": {
+        "e": 0.5,
+        "g": 0,
+        "Ap": 1,
+        "H": 1.5,
+        "FrP": 0.5,
+        "Sp": -1.5,
+        "SV": -1.5,
+        "R": -2,
+        "V": 1.5,
+        "MDG": 0.5
+      }
+    },
+    {
+      "id": "no7b",
+      "nl": "Europe",
+      "node": "eu",
+      "pair": "nop7",
+      "fr": "con",
+      "type": "l",
+      "q": "The EEA agreement hands too much power over Norway to Brussels and should be renegotiated or scrapped.",
+      "w": {
+        "e": -0.5,
+        "g": 0,
+        "Ap": -1,
+        "H": -1.5,
+        "FrP": -0.5,
+        "Sp": 1.5,
+        "SV": 1.5,
+        "R": 2,
+        "V": -1.5,
+        "MDG": -0.5
+      }
+    },
+    {
+      "id": "no8a",
+      "nl": "Climate",
+      "node": "climate",
+      "pair": "nop8",
+      "fr": "pro",
+      "type": "l",
+      "q": "Norway must cut its own emissions far faster, even at economic cost.",
+      "w": {
+        "e": -0.5,
+        "H": -0.5,
+        "FrP": -2,
+        "Sp": -0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 1,
+        "MDG": 2,
+        "g": 0
+      }
+    },
+    {
+      "id": "no8b",
+      "nl": "Climate",
+      "node": "climate",
+      "pair": "nop8",
+      "fr": "con",
+      "type": "l",
+      "q": "Costly climate measures at home mean little globally and just burden ordinary Norwegians.",
+      "w": {
+        "e": 0.5,
+        "H": 0.5,
+        "FrP": 2,
+        "Sp": 0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -1,
+        "MDG": -2,
+        "g": 0
+      }
+    },
+    {
+      "id": "no9a",
+      "nl": "Business",
+      "node": "business",
+      "pair": "nop9",
+      "fr": "pro",
+      "type": "l",
+      "q": "The new tax on salmon farming (grunnrenteskatt) is fair and should stay.",
+      "w": {
+        "e": -1,
+        "Ap": 1,
+        "H": -1,
+        "FrP": -1.5,
+        "Sp": -0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": -0.5,
+        "MDG": 1,
+        "g": 0
+      }
+    },
+    {
+      "id": "no9b",
+      "nl": "Business",
+      "node": "business",
+      "pair": "nop9",
+      "fr": "con",
+      "type": "l",
+      "q": "The salmon tax punishes coastal industry and drives investment out of Norway.",
+      "w": {
+        "e": 1,
+        "Ap": -1,
+        "H": 1,
+        "FrP": 1.5,
+        "Sp": 0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": 0.5,
+        "MDG": -1,
+        "g": 0
+      }
+    },
+    {
+      "id": "no10a",
+      "nl": "Welfare",
+      "node": "welfare",
+      "pair": "nop10",
+      "fr": "pro",
+      "type": "l",
+      "q": "Norway’s oil wealth should be used more generously on welfare here and now.",
+      "w": {
+        "e": -1,
+        "H": -1,
+        "FrP": 1.5,
+        "Sp": 0.5,
+        "SV": 1.5,
+        "R": 2,
+        "V": -1,
+        "MDG": -0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "no10b",
+      "nl": "Welfare",
+      "node": "welfare",
+      "pair": "nop10",
+      "fr": "con",
+      "type": "l",
+      "q": "Spending more of the oil fund now would fuel inflation and rob future generations.",
+      "w": {
+        "e": 1,
+        "H": 1,
+        "FrP": -1.5,
+        "Sp": -0.5,
+        "SV": -1.5,
+        "R": -2,
+        "V": 1,
+        "MDG": 0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "no11a",
+      "nl": "Predators",
+      "node": "climate",
+      "pair": "nop11",
+      "fr": "pro",
+      "type": "l",
+      "q": "Norway should protect wolves and other predators even when they threaten livestock.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": -0.5,
+        "FrP": -1.5,
+        "Sp": -2,
+        "SV": 1,
+        "R": 0.5,
+        "V": 1,
+        "MDG": 2
+      }
+    },
+    {
+      "id": "no11b",
+      "nl": "Predators",
+      "node": "climate",
+      "pair": "nop11",
+      "fr": "con",
+      "type": "l",
+      "q": "Farmers and rural communities come first; predator numbers must be kept firmly down.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": 0.5,
+        "FrP": 1.5,
+        "Sp": 2,
+        "SV": -1,
+        "R": -0.5,
+        "V": -1,
+        "MDG": -2
+      }
+    },
+    {
+      "id": "no12a",
       "nl": "Healthcare",
-      "pair": "hc-a",
+      "node": "health",
+      "pair": "nop12",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "Norwegian healthcare queues are among the longest in the EU. The 90-day guarantee is routinely breached. Regional inequalities in care quality are significant.",
-      "q": "The healthcare crisis demands more public investment, not private alternatives.",
-      "opts": [
-        {
-          "t": "Yes. Public healthcare must be properly funded and staffed.",
-          "e": -2,
-          "g": 2,
-          "s": 2,
-          "Ap": 2,
-          "H": -1,
-          "FrP": 0,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Private providers alongside public can reduce queues without threatening equality.",
-          "e": 1,
-          "g": 0,
-          "s": -1,
-          "Ap": -1,
-          "H": 2,
-          "FrP": 1,
-          "Sp": 2,
-          "R": -2,
-          "MDG": -1,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "More funding and better organisation of the public system is the only real answer.",
-          "e": -1,
-          "g": 1,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 1,
-          "V": 0,
-          "SV": 1
-        }
-      ]
+      "type": "l",
+      "q": "Public healthcare must be funded far more, and private clinics rolled back.",
+      "w": {
+        "e": -1.5,
+        "Ap": 1,
+        "H": -1,
+        "FrP": -1,
+        "Sp": 0.5,
+        "SV": 1.5,
+        "R": 2,
+        "V": -0.5,
+        "MDG": 0.5,
+        "g": 0
+      }
     },
     {
-      "id": "hc2",
+      "id": "no12b",
       "nl": "Healthcare",
-      "pair": "hc-a",
+      "node": "health",
+      "pair": "nop12",
       "fr": "con",
-      "type": "s",
-      "q": "Profit-driven healthcare companies siphon money from patient care to shareholders. They should not be allowed to operate within the public system.",
-      "opts": [
-        {
-          "t": "Yes. Healthcare profit extraction is incompatible with equal care.",
-          "e": -2,
-          "g": 1,
-          "s": 2,
-          "Ap": 2,
-          "H": -2,
-          "FrP": -1,
-          "Sp": -2,
-          "R": 2,
-          "MDG": 2,
-          "V": -1,
-          "SV": -1
-        },
-        {
-          "t": "Some private delivery is efficient if properly regulated and quality-monitored.",
-          "e": 0,
-          "g": 0,
-          "s": -1,
-          "Ap": -1,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "No. Competition improves quality and efficiency.",
-          "e": 2,
-          "g": -1,
-          "s": -2,
-          "Ap": -2,
-          "H": 2,
-          "FrP": 0,
-          "Sp": 2,
-          "R": -2,
-          "MDG": -2,
-          "V": 1,
-          "SV": 1
-        }
-      ]
+      "type": "l",
+      "q": "More private provision would relieve pressure and cut waiting times in the public system.",
+      "w": {
+        "e": 1.5,
+        "Ap": -1,
+        "H": 1,
+        "FrP": 1,
+        "Sp": -0.5,
+        "SV": -1.5,
+        "R": -2,
+        "V": 0.5,
+        "MDG": -0.5,
+        "g": 0
+      }
     },
     {
-      "id": "ed1",
+      "id": "no13a",
+      "nl": "Identity and rights",
+      "node": "lgbtq",
+      "pair": "nop13",
+      "fr": "pro",
+      "type": "l",
+      "q": "Trans people should be able to change their legal gender by self-declaration.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "Ap": 0.5,
+        "FrP": -2,
+        "Sp": -0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 1,
+        "MDG": 1.5
+      }
+    },
+    {
+      "id": "no13b",
+      "nl": "Identity and rights",
+      "node": "lgbtq",
+      "pair": "nop13",
+      "fr": "con",
+      "type": "l",
+      "q": "Legal sex cannot be a matter of mere declaration; biological reality must prevail.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "Ap": -0.5,
+        "FrP": 2,
+        "Sp": 0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -1,
+        "MDG": -1.5
+      }
+    },
+    {
+      "id": "no14a",
+      "nl": "Religion",
+      "node": "religion",
+      "pair": "nop14",
+      "fr": "pro",
+      "type": "l",
+      "q": "Islam is not compatible with Norwegian values.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "Ap": -1,
+        "H": -0.5,
+        "FrP": 1.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -1,
+        "MDG": -1.5
+      },
+      "dec": true
+    },
+    {
+      "id": "no14b",
+      "nl": "Religion",
+      "node": "religion",
+      "pair": "nop14",
+      "fr": "con",
+      "type": "l",
+      "q": "Norwegian Muslims are full members of society, and their faith deserves equal respect.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "Ap": 1,
+        "H": 0.5,
+        "FrP": -1.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 1,
+        "MDG": 1.5
+      },
+      "dec": true
+    },
+    {
+      "id": "no15a",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nop15",
+      "fr": "pro",
+      "type": "l",
+      "q": "Some ethnic groups are simply more prone to crime and violence than others.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "Ap": -1,
+        "H": -0.5,
+        "FrP": 1,
+        "Sp": -0.5,
+        "SV": -1.5,
+        "R": -2,
+        "V": -1,
+        "MDG": -1.5
+      }
+    },
+    {
+      "id": "no15b",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nop15",
+      "fr": "con",
+      "type": "l",
+      "q": "No ethnic group is born criminal; behaviour comes from circumstances, not blood.",
+      "w": {
+        "e": 0,
+        "g": -0.5,
+        "Ap": 1,
+        "H": 0.5,
+        "FrP": -1,
+        "Sp": 0.5,
+        "SV": 1.5,
+        "R": 2,
+        "V": 1,
+        "MDG": 1.5
+      }
+    },
+    {
+      "id": "no16a",
+      "nl": "Work and labour",
+      "node": "labour",
+      "pair": "nop16",
+      "fr": "pro",
+      "type": "l",
+      "q": "Unions and workers’ rights should be strengthened, and temporary hiring restricted.",
+      "w": {
+        "e": -1.5,
+        "Ap": 1.5,
+        "H": -1.5,
+        "FrP": -1,
+        "Sp": 0.5,
+        "SV": 2,
+        "R": 2,
+        "V": -1,
+        "MDG": 0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "no16b",
+      "nl": "Work and labour",
+      "node": "labour",
+      "pair": "nop16",
+      "fr": "con",
+      "type": "l",
+      "q": "Rigid labour rules and union power cost jobs and hurt small businesses.",
+      "w": {
+        "e": 1.5,
+        "Ap": -1.5,
+        "H": 1.5,
+        "FrP": 1,
+        "Sp": -0.5,
+        "SV": -2,
+        "R": -2,
+        "V": 1,
+        "MDG": -0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "no17a",
+      "nl": "Crime",
+      "node": "crime",
+      "pair": "nop17",
+      "fr": "pro",
+      "type": "l",
+      "q": "Norway needs tougher sentences and more police to keep people safe.",
+      "w": {
+        "e": 0,
+        "g": 1.5,
+        "H": 1,
+        "FrP": 2,
+        "Sp": 0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -0.5,
+        "MDG": -1
+      }
+    },
+    {
+      "id": "no17b",
+      "nl": "Crime",
+      "node": "crime",
+      "pair": "nop17",
+      "fr": "con",
+      "type": "l",
+      "q": "Ever tougher sentences never cut crime; prevention and rehabilitation do.",
+      "w": {
+        "e": 0,
+        "g": -1.5,
+        "H": -1,
+        "FrP": -2,
+        "Sp": -0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 0.5,
+        "MDG": 1
+      }
+    },
+    {
+      "id": "no18a",
+      "nl": "Defence",
+      "node": "military",
+      "pair": "nop18",
+      "fr": "pro",
+      "type": "l",
+      "q": "Norway should raise defence spending and firmly back Ukraine against Russia.",
+      "w": {
+        "e": 0.5,
+        "g": 0.5,
+        "Ap": 1.5,
+        "H": 1.5,
+        "FrP": 1.5,
+        "Sp": 0.5,
+        "SV": -1,
+        "R": -2,
+        "V": 1
+      }
+    },
+    {
+      "id": "no18b",
+      "nl": "Defence",
+      "node": "military",
+      "pair": "nop18",
+      "fr": "con",
+      "type": "l",
+      "q": "Money for the military is money that should go to welfare and climate at home.",
+      "w": {
+        "e": -0.5,
+        "g": -0.5,
+        "Ap": -1.5,
+        "H": -1.5,
+        "FrP": -1.5,
+        "Sp": -0.5,
+        "SV": 1,
+        "R": 2,
+        "V": -1
+      }
+    },
+    {
+      "id": "no19a",
+      "nl": "Business",
+      "node": "business",
+      "pair": "nop19",
+      "fr": "pro",
+      "type": "l",
+      "q": "Norway over-regulates and over-taxes business; the state should get out of the way.",
+      "w": {
+        "e": 2,
+        "g": -0.5,
+        "Ap": -1,
+        "H": 1.5,
+        "FrP": 1.5,
+        "Sp": -0.5,
+        "SV": -2,
+        "R": -2,
+        "V": 1,
+        "MDG": -1
+      }
+    },
+    {
+      "id": "no19b",
+      "nl": "Business",
+      "node": "business",
+      "pair": "nop19",
+      "fr": "con",
+      "type": "l",
+      "q": "Cutting regulation just erodes protection for workers, consumers, and nature.",
+      "w": {
+        "e": -2,
+        "g": 0.5,
+        "Ap": 1,
+        "H": -1.5,
+        "FrP": -1.5,
+        "Sp": 0.5,
+        "SV": 2,
+        "R": 2,
+        "V": -1,
+        "MDG": 1
+      }
+    },
+    {
+      "id": "no20a",
+      "nl": "Alcohol",
+      "node": "health",
+      "pair": "nop20",
+      "fr": "pro",
+      "type": "l",
+      "q": "The state alcohol monopoly (Vinmonopolet) and strict alcohol rules should be kept.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "Ap": 0.5,
+        "FrP": -1.5,
+        "Sp": 1,
+        "SV": 1,
+        "R": 1,
+        "V": -0.5,
+        "MDG": 0.5
+      }
+    },
+    {
+      "id": "no20b",
+      "nl": "Alcohol",
+      "node": "health",
+      "pair": "nop20",
+      "fr": "con",
+      "type": "l",
+      "q": "Adults can make their own choices; alcohol should be sold freely in shops.",
+      "w": {
+        "e": 0,
+        "g": -0.5,
+        "Ap": -0.5,
+        "FrP": 1.5,
+        "Sp": -1,
+        "SV": -1,
+        "R": -1,
+        "V": 0.5,
+        "MDG": -0.5
+      }
+    },
+    {
+      "id": "no21a",
+      "nl": "Rights",
+      "node": "repro",
+      "pair": "nop21",
+      "fr": "pro",
+      "type": "l",
+      "q": "The right to abortion should be extended, for example to week 18.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "Ap": 0.5,
+        "H": -0.5,
+        "FrP": -1,
+        "Sp": -0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 0.5,
+        "MDG": 1
+      }
+    },
+    {
+      "id": "no21b",
+      "nl": "Rights",
+      "node": "repro",
+      "pair": "nop21",
+      "fr": "con",
+      "type": "l",
+      "q": "Extending the abortion limit goes too far and devalues human life.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "Ap": -0.5,
+        "H": 0.5,
+        "FrP": 1,
+        "Sp": 0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -0.5,
+        "MDG": -1
+      }
+    },
+    {
+      "id": "no22a",
+      "nl": "Drugs",
+      "node": "drugs",
+      "pair": "nop22",
+      "fr": "pro",
+      "type": "l",
+      "q": "Drug use should be decriminalised and treated as a health issue (the reform Norway rejected).",
+      "w": {
+        "e": 0,
+        "g": -1.5,
+        "Ap": -0.5,
+        "H": 0.5,
+        "FrP": -1.5,
+        "Sp": -1,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 2,
+        "MDG": 1.5
+      }
+    },
+    {
+      "id": "no22b",
+      "nl": "Drugs",
+      "node": "drugs",
+      "pair": "nop22",
+      "fr": "con",
+      "type": "l",
+      "q": "Decriminalising drugs sends the wrong signal and would worsen addiction.",
+      "w": {
+        "e": 0,
+        "g": 1.5,
+        "Ap": 0.5,
+        "H": -0.5,
+        "FrP": 1.5,
+        "Sp": 1,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -2,
+        "MDG": -1.5
+      }
+    },
+    {
+      "id": "no23a",
+      "nl": "Sami",
+      "node": "culture",
+      "pair": "nop23",
+      "fr": "pro",
+      "type": "l",
+      "q": "Sami rights to land, language, and reindeer herding should be strengthened.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": 0.5,
+        "H": -0.5,
+        "FrP": -2,
+        "Sp": -0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 1,
+        "MDG": 1.5
+      }
+    },
+    {
+      "id": "no23b",
+      "nl": "Sami",
+      "node": "culture",
+      "pair": "nop23",
+      "fr": "con",
+      "type": "l",
+      "q": "Special Sami rights over land and resources have gone too far and hold back development.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": -0.5,
+        "H": 0.5,
+        "FrP": 2,
+        "Sp": 0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -1,
+        "MDG": -1.5
+      }
+    },
+    {
+      "id": "no24a",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nop24",
+      "fr": "pro",
+      "type": "l",
+      "q": "Immigrants should adapt to Norwegian culture and values, not the other way around.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "Ap": 0.5,
+        "H": 0.5,
+        "FrP": 2,
+        "Sp": 0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": -0.5,
+        "MDG": -1
+      }
+    },
+    {
+      "id": "no24b",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nop24",
+      "fr": "con",
+      "type": "l",
+      "q": "A living culture is always mixed; demanding assimilation impoverishes Norway.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "Ap": -0.5,
+        "H": -0.5,
+        "FrP": -2,
+        "Sp": -0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": 0.5,
+        "MDG": 1
+      }
+    },
+    {
+      "id": "no25a",
+      "nl": "Media",
+      "node": "media",
+      "pair": "nop25",
+      "fr": "pro",
+      "type": "l",
+      "q": "Public broadcasting (NRK) is worth its licence funding and must stay independent.",
+      "w": {
+        "e": -0.5,
+        "Ap": 1,
+        "FrP": -2,
+        "Sp": 0.5,
+        "SV": 1,
+        "R": 0.5,
+        "MDG": 1,
+        "g": 0
+      }
+    },
+    {
+      "id": "no25b",
+      "nl": "Media",
+      "node": "media",
+      "pair": "nop25",
+      "fr": "con",
+      "type": "l",
+      "q": "NRK is bloated and biased, and its funding should be cut sharply.",
+      "w": {
+        "e": 0.5,
+        "Ap": -1,
+        "FrP": 2,
+        "Sp": -0.5,
+        "SV": -1,
+        "R": -0.5,
+        "MDG": -1,
+        "g": 0
+      }
+    },
+    {
+      "id": "no26a",
+      "nl": "Environment and industry",
+      "node": "climate",
+      "pair": "nop26",
+      "fr": "pro",
+      "type": "l",
+      "q": "Protecting untouched nature should take priority over new wind farms and mines.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": -0.5,
+        "H": -0.5,
+        "FrP": -1,
+        "Sp": 0.5,
+        "SV": 0.5,
+        "R": 0.5,
+        "V": 0.5,
+        "MDG": 2
+      }
+    },
+    {
+      "id": "no26b",
+      "nl": "Environment and industry",
+      "node": "climate",
+      "pair": "nop26",
+      "fr": "con",
+      "type": "l",
+      "q": "Norway needs new energy and industry, even if some nature must give way.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": 0.5,
+        "H": 0.5,
+        "FrP": 1,
+        "Sp": -0.5,
+        "SV": -0.5,
+        "R": -0.5,
+        "V": -0.5,
+        "MDG": -2
+      }
+    },
+    {
+      "id": "no27a",
       "nl": "Education",
-      "pair": "ed-a",
+      "node": "education",
+      "pair": "nop27",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "PISA results show Norwegian school performance has declined significantly. Segregation between schools is among the worst in the OECD. The free school system has come under intense scrutiny.",
-      "q": "The free school reform has increased segregation and undermined equal education. It needs to be reversed.",
-      "opts": [
-        {
-          "t": "Yes. Vinstdrivna friskolor har misslyckats and should be abolished.",
-          "e": -2,
-          "g": 2,
-          "s": 2,
-          "Ap": 2,
-          "H": -2,
-          "FrP": -1,
-          "Sp": -2,
-          "R": 2,
-          "MDG": 2,
-          "V": -1,
-          "SV": -1
-        },
-        {
-          "t": "Reform free schools strictly but keep the freedom of choice element.",
-          "e": 0,
-          "g": 0,
-          "s": -1,
-          "Ap": -1,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "No. Free schools offer parents choice and competition that raises standards.",
-          "e": 2,
-          "g": -1,
-          "s": -2,
-          "Ap": -2,
-          "H": 2,
-          "FrP": 1,
-          "Sp": 2,
-          "R": -2,
-          "MDG": -2,
-          "V": 1,
-          "SV": 1
-        }
-      ]
+      "type": "l",
+      "q": "Private schools should be limited; public schooling must come first.",
+      "w": {
+        "e": -0.5,
+        "g": 0.5,
+        "Ap": 1,
+        "H": -1,
+        "FrP": -1,
+        "Sp": 1,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": -1,
+        "MDG": 0.5
+      }
     },
     {
-      "id": "ed2",
+      "id": "no27b",
       "nl": "Education",
-      "pair": "ed-a",
+      "node": "education",
+      "pair": "nop27",
       "fr": "con",
-      "type": "s",
-      "q": "Teachers need more authority in the classroom. Student disruption and behavioural problems are undermining the learning environment.",
-      "opts": [
-        {
-          "t": "Yes. Teacher authority and clear discipline are necessary for learning.",
-          "e": 0,
-          "g": 1,
-          "s": 0,
-          "Ap": 0,
-          "H": 2,
-          "FrP": 2,
-          "Sp": 0,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 2
-        },
-        {
-          "t": "More support for teachers yes, but framing it as discipline misses the deeper causes.",
-          "e": 0,
-          "g": 0,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 1,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Trauma-informed, resource-rich teaching is more effective than discipline frameworks.",
-          "e": 0,
-          "g": -1,
-          "s": 0,
-          "Ap": 0,
-          "H": -1,
-          "FrP": -1,
-          "Sp": 0,
-          "R": 2,
-          "MDG": 2,
-          "V": -1,
-          "SV": -1
-        }
-      ]
+      "type": "l",
+      "q": "Parents should be free to choose private and alternative schools for their children.",
+      "w": {
+        "e": 0.5,
+        "g": -0.5,
+        "Ap": -1,
+        "H": 1,
+        "FrP": 1,
+        "Sp": -1,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": 1,
+        "MDG": -0.5
+      }
     },
     {
-      "id": "tx1",
-      "nl": "Tax and economy",
-      "pair": "tx-a",
+      "id": "no28a",
+      "nl": "Trade and globalisation",
+      "node": "trade",
+      "pair": "nop28",
       "fr": "pro",
-      "type": "s",
-      "q": "Norway should reintroduce a wealth tax on assets above 3 million kroner. The abolition in 2007 was a gift to the rich.",
-      "opts": [
-        {
-          "t": "Yes. Wealth taxes reduce inequality and fund public services.",
-          "e": -2,
-          "g": 2,
-          "s": 1,
-          "Ap": 1,
-          "H": -2,
-          "FrP": -1,
-          "Sp": -2,
-          "R": 2,
-          "MDG": 2,
-          "V": -1,
-          "SV": -1
-        },
-        {
-          "t": "Close loopholes and raise capital gains taxes before adding new taxes.",
-          "e": -1,
-          "g": 1,
-          "s": 1,
-          "Ap": 1,
-          "H": -1,
-          "FrP": -1,
-          "Sp": -1,
-          "R": 1,
-          "MDG": 1,
-          "V": -1,
-          "SV": 0
-        },
-        {
-          "t": "No. The wealth tax drove capital out of Norway. It should not return.",
-          "e": 2,
-          "g": -1,
-          "s": -1,
-          "Ap": -1,
-          "H": 2,
-          "FrP": 1,
-          "Sp": 2,
-          "R": -2,
-          "MDG": -2,
-          "V": 1,
-          "SV": 0
-        }
-      ]
+      "type": "l",
+      "q": "Open global free trade has served Norway well and should be defended.",
+      "w": {
+        "e": 1.5,
+        "g": -0.5,
+        "Ap": 0.5,
+        "H": 1.5,
+        "FrP": 1,
+        "Sp": -1,
+        "SV": -1,
+        "R": -1.5,
+        "V": 1.5,
+        "MDG": -0.5
+      }
     },
     {
-      "id": "tx2",
-      "nl": "Tax and economy",
-      "pair": "tx-a",
+      "id": "no28b",
+      "nl": "Trade and globalisation",
+      "node": "trade",
+      "pair": "nop28",
       "fr": "con",
-      "type": "s",
-      "q": "Norway has among the highest taxes in the world. Reducing them would increase growth and improve competitiveness.",
-      "opts": [
-        {
-          "t": "Yes. High taxes harm investment, entrepreneurship, and attract fewer high earners.",
-          "e": 2,
-          "g": -1,
-          "s": -2,
-          "Ap": -2,
-          "H": 2,
-          "FrP": 1,
-          "Sp": 2,
-          "R": -2,
-          "MDG": -2,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "Targeted reductions in work-related taxes make sense but broad cuts weaken services.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "No. High taxes fund the world-class public services that make Norway competitive.",
-          "e": -2,
-          "g": 1,
-          "s": 2,
-          "Ap": 2,
-          "H": -2,
-          "FrP": -1,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": -1,
-          "SV": 0
-        }
-      ]
+      "type": "l",
+      "q": "Globalisation makes Norway too dependent and undermines local production and food security.",
+      "w": {
+        "e": -1.5,
+        "g": 0.5,
+        "Ap": -0.5,
+        "H": -1.5,
+        "FrP": -1,
+        "Sp": 1,
+        "SV": 1,
+        "R": 1.5,
+        "V": -1.5,
+        "MDG": 0.5
+      }
     },
     {
-      "id": "en1",
-      "nl": "Climate and energy",
-      "pair": "en-a",
+      "id": "no29a",
+      "nl": "Welfare",
+      "node": "welfare",
+      "pair": "nop29",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "Norway has committed to net zero by 2045. The current government eased some environmental regulations to stimulate investment and energy security.",
-      "q": "Weakening climate regulation in the name of competitiveness is a betrayal of future generations.",
-      "opts": [
-        {
-          "t": "Yes. Climate commitments must not be traded for short-term economic gains.",
-          "e": -2,
-          "g": 2,
-          "s": 1,
-          "Ap": 1,
-          "H": -1,
-          "FrP": -1,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Some regulatory flexibility is reasonable as long as the net zero target is kept.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "Competitiveness and energy security are legitimate concerns that must be balanced.",
-          "e": 1,
-          "g": -1,
-          "s": -1,
-          "Ap": -1,
-          "H": 1,
-          "FrP": 1,
-          "Sp": 1,
-          "R": -2,
-          "MDG": -2,
-          "V": 0,
-          "SV": 0
-        }
-      ]
+      "type": "l",
+      "q": "The sick and unemployed are met with too much suspicion; benefits should be higher.",
+      "w": {
+        "e": -1.5,
+        "Ap": 0.5,
+        "H": -1,
+        "FrP": -0.5,
+        "Sp": 0.5,
+        "SV": 1.5,
+        "R": 2,
+        "V": -1,
+        "MDG": 0.5,
+        "g": 0
+      }
     },
     {
-      "id": "en2",
-      "nl": "Climate and energy",
-      "pair": "en-a",
+      "id": "no29b",
+      "nl": "Welfare",
+      "node": "welfare",
+      "pair": "nop29",
       "fr": "con",
-      "type": "s",
-      "q": "Norway should expand nuclear power. It is safe, low-carbon, and the country has been energy-poor without it.",
-      "opts": [
-        {
-          "t": "Yes. Nuclear is the most reliable low-carbon baseload available.",
-          "e": 1,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 2,
-          "FrP": 2,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -2,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "New reactor types merit consideration but the costs and timelines are uncertain.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": 1,
-          "Sp": 0,
-          "R": -1,
-          "MDG": -1,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "No. Renewables plus storage are faster, cheaper, and safer.",
-          "e": -1,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": -1,
-          "FrP": -1,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 2,
-          "V": 0,
-          "SV": -1
-        }
-      ]
+      "type": "l",
+      "q": "Generous benefits weaken the incentive to work and must be kept in check.",
+      "w": {
+        "e": 1.5,
+        "Ap": -0.5,
+        "H": 1,
+        "FrP": 0.5,
+        "Sp": -0.5,
+        "SV": -1.5,
+        "R": -2,
+        "V": 1,
+        "MDG": -0.5,
+        "g": 0
+      }
     },
     {
-      "id": "na1",
-      "nl": "NATO and defence",
-      "pair": "na-a",
+      "id": "no30a",
+      "nl": "Democracy",
+      "node": "democracy",
+      "pair": "nop30",
       "fr": "pro",
-      "type": "s",
-      "q": "Norway was right to join NATO. The Russian invasion of Ukraine made the security case unanswerable.",
-      "opts": [
-        {
-          "t": "Yes. NATO membership is the foundation of Norwegian security.",
-          "e": 0,
-          "g": 1,
-          "s": 1,
-          "Ap": 1,
-          "H": 2,
-          "FrP": 2,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -1,
-          "V": 2,
-          "SV": 2
-        },
-        {
-          "t": "The decision was understandable but Norway should maintain maximum strategic independence within NATO.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "NATO membership makes Norway a target and ends 200 years of neutrality.",
-          "e": 0,
-          "g": -1,
-          "s": 0,
-          "Ap": 0,
-          "H": -1,
-          "FrP": -1,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 1,
-          "V": -1,
-          "SV": -1
-        }
-      ]
+      "type": "l",
+      "q": "Norway should use more binding referendums on major questions.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": -0.5,
+        "H": -0.5,
+        "FrP": 1.5,
+        "Sp": 1,
+        "SV": 0.5,
+        "R": 1
+      }
     },
     {
-      "id": "na2",
-      "nl": "NATO and defence",
-      "pair": "na-a",
+      "id": "no30b",
+      "nl": "Democracy",
+      "node": "democracy",
+      "pair": "nop30",
       "fr": "con",
-      "type": "s",
-      "q": "Norway should increase defence spending to 2.5% of GDP to meet NATO obligations and deter Russian aggression.",
-      "opts": [
-        {
-          "t": "Yes. Underinvestment in defence over decades must now be corrected.",
-          "e": 0,
-          "g": 1,
-          "s": 0,
-          "Ap": 0,
-          "H": 2,
-          "FrP": 2,
-          "Sp": 0,
-          "R": -2,
-          "MDG": -1,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "A credible defence requires investment but the level must be balanced against social needs.",
-          "e": 0,
-          "g": 0,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": 1,
-          "Sp": 0,
-          "R": -1,
-          "MDG": -1,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Military spending competes with welfare, healthcare and schools. Diplomacy must come first.",
-          "e": -1,
-          "g": -1,
-          "s": 0,
-          "Ap": 0,
-          "H": -2,
-          "FrP": -1,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": -1,
-          "SV": -1
-        }
-      ]
+      "type": "l",
+      "q": "Referendums reduce complex questions to slogans and are easily hijacked by populists.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "Ap": 0.5,
+        "H": 0.5,
+        "FrP": -1.5,
+        "Sp": -1,
+        "SV": -0.5,
+        "R": -1
+      }
     },
     {
-      "id": "hs1",
+      "id": "no31a",
+      "nl": "Cost of living",
+      "node": "welfare",
+      "pair": "nop31",
+      "fr": "pro",
+      "type": "l",
+      "q": "The state should intervene directly with support and price measures against the cost of living.",
+      "w": {
+        "e": -1,
+        "Ap": 0.5,
+        "H": -1,
+        "FrP": 1,
+        "Sp": 1,
+        "SV": 1.5,
+        "R": 2,
+        "V": -1,
+        "g": 0
+      }
+    },
+    {
+      "id": "no31b",
+      "nl": "Cost of living",
+      "node": "welfare",
+      "pair": "nop31",
+      "fr": "con",
+      "type": "l",
+      "q": "Handouts and price measures just fuel inflation; they don’t fix the cause.",
+      "w": {
+        "e": 1,
+        "Ap": -0.5,
+        "H": 1,
+        "FrP": -1,
+        "Sp": -1,
+        "SV": -1.5,
+        "R": -2,
+        "V": 1,
+        "g": 0
+      }
+    },
+    {
+      "id": "no32a",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nop32",
+      "fr": "pro",
+      "type": "l",
+      "q": "Some races are simply more intelligent or capable than others.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "Ap": -1.5,
+        "H": -1,
+        "FrP": -0.5,
+        "Sp": -1,
+        "SV": -2,
+        "R": -2,
+        "V": -1.5,
+        "MDG": -2
+      }
+    },
+    {
+      "id": "no32b",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nop32",
+      "fr": "con",
+      "type": "l",
+      "q": "There is no hierarchy of races; the idea is pseudo-science with a shameful history.",
+      "w": {
+        "e": 0,
+        "g": -0.5,
+        "Ap": 1.5,
+        "H": 1,
+        "FrP": 0.5,
+        "Sp": 1,
+        "SV": 2,
+        "R": 2,
+        "V": 1.5,
+        "MDG": 2
+      }
+    },
+    {
+      "id": "no33a",
+      "nl": "Philosophy and values",
+      "node": "philosophy",
+      "pair": "nop33",
+      "fr": "pro",
+      "type": "l",
+      "q": "Long-standing traditions carry the wisdom of generations and should not be discarded lightly.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "H": 1,
+        "FrP": 1.5,
+        "Sp": 1,
+        "SV": -1,
+        "R": -1,
+        "V": -0.5,
+        "MDG": -0.5
+      }
+    },
+    {
+      "id": "no33b",
+      "nl": "Philosophy and values",
+      "node": "philosophy",
+      "pair": "nop33",
+      "fr": "con",
+      "type": "l",
+      "q": "Worshipping tradition just lets the dead govern the living and blocks necessary change.",
+      "w": {
+        "e": 0,
+        "g": -0.5,
+        "H": -1,
+        "FrP": -1.5,
+        "Sp": -1,
+        "SV": 1,
+        "R": 1,
+        "V": 0.5,
+        "MDG": 0.5
+      }
+    },
+    {
+      "id": "no34a",
+      "nl": "Philosophy and values",
+      "node": "philosophy",
+      "pair": "nop34",
+      "fr": "pro",
+      "type": "l",
+      "q": "A good society depends more on personal responsibility than on government support.",
+      "w": {
+        "e": 1.5,
+        "g": 0,
+        "Ap": -1,
+        "H": 1.5,
+        "FrP": 1.5,
+        "SV": -2,
+        "R": -2,
+        "V": 1,
+        "MDG": -1
+      }
+    },
+    {
+      "id": "no34b",
+      "nl": "Philosophy and values",
+      "node": "philosophy",
+      "pair": "nop34",
+      "fr": "con",
+      "type": "l",
+      "q": "Blaming individuals for problems the system creates is how the comfortable excuse others’ suffering.",
+      "w": {
+        "e": -1.5,
+        "g": 0,
+        "Ap": 1,
+        "H": -1.5,
+        "FrP": -1.5,
+        "SV": 2,
+        "R": 2,
+        "V": -1,
+        "MDG": 1
+      }
+    },
+    {
+      "id": "no35a",
       "nl": "Housing",
-      "pair": "hs-a",
+      "node": "housing",
+      "pair": "nop35",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "Stockholm has one of the longest housing queues in Europe, often 10 to 20 years for a rental. Young people are locked out. Prices have risen sharply.",
-      "q": "The housing market is failing an entire generation. The state must build massively.",
-      "opts": [
-        {
-          "t": "Yes. Large-scale public housing construction is the only real solution.",
-          "e": -2,
-          "g": 2,
-          "s": 2,
-          "Ap": 2,
-          "H": -1,
-          "FrP": 0,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Reform the rental regulation system so private builders have incentive to construct.",
-          "e": 1,
-          "g": -1,
-          "s": -1,
-          "Ap": -1,
-          "H": 2,
-          "FrP": 1,
-          "Sp": 2,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "Both construction incentives and long-overdue rental reform are needed.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 1,
-          "R": 0,
-          "MDG": 0,
-          "V": 1,
-          "SV": 0
-        }
-      ]
+      "type": "l",
+      "q": "The state should do far more to help young people into the housing market.",
+      "w": {
+        "e": -1,
+        "Ap": 1,
+        "H": -0.5,
+        "FrP": 0.5,
+        "Sp": 0.5,
+        "SV": 1.5,
+        "R": 1.5,
+        "V": -0.5,
+        "MDG": 0.5,
+        "g": 0
+      }
     },
     {
-      "id": "hs2",
+      "id": "no35b",
       "nl": "Housing",
-      "pair": "hs-a",
+      "node": "housing",
+      "pair": "nop35",
       "fr": "con",
-      "type": "s",
-      "q": "Rent regulation keeps housing affordable for those who have it but prevents the construction of new rental housing.",
-      "opts": [
-        {
-          "t": "Yes. Avreglera hyror så att fler vill bygga nya hyresrätter.",
-          "e": 2,
-          "g": -1,
-          "s": -2,
-          "Ap": -2,
-          "H": 2,
-          "FrP": 0,
-          "Sp": 2,
-          "R": -2,
-          "MDG": -2,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "Partial deregulation of new builds while protecting existing tenants is the right balance.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "No. Deregulation would price out lower earners from rental housing entirely.",
-          "e": -2,
-          "g": 1,
-          "s": 2,
-          "Ap": 2,
-          "H": -2,
-          "FrP": -1,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": -1,
-          "SV": -1
-        }
-      ]
-    },
-    {
-      "id": "wr1",
-      "nl": "Workers and labour",
-      "pair": "wr-a",
-      "fr": "pro",
-      "type": "s",
-      "q": "The Norwegian model of strong unions and collective bargaining is the most effective way to set fair wages without government interference.",
-      "opts": [
-        {
-          "t": "Yes. The model works and must be defended.",
-          "e": -1,
-          "g": -1,
-          "s": 2,
-          "Ap": 2,
-          "H": 0,
-          "FrP": 1,
-          "Sp": 0,
-          "R": 2,
-          "MDG": 1,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "The model is valuable but weakening union density means it needs updating.",
-          "e": -1,
-          "g": 0,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 1,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Government minimum wages and individual contracts can replace collective models.",
-          "e": 1,
-          "g": 0,
-          "s": -2,
-          "Ap": -2,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 2,
-          "R": -2,
-          "MDG": -1,
-          "V": 1,
-          "SV": 0
-        }
-      ]
-    },
-    {
-      "id": "wr2",
-      "nl": "Workers and labour",
-      "pair": "wr-a",
-      "fr": "con",
-      "type": "s",
-      "q": "Norway should introduce an official minimum wage set by law rather than leaving wages entirely to collective bargaining.",
-      "opts": [
-        {
-          "t": "Yes. A legal floor protects workers in industries with weak union coverage.",
-          "e": -1,
-          "g": 1,
-          "s": 0,
-          "Ap": 0,
-          "H": -1,
-          "FrP": 1,
-          "Sp": -1,
-          "R": 1,
-          "MDG": 1,
-          "V": 0,
-          "SV": 1
-        },
-        {
-          "t": "The collective bargaining model works. A statutory minimum would undermine it.",
-          "e": 0,
-          "g": 0,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 0,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "No. The Norwegian model is more flexible and produces better outcomes than statutory minimums.",
-          "e": 0,
-          "g": -1,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 1,
-          "R": 0,
-          "MDG": 0,
-          "V": 0,
-          "SV": 0
-        }
-      ]
-    },
-    {
-      "id": "in1",
-      "nl": "Integration policy",
-      "pair": "in-a",
-      "fr": "con",
-      "type": "sc",
-      "ctx": "Areas in Gothenburg, Malmo, and Stockholm where integration has failed are experiencing persistent unemployment, school failure, and over-representation in crime statistics.",
-      "q": "Segregation has been allowed to harden into permanent underclasses. Integration policy has comprehensively failed.",
-      "opts": [
-        {
-          "t": "Yes. The failure demands a fundamentally different approach, including housing dispersal.",
-          "e": -1,
-          "g": 1,
-          "s": 1,
-          "Ap": 1,
-          "H": 1,
-          "FrP": 2,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 1,
-          "SV": 1
-        },
-        {
-          "t": "Investment in schools, jobs, and services in deprived areas is the right response.",
-          "e": -2,
-          "g": 0,
-          "s": 2,
-          "Ap": 2,
-          "H": -1,
-          "FrP": -1,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "Both better support in deprived areas and dispersal mechanisms are needed.",
-          "e": -1,
-          "g": 1,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": 1,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 1,
-          "V": 1,
-          "SV": 1
-        }
-      ]
-    },
-    {
-      "id": "in2",
-      "nl": "Integration policy",
-      "pair": "in-a",
-      "fr": "pro",
-      "type": "s",
-      "q": "The state must do more to ensure refugees and immigrants have real access to the labour market within the first year of arrival.",
-      "opts": [
-        {
-          "t": "Yes. Early employment is the most effective integration tool.",
-          "e": -1,
-          "g": 0,
-          "s": 2,
-          "Ap": 2,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 1,
-          "R": 1,
-          "MDG": 1,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "Language and skills training first, then employment. Rushing the process backfires.",
-          "e": 0,
-          "g": 1,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": 1,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 0,
-          "SV": 1
-        },
-        {
-          "t": "If integration is so difficult, intake levels must be reduced until we can do it properly.",
-          "e": 0,
-          "g": 1,
-          "s": -1,
-          "Ap": -1,
-          "H": 0,
-          "FrP": 2,
-          "Sp": -1,
-          "R": -1,
-          "MDG": -1,
-          "V": -1,
-          "SV": 1
-        }
-      ]
-    },
-    {
-      "id": "eu1",
-      "nl": "EU and foreign policy",
-      "pair": "eu-a",
-      "fr": "pro",
-      "type": "s",
-      "q": "Norway should support deeper EU integration, including a common defence policy and more qualified majority voting.",
-      "opts": [
-        {
-          "t": "Yes. A stronger EU is in the interest of all member states, especially smaller ones.",
-          "e": -1,
-          "g": 0,
-          "s": 1,
-          "Ap": 1,
-          "H": 0,
-          "FrP": -2,
-          "Sp": 1,
-          "R": -1,
-          "MDG": 1,
-          "V": 2,
-          "SV": 0
-        },
-        {
-          "t": "Cooperation on specific issues yes. Federal ambitions go too far.",
-          "e": 0,
-          "g": 1,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": -1,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "No. National sovereignty and intergovernmentalism must remain the basis of the EU.",
-          "e": 0,
-          "g": 1,
-          "s": -1,
-          "Ap": -1,
-          "H": 0,
-          "FrP": 2,
-          "Sp": 0,
-          "R": 0,
-          "MDG": -1,
-          "V": -1,
-          "SV": 0
-        }
-      ]
-    },
-    {
-      "id": "eu2",
-      "nl": "EU and foreign policy",
-      "pair": "eu-a",
-      "fr": "con",
-      "type": "s",
-      "q": "Norway should increase bilateral aid and development assistance, even in a period of tight fiscal policy.",
-      "opts": [
-        {
-          "t": "Yes. Development assistance is a moral obligation and builds long-term stability.",
-          "e": -1,
-          "g": 0,
-          "s": 1,
-          "Ap": 1,
-          "H": -1,
-          "FrP": -2,
-          "Sp": 0,
-          "R": 1,
-          "MDG": 2,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "Maintain current levels but ensure effectiveness rather than just increasing spending.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": -1,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "No. Norway must prioritise its own citizens in a period of fiscal pressure.",
-          "e": 1,
-          "g": 1,
-          "s": -1,
-          "Ap": -1,
-          "H": 1,
-          "FrP": 2,
-          "Sp": 0,
-          "R": -2,
-          "MDG": -2,
-          "V": -1,
-          "SV": 0
-        }
-      ]
-    },
-    {
-      "id": "gs1",
-      "nl": "Gender and social policy",
-      "pair": "gs-a",
-      "fr": "pro",
-      "type": "s",
-      "q": "Norway should maintain its status as one of the most progressive countries in the world on gender equality, LGBTQ rights, and social liberalism.",
-      "opts": [
-        {
-          "t": "Yes. Protecting and advancing these rights is central to Norwegian identity.",
-          "e": 0,
-          "g": -2,
-          "s": 2,
-          "Ap": 2,
-          "H": 0,
-          "FrP": -2,
-          "Sp": 1,
-          "R": 2,
-          "MDG": 2,
-          "V": 2,
-          "SV": -2
-        },
-        {
-          "t": "Rights should be protected but the state should not be prescriptive about social norms.",
-          "e": 0,
-          "g": -1,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": -1,
-          "Sp": 1,
-          "R": 0,
-          "MDG": 1,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "The pace of social change has been too rapid and has damaged social cohesion.",
-          "e": 0,
-          "g": 1,
-          "s": -1,
-          "Ap": -1,
-          "H": 0,
-          "FrP": 2,
-          "Sp": -1,
-          "R": -2,
-          "MDG": -2,
-          "V": -1,
-          "SV": 1
-        }
-      ]
-    },
-    {
-      "id": "gs2",
-      "nl": "Gender and social policy",
-      "pair": "gs-a",
-      "fr": "con",
-      "type": "s",
-      "q": "Parental leave should be equally split between parents by default rather than allowing families to choose their own arrangement.",
-      "opts": [
-        {
-          "t": "Yes. Equal leave changes workplace norms and is worth the mandate.",
-          "e": -1,
-          "g": 1,
-          "s": 1,
-          "Ap": 1,
-          "H": -1,
-          "FrP": -1,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": -2
-        },
-        {
-          "t": "Strong incentives to share, but the final choice should be the family's.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 1,
-          "R": 0,
-          "MDG": 0,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "No. Families should decide without government dictating how to raise children.",
-          "e": 0,
-          "g": -1,
-          "s": -1,
-          "Ap": -1,
-          "H": 1,
-          "FrP": 1,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -1,
-          "V": 0,
-          "SV": 2
-        }
-      ]
-    },
-    {
-      "id": "rg1",
-      "nl": "Role of government",
-      "pair": "rg-a",
-      "fr": "neutral",
-      "type": "s",
-      "q": "The Norwegian model of a large, active state providing universal services is the most effective social arrangement ever devised.",
-      "opts": [
-        {
-          "t": "Yes. The model delivers equality and security at a level no other country matches.",
-          "e": -2,
-          "g": 1,
-          "s": 2,
-          "Ap": 2,
-          "H": -1,
-          "FrP": 0,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "The model has strengths but requires ongoing modernisation to stay effective.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 0,
-          "FrP": 0,
-          "Sp": 0,
-          "R": 0,
-          "MDG": 0,
-          "V": 0,
-          "SV": 0
-        },
-        {
-          "t": "The model has become too paternalistic and stifles individual initiative.",
-          "e": 2,
-          "g": -1,
-          "s": -2,
-          "Ap": -2,
-          "H": 2,
-          "FrP": 0,
-          "Sp": 2,
-          "R": -2,
-          "MDG": -2,
-          "V": 1,
-          "SV": 0
-        }
-      ]
-    },
-    {
-      "id": "rg2",
-      "nl": "Role of government",
-      "pair": "rg-a",
-      "fr": "neutral",
-      "type": "s",
-      "q": "Inequality in Norway has grown significantly since the 1990s. Reversing this trend should be a primary political priority.",
-      "opts": [
-        {
-          "t": "Yes. Norway's egalitarian character is being eroded and must be restored.",
-          "e": -2,
-          "g": 2,
-          "s": 2,
-          "Ap": 2,
-          "H": -1,
-          "FrP": 0,
-          "Sp": -1,
-          "R": 2,
-          "MDG": 2,
-          "V": 0,
-          "SV": -1
-        },
-        {
-          "t": "Inequality has grown but opportunity and mobility matter more than statistical gaps.",
-          "e": 0,
-          "g": 0,
-          "s": 0,
-          "Ap": 0,
-          "H": 1,
-          "FrP": 0,
-          "Sp": 1,
-          "R": -1,
-          "MDG": -1,
-          "V": 1,
-          "SV": 0
-        },
-        {
-          "t": "Some inequality reflects different contributions. Forced equality reduces incentive.",
-          "e": 2,
-          "g": -1,
-          "s": -2,
-          "Ap": -2,
-          "H": 2,
-          "FrP": 1,
-          "Sp": 1,
-          "R": -2,
-          "MDG": -2,
-          "V": 1,
-          "SV": 0
-        }
-      ]
+      "type": "l",
+      "q": "Heavy state intervention in housing distorts the market and does more harm than good.",
+      "w": {
+        "e": 1,
+        "Ap": -1,
+        "H": 0.5,
+        "FrP": -0.5,
+        "Sp": -0.5,
+        "SV": -1.5,
+        "R": -1.5,
+        "V": 0.5,
+        "MDG": -0.5,
+        "g": 0
+      }
     }
   ],
   "translations": {
-    "im1": {
-      "q": "Norge slapp inn altfor mange mennesker for raskt. Konsekvensene betales det for i dag.",
-      "ctx": "Norge har opplevd betydelig innvandring de siste tiårene, noe som har preget debatten om integrering og velferd.",
-      "opts": [
-        "Ja. Innvandringen må reduseres kraftig, og integreringskravene må skjerpes.",
-        "Mottaket var høyt, men feilen lå i integreringspolitikken, ikke i selve antallet.",
-        "Nei. Norge har dratt stor nytte av innvandring. Fortellingen om mislykkethet er drevet av fordommer."
-      ]
+    "no1a": {
+      "q": "Norge bør fortsette å lete etter og produsere olje og gass i tiår fremover."
     },
-    "im2": {
-      "q": "Midlertidig beskyttelsesstatus bør gjøres permanent for flyktninger som har bygget et liv i Norge, uavhengig av forholdene i hjemlandet.",
-      "ctx": "Flyktninger kan få midlertidig opphold som tilbakekalles dersom situasjonen i hjemlandet bedres.",
-      "opts": [
-        "Ja, det er umenneskelig å sende folk tilbake etter at de har slått rot.",
-        "Kun dersom de oppfyller strenge krav til selvforsørgelse og språk.",
-        "Nei. Midlertidig asyl bør forbli midlertidig og avvikles når det er trygt."
-      ]
+    "no1b": {
+      "q": "Norge må trappe ned olje og gass og slutte å lete etter nye felt."
     },
-    "im3": {
-      "q": "Norge bør betale utlendinger for å returnere til sitt opprinnelsesland dersom de reiser frivilligt.",
-      "ctx": "Støtte til frivillig retur tilbys i dag, men det diskuteres om beløpet bør økes markant.",
-      "opts": [
-        "Ja, det er en fornuftig investering for å redusere integreringsutfordringer.",
-        "Kun i helt spesielle tilfeller, ikke som en generell ordning.",
-        "Nei. Det sender et signal om at de ikke er ønsket i samfunnet."
-      ]
+    "no2a": {
+      "q": "Staten bør innføre makspris på strøm og ta politisk kontroll over krafteksporten."
     },
-    "im4": {
-      "q": "Språkkrav, statsborgerskapsprøver og integreringskontrakter er rimelige krav som respekterer både nykommere og vertsnasjonen.",
-      "ctx": "Norge har innført obligatoriske tester i samfunnskunnskap og krav til norskkunnskaper.",
-      "opts": [
-        "Ja. Integreringskrav er nødvendige for å bevare det sosiale samholdet.",
-        "Prinsipielt ja, men de nåværende prøvene er unødig strenge.",
-        "Nei. Kravene fungerer som ekskluderingsverktøy og hindrer reell integrering."
-      ]
+    "no2b": {
+      "q": "Å gripe inn i kraftmarkedet og eksporten ville undergrave investeringer og våre allierte."
     },
-    "cr1": {
-      "q": "Gjengkriminaliteten er en nasjonal krise som krever et fundamentalt tøffere svar.",
-      "ctx": "Økende bekymring for svenske tilstander og gjengrekruttering preger den norske kriminaldebatten.",
-      "opts": [
-        "Ja. Gjengmedlemmer må straffes hardere, og politiet må få flere verktøy.",
-        "Straf alene løser ikke dette, vi må prioritere forebygging og fritidstilbud.",
-        "Nei. Hårdere straffer løser ingenting. Vi må bekjempe de sosiale årsakene bak."
-      ]
+    "no3a": {
+      "q": "Formuesskatten på de rikeste bør beholdes og økes."
     },
-    "cr2": {
-      "q": "Det er nødvendig å kriminalisere selve medlemskapet i en kriminell gjeng for å bryte voldsspiralen.",
-      "ctx": "Debatten går på om man skal gjøre det ulovlig å delta i eller rekruttere til kriminelle gjenger.",
-      "opts": [
-        "Ja. Gjengstrukturer må brytes opp, og deltakelse i seg selv må gjøres ulovlig.",
-        "Kun med klare grenser slik at ikke vanlige ungdomsmiljøer rammes.",
-        "Nei. Å straffe folk kun for tilhørighet uten at de har gjort en konkret kriminell handling, er udemokratisk."
-      ]
+    "no3b": {
+      "q": "Formuesskatten driver norske gründere ut av landet og bør avskaffes."
     },
-    "wl1": {
-      "q": "Den norske velferdsstaten er fundamentet for et godt samfunn. Kutt i den økonomiske disiplinens navn er ideologiske, ikke økonomiske.",
-      "ctx": "Bruk av oljepenger og handlingsregelen setter rammene for velferdsbudsjettene i Norge.",
-      "opts": [
-        "Helt enig. Velferd og offentlige tjenester må styrkes framfor skattekutt.",
-        "Velferden må sikres, men vi må reformere systemet for å takle eldrebølgen.",
-        "Uenig. En for stor velferdsstat hemmer privat initiativ og svekker arbeidslinjen."
-      ]
+    "no4a": {
+      "q": "Innvandringen til Norge er for høy og bør kuttes kraftig."
     },
-    "wl2": {
-      "q": "Borgere som aldri har innbetalt til den norske folketrygden bør ikke motta de samme ytelsene som de som har bidratt i årtier.",
-      "ctx": "Dette gjelder krav til botid og opptjening for ytelser som garantipensjon og uføretrygd.",
-      "opts": [
-        "Ja, velferd bør bygge på et klart opptjeningsprinsipp for å være rettferdig.",
-        "Kun for visse ytelser; grunnleggende helsehjelp og livsopphold må gjelde alle.",
-        "Nei. Universell velferd betyr like rettigheter for alle innbyggere."
-      ]
+    "no4b": {
+      "q": "Innvandrere styrker norsk økonomi og samfunn, og asyl er en humanitær plikt."
     },
-    "hc1": {
-      "q": "Helsekrisen krever flere offentlige investeringer, ikke private alternativer.",
-      "ctx": "Lange helsekøer har ført til økt debatt om kommersielle helsetjenester.",
-      "opts": [
-        "Ja. Det offentlige helsevesenet må prioriteres og styrkes fremfor privatisering.",
-        "Private aktører kan supplere det offentlige for å ta unna køene.",
-        "Nei. Private alternativer skaper sunn konkurranse og gir raskere behandling."
-      ]
+    "no5a": {
+      "q": "Makt, arbeidsplasser og tjenester bør flyttes ut av Oslo og tilbake til distriktene."
     },
-    "hc2": {
-      "q": "Kommersielle helseselskaper bør ikke ha lov til å operere innenfor det offentlige helsesystemet.",
-      "ctx": "Debatten om 'velferdsprofittører' i helse, omsorg og barnehager er sentral i Norge.",
-      "opts": [
-        "Enig. Skattepenger til helse skal gå uavkortet til pasienter, ikke til profitt.",
-        "Private kan levere tjenester, men fortjenesten bør reguleres strengt.",
-        "Uenig. Muligheten for overskudd driver innovasjon og effektivitet i helsesektoren."
-      ]
+    "no5b": {
+      "q": "Å samle aktivitet der folk faktisk bor og jobber er mer effektivt enn å holde distriktene kunstig i live."
     },
-    "ed1": {
-      "q": "Friskolereformen undergraver fellesskolen og øker forskjellene. Den bør strammes inn.",
-      "ctx": "Stortinget har strammet inn adgangen til å starte private skoler for å verne om fellesskolen.",
-      "opts": [
-        "Ja. Vi må styrke den offentlige fellesskolen og begrense privatskoler.",
-        "Foreldrenes valgfrihet må respekteres, men fellesskolen må prioriteres.",
-        "Nei. Private skoler gir et viktig alternativ og øker det pedagogiske mangfoldet."
-      ]
+    "no6a": {
+      "q": "Bompenger er en urettferdig byrde på vanlige folk og bør fjernes."
     },
-    "ed2": {
-      "q": "Lærerne må få mer autoritet i klasserommet. Uro og adferdsproblemer ødelegger læringsmiljøet.",
-      "ctx": "Uro i skolen har ført til debatter om klasseromsledelse og lærernes sanksjonsmuligheter.",
-      "opts": [
-        "Ja. Lærere trenger sterkere verktøy for å sikre ro og orden i klasserommet.",
-        "Ro er viktig, men det løses best med pedagogiske og relasjonelle verktøy.",
-        "Nei. Mer disiplin skader elevmedvirkning. Skolen skal bygge på tillit."
-      ]
+    "no6b": {
+      "q": "Bompenger får forurensere og bilister til å betale sin del og finansierer veiene."
     },
-    "tx1": {
-      "q": "Norge bør øke formueskatten for de rikeste. Den bidrar til rettferdig omfordeling.",
-      "ctx": "Formueskatten er et av de mest omdiskuterte temaene i norsk skattedebatt.",
-      "opts": [
-        "Ja. Skatt på formue er helt nødvendig for å dempe økende ulighed.",
-        "Formueskatten bør justeres for å skjerme arbeidende kapital (bedrifter).",
-        "Nei. Formueskatten skader norsk eierskap og jager gründere ut av landet."
-      ]
+    "no7a": {
+      "q": "Norge bør beholde EØS-avtalen som knytter landet tæt til EU."
     },
-    "tx2": {
-      "q": "Norge har et høyt skattenivå. Lavere skatter vil stimulere til vekst, investeringer og arbeidsplasser.",
-      "ctx": "Debatten står om skattenivået for bedrifter og personer for å sikre konkurranseevne.",
-      "opts": [
-        "Uenig. Skattene finansierer fellesgoder og infrastruktur som næringslivet nyter godt af.",
-        "Skatten på arbeid kan reduseres noe, men uten at det går ut over velferden.",
-        "Helt enig. Lavere skatter er avgjørende for omstilling og nye private jobber."
-      ]
+    "no7b": {
+      "q": "EØS-avtalen gir Brüssel for mye makt over Norge og bør reforhandles eller sies opp."
     },
-    "en1": {
-      "q": "Å utsette klimatiltak for å beskytte næringslivets konkurranseevne er et svik mot fremtidige generasjoner.",
-      "ctx": "CO2-avgifter og elektrifisering av sokkelen møter motstand pga. økte kostnader for industrien.",
-      "opts": [
-        "Enig. Grønn omstilling må trumfe næringsinteresser i klimapolitikken.",
-        "Vi må kutte utslipp, men ikke på en måte som raserer norsk prosessindustri.",
-        "Uenig. Norske arbeidsplasser og industriell styrke må komme i første rekke."
-      ]
+    "no8a": {
+      "q": "Norge må kutte sine egne utslipp mye raskere, selv om det koster økonomisk."
     },
-    "en2": {
-      "q": "Norge bør vurdere kjernekraft som en del af den fremtidige kraftforsyningen.",
-      "ctx": "Kjernekraftdebatt har blusset opp i Norge som et supplement til vind- og vannkraft.",
-      "opts": [
-        "Ja. Kjernekraft er stabil, utslippsfri og arealeffektiv kraftproduksjon.",
-        "Vi bør kun forske på ny kjernekraftteknologi, ikke bygge tradisjonelle verk.",
-        "Nei. Vi må satse fullt på fornybare kilder som vannkraft, vind og sol."
-      ]
+    "no8b": {
+      "q": "Dyre klimatiltak hjemme betyr lite globalt og belaster bare vanlige nordmenn."
     },
-    "na1": {
-      "q": "Norge må styrke sitt militære forsvar vesentlig for å møte en mer spent sikkerhetssituasjon.",
-      "ctx": "Stortinget har enstemmig vedtatt en historisk opptrapping af forsvarsbudsjettene.",
-      "opts": [
-        "Ja. Vi må investere tungt i Forsvaret og innfri våre forpliktelser i NATO.",
-        "Forsvaret må styrkes, men vi må passe på at det ikke går på bekostning av velferdsstaten.",
-        "Nei. Økt militarisering øker spenningen. Vi bør prioritere fredsarbeid og diplomati."
-      ]
+    "no9a": {
+      "q": "Grunnrenteskatten på oppdrettslaks er rettferdig og bør bli stående."
     },
-    "na2": {
-      "q": "Forsvarsutgiftene bør heves til minst 2,5% af BNP for å avskrekke russisk aggresjon.",
-      "ctx": "Medlemslandene i NATO presses til å bruke mer enn det opprinnelige 2%-målet.",
-      "opts": [
-        "Enig. Sikkerhetssituasjonen krever at vi ruster opp Forsvaret kraftig.",
-        "2% er nok. Vi må balansere forsvarsutgifter mot viktige velferdsbehov.",
-        "Uenig. Forsvarsbudsjettene er allerede for høye. Vi må søke avspenning."
-      ]
+    "no9b": {
+      "q": "Lakseskatten straffer kystnæringen og driver investeringer ut av Norge."
     },
-    "hs1": {
-      "q": "Boligmarkedet i de store byene stenger unge ute. Staten og kommunene må bygge flere boliger.",
-      "ctx": "Høye boligpriser i Oslo gjør det svært vanskelig for førstegangskjøpere.",
-      "opts": [
-        "Ja. Vi trenger en aktiv, ikke-kommersiell boligsektor og statlig boligbygging.",
-        "Det må løses ved å forenkle byggereglene og regulere flere tomter for private.",
-        "Nei. Offentlig inngripen skaper ubalanse. Markedet regulerer prisene best selv."
-      ]
+    "no10a": {
+      "q": "Norges oljeformue bør brukes mer generøst på velferd her og nå."
     },
-    "hs2": {
-      "q": "Gunstige skattefordeler for primærbolig og sekundærbolig bør reduseres for å dempe boligprisveksten.",
-      "ctx": "Skattemessige fordeler ved å eie bolig i Norge diskuteres jevnlig som en kilde til prispress.",
-      "opts": [
-        "Enig. Skattefordelene favoriserer de rike og presser prisene opp.",
-        "Fordelene bør beholdes for primærbolig, men strammes inn for sekundærbolig.",
-        "Uenig. Eierlinjen i norsk boligpolitikk står sterkt og skattefordelene bør bestå."
-      ]
+    "no10b": {
+      "q": "Å bruke mer av oljefondet nå ville drive inflasjon og frarøve fremtidige generasjoner."
     },
-    "wr1": {
-      "q": "Det organiserte arbeidslivet og trepartssamarbeidet er den beste modellen for å sikre rettferdig lønn.",
-      "ctx": "Den norske modellen med koordinert lønnsdannelse (frontfagsmodellen) står sterkt.",
-      "opts": [
-        "Helt enig. Fagforeningene og tariffavtaler må beskyttes mot statlig innblanding.",
-        "Modellen er god, men staten må kunne gripe inn med tvungen lønnsnemnd ved langvarig konflikt.",
-        "Uenig. Modellen er for ufleksibel for enkeltbedrifter og hindrer sunn konkurranse."
-      ]
+    "no11a": {
+      "q": "Norge bør verne ulv og andre rovdyr selv når de truer beitedyr."
     },
-    "wr2": {
-      "q": "Norge bør innføre en lovfestet minstelønn for å forhindre sosial dumping i utsatte bransjer.",
-      "ctx": "Allmenngjøring af tariffavtaler brukes i dag, men minstelønn diskuteres som alternativ.",
-      "opts": [
-        "Ja. Lovfestet minstelønn er nødvendig for å beskytte utenlandske arbeidere.",
-        "Nei, det vil svekke fagforeningene og undergrave tariffmodellen.",
-        "Uenig. Lønn bør være en sak kun mellom arbeidsgiver og den enkelte ansatte."
-      ]
+    "no11b": {
+      "q": "Bønder og bygdesamfunn kommer først; rovdyrbestanden må holdes bestemt nede."
     },
-    "in1": {
-      "q": "Integreringen har sviktet på viktige områder, og det har oppstått parallellsamfunn i enkelte bydeler.",
-      "ctx": "Innvandrings- og integreringsdebatt i Norge handler ofte om levekår og integrering i Oslo øst.",
-      "opts": [
-        "Ja. Segregering må bekjempes med tøffere krav og målrettede tiltak.",
-        "Det finnes utfordringer, men løsningen er inkludering fremfor pisk og stempling.",
-        "Nei. Parallellsamfunn er et overdrevent begrep; de fleste innvandrere integreres godt."
-      ]
+    "no12a": {
+      "q": "Den offentlige helsetjenesten må finansieres mye mer, og private klinikker begrenses."
     },
-    "in2": {
-      "q": "Det må stilles strengere krav til aktivitet og norskopplæring for å motta sosialhjelp.",
-      "ctx": "Aktivitetsplikt for sosialhjelpsmottakere under 30 år ble innført nasjonalt i 2017.",
-      "opts": [
-        "Ja. Det er rimelig å stille krav til motytelse og integrering for å få støtte.",
-        "Ja, men kravene må tilpasses den enkeltes forutsetninger.",
-        "Nei. Sosialhjelp er en rettighet som ikke bør betinges af tvang."
-      ]
+    "no12b": {
+      "q": "Mer privat tilbud ville lette presset og korte ned ventetidene i det offentlige."
     },
-    "eu1": {
-      "q": "Norge bør søke fullt medlemskap i EU fremfor å kun være tilknyttet gjennom EØS-avtalen.",
-      "ctx": "Norge har stemt nei til EU to ganger, men debatten holdes levende af ja-siden.",
-      "opts": [
-        "Ja. Norge bør sitte ved bordet der beslutningene tas i Europa.",
-        "EØS-avtalen er et godt kompromiss som ivaretar våre interesser.",
-        "Nei. Vi må verne om norsk suverenitet, råderett over fiskeri/energi og si nei til EU."
-      ]
+    "no13a": {
+      "q": "Transpersoner bør kunne endre juridisk kjønn ved egenerklæring."
     },
-    "eu2": {
-      "q": "Norge bør holde fast på målet om å gi 1% af BNI i bistand til utviklingsland.",
-      "ctx": "Norge er blant landene som gir mest bistand i verden, men målet diskuteres i trange budsjetter.",
-      "opts": [
-        "Ja. Som et av verdens rikeste land har vi en moralsk plikt til å dele.",
-        "Bistanden bør holdes høy, men kvaliteten og kontrollen må være viktigere enn 1%-målet.",
-        "Nei. Vi bør kutte i bistanden og bruke mer penger på oppgaver i Norge."
-      ]
+    "no13b": {
+      "q": "Juridisk kjønn kan ikke være en ren erklæringssak; den biologiske virkeligheten må gjelde."
     },
-    "gs1": {
-      "q": "Norge må fortsette å være et foregangsland for likestilling, kjønnsmangfold og liberale verdier.",
-      "ctx": "Debatter om pride, transpersoners rettigheter og kjønnsnøytrale personnummer preger samfunnsdebatten.",
-      "opts": [
-        "Ja. Vi må aktivt fremme minoritetsrettigheter og kjønnsmangfold.",
-        "Likestillingen har kommet langt, vi må passe på at det ikke blir ideologisk overstyring.",
-        "Nei. Kjønnsfokus og identitetspolitikk har gått for langt i skoler og institusjoner."
-      ]
+    "no14a": {
+      "q": "Islam er ikke forenlig med norske verdier."
     },
-    "gs2": {
-      "q": "Foreldrepermisjonen bør deles likt mellom mor og far ved lov.",
-      "ctx": "Tredelingen af foreldrepermisjonen (mødrekvote, fedrekvote og fellesdel) debatteres hyppig.",
-      "opts": [
-        "Ja. Likedeling er nødvendig for likestilling i arbeidslivet og fars tilknytning til barnet.",
-        "Permisjonen bør fordeles fritt af familiene selv uten statlig innblanding.",
-        "Mor bør ha rett til en større del af permisjonen af biologiske årsaker."
-      ]
+    "no14b": {
+      "q": "Norske muslimer er fullverdige medlemmer av samfunnet, og troen deres fortjener lik respekt."
     },
-    "rg1": {
-      "q": "En stor, aktiv stat som leverer universelle velferdstjenester er den beste samfunnsmodellen.",
-      "ctx": "Norge preges af en stor offentlig sektor finansiert af oljeformuen og skatter.",
-      "opts": [
-        "Helt enig. Den nordiske modellen sikrer sosial tillit og små forskjeller.",
-        "Staten skal sikre grunntjenestene, men private bør slippe mer til.",
-        "Uenig. Offentlig sektor er for stor og byråkratisk. Vi trenger mer privat initiativ."
-      ]
+    "no15a": {
+      "q": "Noen etniske grupper er rett og slett mer tilbøyelige til kriminalitet og vold enn andre."
     },
-    "rg2": {
-      "q": "Økende økonomiske forskjeller er en trussel mot det norske samfunnet og må bekjempes aktivt.",
-      "ctx": "Ulikhetsdebatten handler om formuessamling på få hender og barnefattigdom.",
-      "opts": [
-        "Ja. Kampen mot Forskjells-Norge må være en overordnet politisk prioritet.",
-        "Noe ulikhet er nødvendig for verdiskaping og innsatsvilje.",
-        "Nei. Det viktigste er at alle har mulighet til jobb og utdanning, ikke likhet i seg selv."
-      ]
+    "no15b": {
+      "q": "Ingen etnisk gruppe er født kriminell; atferd skyldes omstendigheter, ikke blod."
+    },
+    "no16a": {
+      "q": "Fagforeninger og arbeidstakerrettigheter bør styrkes, og innleie begrenses."
+    },
+    "no16b": {
+      "q": "Stive arbeidslivsregler og fagforeningsmakt koster arbeidsplasser og rammer små bedrifter."
+    },
+    "no17a": {
+      "q": "Norge trenger strengere straffer og mer politi for å holde folk trygge."
+    },
+    "no17b": {
+      "q": "Stadig strengere straffer senker aldri kriminaliteten; forebygging og rehabilitering gjør det."
+    },
+    "no18a": {
+      "q": "Norge bør øke forsvarsbudsjettet og støtte Ukraina bestemt mot Russland."
+    },
+    "no18b": {
+      "q": "Penger til forsvaret er penger som burde gå til velferd og klima hjemme."
+    },
+    "no19a": {
+      "q": "Norge overregulerer og overbeskatter næringslivet; staten bør trekke seg tilbake."
+    },
+    "no19b": {
+      "q": "Å kutte regulering uthuler bare vernet av arbeidstakere, forbrukere og naturen."
+    },
+    "no20a": {
+      "q": "Vinmonopolet og de strenge alkoholreglene bør beholdes."
+    },
+    "no20b": {
+      "q": "Voksne kan ta egne valg; alkohol bør selges fritt i butikkene."
+    },
+    "no21a": {
+      "q": "Retten til abort bør utvides, for eksempel til uke 18."
+    },
+    "no21b": {
+      "q": "Å utvide abortgrensen går for langt og forringer menneskelivets verdi."
+    },
+    "no22a": {
+      "q": "Bruk av narkotika bør avkriminaliseres og behandles som helse (rusreformen Norge sa nei til)."
+    },
+    "no22b": {
+      "q": "Å avkriminalisere narkotika sender feil signal og ville forverre avhengighet."
+    },
+    "no23a": {
+      "q": "Samiske rettigheter til land, språk og reindrift bør styrkes."
+    },
+    "no23b": {
+      "q": "Særlige samiske rettigheter over land og ressurser har gått for langt og hemmer utvikling."
+    },
+    "no24a": {
+      "q": "Innvandrere bør tilpasse seg norsk kultur og norske verdier, ikke omvendt."
+    },
+    "no24b": {
+      "q": "En levende kultur er alltid blandet; å kreve assimilering forarmer Norge."
+    },
+    "no25a": {
+      "q": "Allmennkringkasteren NRK er lisenspengene verdt og må forbli uavhengig."
+    },
+    "no25b": {
+      "q": "NRK er oppblåst og ensidig, og finansieringen bør kuttes kraftig."
+    },
+    "no26a": {
+      "q": "Vern av urrørt natur bør prioriteres over nye vindparker og gruver."
+    },
+    "no26b": {
+      "q": "Norge trenger ny energi og industri, selv om noe natur må vike."
+    },
+    "no27a": {
+      "q": "Private skoler bør begrenses; den offentlige skolen må komme først."
+    },
+    "no27b": {
+      "q": "Foreldre bør stå fritt til å velge private og alternative skoler for barna sine."
+    },
+    "no28a": {
+      "q": "Den åpne globale frihandelen har tjent Norge godt og bør forsvares."
+    },
+    "no28b": {
+      "q": "Globaliseringen gjør Norge for avhengig og undergraver lokal produksjon og matsikkerhet."
+    },
+    "no29a": {
+      "q": "Syke og arbeidsledige møtes med for mye mistillit; ytelsene bør være høyere."
+    },
+    "no29b": {
+      "q": "Generøse ytelser svekker arbeidslysten og må holdes i sjakk."
+    },
+    "no30a": {
+      "q": "Norge bør bruke flere bindende folkeavstemninger om store spørsmål."
+    },
+    "no30b": {
+      "q": "Folkeavstemninger reduserer komplekse spørsmål til slagord og kapres lett av populister."
+    },
+    "no31a": {
+      "q": "Staten bør gripe direkte inn med støtte og pristiltak mot dyrtiden."
+    },
+    "no31b": {
+      "q": "Støtteordninger og pristiltak nærer bare inflasjonen; de løser ikke årsaken."
+    },
+    "no32a": {
+      "q": "Noen raser er rett og slett mer intelligente eller dyktige enn andre."
+    },
+    "no32b": {
+      "q": "Det finnes ikke noe rasehierarki; ideen er pseudovitenskap med en skammelig historie."
+    },
+    "no33a": {
+      "q": "Gamle tradisjoner bærer generasjoners visdom og bør ikke kastes lettvint."
+    },
+    "no33b": {
+      "q": "Å dyrke tradisjon lar bare de døde styre de levende og blokkerer nødvendig endring."
+    },
+    "no34a": {
+      "q": "Et godt samfunn avhenger mer av personlig ansvar enn av statlig støtte."
+    },
+    "no34b": {
+      "q": "Å gi individet skylden for problemer systemet skaper, er hvordan de privilegerte unnskylder andres lidelse."
+    },
+    "no35a": {
+      "q": "Staten bør gjøre mye mer for å hjelpe unge inn på boligmarkedet."
+    },
+    "no35b": {
+      "q": "Tung statlig innblanding i boligmarkedet forstyrrer markedet og gjør mer skade enn nytte."
     }
   },
-  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#D81E05\"></div>\n      <div class=\"party-name\">Arbeiderpartiet</div>\n      <div class=\"party-desc\">Dine svar matcher best Arbeiderpartiet (Ap). Du støtter en sterk fellesskapsbasert velferdsstat, et organisert arbeidsliv, progressiv skatt og aktiv næringspolitikk.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#005087\"></div>\n      <div class=\"party-name\">Høyre</div>\n      <div class=\"party-desc\">Dine svar matcher best Høyre (H). Du støtter privat eiendomsrett, skattelettelser for verdiskaping, valgfrihet i offentlige tjenester og en stabil markedsøkonomi.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#1F4E79\"></div>\n      <div class=\"party-name\">Fremskrittspartiet</div>\n      <div class=\"party-desc\">Dine svar matcher best Fremskrittspartiet (FrP). Du ønsker lavere skatter og avgifter, strengere innvandringskontroll, utbygging af veier og økt personlig frihet.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#008542\"></div>\n      <div class=\"party-name\">Senterpartiet</div>\n      <div class=\"party-desc\">Dine svar matcher best Senterpartiet (Sp). Du prioriterer distriktspolitikk, norsk matproduksjon, nasjonal råderett og motstand mot overstatlig styring som EU/EØS.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#E10600\"></div>\n      <div class=\"party-name\">Sosialistisk Venstreparti</div>\n      <div class=\"party-desc\">Dine svar matcher best Sosialistisk Venstreparti (SV). Du prioriterer rettferdig omfordeling, bekjempelse af ulikhet, sterk miljø- og klimahandling, og offentlig velferd fremfor profitt.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#D71920\"></div>\n      <div class=\"party-name\">Rødt</div>\n      <div class=\"party-desc\">Dine svar matcher best Rødt (R). Du er for en demokratisk sosialisme, omfattende statlig eierskap, kamp mot Forskjells-Norge og er motstander af EØS og NATO.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#006263\"></div>\n      <div class=\"party-name\">Venstre</div>\n      <div class=\"party-desc\">Dine svar matcher best Venstre (V). Du støtter en grønn, sosialliberal politikk med vern om personvernet, støtte til gründere, og en kunnskapsfokusert skole.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#5A962E\"></div>\n      <div class=\"party-name\">Miljøpartiet De Grønne</div>\n      <div class=\"party-desc\">Dine svar matcher best Miljøpartiet De Grønne (MDG). Du setter klima og natur foran økonomisk vekst, krever styrt avvikling af oljeindustrien og grønn byutvikling.</div>\n    </div>\n  </div>"
+  "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#D81E05\"></div>\n      <div class=\"party-name\">Arbeiderpartiet</div>\n      <div class=\"party-desc\">Dine svar matcher best Arbeiderpartiet (Ap). Du støtter en sterk fellesskapsbasert velferdsstat, et organisert arbeidsliv, progressiv skatt og aktiv næringspolitikk.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#005087\"></div>\n      <div class=\"party-name\">Høyre</div>\n      <div class=\"party-desc\">Dine svar matcher best Høyre (H). Du støtter privat eiendomsrett, skattelettelser for verdiskaping, valgfrihet i offentlige tjenester og en stabil markedsøkonomi.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#1F4E79\"></div>\n      <div class=\"party-name\">Fremskrittspartiet</div>\n      <div class=\"party-desc\">Dine svar matcher best Fremskrittspartiet (FrP). Du ønsker lavere skatter og avgifter, strengere innvandringskontroll, utbygging af veier og økt personlig frihet.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#008542\"></div>\n      <div class=\"party-name\">Senterpartiet</div>\n      <div class=\"party-desc\">Dine svar matcher best Senterpartiet (Sp). Du prioriterer distriktspolitikk, norsk matproduksjon, nasjonal råderett og motstand mot overstatlig styring som EU/EØS.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#E10600\"></div>\n      <div class=\"party-name\">Sosialistisk Venstreparti</div>\n      <div class=\"party-desc\">Dine svar matcher best Sosialistisk Venstreparti (SV). Du prioriterer rettferdig omfordeling, bekjempelse af ulikhet, sterk miljø- og klimahandling, og offentlig velferd fremfor profitt.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#D71920\"></div>\n      <div class=\"party-name\">Rødt</div>\n      <div class=\"party-desc\">Dine svar matcher best Rødt (R). Du er for en demokratisk sosialisme, omfattende statlig eierskap, kamp mot Forskjells-Norge og er motstander af EØS og NATO.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#006263\"></div>\n      <div class=\"party-name\">Venstre</div>\n      <div class=\"party-desc\">Dine svar matcher best Venstre (V). Du støtter en grønn, sosialliberal politikk med vern om personvernet, støtte til gründere, og en kunnskapsfokusert skole.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#5A962E\"></div>\n      <div class=\"party-name\">Miljøpartiet De Grønne</div>\n      <div class=\"party-desc\">Dine svar matcher best Miljøpartiet De Grønne (MDG). Du setter klima og natur foran økonomisk vekst, krever styrt avvikling af oljeindustrien og grønn byutvikling.</div>\n    </div>\n  </div>",
+  "calibrations": {}
 }

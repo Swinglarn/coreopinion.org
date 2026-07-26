@@ -100,7 +100,7 @@ const englishHeroTexts = {
   },
   se: {
     heroTitle: "Where do you stand in<br><em>Swedish</em> politics?",
-    heroSub: "47 policy-focused questions and statements on the issues defining Sweden right now. Crime, migration, welfare, NATO, housing, and more. See your alignment across all eight Riksdag parties."
+    heroSub: "70 statements on the issues defining Sweden right now. Crime, migration, welfare, NATO, energy, housing, and more. Every position is asked twice with opposite framing, revealing both your party alignment and your framing bias."
   },
   dk: {
     heroTitle: "Where do you stand in<br><em>Danish</em> politics?",
@@ -834,7 +834,13 @@ configFiles.forEach(file => {
 
   // 1.5 Dynamic card question count replacement at build time
   const totalQ = config.bank ? config.bank.length : 0;
+  const isLikert = !!(config.bank && config.bank.length && config.bank[0].type === 'l');
   function getTestLengthStatic(modeName, totalQ) {
+    if (isLikert) {
+      if (modeName === 'short') return 15;
+      if (modeName === 'medium') return 30;
+      return totalQ;
+    }
     if (totalQ >= 80) {
       if (modeName === 'short') return 25;
       if (modeName === 'medium') return 50;
@@ -915,10 +921,10 @@ function getQuestion(q) {
     ...q,
     q: localQ.q || q.q,
     ctx: localQ.ctx || q.ctx,
-    opts: q.opts.map((o, i) => ({
+    opts: q.opts ? q.opts.map((o, i) => ({
       ...o,
       t: (localQ.opts && localQ.opts[i]) ? localQ.opts[i] : o.t
-    }))
+    })) : undefined
   };
 }
 
@@ -966,6 +972,12 @@ function applyLang() {
   const totalQ = typeof BANK !== 'undefined' ? BANK.length : 0;
 
   function getTestLength(modeName, totalQ) {
+    const likertBank = typeof BANK !== 'undefined' && BANK.length && BANK[0].type === 'l';
+    if (likertBank) {
+      if (modeName === 'short') return 15;
+      if (modeName === 'medium') return 30;
+      return totalQ;
+    }
     if (totalQ >= 80) {
       if (modeName === 'short') return 25;
       if (modeName === 'medium') return 50;

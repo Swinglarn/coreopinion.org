@@ -977,6 +977,18 @@ html.dark-mode .nav-badge {
   color: var(--white);
 }
 
+/* 6-point Likert scale: tighter rows, centered labels */
+.q-opts.likert {
+  gap: 8px;
+  max-width: 520px;
+}
+
+.q-opt-likert {
+  text-align: center;
+  padding: 13px 20px;
+  font-size: 15.5px;
+}
+
 .q-foot {
   display: flex;
   justify-content: space-between;

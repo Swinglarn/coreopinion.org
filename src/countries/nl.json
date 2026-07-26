@@ -3,8 +3,8 @@
   "name": "Nederland",
   "localLabel": "Nederland",
   "flag": "🇳🇱",
-  "title": "Kieskompas Nederland 2026 | CoreOpinion",
-  "desc": "Ontdek je positie op het politieke kompas. 47 beleidsgerichte vragen en stellingen over Nederlandse thema's. Zie je overeenkomst met PVV, GL-PvdA, VVD en NSC.",
+  "title": "Politiek Kompas Nederland 2026 | CoreOpinion",
+  "desc": "Waar sta jij in de Nederlandse politiek? 70 stellingen om je overeenkomst te zien met PVV, GL-PvdA, VVD, NSC, D66, BBB en CDA, plus je framingbias.",
   "keywords": "Kieskompas Nederland, Stemwijzer alternatief 2026, politieke partij test, politiek kompas, kieswijzer, PVV GL-PvdA VVD NSC D66 BBB CDA",
   "canonical": "https://coreopinion.org/nl",
   "regions": [
@@ -128,3864 +128,1563 @@
       }
     }
   },
-  "calibrations": {
-    "hc1": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 2,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": -1,
-        "glp": -1,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "hc2": [
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": -1,
-        "glp": -1,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "hc3": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": 2,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": 0,
-        "glp": 0,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": 0,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "gn1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "gn2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": 1,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": -1,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "gn3": [
-      {
-        "pvv": -1,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": 0,
-        "glp": 1,
-        "vvd": 0,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "im1": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      }
-    ],
-    "im2": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      },
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": -1,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      }
-    ],
-    "im3": [
-      {
-        "pvv": 1,
-        "glp": 2,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": 2,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": 0,
-        "glp": 0,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": 0,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": -1,
-        "d66": 1,
-        "bbb": -1,
-        "cda": -1
-      }
-    ],
-    "tx1": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 2,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "tx2": [
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": -1,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "tx3": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "cl1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 2,
-        "d66": 1,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "cl2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": 1,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": -1,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "ab1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      },
-      {
-        "pvv": -1,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -1,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": -1,
-        "bbb": 2,
-        "cda": 1
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      }
-    ],
-    "ab2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": -1,
-        "bbb": 2,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      }
-    ],
-    "sd1": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 2,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "sd2": [
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": -1,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "rj1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      },
-      {
-        "pvv": -1,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -1,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      }
-    ],
-    "rj2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      },
-      {
-        "pvv": 1,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 0
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      }
-    ],
-    "vt1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      },
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": -1,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      }
-    ],
-    "vt2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      }
-    ],
-    "fp1": [
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": 2,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -1,
-        "glp": -2,
-        "vvd": -2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "fp2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": 2,
-        "glp": 1,
-        "vvd": 0,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "si1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      },
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": -1,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      }
-    ],
-    "si2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      }
-    ],
-    "gi1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 0,
-        "glp": 0,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": 0,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "gi2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": 1,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": -1,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "ss1": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "ss2": [
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": -1,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "tr1": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": -1,
-        "cda": -1
-      }
-    ],
-    "ed1": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "ed2": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "co1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "co2": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 0,
-        "glp": 1,
-        "vvd": 0,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "bt1": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": 2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": -1,
-        "cda": -1
-      }
-    ],
-    "br1": [
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": 1,
-        "glp": 1,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "br2": [
-      {
-        "pvv": 2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 0,
-        "glp": 0,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": 0,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "br3": [
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": -1,
-        "cda": 0
-      },
-      {
-        "pvv": 1,
-        "glp": 0,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": 0,
-        "bbb": 1,
-        "cda": 1
-      },
-      {
-        "pvv": 2,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": -1,
-        "bbb": 2,
-        "cda": 1
-      }
-    ],
-    "br4": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      },
-      {
-        "pvv": 0,
-        "glp": 0,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": 0,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": 1,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 1,
-        "cda": 0
-      }
-    ],
-    "ex1": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      }
-    ],
-    "ex2": [
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 2,
-        "nsc": -2,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 2
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -2,
-        "nsc": 2,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -2
-      }
-    ],
-    "ex3": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      }
-    ],
-    "ex4": [
-      {
-        "pvv": 2,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": -1,
-        "bbb": 2,
-        "cda": 1
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": -1,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -1
-      }
-    ],
-    "ex5": [
-      {
-        "pvv": -1,
-        "glp": 1,
-        "vvd": -1,
-        "nsc": 1,
-        "d66": 1,
-        "bbb": -1,
-        "cda": -1
-      },
-      {
-        "pvv": 1,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": -1,
-        "d66": -1,
-        "bbb": 1,
-        "cda": 1
-      }
-    ],
-    "id1": [
-      {
-        "pvv": 2,
-        "glp": -1,
-        "vvd": 1,
-        "nsc": 1,
-        "d66": -1,
-        "bbb": 2,
-        "cda": 1
-      },
-      {
-        "pvv": 0,
-        "glp": 1,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": -1,
-        "d66": 2,
-        "bbb": -2,
-        "cda": -1
-      }
-    ],
-    "id2": [
-      {
-        "pvv": -2,
-        "glp": 2,
-        "vvd": -1,
-        "nsc": 0,
-        "d66": 2,
-        "bbb": -2,
-        "cda": 0
-      },
-      {
-        "pvv": 0,
-        "glp": 1,
-        "vvd": 0,
-        "nsc": 0,
-        "d66": 1,
-        "bbb": 0,
-        "cda": 0
-      },
-      {
-        "pvv": 2,
-        "glp": -2,
-        "vvd": 1,
-        "nsc": 0,
-        "d66": -2,
-        "bbb": 2,
-        "cda": 0
-      }
-    ]
-  },
+  "calibrations": {},
   "translations": {
-    "hc1": {
-      "q": "Moet deze man failliet gaan of sterven omdat hij zijn baan heeft verloren?",
-      "ctx": "Hij heeft zijn hele leven gewerkt. Verloor zijn baan op 58-jarige leeftijd. Verloor daarmee ook zijn zorgverzekering. Stadium 3 kanker. De rekening is 400.000 dollar.",
-      "opts": [
-        "Nee. Universele gezondheidszorg is het enige antwoord. Medicare voor iedereen.",
-        "Nee. Breid overheidssteun uit en bescherm mensen in zijn situatie.",
-        "Het huidige stelsel is voldoende. Hij had zijn dekking zelf moeten voortzetten.",
-        "Dit is een persoonlijk falen. De overheid moet de gezondheidszorg niet beheren."
-      ]
+    "nl1a": {
+      "q": "De immigratie en asielinstroom naar Nederland zijn veel te hoog en moeten drastisch omlaag."
     },
-    "hc2": {
-      "q": "Door de overheid beheerde gezondheidszorg zou medische innovatie vernietigen, de kwaliteit van zorg verminderen en leiden tot rantsoenering.",
-      "opts": [
-        "Ja. De vrije markt stimuleert de beste medische innovatie.",
-        "Er zijn reële risico's, maar basisregels zouden deze kunnen voorkomen.",
-        "Nee. Andere ontwikkelde landen betalen de helft minder voor betere resultaten onder universele systemen."
-      ]
+    "nl1b": {
+      "q": "Nederland heeft migranten nodig voor de economie, en asiel is een humanitaire basisplicht."
     },
-    "hc3": {
-      "q": "Medische schulden moeten wettelijk anders worden behandeld dan consumentenschulden, met strikte limieten op rente en incasso's.",
-      "opts": [
-        "Ja. Niemand kiest ervoor om ziek te zijn. Het is een noodzaak, geen luxe aankoop.",
-        "Sommige beschermingsmaatregelen zijn zinvol, maar schuldeisers moeten kunnen incasseren.",
-        "Nee. Contracten moeten gelijkelijk worden nageleefd. Uitzonderingen schaden de kredietmarkten."
-      ]
+    "nl2a": {
+      "q": "Nederland zou uit de EU-asielregels moeten stappen en veel meer mensen moeten weigeren."
     },
-    "gn1": {
-      "q": "De grondwet is geen zelfmoordpact. We moeten aanvalswapens verbieden om onze kinderen te beschermen.",
-      "ctx": "Sinds Columbine hebben meer dan 350.000 scholieren te maken gehad met vuurwapengeweld op school. Actieve schutter-oefeningen zijn nu standaard.",
-      "opts": [
-        "Ja. Dit zijn oorlogswapens en horen niet thuis in onze straten.",
-        "Verboden op aanvalswapens zijn complex. Achtergrondcontroles en meldwetten zijn effectiever.",
-        "Nee. Richt je op geestelijke gezondheidszorg en schoolveiligheid. Straf wetgetrouwe burgers niet."
-      ]
+    "nl2b": {
+      "q": "De gedeelde asielregels loslaten zou de wet en de Nederlandse humanitaire verplichtingen schenden."
     },
-    "gn2": {
-      "q": "Het verbieden van specifieke typen vuurwapens ontwapent alleen wetgetrouwe burgers, waardoor ze weerloos zijn tegen criminelen die de wet negeren.",
-      "opts": [
-        "Ja. Alleen een goede burger met een wapen stopt een slechte burger met een wapen.",
-        "Zelfverdediging is een recht, maar sommige beperkingen op magazijnen met grote capaciteit zijn redelijk.",
-        "Nee. Landen met strenge wapenwetten hebben een fractie van onze moordcijfers."
-      ]
+    "nl3a": {
+      "q": "De islam is een bedreiging voor de Nederlandse cultuur en vrijheden."
     },
-    "gn3": {
-      "q": "We moeten een verplichte wachttijd van 10 dagen invoeren voor alle vuurwapenaankopen om impulsieve daden van geweld te voorkomen.",
-      "ctx": "Ongeveer 48.000 Amerikanen stierven in 2022 aan vuurwapengerelateerd letsel. Meer dan de helft betrof zelfmoord.",
-      "opts": [
-        "Ja. Een afkoelperiode is een verstandige maatregel die levens redt.",
-        "Wachttijden zouden alleen moeten gelden voor eerste kopers of jonge volwassenen.",
-        "Nee. Uitgesteld recht is ontzegd recht. Slachtoffers van stalking hebben direct bescherming nodig."
-      ]
+    "nl3b": {
+      "q": "Nederlandse moslims zijn volwaardige leden van de samenleving, en hun geloof verdient gelijke rechten."
     },
-    "im1": {
-      "q": "Een land zonder grenzen is geen land. We moeten de grens beveiligen en illegalen uitzetten.",
-      "ctx": "Miljoenen ongedocumenteerde immigranten leven in het land. Grensoverschrijdingen hebben historische hoogten bereikt. Gemeentelijke middelen zijn uitgeput.",
-      "opts": [
-        "Ja. Wet en orde moeten worden hersteld. Grensbeveiliging is nationale veiligheid.",
-        "Beveilig de grens, maar bied een pad naar legalisering voor degenen die hier al zijn.",
-        "Richt je op humane verwerking, grondoorzaken en het uitbreiden van legale paden."
-      ]
+    "nl4a": {
+      "q": "De gedwongen uitkoop en krimp van de veehouderij om stikstof te verminderen is te ver gegaan."
     },
-    "im2": {
-      "q": "Gezinnen uit elkaar scheuren door massadeportaties is moreel verwerpelijk. We hebben een weg naar het staatsburgerschap nodig.",
-      "ctx": "Ongedocumenteerde immigranten betalen miljarden aan belasting, oogsten ons voedsel, verzorgen ouderen en bouwen huizen.",
-      "opts": [
-        "Ja. Dit zijn onze buren en collega's. Ze verdienen waardigheid en een legale status.",
-        "Bied een legale status en werkvergunningen, maar naturalisatie moet een streng proces zijn.",
-        "Nee. Het belonen van wetsovertreding moedigt illegale immigratie aan. Deportaties zijn noodzakelijk."
-      ]
+    "nl4b": {
+      "q": "Stikstof verminderen betekent de veestapel krimpen; natuur en woningbouw hangen ervan af."
     },
-    "im3": {
-      "q": "Het land moet het aantal visa voor hoogopgeleide werknemers (H-1B) aanzienlijk verhogen om wereldwijd toptalent aan te trekken.",
-      "opts": [
-        "Ja. Kennismigratie stimuleert innovatie en schept binnenlandse banen.",
-        "Een matige verhoging is prima, maar we moeten eigen werknemers beschermen tegen loondumping.",
-        "Nee. Bedrijven moeten investeren in het opleiden van eigen mensen in plaats van goedkope krachten te importeren."
-      ]
+    "nl5a": {
+      "q": "De overheid moet stevig ingrijpen in de woningmarkt, huizen bouwen en huren maximeren."
     },
-    "tx1": {
-      "q": "Extreme vermogensongelijkheid is een bedreiging voor de democratie. We moeten een vermogensbelasting invoeren op vermogens boven 50 miljoen dollar.",
-      "ctx": "De drie rijkste personen bezitten meer vermogen dan de gehele armere helft van de bevolking samen.",
-      "opts": [
-        "Ja. Miljardairs zouden niet mogen bestaan in een samenleving met dakloze kinderen.",
-        "Vermogensbelasting is grondwettelijk complex. Verhoog in plaats daarvan het topschijftarief van de inkomstenbelasting.",
-        "Nee. Gedwongen herverdeling is diefstal. Rijkdom wordt gecreëerd, niet gestolen."
-      ]
+    "nl5b": {
+      "q": "Huurplafonds en zwaar ingrijpen jagen bouwers weg en verergeren de woningnood."
     },
-    "tx2": {
-      "q": "Het belasten van kapitaal en hoge inkomens drijft investeringen naar het buitenland, verlaagt de productiviteit en schaadt de werknemers.",
-      "opts": [
-        "Ja. Lagere belastingen stimuleren investeringen, bedrijfsgroei en werkgelegenheid.",
-        "Sommige belastingen zijn nodig, maar hoge marginale tarieven verstoren economische beslissingen.",
-        "Nee. Trickle-down economics is een bewezen leugen. Groei moet van de vraagzijde komen."
-      ]
+    "nl6a": {
+      "q": "Het eigen risico in de zorg moet worden afgeschaft."
     },
-    "tx3": {
-      "q": "Het tarief van de vennootschapsbelasting moet worden teruggebracht naar 35% om te zorgen dat grote bedrijven hun eerlijke deel betalen.",
-      "opts": [
-        "Ja. Multinationals boeken recordwinsten terwijl ze historisch lage belastingtarieven betalen.",
-        "Een gematigd tarief rond 25-28% is een concurrerend compromis.",
-        "Nee. Een hoog tarief maakt onze bedrijven onconcurrerend en wordt doorberekend aan de consument."
-      ]
+    "nl6b": {
+      "q": "Het eigen risico afschaffen zou de premies en het zorggebruik voor iedereen opdrijven."
     },
-    "cl1": {
-      "q": "We verkeren in een klimaatcrisis. De overheid moet fossiele brandstoffen snel afbouwen und investeren in een Green New Deal.",
-      "ctx": "Het afgelopen jaar was het warmste ooit gemeten. Bosbranden, droogtes en overstromingen kosten de economie miljarden.",
-      "opts": [
-        "Ja. De transitie naar hernieuwbare energie is de morele en economische plicht van deze tijd.",
-        "Fossiele brandstoffen abrupt afbouwen zou de economie ruïneren. Subsidieer in plaats daarvan groene tech.",
-        "Nee. Nationale energie-onafhankelijkheid vereist olie, gas en kolen. De Green New Deal is een socialistische fantasie."
-      ]
+    "nl7a": {
+      "q": "De rijkste Nederlanders en grote bedrijven zouden fors meer belasting moeten betalen."
     },
-    "cl2": {
-      "q": "Eenijdige verboden op fossiele brandstoffen vernietigen goedbetaalde banen en maken ons afhankelijk van buitenlandse rivalen zoals China voor zonnepanelen en accu's.",
-      "opts": [
-        "Ja. Meer boren garandeert goedkope energie als motor van de economie.",
-        "We moeten alle energie-opties benutten, inclusief kernenergie en schoon aardgas.",
-        "Nee. De transitie is onvermijdelijk. Voorop lopen hiermee schept de banen van de toekomst."
-      ]
+    "nl7b": {
+      "q": "Hogere belastingen op vermogen en bedrijven jagen investeringen en banen het land uit."
     },
-    "ab1": {
-      "q": "Abortus is gezondheidszorg. Het parlement moet nationale wetgeving aannemen om abortusrechten in het hele land vast te leggen.",
-      "ctx": "Sinds het Hooggerechtshof het historische abortusrecht heeft teruggedraaid, hebben veel staten abortus vrijwel verboden, waardoor vrouwen duizenden kilometers moeten reizen.",
-      "opts": [
-        "Ja. Reproductieve vrijheid is een fundamenteel mensenrecht.",
-        "Steun abortusrechten, maar met standaardlimieten op late abortussen.",
-        "Nee. De kwestie hoort thuis bij de deelstaten, in overeenstemming met de Grondwet.",
-        "Nee. Abortus beëindigt een menselijk leven en moet in het hele land verboden worden."
-      ]
+    "nl8a": {
+      "q": "Nederland moet veel meer doen voor het klimaat, ook als dat economisch pijn doet."
     },
-    "ab2": {
-      "q": "De uitspraak van het Hof heeft de kwestie van abortus terecht teruggelegd bij het democratische proces in elke deelstaat.",
-      "opts": [
-        "Ja. De Grondwet noemt abortus niet. Staten hebben het recht om ongeboren leven te beschermen.",
-        "Staten moeten beslissen, maar verboden moeten uitzonderingen hebben voor verkrachting, incest en gevaar voor het leven.",
-        "Nee. Mensenrechten mogen niet afhangen van geografische grenzen of lokale parlementen."
-      ]
+    "nl8b": {
+      "q": "Dure klimaatregels belasten gewone mensen en helpen het wereldklimaat nauwelijks."
     },
-    "sd1": {
-      "q": "Hoger onderwijs is een publiek goed. De overheid moet studieschulden kwijtschelden en openbare universiteiten collegegeldvrij maken.",
-      "ctx": "Miljoenen burgers dragen een zware last aan studieschulden. Een hele generatie stelt het kopen van een huis of het starten van een bedrijf uit.",
-      "opts": [
-        "Ja. Gratis onderwijs is een investering in onze gezamenlijke toekomst.",
-        "Scheld schulden kwijt voor studenten met lage inkomens en hervorm de rente, maar volledige gratis toegang is te duur.",
-        "Nee. Dit is een enorme overdracht van rijkdom van de werkende klasse naar de hoogopgeleide elite."
-      ]
+    "nl9a": {
+      "q": "De toekomst van Nederland ligt in een sterkere, meer geïntegreerde Europese Unie."
     },
-    "sd2": {
-      "q": "Het kwijtschelden van studieschulden is diep onrechtvaardig tegenover de miljoenen kiezers die hard hebben gewerkt om hun lening af te betalen, of die ervoor hebben gekozen niet te gaan studeren.",
-      "opts": [
-        "Ja. Je tekent een contract, je betaalt het terug. Persoonlijke verantwoordelijkheid telt.",
-        "Het systeem heeft gebreken, maar algehele kwijtschelding is het verkeerde middel.",
-        "Nee. De studiekosten zijn geëxplodeerd. De leencontracten waren misleidend."
-      ]
+    "nl9b": {
+      "q": "Brussel heeft al te veel macht over Nederland, en de soevereiniteit moet voorop staan."
     },
-    "rj1": {
-      "q": "Systemisch racisme is reëel. We moeten de politie structureel hervormen, gekwalificeerde immuniteit beëindigen en investeren in achtergestelde gemeenschappen.",
-      "ctx": "Minderheden worden statistisch gezien veel vaker opgesloten en onevenredig vaak geconfronteerd met politie en justitie.",
-      "opts": [
-        "Ja. Het strafrechtsysteem kent raciale ongelijkheden en vereist radicale hervormingen.",
-        "Hervorm de politie, maar verlaag het budget of de bezetting van de wetshandhaving niet.",
-        "Nee. Systemisch racisme is een verdeeldheid zaaiend narratief. Het probleem ligt bij criminaliteit en gezinsuitval."
-      ]
+    "nl10a": {
+      "q": "Nederland zou een referendum moeten houden over vertrek uit de EU."
     },
-    "rj2": {
-      "q": "De voortdurende focus op etnische scheidslijnen door de politiek en media ondermijnt de sociale cohesie en verdeelt het land.",
-      "opts": [
-        "Ja. We moeten mensen beoordelen op hun karakter, niet op hun afkomst.",
-        "Etnische verschillen zijn reëel, maar de focus moet liggen op verbindende economische oplossingen.",
-        "Nee. Het ontkennen van de geschiedenis wist het verleden niet uit. We moeten systemisch racisme benoemen om het af te breken."
-      ]
+    "nl10b": {
+      "q": "Uit de EU stappen zou economische zelfbeschadiging zijn voor een handelsland als Nederland."
     },
-    "vt1": {
-      "q": "We moeten nationale normen invoeren voor automatische kiezersregistratie, stemmen per brief uitbreiden en van de verkiezingsdag een nationale feestdag maken.",
-      "opts": [
-        "Ja. Stemmen is een recht. We moeten deelname voor elke burger zo makkelijk mogelijk maken.",
-        "Een nationale feestdag ja, maar registratieregels moeten bij de deelstaten blijven.",
-        "Nee. We hebben strengere kiezersidentificatie nodig om de integriteit van verkiezingen te waarborgen."
-      ]
+    "nl11a": {
+      "q": "De toeslagenaffaire liet zien dat de staat burgers als verdachten behandelt; de macht moet terug naar de mensen."
     },
-    "vt2": {
-      "q": "Het versoepelen van kiezersregistratie en uitbreiden van stemmen per brief opent de deur voor fraude und ondermijnt het vertrouwen in verkiezingen.",
-      "opts": [
-        "Ja. Elke stem moet geverifieerd worden. Identificatieplicht beschermt de democratie.",
-        "Integriteit is belangrijk, maar regels mogen niet gebruikt worden om groepen het stemmen te bemoeilijken.",
-        "Nee. Kiezersfraude is vrijwel non-existent. Deze wetten zijn bedoeld om minderheden van het stemmen te houden."
-      ]
+    "nl11b": {
+      "q": "De toeslagenaffaire was een ernstig falen, maar wantrouwen tegen alle overheid is de verkeerde les."
     },
-    "fp1": {
-      "q": "We moeten kracht uitstralen. Een sterk leger is de enige garantie voor wereldwijde stabiliteit en de bescherming van democratische waarden.",
-      "ctx": "Het land heeft honderden militaire bases wereldwijd en geeft meer uit aan defensie dan de volgende tien landen samen.",
-      "opts": [
-        "Ja. Vrede door sterkte. We moeten onze bondgenoten steunen.",
-        "Verdedig onze bondgenoten, maar vermijd dure buitenlandse interventies en 'nation-building'.",
-        "Nee. Het militair-industrieel complex slurpt middelen op die nodig zijn voor binnenlandse behoeften."
-      ]
+    "nl12a": {
+      "q": "Sommige rassen zijn simpelweg intelligenter of capabeler dan andere."
     },
-    "fp2": {
-      "q": "We moeten ophouden met het uitgeven van miljarden aan buitenlandse oorlogen en ons in plaats daarvan richten op het opbouwen van onze eigen gemeenschappen.",
-      "opts": [
-        "Ja. Eigen volk eerst. Onze prioriteit moet liggen bij binnenlandse stabiliteit en werkgelegenheid.",
-        "Een evenwichtige aanpak. We moeten wereldwijd betrokken blijven om onze eigen belangen te beschermen.",
-        "Nee. Isolationisme is een gevaarlijke illusie. Mondiale stabiliteit is cruciaal voor onze economie."
-      ]
+    "nl12b": {
+      "q": "Er is geen rangorde van rassen; het idee is pseudowetenschap met een schandelijke geschiedenis."
     },
-    "si1": {
-      "q": "Gendertrajecten zijn een kwestie van medische vrijheid. De politiek heeft geen recht om dit te verbieden.",
-      "ctx": "Transgender jongeren kampen met hoge percentages depressie. Medische verenigingen steunen deze zorg als noodzakelijk.",
-      "opts": [
-        "Ja. Beslissingen moeten genomen worden door patiënten, gezinnen en artsen, niet door politici.",
-        "Zorg ja, maar sommige leeftijdsgrenzen voor onomkeerbare chirurgische ingrepen zijn redelijk.",
-        "Nee. We moeten kinderen beschermen tegen experimentele ingrepen en traditionele waarden verdedigen."
-      ]
+    "nl13a": {
+      "q": "Immigranten moeten zich aanpassen aan de Nederlandse cultuur en waarden, niet andersom."
     },
-    "si2": {
-      "q": "Minderjarigen toestemming geven voor onomkeerbare gendertransities is een medische fout die de staat moet verbieden.",
-      "opts": [
-        "Ja. Kinderen missen de rijpheid om in te stemmen met keuzes die hun hele leven beïnvloeden.",
-        "Strikte medische beoordeling is nodig, maar algehele verboden gaan te ver.",
-        "Nee. Medische keuzes horen bij gezinnen en artsen thuis."
-      ]
+    "nl13b": {
+      "q": "Een levende cultuur is altijd gemengd; assimilatie eisen verarmt Nederland."
     },
-    "gi1": {
-      "q": "De staat moet sociale media streng reguleren om desinformatie, online haat en buitenlandse verkiezingsinmenging te bestrijden.",
-      "opts": [
-        "Ja. Ongereguleerde techmonopolies schaden de democratie en de volksgezondheid.",
-        "Desinformatie is een gevaar, maar overheidsregulering brengt het risico van politieke censuur met zich mee.",
-        "Nee. De vrijheid van meningsuiting beschermt alle meningen. Vrij debat is het enige medicijn."
-      ]
+    "nl14a": {
+      "q": "Nederland heeft hardere straffen en meer politiebevoegdheden nodig tegen de georganiseerde misdaad."
     },
-    "gi2": {
-      "q": "Druk van de overheid op sociale media om bepaalde meningen te onderdrukken is staatscensuur via de achterdeur.",
-      "ctx": "Er zijn rapporten dat overheidsinstanties samenwerken met platforms om inhoud over pandemieën of verkiezingen te labelen of te dempen.",
-      "opts": [
-        "Ja. Overheidsdruk op private platforms om inhoud te modereren schendt de vrije meningsuiting.",
-        "Platforms moeten hun eigen regels handhaven, maar communicatie met de staat moet transparant zijn.",
-        "Nee. De staat heeft de plicht om platforms te waarschuwen tegen desinformatiecampagnes of veiligheidsrisico's."
-      ]
+    "nl14b": {
+      "q": "Steeds hardere straffen verminderen de criminaliteit nooit; preventie en het aanpakken van oorzaken wel."
     },
-    "ss1": {
-      "q": "We moeten de pensioenkassen veiligstellen door de premiegrens af te schaffen, zodat hoge inkomens over hun hele salaris bijdragen.",
-      "opts": [
-        "Ja. Rijken moeten premies betalen over hun gehele inkomen, net als gemiddelde werknemers.",
-        "Verhoog de grens, maar pas ook de pensioenleeftijd aan voor toekomstige generaties.",
-        "Nee. We moeten overstappen op individuele opbouwrekeningen en pensioen aan de markt overlaten."
-      ]
+    "nl15a": {
+      "q": "Transgender personen zouden hun juridische geslacht via zelfverklaring moeten kunnen wijzigen."
     },
-    "ss2": {
-      "q": "Het uitbreiden van openbare sociale voorzieningen terwijl de staatsschuld groeit is budgettair onverantwoord.",
-      "opts": [
-        "Ja. We moeten bezuinigen en private opbouw stimuleren om staatsfaillissement te voorkomen.",
-        "Deze regelingen moeten worden hervormd, maar het sociale vangnet moet intact blijven.",
-        "Nee. Deze voorzieningen zijn beloften waar burgers voor betaald hebben. Bezuinig liever op defensie."
-      ]
+    "nl15b": {
+      "q": "Biologisch geslacht is een realiteit die de wet niet door een verklaring mag laten overrulen."
     },
-    "tr1": {
-      "q": "Vrijhandel was een enorme overdracht van rijkdom van werknemers naar multinationals. We moeten onze industrieën beschermen.",
-      "ctx": "Veertig jaar lang werden industriebanen verplaatst naar lagelonenlanden. Hele regio's verpauperden, terwijl concerns recordwinsten boekten.",
-      "opts": [
-        "Ja. Importtarieven en industriebeleid zijn nodig om de middenklasse weer op te bouwen.",
-        "Gerichte tarieven alleen op strategische sectoren (zoals microchips). Brede tarieven schaden consumenten.",
-        "Nee. Protectionisme verhoogt de prijzen en leidt tot handelsoorlogen die iedereen armer maken."
-      ]
+    "nl16a": {
+      "q": "Werknemers hebben sterkere bescherming nodig, en het minimumloon moet flink omhoog."
     },
-    "ed1": {
-      "q": "De financiering van scholen moet strikt op basis van behoefte gebeuren, waarbij middelen van rijke wijken naar scholen in arme wijken gaan.",
-      "opts": [
-        "Ja. Elk kind verdient dezelfde start in het leven, ongeacht de postcode.",
-        "Behoeftefinanciering ja, maar bestraf districten die er zelf voor kiezen meer in scholen te steken niet.",
-        "Nee. Schoolvouchers moeten ouders de vrijheid geven hun kind naar elke school te sturen, openbaar of privé."
-      ]
+    "nl16b": {
+      "q": "Lonen en bescherming te ver opdrijven kost alleen banen en schaadt kleine bedrijven."
     },
-    "ed2": {
-      "q": "Schoolvouchers onttrekken broodnodige middelen aan het openbaar onderwijs en vergroten de sociale ongelijkheid.",
-      "opts": [
-        "Ja. Publiek geld hoort in openbare scholen. Vouchersystemen creëren ongelijkheid.",
-        "Vouchers hebben waarde, maar moeten beperkt blijven tot arme studenten op zwakke scholen.",
-        "Nee. Concurrentie verbetert alle scholen. Ouders moeten vrij kunnen kiezen."
-      ]
+    "nl17a": {
+      "q": "Het sociale vangnet moet sterker en makkelijker toegankelijk zijn."
     },
-    "co1": {
-      "q": "Het Hooggerechtshof is een partijpolitiek orgaan geworden. We moeten termijnlimieten en een bindende gedragscode invoeren.",
-      "opts": [
-        "Ja. Levenslange benoemingen zonder ethische verantwoording bedreigen de legitimiteit.",
-        "Een bindende gedragscode ja, maar termijnlimieten verzwakken de onafhankelijkheid van de rechtspraak.",
-        "Nee. Het systeem heeft zich bewezen. De regels veranderen is louter politiek opportunisme."
-      ]
+    "nl17b": {
+      "q": "Een te royaal vangnet ondermijnt de prikkel om te werken en moet worden beteugeld."
     },
-    "co2": {
-      "q": "De Grondwet is een levend document dat moet worden geïnterpreteerd in het licht van moderne waarden en sociale vooruitgang.",
-      "opts": [
-        "Ja. De opstellers konden de moderne wereld niet voorzien. Een letterlijke lezing is anachronistisch.",
-        "De interpretatie moet meebewegen, maar constitutionele basisprincipes moeten stabiel blijven.",
-        "Nee. De oorspronkelijke bedoeling is de enige garantie van de wet. Wijzigingen vereisen een amendement."
-      ]
+    "nl18a": {
+      "q": "Nederland reguleert het bedrijfsleven te veel; bedrijven hebben veel minder regeldruk nodig."
     },
-    "bt1": {
-      "q": "Techmonopolies zoals Google, Meta en Amazon zijn te groot geworden en moeten via de antitrustwetgeving worden opgesplitst.",
-      "ctx": "Een handvol techgiganten controleert de moderne informatiestroom en bezit het digitale publieke domein.",
-      "opts": [
-        "Ja. Splits ze op. Ze verstikken concurrentie, misbruiken onze data en beheersen het debat.",
-        "Regulering en privacywetgeving zijn beter. Opsplitsing schaadt onze technologische dominantie.",
-        "Nee. Ze zijn succesvol omdat ze uitstekende diensten leveren. Laat de markt beslissen."
-      ]
+    "nl18b": {
+      "q": "Regels schrappen holt alleen de bescherming van werknemers, consumenten en natuur uit."
     },
-    "br1": {
-      "q": "De overheid is te groot, te duur en grijpt te ver in. Een kleinere overheid zou de vrijheid en productiviteit vergroten.",
-      "opts": [
-        "Ja. Bezuinig op uitgaven, verlaag belastingen, schrap regels, vertrouw op de eigen verantwoordelijkheid.",
-        "Sommige zaken zijn te groot, maar kernprogramma's en sociale hulp zijn precies goed.",
-        "Nee. De overheid legt de basis voor welvaart. Bezuinigen hierop raakt de bevolking direct."
-      ]
+    "nl19a": {
+      "q": "Nederland zou cannabis volledig moeten legaliseren en reguleren, niet alleen gedogen."
     },
-    "br2": {
-      "q": "De kloof tussen de rijksten en de rest van de bevolking is gegroeid tot een niveau dat de sociale cohesie bedreigt.",
-      "opts": [
-        "Ja. Progressieve belastingen, sterkere sociale programma's en vermogensbelasting zijn nodig.",
-        "Verschillen zijn er, maar gelijke kansen en groei zijn belangrijker dan herverdeling.",
-        "Verschillen weerspiegelen inzet. Gedwongen gelijkheid remt initiatief en ambitie."
-      ]
+    "nl19b": {
+      "q": "Volledige legalisering zou de drugscultuur alleen verdiepen en criminelen verder in de kaart spelen."
     },
-    "br3": {
-      "q": "De grootste bedreigingen voor de vrijheid komen van binnenuit – overheidscontrole en inbreuk op burgerrechten.",
-      "opts": [
-        "Ja. Massasurveillance en noodwetgeving zijn de werkelijke gevaren.",
-        "Externe bedreigingen zijn reëel. De balans tussen veiligheid en vrijheid is moeilijk.",
-        "Internationale dreigingen vereisen een sterke binnenlandse veiligheid en inlichtingendiensten."
-      ]
+    "nl20a": {
+      "q": "Het Nederlandse recht op euthanasie moet worden beschermd en waar zinvol verruimd."
     },
-    "br4": {
-      "q": "Grote bedrijven hebben te veel invloed gekregen op de politiek, de economie en het dagelijks leven.",
-      "opts": [
-        "Ja. We moeten lobbyen drastisch inperken en de verkiezingsfinanciering hervormen.",
-        "De invloed van grote bedrijven is een probleem, maar overmatige regelgeving remt het mkb.",
-        "Economische vrijheid is de basis van welvaart. De staat is een grotere bedreiging dan welk bedrijf ook."
-      ]
+    "nl20b": {
+      "q": "Euthanasie verruimen dreigt kwetsbaren onder druk te zetten en het leven goedkoop te maken."
     },
-    "ex1": {
-      "q": "Dat het land zoveel miljardairs telt, is geen succes, maar het teken van een systeem dat in hun voordeel is gemanipuleerd.",
-      "opts": [
-        "Ja. Extreme rijkdom op deze schaal is een falen van overheidsbeleid.",
-        "Nee. De rijkdom aan de top neemt niets weg van de onderkant. Groei komt iedereen ten goede."
-      ]
+    "nl21a": {
+      "q": "Toegang tot abortus is een verworven recht dat volledig beschermd moet blijven."
     },
-    "ex2": {
-      "q": "Het belasten van de rijken om publieke programma's te financieren bestraft succes en verdrijft banen.",
-      "opts": [
-        "Ja. Kapitaal ontvlucht gebieden met hoge belastingen. Je bouwt geen welvaart op door succes te bestraffen.",
-        "Nee. De rijksten hebben hun fortuin gebouwd op onze publieke infrastructuur. Ze moeten terugbetalen."
-      ]
+    "nl21b": {
+      "q": "Abortus beëindigt een mensenleven, en de wet zou strenger moeten zijn."
     },
-    "ex3": {
-      "q": "Het gevangenissysteem sluit onevenredig veel mensen op. Dit is geen rechtvaardigheid, maar massale bestraffing.",
-      "opts": [
-        "Ja. Massa-opsluiting is een ramp en vereist een fundamentele koerswijziging.",
-        "Nee. De gevangenispopulatie weerspiegelt de criminaliteit. Openbare veiligheid is niet onderhandelbaar."
-      ]
+    "nl22a": {
+      "q": "Nederland moet Oekraïne blijven bewapenen en de defensie-uitgaven verhogen."
     },
-    "ex4": {
-      "q": "De criminaliteit steeg in steden die bezuinigden op de politie. Bezuinigen op de politie was een verhängnisvolle Fehler.",
-      "opts": [
-        "Ja. Het experiment is mislukt en de kwetsbaarste wijken hebben de prijs betaald.",
-        "Nee. Het gebrek aan budget voor welzijn, huisvesting en scholen is het probleem, niet te weinig agenten."
-      ]
+    "nl22b": {
+      "q": "Eindeloze wapenleveranties en hogere defensiebudgetten zijn geld dat beter thuis besteed wordt."
     },
-    "ex5": {
-      "q": "De staat heeft geen recht om zijn burgers zonder gerechtelijk bevel te bespioneren. Massasurveillance moet stoppen.",
-      "opts": [
-        "Ja. Een overheid die iedereen in de gaten houdt, vertrouwt niemand.",
-        "Nee. Veiligheidsdiensten hebben brede toegang nodig. Terrorisme wacht niet op bevelen."
-      ]
+    "nl23a": {
+      "q": "Nederland zou nieuwe kerncentrales moeten bouwen."
     },
-    "id1": {
-      "q": "Elke cultuur heeft prestaties geleverd om trots op te zijn. Ik ben trots op de mijne en excuseer me er niet voor.",
-      "opts": [
-        "Ja. Trots op de eigen cultuur en herkomst is natuurlijk en gezond.",
-        "Trots is prima, maar beweringen over culturele superioriteit maken me ongemakkelijk.",
-        "Nee. Culturen rangschikken of superieur verklaren is waar gevaarlijk denken begint."
-      ]
+    "nl23b": {
+      "q": "Nieuwe kernenergie is te traag en te duur; het geld moet naar duurzame energie."
     },
-    "id2": {
-      "q": "Mensen die nu leven zouden zich moeten schamen voor de historische misdaden van hun natie (slavernij, kolonialisme, massamoorden).",
-      "opts": [
-        "Ja. Het erkennen van geërfde schuld hoort bij een eerlijke en oprechte omgang met jezelf.",
-        "We moeten de geschiedenis eerlijk erkennen, zonder persoonlijke schaamte te eisen.",
-        "Nee. Je kunt niet schuldig zijn aan daden die je niet hebt gepleegd. Collectieve schuld is onrechtvaardig."
-      ]
+    "nl24a": {
+      "q": "De staat is Groningen volledige compensatie schuldig en mag daar nooit weer gas winnen."
+    },
+    "nl24b": {
+      "q": "De realiteit kan enige gaswinning afdwingen, en eindeloze compensatie kent grenzen."
+    },
+    "nl25a": {
+      "q": "De publieke omroep is zijn financiering waard en moet onafhankelijk blijven van de politiek."
+    },
+    "nl25b": {
+      "q": "De publieke omroep is eenzijdig en opgeblazen, en de financiering moet omlaag."
+    },
+    "nl26a": {
+      "q": "De multiculturele samenleving is mislukt en heeft gescheiden gemeenschappen opgeleverd met weinig gemeenschappelijks."
+    },
+    "nl26b": {
+      "q": "De Nederlandse diversiteit is een echte kracht en onderdeel van de nationale identiteit."
+    },
+    "nl27a": {
+      "q": "Nederland zou bindende referenda over grote kwesties moeten invoeren."
+    },
+    "nl27b": {
+      "q": "Referenda reduceren complexe vragen tot leuzen en worden makkelijk gekaapt door populisten."
+    },
+    "nl28a": {
+      "q": "Natuurbescherming zou voorrang moeten krijgen boven nieuwe wegen, boerderijen en industrie."
+    },
+    "nl28b": {
+      "q": "Eindeloze milieuregels wurgen de woningbouw en infrastructuur die het land nodig heeft."
+    },
+    "nl29a": {
+      "q": "Het omstreden nieuwe pensioenstelsel moet worden gepauzeerd of teruggedraaid om zekerheid te beschermen."
+    },
+    "nl29b": {
+      "q": "Het nieuwe pensioenstelsel is een noodzakelijke modernisering en moet doorgaan."
+    },
+    "nl30a": {
+      "q": "De overheid moet direct ingrijpen om de koopkracht van mensen te beschermen."
+    },
+    "nl30b": {
+      "q": "Uitkeringen en prijsmaatregelen wakkeren alleen de inflatie en de staatsschuld aan."
+    },
+    "nl31a": {
+      "q": "De open wereldwijde vrijhandel heeft Nederland rijker gemaakt en moet worden verdedigd."
+    },
+    "nl31b": {
+      "q": "De globalisering heeft gemeenschappen uitgehold en het land te afhankelijk gemaakt."
+    },
+    "nl32a": {
+      "q": "Werklozen en armen worden met te veel wantrouwen behandeld; het vangnet moet sterker."
+    },
+    "nl32b": {
+      "q": "Bijstand wordt te makkelijk een val, en strengere regels beschermen wie meebetaalt."
+    },
+    "nl33a": {
+      "q": "Oude tradities dragen de wijsheid van generaties en mogen niet lichtvaardig worden weggegooid."
+    },
+    "nl33b": {
+      "q": "Traditie vereren laat alleen de doden over de levenden regeren en blokkeert noodzakelijke verandering."
+    },
+    "nl34a": {
+      "q": "Een goede samenleving hangt meer af van persoonlijke verantwoordelijkheid dan van overheidssteun."
+    },
+    "nl34b": {
+      "q": "Individuen de schuld geven van problemen die het systeem creëert, is hoe de bevoorrechten het lijden van anderen goedpraten."
+    },
+    "nl35a": {
+      "q": "Gemeenten moeten worden verplicht een eerlijk deel van de asielzoekers op te nemen (spreidingswet)."
+    },
+    "nl35b": {
+      "q": "Asielzoekers tegen hun wil aan gemeenschappen opdringen kweekt alleen wrok en moet worden geschrapt."
     }
   },
   "bank": [
     {
-      "id": "hc1",
-      "nl": "Healthcare",
-      "pair": "hc-a",
-      "fr": "pro",
-      "type": "sc",
-      "ctx": "He worked his whole life. Lost his job at 58. Lost his insurance with it. Stage 3 cancer. The bill is 400,000 dollars.",
-      "q": "Should this man go bankrupt or die because he lost his job?",
-      "opts": [
-        {
-          "t": "No. Universal healthcare is the only answer. Medicare for All.",
-          "e": -2,
-          "g": 2,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "No. Expand the ACA and protect people in his situation.",
-          "e": -1,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 2,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "The ACA is enough. He should have kept his coverage through COBRA.",
-          "e": 1,
-          "g": 0,
-          "pvv": -1,
-          "glp": -1,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "This is a personal failure. The government should not run healthcare.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
-    },
-    {
-      "id": "hc2",
-      "nl": "Healthcare",
-      "pair": "hc-a",
-      "fr": "con",
-      "type": "s",
-      "q": "Government-run healthcare would destroy medical innovation, decrease care quality, and lead to rationing.",
-      "opts": [
-        {
-          "t": "Yes. The free market drives the best healthcare innovation.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "There are real risks, but standard regulations could prevent them.",
-          "e": 1,
-          "g": 0,
-          "pvv": -1,
-          "glp": -1,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. Other advanced nations pay half as much for better outcomes under universal systems.",
-          "e": -2,
-          "g": 2,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
-    },
-    {
-      "id": "hc3",
-      "nl": "Healthcare",
-      "type": "s",
-      "q": "Medical debt should be treated differently from consumer debt under the law, with strict limits on interest and collections.",
-      "opts": [
-        {
-          "t": "Yes. No one chooses to be sick. It is a necessity, not a purchase.",
-          "e": -1,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": 2,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "Some protections make sense, but lenders must still be able to collect.",
-          "e": 0,
-          "g": 0,
-          "pvv": 0,
-          "glp": 0,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": 0,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. Contracts must be enforced equally. Carving out exemptions hurts credit markets.",
-          "e": 1,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
-    },
-    {
-      "id": "gn1",
-      "nl": "Gun policy",
-      "pair": "gn-a",
-      "fr": "pro",
-      "type": "sc",
-      "ctx": "Since Columbine, over 350,000 students have experienced gun violence at school. Active shooter drills are now a standard part of American childhood.",
-      "q": "The Second Amendment is not a suicide pact. We must ban assault weapons to protect our children.",
-      "opts": [
-        {
-          "t": "Yes. These are weapons of war and have no place on our streets.",
-          "e": 0,
-          "g": 2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Assault weapons bans are complex. Background checks and red flag laws are more effective.",
-          "e": 0,
-          "g": 1,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. Focus on mental health and school security. Do not punish law-abiding citizens.",
-          "e": 0,
-          "g": -1,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
-    },
-    {
-      "id": "gn2",
-      "nl": "Gun policy",
-      "pair": "gn-a",
-      "fr": "con",
-      "type": "s",
-      "q": "Banning specific types of firearms only disarms law-abiding citizens, leaving them defenceless against criminals who ignore the law.",
-      "opts": [
-        {
-          "t": "Yes. The only thing that stops a bad guy with a gun is a good guy with a gun.",
-          "e": 0,
-          "g": -2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "Self-defence is a right, but some restrictions on high-capacity magazines are reasonable.",
-          "e": 0,
-          "g": -1,
-          "pvv": 1,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": -1,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. Countries with strict gun laws have a fraction of our homicide rates.",
-          "e": 0,
-          "g": 2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
-    },
-    {
-      "id": "gn3",
-      "nl": "Gun policy",
-      "type": "sc",
-      "ctx": "Roughly 48,000 Americans died from gun-related injuries in 2022. More than half were suicides.",
-      "q": "We should require a mandatory 10-day waiting period for all firearm purchases to prevent impulsive acts of violence.",
-      "opts": [
-        {
-          "t": "Yes. A cooling-off period is a common-sense measure that saves lives.",
-          "e": 0,
-          "g": 1,
-          "pvv": -1,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "Waiting periods should apply only to first-time buyers or young adults.",
-          "e": 0,
-          "g": 0,
-          "pvv": 0,
-          "glp": 1,
-          "vvd": 0,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. A right delayed is a right denied. Victims of stalking need protection immediately.",
-          "e": 0,
-          "g": -1,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
-    },
-    {
-      "id": "im1",
+      "id": "nl1a",
       "nl": "Immigration",
-      "pair": "im-a",
-      "fr": "con",
-      "type": "sc",
-      "ctx": "Millions of undocumented immigrants live in the United States. Border crossings have reached historic highs. Municipal resources are overwhelmed.",
-      "q": "A country without borders is not a country. We must secure the southern border and deport those here illegally.",
-      "opts": [
-        {
-          "t": "Yes. Law and order must be restored. Border security is national security.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        },
-        {
-          "t": "Secure the border, but provide a pathway to legal status for those already here.",
-          "e": 0,
-          "g": 1,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "Focus on humane processing, addressing root causes, and expanding legal pathways.",
-          "e": -1,
-          "g": 0,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        }
-      ]
+      "node": "immig",
+      "pair": "nlp1",
+      "fr": "pro",
+      "type": "l",
+      "q": "Immigration and asylum to the Netherlands are far too high and must be drastically cut.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "pvv": 2,
+        "glp": -2,
+        "vvd": 1,
+        "nsc": 0.5,
+        "d66": -1.5,
+        "bbb": 1,
+        "cda": 0.5
+      },
+      "dec": true
     },
     {
-      "id": "im2",
+      "id": "nl1b",
       "nl": "Immigration",
-      "pair": "im-a",
-      "fr": "pro",
-      "type": "sc",
-      "ctx": "Undocumented immigrants pay billions in taxes, harvest our food, care for our elderly, and build our homes.",
-      "q": "Tearing families apart through mass deportations is a moral abomination. We need a pathway to citizenship.",
-      "opts": [
-        {
-          "t": "Yes. These are our neighbours and co-workers. They deserve dignity and legal status.",
-          "e": -1,
-          "g": -1,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        },
-        {
-          "t": "Provide legal status and work permits, but citizenship should be a long and strict process.",
-          "e": 0,
-          "g": 0,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": -1,
-          "cda": 0
-        },
-        {
-          "t": "No. Rewarding law-breaking encourages more illegal immigration. Deportations are necessary.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        }
-      ]
+      "node": "immig",
+      "pair": "nlp1",
+      "fr": "con",
+      "type": "l",
+      "q": "The Netherlands needs migrants for its economy, and asylum is a basic humanitarian duty.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "pvv": -2,
+        "glp": 2,
+        "vvd": -1,
+        "nsc": -0.5,
+        "d66": 1.5,
+        "bbb": -1,
+        "cda": -0.5
+      },
+      "dec": true
     },
     {
-      "id": "im3",
+      "id": "nl2a",
       "nl": "Immigration",
-      "type": "s",
-      "q": "The United States should significantly increase the number of highly-skilled visas (H-1B) to attract the best talent globally.",
-      "opts": [
-        {
-          "t": "Yes. High-skill immigration drives innovation and creates American jobs.",
-          "e": 1,
-          "g": -1,
-          "pvv": 1,
-          "glp": 2,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": 2,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "Some increase is fine, but we must protect American tech workers from wage suppression.",
-          "e": 0,
-          "g": 0,
-          "pvv": 0,
-          "glp": 0,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": 0,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. Corporations should invest in training American workers instead of importing cheap talent.",
-          "e": -1,
-          "g": 1,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": -1,
-          "d66": 1,
-          "bbb": -1,
-          "cda": -1
-        }
-      ]
-    },
-    {
-      "id": "tx1",
-      "nl": "Taxes and economy",
-      "pair": "tx-a",
+      "node": "immig",
+      "pair": "nlp2",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "The three richest Americans hold more wealth than the bottom 50% of the entire population combined.",
-      "q": "Extreme wealth inequality is a threat to democracy. We must introduce a wealth tax on fortunes over $50 million.",
-      "opts": [
-        {
-          "t": "Yes. Billionaires should not exist in a society with homeless children.",
-          "e": -2,
-          "g": 2,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Wealth taxes are unconstitutional. Raise the top income tax bracket instead.",
-          "e": -1,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 2,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. Forced redistribution is theft. Wealth is created, not stolen.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "The Netherlands should opt out of EU asylum rules and turn away far more people.",
+      "w": {
+        "e": 0,
+        "g": 1.5,
+        "pvv": 2,
+        "glp": -2,
+        "vvd": 0.5,
+        "d66": -2,
+        "bbb": 1
+      }
     },
     {
-      "id": "tx2",
-      "nl": "Taxes and economy",
-      "pair": "tx-a",
+      "id": "nl2b",
+      "nl": "Immigration",
+      "node": "immig",
+      "pair": "nlp2",
       "fr": "con",
-      "type": "s",
-      "q": "Taxing capital and high earners only drives investment offshore, reduces productivity, and hurts the workers it claims to help.",
-      "opts": [
-        {
-          "t": "Yes. Lower taxes stimulate investment, business growth, and job creation.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "Some taxes are necessary, but high marginal rates distort economic decisions.",
-          "e": 1,
-          "g": 0,
-          "pvv": -1,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. Trickle-down economics is a proven lie. Demand-side growth is the only reality.",
-          "e": -2,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
+      "type": "l",
+      "q": "Abandoning shared asylum rules would break the law and Dutch humanitarian commitments.",
+      "w": {
+        "e": 0,
+        "g": -1.5,
+        "pvv": -2,
+        "glp": 2,
+        "vvd": -0.5,
+        "d66": 2,
+        "bbb": -1
+      }
     },
     {
-      "id": "tx3",
-      "nl": "Taxes and economy",
-      "type": "s",
-      "q": "The federal corporate income tax rate should be returned to 35% to ensure large corporations pay their fair share.",
-      "opts": [
-        {
-          "t": "Yes. Corporations have enjoyed record profits while paying historically low tax rates.",
-          "e": -2,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "A moderate rate around 25-28% is a competitive compromise.",
-          "e": -1,
-          "g": 0,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. A high rate makes American businesses uncompetitive and is passed on to consumers.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
-    },
-    {
-      "id": "cl1",
-      "nl": "Climate and energy",
-      "pair": "cl-a",
+      "id": "nl3a",
+      "nl": "Religion",
+      "node": "religion",
+      "pair": "nlp3",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "2023 was the hottest year on record. Wildfires, droughts, and historic flooding have cost the US economy billions in disaster relief.",
-      "q": "We are in a climate emergency. The federal government must rapidly phase out fossil fuels and invest in a Green New Deal.",
-      "opts": [
-        {
-          "t": "Yes. Transitioning to renewable energy is the moral and economic imperitive of our time.",
-          "e": -2,
-          "g": 2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Phasing out fossil fuels abruptly would devastate the economy. Subsidise green tech instead.",
-          "e": -1,
-          "g": 1,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 2,
-          "d66": 1,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. American energy independence requires oil, gas, and coal. The Green New Deal is socialist fantasy.",
-          "e": 2,
-          "g": -1,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "Islam is a threat to Dutch culture and freedoms.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "pvv": 2,
+        "glp": -2,
+        "nsc": -0.5,
+        "d66": -2,
+        "bbb": 0.5,
+        "cda": -1
+      },
+      "dec": true
     },
     {
-      "id": "cl2",
-      "nl": "Climate and energy",
-      "pair": "cl-a",
+      "id": "nl3b",
+      "nl": "Religion",
+      "node": "religion",
+      "pair": "nlp3",
       "fr": "con",
-      "type": "s",
-      "q": "Unilateral bans on fossil fuels destroy high-paying American jobs and make us dependent on foreign adversaries like China for solar and battery tech.",
-      "opts": [
-        {
-          "t": "Yes. Drill, baby, drill. Cheap, abundant energy is the engine of the economy.",
-          "e": 2,
-          "g": 0,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "We should pursue all energy options, including nuclear and clean natural gas.",
-          "e": 1,
-          "g": 0,
-          "pvv": 1,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": -1,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. The transition is inevitable. Leading it is how we create the manufacturing jobs of the future.",
-          "e": -2,
-          "g": 1,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
+      "type": "l",
+      "q": "Muslim Dutch citizens are full members of society, and their faith deserves equal respect.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "pvv": -2,
+        "glp": 2,
+        "nsc": 0.5,
+        "d66": 2,
+        "bbb": -0.5,
+        "cda": 1
+      },
+      "dec": true
     },
     {
-      "id": "ab1",
-      "nl": "Abortion rights",
-      "pair": "ab-a",
+      "id": "nl4a",
+      "nl": "Agriculture",
+      "node": "climate",
+      "pair": "nlp4",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "Since Roe v. Wade was overturned, over a dozen states have enacted near-total bans on abortion, forcing women to travel thousands of miles for basic reproductive healthcare.",
-      "q": "Abortion is healthcare. Congress must pass federal legislation to codify the protections of Roe v. Wade nationwide.",
-      "opts": [
-        {
-          "t": "Yes. Reproductive freedom is a fundamental human right.",
-          "e": 0,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        },
-        {
-          "t": "Support federal access, but with standard limits on late-term abortions.",
-          "e": 0,
-          "g": -1,
-          "pvv": -1,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -1,
-          "cda": 0
-        },
-        {
-          "t": "No. The issue belongs with the states, in accordance with the Constitution.",
-          "e": 0,
-          "g": 1,
-          "pvv": 2,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": -1,
-          "bbb": 2,
-          "cda": 1
-        },
-        {
-          "t": "No. Abortion is the taking of a human life and should be banned nationwide.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "The forced buy-out and shrinking of livestock farming to cut nitrogen has gone too far.",
+      "w": {
+        "e": 0.5,
+        "g": 0,
+        "pvv": 1.5,
+        "glp": -2,
+        "vvd": 0.5,
+        "nsc": 0.5,
+        "d66": -1.5,
+        "bbb": 2,
+        "cda": 1
+      },
+      "dec": true
     },
     {
-      "id": "ab2",
-      "nl": "Abortion rights",
-      "pair": "ab-a",
+      "id": "nl4b",
+      "nl": "Agriculture",
+      "node": "climate",
+      "pair": "nlp4",
       "fr": "con",
-      "type": "s",
-      "q": "The Dobbs decision correctly returned the issue of abortion to the democratic process in each state, rather than leaving it to unelected judges.",
-      "opts": [
-        {
-          "t": "Yes. The Constitution does not mention abortion. States have the right to protect unborn life.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        },
-        {
-          "t": "States should decide, but bans should have exceptions for rape, incest, and the life of the mother.",
-          "e": 0,
-          "g": 1,
-          "pvv": 2,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": -1,
-          "bbb": 2,
-          "cda": 1
-        },
-        {
-          "t": "No. Human rights should not be subject to geographical boundaries or state legislatures.",
-          "e": 0,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "Cutting nitrogen means cutting livestock; nature and housing depend on it.",
+      "w": {
+        "e": -0.5,
+        "g": 0,
+        "pvv": -1.5,
+        "glp": 2,
+        "vvd": -0.5,
+        "nsc": -0.5,
+        "d66": 1.5,
+        "bbb": -2,
+        "cda": -1
+      },
+      "dec": true
     },
     {
-      "id": "sd1",
-      "nl": "Student debt and education",
-      "pair": "sd-a",
+      "id": "nl5a",
+      "nl": "Housing",
+      "node": "housing",
+      "pair": "nlp5",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "Over 43 million Americans carry student loan debt, totalling more than 1.7 trillion dollars. A generation is delaying buying homes, starting businesses, and having children under this burden.",
-      "q": "Higher education is a public good. The federal government should cancel student debt and make public colleges tuition-free.",
-      "opts": [
-        {
-          "t": "Yes. Free education is an investment in our national future.",
-          "e": -2,
-          "g": 2,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Cancel debt for lower-income students and reform interest rates, but free tuition is too costly.",
-          "e": -1,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 2,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. This is a massive wealth transfer from working-class taxpayers to college-educated elites.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "The government should intervene hard in the housing market, building homes and capping rents.",
+      "w": {
+        "e": -1.5,
+        "pvv": 1,
+        "glp": 2,
+        "vvd": -1,
+        "nsc": 1,
+        "d66": 0.5,
+        "bbb": 0.5,
+        "cda": 0.5,
+        "g": 0
+      }
     },
     {
-      "id": "sd2",
-      "nl": "Student debt and education",
-      "pair": "sd-a",
+      "id": "nl5b",
+      "nl": "Housing",
+      "node": "housing",
+      "pair": "nlp5",
       "fr": "con",
-      "type": "s",
-      "q": "Forgiving student debt is deeply unfair to the millions of Americans who worked to pay off their loans or chose not to attend college.",
-      "opts": [
-        {
-          "t": "Yes. You sign a contract, you pay it back. Personal responsibility matters.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "The system has issues, but outright cancellation is the wrong tool.",
-          "e": 1,
-          "g": 0,
-          "pvv": -1,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. The cost of college has skyrocketed due to state disinvestment. The contract was predatory.",
-          "e": -2,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
+      "type": "l",
+      "q": "Rent caps and heavy intervention scare off builders and worsen the housing shortage.",
+      "w": {
+        "e": 1.5,
+        "pvv": -0.5,
+        "glp": -1.5,
+        "vvd": 1,
+        "nsc": -0.5,
+        "g": 0
+      }
     },
     {
-      "id": "rj1",
-      "nl": "Race and justice",
-      "pair": "rj-a",
+      "id": "nl6a",
+      "nl": "Healthcare",
+      "node": "health",
+      "pair": "nlp6",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "Black Americans are incarcerated at roughly five times the rate of white Americans and are disproportionately targeted by police and the judicial system.",
-      "q": "Systemic racism is real. We must structurally reform policing, end qualified immunity, and invest in Black communities.",
-      "opts": [
-        {
-          "t": "Yes. The criminal justice system is built on racial inequality and requires radical reform.",
-          "e": -1,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        },
-        {
-          "t": "Reform policing and qualified immunity, but do not defund or weaken law enforcement.",
-          "e": 0,
-          "g": -1,
-          "pvv": -1,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -1,
-          "cda": 0
-        },
-        {
-          "t": "No. Systemic racism is a divisive narrative. The problem is crime and breakdown of the family.",
-          "e": 1,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "The healthcare deductible (eigen risico) should be abolished.",
+      "w": {
+        "e": -1,
+        "pvv": 1.5,
+        "glp": 1.5,
+        "vvd": -1,
+        "nsc": 1,
+        "d66": -0.5,
+        "bbb": 1,
+        "cda": 0.5,
+        "g": 0
+      }
     },
     {
-      "id": "rj2",
-      "nl": "Race and justice",
-      "pair": "rj-a",
+      "id": "nl6b",
+      "nl": "Healthcare",
+      "node": "health",
+      "pair": "nlp6",
       "fr": "con",
-      "type": "s",
-      "q": "The constant focus on racial divisions by politicians and the media undermines American unity and turns us against each other.",
-      "opts": [
-        {
-          "t": "Yes. We should judge people by the content of their character, not the color of their skin.",
-          "e": 0,
-          "g": 1,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        },
-        {
-          "t": "Racial gaps are real, but our language should focus on unifying economic solutions.",
-          "e": 0,
-          "g": 0,
-          "pvv": 1,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 0
-        },
-        {
-          "t": "No. Ignoring history does not erase the legacy of slavery and Jim Crow. We must name systemic racism to dismantle it.",
-          "e": -1,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "Abolishing the deductible would drive up premiums and healthcare use for everyone.",
+      "w": {
+        "e": 1,
+        "pvv": -1.5,
+        "glp": -1.5,
+        "vvd": 1,
+        "nsc": -1,
+        "d66": 0.5,
+        "bbb": -1,
+        "cda": -0.5,
+        "g": 0
+      }
     },
     {
-      "id": "vt1",
-      "nl": "Voting and democracy",
-      "pair": "vt-a",
+      "id": "nl7a",
+      "nl": "Tax",
+      "node": "tax",
+      "pair": "nlp7",
       "fr": "pro",
-      "type": "s",
-      "q": "We should establish federal standards for automatic voter registration, expand mail-in voting, and make Election Day a national holiday.",
-      "opts": [
-        {
-          "t": "Yes. Voting is a right. We should make it as easy as possible for every citizen to participate.",
-          "e": 0,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        },
-        {
-          "t": "National holiday yes, but registration and voting rules should remain with the states.",
-          "e": 0,
-          "g": 0,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": -1,
-          "cda": 0
-        },
-        {
-          "t": "No. We need stricter voter ID laws to ensure election integrity and prevent fraud.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "The wealthiest Dutch and big corporations should pay significantly more tax.",
+      "w": {
+        "e": -1.5,
+        "pvv": 0.5,
+        "glp": 2,
+        "vvd": -2,
+        "nsc": 0.5,
+        "bbb": -0.5,
+        "g": 0
+      }
     },
     {
-      "id": "vt2",
-      "nl": "Voting and democracy",
-      "pair": "vt-a",
+      "id": "nl7b",
+      "nl": "Tax",
+      "node": "tax",
+      "pair": "nlp7",
       "fr": "con",
-      "type": "s",
-      "q": "Loosening voter registration rules and expanding mail-in voting opens the door to fraud and undermines public trust in elections.",
-      "opts": [
-        {
-          "t": "Yes. Every vote must be verified. Stricter voter ID laws protect the integrity of our democracy.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        },
-        {
-          "t": "Integrity is important, but rules should not be used as tools for voter suppression.",
-          "e": 0,
-          "g": 0,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. Voter fraud is virtually non-existent. These laws are designed to suppress minority turnout.",
-          "e": 0,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "Higher taxes on wealth and business just drive investment and jobs out of the country.",
+      "w": {
+        "e": 1.5,
+        "pvv": -0.5,
+        "glp": -2,
+        "vvd": 2,
+        "nsc": -0.5,
+        "bbb": 0.5,
+        "g": 0
+      }
     },
     {
-      "id": "fp1",
-      "nl": "Foreign policy",
-      "pair": "fp-a",
+      "id": "nl8a",
+      "nl": "Climate",
+      "node": "climate",
+      "pair": "nlp8",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "The United States has hundreds of military bases globally and spends more on defence than the next ten countries combined.",
-      "q": "We must project strength. A strong military is the only guarantee of global stability and the protection of democratic values.",
-      "opts": [
-        {
-          "t": "Yes. Peace through strength. We must support our allies in NATO and the Pacific.",
-          "e": 0,
-          "g": 1,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": 2,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "Defend our allies, but avoid costly foreign interventions and nation-building.",
-          "e": 0,
-          "g": 0,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. The military-industrial complex makes us less safe and drains resources from domestic needs.",
-          "e": -1,
-          "g": -2,
-          "pvv": -1,
-          "glp": -2,
-          "vvd": -2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
+      "type": "l",
+      "q": "The Netherlands must do far more for the climate, even at economic cost.",
+      "w": {
+        "e": -0.5,
+        "pvv": -2,
+        "glp": 2,
+        "vvd": -0.5,
+        "d66": 1.5,
+        "bbb": -1.5,
+        "g": 0
+      }
     },
     {
-      "id": "fp2",
-      "nl": "Foreign policy",
-      "pair": "fp-a",
+      "id": "nl8b",
+      "nl": "Climate",
+      "node": "climate",
+      "pair": "nlp8",
       "fr": "con",
-      "type": "s",
-      "q": "The United States should stop spending billions of dollars on foreign wars and instead focus on rebuilding our own communities.",
-      "opts": [
-        {
-          "t": "Yes. America First. Our priority must be the American worker and domestic stability.",
-          "e": 1,
-          "g": 0,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "A balanced approach. We must engage globally to protect our own interests.",
-          "e": 0,
-          "g": 0,
-          "pvv": 2,
-          "glp": 1,
-          "vvd": 0,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. Isolationism is a dangerous illusion. Global stability directly affects our economy and security.",
-          "e": -1,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
+      "type": "l",
+      "q": "Costly climate rules burden ordinary people while barely helping the global climate.",
+      "w": {
+        "e": 0.5,
+        "pvv": 2,
+        "glp": -2,
+        "vvd": 0.5,
+        "d66": -1.5,
+        "bbb": 1.5,
+        "g": 0
+      }
     },
     {
-      "id": "si1",
-      "nl": "Social and cultural issues",
-      "pair": "si-a",
+      "id": "nl9a",
+      "nl": "Europe",
+      "node": "eu",
+      "pair": "nlp9",
       "fr": "pro",
-      "type": "sc",
-      "ctx": "Transgender youths face high rates of depression, anxiety, and suicide. Major medical associations support gender-affirming care as medically necessary.",
-      "q": "Gender-affirming care is a matter of basic healthcare and medical freedom. Government has no right to ban it.",
-      "opts": [
-        {
-          "t": "Yes. Decisions should be made by patients, families, and doctors, not politicians.",
-          "e": 0,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        },
-        {
-          "t": "Care is healthcare, but some age-limits on irreversible surgical procedures are reasonable.",
-          "e": 0,
-          "g": -1,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": -1,
-          "cda": 0
-        },
-        {
-          "t": "No. We must protect children from experimental procedures and defend traditional values.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "The Netherlands’ future lies in a stronger, more integrated European Union.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": -2,
+        "glp": 1,
+        "vvd": 0.5,
+        "d66": 2,
+        "bbb": -1,
+        "cda": 0.5
+      }
     },
     {
-      "id": "si2",
-      "nl": "Social and cultural issues",
-      "pair": "si-a",
+      "id": "nl9b",
+      "nl": "Europe",
+      "node": "eu",
+      "pair": "nlp9",
       "fr": "con",
-      "type": "s",
-      "q": "Allowing minors to undergo irreversible gender transition procedures is a form of medical malpractice that the state must prohibit.",
-      "opts": [
-        {
-          "t": "Yes. Children do not have the maturity to consent to such life-altering decisions.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        },
-        {
-          "t": "Strict medical evaluation is needed, but total bans go too far.",
-          "e": 0,
-          "g": 1,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. Medical decisions belong with families and doctors. Bans are built on transphobia.",
-          "e": 0,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "Brussels already has too much power over the Netherlands, and sovereignty must come first.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": 2,
+        "glp": -1,
+        "vvd": -0.5,
+        "d66": -2,
+        "bbb": 1,
+        "cda": -0.5
+      }
     },
     {
-      "id": "gi1",
-      "nl": "Government and institutions",
-      "pair": "gi-a",
+      "id": "nl10a",
+      "nl": "Nexit",
+      "node": "eu",
+      "pair": "nlp10",
       "fr": "pro",
-      "type": "s",
-      "q": "The federal government should establish strict regulations on social media platforms to combat misinformation, hate speech, and foreign election interference.",
-      "opts": [
-        {
-          "t": "Yes. Unregulated tech monopolies have damaged our democracy and public health.",
-          "e": -1,
-          "g": 2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Misinformation is a threat, but government regulation carries high risks of political censorship.",
-          "e": 0,
-          "g": 0,
-          "pvv": 0,
-          "glp": 0,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": 0,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. The First Amendment protects all speech, including offensive speech. Free debate is the only answer.",
-          "e": 1,
-          "g": -2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "The Netherlands should hold a referendum on leaving the EU.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": 1.5,
+        "glp": -1.5,
+        "vvd": -1,
+        "nsc": -0.5,
+        "d66": -2,
+        "cda": -1
+      }
     },
     {
-      "id": "gi2",
-      "nl": "Government and institutions",
-      "pair": "gi-a",
+      "id": "nl10b",
+      "nl": "Nexit",
+      "node": "eu",
+      "pair": "nlp10",
       "fr": "con",
-      "type": "sc",
-      "ctx": "The federal government works behind the scenes with social media platforms to flag, suppress, and label content regarding public health, elections, and political opinions.",
-      "q": "This is not regulation. It is a modern, digital Ministry of Truth violating the First Amendment through the back door.",
-      "opts": [
-        {
-          "t": "Yes. Government pressure on private platforms to suppress speech is state censorship.",
-          "e": 1,
-          "g": -2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "The platform should moderate its own rules, but government communication must be transparent.",
-          "e": 0,
-          "g": 0,
-          "pvv": 1,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": -1,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. The state has an obligation to warn platforms about dangerous foreign campaigns or threats to public safety.",
-          "e": -1,
-          "g": 2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
+      "type": "l",
+      "q": "Leaving the EU would be economic self-harm for a trading nation like the Netherlands.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": -1.5,
+        "glp": 1.5,
+        "vvd": 1,
+        "nsc": 0.5,
+        "d66": 2,
+        "cda": 1
+      }
     },
     {
-      "id": "ss1",
-      "nl": "Social Security and Medicare",
-      "pair": "ss-a",
+      "id": "nl11a",
+      "nl": "Governance",
+      "node": "democracy",
+      "pair": "nlp11",
       "fr": "pro",
-      "type": "s",
-      "q": "We should secure Social Security and Medicare for future generations by raising the cap on taxable income so high earners contribute more.",
-      "opts": [
-        {
-          "t": "Yes. The wealthy should pay into the system on all of their income, just like average workers.",
-          "e": -1,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Raise the cap, but also gradually adjust the retirement age for future generations.",
-          "e": 0,
-          "g": 1,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. We should move toward privatised personal accounts and let the market manage retirement.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "The child-benefits scandal showed the state treats citizens as suspects; power must shift back to people.",
+      "w": {
+        "e": 0,
+        "g": -0.5,
+        "pvv": 1,
+        "glp": 0.5,
+        "vvd": -0.5,
+        "nsc": 2,
+        "d66": 0.5,
+        "bbb": 1,
+        "cda": 0.5
+      }
     },
     {
-      "id": "ss2",
-      "nl": "Social Security and Medicare",
-      "pair": "ss-a",
+      "id": "nl11b",
+      "nl": "Governance",
+      "node": "democracy",
+      "pair": "nlp11",
       "fr": "con",
-      "type": "s",
-      "q": "Expanding government entitlement programs like Social Security and Medicare as the national debt grows is fiscally irresponsible.",
-      "opts": [
-        {
-          "t": "Yes. We must cut spending and look at privatisation to prevent national insolvency.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "Entitlements must be reformed and capped, but the safety net should remain intact.",
-          "e": 1,
-          "g": 0,
-          "pvv": -1,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "No. These programs are promises that working class Americans paid into. Cut military or corporate subsidies instead.",
-          "e": -2,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
+      "type": "l",
+      "q": "The benefits scandal was a serious failure, but distrust of all government is the wrong lesson.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "pvv": -1,
+        "glp": -0.5,
+        "vvd": 0.5,
+        "nsc": -2,
+        "d66": -0.5,
+        "bbb": -1,
+        "cda": -0.5
+      }
     },
     {
-      "id": "tr1",
-      "nl": "Trade and jobs",
-      "type": "sc",
-      "ctx": "For forty years, manufacturing jobs were outsourced to low-wage nations. American towns were hollowed out, while corporations posted record profits.",
-      "q": "Free trade was a massive transfer of wealth from American workers to multinational corporations. We must protect domestic industries.",
-      "opts": [
-        {
-          "t": "Yes. Tariffs and industrial policy are necessary to rebuild the American middle class.",
-          "e": -1,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "Targeted tariffs on strategic sectors only (like microchips). Broad tariffs hurt consumers.",
-          "e": 0,
-          "g": 0,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. Protectionism raises prices and leads to trade wars that make everyone poorer.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": -1,
-          "cda": -1
-        }
-      ]
-    },
-    {
-      "id": "ed1",
-      "nl": "Education",
-      "pair": "ed-a",
+      "id": "nl12a",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nlp12",
       "fr": "pro",
-      "type": "s",
-      "q": "Public school funding should be strictly needs-based, with additional federal funding redirected from wealthy districts to low-income schools.",
-      "opts": [
-        {
-          "t": "Yes. Every child deserves an equal start in life, regardless of their zip code.",
-          "e": -1,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Needs-based funding yes, but do not penalise districts that choose to fund their schools more.",
-          "e": 0,
-          "g": 0,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. Educational vouchers should allow parents to send their children to any school, public or private.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "Some races are simply more intelligent or capable than others.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "glp": -2,
+        "vvd": -1,
+        "nsc": -1,
+        "d66": -2,
+        "bbb": -1,
+        "cda": -1.5
+      }
     },
     {
-      "id": "ed2",
-      "nl": "Education",
-      "pair": "ed-a",
+      "id": "nl12b",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nlp12",
       "fr": "con",
-      "type": "s",
-      "q": "School choice vouchers allow parents to use public funds for private schooling. This siphons vital resources from a struggling public school system.",
-      "opts": [
-        {
-          "t": "Yes. Public money belongs in public schools. Voucher programs create inequality.",
-          "e": -2,
-          "g": 1,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Vouchers have some value, but they must be targeted only at low-income students in failing schools.",
-          "e": -1,
-          "g": 0,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. Competition improves all schools. Parents should have the freedom to choose what is best for their children.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "There is no hierarchy of races; the idea is pseudo-science with a shameful history.",
+      "w": {
+        "e": 0,
+        "g": -0.5,
+        "glp": 2,
+        "vvd": 1,
+        "nsc": 1,
+        "d66": 2,
+        "bbb": 1,
+        "cda": 1.5
+      }
     },
     {
-      "id": "co1",
-      "nl": "Courts and Constitution",
-      "pair": "co-a",
+      "id": "nl13a",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nlp13",
       "fr": "pro",
-      "type": "s",
-      "q": "The Supreme Court has become a partisan political body. We should establish 18-year term limits and a binding code of ethics for all justices.",
-      "opts": [
-        {
-          "t": "Yes. Lifelong appointments with no ethical accountability are a threat to democratic legitimacy.",
-          "e": 0,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Binding ethics code yes, but term limits require a constitutional amendment and are too risky.",
-          "e": 0,
-          "g": 0,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. The system has worked for 240 years. Changing the rules is just court-packing by another name.",
-          "e": 0,
-          "g": 1,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "Immigrants should adapt to Dutch culture and values, not the other way around.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "pvv": 2,
+        "glp": -1.5,
+        "vvd": 1,
+        "nsc": 0.5,
+        "d66": -1.5,
+        "bbb": 1,
+        "cda": 0.5
+      }
     },
     {
-      "id": "co2",
-      "nl": "Courts and Constitution",
-      "pair": "co-a",
+      "id": "nl13b",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nlp13",
       "fr": "con",
-      "type": "s",
-      "q": "The Constitution is a living document that must be interpreted in light of modern values and social progress.",
-      "opts": [
-        {
-          "t": "Yes. The founders could not foresee the internet, modern weapons, or civil rights. Strict originalism is anachronistic.",
-          "e": 0,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Interpretation must adapt slightly, but fundamental constitutional principles must remain stable.",
-          "e": 0,
-          "g": 0,
-          "pvv": 0,
-          "glp": 1,
-          "vvd": 0,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. Original intent is the only guarantee of law. If you want to change the Constitution, pass an amendment.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "A living culture is always mixed; demanding assimilation impoverishes the Netherlands.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "pvv": -2,
+        "glp": 1.5,
+        "vvd": -1,
+        "nsc": -0.5,
+        "d66": 1.5,
+        "bbb": -1,
+        "cda": -0.5
+      }
     },
     {
-      "id": "bt1",
-      "nl": "Big Tech",
-      "type": "sc",
-      "ctx": "A handful of tech conglomerates control the flow of modern information, own the digital public square, and hold massive influence over elections.",
-      "q": "Tech monopolies like Google, Meta, and Amazon have grown too large and must be broken up under antitrust laws.",
-      "opts": [
-        {
-          "t": "Yes. Break them up. They stifle competition, harvest private data, and suppress speech.",
-          "e": -1,
-          "g": 2,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": 2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "Regulation and data privacy laws are better tools. Breaking them up hurts US tech dominance.",
-          "e": 0,
-          "g": 0,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. They are successful because they provide great services. Let the market decide.",
-          "e": 2,
-          "g": -2,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": -1,
-          "cda": -1
-        }
-      ]
-    },
-    {
-      "id": "br1",
-      "nl": "Role of government",
-      "pair": "br-a",
-      "fr": "neutral",
-      "type": "s",
-      "q": "The federal government is too large, too expensive, and too intrusive. A smaller state would make America more free and more productive.",
-      "opts": [
-        {
-          "t": "Yes. Cut spending, reduce regulations, trust citizens to make their own decisions.",
-          "e": 2,
-          "g": -2,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "Some government is too large, but public services and social programs are the right size.",
-          "e": -1,
-          "g": 0,
-          "pvv": 1,
-          "glp": 1,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. The state builds the foundations of prosperity. Cutting it cuts the floor out from under Americans.",
-          "e": -2,
-          "g": 2,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
-    },
-    {
-      "id": "br2",
-      "nl": "Role of government",
-      "pair": "br-a",
-      "fr": "neutral",
-      "type": "s",
-      "q": "The gap between the wealthiest Americans and everyone else has grown to a level that threatens social cohesion and economic mobility.",
-      "opts": [
-        {
-          "t": "Yes. Progressive taxation, stronger social programs, and wealth taxes are needed.",
-          "e": -2,
-          "g": 2,
-          "pvv": 2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "Inequality is real, but opportunity and growth matter more than redistribution.",
-          "e": 1,
-          "g": 0,
-          "pvv": 0,
-          "glp": 0,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": 0,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "Inequality reflects different efforts. Forced equality stifles ambition.",
-          "e": 2,
-          "g": -1,
-          "pvv": -2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
-    },
-    {
-      "id": "br3",
-      "nl": "Individual rights",
-      "pair": "br-b",
-      "fr": "neutral",
-      "type": "s",
-      "q": "The greatest threats to American freedom come from within - government overreach, surveillance, and the erosion of civil liberties.",
-      "opts": [
-        {
-          "t": "Yes. The Patriot Act, NSA surveillance, and the war on drugs are the real threats.",
-          "e": -1,
-          "g": -2,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": -1,
-          "cda": 0
-        },
-        {
-          "t": "External threats are real too. Balancing security and liberty is genuinely hard.",
-          "e": 0,
-          "g": 0,
-          "pvv": 1,
-          "glp": 0,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": 0,
-          "bbb": 1,
-          "cda": 1
-        },
-        {
-          "t": "Threats from China, Russia, and terrorism require strong internal security.",
-          "e": 1,
-          "g": 2,
-          "pvv": 2,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": -1,
-          "bbb": 2,
-          "cda": 1
-        }
-      ]
-    },
-    {
-      "id": "br4",
-      "nl": "Individual rights",
-      "pair": "br-b",
-      "fr": "neutral",
-      "type": "s",
-      "q": "Corporations have too much influence over American politics, the economy, and daily life.",
-      "opts": [
-        {
-          "t": "Yes. Citizens United was a catastrophe. Public financing, strict lobbying limits.",
-          "e": -2,
-          "g": 2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        },
-        {
-          "t": "Corporate influence is a real problem but heavy-handed regulation creates its own abuses.",
-          "e": 0,
-          "g": 0,
-          "pvv": 0,
-          "glp": 0,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": 0,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "Corporate freedom is economic freedom. Government is a bigger threat than any company.",
-          "e": 2,
-          "g": -2,
-          "pvv": 1,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 1,
-          "cda": 0
-        }
-      ]
-    },
-    {
-      "id": "ex1",
-      "nl": "Economy and inequality",
-      "pair": "ex-a",
+      "id": "nl14a",
+      "nl": "Crime",
+      "node": "crime",
+      "pair": "nlp14",
       "fr": "pro",
-      "type": "s",
-      "q": "America has more billionaires than any country on earth. That is not success. That is a system rigged in their favour.",
-      "opts": [
-        {
-          "t": "Yes. Extreme wealth at this scale is a political failure, not an achievement.",
-          "e": -2,
-          "g": 2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        },
-        {
-          "t": "No. Wealth at the top does not take from the bottom. Growth benefits everyone.",
-          "e": 2,
-          "g": -2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        }
-      ]
+      "type": "l",
+      "q": "The Netherlands needs tougher sentences and more police powers against organised crime.",
+      "w": {
+        "e": 0,
+        "g": 1.5,
+        "pvv": 2,
+        "glp": -1,
+        "vvd": 1,
+        "nsc": 0.5,
+        "d66": -0.5,
+        "bbb": 1,
+        "cda": 1
+      }
     },
     {
-      "id": "ex2",
-      "nl": "Economy and inequality",
-      "pair": "ex-a",
+      "id": "nl14b",
+      "nl": "Crime",
+      "node": "crime",
+      "pair": "nlp14",
       "fr": "con",
-      "type": "s",
-      "q": "Taxing the rich to fund government programmes punishes success and drives away the people who create jobs.",
-      "opts": [
-        {
-          "t": "Yes. Capital flees high-tax environments. You cannot build prosperity by punishing it.",
-          "e": 2,
-          "g": -1,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 2,
-          "nsc": -2,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 2
-        },
-        {
-          "t": "No. The wealthy built their fortunes on public infrastructure. They owe more back.",
-          "e": -2,
-          "g": 1,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -2,
-          "nsc": 2,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -2
-        }
-      ]
+      "type": "l",
+      "q": "Ever tougher sentences never cut crime; prevention and tackling causes do.",
+      "w": {
+        "e": 0,
+        "g": -1.5,
+        "pvv": -2,
+        "glp": 1,
+        "vvd": -1,
+        "nsc": -0.5,
+        "d66": 0.5,
+        "bbb": -1,
+        "cda": -1
+      }
     },
     {
-      "id": "ex3",
-      "nl": "Criminal justice",
-      "pair": "ex-b",
+      "id": "nl15a",
+      "nl": "Identity and rights",
+      "node": "lgbtq",
+      "pair": "nlp15",
       "fr": "pro",
-      "type": "s",
-      "q": "The American prison system locks up more people than any country on earth. That is not justice. It is industrial punishment.",
-      "opts": [
-        {
-          "t": "Yes. Mass incarceration is a moral catastrophe and must be dismantled.",
-          "e": -1,
-          "g": -2,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        },
-        {
-          "t": "No. High incarceration reflects high crime rates. Public safety is not negotiable.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "Trans people should be able to change their legal gender by self-declaration.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "pvv": -1.5,
+        "glp": 2,
+        "nsc": -0.5,
+        "d66": 2,
+        "bbb": -1,
+        "cda": -1
+      }
     },
     {
-      "id": "ex4",
-      "nl": "Criminal justice",
-      "pair": "ex-b",
+      "id": "nl15b",
+      "nl": "Identity and rights",
+      "node": "lgbtq",
+      "pair": "nlp15",
       "fr": "con",
-      "type": "s",
-      "q": "Violent crime surged in cities that cut police funding. Defunding the police was a catastrophic mistake.",
-      "opts": [
-        {
-          "t": "Yes. The experiment failed and communities of colour paid the price.",
-          "e": 0,
-          "g": 2,
-          "pvv": 2,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": -1,
-          "bbb": 2,
-          "cda": 1
-        },
-        {
-          "t": "No. Underfunding mental health, housing, and schools created the conditions. More cops is not the answer.",
-          "e": 0,
-          "g": -1,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": -1,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -1
-        }
-      ]
+      "type": "l",
+      "q": "Biological sex is a reality the law should not let a declaration override.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "pvv": 1.5,
+        "glp": -2,
+        "nsc": 0.5,
+        "d66": -2,
+        "bbb": 1,
+        "cda": 1
+      }
     },
     {
-      "id": "ex5",
-      "nl": "Civil liberties",
-      "type": "s",
-      "q": "The government has no right to monitor its own citizens without a court order. Mass surveillance must end.",
-      "opts": [
-        {
-          "t": "Yes. A government that watches everyone trusts no one.",
-          "e": 0,
-          "g": -2,
-          "pvv": -1,
-          "glp": 1,
-          "vvd": -1,
-          "nsc": 1,
-          "d66": 1,
-          "bbb": -1,
-          "cda": -1
-        },
-        {
-          "t": "No. Security services need broad access. Terrorism does not wait for warrants.",
-          "e": 0,
-          "g": 2,
-          "pvv": 1,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": -1,
-          "d66": -1,
-          "bbb": 1,
-          "cda": 1
-        }
-      ]
-    },
-    {
-      "id": "id1",
-      "nl": "National and cultural identity",
-      "pair": "ident-a",
+      "id": "nl16a",
+      "nl": "Work and labour",
+      "node": "labour",
+      "pair": "nlp16",
       "fr": "pro",
-      "type": "s",
-      "q": "Every culture has produced things worth being proud of. I am proud of mine and I do not apologise for it.",
-      "opts": [
-        {
-          "t": "Yes. Pride in your own culture and heritage is natural and healthy.",
-          "e": 0,
-          "g": 1,
-          "pvv": 2,
-          "glp": -1,
-          "vvd": 1,
-          "nsc": 1,
-          "d66": -1,
-          "bbb": 2,
-          "cda": 1
-        },
-        {
-          "t": "Pride is fine but claims of superiority over others make me uncomfortable.",
-          "e": 0,
-          "g": 0,
-          "pvv": 0,
-          "glp": 1,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. Ranking cultures above each other is where dangerous thinking begins.",
-          "e": 0,
-          "g": -1,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": -1,
-          "d66": 2,
-          "bbb": -2,
-          "cda": -1
-        }
-      ]
+      "type": "l",
+      "q": "Workers need stronger protection, and the minimum wage should rise substantially.",
+      "w": {
+        "e": -1.5,
+        "pvv": 0.5,
+        "glp": 2,
+        "vvd": -1.5,
+        "nsc": 0.5,
+        "cda": 0.5,
+        "g": 0
+      }
     },
     {
-      "id": "id2",
-      "nl": "National and cultural identity",
-      "pair": "ident-a",
+      "id": "nl16b",
+      "nl": "Work and labour",
+      "node": "labour",
+      "pair": "nlp16",
       "fr": "con",
-      "type": "s",
-      "q": "People alive today should carry a sense of shame for what their nation or culture did in the past - slavery, genocide, colonialism.",
-      "opts": [
-        {
-          "t": "Yes. Acknowledging inherited wrongs is part of being honest about who we are.",
-          "e": 0,
-          "g": -1,
-          "pvv": -2,
-          "glp": 2,
-          "vvd": -1,
-          "nsc": 0,
-          "d66": 2,
-          "bbb": -2,
-          "cda": 0
-        },
-        {
-          "t": "We should acknowledge history honestly without demanding personal shame.",
-          "e": 0,
-          "g": 0,
-          "pvv": 0,
-          "glp": 1,
-          "vvd": 0,
-          "nsc": 0,
-          "d66": 1,
-          "bbb": 0,
-          "cda": 0
-        },
-        {
-          "t": "No. You cannot be guilty of what you did not do. Collective guilt is unfair and divisive.",
-          "e": 0,
-          "g": 1,
-          "pvv": 2,
-          "glp": -2,
-          "vvd": 1,
-          "nsc": 0,
-          "d66": -2,
-          "bbb": 2,
-          "cda": 0
-        }
-      ]
+      "type": "l",
+      "q": "Pushing wages and protections up too far just costs jobs and hurts small businesses.",
+      "w": {
+        "e": 1.5,
+        "pvv": -0.5,
+        "glp": -2,
+        "vvd": 1.5,
+        "nsc": -0.5,
+        "cda": -0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl17a",
+      "nl": "Welfare",
+      "node": "welfare",
+      "pair": "nlp17",
+      "fr": "pro",
+      "type": "l",
+      "q": "The social safety net should be stronger and easier to rely on.",
+      "w": {
+        "e": -1.5,
+        "pvv": 1,
+        "glp": 2,
+        "vvd": -1.5,
+        "nsc": 0.5,
+        "cda": 0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl17b",
+      "nl": "Welfare",
+      "node": "welfare",
+      "pair": "nlp17",
+      "fr": "con",
+      "type": "l",
+      "q": "A too-generous safety net weakens the incentive to work and must be reined in.",
+      "w": {
+        "e": 1.5,
+        "pvv": -1,
+        "glp": -2,
+        "vvd": 1.5,
+        "nsc": -0.5,
+        "cda": -0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl18a",
+      "nl": "Economy",
+      "node": "business",
+      "pair": "nlp18",
+      "fr": "pro",
+      "type": "l",
+      "q": "The Netherlands over-regulates business; companies need far less red tape.",
+      "w": {
+        "e": 1.5,
+        "g": -0.5,
+        "pvv": 0.5,
+        "glp": -1.5,
+        "vvd": 2,
+        "d66": 0.5,
+        "bbb": 1,
+        "cda": 0.5
+      }
+    },
+    {
+      "id": "nl18b",
+      "nl": "Economy",
+      "node": "business",
+      "pair": "nlp18",
+      "fr": "con",
+      "type": "l",
+      "q": "Cutting regulation just erodes protection for workers, consumers, and nature.",
+      "w": {
+        "e": -1.5,
+        "g": 0.5,
+        "pvv": -0.5,
+        "glp": 1.5,
+        "vvd": -2,
+        "d66": -0.5,
+        "bbb": -1,
+        "cda": -0.5
+      }
+    },
+    {
+      "id": "nl19a",
+      "nl": "Drugs",
+      "node": "drugs",
+      "pair": "nlp19",
+      "fr": "pro",
+      "type": "l",
+      "q": "The Netherlands should fully legalise and regulate cannabis, not just tolerate it.",
+      "w": {
+        "e": 0,
+        "g": -1.5,
+        "pvv": -1,
+        "glp": 1.5,
+        "nsc": -0.5,
+        "d66": 2,
+        "bbb": -0.5,
+        "cda": -1.5
+      }
+    },
+    {
+      "id": "nl19b",
+      "nl": "Drugs",
+      "node": "drugs",
+      "pair": "nlp19",
+      "fr": "con",
+      "type": "l",
+      "q": "Full legalisation would only deepen the drug culture and empower criminals further.",
+      "w": {
+        "e": 0,
+        "g": 1.5,
+        "pvv": 1,
+        "glp": -1.5,
+        "nsc": 0.5,
+        "d66": -2,
+        "bbb": 0.5,
+        "cda": 1.5
+      }
+    },
+    {
+      "id": "nl20a",
+      "nl": "Rights",
+      "node": "health",
+      "pair": "nlp20",
+      "fr": "pro",
+      "type": "l",
+      "q": "The Dutch right to euthanasia should be protected and, where sensible, broadened.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "glp": 1,
+        "vvd": 0.5,
+        "nsc": -0.5,
+        "d66": 1.5,
+        "cda": -1.5
+      }
+    },
+    {
+      "id": "nl20b",
+      "nl": "Rights",
+      "node": "health",
+      "pair": "nlp20",
+      "fr": "con",
+      "type": "l",
+      "q": "Broadening euthanasia risks pressuring the vulnerable and cheapening life.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "glp": -1,
+        "vvd": -0.5,
+        "nsc": 0.5,
+        "d66": -1.5,
+        "cda": 1.5
+      }
+    },
+    {
+      "id": "nl21a",
+      "nl": "Rights",
+      "node": "repro",
+      "pair": "nlp21",
+      "fr": "pro",
+      "type": "l",
+      "q": "Access to abortion is a settled right that must be fully protected.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "glp": 1.5,
+        "vvd": 0.5,
+        "nsc": -0.5,
+        "d66": 1.5,
+        "cda": -1
+      }
+    },
+    {
+      "id": "nl21b",
+      "nl": "Rights",
+      "node": "repro",
+      "pair": "nlp21",
+      "fr": "con",
+      "type": "l",
+      "q": "Abortion ends a human life, and the law should be more restrictive.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "glp": -1.5,
+        "vvd": -0.5,
+        "nsc": 0.5,
+        "d66": -1.5,
+        "cda": 1
+      }
+    },
+    {
+      "id": "nl22a",
+      "nl": "Defence",
+      "node": "military",
+      "pair": "nlp22",
+      "fr": "pro",
+      "type": "l",
+      "q": "The Netherlands should keep arming Ukraine and raise defence spending.",
+      "w": {
+        "e": 0.5,
+        "g": 0.5,
+        "pvv": -1,
+        "glp": 0.5,
+        "vvd": 1.5,
+        "nsc": 0.5,
+        "d66": 1.5,
+        "cda": 1
+      }
+    },
+    {
+      "id": "nl22b",
+      "nl": "Defence",
+      "node": "military",
+      "pair": "nlp22",
+      "fr": "con",
+      "type": "l",
+      "q": "Endless arms shipments and higher military budgets are money better spent at home.",
+      "w": {
+        "e": -0.5,
+        "g": -0.5,
+        "pvv": 1,
+        "glp": -0.5,
+        "vvd": -1.5,
+        "nsc": -0.5,
+        "d66": -1.5,
+        "cda": -1
+      }
+    },
+    {
+      "id": "nl23a",
+      "nl": "Energy",
+      "node": "energy",
+      "pair": "nlp23",
+      "fr": "pro",
+      "type": "l",
+      "q": "The Netherlands should build new nuclear power plants.",
+      "w": {
+        "e": 0.5,
+        "g": 0,
+        "pvv": 1,
+        "glp": -1,
+        "vvd": 1.5,
+        "nsc": 1,
+        "bbb": 1,
+        "cda": 1
+      }
+    },
+    {
+      "id": "nl23b",
+      "nl": "Energy",
+      "node": "energy",
+      "pair": "nlp23",
+      "fr": "con",
+      "type": "l",
+      "q": "New nuclear is too slow and costly; the money should go to renewables.",
+      "w": {
+        "e": -0.5,
+        "g": 0,
+        "pvv": -1,
+        "glp": 1,
+        "vvd": -1.5,
+        "nsc": -1,
+        "bbb": -1,
+        "cda": -1
+      }
+    },
+    {
+      "id": "nl24a",
+      "nl": "Groningen",
+      "node": "energy",
+      "pair": "nlp24",
+      "fr": "pro",
+      "type": "l",
+      "q": "The state owes Groningen full compensation and must never restart gas extraction there.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": 1,
+        "glp": 1.5,
+        "vvd": 0.5,
+        "nsc": 1,
+        "d66": 1,
+        "bbb": 1,
+        "cda": 1
+      }
+    },
+    {
+      "id": "nl24b",
+      "nl": "Groningen",
+      "node": "energy",
+      "pair": "nlp24",
+      "fr": "con",
+      "type": "l",
+      "q": "Reality may force some gas extraction to continue, and endless compensation has limits.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": -1,
+        "glp": -1.5,
+        "vvd": -0.5,
+        "nsc": -1,
+        "d66": -1,
+        "bbb": -1,
+        "cda": -1
+      }
+    },
+    {
+      "id": "nl25a",
+      "nl": "Media",
+      "node": "media",
+      "pair": "nlp25",
+      "fr": "pro",
+      "type": "l",
+      "q": "Public broadcasting is worth its funding and must stay independent of politics.",
+      "w": {
+        "e": -0.5,
+        "pvv": -2,
+        "glp": 1.5,
+        "vvd": -0.5,
+        "nsc": 0.5,
+        "d66": 1,
+        "bbb": -0.5,
+        "cda": 0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl25b",
+      "nl": "Media",
+      "node": "media",
+      "pair": "nlp25",
+      "fr": "con",
+      "type": "l",
+      "q": "The public broadcaster is biased and bloated, and its funding should be cut.",
+      "w": {
+        "e": 0.5,
+        "pvv": 2,
+        "glp": -1.5,
+        "vvd": 0.5,
+        "nsc": -0.5,
+        "d66": -1,
+        "bbb": 0.5,
+        "cda": -0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl26a",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nlp26",
+      "fr": "pro",
+      "type": "l",
+      "q": "Multiculturalism has failed and produced divided communities with little in common.",
+      "w": {
+        "e": 0,
+        "g": 1,
+        "pvv": 2,
+        "glp": -2,
+        "vvd": 0.5,
+        "d66": -1.5,
+        "bbb": 0.5,
+        "cda": -0.5
+      }
+    },
+    {
+      "id": "nl26b",
+      "nl": "Culture and identity",
+      "node": "culture",
+      "pair": "nlp26",
+      "fr": "con",
+      "type": "l",
+      "q": "Dutch diversity is a genuine strength and part of the national identity.",
+      "w": {
+        "e": 0,
+        "g": -1,
+        "pvv": -2,
+        "glp": 2,
+        "vvd": -0.5,
+        "d66": 1.5,
+        "bbb": -0.5,
+        "cda": 0.5
+      }
+    },
+    {
+      "id": "nl27a",
+      "nl": "Democracy",
+      "node": "democracy",
+      "pair": "nlp27",
+      "fr": "pro",
+      "type": "l",
+      "q": "The Netherlands should introduce binding referendums on major questions.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": 1.5,
+        "vvd": -1,
+        "nsc": 0.5,
+        "d66": 0.5,
+        "bbb": 1,
+        "cda": -0.5
+      }
+    },
+    {
+      "id": "nl27b",
+      "nl": "Democracy",
+      "node": "democracy",
+      "pair": "nlp27",
+      "fr": "con",
+      "type": "l",
+      "q": "Referendums reduce complex questions to slogans and are easily hijacked by populists.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": -1.5,
+        "vvd": 1,
+        "nsc": -0.5,
+        "d66": -0.5,
+        "bbb": -1,
+        "cda": 0.5
+      }
+    },
+    {
+      "id": "nl28a",
+      "nl": "Environment and industry",
+      "node": "climate",
+      "pair": "nlp28",
+      "fr": "pro",
+      "type": "l",
+      "q": "Protecting nature should take priority over new roads, farms, and industry.",
+      "w": {
+        "e": -0.5,
+        "pvv": -1.5,
+        "glp": 2,
+        "vvd": -1,
+        "d66": 1.5,
+        "bbb": -2,
+        "cda": -0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl28b",
+      "nl": "Environment and industry",
+      "node": "climate",
+      "pair": "nlp28",
+      "fr": "con",
+      "type": "l",
+      "q": "Endless environmental rules are strangling the housing and infrastructure the country needs.",
+      "w": {
+        "e": 0.5,
+        "pvv": 1.5,
+        "glp": -2,
+        "vvd": 1,
+        "d66": -1.5,
+        "bbb": 2,
+        "cda": 0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl29a",
+      "nl": "Pensions",
+      "node": "welfare",
+      "pair": "nlp29",
+      "fr": "pro",
+      "type": "l",
+      "q": "The controversial new pension system should be paused or reversed to protect people’s certainty.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": 1.5,
+        "glp": -0.5,
+        "vvd": -1,
+        "nsc": 0.5,
+        "d66": -1,
+        "bbb": 1,
+        "cda": -0.5
+      }
+    },
+    {
+      "id": "nl29b",
+      "nl": "Pensions",
+      "node": "welfare",
+      "pair": "nlp29",
+      "fr": "con",
+      "type": "l",
+      "q": "The new pension system is a necessary modernisation and should go ahead.",
+      "w": {
+        "e": 0,
+        "g": 0,
+        "pvv": -1.5,
+        "glp": 0.5,
+        "vvd": 1,
+        "nsc": -0.5,
+        "d66": 1,
+        "bbb": -1,
+        "cda": 0.5
+      }
+    },
+    {
+      "id": "nl30a",
+      "nl": "Cost of living",
+      "node": "welfare",
+      "pair": "nlp30",
+      "fr": "pro",
+      "type": "l",
+      "q": "The government should intervene directly to protect people’s purchasing power.",
+      "w": {
+        "e": -1,
+        "pvv": 1.5,
+        "glp": 1.5,
+        "vvd": -0.5,
+        "nsc": 1,
+        "bbb": 1,
+        "cda": 0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl30b",
+      "nl": "Cost of living",
+      "node": "welfare",
+      "pair": "nlp30",
+      "fr": "con",
+      "type": "l",
+      "q": "Handouts and price measures just fuel inflation and public debt.",
+      "w": {
+        "e": 1,
+        "pvv": -1.5,
+        "glp": -1.5,
+        "vvd": 0.5,
+        "nsc": -1,
+        "bbb": -1,
+        "cda": -0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl31a",
+      "nl": "Trade and globalisation",
+      "node": "trade",
+      "pair": "nlp31",
+      "fr": "pro",
+      "type": "l",
+      "q": "Open global free trade has made the Netherlands richer and should be defended.",
+      "w": {
+        "e": 1.5,
+        "g": -0.5,
+        "pvv": -1,
+        "glp": -0.5,
+        "vvd": 1.5,
+        "d66": 1.5,
+        "bbb": -0.5,
+        "cda": 0.5
+      }
+    },
+    {
+      "id": "nl31b",
+      "nl": "Trade and globalisation",
+      "node": "trade",
+      "pair": "nlp31",
+      "fr": "con",
+      "type": "l",
+      "q": "Globalisation hollowed out communities and made the country too dependent.",
+      "w": {
+        "e": -1.5,
+        "g": 0.5,
+        "pvv": 1,
+        "glp": 0.5,
+        "vvd": -1.5,
+        "d66": -1.5,
+        "bbb": 0.5,
+        "cda": -0.5
+      }
+    },
+    {
+      "id": "nl32a",
+      "nl": "Welfare",
+      "node": "welfare",
+      "pair": "nlp32",
+      "fr": "pro",
+      "type": "l",
+      "q": "The unemployed and poor are treated with too much suspicion; the safety net should be stronger.",
+      "w": {
+        "e": -1.5,
+        "pvv": 1,
+        "glp": 2,
+        "vvd": -1.5,
+        "nsc": 0.5,
+        "cda": 0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl32b",
+      "nl": "Welfare",
+      "node": "welfare",
+      "pair": "nlp32",
+      "fr": "con",
+      "type": "l",
+      "q": "Welfare too easily becomes a trap, and stricter rules protect those who pay in.",
+      "w": {
+        "e": 1.5,
+        "pvv": -1,
+        "glp": -2,
+        "vvd": 1.5,
+        "nsc": -0.5,
+        "cda": -0.5,
+        "g": 0
+      }
+    },
+    {
+      "id": "nl33a",
+      "nl": "Philosophy and values",
+      "node": "philosophy",
+      "pair": "nlp33",
+      "fr": "pro",
+      "type": "l",
+      "q": "Long-standing traditions carry the wisdom of generations and should not be discarded lightly.",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "pvv": 1.5,
+        "glp": -1,
+        "nsc": 1,
+        "d66": -1,
+        "bbb": 1,
+        "cda": 1.5
+      }
+    },
+    {
+      "id": "nl33b",
+      "nl": "Philosophy and values",
+      "node": "philosophy",
+      "pair": "nlp33",
+      "fr": "con",
+      "type": "l",
+      "q": "Worshipping tradition just lets the dead govern the living and blocks necessary change.",
+      "w": {
+        "e": 0,
+        "g": -0.5,
+        "pvv": -1.5,
+        "glp": 1,
+        "nsc": -1,
+        "d66": 1,
+        "bbb": -1,
+        "cda": -1.5
+      }
+    },
+    {
+      "id": "nl34a",
+      "nl": "Philosophy and values",
+      "node": "philosophy",
+      "pair": "nlp34",
+      "fr": "pro",
+      "type": "l",
+      "q": "A good society depends more on personal responsibility than on government support.",
+      "w": {
+        "e": 1.5,
+        "g": 0,
+        "pvv": 0.5,
+        "glp": -1.5,
+        "vvd": 1.5,
+        "nsc": 0.5,
+        "d66": 0.5,
+        "bbb": 0.5,
+        "cda": 1
+      }
+    },
+    {
+      "id": "nl34b",
+      "nl": "Philosophy and values",
+      "node": "philosophy",
+      "pair": "nlp34",
+      "fr": "con",
+      "type": "l",
+      "q": "Blaming individuals for problems the system creates is how the comfortable excuse others’ suffering.",
+      "w": {
+        "e": -1.5,
+        "g": 0,
+        "pvv": -0.5,
+        "glp": 1.5,
+        "vvd": -1.5,
+        "nsc": -0.5,
+        "d66": -0.5,
+        "bbb": -0.5,
+        "cda": -1
+      }
+    },
+    {
+      "id": "nl35a",
+      "nl": "Immigration",
+      "node": "immig",
+      "pair": "nlp35",
+      "fr": "pro",
+      "type": "l",
+      "q": "Municipalities should be forced to take in a fair share of asylum seekers (spreidingswet).",
+      "w": {
+        "e": 0,
+        "g": 0.5,
+        "pvv": -2,
+        "glp": 1.5,
+        "vvd": -0.5,
+        "nsc": 0.5,
+        "d66": 1.5,
+        "bbb": -1,
+        "cda": 0.5
+      }
+    },
+    {
+      "id": "nl35b",
+      "nl": "Immigration",
+      "node": "immig",
+      "pair": "nlp35",
+      "fr": "con",
+      "type": "l",
+      "q": "Forcing asylum seekers on communities against their will only breeds resentment and should be scrapped.",
+      "w": {
+        "e": 0,
+        "g": -0.5,
+        "pvv": 2,
+        "glp": -1.5,
+        "vvd": 0.5,
+        "nsc": -0.5,
+        "d66": -1.5,
+        "bbb": 1,
+        "cda": -0.5
+      }
     }
   ],
   "heroTitle": "Waar sta jij in de<br><em>Nederlandse</em> politiek?",
-  "heroSub": "47 beleidsgerichte vragen en stellingen over de belangrijkste thema's van de Nederlandse politiek. Zie je positie op de boussole en je aansluiting met de grote partijen.",
+  "heroSub": "70 stellingen over de thema’s die Nederland nu bepalen: immigratie, stikstof en boeren, wonen, klimaat en de EU. Elke positie wordt twee keer gesteld met tegengestelde framing, wat zowel je partijovereenkomst als je framingbias laat zien.",
   "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#002D62\"></div>\n      <div class=\"party-name\">PVV</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met de PVV. Je pleit voor een asielstop, strenge wetshandhaving, stopzetting van klimaatmaatregelen, en behoud van de nationale identiteit.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#E60000\"></div>\n      <div class=\"party-name\">GL-PvdA</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met GroenLinks-PvdA. Je steunt een ambitieus klimaatbeleid, inkomensherverdeling via belastingen, en investeringen in openbare voorzieningen.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#FF6600\"></div>\n      <div class=\"party-name\">VVD</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met de VVD. Je bent voorstander van lagere lasten voor bedrijven, economische vrijheid, kernenergie, en een selectief immigratiebeleid.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#00A3A0\"></div>\n      <div class=\"party-name\">NSC</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met Nieuw Sociaal Contract. Je stelt goed bestuur, bestaanszekerheid en constitutionele toetsing centraal.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#00AE41\"></div>\n      <div class=\"party-name\">D66</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met D66. Je bent progressief op het gebied van persoonlijke vrijheden (euthanasie), pro-klimaatactie en voorstander van Europese federatie.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#9ACD32\"></div>\n      <div class=\"party-name\">BBB</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met de BoerBurgerBeweging. Je komt op voor het platteland, verzet je tegen strenge stikstofregels en steunt een nuchter, rechtser economisch beleid.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#007C5C\"></div>\n      <div class=\"party-name\">CDA</div>\n      <div class=\"party-desc\">Je antwoorden komen het meest overeen met het CDA. Je staat voor een fatsoenlijke samenleving, ondersteuning van het gezin en het maatschappelijk middenveld.</div>\n    </div>\n  </div>"
 }
