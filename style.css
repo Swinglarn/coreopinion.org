@@ -410,6 +410,22 @@ html.dark-mode .nav-badge {
   border: 1px solid var(--border-soft);
 }
 
+/* Country flag images (nav badge + hero eyebrow) */
+.flag-img {
+  height: 15px;
+  width: auto;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(10, 12, 15, 0.08);
+}
+.flag-img-hero {
+  height: 26px;
+  width: auto;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(10, 12, 15, 0.18);
+}
+
 /* --- BUTTONS --- */
 .btn-primary {
   background: var(--ink);
@@ -987,7 +1003,34 @@ html.dark-mode .nav-badge {
   text-align: center;
   padding: 13px 20px;
   font-size: 15.5px;
+  border-color: color-mix(in srgb, var(--lk-c) 55%, transparent);
+  background: color-mix(in srgb, var(--lk-c) 14%, transparent);
+  color: var(--ink);
 }
+
+.q-opt-likert:hover {
+  border-color: var(--lk-c);
+  background: color-mix(in srgb, var(--lk-c) 26%, transparent);
+  color: var(--ink);
+}
+
+.q-opt-likert.picked {
+  border-color: var(--lk-c);
+  background: var(--lk-c);
+  color: #fff;
+}
+
+/* Agree = green (dark to light), disagree = red (light to dark) */
+.q-opt-likert.lk0 { --lk-c: #12813f; }
+.q-opt-likert.lk1 { --lk-c: #3aa564; }
+.q-opt-likert.lk2 { --lk-c: #7cc596; }
+.q-opt-likert.lk3 { --lk-c: #e39a94; }
+.q-opt-likert.lk4 { --lk-c: #d0584f; }
+.q-opt-likert.lk5 { --lk-c: #b01f1f; }
+
+/* Light-tone buttons keep dark text when selected for contrast */
+.q-opt-likert.lk2.picked,
+.q-opt-likert.lk3.picked { color: #1a1a1a; }
 
 .q-foot {
   display: flex;

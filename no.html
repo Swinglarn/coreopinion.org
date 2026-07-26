@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.1">
+<link rel="stylesheet" href="/style.css?v=1.1.3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,7 +187,7 @@
       <button id="lang-toggle" onclick="toggleLang()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 12px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s">English</button>
       <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
       <div class="flag-badge">
-        <span class="flag">🇳🇴</span>
+        <img class="flag-img" src="/images/flags/no.webp" alt="Flag of Norway" width="24" height="16" loading="lazy" decoding="async">
         <span id="lang-label">Norge</span>
       </div>
     </div>
@@ -198,7 +198,7 @@
       <div class="hero-video-slides" id="hero-video-slides"></div>
     </div>
     <div class="hero-bg">🇳🇴</div>
-    <div class="eyebrow">Norge Political Test</div>
+    <div class="eyebrow"><img class="flag-img-hero" src="/images/flags/no.webp" alt="Norway flag" width="42" height="28" loading="eager" decoding="async"><span>Norge Political Test</span></div>
     <h1>Hvor står du i <em>norsk</em> politikk?</h1>
     <p class="hero-sub">70 utsagn om sakene som preger Norge nå: olje og strøm, formuesskatt, innvandring, distrikt og klima. Hver holdning stilles to ganger med motsatt vinkling, som viser både din parti-overensstemmelse og din formuleringsbias.</p>
     <div class="hero-cta">
@@ -276,7 +276,7 @@
     <div></div>
     <div class="nav-controls">
       <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
-      <div class="flag-badge"><span class="flag">🇳🇴</span> Norge</div>
+      <div class="flag-badge"><img class="flag-img" src="/images/flags/no.webp" alt="Flag of Norway" width="24" height="16" loading="lazy" decoding="async"> Norge</div>
     </div>
   </nav>
   <div class="mode-outer">
@@ -322,7 +322,7 @@
     <div></div>
     <div class="nav-controls">
       <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
-      <div class="flag-badge"><span class="flag">🇳🇴</span> Norge</div>
+      <div class="flag-badge"><img class="flag-img" src="/images/flags/no.webp" alt="Flag of Norway" width="24" height="16" loading="lazy" decoding="async"> Norge</div>
     </div>
   </nav>
   <div class="q-shell">
@@ -679,7 +679,7 @@
     </div>
     <div class="nav-controls">
       <button class="theme-toggle" onclick="toggleTheme()" style="background:none;border:1px solid var(--border-soft);border-radius:4px;padding:6px 10px;font-size:12px;font-family:Outfit,sans-serif;cursor:pointer;color:var(--ink-muted);font-weight:400;transition:all 0.15s" aria-label="Toggle theme">🌓</button>
-      <div class="flag-badge"><span class="flag">🇳🇴</span> Norge</div>
+      <div class="flag-badge"><img class="flag-img" src="/images/flags/no.webp" alt="Flag of Norway" width="24" height="16" loading="lazy" decoding="async"> Norge</div>
     </div>
   </nav>
   <div class="results-shell">
@@ -3267,6 +3267,6 @@ window.getQuestion = getQuestion;
 window.currentLang = currentLang;
 applyLang();
 </script>
-<script src="/engine.js?v=1.1.1"></script>
+<script src="/engine.js?v=1.1.3"></script>
 </body>
 </html>

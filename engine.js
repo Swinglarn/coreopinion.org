@@ -917,7 +917,7 @@ window.renderQ = function() {
       const labels = tObj.likert || ENGINE_TRANSLATIONS['en'].likert;
       labels.forEach((label, i) => {
         const d = document.createElement('div');
-        d.className = 'q-opt q-opt-likert';
+        d.className = 'q-opt q-opt-likert lk' + i;
         d.textContent = label;
         d.onclick = () => window.pickOpt(i, d);
         container.appendChild(d);

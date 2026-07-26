@@ -774,6 +774,19 @@ configFiles.forEach(file => {
   html = html.replace(/\{\{KEYWORDS\}\}/g, config.keywords || '');
   html = html.replace(/\{\{CANONICAL\}\}/g, config.canonical || '');
   html = html.replace(/\{\{NAME\}\}/g, config.name || '');
+
+  // Country flag images (WebP). Skip the general test, which has no country.
+  const flagCountry = nationalityMap[config.code];
+  let navFlagHtml = '';
+  let heroFlagHtml = '';
+  if (flagCountry && !isGeneral) {
+    const src = `/images/flags/${config.code}.webp`;
+    navFlagHtml = `<img class="flag-img" src="${src}" alt="Flag of ${flagCountry}" width="24" height="16" loading="lazy" decoding="async">`;
+    heroFlagHtml = `<img class="flag-img-hero" src="${src}" alt="${flagCountry} flag" width="42" height="28" loading="eager" decoding="async">`;
+  }
+  html = html.replace(/<span class="flag">\{\{FLAG\}\}<\/span>/g, navFlagHtml);
+  html = html.replace(/\{\{FLAG_HERO\}\}/g, heroFlagHtml);
+
   html = html.replace(/\{\{FLAG\}\}/g, config.flag || '');
   html = html.replace(/\{\{LABEL\}\}/g, config.localLabel || '');
   html = html.replace(/\{\{HERO_TITLE\}\}/g, config.heroTitle || '');
