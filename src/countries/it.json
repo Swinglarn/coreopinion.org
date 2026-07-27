@@ -126,214 +126,284 @@
   "calibrations": {},
   "translations": {
     "it1a": {
-      "q": "L’immigrazione in Italia è troppo alta e gli sbarchi vanno fermati con ogni mezzo."
+      "q": "L’immigrazione in Italia è troppo alta e gli sbarchi vanno fermati con ogni mezzo.",
+      "ctx": "Sostiene che l'immigrazione in Italia è troppo alta e che gli sbarchi vanno fermati con ogni mezzo."
     },
     "it1b": {
-      "q": "L’Italia, con la sua popolazione che invecchia, ha bisogno di immigrati, e salvare le persone in mare è un dovere morale."
+      "q": "L’Italia, con la sua popolazione che invecchia, ha bisogno di immigrati, e salvare le persone in mare è un dovere morale.",
+      "ctx": "Sostiene che l'Italia che invecchia ha bisogno di immigrati e che salvare le persone in mare è un dovere morale."
     },
     "it2a": {
-      "q": "Gli immigrati che commettono reati devono essere espulsi senza eccezioni."
+      "q": "Gli immigrati che commettono reati devono essere espulsi senza eccezioni.",
+      "ctx": "Sostiene l'espulsione degli immigrati che commettono reati, senza eccezioni."
     },
     "it2b": {
-      "q": "Le espulsioni collettive tradiscono i diritti umani e i valori di un paese civile."
+      "q": "Le espulsioni collettive tradiscono i diritti umani e i valori di un paese civile.",
+      "ctx": "Sostiene che le espulsioni collettive tradiscono i diritti umani e i valori di un paese civile."
     },
     "it3a": {
-      "q": "I bambini nati e cresciuti in Italia da genitori immigrati dovrebbero ottenere la cittadinanza (ius soli)."
+      "q": "I bambini nati e cresciuti in Italia da genitori immigrati dovrebbero ottenere la cittadinanza (ius soli).",
+      "ctx": "Lo ius soli darebbe la cittadinanza ai bambini nati e cresciuti in Italia da genitori immigrati. Questo lo sostiene."
     },
     "it3b": {
-      "q": "La cittadinanza va meritata e radicata nell’eredità italiana, non regalata per essere nati sul territorio."
+      "q": "La cittadinanza va meritata e radicata nell’eredità italiana, non regalata per essere nati sul territorio.",
+      "ctx": "Sostiene che la cittadinanza va meritata e radicata nell'eredità italiana, non concessa per essere nati sul territorio."
     },
     "it4a": {
-      "q": "Abolire il reddito di cittadinanza è stato un errore e andrebbe reintrodotto."
+      "q": "Abolire il reddito di cittadinanza è stato un errore e andrebbe reintrodotto.",
+      "ctx": "Il reddito di cittadinanza era un sostegno al reddito abolito dal governo Meloni. Questo lo giudica un errore e lo vuole reintrodurre."
     },
     "it4b": {
-      "q": "Il reddito di cittadinanza pagava le persone per stare a casa e andava abolito."
+      "q": "Il reddito di cittadinanza pagava le persone per stare a casa e andava abolito.",
+      "ctx": "Sostiene che il reddito di cittadinanza pagava le persone per stare a casa e giustamente andava abolito."
     },
     "it5a": {
-      "q": "L’Italia dovrebbe introdurre un salario minimo legale."
+      "q": "L’Italia dovrebbe introdurre un salario minimo legale.",
+      "ctx": "L'Italia non ha un salario minimo legale. Questo sostiene di introdurlo."
     },
     "it5b": {
-      "q": "Un salario minimo legale distruggerebbe posti di lavoro e minerebbe la contrattazione collettiva."
+      "q": "Un salario minimo legale distruggerebbe posti di lavoro e minerebbe la contrattazione collettiva.",
+      "ctx": "Sostiene che un salario minimo legale distruggerebbe posti di lavoro e minerebbe la contrattazione sindacale."
     },
     "it6a": {
-      "q": "L’Italia dovrebbe eleggere direttamente il presidente del Consiglio (premierato) per avere stabilità."
+      "q": "L’Italia dovrebbe eleggere direttamente il presidente del Consiglio (premierato) per avere stabilità.",
+      "ctx": "La riforma del premierato consentirebbe agli italiani di eleggere direttamente il presidente del Consiglio. Questo la sostiene per la stabilità."
     },
     "it6b": {
-      "q": "Eleggere direttamente il premier concentra troppo potere in una persona e indebolisce i contrappesi."
+      "q": "Eleggere direttamente il premier concentra troppo potere in una persona e indebolisce i contrappesi.",
+      "ctx": "Sostiene che eleggere direttamente il premier concentra troppo potere in una persona e indebolisce i contrappesi."
     },
     "it7a": {
-      "q": "Le regioni più ricche dovrebbero trattenere più tasse tramite l’autonomia differenziata."
+      "q": "Le regioni più ricche dovrebbero trattenere più tasse tramite l’autonomia differenziata.",
+      "ctx": "L'autonomia differenziata consente alle regioni più ricche di trattenere più gettito fiscale. Questo la sostiene."
     },
     "it7b": {
-      "q": "L’autonomia differenziata abbandonerebbe il Sud e spaccherebbe l’Italia in ricchi e poveri."
+      "q": "L’autonomia differenziata abbandonerebbe il Sud e spaccherebbe l’Italia in ricchi e poveri.",
+      "ctx": "Sostiene che l'autonomia differenziata abbandonerebbe il Sud più povero e spaccherebbe l'Italia tra ricchi e poveri."
     },
     "it8a": {
-      "q": "Gli italiani più ricchi dovrebbero pagare molte più tasse."
+      "q": "Gli italiani più ricchi dovrebbero pagare molte più tasse.",
+      "ctx": "Sostiene tasse molto più alte per gli italiani più ricchi."
     },
     "it8b": {
-      "q": "Una flat tax e tasse più basse per tutti sono ciò di cui l’Italia ha bisogno per crescere."
+      "q": "Una flat tax e tasse più basse per tutti sono ciò di cui l’Italia ha bisogno per crescere.",
+      "ctx": "La flat tax è un'unica aliquota bassa per tutti. Questo sostiene che quella e tasse più basse siano ciò di cui l'Italia ha bisogno per crescere."
     },
     "it9a": {
-      "q": "L’accesso all’aborto secondo la legge 194 va protetto e garantito ovunque."
+      "q": "L’accesso all’aborto secondo la legge 194 va protetto e garantito ovunque.",
+      "ctx": "La legge 194 è la legge italiana sull'aborto. Questo vuole che l'accesso sia protetto e garantito ovunque."
     },
     "it9b": {
-      "q": "Ci sono troppi aborti, e lo Stato dovrebbe fare di più per scoraggiarli."
+      "q": "Ci sono troppi aborti, e lo Stato dovrebbe fare di più per scoraggiarli.",
+      "ctx": "Sostiene che ci sono troppi aborti e che lo Stato dovrebbe fare di più per scoraggiarli."
     },
     "it10a": {
-      "q": "Le coppie dello stesso sesso dovrebbero avere pieni diritti di matrimonio e adozione."
+      "q": "Le coppie dello stesso sesso dovrebbero avere pieni diritti di matrimonio e adozione.",
+      "ctx": "Sostiene pieni diritti di matrimonio e adozione per le coppie dello stesso sesso. L'Italia ammette solo le unioni civili."
     },
     "it10b": {
-      "q": "Il matrimonio e i figli appartengono a una madre e a un padre; questa è la famiglia naturale."
+      "q": "Il matrimonio e i figli appartengono a una madre e a un padre; questa è la famiglia naturale.",
+      "ctx": "Sostiene che il matrimonio e i figli appartengono a una madre e un padre, la “famiglia naturale”."
     },
     "it11a": {
-      "q": "È giusto che la maternità surrogata sia vietata e trattata come reato anche se fatta all’estero."
+      "q": "È giusto che la maternità surrogata sia vietata e trattata come reato anche se fatta all’estero.",
+      "ctx": "L'Italia vieta la maternità surrogata e la punisce come reato anche se fatta all'estero. Questo lo difende."
     },
     "it11b": {
-      "q": "Criminalizzare la surrogata fatta all’estero punisce solo genitori amorevoli e i loro figli."
+      "q": "Criminalizzare la surrogata fatta all’estero punisce solo genitori amorevoli e i loro figli.",
+      "ctx": "Sostiene che criminalizzare la surrogata fatta all'estero punisce solo genitori amorevoli e i loro figli."
     },
     "it12a": {
-      "q": "L’Italia non ha mai fatto i conti fino in fondo con il fascismo, e l’antifascismo deve restare centrale nella sua identità."
+      "q": "L’Italia non ha mai fatto i conti fino in fondo con il fascismo, e l’antifascismo deve restare centrale nella sua identità.",
+      "ctx": "Sostiene che l'Italia non ha mai fatto i conti fino in fondo con il fascismo e che l'antifascismo deve restare centrale nella sua identità."
     },
     "it12b": {
-      "q": "L’ossessione per l’antifascismo è un’arma politica superata che oggi divide gli italiani."
+      "q": "L’ossessione per l’antifascismo è un’arma politica superata che oggi divide gli italiani.",
+      "ctx": "Sostiene che l'ossessione per l'antifascismo è un'arma politica superata che oggi divide gli italiani."
     },
     "it13a": {
-      "q": "Le radici e le tradizioni cattoliche dell’Italia vanno difese nella vita pubblica."
+      "q": "Le radici e le tradizioni cattoliche dell’Italia vanno difese nella vita pubblica.",
+      "ctx": "Sostiene che le radici e le tradizioni cattoliche dell'Italia vadano difese nella vita pubblica."
     },
     "it13b": {
-      "q": "L’Italia dovrebbe essere rigorosamente laica, con la religione tenuta fuori dalle leggi e dallo Stato."
+      "q": "L’Italia dovrebbe essere rigorosamente laica, con la religione tenuta fuori dalle leggi e dallo Stato.",
+      "ctx": "Sostiene che l'Italia dovrebbe essere rigorosamente laica, con la religione tenuta fuori dalle leggi e dallo Stato."
     },
     "it14a": {
-      "q": "L’islam non è compatibile con i valori italiani."
+      "q": "L’islam non è compatibile con i valori italiani.",
+      "ctx": "Sostiene che l'islam sia incompatibile con i valori italiani. I sostenitori citano l'integrazione; i critici lo chiamano pregiudizio."
     },
     "it14b": {
-      "q": "Gli italiani musulmani sono membri a pieno titolo della società, e la loro fede merita lo stesso rispetto di ogni altra."
+      "q": "Gli italiani musulmani sono membri a pieno titolo della società, e la loro fede merita lo stesso rispetto di ogni altra.",
+      "ctx": "Considera i musulmani italiani membri a pieno titolo della società, la cui fede merita pari rispetto."
     },
     "it15a": {
-      "q": "Alcune razze sono semplicemente più intelligenti o capaci di altre."
+      "q": "Alcune razze sono semplicemente più intelligenti o capaci di altre.",
+      "ctx": "È suprematismo razziale: l'idea che alcune razze siano per natura più intelligenti o capaci. La scienza la respinge; è legata a ideologie come il nazismo."
     },
     "it15b": {
-      "q": "Non esiste una gerarchia delle razze; l’idea è una pseudoscienza dalla storia vergognosa."
+      "q": "Non esiste una gerarchia delle razze; l’idea è una pseudoscienza dalla storia vergognosa.",
+      "ctx": "È il principio dell'uguaglianza umana: nessuna razza è superiore per natura, e l'idea è una pseudoscienza screditata dalla storia vergognosa."
     },
     "it16a": {
-      "q": "L’Italia ha bisogno di pene più dure e più polizia per garantire la sicurezza pubblica."
+      "q": "L’Italia ha bisogno di pene più dure e più polizia per garantire la sicurezza pubblica.",
+      "ctx": "Sostiene che l'Italia abbia bisogno di pene più dure e più polizia per garantire la sicurezza."
     },
     "it16b": {
-      "q": "Pene sempre più dure non riducono mai la criminalità; lo fanno la prevenzione e le politiche sociali."
+      "q": "Pene sempre più dure non riducono mai la criminalità; lo fanno la prevenzione e le politiche sociali.",
+      "ctx": "Sostiene che pene sempre più dure non riducono la criminalità, mentre lo fanno prevenzione e politiche sociali."
     },
     "it17a": {
-      "q": "Il futuro dell’Italia sta in un’Unione Europea più forte e integrata."
+      "q": "Il futuro dell’Italia sta in un’Unione Europea più forte e integrata.",
+      "ctx": "Vede il futuro dell'Italia in un'Unione Europea più forte e integrata."
     },
     "it17b": {
-      "q": "Bruxelles ha troppo potere sull’Italia, e la sovranità deve venire prima."
+      "q": "Bruxelles ha troppo potere sull’Italia, e la sovranità deve venire prima.",
+      "ctx": "Sostiene che Bruxelles ha troppo potere sull'Italia e che la sovranità deve venire prima."
     },
     "it18a": {
-      "q": "L’Italia dovrebbe continuare a sostenere l’Ucraina con le armi contro la Russia."
+      "q": "L’Italia dovrebbe continuare a sostenere l’Ucraina con le armi contro la Russia.",
+      "ctx": "Sostiene che l'Italia continui ad armare l'Ucraina contro la Russia."
     },
     "it18b": {
-      "q": "Inviare altre armi prolunga solo la guerra; l’Italia dovrebbe spingere per negoziati."
+      "q": "Inviare altre armi prolunga solo la guerra; l’Italia dovrebbe spingere per negoziati.",
+      "ctx": "Sostiene che inviare più armi prolunghi solo la guerra e che l'Italia dovrebbe spingere per negoziati."
     },
     "it19a": {
-      "q": "Il servizio sanitario pubblico va finanziato molto di più e la privatizzazione va contrastata."
+      "q": "Il servizio sanitario pubblico va finanziato molto di più e la privatizzazione va contrastata.",
+      "ctx": "Vuole finanziare molto di più il servizio sanitario pubblico, contrastando la privatizzazione."
     },
     "it19b": {
-      "q": "Più offerta privata alleggerirebbe la pressione e ridurrebbe le liste d’attesa."
+      "q": "Più offerta privata alleggerirebbe la pressione e ridurrebbe le liste d’attesa.",
+      "ctx": "Sostiene che più offerta privata alleggerirebbe la pressione e ridurrebbe le liste d'attesa."
     },
     "it20a": {
-      "q": "I contratti precari a breve termine andrebbero fortemente limitati per proteggere i lavoratori."
+      "q": "I contratti precari a breve termine andrebbero fortemente limitati per proteggere i lavoratori.",
+      "ctx": "L'Italia ha molti contratti precari a breve termine. Questo vuole limitarli fortemente per proteggere i lavoratori."
     },
     "it20b": {
-      "q": "Allentare le regole sui contratti è ciò che permette alle aziende di assumere i giovani."
+      "q": "Allentare le regole sui contratti è ciò che permette alle aziende di assumere i giovani.",
+      "ctx": "Sostiene che allentare le regole sui contratti è ciò che permette alle aziende di assumere i giovani."
     },
     "it21a": {
-      "q": "L’Italia regola e tassa troppo le imprese; lo Stato dovrebbe farsi da parte."
+      "q": "L’Italia regola e tassa troppo le imprese; lo Stato dovrebbe farsi da parte.",
+      "ctx": "Sostiene che l'Italia regola e tassa troppo le imprese e che lo Stato dovrebbe farsi da parte."
     },
     "it21b": {
-      "q": "La deregolamentazione dà solo più potere alle grandi imprese a scapito dei lavoratori."
+      "q": "La deregolamentazione dà solo più potere alle grandi imprese a scapito dei lavoratori.",
+      "ctx": "Sostiene che la deregolamentazione dà solo più potere alle grandi imprese a scapito dei lavoratori."
     },
     "it22a": {
-      "q": "L’Italia deve agire molto più con decisione sul clima, anche a costo economico."
+      "q": "L’Italia deve agire molto più con decisione sul clima, anche a costo economico.",
+      "ctx": "Sostiene che l'Italia debba agire molto più con decisione sul clima, anche a costo economico."
     },
     "it22b": {
-      "q": "Le regole ambientali punitive schiacciano famiglie e imprese con scarso beneficio globale."
+      "q": "Le regole ambientali punitive schiacciano famiglie e imprese con scarso beneficio globale.",
+      "ctx": "Sostiene che le regole ambientali punitive schiacciano famiglie e imprese con scarso beneficio globale."
     },
     "it23a": {
-      "q": "La cannabis dovrebbe essere legalizzata e il consumo trattato come questione di salute."
+      "q": "La cannabis dovrebbe essere legalizzata e il consumo trattato come questione di salute.",
+      "ctx": "Sostiene la legalizzazione della cannabis e di trattare il consumo come questione sanitaria."
     },
     "it23b": {
-      "q": "Legalizzare la cannabis normalizza il consumo e farebbe più male che bene."
+      "q": "Legalizzare la cannabis normalizza il consumo e farebbe più male che bene.",
+      "ctx": "Sostiene che legalizzare la cannabis normalizzi il consumo e farebbe più male che bene."
     },
     "it24a": {
-      "q": "L’Italia dovrebbe legalizzare il suicidio assistito per i malati terminali."
+      "q": "L’Italia dovrebbe legalizzare il suicidio assistito per i malati terminali.",
+      "ctx": "Sostiene che l'Italia legalizzi il suicidio assistito per i malati terminali."
     },
     "it24b": {
-      "q": "Il suicidio assistito mette sotto pressione i più fragili e supera un limite che la società non dovrebbe oltrepassare."
+      "q": "Il suicidio assistito mette sotto pressione i più fragili e supera un limite che la società non dovrebbe oltrepassare.",
+      "ctx": "Sostiene che il suicidio assistito metta sotto pressione i più fragili e superi un limite che la società non dovrebbe oltrepassare."
     },
     "it25a": {
-      "q": "La riforma della giustizia che separa le carriere di giudici e pm è una buona cosa."
+      "q": "La riforma della giustizia che separa le carriere di giudici e pm è una buona cosa.",
+      "ctx": "Sostiene la riforma che separa le carriere dei giudici e dei pubblici ministeri."
     },
     "it25b": {
-      "q": "Separare le carriere indebolisce solo i pm e protegge i potenti."
+      "q": "Separare le carriere indebolisce solo i pm e protegge i potenti.",
+      "ctx": "Sostiene che separare le carriere indebolisce i pm e protegge i potenti."
     },
     "it26a": {
-      "q": "Gli immigrati devono adattarsi alla cultura e ai valori italiani, non il contrario."
+      "q": "Gli immigrati devono adattarsi alla cultura e ai valori italiani, non il contrario.",
+      "ctx": "Sostiene che gli immigrati debbano adattarsi alla cultura italiana piuttosto che il contrario."
     },
     "it26b": {
-      "q": "Una cultura viva è sempre meticcia; pretendere l’assimilazione impoverisce l’Italia."
+      "q": "Una cultura viva è sempre meticcia; pretendere l’assimilazione impoverisce l’Italia.",
+      "ctx": "Sostiene che una cultura viva è sempre meticcia, quindi pretendere l'assimilazione impoverisce l'Italia."
     },
     "it27a": {
-      "q": "Lo Stato dovrebbe investire in modo massiccio per colmare il divario tra Sud e Nord."
+      "q": "Lo Stato dovrebbe investire in modo massiccio per colmare il divario tra Sud e Nord.",
+      "ctx": "Sostiene grandi investimenti statali per colmare il divario tra il Sud più povero e il Nord più ricco."
     },
     "it27b": {
-      "q": "Decenni di sussidi al Sud sono stati sprecati; deve reggersi da solo."
+      "q": "Decenni di sussidi al Sud sono stati sprecati; deve reggersi da solo.",
+      "ctx": "Sostiene che decenni di sussidi al Sud sono stati sprecati e che deve reggersi da solo."
     },
     "it28a": {
-      "q": "L’Italia dovrebbe aumentare la spesa militare per rispettare gli impegni con la NATO."
+      "q": "L’Italia dovrebbe aumentare la spesa militare per rispettare gli impegni con la NATO.",
+      "ctx": "Sostiene di aumentare la spesa militare per rispettare gli impegni dell'Italia con la NATO."
     },
     "it28b": {
-      "q": "I soldi per le armi sono soldi che dovrebbero andare ai bisogni sociali in patria."
+      "q": "I soldi per le armi sono soldi che dovrebbero andare ai bisogni sociali in patria.",
+      "ctx": "Sostiene che i soldi per le armi dovrebbero andare ai bisogni sociali in patria."
     },
     "it29a": {
-      "q": "Il servizio pubblico (RAI) merita finanziamenti e va tenuto libero dal controllo politico."
+      "q": "Il servizio pubblico (RAI) merita finanziamenti e va tenuto libero dal controllo politico.",
+      "ctx": "La RAI è il servizio pubblico italiano. Questo sostiene che meriti finanziamenti e vada tenuta libera dal controllo politico."
     },
     "it29b": {
-      "q": "La RAI è una macchina gonfia e politicizzata, e il canone andrebbe abolito."
+      "q": "La RAI è una macchina gonfia e politicizzata, e il canone andrebbe abolito.",
+      "ctx": "Sostiene che la RAI sia una macchina gonfia e politicizzata e che il canone vada abolito."
     },
     "it30a": {
-      "q": "Proteggere la natura dovrebbe avere priorità sui nuovi grandi progetti infrastrutturali."
+      "q": "Proteggere la natura dovrebbe avere priorità sui nuovi grandi progetti infrastrutturali.",
+      "ctx": "Antepone la protezione della natura ai nuovi grandi progetti infrastrutturali."
     },
     "it30b": {
-      "q": "Le obiezioni ambientali senza fine stanno strangolando le opere di cui l’Italia ha bisogno, come il ponte sullo Stretto."
+      "q": "Le obiezioni ambientali senza fine stanno strangolando le opere di cui l’Italia ha bisogno, come il ponte sullo Stretto.",
+      "ctx": "Sostiene che le obiezioni ambientali senza fine blocchino opere necessarie, come il progetto del ponte sullo Stretto di Messina."
     },
     "it31a": {
-      "q": "Il libero scambio globale ha reso l’Italia più ricca e va difeso."
+      "q": "Il libero scambio globale ha reso l’Italia più ricca e va difeso.",
+      "ctx": "Difende il libero scambio globale come qualcosa che ha reso l'Italia più ricca."
     },
     "it31b": {
-      "q": "La globalizzazione ha svuotato l’industria italiana e danneggiato i piccoli produttori."
+      "q": "La globalizzazione ha svuotato l’industria italiana e danneggiato i piccoli produttori.",
+      "ctx": "Sostiene che la globalizzazione abbia svuotato l'industria italiana e danneggiato i piccoli produttori."
     },
     "it32a": {
-      "q": "I poveri e i disoccupati sono trattati con troppo sospetto; la rete di protezione dovrebbe essere più forte."
+      "q": "I poveri e i disoccupati sono trattati con troppo sospetto; la rete di protezione dovrebbe essere più forte.",
+      "ctx": "Sostiene che i poveri e i disoccupati subiscano troppo sospetto e che la rete di protezione debba essere più forte."
     },
     "it32b": {
-      "q": "L’assistenza diventa troppo facilmente una trappola, e condizioni più rigide proteggono chi paga le tasse."
+      "q": "L’assistenza diventa troppo facilmente una trappola, e condizioni più rigide proteggono chi paga le tasse.",
+      "ctx": "Sostiene che l'assistenza può intrappolare le persone e che condizioni più rigide proteggono chi paga le tasse."
     },
     "it33a": {
-      "q": "Le tradizioni radicate custodiscono la saggezza delle generazioni e non vanno abbandonate alla leggera."
+      "q": "Le tradizioni radicate custodiscono la saggezza delle generazioni e non vanno abbandonate alla leggera.",
+      "ctx": "È la visione conservatrice della tradizione: le usanze radicate custodiscono una saggezza accumulata, quindi conviene essere prudenti prima di abbandonarle."
     },
     "it33b": {
-      "q": "Venerare la tradizione lascia solo che i morti governino i vivi e blocca il cambiamento necessario."
+      "q": "Venerare la tradizione lascia solo che i morti governino i vivi e blocca il cambiamento necessario.",
+      "ctx": "È la replica progressista: aggrapparsi alla tradizione in sé lascia che il passato governi il presente e blocca il cambiamento necessario."
     },
     "it34a": {
-      "q": "Una buona società dipende più dalla responsabilità personale che dal sostegno dello Stato."
+      "q": "Una buona società dipende più dalla responsabilità personale che dal sostegno dello Stato.",
+      "ctx": "Riflette un valore più di destra: una buona società dipende soprattutto dalla responsabilità personale più che dal sostegno dello Stato."
     },
     "it34b": {
-      "q": "Incolpare gli individui per problemi creati dal sistema è il modo in cui gli agiati giustificano la sofferenza altrui."
+      "q": "Incolpare gli individui per problemi creati dal sistema è il modo in cui gli agiati giustificano la sofferenza altrui.",
+      "ctx": "Riflette un valore più di sinistra: molti problemi nascono da sistemi ingiusti, quindi incolpare gli individui permette agli agiati di ignorare la sofferenza altrui."
     },
     "it35a": {
-      "q": "Gli affitti nelle città italiane sono fuori controllo e servono controlli più forti sugli affitti."
+      "q": "Gli affitti nelle città italiane sono fuori controllo e servono controlli più forti sugli affitti.",
+      "ctx": "Sostiene che gli affitti nelle città italiane siano fuori controllo e servano controlli più forti."
     },
     "it35b": {
-      "q": "I controlli sugli affitti prosciugano l’offerta e peggiorano la carenza di alloggi per tutti."
+      "q": "I controlli sugli affitti prosciugano l’offerta e peggiorano la carenza di alloggi per tutti.",
+      "ctx": "Sostiene che i controlli sugli affitti prosciughino l'offerta e peggiorino la carenza di alloggi per tutti."
     }
   },
   "bank": [
@@ -355,7 +425,8 @@
         "fi": 1,
         "avs": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues immigration to Italy is too high and the migrant boats must be stopped by any means."
     },
     {
       "id": "it1b",
@@ -375,7 +446,8 @@
         "fi": -1,
         "avs": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues an ageing Italy needs immigrants, and that rescuing people at sea is a moral duty."
     },
     {
       "id": "it2a",
@@ -393,7 +465,8 @@
         "lega": 2,
         "fi": 1,
         "avs": -1.5
-      }
+      },
+      "ctx": "This supports deporting immigrants who commit crimes, with no exceptions."
     },
     {
       "id": "it2b",
@@ -411,7 +484,8 @@
         "lega": -2,
         "fi": -1,
         "avs": 1.5
-      }
+      },
+      "ctx": "This argues collective expulsions betray human rights and the values of a civilised country."
     },
     {
       "id": "it3a",
@@ -431,7 +505,8 @@
         "fi": -0.5,
         "avs": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "'Jus soli' would grant citizenship to children born and raised in Italy to immigrant parents. This supports it."
     },
     {
       "id": "it3b",
@@ -451,7 +526,8 @@
         "fi": 0.5,
         "avs": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues citizenship must be earned and rooted in Italian heritage, not given for being born on the soil."
     },
     {
       "id": "it4a",
@@ -471,7 +547,8 @@
         "avs": 1.5,
         "g": 0
       },
-      "dec": true
+      "dec": true,
+      "ctx": "The 'reddito di cittadinanza' was a basic income scrapped by Meloni's government. This calls that a mistake and wants it back."
     },
     {
       "id": "it4b",
@@ -491,7 +568,8 @@
         "avs": -1.5,
         "g": 0
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues the citizens' income paid people to stay home and rightly had to be scrapped."
     },
     {
       "id": "it5a",
@@ -510,7 +588,8 @@
         "fi": -1,
         "avs": 2,
         "g": 0
-      }
+      },
+      "ctx": "Italy has no legal minimum wage. This supports introducing one."
     },
     {
       "id": "it5b",
@@ -529,7 +608,8 @@
         "fi": 1,
         "avs": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues a legal minimum wage would destroy jobs and undermine union-negotiated pay."
     },
     {
       "id": "it6a",
@@ -548,7 +628,8 @@
         "lega": 1.5,
         "fi": 1.5,
         "avs": -1.5
-      }
+      },
+      "ctx": "The 'premierato' reform would let Italians directly elect the prime minister. This backs it for stability."
     },
     {
       "id": "it6b",
@@ -567,7 +648,8 @@
         "lega": -1.5,
         "fi": -1.5,
         "avs": 1.5
-      }
+      },
+      "ctx": "This argues directly electing the premier concentrates too much power in one person and weakens checks."
     },
     {
       "id": "it7a",
@@ -586,7 +668,8 @@
         "lega": 2,
         "fi": 0.5,
         "avs": -1.5
-      }
+      },
+      "ctx": "'Differentiated autonomy' lets richer regions keep more of their tax money. This supports it."
     },
     {
       "id": "it7b",
@@ -605,7 +688,8 @@
         "lega": -2,
         "fi": -0.5,
         "avs": 1.5
-      }
+      },
+      "ctx": "This argues differentiated autonomy would abandon the poorer South and split Italy into rich and poor."
     },
     {
       "id": "it8a",
@@ -624,7 +708,8 @@
         "fi": -2,
         "avs": 2,
         "g": 0
-      }
+      },
+      "ctx": "This supports significantly higher taxes on the wealthiest Italians."
     },
     {
       "id": "it8b",
@@ -643,7 +728,8 @@
         "fi": 2,
         "avs": -2,
         "g": 0
-      }
+      },
+      "ctx": "A 'flat tax' is a single low tax rate for all. This argues that and lower taxes are what Italy needs to grow."
     },
     {
       "id": "it9a",
@@ -662,7 +748,8 @@
         "lega": -1.5,
         "fi": -0.5,
         "avs": 2
-      }
+      },
+      "ctx": "Law 194 is Italy's abortion law. This wants access under it protected and guaranteed everywhere."
     },
     {
       "id": "it9b",
@@ -681,7 +768,8 @@
         "lega": 1.5,
         "fi": 0.5,
         "avs": -2
-      }
+      },
+      "ctx": "This argues too many abortions happen and the state should do more to discourage them."
     },
     {
       "id": "it10a",
@@ -701,7 +789,8 @@
         "fi": -0.5,
         "avs": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This supports full marriage and adoption rights for same-sex couples. Italy allows only civil unions."
     },
     {
       "id": "it10b",
@@ -721,7 +810,8 @@
         "fi": 0.5,
         "avs": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues marriage and children belong with a mother and father — the 'natural family'."
     },
     {
       "id": "it11a",
@@ -739,7 +829,8 @@
         "lega": 1.5,
         "fi": 1,
         "avs": -1.5
-      }
+      },
+      "ctx": "Italy bans surrogacy and treats it as a crime even when done abroad. This defends that."
     },
     {
       "id": "it11b",
@@ -757,7 +848,8 @@
         "lega": -1.5,
         "fi": -1,
         "avs": 1.5
-      }
+      },
+      "ctx": "This argues criminalising surrogacy done abroad just punishes loving parents and their children."
     },
     {
       "id": "it12a",
@@ -777,7 +869,8 @@
         "fi": -1,
         "avs": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Italy never fully reckoned with its fascist past and anti-fascism must stay central to its identity."
     },
     {
       "id": "it12b",
@@ -797,7 +890,8 @@
         "fi": 1,
         "avs": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues the focus on anti-fascism is an outdated political weapon that divides Italians today."
     },
     {
       "id": "it13a",
@@ -815,7 +909,8 @@
         "lega": 1.5,
         "fi": 1,
         "avs": -1.5
-      }
+      },
+      "ctx": "This argues Italy's Catholic roots and traditions should be defended in public life."
     },
     {
       "id": "it13b",
@@ -833,7 +928,8 @@
         "lega": -1.5,
         "fi": -1,
         "avs": 1.5
-      }
+      },
+      "ctx": "This argues Italy should be strictly secular, with religion kept out of law and the state."
     },
     {
       "id": "it14a",
@@ -853,7 +949,8 @@
         "fi": 0.5,
         "avs": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Islam clashes with Italian values. Supporters cite integration; critics call it prejudice."
     },
     {
       "id": "it14b",
@@ -873,7 +970,8 @@
         "fi": -0.5,
         "avs": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This holds Muslim Italians to be full members of society whose faith deserves equal respect."
     },
     {
       "id": "it15a",
@@ -891,7 +989,8 @@
         "m5s": -1,
         "fi": -1,
         "avs": -2
-      }
+      },
+      "ctx": "This is racial supremacism — the belief that some races are inherently more intelligent or capable. Science rejects it; it is tied to ideologies like Nazism."
     },
     {
       "id": "it15b",
@@ -909,7 +1008,8 @@
         "m5s": 1,
         "fi": 1,
         "avs": 2
-      }
+      },
+      "ctx": "This is the principle of human equality: no race is inherently superior, and the idea is discredited pseudo-science with a shameful history."
     },
     {
       "id": "it16a",
@@ -927,7 +1027,8 @@
         "lega": 2,
         "fi": 1,
         "avs": -1.5
-      }
+      },
+      "ctx": "This argues Italy needs tougher sentences and more police to guarantee public safety."
     },
     {
       "id": "it16b",
@@ -945,7 +1046,8 @@
         "lega": -2,
         "fi": -1,
         "avs": 1.5
-      }
+      },
+      "ctx": "This argues ever tougher sentences never reduce crime, while prevention and social policy do."
     },
     {
       "id": "it17a",
@@ -963,7 +1065,8 @@
         "lega": -2,
         "fi": 1,
         "avs": 1
-      }
+      },
+      "ctx": "This sees Italy's future in a stronger, more integrated European Union."
     },
     {
       "id": "it17b",
@@ -981,7 +1084,8 @@
         "lega": 2,
         "fi": -1,
         "avs": -1
-      }
+      },
+      "ctx": "This argues Brussels has too much power over Italy and sovereignty should come first."
     },
     {
       "id": "it18a",
@@ -1000,7 +1104,8 @@
         "lega": -0.5,
         "fi": 1.5,
         "avs": -1
-      }
+      },
+      "ctx": "This supports Italy continuing to arm Ukraine against Russia."
     },
     {
       "id": "it18b",
@@ -1019,7 +1124,8 @@
         "lega": 0.5,
         "fi": -1.5,
         "avs": 1
-      }
+      },
+      "ctx": "This argues sending more weapons only prolongs the war and Italy should push for negotiations."
     },
     {
       "id": "it19a",
@@ -1038,7 +1144,8 @@
         "fi": -1,
         "avs": 2,
         "g": 0
-      }
+      },
+      "ctx": "This wants the public health service funded far more, resisting privatisation."
     },
     {
       "id": "it19b",
@@ -1057,7 +1164,8 @@
         "fi": 1,
         "avs": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues more private provision would relieve pressure and cut waiting lists."
     },
     {
       "id": "it20a",
@@ -1076,7 +1184,8 @@
         "fi": -1.5,
         "avs": 2,
         "g": 0
-      }
+      },
+      "ctx": "Italy has many precarious short-term jobs. This wants them sharply restricted to protect workers."
     },
     {
       "id": "it20b",
@@ -1095,7 +1204,8 @@
         "fi": 1.5,
         "avs": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues loosening contract rules is what lets companies hire young people at all."
     },
     {
       "id": "it21a",
@@ -1114,7 +1224,8 @@
         "lega": 1.5,
         "fi": 2,
         "avs": -2
-      }
+      },
+      "ctx": "This argues Italy over-regulates and over-taxes business and the state should step back."
     },
     {
       "id": "it21b",
@@ -1133,7 +1244,8 @@
         "lega": -1.5,
         "fi": -2,
         "avs": 2
-      }
+      },
+      "ctx": "This argues deregulation just gives big firms more power at workers' expense."
     },
     {
       "id": "it22a",
@@ -1152,7 +1264,8 @@
         "fi": -1,
         "avs": 2,
         "g": 0
-      }
+      },
+      "ctx": "This says Italy must act far more aggressively on climate, even at economic cost."
     },
     {
       "id": "it22b",
@@ -1171,7 +1284,8 @@
         "fi": 1,
         "avs": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues punitive green rules crush families and businesses for little global benefit."
     },
     {
       "id": "it23a",
@@ -1190,7 +1304,8 @@
         "lega": -2,
         "fi": -1,
         "avs": 2
-      }
+      },
+      "ctx": "This supports legalising cannabis and treating drug use as a health issue."
     },
     {
       "id": "it23b",
@@ -1209,7 +1324,8 @@
         "lega": 2,
         "fi": 1,
         "avs": -2
-      }
+      },
+      "ctx": "This argues legalising cannabis normalises drug use and would do more harm than good."
     },
     {
       "id": "it24a",
@@ -1228,7 +1344,8 @@
         "lega": -1,
         "fi": -0.5,
         "avs": 2
-      }
+      },
+      "ctx": "This supports Italy legalising assisted dying for the terminally ill."
     },
     {
       "id": "it24b",
@@ -1247,7 +1364,8 @@
         "lega": 1,
         "fi": 0.5,
         "avs": -1.5
-      }
+      },
+      "ctx": "This argues assisted dying pressures the vulnerable and crosses a line society shouldn't cross."
     },
     {
       "id": "it25a",
@@ -1266,7 +1384,8 @@
         "lega": 1.5,
         "fi": 2,
         "avs": -1
-      }
+      },
+      "ctx": "This backs the reform separating the careers of judges and prosecutors."
     },
     {
       "id": "it25b",
@@ -1285,7 +1404,8 @@
         "lega": -1.5,
         "fi": -2,
         "avs": 1
-      }
+      },
+      "ctx": "This argues separating the careers just weakens prosecutors and shields the powerful."
     },
     {
       "id": "it26a",
@@ -1303,7 +1423,8 @@
         "lega": 2,
         "fi": 1,
         "avs": -1.5
-      }
+      },
+      "ctx": "This argues immigrants should adapt to Italian culture rather than the reverse."
     },
     {
       "id": "it26b",
@@ -1321,7 +1442,8 @@
         "lega": -2,
         "fi": -1,
         "avs": 1.5
-      }
+      },
+      "ctx": "This argues a living culture is always mixed, so demanding assimilation impoverishes Italy."
     },
     {
       "id": "it27a",
@@ -1339,7 +1461,8 @@
         "lega": -1,
         "avs": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports big state investment to close the gap between Italy's poorer South and richer North."
     },
     {
       "id": "it27b",
@@ -1357,7 +1480,8 @@
         "lega": 1,
         "avs": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues decades of subsidies to the South were wasted and it must stand on its own."
     },
     {
       "id": "it28a",
@@ -1375,7 +1499,8 @@
         "m5s": -1.5,
         "fi": 1.5,
         "avs": -2
-      }
+      },
+      "ctx": "This supports raising military spending to meet Italy's NATO commitments."
     },
     {
       "id": "it28b",
@@ -1393,7 +1518,8 @@
         "m5s": 1.5,
         "fi": -1.5,
         "avs": 2
-      }
+      },
+      "ctx": "This argues money for weapons should go to social needs at home."
     },
     {
       "id": "it29a",
@@ -1412,7 +1538,8 @@
         "fi": -0.5,
         "avs": 1,
         "g": 0
-      }
+      },
+      "ctx": "RAI is Italy's public broadcaster. This argues it's worth funding and should be free of political control."
     },
     {
       "id": "it29b",
@@ -1431,7 +1558,8 @@
         "fi": 0.5,
         "avs": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues RAI is a bloated, politicised machine whose licence fee should be scrapped."
     },
     {
       "id": "it30a",
@@ -1449,7 +1577,8 @@
         "fi": -1,
         "avs": 2,
         "g": 0
-      }
+      },
+      "ctx": "This puts protecting nature ahead of new large infrastructure projects."
     },
     {
       "id": "it30b",
@@ -1467,7 +1596,8 @@
         "fi": 1,
         "avs": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues endless environmental objections block projects Italy needs, like the planned Messina bridge."
     },
     {
       "id": "it31a",
@@ -1486,7 +1616,8 @@
         "lega": -0.5,
         "fi": 1.5,
         "avs": -1
-      }
+      },
+      "ctx": "This defends open global free trade as having made Italy richer."
     },
     {
       "id": "it31b",
@@ -1505,7 +1636,8 @@
         "lega": 0.5,
         "fi": -1.5,
         "avs": 1
-      }
+      },
+      "ctx": "This argues globalisation hollowed out Italian industry and hurt small producers."
     },
     {
       "id": "it32a",
@@ -1524,7 +1656,8 @@
         "fi": -1.5,
         "avs": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues the poor and unemployed face too much suspicion and the safety net should be stronger."
     },
     {
       "id": "it32b",
@@ -1543,7 +1676,8 @@
         "fi": 1.5,
         "avs": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues welfare can trap people, and stricter conditions protect those who pay in."
     },
     {
       "id": "it33a",
@@ -1561,7 +1695,8 @@
         "lega": 1.5,
         "fi": 1,
         "avs": -1
-      }
+      },
+      "ctx": "This is the conservative view of tradition: that long-standing customs hold accumulated wisdom, so we should be cautious about discarding them."
     },
     {
       "id": "it33b",
@@ -1579,7 +1714,8 @@
         "lega": -1.5,
         "fi": -1,
         "avs": 1
-      }
+      },
+      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past govern the present and blocks needed change."
     },
     {
       "id": "it34a",
@@ -1598,7 +1734,8 @@
         "lega": 1.5,
         "fi": 1.5,
         "avs": -2
-      }
+      },
+      "ctx": "This reflects a right-leaning value: that a good society rests mainly on personal responsibility rather than government support."
     },
     {
       "id": "it34b",
@@ -1617,7 +1754,8 @@
         "lega": -1.5,
         "fi": -1.5,
         "avs": 2
-      }
+      },
+      "ctx": "This reflects a left-leaning value: that many problems come from unfair systems, so blaming individuals lets the comfortable ignore others' suffering."
     },
     {
       "id": "it35a",
@@ -1636,7 +1774,8 @@
         "fi": -1.5,
         "avs": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues rents in Italian cities are out of control and stronger rent controls are needed."
     },
     {
       "id": "it35b",
@@ -1655,7 +1794,8 @@
         "fi": 1.5,
         "avs": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues rent controls dry up supply and make the housing shortage worse for everyone."
     }
   ],
   "heroTitle": "Qual è la tua posizione nella<br><em>politica italiana</em>?",

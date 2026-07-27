@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.3">
+<link rel="stylesheet" href="/style.css?v=1.1.7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -334,11 +334,9 @@
       <span class="prog-txt" id="prog-txt">1 of 47</span>
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
-    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Context</div>
-      <div class="q-scenario-body" id="q-scen-body"></div>
-    </div>
     <div class="q-question" id="q-text"></div>
+    <button type="button" class="q-help-btn" id="q-help-btn" onclick="toggleQContext()" aria-expanded="false" style="display:none"></button>
+    <div class="q-context-box" id="q-context-box" style="display:none"></div>
     <div class="q-opts" id="q-opts"></div>
     <div class="q-foot">
       <button class="btn-skip" onclick="skipQ()">Skip</button>
@@ -1115,214 +1113,284 @@
 <script>
 const LOCAL_QUESTIONS = {
   "s1a": {
-    "q": "Gängkriminella har gjort delar av Sverige olevbara; staten måste krossa dem med dubbla straff, visitationszoner och utvisningar."
+    "q": "Gängkriminella har gjort delar av Sverige olevbara; staten måste krossa dem med dubbla straff, visitationszoner och utvisningar.",
+    "ctx": "Sverige har drabbats av en våg av gängskjutningar och sprängningar. Detta stödjer en hård linje: dubbla straff, visitationszoner och utvisning av utländska gängmedlemmar."
   },
   "s1b": {
-    "q": "Hårdare straff har aldrig stoppat gängens rekrytering; bara bruten segregation och fattigdom gör det."
+    "q": "Hårdare straff har aldrig stoppat gängens rekrytering; bara bruten segregation och fattigdom gör det.",
+    "ctx": "Detta menar att hårdare straff inte stoppar gängens rekrytering av unga, och att bara insatser mot segregation och fattigdom gör det."
   },
   "s2a": {
-    "q": "Invandringen till Sverige har varit ett misslyckande som kostat enorma summor och slitit isär landet."
+    "q": "Invandringen till Sverige har varit ett misslyckande som kostat enorma summor och slitit isär landet.",
+    "ctx": "Detta bedömer Sveriges stora invandring sedan 2000-talet som ett dyrt misslyckande som splittrat landet."
   },
   "s2b": {
-    "q": "Invandringen byggde det moderna Sverige och är fortfarande en vinst för ett åldrande land."
+    "q": "Invandringen byggde det moderna Sverige och är fortfarande en vinst för ett åldrande land.",
+    "ctx": "Detta är den invandringspositiva synen: att invandringen byggde det moderna Sverige och fortfarande är en vinst för en åldrande befolkning."
   },
   "s3a": {
-    "q": "Invandrare som inte arbetar eller vägrar bli en del av det svenska samhället ska betalas för att återvända hem, och pressas om de vägrar."
+    "q": "Invandrare som inte arbetar eller vägrar bli en del av det svenska samhället ska betalas för att återvända hem, och pressas om de vägrar.",
+    "ctx": "Detta stödjer återvändandebidrag: att betala invandrare som inte arbetar eller integreras för att flytta hem, med påtryckningar om de vägrar."
   },
   "s3b": {
-    "q": "Att betala människor för att lämna landet på grund av deras ursprung är skamlig, statligt sponsrad exkludering."
+    "q": "Att betala människor för att lämna landet på grund av deras ursprung är skamlig, statligt sponsrad exkludering.",
+    "ctx": "Detta fördömer att betala människor för att lämna landet på grund av ursprung som skamlig, statligt stödd uteslutning."
   },
   "s4a": {
-    "q": "Sverige ska alltid ge skydd åt människor som flyr krig och förföljelse; asylrätten är orubblig."
+    "q": "Sverige ska alltid ge skydd åt människor som flyr krig och förföljelse; asylrätten är orubblig.",
+    "ctx": "Detta håller asylrätten — skydd för människor som flyr krig och förföljelse — som en absolut plikt Sverige alltid måste uppfylla."
   },
   "s4b": {
-    "q": "Asylrätten har missbrukats så länge att Sverige måste kunna pausa den och avvisa människor vid gränsen."
+    "q": "Asylrätten har missbrukats så länge att Sverige måste kunna pausa den och avvisa människor vid gränsen.",
+    "ctx": "Detta menar att asylsystemet har missbrukats så mycket att Sverige måste kunna pausa det och avvisa människor vid gränsen."
   },
   "s5a": {
-    "q": "Natomedlemskapet gör Sverige säkrare; anslutningen var sedan länge försenad."
+    "q": "Natomedlemskapet gör Sverige säkrare; anslutningen var sedan länge försenad.",
+    "ctx": "Sverige gick med i försvarsalliansen Nato 2024 efter Rysslands invasion av Ukraina. Detta kallar det rätt beslut som borde kommit tidigare."
   },
   "s5b": {
-    "q": "Tvåhundra år av alliansfrihet byttes bort i panik; Nato drar in Sverige i andras krig."
+    "q": "Tvåhundra år av alliansfrihet byttes bort i panik; Nato drar in Sverige i andras krig.",
+    "ctx": "Detta beklagar att Sverige gav upp 200 år av alliansfrihet och varnar för att Nato kan dra in landet i andras krig."
   },
   "s6a": {
-    "q": "Upprustningen av Sverige måste gå först, även om välfärden får vänta."
+    "q": "Upprustningen av Sverige måste gå först, även om välfärden får vänta.",
+    "ctx": "Detta säger att upprustningen av försvaret måste gå först, även om välfärden får vänta."
   },
   "s6b": {
-    "q": "Varje miljard som öses över upprustningen är en miljard som tas från skolan, vården och äldreomsorgen."
+    "q": "Varje miljard som öses över upprustningen är en miljard som tas från skolan, vården och äldreomsorgen.",
+    "ctx": "Detta menar att varje krona till upprustning tas från skola, vård och äldreomsorg."
   },
   "s7a": {
-    "q": "EU-medlemskapet gagnar Sverige; ett utträde vore ekonomiskt självskadebeteende."
+    "q": "EU-medlemskapet gagnar Sverige; ett utträde vore ekonomiskt självskadebeteende.",
+    "ctx": "Detta försvarar Sveriges EU-medlemskap som bra för landet och kallar ett utträde ekonomiskt självskadebeteende."
   },
   "s7b": {
-    "q": "Bryssel bestämmer numera över svenska skogar, löner och snus; Sverige borde ta tillbaka makten från EU."
+    "q": "Bryssel bestämmer numera över svenska skogar, löner och snus; Sverige borde ta tillbaka makten från EU.",
+    "ctx": "Detta menar att EU i Bryssel numera styr för mycket av svenskt liv — skogar, löner, till och med snus — och att makten bör åt Sverige."
   },
   "s8a": {
-    "q": "Sverige borde införa euron."
+    "q": "Sverige borde införa euron.",
+    "ctx": "Detta stödjer att Sverige byter sin valuta, kronan, mot EU:s euro."
   },
   "s8b": {
-    "q": "Kronan låter Sverige sätta sina egna räntor i kris; att ge upp den är att lämna över ekonomin till Frankfurt."
+    "q": "Kronan låter Sverige sätta sina egna räntor i kris; att ge upp den är att lämna över ekonomin till Frankfurt.",
+    "ctx": "Detta menar att kronan låter Sverige sätta egna räntor i kris, och att euron skulle lämna över kontrollen till ECB i Frankfurt."
   },
   "s9a": {
-    "q": "Sverige borde bygga nya kärnkraftsreaktorer så snabbt som möjligt."
+    "q": "Sverige borde bygga nya kärnkraftsreaktorer så snabbt som möjligt.",
+    "ctx": "Detta stödjer att bygga nya kärnkraftsreaktorer så snabbt som möjligt för Sveriges el."
   },
   "s9b": {
-    "q": "Ny kärnkraft är en fantasi: årtionden för långsam, ruinerande dyr och med avfall som våra barnbarn ärver."
+    "q": "Ny kärnkraft är en fantasi: årtionden för långsam, ruinerande dyr och med avfall som våra barnbarn ärver.",
+    "ctx": "Detta menar att ny kärnkraft är för långsam och dyr och lämnar avfall till kommande generationer; förnybart är bättre."
   },
   "s10a": {
-    "q": "Sverige måste leda klimatomställningen även när den kostar jobb och tillväxt."
+    "q": "Sverige måste leda klimatomställningen även när den kostar jobb och tillväxt.",
+    "ctx": "Detta säger att Sverige bör gå före i att minska utsläpp även när det kostar jobb och tillväxt."
   },
   "s10b": {
-    "q": "Sveriges utsläpp är ett avrundningsfel i världen; att offra jobb för symbolisk klimatpolitik är vansinne."
+    "q": "Sveriges utsläpp är ett avrundningsfel i världen; att offra jobb för symbolisk klimatpolitik är vansinne.",
+    "ctx": "Detta menar att Sveriges utsläpp är små globalt, så att offra jobb för symbolisk klimatpolitik är meningslöst."
   },
   "s11a": {
-    "q": "Billig bensin och diesel är viktigare än reduktionsplikt; folk utanför städerna måste ha råd att köra."
+    "q": "Billig bensin och diesel är viktigare än reduktionsplikt; folk utanför städerna måste ha råd att köra.",
+    "ctx": "Reduktionsplikten tvingar in biobränsle i bensin och diesel och höjer priset. Detta säger att billigt bränsle är viktigare, särskilt för dem på landsbygden."
   },
   "s11b": {
-    "q": "Priser vid pumpen går över, men ett förstört klimat gör det inte; bränslet måste bära sin verkliga miljökostnad."
+    "q": "Priser vid pumpen går över, men ett förstört klimat gör det inte; bränslet måste bära sin verkliga miljökostnad.",
+    "ctx": "Detta menar att bränslet ska bära sin verkliga miljökostnad, eftersom höga pumppriser går över men klimatskador inte gör det."
   },
   "s12a": {
-    "q": "Vinstjagande bolag har inget i skolan och äldreomsorgen att göra; varje krona ska gå till barnen och de äldre."
+    "q": "Vinstjagande bolag har inget i skolan och äldreomsorgen att göra; varje krona ska gå till barnen och de äldre.",
+    "ctx": "Sverige låter privata vinstdrivande bolag driva skattefinansierad skola och äldreomsorg. Detta vill förbjuda vinster så att alla pengar går till elever och äldre."
   },
   "s12b": {
-    "q": "Valfriheten och de fristående utförarna förbättrade svensk välfärd; ett vinstförbud skulle slå igen dem över en natt."
+    "q": "Valfriheten och de fristående utförarna förbättrade svensk välfärd; ett vinstförbud skulle slå igen dem över en natt.",
+    "ctx": "Detta försvarar valfriheten och de privata utförarna och menar att ett vinstförbud skulle slå igen många över en natt."
   },
   "s13a": {
-    "q": "Staten bör ta tillbaka ansvaret för skolan från kommunerna."
+    "q": "Staten bör ta tillbaka ansvaret för skolan från kommunerna.",
+    "ctx": "Svensk skola drivs av kommunerna. Detta vill att staten tar tillbaka ansvaret för den."
   },
   "s13b": {
-    "q": "Skolan styrs bäst nära människorna den tjänar, inte från en departementskorridor i Stockholm."
+    "q": "Skolan styrs bäst nära människorna den tjänar, inte från en departementskorridor i Stockholm.",
+    "ctx": "Detta menar att skolan styrs bäst lokalt, nära dem den tjänar, inte från ett departement i Stockholm."
   },
   "s14a": {
-    "q": "Privata sjukförsäkringar som köper dig förbi kön delar svensk sjukvård i ett system för rika och ett för alla andra."
+    "q": "Privata sjukförsäkringar som köper dig förbi kön delar svensk sjukvård i ett system för rika och ett för alla andra.",
+    "ctx": "Detta menar att privata sjukförsäkringar som låter folk gå förbi kön delar vården i en för rika och en för alla andra."
   },
   "s14b": {
-    "q": "När den offentliga vården inte levererar räddar privata alternativ liv; att förbjuda dem hjälper ingen i kön."
+    "q": "När den offentliga vården inte levererar räddar privata alternativ liv; att förbjuda dem hjälper ingen i kön.",
+    "ctx": "Detta menar att när den offentliga vården inte räcker till räddar privata alternativ liv, så att förbjuda dem hjälper ingen."
   },
   "s15a": {
-    "q": "Sveriges höga skatter är priset för ett anständigt samhälle, och de är värda varje krona."
+    "q": "Sveriges höga skatter är priset för ett anständigt samhälle, och de är värda varje krona.",
+    "ctx": "Detta försvarar Sveriges höga skatter som det rimliga priset för ett starkt välfärdssamhälle — värt varje krona."
   },
   "s15b": {
-    "q": "Svenskar beskattas som miljonärer på arbetarlöner; staten tar för mycket och levererar för lite."
+    "q": "Svenskar beskattas som miljonärer på arbetarlöner; staten tar för mycket och levererar för lite.",
+    "ctx": "Detta menar att vanliga svenska arbetare beskattas som om de vore rika och får för lite tillbaka."
   },
   "s16a": {
-    "q": "Sverige borde återinföra en förmögenhetsskatt på de allra rikaste."
+    "q": "Sverige borde återinföra en förmögenhetsskatt på de allra rikaste.",
+    "ctx": "Sverige avskaffade förmögenhetsskatten 2007. Detta vill återinföra en skatt på de allra rikastes förmögenheter."
   },
   "s16b": {
-    "q": "Förmögenhetsskatten jagade en gång redan Sveriges mest framgångsrika entreprenörer ut ur landet; att återinföra den skulle göra det igen."
+    "q": "Förmögenhetsskatten jagade en gång redan Sveriges mest framgångsrika entreprenörer ut ur landet; att återinföra den skulle göra det igen.",
+    "ctx": "Detta menar att den gamla förmögenhetsskatten jagade ut Sveriges mest framgångsrika företagare, och att återinföra den skulle göra det igen."
   },
   "s17a": {
-    "q": "Det ska bli svårare, inte lättare, att säga upp anställda; anställningstrygghet är värd mer än arbetsgivarnas flexibilitet."
+    "q": "Det ska bli svårare, inte lättare, att säga upp anställda; anställningstrygghet är värd mer än arbetsgivarnas flexibilitet.",
+    "ctx": "Detta vill att det ska bli svårare, inte lättare, att säga upp anställda — trygghet framför arbetsgivarnas flexibilitet."
   },
   "s17b": {
-    "q": "Stelbenta anställningsregler är orsaken till att unga och invandrare inte får in en fot på arbetsmarknaden."
+    "q": "Stelbenta anställningsregler är orsaken till att unga och invandrare inte får in en fot på arbetsmarknaden.",
+    "ctx": "Detta menar att stela anställningsregler håller unga och invandrare utanför arbetsmarknaden."
   },
   "s18a": {
-    "q": "Sverige fungerar för att facken är starka; försvaga dem och löner och trygghet följer efter."
+    "q": "Sverige fungerar för att facken är starka; försvaga dem och löner och trygghet följer efter.",
+    "ctx": "Detta tillskriver Sveriges starka fackföreningar goda löner och trygghet och varnar för att försvaga dem."
   },
   "s18b": {
-    "q": "Facken har blivit en maktapparat för de som redan är innanför, som håller de utanför arbetslösa."
+    "q": "Facken har blivit en maktapparat för de som redan är innanför, som håller de utanför arbetslösa.",
+    "ctx": "Detta menar att facken blivit ett maktblock för dem innanför som håller dem utanför arbetslösa."
   },
   "s19a": {
-    "q": "Marknadshyror vore en katastrof; hyresregleringen skyddar vanliga hyresgäster från hyresvärdarnas girighet."
+    "q": "Marknadshyror vore en katastrof; hyresregleringen skyddar vanliga hyresgäster från hyresvärdarnas girighet.",
+    "ctx": "Sverige reglerar hyror i stället för att låta marknaden bestämma. Detta försvarar hyresregleringen som skydd för vanliga hyresgäster."
   },
   "s19b": {
-    "q": "Trettio år i bostadskön är vad hyresregleringen faktiskt levererar; bara marknadshyror får bostäder byggda."
+    "q": "Trettio år i bostadskön är vad hyresregleringen faktiskt levererar; bara marknadshyror får bostäder byggda.",
+    "ctx": "Detta menar att hyresregleringen ger årtionden långa bostadsköer, och att bara marknadshyror får bostäder byggda."
   },
   "s20a": {
-    "q": "SVT och SR har en tydlig vänstervridning och borde bantas rejält."
+    "q": "SVT och SR har en tydlig vänstervridning och borde bantas rejält.",
+    "ctx": "SVT och SR är Sveriges public service. Detta menar att de är vänstervridna och bör bantas."
   },
   "s20b": {
-    "q": "Oberoende public service är en grundpelare i svensk demokrati och måste skyddas från politisk klåfingrighet."
+    "q": "Oberoende public service är en grundpelare i svensk demokrati och måste skyddas från politisk klåfingrighet.",
+    "ctx": "Detta försvarar oberoende public service som en demokratins grundpelare som måste skyddas från politisk inblandning."
   },
   "s21a": {
-    "q": "Religiösa friskolor bör förbjudas; skolan är där Sverige möts, inte där barn separeras efter tro."
+    "q": "Religiösa friskolor bör förbjudas; skolan är där Sverige möts, inte där barn separeras efter tro.",
+    "ctx": "Religiösa friskolor är konfessionella friskolor. Detta vill förbjuda dem och menar att skolan ska förena barn, inte separera dem efter tro."
   },
   "s21b": {
-    "q": "Föräldrar har rätt att uppfostra sina barn i sin tro, och konfessionella skolor är en del av den friheten."
+    "q": "Föräldrar har rätt att uppfostra sina barn i sin tro, och konfessionella skolor är en del av den friheten.",
+    "ctx": "Detta försvarar religiösa skolor som en del av föräldrars rätt att uppfostra sina barn i sin tro."
   },
   "s22a": {
-    "q": "Islam hör inte hemma i Sverige."
+    "q": "Islam hör inte hemma i Sverige.",
+    "ctx": "Detta säger att islam inte hör hemma i Sverige. Anhängare pekar på integration och värderingar; kritiker kallar det religiös fördom."
   },
   "s22b": {
-    "q": "Muslimer är en lika självklar del av Sverige som alla andra, och deras tro förtjänar samma respekt."
+    "q": "Muslimer är en lika självklar del av Sverige som alla andra, och deras tro förtjänar samma respekt.",
+    "ctx": "Detta menar att muslimer är en lika självklar del av Sverige som alla andra, och att deras tro förtjänar samma respekt."
   },
   "s23a": {
-    "q": "Det måste sägas rakt ut: invandrare från vissa regioner är kraftigt överrepresenterade i våldsbrott."
+    "q": "Det måste sägas rakt ut: invandrare från vissa regioner är kraftigt överrepresenterade i våldsbrott.",
+    "ctx": "Detta säger rakt ut att invandrare från vissa regioner är kraftigt överrepresenterade i våldsbrott. Statistiken visar skillnader; tvisten gäller orsaken."
   },
   "s23b": {
-    "q": "Överrepresentation i brottslighet handlar om klass och segregation, inte om var någon är född."
+    "q": "Överrepresentation i brottslighet handlar om klass och segregation, inte om var någon är född.",
+    "ctx": "Detta menar att överrepresentation i brott handlar om klass och segregation, inte om var någon är född."
   },
   "s24a": {
-    "q": "Invandrare i Sverige ska anpassa sig till svensk kultur, inte tvärtom."
+    "q": "Invandrare i Sverige ska anpassa sig till svensk kultur, inte tvärtom.",
+    "ctx": "Detta menar att invandrare ska anpassa sig till svensk kultur snarare än att Sverige anpassar sig till dem."
   },
   "s24b": {
-    "q": "En levande kultur är alltid en blandning; krav på assimilering utarmar det Sverige är."
+    "q": "En levande kultur är alltid en blandning; krav på assimilering utarmar det Sverige är.",
+    "ctx": "Detta menar att en levande kultur alltid är en blandning, så att kräva assimilering utarmar det Sverige är."
   },
   "s25a": {
-    "q": "Tiggeri bör förbjudas i hela landet."
+    "q": "Tiggeri bör förbjudas i hela landet.",
+    "ctx": "Detta stödjer ett nationellt tiggeriförbud, som i Sverige främst kopplas till fattiga EU-migranter."
   },
   "s25b": {
-    "q": "Att förbjuda tiggeri är att förbjuda fattigdomen från att synas; det hjälper inte en enda människa."
+    "q": "Att förbjuda tiggeri är att förbjuda fattigdomen från att synas; det hjälper inte en enda människa.",
+    "ctx": "Detta menar att ett tiggeriförbud bara döljer fattigdomen och inte hjälper någon."
   },
   "s26a": {
-    "q": "Polisen måste få avlyssna gängmisstänkta innan brott begåtts; integritetsinvändningar är en lyx Sverige inte har råd med."
+    "q": "Polisen måste få avlyssna gängmisstänkta innan brott begåtts; integritetsinvändningar är en lyx Sverige inte har råd med.",
+    "ctx": "Detta stödjer att låta polisen i hemlighet avlyssna gängmisstänkta innan brott begåtts, och menar att integritet är en lyx Sverige inte har råd med."
   },
   "s26b": {
-    "q": "En stat som avlyssnar människor som inte begått något brott har korsat en gräns som inget gängkrig kan rättfärdiga."
+    "q": "En stat som avlyssnar människor som inte begått något brott har korsat en gräns som inget gängkrig kan rättfärdiga.",
+    "ctx": "Detta menar att en stat som avlyssnar människor som inte begått brott har korsat en gräns som inget gängkrig kan rättfärdiga."
   },
   "s27a": {
-    "q": "Sveriges nolltolerans mot narkotika dödar; beroende är en sjukdom att behandla, inte ett brott att straffa."
+    "q": "Sveriges nolltolerans mot narkotika dödar; beroende är en sjukdom att behandla, inte ett brott att straffa.",
+    "ctx": "Sverige har sträng nolltolerans mot narkotika. Detta menar att den linjen dödar och att beroende ska behandlas som sjukdom, inte straffas."
   },
   "s27b": {
-    "q": "Nolltoleransen är skälet till att Sverige aldrig fick öppna drogscener som andra länder; att mjuka upp den bjuder in dem."
+    "q": "Nolltoleransen är skälet till att Sverige aldrig fick öppna drogscener som andra länder; att mjuka upp den bjuder in dem.",
+    "ctx": "Detta tillskriver nolltoleransen att Sverige sluppit de öppna drogscener som finns på andra håll och varnar för att mjuka upp den."
   },
   "s28a": {
-    "q": "Nya könstillhörighetslagen var rätt: att ändra juridiskt kön ska vara enkelt och bygga på självidentifikation."
+    "q": "Nya könstillhörighetslagen var rätt: att ändra juridiskt kön ska vara enkelt och bygga på självidentifikation.",
+    "ctx": "En ny lag gör det enklare att ändra juridiskt kön, baserat på självidentifikation. Detta stödjer den."
   },
   "s28b": {
-    "q": "Juridiskt kön är inte en känsla; att göra det till en enkel anmälan raderar det biologiska könets betydelse i lagen."
+    "q": "Juridiskt kön är inte en känsla; att göra det till en enkel anmälan raderar det biologiska könets betydelse i lagen.",
+    "ctx": "Detta är den könskritiska synen: att juridiskt kön inte bör vila på en enkel anmälan, eftersom biologiskt kön är ett faktum."
   },
   "s29a": {
-    "q": "Fler föräldradagar bör vikas åt papporna; jämställdhet uppstår inte av sig själv."
+    "q": "Fler föräldradagar bör vikas åt papporna; jämställdhet uppstår inte av sig själv.",
+    "ctx": "Detta stödjer att vika fler betalda föräldradagar specifikt för papporna för att driva jämställdhet."
   },
   "s29b": {
-    "q": "Familjer, inte staten, vet bäst hur de ska fördela sin föräldraledighet."
+    "q": "Familjer, inte staten, vet bäst hur de ska fördela sin föräldraledighet.",
+    "ctx": "Detta menar att familjer, inte staten, ska bestämma hur föräldraledigheten fördelas."
   },
   "s30a": {
-    "q": "Monarkin bör avskaffas; en demokrati ska inte ha en ärvd statschef."
+    "q": "Monarkin bör avskaffas; en demokrati ska inte ha en ärvd statschef.",
+    "ctx": "Detta stödjer att avskaffa monarkin och menar att en demokrati inte bör ha en ärvd statschef."
   },
   "s30b": {
-    "q": "Monarkin ger Sverige kontinuitet och en enande symbol som ingen vald politiker någonsin skulle kunna vara."
+    "q": "Monarkin ger Sverige kontinuitet och en enande symbol som ingen vald politiker någonsin skulle kunna vara.",
+    "ctx": "Detta försvarar monarkin som ger Sverige kontinuitet och en enande symbol som ingen vald politiker kan vara."
   },
   "s31a": {
-    "q": "Stockholmspolitikerna har övergett landsbygden; service, milersättning och jobb måste flytta ut igen."
+    "q": "Stockholmspolitikerna har övergett landsbygden; service, milersättning och jobb måste flytta ut igen.",
+    "ctx": "Detta menar att Stockholmspolitikerna övergett landsbygden och att service, milersättning och jobb måste ut till regionerna igen."
   },
   "s31b": {
-    "q": "Människor väljer städerna av en anledning; att hålla avfolkningsbygder under armarna med subventioner är att slåss mot verkligheten."
+    "q": "Människor väljer städerna av en anledning; att hålla avfolkningsbygder under armarna med subventioner är att slåss mot verkligheten.",
+    "ctx": "Detta menar att människor väljer städerna av goda skäl, och att subventionera avfolkningsbygder är att slåss mot verkligheten."
   },
   "s32a": {
-    "q": "Skattepengar ska inte subventionera kultur som medborgarna aldrig själva skulle betala för."
+    "q": "Skattepengar ska inte subventionera kultur som medborgarna aldrig själva skulle betala för.",
+    "ctx": "Detta menar att skattepengar inte ska finansiera kultur som medborgarna inte själva skulle betala för."
   },
   "s32b": {
-    "q": "Ett samhälle som bara finansierar lönsam kultur står till slut utan kultur över huvud taget."
+    "q": "Ett samhälle som bara finansierar lönsam kultur står till slut utan kultur över huvud taget.",
+    "ctx": "Detta menar att ett samhälle som bara finansierar lönsam kultur till slut står utan kultur."
   },
   "s33a": {
-    "q": "Det får aldrig löna sig bättre att leva på bidrag än att arbeta; inför ett bidragstak."
+    "q": "Det får aldrig löna sig bättre att leva på bidrag än att arbeta; inför ett bidragstak.",
+    "ctx": "Detta menar att det aldrig får löna sig bättre att leva på bidrag än att arbeta, och att bidragen bör ha ett tak."
   },
   "s33b": {
-    "q": "Bidragsdebatten är en dimridå; nästan ingen väljer fattigdom, och tak straffar bara barnen."
+    "q": "Bidragsdebatten är en dimridå; nästan ingen väljer fattigdom, och tak straffar bara barnen.",
+    "ctx": "Detta menar att bidragsdebatten är en dimridå, eftersom nästan ingen väljer fattigdom och tak främst drabbar barn."
   },
   "s34a": {
-    "q": "Sjuka och arbetslösa svenskar möts av misstänksamhet i stället för stöd; trygghetssystemen måste stärkas."
+    "q": "Sjuka och arbetslösa svenskar möts av misstänksamhet i stället för stöd; trygghetssystemen måste stärkas.",
+    "ctx": "Detta menar att sjuka och arbetslösa möts av misstro i stället för stöd, och att trygghetssystemen bör stärkas."
   },
   "s34b": {
-    "q": "Trygghetssystemen har blivit hängmattor; hårdare kontroller skyddar skattepengarna för dem som faktiskt arbetar."
+    "q": "Trygghetssystemen har blivit hängmattor; hårdare kontroller skyddar skattepengarna för dem som faktiskt arbetar.",
+    "ctx": "Detta menar att trygghetssystemen blivit hängmattor, och att hårdare kontroller skyddar skattepengarna från dem som arbetar."
   },
   "s35a": {
-    "q": "Det finns något som är svenskhet, och den är värd att bevara."
+    "q": "Det finns något som är svenskhet, och den är värd att bevara.",
+    "ctx": "Detta menar att det finns en särskild svenskhet som är värd att bevara."
   },
   "s35b": {
-    "q": "Sverige har alltid formats av utländska influenser; en frusen nationell identitet har aldrig funnits."
+    "q": "Sverige har alltid formats av utländska influenser; en frusen nationell identitet har aldrig funnits.",
+    "ctx": "Detta menar att Sverige alltid formats av yttre influenser, så att en frusen nationell identitet aldrig funnits."
   }
 };
 
@@ -1347,7 +1415,8 @@ const BANK = [
       "l": 1,
       "kd": 2
     },
-    "dec": true
+    "dec": true,
+    "ctx": "Sweden has seen a wave of gang shootings and bombings. This backs a hard crackdown: double sentences, police stop-and-search zones, and deporting foreign gang members."
   },
   {
     "id": "s1b",
@@ -1369,7 +1438,8 @@ const BANK = [
       "l": -1,
       "kd": -2
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues that harsher sentences don't stop gangs recruiting young members, and that only tackling segregation and poverty will."
   },
   {
     "id": "s2a",
@@ -1390,7 +1460,8 @@ const BANK = [
       "l": 0.5,
       "kd": 1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This judges Sweden's large-scale immigration since the 2000s a costly failure that has divided the country."
   },
   {
     "id": "s2b",
@@ -1411,7 +1482,8 @@ const BANK = [
       "l": -0.5,
       "kd": -1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the pro-immigration view: that immigration helped build modern Sweden and is still a net gain for an ageing population."
   },
   {
     "id": "s3a",
@@ -1432,7 +1504,8 @@ const BANK = [
       "mp": -2,
       "l": -0.5,
       "kd": 0.5
-    }
+    },
+    "ctx": "This supports 'pay-to-return' schemes: paying immigrants who don't work or integrate to move back to their home country, with pressure if they refuse."
   },
   {
     "id": "s3b",
@@ -1453,7 +1526,8 @@ const BANK = [
       "mp": 2,
       "l": 0.5,
       "kd": -0.5
-    }
+    },
+    "ctx": "This condemns paying people to leave based on their origin as shameful, state-backed exclusion."
   },
   {
     "id": "s4a",
@@ -1474,7 +1548,8 @@ const BANK = [
       "mp": 2,
       "l": 0.5,
       "kd": -0.5
-    }
+    },
+    "ctx": "This holds the right to asylum — shelter for people fleeing war and persecution — as an absolute duty Sweden must always honour."
   },
   {
     "id": "s4b",
@@ -1495,7 +1570,8 @@ const BANK = [
       "mp": -2,
       "l": -0.5,
       "kd": 0.5
-    }
+    },
+    "ctx": "This argues the asylum system has been abused so much that Sweden must be able to suspend it and turn people away at the border."
   },
   {
     "id": "s5a",
@@ -1516,7 +1592,8 @@ const BANK = [
       "mp": -1.5,
       "l": 2,
       "kd": 1.5
-    }
+    },
+    "ctx": "Sweden joined NATO, the Western defence alliance, in 2024 after Russia's invasion of Ukraine. This calls that the right, overdue move for safety."
   },
   {
     "id": "s5b",
@@ -1537,7 +1614,8 @@ const BANK = [
       "mp": 1.5,
       "l": -2,
       "kd": -1.5
-    }
+    },
+    "ctx": "This regrets giving up Sweden's 200 years of staying out of military alliances, warning NATO could pull it into other countries' wars."
   },
   {
     "id": "s6a",
@@ -1558,7 +1636,8 @@ const BANK = [
       "mp": -1.5,
       "l": 1.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "This says rebuilding Sweden's military must take priority, even if welfare spending has to wait."
   },
   {
     "id": "s6b",
@@ -1579,7 +1658,8 @@ const BANK = [
       "mp": 1.5,
       "l": -1.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "This argues every krona spent on rearmament is taken from schools, healthcare, and elder care."
   },
   {
     "id": "s7a",
@@ -1600,7 +1680,8 @@ const BANK = [
       "mp": 0.5,
       "l": 2,
       "kd": 1
-    }
+    },
+    "ctx": "This defends Sweden's EU membership as good for the country, calling leaving economic self-harm."
   },
   {
     "id": "s7b",
@@ -1621,7 +1702,8 @@ const BANK = [
       "mp": -0.5,
       "l": -2,
       "kd": -1
-    }
+    },
+    "ctx": "This argues the EU in Brussels now controls too much of Swedish life — forests, wages, even snus — and that power should return to Sweden."
   },
   {
     "id": "s8a",
@@ -1642,7 +1724,8 @@ const BANK = [
       "mp": -1,
       "l": 2,
       "kd": 0.5
-    }
+    },
+    "ctx": "This supports Sweden replacing its currency, the krona, with the EU's euro."
   },
   {
     "id": "s8b",
@@ -1663,7 +1746,8 @@ const BANK = [
       "mp": 1,
       "l": -2,
       "kd": -0.5
-    }
+    },
+    "ctx": "This argues keeping the krona lets Sweden set its own interest rates in a crisis, and that the euro would hand economic control to the European Central Bank in Frankfurt."
   },
   {
     "id": "s9a",
@@ -1683,7 +1767,8 @@ const BANK = [
       "mp": -2,
       "l": 2,
       "kd": 2
-    }
+    },
+    "ctx": "This supports building new nuclear power reactors as fast as possible for Sweden's electricity."
   },
   {
     "id": "s9b",
@@ -1703,7 +1788,8 @@ const BANK = [
       "mp": 2,
       "l": -2,
       "kd": -2
-    }
+    },
+    "ctx": "This argues new nuclear power is too slow and expensive and leaves waste for future generations; renewables are better."
   },
   {
     "id": "s10a",
@@ -1724,7 +1810,8 @@ const BANK = [
       "mp": 2,
       "l": 0.5,
       "kd": -1
-    }
+    },
+    "ctx": "This says Sweden should lead on cutting emissions even when it costs jobs and economic growth."
   },
   {
     "id": "s10b",
@@ -1745,7 +1832,8 @@ const BANK = [
       "mp": -2,
       "l": -0.5,
       "kd": 1
-    }
+    },
+    "ctx": "This argues Sweden's emissions are tiny globally, so sacrificing jobs for symbolic climate policy is pointless."
   },
   {
     "id": "s11a",
@@ -1765,7 +1853,8 @@ const BANK = [
       "mp": -2,
       "l": -0.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "The 'reduction obligation' forces biofuel into petrol and diesel, raising prices. This says keeping fuel cheap matters more, especially for rural drivers."
   },
   {
     "id": "s11b",
@@ -1785,7 +1874,8 @@ const BANK = [
       "mp": 2,
       "l": 0.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "This argues fuel should carry its true environmental cost, since high pump prices pass but climate damage doesn't."
   },
   {
     "id": "s12a",
@@ -1806,7 +1896,8 @@ const BANK = [
       "mp": 1.5,
       "l": -1.5,
       "kd": -1
-    }
+    },
+    "ctx": "Sweden lets private, profit-making firms run tax-funded schools and elder care. This wants to ban profits so all money goes to pupils and the elderly."
   },
   {
     "id": "s12b",
@@ -1827,7 +1918,8 @@ const BANK = [
       "mp": -1.5,
       "l": 1.5,
       "kd": 1
-    }
+    },
+    "ctx": "This defends free choice and private providers, arguing a profit ban would shut many of them down overnight."
   },
   {
     "id": "s13a",
@@ -1848,7 +1940,8 @@ const BANK = [
       "mp": 0.5,
       "l": 2,
       "kd": 0.5
-    }
+    },
+    "ctx": "Swedish schools are run by local municipalities. This wants the central state to take back responsibility for them."
   },
   {
     "id": "s13b",
@@ -1869,7 +1962,8 @@ const BANK = [
       "mp": -0.5,
       "l": -2,
       "kd": -0.5
-    }
+    },
+    "ctx": "This argues schools are run best locally, close to the people they serve, not from a ministry in Stockholm."
   },
   {
     "id": "s14a",
@@ -1890,7 +1984,8 @@ const BANK = [
       "mp": 1,
       "l": -1,
       "kd": -0.5
-    }
+    },
+    "ctx": "This argues private health insurance that lets people skip the public queue splits care into one system for the rich and one for everyone else."
   },
   {
     "id": "s14b",
@@ -1911,7 +2006,8 @@ const BANK = [
       "mp": -1,
       "l": 1,
       "kd": 0.5
-    }
+    },
+    "ctx": "This argues that when public healthcare can't deliver, private options save lives, so banning them helps no one."
   },
   {
     "id": "s15a",
@@ -1931,7 +2027,8 @@ const BANK = [
       "mp": 1.5,
       "l": -1,
       "kd": -1.5
-    }
+    },
+    "ctx": "This defends Sweden's high taxes as the fair price of a strong welfare society — worth every krona."
   },
   {
     "id": "s15b",
@@ -1951,7 +2048,8 @@ const BANK = [
       "mp": -1.5,
       "l": 1,
       "kd": 1.5
-    }
+    },
+    "ctx": "This argues ordinary Swedish workers are taxed as if they were rich, and get too little back for it."
   },
   {
     "id": "s16a",
@@ -1972,7 +2070,8 @@ const BANK = [
       "mp": 1,
       "l": -1.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "Sweden scrapped its wealth tax in 2007. This wants to bring back a tax on the fortunes of the very richest."
   },
   {
     "id": "s16b",
@@ -1993,7 +2092,8 @@ const BANK = [
       "mp": -1,
       "l": 1.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "This argues the old wealth tax drove Sweden's most successful entrepreneurs abroad, and reviving it would do the same again."
   },
   {
     "id": "s17a",
@@ -2014,7 +2114,8 @@ const BANK = [
       "mp": 0.5,
       "l": -1.5,
       "kd": -1
-    }
+    },
+    "ctx": "This wants it to be harder, not easier, to fire employees — valuing job security over employer flexibility."
   },
   {
     "id": "s17b",
@@ -2035,7 +2136,8 @@ const BANK = [
       "mp": -0.5,
       "l": 1.5,
       "kd": 1
-    }
+    },
+    "ctx": "This argues strict hiring-and-firing rules keep young people and immigrants out of the job market."
   },
   {
     "id": "s18a",
@@ -2056,7 +2158,8 @@ const BANK = [
       "mp": 1,
       "l": -1,
       "kd": -0.5
-    }
+    },
+    "ctx": "This credits Sweden's strong trade unions for good wages and safety, warning that weakening them would erode both."
   },
   {
     "id": "s18b",
@@ -2077,7 +2180,8 @@ const BANK = [
       "mp": -1,
       "l": 1,
       "kd": 0.5
-    }
+    },
+    "ctx": "This argues the unions have become a power bloc for 'insiders' that keeps 'outsiders' unemployed."
   },
   {
     "id": "s19a",
@@ -2098,7 +2202,8 @@ const BANK = [
       "mp": 1,
       "l": -1.5,
       "kd": -0.5
-    }
+    },
+    "ctx": "Sweden regulates rents rather than letting the market set them. This defends rent regulation as protecting ordinary tenants."
   },
   {
     "id": "s19b",
@@ -2119,7 +2224,8 @@ const BANK = [
       "mp": -1,
       "l": 1.5,
       "kd": 0.5
-    }
+    },
+    "ctx": "This argues rent regulation causes decades-long housing queues, and only market rents will get homes built."
   },
   {
     "id": "s20a",
@@ -2140,7 +2246,8 @@ const BANK = [
       "mp": -1.5,
       "l": -1,
       "kd": 0.5
-    }
+    },
+    "ctx": "SVT and SR are Sweden's public broadcasters. This argues they lean left and should be cut back."
   },
   {
     "id": "s20b",
@@ -2161,7 +2268,8 @@ const BANK = [
       "mp": 1.5,
       "l": 1,
       "kd": -0.5
-    }
+    },
+    "ctx": "This defends independent public broadcasting as a pillar of democracy that must be protected from political interference."
   },
   {
     "id": "s21a",
@@ -2182,7 +2290,8 @@ const BANK = [
       "mp": 0.5,
       "l": 1.5,
       "kd": -2
-    }
+    },
+    "ctx": "'Religious free schools' are faith-based independent schools. This wants them banned, arguing school should bring children together, not separate them by faith."
   },
   {
     "id": "s21b",
@@ -2203,7 +2312,8 @@ const BANK = [
       "mp": -0.5,
       "l": -1.5,
       "kd": 2
-    }
+    },
+    "ctx": "This defends religious schools as part of parents' right to raise their children in their own faith."
   },
   {
     "id": "s22a",
@@ -2223,7 +2333,8 @@ const BANK = [
       "mp": -2,
       "l": -1,
       "kd": 0.5
-    }
+    },
+    "ctx": "This states that Islam does not belong in Sweden. Supporters cite integration and values; critics call it religious prejudice."
   },
   {
     "id": "s22b",
@@ -2243,7 +2354,8 @@ const BANK = [
       "mp": 2,
       "l": 1,
       "kd": -0.5
-    }
+    },
+    "ctx": "This holds that Muslims are as much a part of Sweden as anyone, and their faith deserves equal respect."
   },
   {
     "id": "s23a",
@@ -2263,7 +2375,8 @@ const BANK = [
       "mp": -1.5,
       "l": 0.5,
       "kd": 1
-    }
+    },
+    "ctx": "This states plainly that immigrants from certain regions are heavily overrepresented in violent crime. The statistics show gaps; the dispute is over the cause."
   },
   {
     "id": "s23b",
@@ -2283,7 +2396,8 @@ const BANK = [
       "mp": 1.5,
       "l": -0.5,
       "kd": -1
-    }
+    },
+    "ctx": "This argues that overrepresentation in crime is about class and segregation, not where someone was born."
   },
   {
     "id": "s24a",
@@ -2304,7 +2418,8 @@ const BANK = [
       "mp": -1.5,
       "l": 0.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "This argues immigrants should adapt to Swedish culture rather than Sweden adapting to them."
   },
   {
     "id": "s24b",
@@ -2325,7 +2440,8 @@ const BANK = [
       "mp": 1.5,
       "l": -0.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "This argues a living culture is always a blend, so demanding assimilation impoverishes what Sweden is."
   },
   {
     "id": "s25a",
@@ -2346,7 +2462,8 @@ const BANK = [
       "mp": -2,
       "l": -0.5,
       "kd": 1
-    }
+    },
+    "ctx": "This supports a nationwide ban on begging, which in Sweden is associated mainly with poor EU migrants."
   },
   {
     "id": "s25b",
@@ -2367,7 +2484,8 @@ const BANK = [
       "mp": 2,
       "l": 0.5,
       "kd": -1
-    }
+    },
+    "ctx": "This argues banning begging just hides poverty from view and helps no one."
   },
   {
     "id": "s26a",
@@ -2387,7 +2505,8 @@ const BANK = [
       "v": -1.5,
       "mp": -1.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "This supports letting police secretly wiretap gang suspects before any crime is committed, arguing privacy concerns are a luxury Sweden can't afford."
   },
   {
     "id": "s26b",
@@ -2407,7 +2526,8 @@ const BANK = [
       "v": 1.5,
       "mp": 1.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "This argues that a state which spies on people who have committed no crime has crossed a line no gang war can justify."
   },
   {
     "id": "s27a",
@@ -2428,7 +2548,8 @@ const BANK = [
       "mp": 1.5,
       "l": 0.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "Sweden has strict 'zero tolerance' on drugs. This argues that approach kills, and addiction should be treated as an illness, not punished."
   },
   {
     "id": "s27b",
@@ -2449,7 +2570,8 @@ const BANK = [
       "mp": -1.5,
       "l": -0.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "This credits zero tolerance for sparing Sweden the open drug scenes seen elsewhere, warning that softening it would invite them."
   },
   {
     "id": "s28a",
@@ -2469,7 +2591,8 @@ const BANK = [
       "mp": 2,
       "l": 1.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "A new law makes changing your legal gender simpler, based on self-identification. This supports it."
   },
   {
     "id": "s28b",
@@ -2489,7 +2612,8 @@ const BANK = [
       "mp": -2,
       "l": -1.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "This is the gender-critical view: that legal gender shouldn't rest on a simple declaration, since biological sex is a fact."
   },
   {
     "id": "s29a",
@@ -2510,7 +2634,8 @@ const BANK = [
       "mp": 1.5,
       "l": 1,
       "kd": -2
-    }
+    },
+    "ctx": "This supports reserving more months of paid parental leave specifically for fathers to push gender equality."
   },
   {
     "id": "s29b",
@@ -2531,7 +2656,8 @@ const BANK = [
       "mp": -1.5,
       "l": -1,
       "kd": 2
-    }
+    },
+    "ctx": "This argues families, not the state, should decide how to split their parental leave."
   },
   {
     "id": "s30a",
@@ -2551,7 +2677,8 @@ const BANK = [
       "mp": 1,
       "l": 0.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "This supports abolishing the monarchy, arguing a democracy shouldn't have an inherited head of state."
   },
   {
     "id": "s30b",
@@ -2571,7 +2698,8 @@ const BANK = [
       "mp": -1,
       "l": -0.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "This defends the monarchy as giving Sweden continuity and a unifying symbol no elected politician could be."
   },
   {
     "id": "s31a",
@@ -2592,7 +2720,8 @@ const BANK = [
       "mp": -0.5,
       "l": -0.5,
       "kd": 1
-    }
+    },
+    "ctx": "This argues Stockholm politicians have abandoned rural Sweden, and services, fuel subsidies, and jobs must move back out to the regions."
   },
   {
     "id": "s31b",
@@ -2613,7 +2742,8 @@ const BANK = [
       "mp": 0.5,
       "l": 0.5,
       "kd": -1
-    }
+    },
+    "ctx": "This argues people choose cities for good reasons, and subsidising emptying regions fights reality."
   },
   {
     "id": "s32a",
@@ -2633,7 +2763,8 @@ const BANK = [
       "mp": -1.5,
       "l": -0.5,
       "kd": 0.5
-    }
+    },
+    "ctx": "This argues tax money shouldn't fund culture that citizens wouldn't pay for themselves."
   },
   {
     "id": "s32b",
@@ -2653,7 +2784,8 @@ const BANK = [
       "mp": 1.5,
       "l": 0.5,
       "kd": -0.5
-    }
+    },
+    "ctx": "This argues a society that only funds profitable culture ends up with no culture at all."
   },
   {
     "id": "s33a",
@@ -2674,7 +2806,8 @@ const BANK = [
       "mp": -1.5,
       "l": 1.5,
       "kd": 1.5
-    }
+    },
+    "ctx": "This argues living on benefits must never pay better than working, and that handouts should be capped."
   },
   {
     "id": "s33b",
@@ -2695,7 +2828,8 @@ const BANK = [
       "mp": 1.5,
       "l": -1.5,
       "kd": -1.5
-    }
+    },
+    "ctx": "This argues the benefits debate is a distraction, since almost no one chooses poverty and caps mainly hurt children."
   },
   {
     "id": "s34a",
@@ -2715,7 +2849,8 @@ const BANK = [
       "mp": 1,
       "l": -1,
       "kd": -0.5
-    }
+    },
+    "ctx": "This argues sick and unemployed Swedes are met with suspicion rather than support, and the safety net should be strengthened."
   },
   {
     "id": "s34b",
@@ -2735,7 +2870,8 @@ const BANK = [
       "mp": -1,
       "l": 1,
       "kd": 0.5
-    }
+    },
+    "ctx": "This argues the safety nets have become 'hammocks', and stricter checks protect the taxes of those who work."
   },
   {
     "id": "s35a",
@@ -2755,7 +2891,8 @@ const BANK = [
       "v": -1,
       "mp": -1,
       "kd": 1.5
-    }
+    },
+    "ctx": "This holds that a distinct 'Swedishness' exists and is worth preserving."
   },
   {
     "id": "s35b",
@@ -2775,7 +2912,8 @@ const BANK = [
       "v": 1,
       "mp": 1,
       "kd": -1.5
-    }
+    },
+    "ctx": "This argues Sweden has always been shaped by outside influences, so a fixed national identity never really existed."
   }
 ];
 
@@ -3266,6 +3404,6 @@ window.getQuestion = getQuestion;
 window.currentLang = currentLang;
 applyLang();
 </script>
-<script src="/engine.js?v=1.1.3"></script>
+<script src="/engine.js?v=1.1.7"></script>
 </body>
 </html>

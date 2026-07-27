@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.3">
+<link rel="stylesheet" href="/style.css?v=1.1.7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -329,11 +329,9 @@
       <span class="prog-txt" id="prog-txt">1 of 47</span>
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
-    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Context</div>
-      <div class="q-scenario-body" id="q-scen-body"></div>
-    </div>
     <div class="q-question" id="q-text"></div>
+    <button type="button" class="q-help-btn" id="q-help-btn" onclick="toggleQContext()" aria-expanded="false" style="display:none"></button>
+    <div class="q-context-box" id="q-context-box" style="display:none"></div>
     <div class="q-opts" id="q-opts"></div>
     <div class="q-foot">
       <button class="btn-skip" onclick="skipQ()">Skip</button>
@@ -1129,7 +1127,8 @@ const BANK = [
       "grn": 2,
       "snp": 1.5,
       "g": 0
-    }
+    },
+    "ctx": "The NHS is Britain's public health service, free when you use it and funded by taxes. This wants it kept public, with private involvement reduced."
   },
   {
     "id": "uk1b",
@@ -1149,7 +1148,8 @@ const BANK = [
       "grn": -2,
       "snp": -1.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues the NHS is an inefficient monopoly, and that more private provision and competition would cut its long waiting lists."
   },
   {
     "id": "uk2a",
@@ -1170,7 +1170,8 @@ const BANK = [
       "grn": -2,
       "snp": -1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues immigration to Britain is far too high and is changing the country too fast — a central concern of the right."
   },
   {
     "id": "uk2b",
@@ -1191,7 +1192,8 @@ const BANK = [
       "grn": 2,
       "snp": 1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the pro-immigration view: that migrants keep the NHS, care sector, and economy running, so Britain needs them."
   },
   {
     "id": "uk3a",
@@ -1212,7 +1214,8 @@ const BANK = [
       "grn": -2,
       "snp": -1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is a hardline stance on the small boats crossing the English Channel: detain and deport everyone who arrives illegally."
   },
   {
     "id": "uk3b",
@@ -1233,7 +1236,8 @@ const BANK = [
       "grn": 2,
       "snp": 1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This opposes that stance, arguing people fleeing war are not criminals and that treating asylum seekers as invaders shames Britain."
   },
   {
     "id": "uk4a",
@@ -1253,7 +1257,8 @@ const BANK = [
       "res": -2,
       "grn": 1.5,
       "snp": 1.5
-    }
+    },
+    "ctx": "Brexit was Britain's 2020 departure from the European Union. This calls it a mistake and wants Britain to move back towards rejoining."
   },
   {
     "id": "uk4b",
@@ -1273,7 +1278,8 @@ const BANK = [
       "res": 2,
       "grn": -1.5,
       "snp": -1.5
-    }
+    },
+    "ctx": "This defends Brexit as having restored British control over its own laws, and opposes handing that back to Brussels (the EU)."
   },
   {
     "id": "uk5a",
@@ -1293,7 +1299,8 @@ const BANK = [
       "grn": 2,
       "snp": 1,
       "g": 0
-    }
+    },
+    "ctx": "This supports taxing the very richest much more, including taxing accumulated wealth, not just income."
   },
   {
     "id": "uk5b",
@@ -1313,7 +1320,8 @@ const BANK = [
       "grn": -2,
       "snp": -1,
       "g": 0
-    }
+    },
+    "ctx": "This argues high taxes drive wealthy people and their money out of Britain, harming everyone."
   },
   {
     "id": "uk6a",
@@ -1333,7 +1341,8 @@ const BANK = [
       "res": 2,
       "grn": -2,
       "snp": -1
-    }
+    },
+    "ctx": "This argues Britain's benefits (welfare) bill is too high and should be capped firmly so that working always pays more than claiming."
   },
   {
     "id": "uk6b",
@@ -1353,7 +1362,8 @@ const BANK = [
       "res": -2,
       "grn": 2,
       "snp": 1
-    }
+    },
+    "ctx": "This argues Britain's safety net has already been cut too far, and that caps and sanctions push disabled people and children into poverty."
   },
   {
     "id": "uk7a",
@@ -1373,7 +1383,8 @@ const BANK = [
       "grn": 2,
       "snp": 1,
       "g": 0
-    }
+    },
+    "ctx": "'Net zero' is Britain's legal target to stop adding greenhouse gases by 2050. This backs hitting it even at real short-term cost."
   },
   {
     "id": "uk7b",
@@ -1393,7 +1404,8 @@ const BANK = [
       "grn": -2,
       "snp": -1,
       "g": 0
-    }
+    },
+    "ctx": "This argues net zero is an unaffordable elite project that is damaging British industry and raising household bills."
   },
   {
     "id": "uk8a",
@@ -1412,7 +1424,8 @@ const BANK = [
       "grn": 2,
       "snp": 1,
       "g": 0
-    }
+    },
+    "ctx": "This supports 'nationalisation' — bringing rail, water, and energy back under public ownership instead of private companies."
   },
   {
     "id": "uk8b",
@@ -1431,7 +1444,8 @@ const BANK = [
       "grn": -2,
       "snp": -1,
       "g": 0
-    }
+    },
+    "ctx": "This defends private ownership of those industries, arguing that state-run versions meant strikes, waste, and decline."
   },
   {
     "id": "uk9a",
@@ -1451,7 +1465,8 @@ const BANK = [
       "res": -0.5,
       "grn": -1,
       "snp": 0.5
-    }
+    },
+    "ctx": "The 'green belt' is protected countryside around cities. This supports building many more homes even there, to fix the housing shortage."
   },
   {
     "id": "uk9b",
@@ -1471,7 +1486,8 @@ const BANK = [
       "res": 0.5,
       "grn": 1,
       "snp": -0.5
-    }
+    },
+    "ctx": "This defends the green belt from development, opposing building over the countryside."
   },
   {
     "id": "uk10a",
@@ -1490,7 +1506,8 @@ const BANK = [
       "ref": 2,
       "res": 2,
       "grn": -1.5
-    }
+    },
+    "ctx": "This argues criminal sentences are too lenient and that violent and repeat offenders should serve much longer."
   },
   {
     "id": "uk10b",
@@ -1509,7 +1526,8 @@ const BANK = [
       "ref": -2,
       "res": -2,
       "grn": 1.5
-    }
+    },
+    "ctx": "This argues locking more people up for longer has not cut crime, and that prevention and rehabilitation work better."
   },
   {
     "id": "uk11a",
@@ -1530,7 +1548,8 @@ const BANK = [
       "grn": -1.5,
       "snp": -0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This refers to organised child sexual abuse ('grooming gangs') in some UK towns, and claims officials hid the offenders' ethnicity out of political correctness."
   },
   {
     "id": "uk11b",
@@ -1551,7 +1570,8 @@ const BANK = [
       "grn": 1.5,
       "snp": 0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues that framing this abuse as one ethnic group's problem is a racist distortion of a crime found across all communities."
   },
   {
     "id": "uk12a",
@@ -1572,7 +1592,8 @@ const BANK = [
       "grn": 1.5,
       "snp": 1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This supports letting people change their legal gender by simple self-declaration, without needing medical sign-off."
   },
   {
     "id": "uk12b",
@@ -1593,7 +1614,8 @@ const BANK = [
       "grn": -1.5,
       "snp": -1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the gender-critical view: that a legal form cannot change biological sex, which the law should be based on."
   },
   {
     "id": "uk13a",
@@ -1613,7 +1635,8 @@ const BANK = [
       "res": -2,
       "grn": 1,
       "snp": 2
-    }
+    },
+    "ctx": "This supports Scottish independence — Scotland leaving the United Kingdom to become its own country."
   },
   {
     "id": "uk13b",
@@ -1633,7 +1656,8 @@ const BANK = [
       "res": 2,
       "grn": -1,
       "snp": -2
-    }
+    },
+    "ctx": "This opposes independence, arguing Scotland is stronger inside the UK and that the 2014 referendum settled the question."
   },
   {
     "id": "uk14a",
@@ -1653,7 +1677,8 @@ const BANK = [
       "res": -2,
       "grn": 1,
       "snp": 0.5
-    }
+    },
+    "ctx": "This supports abolishing the monarchy and replacing the King with an elected head of state (a republic)."
   },
   {
     "id": "uk14b",
@@ -1673,7 +1698,8 @@ const BANK = [
       "res": 2,
       "grn": -1,
       "snp": -0.5
-    }
+    },
+    "ctx": "This defends the monarchy as a source of stability and continuity that elected politicians cannot provide."
   },
   {
     "id": "uk15a",
@@ -1692,7 +1718,8 @@ const BANK = [
       "grn": 1.5,
       "snp": 1,
       "g": 0
-    }
+    },
+    "ctx": "This backs the government's policy of charging VAT (a 20% tax) on private school fees, arguing elite schooling shouldn't be tax-exempt."
   },
   {
     "id": "uk15b",
@@ -1711,7 +1738,8 @@ const BANK = [
       "grn": -1.5,
       "snp": -1,
       "g": 0
-    }
+    },
+    "ctx": "This opposes the private-school tax, arguing it punishes parents who sacrifice for their children's education and pushes pupils into state schools."
   },
   {
     "id": "uk16a",
@@ -1731,7 +1759,8 @@ const BANK = [
       "res": 2,
       "grn": -2,
       "snp": -1
-    }
+    },
+    "ctx": "This argues multiculturalism has failed, producing separate communities with little in common."
   },
   {
     "id": "uk16b",
@@ -1751,7 +1780,8 @@ const BANK = [
       "res": -2,
       "grn": 2,
       "snp": 1
-    }
+    },
+    "ctx": "This celebrates Britain's diversity as a strength, pointing to multicultural cities as proof it works."
   },
   {
     "id": "uk17a",
@@ -1770,7 +1800,8 @@ const BANK = [
       "res": 2,
       "grn": -2,
       "snp": -1
-    }
+    },
+    "ctx": "This argues Islam clashes with British values. Supporters cite security and integration; critics call it religious prejudice."
   },
   {
     "id": "uk17b",
@@ -1789,7 +1820,8 @@ const BANK = [
       "res": -2,
       "grn": 2,
       "snp": 1
-    }
+    },
+    "ctx": "This holds that British Muslims are fully part of the country and their faith deserves equal respect."
   },
   {
     "id": "uk18a",
@@ -1809,7 +1841,8 @@ const BANK = [
       "res": 1,
       "grn": -2,
       "snp": -1.5
-    }
+    },
+    "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
   },
   {
     "id": "uk18b",
@@ -1829,7 +1862,8 @@ const BANK = [
       "res": -1,
       "grn": 2,
       "snp": 1.5
-    }
+    },
+    "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
   },
   {
     "id": "uk19a",
@@ -1849,7 +1883,8 @@ const BANK = [
       "res": 2,
       "grn": -0.5,
       "snp": -0.5
-    }
+    },
+    "ctx": "This argues free speech in Britain is genuinely threatened, pointing to people being arrested over offensive online posts or jokes."
   },
   {
     "id": "uk19b",
@@ -1869,7 +1904,8 @@ const BANK = [
       "res": -2,
       "grn": 0.5,
       "snp": 0.5
-    }
+    },
+    "ctx": "This argues the free-speech complaint is really cover for wanting to abuse minorities, and that hate-speech laws protect people."
   },
   {
     "id": "uk20a",
@@ -1888,7 +1924,8 @@ const BANK = [
       "res": 2,
       "grn": -1,
       "snp": -0.5
-    }
+    },
+    "ctx": "This argues police waste effort on policing online speech and identity issues while failing to investigate real crime."
   },
   {
     "id": "uk20b",
@@ -1907,7 +1944,8 @@ const BANK = [
       "res": -2,
       "grn": 1,
       "snp": 0.5
-    }
+    },
+    "ctx": "This argues online abuse and hate crimes cause real harm and that police are right to take them seriously."
   },
   {
     "id": "uk21a",
@@ -1927,7 +1965,8 @@ const BANK = [
       "res": 2,
       "grn": -2,
       "snp": -1
-    }
+    },
+    "ctx": "Foreign aid is money Britain gives to poorer countries. This wants that budget cut and spent at home instead."
   },
   {
     "id": "uk21b",
@@ -1947,7 +1986,8 @@ const BANK = [
       "res": -2,
       "grn": 2,
       "snp": 1
-    }
+    },
+    "ctx": "This defends foreign aid as saving lives and giving Britain influence abroad, calling cuts both cruel and short-sighted."
   },
   {
     "id": "uk22a",
@@ -1965,7 +2005,8 @@ const BANK = [
       "lib": 1,
       "ref": 0.5,
       "grn": -1.5
-    }
+    },
+    "ctx": "This supports sharply higher defence spending and continued military support for Ukraine against Russia."
   },
   {
     "id": "uk22b",
@@ -1983,7 +2024,8 @@ const BANK = [
       "lib": -1,
       "ref": -0.5,
       "grn": 1.5
-    }
+    },
+    "ctx": "This argues money spent on weapons and foreign wars would be better used fixing problems within Britain."
   },
   {
     "id": "uk23a",
@@ -2003,7 +2045,8 @@ const BANK = [
       "res": -2,
       "grn": 1.5,
       "snp": 0.5
-    }
+    },
+    "ctx": "This supports treating drug use as a health issue and decriminalising possession of drugs for personal use."
   },
   {
     "id": "uk23b",
@@ -2023,7 +2066,8 @@ const BANK = [
       "res": 2,
       "grn": -1.5,
       "snp": -0.5
-    }
+    },
+    "ctx": "This opposes softening drug laws, arguing it fuels addiction and hands profits to criminal gangs."
   },
   {
     "id": "uk24a",
@@ -2043,7 +2087,8 @@ const BANK = [
       "res": -1.5,
       "grn": 1.5,
       "snp": 1
-    }
+    },
+    "ctx": "This treats abortion as a settled right and would if anything make access easier."
   },
   {
     "id": "uk24b",
@@ -2063,7 +2108,8 @@ const BANK = [
       "res": 1.5,
       "grn": -1.5,
       "snp": -1
-    }
+    },
+    "ctx": "This argues abortion ends a human life and that the legal time limits should be tightened."
   },
   {
     "id": "uk25a",
@@ -2083,7 +2129,8 @@ const BANK = [
       "res": 0.5,
       "grn": 2,
       "snp": 1
-    }
+    },
+    "ctx": "'First-past-the-post' is Britain's voting system, where the candidate with the most votes wins each seat. This wants it replaced with proportional representation, which matches seats to overall vote share."
   },
   {
     "id": "uk25b",
@@ -2103,7 +2150,8 @@ const BANK = [
       "res": -0.5,
       "grn": -2,
       "snp": -1
-    }
+    },
+    "ctx": "This defends first-past-the-post, arguing it produces strong, stable single-party governments."
   },
   {
     "id": "uk26a",
@@ -2122,7 +2170,8 @@ const BANK = [
       "grn": 2,
       "snp": 1,
       "g": 0
-    }
+    },
+    "ctx": "This supports stronger trade unions and worker rights, and protecting the right to strike."
   },
   {
     "id": "uk26b",
@@ -2141,7 +2190,8 @@ const BANK = [
       "grn": -2,
       "snp": -1,
       "g": 0
-    }
+    },
+    "ctx": "This argues powerful union leaders hold the country to ransom and that strike laws should be tightened."
   },
   {
     "id": "uk27a",
@@ -2159,7 +2209,8 @@ const BANK = [
       "res": -1,
       "grn": 1,
       "snp": 0.5
-    }
+    },
+    "ctx": "This supports giving terminally ill adults the legal right to an assisted death (medical help to end their life)."
   },
   {
     "id": "uk27b",
@@ -2177,7 +2228,8 @@ const BANK = [
       "res": 1,
       "grn": -1,
       "snp": -0.5
-    }
+    },
+    "ctx": "This opposes assisted dying, warning it could pressure vulnerable people and crosses a moral line."
   },
   {
     "id": "uk28a",
@@ -2196,7 +2248,8 @@ const BANK = [
       "grn": 2,
       "snp": 1.5,
       "g": 0
-    }
+    },
+    "ctx": "This supports raising the minimum wage significantly, even against business objections about cost."
   },
   {
     "id": "uk28b",
@@ -2215,7 +2268,8 @@ const BANK = [
       "grn": -2,
       "snp": -1.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues pushing wages up faster than productivity closes small businesses and cuts entry-level jobs."
   },
   {
     "id": "uk29a",
@@ -2235,7 +2289,8 @@ const BANK = [
       "res": 2,
       "grn": -1.5,
       "snp": -0.5
-    }
+    },
+    "ctx": "This favours teaching children pride in Britain's history, including the Empire, rather than shame about it."
   },
   {
     "id": "uk29b",
@@ -2255,7 +2310,8 @@ const BANK = [
       "res": -2,
       "grn": 1.5,
       "snp": 0.5
-    }
+    },
+    "ctx": "This supports teaching the crimes of the British Empire honestly, arguing that hiding them misleads schoolchildren."
   },
   {
     "id": "uk30a",
@@ -2274,7 +2330,8 @@ const BANK = [
       "ref": -0.5,
       "res": -1,
       "grn": -1
-    }
+    },
+    "ctx": "This supports free trade and open global markets as having made Britain richer."
   },
   {
     "id": "uk30b",
@@ -2293,7 +2350,8 @@ const BANK = [
       "ref": 0.5,
       "res": 1,
       "grn": 1
-    }
+    },
+    "ctx": "This argues globalisation destroyed Britain's industrial towns by moving jobs to cheaper labour abroad."
   },
   {
     "id": "uk31a",
@@ -2313,7 +2371,8 @@ const BANK = [
       "res": -1.5,
       "grn": 2,
       "snp": 0.5
-    }
+    },
+    "ctx": "This puts protecting nature and wildlife ahead of new roads, airport runways, and development."
   },
   {
     "id": "uk31b",
@@ -2333,7 +2392,8 @@ const BANK = [
       "res": 1.5,
       "grn": -2,
       "snp": -0.5
-    }
+    },
+    "ctx": "This argues endless environmental objections block the growth and infrastructure Britain needs."
   },
   {
     "id": "uk32a",
@@ -2353,7 +2413,8 @@ const BANK = [
       "res": 2,
       "grn": -2,
       "snp": -1
-    }
+    },
+    "ctx": "This argues workplace diversity and inclusion schemes have gone too far and should be scrapped."
   },
   {
     "id": "uk32b",
@@ -2373,7 +2434,8 @@ const BANK = [
       "res": -2,
       "grn": 2,
       "snp": 1
-    }
+    },
+    "ctx": "This defends diversity schemes as a response to real discrimination, arguing scrapping them protects an 'old boys' club'."
   },
   {
     "id": "uk33a",
@@ -2392,7 +2454,8 @@ const BANK = [
       "grn": 2,
       "snp": 1.5,
       "g": 0
-    }
+    },
+    "ctx": "A 'windfall tax' is an extra tax on unusually large profits. This wants a bigger one on energy companies making record profits."
   },
   {
     "id": "uk33b",
@@ -2411,7 +2474,8 @@ const BANK = [
       "grn": -2,
       "snp": -1.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues windfall taxes scare off the investment Britain needs to keep its energy supply going."
   },
   {
     "id": "uk34a",
@@ -2431,7 +2495,8 @@ const BANK = [
       "res": 1.5,
       "grn": -1,
       "snp": -0.5
-    }
+    },
+    "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
   },
   {
     "id": "uk34b",
@@ -2451,7 +2516,8 @@ const BANK = [
       "res": -1.5,
       "grn": 1,
       "snp": 0.5
-    }
+    },
+    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
   },
   {
     "id": "uk35a",
@@ -2470,7 +2536,8 @@ const BANK = [
       "res": 1.5,
       "grn": -1.5,
       "snp": -1
-    }
+    },
+    "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
   },
   {
     "id": "uk35b",
@@ -2489,7 +2556,8 @@ const BANK = [
       "res": -1.5,
       "grn": 1.5,
       "snp": 1
-    }
+    },
+    "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
   }
 ];
 
@@ -2542,6 +2610,6 @@ window.portalCode = 'uk';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>
-<script src="/engine.js?v=1.1.3"></script>
+<script src="/engine.js?v=1.1.7"></script>
 </body>
 </html>

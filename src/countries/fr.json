@@ -120,214 +120,284 @@
   "calibrations": {},
   "translations": {
     "fr1a": {
-      "q": "L’immigration en France est bien trop élevée et doit être drastiquement réduite."
+      "q": "L’immigration en France est bien trop élevée et doit être drastiquement réduite.",
+      "ctx": "Cela affirme que l'immigration en France est bien trop élevée et doit être fortement réduite — une revendication centrale de la droite."
     },
     "fr1b": {
-      "q": "L’immigration est une richesse pour la France, qui a besoin de nouveaux arrivants pour son économie et son avenir."
+      "q": "L’immigration est une richesse pour la France, qui a besoin de nouveaux arrivants pour son économie et son avenir.",
+      "ctx": "C'est la vision favorable à l'immigration : elle est une richesse et la France a besoin de nouveaux arrivants pour son économie et son avenir."
     },
     "fr2a": {
-      "q": "Les étrangers qui commettent des délits doivent être expulsés systématiquement, sans exception."
+      "q": "Les étrangers qui commettent des délits doivent être expulsés systématiquement, sans exception.",
+      "ctx": "Cela soutient l'expulsion systématique des étrangers qui commettent des délits, sans exception."
     },
     "fr2b": {
-      "q": "Les expulsions collectives et la double peine trahissent les valeurs de la République française."
+      "q": "Les expulsions collectives et la double peine trahissent les valeurs de la République française.",
+      "ctx": "La « double peine », c'est emprisonner puis expulser un étranger. Cela affirme que les expulsions collectives trahissent les valeurs de la République."
     },
     "fr3a": {
-      "q": "La France devrait mettre fin à l’acquisition automatique de la nationalité par le droit du sol."
+      "q": "La France devrait mettre fin à l’acquisition automatique de la nationalité par le droit du sol.",
+      "ctx": "Le droit du sol accorde automatiquement la nationalité à ceux qui naissent sur le sol français. Cela veut y mettre fin."
     },
     "fr3b": {
-      "q": "Être né et élevé en France, c’est être français; supprimer le droit du sol trahit la République."
+      "q": "Être né et élevé en France, c’est être français; supprimer le droit du sol trahit la République.",
+      "ctx": "Cela affirme qu'être né et élevé en France, c'est être français, et que supprimer le droit du sol trahit la République."
     },
     "fr4a": {
-      "q": "Le report de l’âge de la retraite à 64 ans était une réforme nécessaire."
+      "q": "Le report de l’âge de la retraite à 64 ans était une réforme nécessaire.",
+      "ctx": "La France a reporté l'âge de la retraite à 64 ans lors d'une réforme controversée en 2023. Cela juge la réforme nécessaire."
     },
     "fr4b": {
-      "q": "La réforme des retraites était une attaque brutale contre les travailleurs et doit être abrogée."
+      "q": "La réforme des retraites était une attaque brutale contre les travailleurs et doit être abrogée.",
+      "ctx": "Cela qualifie la réforme des retraites d'attaque brutale contre les travailleurs et demande son abrogation."
     },
     "fr5a": {
-      "q": "La laïcité doit être appliquée strictement, y compris l’interdiction des signes religieux dans l’espace public."
+      "q": "La laïcité doit être appliquée strictement, y compris l’interdiction des signes religieux dans l’espace public.",
+      "ctx": "La laïcité est la stricte séparation française entre religion et vie publique. Cela veut l'appliquer fermement, y compris l'interdiction des signes religieux."
     },
     "fr5b": {
-      "q": "La laïcité agressive est devenue un prétexte pour cibler les musulmans et contrôler la manière dont les gens s’habillent."
+      "q": "La laïcité agressive est devenue un prétexte pour cibler les musulmans et contrôler la manière dont les gens s’habillent.",
+      "ctx": "Cela affirme que la laïcité agressive est devenue un prétexte pour cibler les musulmans et contrôler la façon dont les gens s'habillent."
     },
     "fr6a": {
-      "q": "L’islam pose un problème spécifique à la République française et à ses valeurs."
+      "q": "L’islam pose un problème spécifique à la République française et à ses valeurs.",
+      "ctx": "Cela affirme que l'islam pose un problème spécifique à la République et à ses valeurs."
     },
     "fr6b": {
-      "q": "Les musulmans français sont des citoyens à part entière, et leur foi mérite le même respect que toute autre."
+      "q": "Les musulmans français sont des citoyens à part entière, et leur foi mérite le même respect que toute autre.",
+      "ctx": "Cela considère que les musulmans français sont des citoyens à part entière dont la foi mérite le même respect que toute autre."
     },
     "fr7a": {
-      "q": "Il y a un « grand remplacement » de la population française de souche en cours."
+      "q": "Il y a un « grand remplacement » de la population française de souche en cours.",
+      "ctx": "Le « grand remplacement » est une théorie selon laquelle les Français de souche seraient délibérément remplacés par des immigrés. Cela affirme que c'est en cours."
     },
     "fr7b": {
-      "q": "Le « grand remplacement » est une théorie du complot raciste sans aucun fondement."
+      "q": "Le « grand remplacement » est une théorie du complot raciste sans aucun fondement.",
+      "ctx": "Cela qualifie le « grand remplacement » de théorie du complot raciste sans aucun fondement."
     },
     "fr8a": {
-      "q": "Certaines races ou certains peuples sont tout simplement plus doués ou capables que d’autres."
+      "q": "Certaines races ou certains peuples sont tout simplement plus doués ou capables que d’autres.",
+      "ctx": "Cela prétend que certaines races ou certains peuples sont par nature plus doués ou capables que d'autres."
     },
     "fr8b": {
-      "q": "Aucune race n’est supérieure à une autre; cette idée est une pseudo-science à l’histoire honteuse."
+      "q": "Aucune race n’est supérieure à une autre; cette idée est une pseudo-science à l’histoire honteuse.",
+      "ctx": "C'est le principe de l'égalité humaine : aucune race n'est supérieure, et cette idée est une pseudo-science discréditée."
     },
     "fr9a": {
-      "q": "La France devrait rétablir l’impôt sur la fortune (ISF) sur les plus riches."
+      "q": "La France devrait rétablir l’impôt sur la fortune (ISF) sur les plus riches.",
+      "ctx": "L'ISF était l'impôt français sur les grandes fortunes, supprimé sous Macron. Cela veut le rétablir pour les plus riches."
     },
     "fr9b": {
-      "q": "L’ISF a fait fuir les capitaux et les entrepreneurs; le rétablir répéterait l’erreur."
+      "q": "L’ISF a fait fuir les capitaux et les entrepreneurs; le rétablir répéterait l’erreur.",
+      "ctx": "Cela affirme que l'ISF a fait fuir les capitaux et les entrepreneurs, et que le rétablir répéterait l'erreur."
     },
     "fr10a": {
-      "q": "Restaurer le pouvoir d’achat des Français ordinaires devrait être la priorité du gouvernement."
+      "q": "Restaurer le pouvoir d’achat des Français ordinaires devrait être la priorité du gouvernement.",
+      "ctx": "Le pouvoir d'achat est une préoccupation politique majeure en France. Cela veut en faire la priorité du gouvernement."
     },
     "fr10b": {
-      "q": "Courir après le pouvoir d’achat à coups de subventions et de blocages des prix ne fait qu’alimenter la dette et l’inflation."
+      "q": "Courir après le pouvoir d’achat à coups de subventions et de blocages des prix ne fait qu’alimenter la dette et l’inflation.",
+      "ctx": "Cela affirme que courir après le pouvoir d'achat à coups de subventions et de blocages des prix ne fait qu'alimenter la dette et l'inflation."
     },
     "fr11a": {
-      "q": "Le nucléaire est propre et fiable, et la France devrait construire de nombreux nouveaux réacteurs."
+      "q": "Le nucléaire est propre et fiable, et la France devrait construire de nombreux nouveaux réacteurs.",
+      "ctx": "La France tire l'essentiel de son électricité du nucléaire. Cela le juge propre et fiable et veut de nombreux nouveaux réacteurs."
     },
     "fr11b": {
-      "q": "Le nucléaire est dangereux et lent, et la France devrait basculer résolument vers les énergies renouvelables."
+      "q": "Le nucléaire est dangereux et lent, et la France devrait basculer résolument vers les énergies renouvelables.",
+      "ctx": "Cela juge le nucléaire dangereux et lent et veut que la France bascule résolument vers les énergies renouvelables."
     },
     "fr12a": {
-      "q": "La France doit agir bien plus fortement pour le climat, même au prix de la croissance."
+      "q": "La France doit agir bien plus fortement pour le climat, même au prix de la croissance.",
+      "ctx": "Cela affirme que la France doit agir bien plus fortement pour le climat, même au prix de la croissance."
     },
     "fr12b": {
-      "q": "Les mesures écologiques punitives écrasent les agriculteurs et les travailleurs sans presque rien changer au climat mondial."
+      "q": "Les mesures écologiques punitives écrasent les agriculteurs et les travailleurs sans presque rien changer au climat mondial.",
+      "ctx": "Cela affirme que les mesures écologiques punitives écrasent les agriculteurs et les travailleurs sans presque rien changer au climat mondial."
     },
     "fr13a": {
-      "q": "L’avenir de la France passe par une Union européenne plus forte et plus intégrée."
+      "q": "L’avenir de la France passe par une Union européenne plus forte et plus intégrée.",
+      "ctx": "Cela voit l'avenir de la France dans une Union européenne plus forte et plus intégrée."
     },
     "fr13b": {
-      "q": "Bruxelles dicte déjà trop de choses à la France, et la souveraineté doit revenir au pays."
+      "q": "Bruxelles dicte déjà trop de choses à la France, et la souveraineté doit revenir au pays.",
+      "ctx": "Cela affirme que Bruxelles dicte déjà trop de choses à la France et que la souveraineté doit revenir au pays."
     },
     "fr14a": {
-      "q": "La police a besoin de plus de moyens et de soutien, et les critiques à son encontre sont allées trop loin."
+      "q": "La police a besoin de plus de moyens et de soutien, et les critiques à son encontre sont allées trop loin.",
+      "ctx": "Cela affirme que la police a besoin de plus de moyens et de soutien, et que les critiques à son égard sont allées trop loin."
     },
     "fr14b": {
-      "q": "Les violences policières dans les banlieues sont un vrai scandale que l’État continue de couvrir."
+      "q": "Les violences policières dans les banlieues sont un vrai scandale que l’État continue de couvrir.",
+      "ctx": "Les banlieues sont les périphéries souvent défavorisées. Cela affirme que les violences policières y sont un vrai scandale que l'État continue de couvrir."
     },
     "fr15a": {
-      "q": "Les peines sont trop clémentes et les criminels dangereux devraient rester bien plus longtemps en prison."
+      "q": "Les peines sont trop clémentes et les criminels dangereux devraient rester bien plus longtemps en prison.",
+      "ctx": "Cela affirme que les peines sont trop clémentes et que les criminels dangereux devraient rester bien plus longtemps en prison."
     },
     "fr15b": {
-      "q": "Des peines toujours plus dures n’ont jamais fait baisser la délinquance; seules la prévention et la réinsertion le font."
+      "q": "Des peines toujours plus dures n’ont jamais fait baisser la délinquance; seules la prévention et la réinsertion le font.",
+      "ctx": "Cela affirme que des peines toujours plus dures n'ont jamais fait baisser la délinquance, et que seules la prévention et la réinsertion le font."
     },
     "fr16a": {
-      "q": "Le salaire minimum (SMIC) devrait être nettement augmenté."
+      "q": "Le salaire minimum (SMIC) devrait être nettement augmenté.",
+      "ctx": "Le SMIC est le salaire minimum français. Cela veut l'augmenter nettement."
     },
     "fr16b": {
-      "q": "Augmenter le SMIC trop vite ne fait que détruire des emplois pour les jeunes et les moins qualifiés."
+      "q": "Augmenter le SMIC trop vite ne fait que détruire des emplois pour les jeunes et les moins qualifiés.",
+      "ctx": "Cela affirme qu'augmenter le SMIC trop vite détruit des emplois pour les jeunes et les moins qualifiés."
     },
     "fr17a": {
-      "q": "Les 35 heures doivent être préservées; la France ne doit pas travailler plus pour le même salaire."
+      "q": "Les 35 heures doivent être préservées; la France ne doit pas travailler plus pour le même salaire.",
+      "ctx": "La durée légale du travail en France est de 35 heures. Cela veut la préserver et refuse de travailler plus pour le même salaire."
     },
     "fr17b": {
-      "q": "Les 35 heures ont rendu la France moins compétitive, et chacun devrait être libre de travailler et gagner plus."
+      "q": "Les 35 heures ont rendu la France moins compétitive, et chacun devrait être libre de travailler et gagner plus.",
+      "ctx": "Cela affirme que les 35 heures ont rendu la France moins compétitive et que chacun devrait être libre de travailler et gagner plus."
     },
     "fr18a": {
-      "q": "La France sur-réglemente et sur-taxe les entreprises; l’État devrait s’effacer."
+      "q": "La France sur-réglemente et sur-taxe les entreprises; l’État devrait s’effacer.",
+      "ctx": "Cela affirme que la France sur-réglemente et sur-taxe les entreprises, et que l'État devrait s'effacer."
     },
     "fr18b": {
-      "q": "La déréglementation ne fait que donner plus de pouvoir aux grandes entreprises au détriment des travailleurs et de l’environnement."
+      "q": "La déréglementation ne fait que donner plus de pouvoir aux grandes entreprises au détriment des travailleurs et de l’environnement.",
+      "ctx": "Cela affirme que la déréglementation ne fait que donner plus de pouvoir aux grandes entreprises au détriment des travailleurs et de l'environnement."
     },
     "fr19a": {
-      "q": "Il est temps d’arrêter de diaboliser le Rassemblement national; c’est désormais un parti comme les autres."
+      "q": "Il est temps d’arrêter de diaboliser le Rassemblement national; c’est désormais un parti comme les autres.",
+      "ctx": "Le Rassemblement national (RN) est le parti d'extrême droite de Marine Le Pen. Cela affirme qu'il devrait désormais être traité comme un parti ordinaire."
     },
     "fr19b": {
-      "q": "L’extrême droite reste un danger pour la République et le « front républicain » contre elle doit tenir."
+      "q": "L’extrême droite reste un danger pour la République et le « front républicain » contre elle doit tenir.",
+      "ctx": "Le « front républicain », c'est l'union des autres partis pour barrer la route au RN. Cela affirme que l'extrême droite reste un danger et que ce front doit tenir."
     },
     "fr20a": {
-      "q": "Inscrire l’avortement dans la Constitution était une bonne chose."
+      "q": "Inscrire l’avortement dans la Constitution était une bonne chose.",
+      "ctx": "En 2024, la France a inscrit le droit à l'avortement dans sa Constitution. Cela juge que c'était une bonne chose."
     },
     "fr20b": {
-      "q": "Inscrire l’avortement dans la Constitution était un coup idéologique qui a étouffé un débat légitime."
+      "q": "Inscrire l’avortement dans la Constitution était un coup idéologique qui a étouffé un débat légitime.",
+      "ctx": "Cela affirme qu'inscrire l'avortement dans la Constitution était un coup idéologique qui a étouffé un débat légitime."
     },
     "fr21a": {
-      "q": "La France a eu raison de légaliser l’aide à mourir pour les malades en fin de vie."
+      "q": "La France a eu raison de légaliser l’aide à mourir pour les malades en fin de vie.",
+      "ctx": "Cela soutient que la France légalise l'aide à mourir pour les malades en fin de vie."
     },
     "fr21b": {
-      "q": "Légaliser l’euthanasie fait pression sur les plus fragiles et franchit une ligne que la société ne devrait pas franchir."
+      "q": "Légaliser l’euthanasie fait pression sur les plus fragiles et franchit une ligne que la société ne devrait pas franchir.",
+      "ctx": "Cela affirme que légaliser l'euthanasie fait pression sur les plus fragiles et franchit une ligne que la société ne devrait pas franchir."
     },
     "fr22a": {
-      "q": "Les personnes trans devraient pouvoir changer d’état civil facilement, sur la base de l’autodétermination."
+      "q": "Les personnes trans devraient pouvoir changer d’état civil facilement, sur la base de l’autodétermination.",
+      "ctx": "Cela soutient que les personnes trans puissent changer d'état civil facilement, sur la base de l'autodétermination."
     },
     "fr22b": {
-      "q": "Le sexe à l’état civil ne peut dépendre d’une simple déclaration; la réalité biologique doit primer."
+      "q": "Le sexe à l’état civil ne peut dépendre d’une simple déclaration; la réalité biologique doit primer.",
+      "ctx": "C'est la vision critique du genre : le sexe à l'état civil ne peut dépendre d'une simple déclaration et la réalité biologique doit primer."
     },
     "fr23a": {
-      "q": "Les agriculteurs français sont étranglés par les normes et les importations bon marché, et méritent bien plus de protection."
+      "q": "Les agriculteurs français sont étranglés par les normes et les importations bon marché, et méritent bien plus de protection.",
+      "ctx": "Cela affirme que les agriculteurs français sont étranglés par les normes et les importations bon marché et méritent bien plus de protection."
     },
     "fr23b": {
-      "q": "Les agriculteurs doivent respecter les normes environnementales comme tout le monde, pas en être dispensés."
+      "q": "Les agriculteurs doivent respecter les normes environnementales comme tout le monde, pas en être dispensés.",
+      "ctx": "Cela affirme que les agriculteurs doivent respecter les mêmes normes environnementales que tous, sans exemption."
     },
     "fr24a": {
-      "q": "La France devrait continuer à soutenir l’Ukraine avec des armes aussi longtemps que nécessaire."
+      "q": "La France devrait continuer à soutenir l’Ukraine avec des armes aussi longtemps que nécessaire.",
+      "ctx": "Cela soutient que la France continue d'armer l'Ukraine contre la Russie aussi longtemps que nécessaire."
     },
     "fr24b": {
-      "q": "Les livraisons d’armes sans fin ne font que prolonger la guerre; la France devrait pousser à une paix négociée."
+      "q": "Les livraisons d’armes sans fin ne font que prolonger la guerre; la France devrait pousser à une paix négociée.",
+      "ctx": "Cela affirme que les livraisons d'armes sans fin ne font que prolonger la guerre et que la France devrait pousser à une paix négociée."
     },
     "fr25a": {
-      "q": "La France devrait protéger ses industries et acheter français, quitte à restreindre le libre-échange."
+      "q": "La France devrait protéger ses industries et acheter français, quitte à restreindre le libre-échange.",
+      "ctx": "Cela soutient de protéger l'industrie française et d'acheter français, quitte à restreindre le libre-échange."
     },
     "fr25b": {
-      "q": "Le libre-échange a enrichi la France, et le protectionnisme ne ferait qu’augmenter les prix et provoquer des représailles."
+      "q": "Le libre-échange a enrichi la France, et le protectionnisme ne ferait qu’augmenter les prix et provoquer des représailles.",
+      "ctx": "Cela affirme que le libre-échange a enrichi la France et que le protectionnisme ne ferait qu'augmenter les prix et provoquer des représailles."
     },
     "fr26a": {
-      "q": "L’hôpital public s’effondre et a besoin d’une injection massive d’argent de l’État."
+      "q": "L’hôpital public s’effondre et a besoin d’une injection massive d’argent de l’État.",
+      "ctx": "Cela affirme que l'hôpital public français s'effondre et a besoin d'une injection massive d'argent de l'État."
     },
     "fr26b": {
-      "q": "Déverser plus d’argent sur l’hôpital sans réforme ne fait qu’alimenter une bureaucratie qui gaspille déjà des milliards."
+      "q": "Déverser plus d’argent sur l’hôpital sans réforme ne fait qu’alimenter une bureaucratie qui gaspille déjà des milliards.",
+      "ctx": "Cela affirme que déverser plus d'argent sur l'hôpital sans réforme ne fait qu'alimenter une bureaucratie qui gaspille."
     },
     "fr27a": {
-      "q": "Les grandes décisions nationales devraient être soumises directement au peuple par référendum."
+      "q": "Les grandes décisions nationales devraient être soumises directement au peuple par référendum.",
+      "ctx": "Cela soutient la démocratie directe : soumettre les grandes décisions nationales directement au peuple par référendum."
     },
     "fr27b": {
-      "q": "Les référendums réduisent des questions complexes à des slogans et sont facilement détournés par les démagogues."
+      "q": "Les référendums réduisent des questions complexes à des slogans et sont facilement détournés par les démagogues.",
+      "ctx": "Cela affirme que les référendums réduisent des questions complexes à des slogans et sont facilement détournés par les démagogues."
     },
     "fr28a": {
-      "q": "Le président a trop de pouvoir; la France a besoin d’une VIe République avec un parlement plus fort."
+      "q": "Le président a trop de pouvoir; la France a besoin d’une VIe République avec un parlement plus fort.",
+      "ctx": "Le président français dispose de pouvoirs étendus. Cela juge que c'est trop et réclame une VIe République au parlement renforcé."
     },
     "fr28b": {
-      "q": "La présidence forte donne à la France sa stabilité, et la démanteler apporterait le chaos et la paralysie."
+      "q": "La présidence forte donne à la France sa stabilité, et la démanteler apporterait le chaos et la paralysie.",
+      "ctx": "Cela affirme que la présidence forte donne à la France sa stabilité et que la démanteler apporterait le chaos et la paralysie."
     },
     "fr29a": {
-      "q": "Les immigrés doivent s’assimiler à la culture française, pas conserver les coutumes de leur pays d’origine."
+      "q": "Les immigrés doivent s’assimiler à la culture française, pas conserver les coutumes de leur pays d’origine.",
+      "ctx": "Cela affirme que les immigrés doivent s'assimiler à la culture française plutôt que de conserver les coutumes de leur pays d'origine."
     },
     "fr29b": {
-      "q": "Une culture vivante est toujours métissée; exiger une assimilation totale appauvrit la France elle-même."
+      "q": "Une culture vivante est toujours métissée; exiger une assimilation totale appauvrit la France elle-même.",
+      "ctx": "Cela affirme qu'une culture vivante est toujours métissée, si bien qu'exiger une assimilation totale appauvrit la France elle-même."
     },
     "fr30a": {
-      "q": "On devrait apprendre aux enfants à être fiers de l’histoire de France, pas honteux de son passé colonial."
+      "q": "On devrait apprendre aux enfants à être fiers de l’histoire de France, pas honteux de son passé colonial.",
+      "ctx": "Cela préfère apprendre aux enfants la fierté de l'histoire de France plutôt que la honte de son passé colonial."
     },
     "fr30b": {
-      "q": "Une nation qui cache à ses enfants les crimes de la colonisation leur ment."
+      "q": "Une nation qui cache à ses enfants les crimes de la colonisation leur ment.",
+      "ctx": "Cela affirme qu'une nation qui cache à ses enfants les crimes de la colonisation leur ment."
     },
     "fr31a": {
-      "q": "Le cannabis devrait être légalisé et l’usage de drogues traité comme un problème de santé, pas un délit."
+      "q": "Le cannabis devrait être légalisé et l’usage de drogues traité comme un problème de santé, pas un délit.",
+      "ctx": "Cela soutient la légalisation du cannabis et de traiter l'usage de drogues comme une question de santé plutôt qu'un délit."
     },
     "fr31b": {
-      "q": "Légaliser le cannabis reviendrait à abandonner les quartiers au trafic et à banaliser l’addiction chez les jeunes."
+      "q": "Légaliser le cannabis reviendrait à abandonner les quartiers au trafic et à banaliser l’addiction chez les jeunes.",
+      "ctx": "Cela affirme que légaliser le cannabis reviendrait à abandonner les quartiers au trafic et à banaliser l'addiction chez les jeunes."
     },
     "fr32a": {
-      "q": "Les chômeurs et les pauvres sont traités avec trop de méfiance; le filet social français devrait être renforcé."
+      "q": "Les chômeurs et les pauvres sont traités avec trop de méfiance; le filet social français devrait être renforcé.",
+      "ctx": "Cela affirme que les chômeurs et les pauvres subissent trop de méfiance et que le filet social français devrait être renforcé."
     },
     "fr32b": {
-      "q": "La protection sociale française est devenue un hamac, et des conditions plus strictes protègent ceux qui travaillent et cotisent vraiment."
+      "q": "La protection sociale française est devenue un hamac, et des conditions plus strictes protègent ceux qui travaillent et cotisent vraiment.",
+      "ctx": "Cela affirme que la protection sociale française est devenue un hamac et que des conditions plus strictes protègent ceux qui travaillent et cotisent."
     },
     "fr33a": {
-      "q": "Les traditions anciennes portent la sagesse des générations et ne devraient pas être abandonnées à la légère."
+      "q": "Les traditions anciennes portent la sagesse des générations et ne devraient pas être abandonnées à la légère.",
+      "ctx": "C'est la vision conservatrice de la tradition : les coutumes anciennes recèlent une sagesse accumulée, il faut donc être prudent avant de les balayer."
     },
     "fr33b": {
-      "q": "Vénérer la tradition ne fait que laisser les morts gouverner les vivants et bloque le progrès nécessaire."
+      "q": "Vénérer la tradition ne fait que laisser les morts gouverner les vivants et bloque le progrès nécessaire.",
+      "ctx": "C'est la réponse progressiste : s'accrocher à la tradition pour elle-même laisse le passé dicter le présent et bloque le progrès nécessaire."
     },
     "fr34a": {
-      "q": "Une bonne société dépend plus de la responsabilité individuelle que de l’État qui prend soin des gens."
+      "q": "Une bonne société dépend plus de la responsabilité individuelle que de l’État qui prend soin des gens.",
+      "ctx": "Cela reflète une valeur plutôt de droite : une bonne société repose surtout sur la responsabilité individuelle plutôt que sur l'État qui prend soin des gens."
     },
     "fr34b": {
-      "q": "Rendre les individus responsables des problèmes créés par le système, c’est ainsi que les nantis excusent la souffrance des autres."
+      "q": "Rendre les individus responsables des problèmes créés par le système, c’est ainsi que les nantis excusent la souffrance des autres.",
+      "ctx": "Cela reflète une valeur plutôt de gauche : beaucoup de problèmes viennent de systèmes injustes, si bien qu'accuser les individus permet aux nantis d'ignorer la souffrance des autres."
     },
     "fr35a": {
-      "q": "Les loyers dans les villes françaises sont hors de contrôle et un encadrement bien plus strict est nécessaire."
+      "q": "Les loyers dans les villes françaises sont hors de contrôle et un encadrement bien plus strict est nécessaire.",
+      "ctx": "Cela affirme que les loyers dans les villes françaises sont hors de contrôle et qu'un encadrement bien plus strict est nécessaire."
     },
     "fr35b": {
-      "q": "L’encadrement des loyers assèche l’offre de logements et aggrave la pénurie pour tout le monde."
+      "q": "L’encadrement des loyers assèche l’offre de logements et aggrave la pénurie pour tout le monde.",
+      "ctx": "Cela affirme que l'encadrement des loyers assèche l'offre de logements et aggrave la pénurie pour tout le monde."
     }
   },
   "bank": [
@@ -348,7 +418,8 @@
         "ps": -1,
         "grn": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues immigration to France is far too high and must be cut sharply — a central demand of the right."
     },
     {
       "id": "fr1b",
@@ -367,7 +438,8 @@
         "ps": 1,
         "grn": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the pro-immigration view: that immigration is a strength and France needs newcomers for its economy and future."
     },
     {
       "id": "fr2a",
@@ -387,7 +459,8 @@
         "ps": -0.5,
         "grn": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This supports systematically deporting foreigners who commit crimes, with no exceptions."
     },
     {
       "id": "fr2b",
@@ -407,7 +480,8 @@
         "ps": 0.5,
         "grn": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "'Double punishment' means jailing then deporting a foreigner. This argues collective expulsions betray French Republican values."
     },
     {
       "id": "fr3a",
@@ -426,7 +500,8 @@
         "lr": 1,
         "ps": -1.5,
         "grn": -2
-      }
+      },
+      "ctx": "'Droit du sol' automatically grants citizenship to those born on French soil. This wants to end it."
     },
     {
       "id": "fr3b",
@@ -445,7 +520,8 @@
         "lr": -1,
         "ps": 1.5,
         "grn": 2
-      }
+      },
+      "ctx": "This argues being born and raised in France means being French, so ending droit du sol betrays the Republic."
     },
     {
       "id": "fr4a",
@@ -465,7 +541,8 @@
         "ps": -1.5,
         "grn": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "France raised its retirement age to 64 in a controversial 2023 reform. This calls the reform necessary."
     },
     {
       "id": "fr4b",
@@ -485,7 +562,8 @@
         "ps": 1.5,
         "grn": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This calls the pension reform a brutal attack on workers that should be repealed."
     },
     {
       "id": "fr5a",
@@ -503,7 +581,8 @@
         "lfi": -1,
         "lr": 1.5,
         "grn": -1
-      }
+      },
+      "ctx": "'Laïcité' is France's strict separation of religion and public life. This wants it firmly enforced, including bans on religious symbols."
     },
     {
       "id": "fr5b",
@@ -521,7 +600,8 @@
         "lfi": 1,
         "lr": -1.5,
         "grn": 1
-      }
+      },
+      "ctx": "This argues aggressive secularism has become a pretext to target Muslims and police how people dress."
     },
     {
       "id": "fr6a",
@@ -540,7 +620,8 @@
         "ps": -1,
         "grn": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Islam poses a specific problem for the French Republic and its values."
     },
     {
       "id": "fr6b",
@@ -559,7 +640,8 @@
         "ps": 1,
         "grn": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This holds that French Muslims are full citizens whose faith deserves the same respect as any other."
     },
     {
       "id": "fr7a",
@@ -577,7 +659,8 @@
         "lfi": -2,
         "ps": -2,
         "grn": -2
-      }
+      },
+      "ctx": "The 'great replacement' is a theory claiming native French people are being deliberately replaced by immigrants. This says it's happening."
     },
     {
       "id": "fr7b",
@@ -595,7 +678,8 @@
         "lfi": 2,
         "ps": 2,
         "grn": 2
-      }
+      },
+      "ctx": "This calls the 'great replacement' a racist conspiracy theory with no basis in fact."
     },
     {
       "id": "fr8a",
@@ -613,7 +697,8 @@
         "lr": -1,
         "ps": -2,
         "grn": -2
-      }
+      },
+      "ctx": "This claims some races or peoples are inherently more gifted or capable than others."
     },
     {
       "id": "fr8b",
@@ -631,7 +716,8 @@
         "lr": 1,
         "ps": 2,
         "grn": 2
-      }
+      },
+      "ctx": "This is the principle of human equality: that no race is superior, and the idea is discredited pseudo-science."
     },
     {
       "id": "fr9a",
@@ -649,7 +735,8 @@
         "lr": -1.5,
         "ps": 1.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "The ISF was France's tax on large fortunes, abolished under Macron. This wants it brought back for the richest."
     },
     {
       "id": "fr9b",
@@ -667,7 +754,8 @@
         "lr": 1.5,
         "ps": -1.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues the wealth tax drove capital and entrepreneurs out of France, and reviving it would repeat the error."
     },
     {
       "id": "fr10a",
@@ -686,7 +774,8 @@
         "lr": 0.5,
         "ps": 1,
         "grn": 0.5
-      }
+      },
+      "ctx": "'Purchasing power' — how much people can afford — is a top French political concern. This wants restoring it made the government's priority."
     },
     {
       "id": "fr10b",
@@ -705,7 +794,8 @@
         "lr": -0.5,
         "ps": -1,
         "grn": -0.5
-      }
+      },
+      "ctx": "This argues chasing purchasing power with subsidies and price caps just fuels debt and inflation."
     },
     {
       "id": "fr11a",
@@ -723,7 +813,8 @@
         "lfi": -1,
         "lr": 1.5,
         "grn": -2
-      }
+      },
+      "ctx": "France gets most of its electricity from nuclear power. This calls it clean and reliable and wants many new reactors."
     },
     {
       "id": "fr11b",
@@ -741,7 +832,8 @@
         "lfi": 1,
         "lr": -1.5,
         "grn": 2
-      }
+      },
+      "ctx": "This calls nuclear power dangerous and slow and wants France to switch decisively to renewables."
     },
     {
       "id": "fr12a",
@@ -759,7 +851,8 @@
         "lr": -1,
         "ps": 1,
         "grn": 2
-      }
+      },
+      "ctx": "This says France must act far more aggressively on climate, even at a cost to economic growth."
     },
     {
       "id": "fr12b",
@@ -777,7 +870,8 @@
         "lr": 1,
         "ps": -1,
         "grn": -2
-      }
+      },
+      "ctx": "This argues punitive green measures crush farmers and workers while barely affecting the global climate."
     },
     {
       "id": "fr13a",
@@ -796,7 +890,8 @@
         "lr": 0.5,
         "ps": 1,
         "grn": 1
-      }
+      },
+      "ctx": "This sees France's future in a stronger, more integrated European Union."
     },
     {
       "id": "fr13b",
@@ -815,7 +910,8 @@
         "lr": -0.5,
         "ps": -1,
         "grn": -1
-      }
+      },
+      "ctx": "This argues Brussels already dictates too much to France and sovereignty must be brought back home."
     },
     {
       "id": "fr14a",
@@ -834,7 +930,8 @@
         "lr": 1.5,
         "ps": -0.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues the police need more powers and support, and that criticism of them has gone too far."
     },
     {
       "id": "fr14b",
@@ -853,7 +950,8 @@
         "lr": -1.5,
         "ps": 0.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "The 'banlieues' are France's often-deprived suburbs. This argues police violence there is a real scandal the state keeps covering up."
     },
     {
       "id": "fr15a",
@@ -872,7 +970,8 @@
         "lr": 1.5,
         "ps": -0.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues sentences are too lenient and dangerous criminals should spend far longer in prison."
     },
     {
       "id": "fr15b",
@@ -891,7 +990,8 @@
         "lr": -1.5,
         "ps": 0.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues ever tougher sentences never reduced crime, and only prevention and rehabilitation do."
     },
     {
       "id": "fr16a",
@@ -910,7 +1010,8 @@
         "lr": -1,
         "ps": 1.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "The SMIC is France's minimum wage. This wants it raised substantially."
     },
     {
       "id": "fr16b",
@@ -929,7 +1030,8 @@
         "lr": 1,
         "ps": -1.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues raising the SMIC too fast destroys jobs for the young and the low-skilled."
     },
     {
       "id": "fr17a",
@@ -948,7 +1050,8 @@
         "lr": -1.5,
         "ps": 1,
         "grn": 1
-      }
+      },
+      "ctx": "France's legal working week is 35 hours. This wants that protected, opposing working more for the same pay."
     },
     {
       "id": "fr17b",
@@ -967,7 +1070,8 @@
         "lr": 1.5,
         "ps": -1,
         "grn": -1
-      }
+      },
+      "ctx": "This argues the 35-hour week made France less competitive and people should be free to work and earn more."
     },
     {
       "id": "fr18a",
@@ -985,7 +1089,8 @@
         "lr": 1.5,
         "ps": -1,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues France over-regulates and over-taxes business, and the state should step back."
     },
     {
       "id": "fr18b",
@@ -1003,7 +1108,8 @@
         "lr": -1.5,
         "ps": 1,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues deregulation just gives big companies more power at the expense of workers and the environment."
     },
     {
       "id": "fr19a",
@@ -1021,7 +1127,8 @@
         "lfi": -2,
         "ps": -1.5,
         "grn": -2
-      }
+      },
+      "ctx": "The National Rally (RN) is the far-right party of Marine Le Pen. This argues it should now be treated as a normal party."
     },
     {
       "id": "fr19b",
@@ -1039,7 +1146,8 @@
         "lfi": 2,
         "ps": 1.5,
         "grn": 2
-      }
+      },
+      "ctx": "The 'republican front' is other parties uniting to keep the RN from power. This argues the far right remains a danger and that front must hold."
     },
     {
       "id": "fr20a",
@@ -1058,7 +1166,8 @@
         "lr": -0.5,
         "ps": 1.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "In 2024 France added the right to abortion to its constitution. This calls that the right thing to do."
     },
     {
       "id": "fr20b",
@@ -1077,7 +1186,8 @@
         "lr": 0.5,
         "ps": -1.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues putting abortion in the constitution was an ideological move that shut down legitimate debate."
     },
     {
       "id": "fr21a",
@@ -1096,7 +1206,8 @@
         "lr": -0.5,
         "ps": 1,
         "grn": 1
-      }
+      },
+      "ctx": "This supports France legalising assisted dying (medical help to die) for the terminally ill."
     },
     {
       "id": "fr21b",
@@ -1115,7 +1226,8 @@
         "lr": 0.5,
         "ps": -1,
         "grn": -1
-      }
+      },
+      "ctx": "This argues legalising euthanasia pressures the vulnerable and crosses a line society shouldn't cross."
     },
     {
       "id": "fr22a",
@@ -1133,7 +1245,8 @@
         "lr": -1.5,
         "ps": 1,
         "grn": 1.5
-      }
+      },
+      "ctx": "This supports letting trans people change their legal gender easily, based on self-identification."
     },
     {
       "id": "fr22b",
@@ -1151,7 +1264,8 @@
         "lr": 1.5,
         "ps": -1,
         "grn": -1.5
-      }
+      },
+      "ctx": "This is the gender-critical view: that legal sex can't rest on simple declaration and biological reality must prevail."
     },
     {
       "id": "fr23a",
@@ -1169,7 +1283,8 @@
         "lr": 1.5,
         "ps": 0.5,
         "grn": -0.5
-      }
+      },
+      "ctx": "This argues French farmers are strangled by rules and cheap imports and deserve far more protection."
     },
     {
       "id": "fr23b",
@@ -1185,7 +1300,8 @@
         "rn": -1.5,
         "lr": -1,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues farmers must meet the same environmental standards as everyone else, not be exempted."
     },
     {
       "id": "fr24a",
@@ -1204,7 +1320,8 @@
         "lr": 1,
         "ps": 1,
         "grn": 1
-      }
+      },
+      "ctx": "This supports France continuing to arm Ukraine against Russia for as long as necessary."
     },
     {
       "id": "fr24b",
@@ -1223,7 +1340,8 @@
         "lr": -1,
         "ps": -1,
         "grn": -1
-      }
+      },
+      "ctx": "This argues endless arms shipments only prolong the war and France should push for a negotiated peace."
     },
     {
       "id": "fr25a",
@@ -1242,7 +1360,8 @@
         "lr": 0.5,
         "ps": 0.5,
         "grn": 0.5
-      }
+      },
+      "ctx": "This supports protecting French industry and buying French, even at the cost of free trade."
     },
     {
       "id": "fr25b",
@@ -1261,7 +1380,8 @@
         "lr": -0.5,
         "ps": -0.5,
         "grn": -0.5
-      }
+      },
+      "ctx": "This argues open trade made France richer and protectionism would only raise prices and invite retaliation."
     },
     {
       "id": "fr26a",
@@ -1279,7 +1399,8 @@
         "lr": -0.5,
         "ps": 1.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues France's public hospitals are collapsing and need a massive injection of state money."
     },
     {
       "id": "fr26b",
@@ -1297,7 +1418,8 @@
         "lr": 0.5,
         "ps": -1.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues throwing more money at hospitals without reform just feeds a wasteful bureaucracy."
     },
     {
       "id": "fr27a",
@@ -1314,7 +1436,8 @@
         "rn": 2,
         "lfi": 1.5,
         "grn": 0.5
-      }
+      },
+      "ctx": "This supports direct democracy: putting major national decisions straight to the people in referendums."
     },
     {
       "id": "fr27b",
@@ -1331,7 +1454,8 @@
         "rn": -2,
         "lfi": -1.5,
         "grn": -0.5
-      }
+      },
+      "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by demagogues."
     },
     {
       "id": "fr28a",
@@ -1350,7 +1474,8 @@
         "lr": -0.5,
         "ps": 1,
         "grn": 1.5
-      }
+      },
+      "ctx": "France's president holds strong powers. This argues it's too much and wants a 'Sixth Republic' with a stronger parliament."
     },
     {
       "id": "fr28b",
@@ -1369,7 +1494,8 @@
         "lr": 0.5,
         "ps": -1,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues the strong presidency gives France stability and dismantling it would bring chaos and paralysis."
     },
     {
       "id": "fr29a",
@@ -1388,7 +1514,8 @@
         "lr": 1.5,
         "ps": -0.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues immigrants must assimilate into French culture rather than keep the customs of their origin."
     },
     {
       "id": "fr29b",
@@ -1407,7 +1534,8 @@
         "lr": -1.5,
         "ps": 0.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues a living culture is always mixed, so demanding total assimilation impoverishes France itself."
     },
     {
       "id": "fr30a",
@@ -1425,7 +1553,8 @@
         "lr": 1.5,
         "ps": -0.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This favours teaching children pride in France's history rather than shame about its colonial past."
     },
     {
       "id": "fr30b",
@@ -1443,7 +1572,8 @@
         "lr": -1.5,
         "ps": 0.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues a nation that hides the crimes of colonialism from its children is lying to them."
     },
     {
       "id": "fr31a",
@@ -1462,7 +1592,8 @@
         "lr": -1.5,
         "ps": 0.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "This supports legalising cannabis and treating drug use as a health issue rather than a crime."
     },
     {
       "id": "fr31b",
@@ -1481,7 +1612,8 @@
         "lr": 1.5,
         "ps": -0.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues legalising cannabis would surrender neighbourhoods to dealing and normalise addiction among the young."
     },
     {
       "id": "fr32a",
@@ -1500,7 +1632,8 @@
         "lr": -1,
         "ps": 1.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues the unemployed and poor face too much suspicion and France's safety net should be stronger."
     },
     {
       "id": "fr32b",
@@ -1519,7 +1652,8 @@
         "lr": 1,
         "ps": -1.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues French welfare has become a 'hammock' and tighter conditions protect those who work and pay."
     },
     {
       "id": "fr33a",
@@ -1537,7 +1671,8 @@
         "lr": 1.5,
         "ps": -0.5,
         "grn": -1
-      }
+      },
+      "ctx": "This is the conservative view of tradition: that long-standing customs hold accumulated wisdom, so we should be cautious about sweeping them away."
     },
     {
       "id": "fr33b",
@@ -1555,7 +1690,8 @@
         "lr": -1.5,
         "ps": 0.5,
         "grn": 1
-      }
+      },
+      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks needed progress."
     },
     {
       "id": "fr34a",
@@ -1574,7 +1710,8 @@
         "lr": 1.5,
         "ps": -1,
         "grn": -1.5
-      }
+      },
+      "ctx": "This reflects a right-leaning value: that a good society rests mainly on individual responsibility rather than the state looking after people."
     },
     {
       "id": "fr34b",
@@ -1593,7 +1730,8 @@
         "lr": -1.5,
         "ps": 1,
         "grn": 1.5
-      }
+      },
+      "ctx": "This reflects a left-leaning value: that many problems come from unfair systems, so blaming individuals lets the comfortable ignore others' suffering."
     },
     {
       "id": "fr35a",
@@ -1612,7 +1750,8 @@
         "lr": -1,
         "ps": 1.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues rents in French cities are out of control and much stronger rent controls are needed."
     },
     {
       "id": "fr35b",
@@ -1631,7 +1770,8 @@
         "lr": 1,
         "ps": -1.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues rent controls dry up housing supply and make the shortage worse for everyone."
     }
   ],
   "heroTitle": "Où vous situez-vous dans la<br>politique <em>française</em>?",

@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.3">
+<link rel="stylesheet" href="/style.css?v=1.1.7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -329,11 +329,9 @@
       <span class="prog-txt" id="prog-txt">1 of 47</span>
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
-    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Context</div>
-      <div class="q-scenario-body" id="q-scen-body"></div>
-    </div>
     <div class="q-question" id="q-text"></div>
+    <button type="button" class="q-help-btn" id="q-help-btn" onclick="toggleQContext()" aria-expanded="false" style="display:none"></button>
+    <div class="q-context-box" id="q-context-box" style="display:none"></div>
     <div class="q-opts" id="q-opts"></div>
     <div class="q-foot">
       <button class="btn-skip" onclick="skipQ()">Skip</button>
@@ -1110,214 +1108,284 @@
 <script>
 const LOCAL_QUESTIONS = {
   "nl1a": {
-    "q": "De immigratie en asielinstroom naar Nederland zijn veel te hoog en moeten drastisch omlaag."
+    "q": "De immigratie en asielinstroom naar Nederland zijn veel te hoog en moeten drastisch omlaag.",
+    "ctx": "Stelt dat de immigratie en asielinstroom naar Nederland veel te hoog zijn en fors omlaag moeten — een kerneis van Wilders' PVV."
   },
   "nl1b": {
-    "q": "Nederland heeft migranten nodig voor de economie, en asiel is een humanitaire basisplicht."
+    "q": "Nederland heeft migranten nodig voor de economie, en asiel is een humanitaire basisplicht.",
+    "ctx": "Stelt dat Nederland migranten nodig heeft voor de economie en dat asiel een humanitaire basisplicht is."
   },
   "nl2a": {
-    "q": "Nederland zou uit de EU-asielregels moeten stappen en veel meer mensen moeten weigeren."
+    "q": "Nederland zou uit de EU-asielregels moeten stappen en veel meer mensen moeten weigeren.",
+    "ctx": "Wil dat Nederland uit de gezamenlijke EU-asielregels stapt en veel meer mensen weigert."
   },
   "nl2b": {
-    "q": "De gedeelde asielregels loslaten zou de wet en de Nederlandse humanitaire verplichtingen schenden."
+    "q": "De gedeelde asielregels loslaten zou de wet en de Nederlandse humanitaire verplichtingen schenden.",
+    "ctx": "Stelt dat het loslaten van gezamenlijke asielregels de wet en de Nederlandse humanitaire verplichtingen zou schenden."
   },
   "nl3a": {
-    "q": "De islam is een bedreiging voor de Nederlandse cultuur en vrijheden."
+    "q": "De islam is een bedreiging voor de Nederlandse cultuur en vrijheden.",
+    "ctx": "Stelt dat de islam een bedreiging is voor de Nederlandse cultuur en vrijheden. Voorstanders wijzen op integratie; critici noemen het vooroordeel."
   },
   "nl3b": {
-    "q": "Nederlandse moslims zijn volwaardige leden van de samenleving, en hun geloof verdient gelijke rechten."
+    "q": "Nederlandse moslims zijn volwaardige leden van de samenleving, en hun geloof verdient gelijke rechten.",
+    "ctx": "Beschouwt Nederlandse moslims als volwaardige leden van de samenleving wier geloof gelijke rechten verdient."
   },
   "nl4a": {
-    "q": "De gedwongen uitkoop en krimp van de veehouderij om stikstof te verminderen is te ver gegaan."
+    "q": "De gedwongen uitkoop en krimp van de veehouderij om stikstof te verminderen is te ver gegaan.",
+    "ctx": "Om de stikstofuitstoot te verlagen wilde de overheid veehouderijen uitkopen en laten krimpen. Dit stelt dat dat te ver ging."
   },
   "nl4b": {
-    "q": "Stikstof verminderen betekent de veestapel krimpen; natuur en woningbouw hangen ervan af."
+    "q": "Stikstof verminderen betekent de veestapel krimpen; natuur en woningbouw hangen ervan af.",
+    "ctx": "Stelt dat stikstof verlagen betekent dat de veestapel moet krimpen, en dat natuur en woningbouw daarvan afhangen."
   },
   "nl5a": {
-    "q": "De overheid moet stevig ingrijpen in de woningmarkt, huizen bouwen en huren maximeren."
+    "q": "De overheid moet stevig ingrijpen in de woningmarkt, huizen bouwen en huren maximeren.",
+    "ctx": "Wil dat de overheid stevig ingrijpt op de woningmarkt, huizen bouwt en huren maximeert."
   },
   "nl5b": {
-    "q": "Huurplafonds en zwaar ingrijpen jagen bouwers weg en verergeren de woningnood."
+    "q": "Huurplafonds en zwaar ingrijpen jagen bouwers weg en verergeren de woningnood.",
+    "ctx": "Stelt dat huurplafonds en zwaar ingrijpen bouwers wegjagen en de woningnood verergeren."
   },
   "nl6a": {
-    "q": "Het eigen risico in de zorg moet worden afgeschaft."
+    "q": "Het eigen risico in de zorg moet worden afgeschaft.",
+    "ctx": "Het eigen risico is het bedrag dat je zelf betaalt voordat de verzekering zorg vergoedt. Dit wil het afschaffen."
   },
   "nl6b": {
-    "q": "Het eigen risico afschaffen zou de premies en het zorggebruik voor iedereen opdrijven."
+    "q": "Het eigen risico afschaffen zou de premies en het zorggebruik voor iedereen opdrijven.",
+    "ctx": "Stelt dat het afschaffen van het eigen risico de premies en het zorggebruik voor iedereen zou opdrijven."
   },
   "nl7a": {
-    "q": "De rijkste Nederlanders en grote bedrijven zouden fors meer belasting moeten betalen."
+    "q": "De rijkste Nederlanders en grote bedrijven zouden fors meer belasting moeten betalen.",
+    "ctx": "Steunt fors hogere belastingen voor de rijkste Nederlanders en grote bedrijven."
   },
   "nl7b": {
-    "q": "Hogere belastingen op vermogen en bedrijven jagen investeringen en banen het land uit."
+    "q": "Hogere belastingen op vermogen en bedrijven jagen investeringen en banen het land uit.",
+    "ctx": "Stelt dat hogere belastingen op vermogen en bedrijven investeringen en banen het land uit jagen."
   },
   "nl8a": {
-    "q": "Nederland moet veel meer doen voor het klimaat, ook als dat economisch pijn doet."
+    "q": "Nederland moet veel meer doen voor het klimaat, ook als dat economisch pijn doet.",
+    "ctx": "Stelt dat Nederland veel meer voor het klimaat moet doen, ook als dat economisch pijn doet."
   },
   "nl8b": {
-    "q": "Dure klimaatregels belasten gewone mensen en helpen het wereldklimaat nauwelijks."
+    "q": "Dure klimaatregels belasten gewone mensen en helpen het wereldklimaat nauwelijks.",
+    "ctx": "Stelt dat dure klimaatregels gewone mensen belasten terwijl ze het wereldklimaat nauwelijks helpen."
   },
   "nl9a": {
-    "q": "De toekomst van Nederland ligt in een sterkere, meer geïntegreerde Europese Unie."
+    "q": "De toekomst van Nederland ligt in een sterkere, meer geïntegreerde Europese Unie.",
+    "ctx": "Ziet de toekomst van Nederland in een sterkere, meer geïntegreerde Europese Unie."
   },
   "nl9b": {
-    "q": "Brussel heeft al te veel macht over Nederland, en de soevereiniteit moet voorop staan."
+    "q": "Brussel heeft al te veel macht over Nederland, en de soevereiniteit moet voorop staan.",
+    "ctx": "Stelt dat Brussel al te veel macht heeft over Nederland en dat soevereiniteit voorop moet staan."
   },
   "nl10a": {
-    "q": "Nederland zou een referendum moeten houden over vertrek uit de EU."
+    "q": "Nederland zou een referendum moeten houden over vertrek uit de EU.",
+    "ctx": "Nexit betekent een Nederlands vertrek uit de EU. Dit wil een referendum over uittreden."
   },
   "nl10b": {
-    "q": "Uit de EU stappen zou economische zelfbeschadiging zijn voor een handelsland als Nederland."
+    "q": "Uit de EU stappen zou economische zelfbeschadiging zijn voor een handelsland als Nederland.",
+    "ctx": "Stelt dat uit de EU stappen economische zelfbeschadiging zou zijn voor een handelsland als Nederland."
   },
   "nl11a": {
-    "q": "De toeslagenaffaire liet zien dat de staat burgers als verdachten behandelt; de macht moet terug naar de mensen."
+    "q": "De toeslagenaffaire liet zien dat de staat burgers als verdachten behandelt; de macht moet terug naar de mensen.",
+    "ctx": "In de toeslagenaffaire bestempelde de Belastingdienst duizenden ouders ten onrechte als fraudeurs. Dit stelt dat de staat burgers wantrouwt en de macht terug moet naar de mensen."
   },
   "nl11b": {
-    "q": "De toeslagenaffaire was een ernstig falen, maar wantrouwen tegen alle overheid is de verkeerde les."
+    "q": "De toeslagenaffaire was een ernstig falen, maar wantrouwen tegen alle overheid is de verkeerde les.",
+    "ctx": "Dit erkent dat de toeslagenaffaire ernstig faalde, maar stelt dat wantrouwen tegen alle overheid de verkeerde les is."
   },
   "nl12a": {
-    "q": "Sommige rassen zijn simpelweg intelligenter of capabeler dan andere."
+    "q": "Sommige rassen zijn simpelweg intelligenter of capabeler dan andere.",
+    "ctx": "Dit is rassensuprematie: het idee dat sommige rassen van nature intelligenter of capabeler zijn. De wetenschap verwerpt het; het is verbonden met ideologieën als het nazisme."
   },
   "nl12b": {
-    "q": "Er is geen rangorde van rassen; het idee is pseudowetenschap met een schandelijke geschiedenis."
+    "q": "Er is geen rangorde van rassen; het idee is pseudowetenschap met een schandelijke geschiedenis.",
+    "ctx": "Dit is het beginsel van menselijke gelijkheid: geen ras is van nature superieur, en het idee is ontkrachte pseudowetenschap met een schandelijke geschiedenis."
   },
   "nl13a": {
-    "q": "Immigranten moeten zich aanpassen aan de Nederlandse cultuur en waarden, niet andersom."
+    "q": "Immigranten moeten zich aanpassen aan de Nederlandse cultuur en waarden, niet andersom.",
+    "ctx": "Stelt dat immigranten zich moeten aanpassen aan de Nederlandse cultuur in plaats van andersom."
   },
   "nl13b": {
-    "q": "Een levende cultuur is altijd gemengd; assimilatie eisen verarmt Nederland."
+    "q": "Een levende cultuur is altijd gemengd; assimilatie eisen verarmt Nederland.",
+    "ctx": "Stelt dat een levende cultuur altijd gemengd is, dus assimilatie eisen verarmt Nederland."
   },
   "nl14a": {
-    "q": "Nederland heeft hardere straffen en meer politiebevoegdheden nodig tegen de georganiseerde misdaad."
+    "q": "Nederland heeft hardere straffen en meer politiebevoegdheden nodig tegen de georganiseerde misdaad.",
+    "ctx": "Stelt dat Nederland hardere straffen en meer politiebevoegdheden nodig heeft tegen de georganiseerde misdaad."
   },
   "nl14b": {
-    "q": "Steeds hardere straffen verminderen de criminaliteit nooit; preventie en het aanpakken van oorzaken wel."
+    "q": "Steeds hardere straffen verminderen de criminaliteit nooit; preventie en het aanpakken van oorzaken wel.",
+    "ctx": "Stelt dat steeds hardere straffen de criminaliteit nooit verminderen, maar preventie en het aanpakken van oorzaken wel."
   },
   "nl15a": {
-    "q": "Transgender personen zouden hun juridische geslacht via zelfverklaring moeten kunnen wijzigen."
+    "q": "Transgender personen zouden hun juridische geslacht via zelfverklaring moeten kunnen wijzigen.",
+    "ctx": "Steunt dat mensen hun juridische geslacht via zelfverklaring kunnen wijzigen."
   },
   "nl15b": {
-    "q": "Biologisch geslacht is een realiteit die de wet niet door een verklaring mag laten overrulen."
+    "q": "Biologisch geslacht is een realiteit die de wet niet door een verklaring mag laten overrulen.",
+    "ctx": "Dit is de geslachtskritische visie: dat biologisch geslacht een realiteit is die de wet niet door een verklaring mag laten overrulen."
   },
   "nl16a": {
-    "q": "Werknemers hebben sterkere bescherming nodig, en het minimumloon moet flink omhoog."
+    "q": "Werknemers hebben sterkere bescherming nodig, en het minimumloon moet flink omhoog.",
+    "ctx": "Stelt dat werknemers sterkere bescherming nodig hebben en het minimumloon flink omhoog moet."
   },
   "nl16b": {
-    "q": "Lonen en bescherming te ver opdrijven kost alleen banen en schaadt kleine bedrijven."
+    "q": "Lonen en bescherming te ver opdrijven kost alleen banen en schaadt kleine bedrijven.",
+    "ctx": "Stelt dat lonen en bescherming te ver opdrijven banen kost en kleine bedrijven schaadt."
   },
   "nl17a": {
-    "q": "Het sociale vangnet moet sterker en makkelijker toegankelijk zijn."
+    "q": "Het sociale vangnet moet sterker en makkelijker toegankelijk zijn.",
+    "ctx": "Wil dat het sociale vangnet sterker en makkelijker toegankelijk is."
   },
   "nl17b": {
-    "q": "Een te royaal vangnet ondermijnt de prikkel om te werken en moet worden beteugeld."
+    "q": "Een te royaal vangnet ondermijnt de prikkel om te werken en moet worden beteugeld.",
+    "ctx": "Stelt dat een te royaal vangnet de prikkel om te werken ondermijnt en beteugeld moet worden."
   },
   "nl18a": {
-    "q": "Nederland reguleert het bedrijfsleven te veel; bedrijven hebben veel minder regeldruk nodig."
+    "q": "Nederland reguleert het bedrijfsleven te veel; bedrijven hebben veel minder regeldruk nodig.",
+    "ctx": "Stelt dat Nederland het bedrijfsleven te veel reguleert en dat bedrijven veel minder regeldruk nodig hebben."
   },
   "nl18b": {
-    "q": "Regels schrappen holt alleen de bescherming van werknemers, consumenten en natuur uit."
+    "q": "Regels schrappen holt alleen de bescherming van werknemers, consumenten en natuur uit.",
+    "ctx": "Stelt dat regels schrappen alleen de bescherming van werknemers, consumenten en natuur uitholt."
   },
   "nl19a": {
-    "q": "Nederland zou cannabis volledig moeten legaliseren en reguleren, niet alleen gedogen."
+    "q": "Nederland zou cannabis volledig moeten legaliseren en reguleren, niet alleen gedogen.",
+    "ctx": "Nederland gedoogt cannabis maar legaliseert het niet volledig. Dit wil volledige legalisering en regulering."
   },
   "nl19b": {
-    "q": "Volledige legalisering zou de drugscultuur alleen verdiepen en criminelen verder in de kaart spelen."
+    "q": "Volledige legalisering zou de drugscultuur alleen verdiepen en criminelen verder in de kaart spelen.",
+    "ctx": "Stelt dat volledige legalisering de drugscultuur alleen verdiept en criminelen verder in de kaart speelt."
   },
   "nl20a": {
-    "q": "Het Nederlandse recht op euthanasie moet worden beschermd en waar zinvol verruimd."
+    "q": "Het Nederlandse recht op euthanasie moet worden beschermd en waar zinvol verruimd.",
+    "ctx": "Nederland kent legale euthanasie. Dit wil dat recht beschermen en waar zinvol verruimen."
   },
   "nl20b": {
-    "q": "Euthanasie verruimen dreigt kwetsbaren onder druk te zetten en het leven goedkoop te maken."
+    "q": "Euthanasie verruimen dreigt kwetsbaren onder druk te zetten en het leven goedkoop te maken.",
+    "ctx": "Stelt dat het verruimen van euthanasie kwetsbaren onder druk dreigt te zetten en het leven goedkoop maakt."
   },
   "nl21a": {
-    "q": "Toegang tot abortus is een verworven recht dat volledig beschermd moet blijven."
+    "q": "Toegang tot abortus is een verworven recht dat volledig beschermd moet blijven.",
+    "ctx": "Beschouwt toegang tot abortus als een verworven recht dat volledig beschermd moet blijven."
   },
   "nl21b": {
-    "q": "Abortus beëindigt een mensenleven, en de wet zou strenger moeten zijn."
+    "q": "Abortus beëindigt een mensenleven, en de wet zou strenger moeten zijn.",
+    "ctx": "Stelt dat abortus een mensenleven beëindigt en dat de wet strenger zou moeten zijn."
   },
   "nl22a": {
-    "q": "Nederland moet Oekraïne blijven bewapenen en de defensie-uitgaven verhogen."
+    "q": "Nederland moet Oekraïne blijven bewapenen en de defensie-uitgaven verhogen.",
+    "ctx": "Steunt dat Nederland Oekraïne blijft bewapenen en de defensie-uitgaven verhoogt."
   },
   "nl22b": {
-    "q": "Eindeloze wapenleveranties en hogere defensiebudgetten zijn geld dat beter thuis besteed wordt."
+    "q": "Eindeloze wapenleveranties en hogere defensiebudgetten zijn geld dat beter thuis besteed wordt.",
+    "ctx": "Stelt dat eindeloze wapenleveranties en hogere defensiebudgetten beter thuis besteed kunnen worden."
   },
   "nl23a": {
-    "q": "Nederland zou nieuwe kerncentrales moeten bouwen."
+    "q": "Nederland zou nieuwe kerncentrales moeten bouwen.",
+    "ctx": "Steunt dat Nederland nieuwe kerncentrales bouwt."
   },
   "nl23b": {
-    "q": "Nieuwe kernenergie is te traag en te duur; het geld moet naar duurzame energie."
+    "q": "Nieuwe kernenergie is te traag en te duur; het geld moet naar duurzame energie.",
+    "ctx": "Stelt dat nieuwe kernenergie te traag en te duur is en dat het geld naar duurzame energie moet."
   },
   "nl24a": {
-    "q": "De staat is Groningen volledige compensatie schuldig en mag daar nooit weer gas winnen."
+    "q": "De staat is Groningen volledige compensatie schuldig en mag daar nooit weer gas winnen.",
+    "ctx": "Gaswinning veroorzaakte aardbevingen in Groningen. Dit stelt dat de staat volledige compensatie schuldig is en daar nooit weer gas mag winnen."
   },
   "nl24b": {
-    "q": "De realiteit kan enige gaswinning afdwingen, en eindeloze compensatie kent grenzen."
+    "q": "De realiteit kan enige gaswinning afdwingen, en eindeloze compensatie kent grenzen.",
+    "ctx": "Stelt dat de realiteit enige gaswinning kan afdwingen en dat eindeloze compensatie grenzen kent."
   },
   "nl25a": {
-    "q": "De publieke omroep is zijn financiering waard en moet onafhankelijk blijven van de politiek."
+    "q": "De publieke omroep is zijn financiering waard en moet onafhankelijk blijven van de politiek.",
+    "ctx": "Stelt dat de publieke omroep zijn financiering waard is en onafhankelijk van de politiek moet blijven."
   },
   "nl25b": {
-    "q": "De publieke omroep is eenzijdig en opgeblazen, en de financiering moet omlaag."
+    "q": "De publieke omroep is eenzijdig en opgeblazen, en de financiering moet omlaag.",
+    "ctx": "Stelt dat de publieke omroep eenzijdig en opgeblazen is en dat de financiering omlaag moet."
   },
   "nl26a": {
-    "q": "De multiculturele samenleving is mislukt en heeft gescheiden gemeenschappen opgeleverd met weinig gemeenschappelijks."
+    "q": "De multiculturele samenleving is mislukt en heeft gescheiden gemeenschappen opgeleverd met weinig gemeenschappelijks.",
+    "ctx": "Stelt dat de multiculturele samenleving is mislukt en gescheiden gemeenschappen heeft opgeleverd met weinig gemeenschappelijks."
   },
   "nl26b": {
-    "q": "De Nederlandse diversiteit is een echte kracht en onderdeel van de nationale identiteit."
+    "q": "De Nederlandse diversiteit is een echte kracht en onderdeel van de nationale identiteit.",
+    "ctx": "Viert de Nederlandse diversiteit als een echte kracht en onderdeel van de nationale identiteit."
   },
   "nl27a": {
-    "q": "Nederland zou bindende referenda over grote kwesties moeten invoeren."
+    "q": "Nederland zou bindende referenda over grote kwesties moeten invoeren.",
+    "ctx": "Nederland houdt zelden referenda. Dit wil bindende referenda over grote kwesties."
   },
   "nl27b": {
-    "q": "Referenda reduceren complexe vragen tot leuzen en worden makkelijk gekaapt door populisten."
+    "q": "Referenda reduceren complexe vragen tot leuzen en worden makkelijk gekaapt door populisten.",
+    "ctx": "Stelt dat referenda complexe vragen tot leuzen reduceren en makkelijk door populisten worden gekaapt."
   },
   "nl28a": {
-    "q": "Natuurbescherming zou voorrang moeten krijgen boven nieuwe wegen, boerderijen en industrie."
+    "q": "Natuurbescherming zou voorrang moeten krijgen boven nieuwe wegen, boerderijen en industrie.",
+    "ctx": "Stelt natuurbescherming boven nieuwe wegen, boerderijen en industrie."
   },
   "nl28b": {
-    "q": "Eindeloze milieuregels wurgen de woningbouw en infrastructuur die het land nodig heeft."
+    "q": "Eindeloze milieuregels wurgen de woningbouw en infrastructuur die het land nodig heeft.",
+    "ctx": "Stelt dat eindeloze milieuregels de woningbouw en infrastructuur die het land nodig heeft wurgen."
   },
   "nl29a": {
-    "q": "Het omstreden nieuwe pensioenstelsel moet worden gepauzeerd of teruggedraaid om zekerheid te beschermen."
+    "q": "Het omstreden nieuwe pensioenstelsel moet worden gepauzeerd of teruggedraaid om zekerheid te beschermen.",
+    "ctx": "Een nieuw pensioenstelsel beweegt Nederland naar meer marktafhankelijke pensioenen. Dit wil het pauzeren of terugdraaien om zekerheid te beschermen."
   },
   "nl29b": {
-    "q": "Het nieuwe pensioenstelsel is een noodzakelijke modernisering en moet doorgaan."
+    "q": "Het nieuwe pensioenstelsel is een noodzakelijke modernisering en moet doorgaan.",
+    "ctx": "Stelt dat het nieuwe pensioenstelsel een noodzakelijke modernisering is en moet doorgaan."
   },
   "nl30a": {
-    "q": "De overheid moet direct ingrijpen om de koopkracht van mensen te beschermen."
+    "q": "De overheid moet direct ingrijpen om de koopkracht van mensen te beschermen.",
+    "ctx": "Wil dat de overheid direct ingrijpt om de koopkracht van mensen te beschermen."
   },
   "nl30b": {
-    "q": "Uitkeringen en prijsmaatregelen wakkeren alleen de inflatie en de staatsschuld aan."
+    "q": "Uitkeringen en prijsmaatregelen wakkeren alleen de inflatie en de staatsschuld aan.",
+    "ctx": "Stelt dat uitkeringen en prijsmaatregelen alleen de inflatie en de staatsschuld aanwakkeren."
   },
   "nl31a": {
-    "q": "De open wereldwijde vrijhandel heeft Nederland rijker gemaakt en moet worden verdedigd."
+    "q": "De open wereldwijde vrijhandel heeft Nederland rijker gemaakt en moet worden verdedigd.",
+    "ctx": "Verdedigt de open wereldwijde vrijhandel als iets dat Nederland rijker heeft gemaakt."
   },
   "nl31b": {
-    "q": "De globalisering heeft gemeenschappen uitgehold en het land te afhankelijk gemaakt."
+    "q": "De globalisering heeft gemeenschappen uitgehold en het land te afhankelijk gemaakt.",
+    "ctx": "Stelt dat de globalisering gemeenschappen heeft uitgehold en het land te afhankelijk heeft gemaakt."
   },
   "nl32a": {
-    "q": "Werklozen en armen worden met te veel wantrouwen behandeld; het vangnet moet sterker."
+    "q": "Werklozen en armen worden met te veel wantrouwen behandeld; het vangnet moet sterker.",
+    "ctx": "Stelt dat werklozen en armen met te veel wantrouwen worden bejegend en dat het vangnet sterker moet."
   },
   "nl32b": {
-    "q": "Bijstand wordt te makkelijk een val, en strengere regels beschermen wie meebetaalt."
+    "q": "Bijstand wordt te makkelijk een val, en strengere regels beschermen wie meebetaalt.",
+    "ctx": "Stelt dat bijstand mensen kan vangen, en dat strengere regels beschermen wie meebetaalt."
   },
   "nl33a": {
-    "q": "Oude tradities dragen de wijsheid van generaties en mogen niet lichtvaardig worden weggegooid."
+    "q": "Oude tradities dragen de wijsheid van generaties en mogen niet lichtvaardig worden weggegooid.",
+    "ctx": "Dit is de conservatieve kijk op traditie: oude gebruiken bevatten opgebouwde wijsheid, dus we moeten voorzichtig zijn ze weg te gooien."
   },
   "nl33b": {
-    "q": "Traditie vereren laat alleen de doden over de levenden regeren en blokkeert noodzakelijke verandering."
+    "q": "Traditie vereren laat alleen de doden over de levenden regeren en blokkeert noodzakelijke verandering.",
+    "ctx": "Dit is het progressieve weerwoord: vasthouden aan traditie om haarzelf laat het verleden over het heden regeren en blokkeert nodige verandering."
   },
   "nl34a": {
-    "q": "Een goede samenleving hangt meer af van persoonlijke verantwoordelijkheid dan van overheidssteun."
+    "q": "Een goede samenleving hangt meer af van persoonlijke verantwoordelijkheid dan van overheidssteun.",
+    "ctx": "Dit weerspiegelt een meer rechtse waarde: dat een goede samenleving vooral steunt op persoonlijke verantwoordelijkheid in plaats van overheidssteun."
   },
   "nl34b": {
-    "q": "Individuen de schuld geven van problemen die het systeem creëert, is hoe de bevoorrechten het lijden van anderen goedpraten."
+    "q": "Individuen de schuld geven van problemen die het systeem creëert, is hoe de bevoorrechten het lijden van anderen goedpraten.",
+    "ctx": "Dit weerspiegelt een meer linkse waarde: veel problemen komen door oneerlijke systemen, dus individuen de schuld geven laat de bevoorrechten het lijden van anderen negeren."
   },
   "nl35a": {
-    "q": "Gemeenten moeten worden verplicht een eerlijk deel van de asielzoekers op te nemen (spreidingswet)."
+    "q": "Gemeenten moeten worden verplicht een eerlijk deel van de asielzoekers op te nemen (spreidingswet).",
+    "ctx": "De spreidingswet verplicht gemeenten een eerlijk deel van de asielzoekers op te vangen. Dit steunt die wet."
   },
   "nl35b": {
-    "q": "Asielzoekers tegen hun wil aan gemeenschappen opdringen kweekt alleen wrok en moet worden geschrapt."
+    "q": "Asielzoekers tegen hun wil aan gemeenschappen opdringen kweekt alleen wrok en moet worden geschrapt.",
+    "ctx": "Stelt dat asielzoekers tegen hun wil aan gemeenschappen opdringen wrok kweekt en geschrapt moet worden."
   }
 };
 
@@ -1341,7 +1409,8 @@ const BANK = [
       "bbb": 1,
       "cda": 0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues immigration and asylum to the Netherlands are far too high and must be cut sharply — a key demand of Wilders' PVV."
   },
   {
     "id": "nl1b",
@@ -1362,7 +1431,8 @@ const BANK = [
       "bbb": -1,
       "cda": -0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues the Netherlands needs migrants for its economy, and that asylum is a basic humanitarian duty."
   },
   {
     "id": "nl2a",
@@ -1380,7 +1450,8 @@ const BANK = [
       "vvd": 0.5,
       "d66": -2,
       "bbb": 1
-    }
+    },
+    "ctx": "This wants the Netherlands to opt out of shared EU asylum rules and turn away far more people."
   },
   {
     "id": "nl2b",
@@ -1398,7 +1469,8 @@ const BANK = [
       "vvd": -0.5,
       "d66": 2,
       "bbb": -1
-    }
+    },
+    "ctx": "This argues abandoning shared asylum rules would break the law and Dutch humanitarian commitments."
   },
   {
     "id": "nl3a",
@@ -1418,7 +1490,8 @@ const BANK = [
       "bbb": 0.5,
       "cda": -1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues Islam is a threat to Dutch culture and freedoms. Supporters cite integration; critics call it prejudice."
   },
   {
     "id": "nl3b",
@@ -1438,7 +1511,8 @@ const BANK = [
       "bbb": -0.5,
       "cda": 1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This holds Muslim Dutch citizens to be full members of society whose faith deserves equal respect."
   },
   {
     "id": "nl4a",
@@ -1459,7 +1533,8 @@ const BANK = [
       "bbb": 2,
       "cda": 1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "To cut nitrogen pollution the government pushed to buy out and shrink livestock farms. This argues that went too far."
   },
   {
     "id": "nl4b",
@@ -1480,7 +1555,8 @@ const BANK = [
       "bbb": -2,
       "cda": -1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues cutting nitrogen means cutting livestock, and that nature and new housing depend on it."
   },
   {
     "id": "nl5a",
@@ -1500,7 +1576,8 @@ const BANK = [
       "bbb": 0.5,
       "cda": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This wants the government to intervene hard in the housing market, building homes and capping rents."
   },
   {
     "id": "nl5b",
@@ -1517,7 +1594,8 @@ const BANK = [
       "vvd": 1,
       "nsc": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues rent caps and heavy intervention scare off builders and worsen the housing shortage."
   },
   {
     "id": "nl6a",
@@ -1537,7 +1615,8 @@ const BANK = [
       "bbb": 1,
       "cda": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "The 'eigen risico' is the amount you pay yourself before insurance covers healthcare. This wants it abolished."
   },
   {
     "id": "nl6b",
@@ -1557,7 +1636,8 @@ const BANK = [
       "bbb": -1,
       "cda": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues abolishing the deductible would push up premiums and healthcare use for everyone."
   },
   {
     "id": "nl7a",
@@ -1575,7 +1655,8 @@ const BANK = [
       "nsc": 0.5,
       "bbb": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This supports significantly higher taxes on the wealthiest Dutch and big corporations."
   },
   {
     "id": "nl7b",
@@ -1593,7 +1674,8 @@ const BANK = [
       "nsc": -0.5,
       "bbb": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues higher taxes on wealth and business drive investment and jobs out of the country."
   },
   {
     "id": "nl8a",
@@ -1611,7 +1693,8 @@ const BANK = [
       "d66": 1.5,
       "bbb": -1.5,
       "g": 0
-    }
+    },
+    "ctx": "This says the Netherlands must do far more for the climate, even at economic cost."
   },
   {
     "id": "nl8b",
@@ -1629,7 +1712,8 @@ const BANK = [
       "d66": -1.5,
       "bbb": 1.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues costly climate rules burden ordinary people while barely helping the global climate."
   },
   {
     "id": "nl9a",
@@ -1648,7 +1732,8 @@ const BANK = [
       "d66": 2,
       "bbb": -1,
       "cda": 0.5
-    }
+    },
+    "ctx": "This sees the Netherlands' future in a stronger, more integrated European Union."
   },
   {
     "id": "nl9b",
@@ -1667,7 +1752,8 @@ const BANK = [
       "d66": -2,
       "bbb": 1,
       "cda": -0.5
-    }
+    },
+    "ctx": "This argues Brussels already has too much power over the Netherlands and sovereignty must come first."
   },
   {
     "id": "nl10a",
@@ -1686,7 +1772,8 @@ const BANK = [
       "nsc": -0.5,
       "d66": -2,
       "cda": -1
-    }
+    },
+    "ctx": "'Nexit' means a Dutch exit from the EU. This wants a referendum on leaving."
   },
   {
     "id": "nl10b",
@@ -1705,7 +1792,8 @@ const BANK = [
       "nsc": 0.5,
       "d66": 2,
       "cda": 1
-    }
+    },
+    "ctx": "This argues leaving the EU would be economic self-harm for a trading nation like the Netherlands."
   },
   {
     "id": "nl11a",
@@ -1725,7 +1813,8 @@ const BANK = [
       "d66": 0.5,
       "bbb": 1,
       "cda": 0.5
-    }
+    },
+    "ctx": "In the 'toeslagenaffaire' the tax office wrongly branded thousands of parents as fraudsters. This argues it shows the state distrusts citizens and power must return to people."
   },
   {
     "id": "nl11b",
@@ -1745,7 +1834,8 @@ const BANK = [
       "d66": -0.5,
       "bbb": -1,
       "cda": -0.5
-    }
+    },
+    "ctx": "This agrees the benefits scandal was a serious failure but argues distrust of all government is the wrong lesson."
   },
   {
     "id": "nl12a",
@@ -1764,7 +1854,8 @@ const BANK = [
       "d66": -2,
       "bbb": -1,
       "cda": -1.5
-    }
+    },
+    "ctx": "This is racial supremacism — the belief that some races are inherently more intelligent or capable. Science rejects it; it is tied to ideologies like Nazism."
   },
   {
     "id": "nl12b",
@@ -1783,7 +1874,8 @@ const BANK = [
       "d66": 2,
       "bbb": 1,
       "cda": 1.5
-    }
+    },
+    "ctx": "This is the principle of human equality: no race is inherently superior, and the idea is discredited pseudo-science with a shameful history."
   },
   {
     "id": "nl13a",
@@ -1803,7 +1895,8 @@ const BANK = [
       "d66": -1.5,
       "bbb": 1,
       "cda": 0.5
-    }
+    },
+    "ctx": "This argues immigrants should adapt to Dutch culture rather than the reverse."
   },
   {
     "id": "nl13b",
@@ -1823,7 +1916,8 @@ const BANK = [
       "d66": 1.5,
       "bbb": -1,
       "cda": -0.5
-    }
+    },
+    "ctx": "This argues a living culture is always mixed, so demanding assimilation impoverishes the Netherlands."
   },
   {
     "id": "nl14a",
@@ -1843,7 +1937,8 @@ const BANK = [
       "d66": -0.5,
       "bbb": 1,
       "cda": 1
-    }
+    },
+    "ctx": "This argues the Netherlands needs tougher sentences and more police powers against organised crime."
   },
   {
     "id": "nl14b",
@@ -1863,7 +1958,8 @@ const BANK = [
       "d66": 0.5,
       "bbb": -1,
       "cda": -1
-    }
+    },
+    "ctx": "This argues ever tougher sentences never cut crime, while prevention and tackling causes do."
   },
   {
     "id": "nl15a",
@@ -1882,7 +1978,8 @@ const BANK = [
       "d66": 2,
       "bbb": -1,
       "cda": -1
-    }
+    },
+    "ctx": "This supports letting people change their legal gender by self-declaration."
   },
   {
     "id": "nl15b",
@@ -1901,7 +1998,8 @@ const BANK = [
       "d66": -2,
       "bbb": 1,
       "cda": 1
-    }
+    },
+    "ctx": "This is the gender-critical view: that biological sex is a reality the law shouldn't let a declaration override."
   },
   {
     "id": "nl16a",
@@ -1919,7 +2017,8 @@ const BANK = [
       "nsc": 0.5,
       "cda": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues workers need stronger protection and the minimum wage should rise substantially."
   },
   {
     "id": "nl16b",
@@ -1937,7 +2036,8 @@ const BANK = [
       "nsc": -0.5,
       "cda": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues pushing wages and protections up too far costs jobs and hurts small businesses."
   },
   {
     "id": "nl17a",
@@ -1955,7 +2055,8 @@ const BANK = [
       "nsc": 0.5,
       "cda": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This wants the social safety net stronger and easier to rely on."
   },
   {
     "id": "nl17b",
@@ -1973,7 +2074,8 @@ const BANK = [
       "nsc": -0.5,
       "cda": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues a too-generous safety net weakens the incentive to work and must be reined in."
   },
   {
     "id": "nl18a",
@@ -1992,7 +2094,8 @@ const BANK = [
       "d66": 0.5,
       "bbb": 1,
       "cda": 0.5
-    }
+    },
+    "ctx": "This argues the Netherlands over-regulates business and companies need far less red tape."
   },
   {
     "id": "nl18b",
@@ -2011,7 +2114,8 @@ const BANK = [
       "d66": -0.5,
       "bbb": -1,
       "cda": -0.5
-    }
+    },
+    "ctx": "This argues cutting regulation just erodes protection for workers, consumers, and nature."
   },
   {
     "id": "nl19a",
@@ -2030,7 +2134,8 @@ const BANK = [
       "d66": 2,
       "bbb": -0.5,
       "cda": -1.5
-    }
+    },
+    "ctx": "The Netherlands tolerates cannabis but doesn't fully legalise it. This wants full legalisation and regulation."
   },
   {
     "id": "nl19b",
@@ -2049,7 +2154,8 @@ const BANK = [
       "d66": -2,
       "bbb": 0.5,
       "cda": 1.5
-    }
+    },
+    "ctx": "This argues full legalisation would only deepen the drug culture and empower criminals further."
   },
   {
     "id": "nl20a",
@@ -2067,7 +2173,8 @@ const BANK = [
       "nsc": -0.5,
       "d66": 1.5,
       "cda": -1.5
-    }
+    },
+    "ctx": "The Netherlands has legal euthanasia. This wants that right protected and, where sensible, broadened."
   },
   {
     "id": "nl20b",
@@ -2085,7 +2192,8 @@ const BANK = [
       "nsc": 0.5,
       "d66": -1.5,
       "cda": 1.5
-    }
+    },
+    "ctx": "This argues broadening euthanasia risks pressuring the vulnerable and cheapening life."
   },
   {
     "id": "nl21a",
@@ -2103,7 +2211,8 @@ const BANK = [
       "nsc": -0.5,
       "d66": 1.5,
       "cda": -1
-    }
+    },
+    "ctx": "This treats access to abortion as a settled right that must be fully protected."
   },
   {
     "id": "nl21b",
@@ -2121,7 +2230,8 @@ const BANK = [
       "nsc": 0.5,
       "d66": -1.5,
       "cda": 1
-    }
+    },
+    "ctx": "This argues abortion ends a human life and the law should be more restrictive."
   },
   {
     "id": "nl22a",
@@ -2140,7 +2250,8 @@ const BANK = [
       "nsc": 0.5,
       "d66": 1.5,
       "cda": 1
-    }
+    },
+    "ctx": "This supports the Netherlands continuing to arm Ukraine and raising defence spending."
   },
   {
     "id": "nl22b",
@@ -2159,7 +2270,8 @@ const BANK = [
       "nsc": -0.5,
       "d66": -1.5,
       "cda": -1
-    }
+    },
+    "ctx": "This argues endless arms shipments and higher military budgets would be better spent at home."
   },
   {
     "id": "nl23a",
@@ -2178,7 +2290,8 @@ const BANK = [
       "nsc": 1,
       "bbb": 1,
       "cda": 1
-    }
+    },
+    "ctx": "This supports the Netherlands building new nuclear power plants."
   },
   {
     "id": "nl23b",
@@ -2197,7 +2310,8 @@ const BANK = [
       "nsc": -1,
       "bbb": -1,
       "cda": -1
-    }
+    },
+    "ctx": "This argues new nuclear is too slow and costly and the money should go to renewables."
   },
   {
     "id": "nl24a",
@@ -2217,7 +2331,8 @@ const BANK = [
       "d66": 1,
       "bbb": 1,
       "cda": 1
-    }
+    },
+    "ctx": "Gas extraction caused earthquakes in Groningen. This argues the state owes full compensation and must never restart extraction there."
   },
   {
     "id": "nl24b",
@@ -2237,7 +2352,8 @@ const BANK = [
       "d66": -1,
       "bbb": -1,
       "cda": -1
-    }
+    },
+    "ctx": "This argues reality may force some gas extraction to continue and that endless compensation has limits."
   },
   {
     "id": "nl25a",
@@ -2257,7 +2373,8 @@ const BANK = [
       "bbb": -0.5,
       "cda": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues public broadcasting is worth its funding and must stay independent of politics."
   },
   {
     "id": "nl25b",
@@ -2277,7 +2394,8 @@ const BANK = [
       "bbb": 0.5,
       "cda": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues the public broadcaster is biased and bloated and its funding should be cut."
   },
   {
     "id": "nl26a",
@@ -2296,7 +2414,8 @@ const BANK = [
       "d66": -1.5,
       "bbb": 0.5,
       "cda": -0.5
-    }
+    },
+    "ctx": "This argues multiculturalism has failed and produced divided communities with little in common."
   },
   {
     "id": "nl26b",
@@ -2315,7 +2434,8 @@ const BANK = [
       "d66": 1.5,
       "bbb": -0.5,
       "cda": 0.5
-    }
+    },
+    "ctx": "This celebrates Dutch diversity as a genuine strength and part of the national identity."
   },
   {
     "id": "nl27a",
@@ -2334,7 +2454,8 @@ const BANK = [
       "d66": 0.5,
       "bbb": 1,
       "cda": -0.5
-    }
+    },
+    "ctx": "The Netherlands rarely holds referendums. This wants binding ones on major questions."
   },
   {
     "id": "nl27b",
@@ -2353,7 +2474,8 @@ const BANK = [
       "d66": -0.5,
       "bbb": -1,
       "cda": 0.5
-    }
+    },
+    "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by populists."
   },
   {
     "id": "nl28a",
@@ -2372,7 +2494,8 @@ const BANK = [
       "bbb": -2,
       "cda": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This puts protecting nature ahead of new roads, farms, and industry."
   },
   {
     "id": "nl28b",
@@ -2391,7 +2514,8 @@ const BANK = [
       "bbb": 2,
       "cda": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues endless environmental rules are strangling the housing and infrastructure the country needs."
   },
   {
     "id": "nl29a",
@@ -2411,7 +2535,8 @@ const BANK = [
       "d66": -1,
       "bbb": 1,
       "cda": -0.5
-    }
+    },
+    "ctx": "A new pension system moves the Netherlands toward more market-linked pensions. This wants it paused or reversed to protect certainty."
   },
   {
     "id": "nl29b",
@@ -2431,7 +2556,8 @@ const BANK = [
       "d66": 1,
       "bbb": -1,
       "cda": 0.5
-    }
+    },
+    "ctx": "This argues the new pension system is a necessary modernisation and should go ahead."
   },
   {
     "id": "nl30a",
@@ -2450,7 +2576,8 @@ const BANK = [
       "bbb": 1,
       "cda": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This wants the government to intervene directly to protect people's purchasing power."
   },
   {
     "id": "nl30b",
@@ -2469,7 +2596,8 @@ const BANK = [
       "bbb": -1,
       "cda": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues handouts and price measures just fuel inflation and public debt."
   },
   {
     "id": "nl31a",
@@ -2488,7 +2616,8 @@ const BANK = [
       "d66": 1.5,
       "bbb": -0.5,
       "cda": 0.5
-    }
+    },
+    "ctx": "This defends open global free trade as having made the Netherlands richer."
   },
   {
     "id": "nl31b",
@@ -2507,7 +2636,8 @@ const BANK = [
       "d66": -1.5,
       "bbb": 0.5,
       "cda": -0.5
-    }
+    },
+    "ctx": "This argues globalisation hollowed out communities and made the country too dependent."
   },
   {
     "id": "nl32a",
@@ -2525,7 +2655,8 @@ const BANK = [
       "nsc": 0.5,
       "cda": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues the unemployed and poor face too much suspicion and the safety net should be stronger."
   },
   {
     "id": "nl32b",
@@ -2543,7 +2674,8 @@ const BANK = [
       "nsc": -0.5,
       "cda": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues welfare can trap people, and stricter rules protect those who pay in."
   },
   {
     "id": "nl33a",
@@ -2562,7 +2694,8 @@ const BANK = [
       "d66": -1,
       "bbb": 1,
       "cda": 1.5
-    }
+    },
+    "ctx": "This is the conservative view of tradition: that long-standing customs hold accumulated wisdom, so we should be cautious about discarding them."
   },
   {
     "id": "nl33b",
@@ -2581,7 +2714,8 @@ const BANK = [
       "d66": 1,
       "bbb": -1,
       "cda": -1.5
-    }
+    },
+    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past govern the present and blocks needed change."
   },
   {
     "id": "nl34a",
@@ -2601,7 +2735,8 @@ const BANK = [
       "d66": 0.5,
       "bbb": 0.5,
       "cda": 1
-    }
+    },
+    "ctx": "This reflects a right-leaning value: that a good society rests mainly on personal responsibility rather than government support."
   },
   {
     "id": "nl34b",
@@ -2621,7 +2756,8 @@ const BANK = [
       "d66": -0.5,
       "bbb": -0.5,
       "cda": -1
-    }
+    },
+    "ctx": "This reflects a left-leaning value: that many problems come from unfair systems, so blaming individuals lets the comfortable ignore others' suffering."
   },
   {
     "id": "nl35a",
@@ -2641,7 +2777,8 @@ const BANK = [
       "d66": 1.5,
       "bbb": -1,
       "cda": 0.5
-    }
+    },
+    "ctx": "The 'spreidingswet' forces municipalities to house a fair share of asylum seekers. This supports it."
   },
   {
     "id": "nl35b",
@@ -2661,7 +2798,8 @@ const BANK = [
       "d66": -1.5,
       "bbb": 1,
       "cda": -0.5
-    }
+    },
+    "ctx": "This argues forcing asylum seekers on communities against their will breeds resentment and should be scrapped."
   }
 ];
 
@@ -3152,6 +3290,6 @@ window.getQuestion = getQuestion;
 window.currentLang = currentLang;
 applyLang();
 </script>
-<script src="/engine.js?v=1.1.3"></script>
+<script src="/engine.js?v=1.1.7"></script>
 </body>
 </html>

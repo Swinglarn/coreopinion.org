@@ -126,7 +126,8 @@
         "nzf": 1,
         "tpm": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "The Treaty of Waitangi (1840) is NZ's founding agreement with Māori. This supports having its principles defined by a public referendum rather than the courts."
     },
     {
       "id": "nz1b",
@@ -146,7 +147,8 @@
         "nzf": -1,
         "tpm": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues redefining the Treaty by referendum attacks Māori rights and the founding agreement itself."
     },
     {
       "id": "nz2a",
@@ -166,7 +168,8 @@
         "nzf": 1.5,
         "tpm": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "'Co-governance' gives Māori a shared role in running some public services. This argues it has gone too far."
     },
     {
       "id": "nz2b",
@@ -186,7 +189,8 @@
         "nzf": -1.5,
         "tpm": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This defends co-governance as honouring the Treaty partnership and wants it expanded, not cut back."
     },
     {
       "id": "nz3a",
@@ -205,7 +209,8 @@
         "act": -1.5,
         "nzf": -1.5,
         "tpm": 2
-      }
+      },
+      "ctx": "'Te reo' is the Māori language. This supports actively promoting Māori language and culture across New Zealand life."
     },
     {
       "id": "nz3b",
@@ -224,7 +229,8 @@
         "act": 1.5,
         "nzf": 1.5,
         "tpm": -2
-      }
+      },
+      "ctx": "This argues pushing Māori language and culture into everything is divisive and should stop."
     },
     {
       "id": "nz4a",
@@ -243,7 +249,8 @@
         "nzf": -0.5,
         "tpm": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "A capital gains tax taxes profit made from selling assets like property or shares. New Zealand has none; this supports finally introducing one."
     },
     {
       "id": "nz4b",
@@ -262,7 +269,8 @@
         "nzf": 0.5,
         "tpm": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues a capital gains tax would punish savers and investors and drive money out of the country."
     },
     {
       "id": "nz5a",
@@ -280,7 +288,8 @@
         "act": -2,
         "tpm": 2,
         "g": 0
-      }
+      },
+      "ctx": "This supports significantly higher taxes on the wealthiest New Zealanders."
     },
     {
       "id": "nz5b",
@@ -298,7 +307,8 @@
         "act": 2,
         "tpm": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues higher taxes on the successful just drive talent and money to Australia ('across the Tasman')."
     },
     {
       "id": "nz6a",
@@ -317,7 +327,8 @@
         "nzf": 0.5,
         "tpm": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This wants public healthcare kept well funded and free, resisting privatisation."
     },
     {
       "id": "nz6b",
@@ -336,7 +347,8 @@
         "nzf": -0.5,
         "tpm": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues more private provision and competition would cut the public system's crippling waiting lists."
     },
     {
       "id": "nz7a",
@@ -355,7 +367,8 @@
         "nzf": 0.5,
         "tpm": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "'State housing' is government-owned rental housing. This supports building it on a large scale to fix the housing crisis."
     },
     {
       "id": "nz7b",
@@ -373,7 +386,8 @@
         "act": 1.5,
         "tpm": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues the fix is freeing up land and cutting red tape, not more government building."
     },
     {
       "id": "nz8a",
@@ -392,7 +406,8 @@
         "act": 1.5,
         "nzf": 2,
         "tpm": -1.5
-      }
+      },
+      "ctx": "This supports a crackdown on gangs and violent crime: tougher sentences and more police powers."
     },
     {
       "id": "nz8b",
@@ -411,7 +426,8 @@
         "act": -1.5,
         "nzf": -2,
         "tpm": 1.5
-      }
+      },
+      "ctx": "This argues locking more people up hasn't cut crime, and that tackling poverty and addiction does."
     },
     {
       "id": "nz9a",
@@ -430,7 +446,8 @@
         "act": 1.5,
         "nzf": 1.5,
         "tpm": -1.5
-      }
+      },
+      "ctx": "'Ram raids' are smash-and-grab robberies, often by youths. This supports real consequences for young repeat offenders, including boot camps."
     },
     {
       "id": "nz9b",
@@ -449,7 +466,8 @@
         "act": -1.5,
         "nzf": -1.5,
         "tpm": 1.5
-      }
+      },
+      "ctx": "This argues boot camps for children are proven to fail and that these kids need support, not punishment."
     },
     {
       "id": "nz10a",
@@ -468,7 +486,8 @@
         "act": -1.5,
         "nzf": -1.5,
         "tpm": 1
-      }
+      },
+      "ctx": "This supports cutting emissions faster, including from farming, which is NZ's biggest emissions source."
     },
     {
       "id": "nz10b",
@@ -487,7 +506,8 @@
         "act": 1.5,
         "nzf": 1.5,
         "tpm": -1
-      }
+      },
+      "ctx": "This argues emissions rules on farmers threaten the backbone of the economy for tiny global benefit."
     },
     {
       "id": "nz11a",
@@ -505,7 +525,8 @@
         "act": -0.5,
         "nzf": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues immigration levels are too high and are straining housing and infrastructure."
     },
     {
       "id": "nz11b",
@@ -523,7 +544,8 @@
         "act": 0.5,
         "nzf": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the pro-immigration view: that migrants bring skills and workers New Zealand needs."
     },
     {
       "id": "nz12a",
@@ -541,7 +563,8 @@
         "act": 0.5,
         "nzf": -1.5,
         "tpm": 0.5
-      }
+      },
+      "ctx": "This holds that multiculturalism has been good for New Zealand."
     },
     {
       "id": "nz12b",
@@ -559,7 +582,8 @@
         "act": -0.5,
         "nzf": 1.5,
         "tpm": -0.5
-      }
+      },
+      "ctx": "This argues mass immigration and multiculturalism are eroding New Zealand's character."
     },
     {
       "id": "nz13a",
@@ -578,7 +602,8 @@
         "act": -0.5,
         "nzf": 1,
         "tpm": -1
-      }
+      },
+      "ctx": "This argues Islam clashes with New Zealand values. Supporters cite integration concerns; critics call it religious prejudice."
     },
     {
       "id": "nz13b",
@@ -597,7 +622,8 @@
         "act": 0.5,
         "nzf": -1,
         "tpm": 1
-      }
+      },
+      "ctx": "This holds that Muslim New Zealanders are full members of society whose faith deserves equal respect."
     },
     {
       "id": "nz14a",
@@ -616,7 +642,8 @@
         "act": -1,
         "nzf": -0.5,
         "tpm": -2
-      }
+      },
+      "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
     },
     {
       "id": "nz14b",
@@ -635,7 +662,8 @@
         "act": 1,
         "nzf": 0.5,
         "tpm": 2
-      }
+      },
+      "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
     },
     {
       "id": "nz15a",
@@ -654,7 +682,8 @@
         "nzf": -2,
         "tpm": 1
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This supports transgender rights: the view that people should be able to have the law recognise the gender they identify as, without needing medical approval."
     },
     {
       "id": "nz15b",
@@ -673,7 +702,8 @@
         "nzf": 2,
         "tpm": -1
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the gender-critical view: that biological sex is a fixed fact the law should not allow a personal declaration to override."
     },
     {
       "id": "nz16a",
@@ -691,7 +721,8 @@
         "act": -2,
         "tpm": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "'Fair-pay agreements' set industry-wide pay deals. This supports stronger unions and worker rights and bringing those agreements back."
     },
     {
       "id": "nz16b",
@@ -709,7 +740,8 @@
         "act": 2,
         "tpm": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues union power and central pay deals hold the economy back and cost jobs."
     },
     {
       "id": "nz17a",
@@ -727,7 +759,8 @@
         "act": -2,
         "tpm": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues welfare benefits are too low and should be raised to lift people out of poverty."
     },
     {
       "id": "nz17b",
@@ -745,7 +778,8 @@
         "act": 2,
         "tpm": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues raising benefits too far weakens the incentive to work."
     },
     {
       "id": "nz18a",
@@ -764,7 +798,8 @@
         "act": 2,
         "nzf": 0.5,
         "tpm": -1
-      }
+      },
+      "ctx": "This argues New Zealand over-regulates business and companies need far less red tape."
     },
     {
       "id": "nz18b",
@@ -783,7 +818,8 @@
         "act": -2,
         "nzf": -0.5,
         "tpm": 1
-      }
+      },
+      "ctx": "This argues cutting regulation just lets companies off the hook on workers and the environment."
     },
     {
       "id": "nz19a",
@@ -802,7 +838,8 @@
         "act": -1,
         "nzf": -1,
         "tpm": 1
-      }
+      },
+      "ctx": "After the 2019 Christchurch mosque attacks, NZ banned many semi-automatic weapons. This supports keeping those tighter gun laws."
     },
     {
       "id": "nz19b",
@@ -821,7 +858,8 @@
         "act": 1,
         "nzf": 1,
         "tpm": -1
-      }
+      },
+      "ctx": "This argues the post-Christchurch gun laws punished law-abiding owners and should be loosened."
     },
     {
       "id": "nz20a",
@@ -839,7 +877,8 @@
         "act": 0.5,
         "nzf": -0.5,
         "tpm": 1
-      }
+      },
+      "ctx": "This treats abortion as a settled right whose access should be protected. NZ decriminalised abortion in 2020."
     },
     {
       "id": "nz20b",
@@ -857,7 +896,8 @@
         "act": -0.5,
         "nzf": 0.5,
         "tpm": -1
-      }
+      },
+      "ctx": "This argues abortion ends a human life and the current law is too permissive."
     },
     {
       "id": "nz21a",
@@ -875,7 +915,8 @@
         "grn": 0.5,
         "act": 1.5,
         "tpm": -0.5
-      }
+      },
+      "ctx": "NZ legalised assisted dying for the terminally ill in 2021. This defends that as the right, compassionate choice."
     },
     {
       "id": "nz21b",
@@ -893,7 +934,8 @@
         "grn": -0.5,
         "act": -1.5,
         "tpm": 0.5
-      }
+      },
+      "ctx": "This argues assisted dying pressures the vulnerable and crosses a line society shouldn't cross."
     },
     {
       "id": "nz22a",
@@ -912,7 +954,8 @@
         "act": 0.5,
         "nzf": -1.5,
         "tpm": 1.5
-      }
+      },
+      "ctx": "This supports treating drug use as a health issue and legalising cannabis."
     },
     {
       "id": "nz22b",
@@ -931,7 +974,8 @@
         "act": -0.5,
         "nzf": 1.5,
         "tpm": -1.5
-      }
+      },
+      "ctx": "This argues softening drug laws fuels addiction and harm and should be reversed."
     },
     {
       "id": "nz23a",
@@ -949,7 +993,8 @@
         "act": 1,
         "nzf": 0.5,
         "tpm": -0.5
-      }
+      },
+      "ctx": "This supports taking a harder line on China (a major power) even at the cost of trade."
     },
     {
       "id": "nz23b",
@@ -967,7 +1012,8 @@
         "act": -1,
         "nzf": -0.5,
         "tpm": 0.5
-      }
+      },
+      "ctx": "This argues New Zealand's prosperity depends on trade with China and confrontation would be reckless."
     },
     {
       "id": "nz24a",
@@ -986,7 +1032,8 @@
         "act": 1,
         "nzf": 0.5,
         "tpm": -1.5
-      }
+      },
+      "ctx": "This supports higher defence spending and aligning more with allies, such as the AUKUS security pact."
     },
     {
       "id": "nz24b",
@@ -1005,7 +1052,8 @@
         "act": -1,
         "nzf": -0.5,
         "tpm": 1.5
-      }
+      },
+      "ctx": "This argues NZ should stay independent and nuclear-free rather than be pulled into a military bloc."
     },
     {
       "id": "nz25a",
@@ -1024,7 +1072,8 @@
         "nzf": -1,
         "tpm": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This puts protecting nature ahead of new mining and development."
     },
     {
       "id": "nz25b",
@@ -1043,7 +1092,8 @@
         "nzf": 1,
         "tpm": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues endless environmental objections block the projects New Zealand needs."
     },
     {
       "id": "nz26a",
@@ -1062,7 +1112,8 @@
         "nzf": 0.5,
         "tpm": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports the government stepping in with price controls to ease the cost of living."
     },
     {
       "id": "nz26b",
@@ -1081,7 +1132,8 @@
         "nzf": -0.5,
         "tpm": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues price controls just cause shortages and don't fix the real problem."
     },
     {
       "id": "nz27a",
@@ -1099,7 +1151,8 @@
         "act": 1,
         "nzf": 2,
         "tpm": -0.5
-      }
+      },
+      "ctx": "This supports direct democracy: putting major decisions to the public in binding referendums."
     },
     {
       "id": "nz27b",
@@ -1117,7 +1170,8 @@
         "act": -1,
         "nzf": -2,
         "tpm": 0.5
-      }
+      },
+      "ctx": "This argues referendums reduce complex issues to slogans and are easily hijacked by populists."
     },
     {
       "id": "nz28a",
@@ -1136,7 +1190,8 @@
         "nzf": -1.5,
         "tpm": 1,
         "g": 0
-      }
+      },
+      "ctx": "RNZ and TVNZ are New Zealand's public media. This argues they are worth their funding and must stay independent."
     },
     {
       "id": "nz28b",
@@ -1155,7 +1210,8 @@
         "nzf": 1.5,
         "tpm": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues public broadcasters are biased and bloated and their funding should be cut."
     },
     {
       "id": "nz29a",
@@ -1173,7 +1229,8 @@
         "grn": -1.5,
         "nzf": 2,
         "tpm": -1
-      }
+      },
+      "ctx": "This argues immigrants should adapt to New Zealand's culture rather than the country adapting to them."
     },
     {
       "id": "nz29b",
@@ -1191,7 +1248,8 @@
         "grn": 1.5,
         "nzf": -2,
         "tpm": 1
-      }
+      },
+      "ctx": "This argues a living culture is always a blend, so demanding assimilation impoverishes New Zealand."
     },
     {
       "id": "nz30a",
@@ -1210,7 +1268,8 @@
         "act": 1,
         "nzf": 2,
         "tpm": -1
-      }
+      },
+      "ctx": "This argues parents should have more control over what schools teach their children about gender and identity."
     },
     {
       "id": "nz30b",
@@ -1229,7 +1288,8 @@
         "act": -1,
         "nzf": -2,
         "tpm": 1
-      }
+      },
+      "ctx": "This argues the curriculum should be set by educators and evidence, not by a parental veto over inclusion."
     },
     {
       "id": "nz31a",
@@ -1248,7 +1308,8 @@
         "act": 1.5,
         "nzf": -0.5,
         "tpm": -0.5
-      }
+      },
+      "ctx": "This supports free trade as having made New Zealand richer."
     },
     {
       "id": "nz31b",
@@ -1267,7 +1328,8 @@
         "act": -1.5,
         "nzf": 0.5,
         "tpm": 0.5
-      }
+      },
+      "ctx": "This argues free trade left New Zealand exposed, dependent, and with communities left behind."
     },
     {
       "id": "nz32a",
@@ -1285,7 +1347,8 @@
         "act": -2,
         "tpm": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues the unemployed are treated with too much suspicion and the safety net should be stronger."
     },
     {
       "id": "nz32b",
@@ -1303,7 +1366,8 @@
         "act": 2,
         "tpm": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues welfare can trap people, and sanctions protect the taxpayers who fund it."
     },
     {
       "id": "nz33a",
@@ -1322,7 +1386,8 @@
         "act": 0.5,
         "nzf": 2,
         "tpm": -1
-      }
+      },
+      "ctx": "This argues New Zealanders should be able to express national pride without being accused of racism."
     },
     {
       "id": "nz33b",
@@ -1341,7 +1406,8 @@
         "act": -0.5,
         "nzf": -2,
         "tpm": 1
-      }
+      },
+      "ctx": "This argues uncritical national pride glosses over colonisation and its ongoing harms to Māori."
     },
     {
       "id": "nz34a",
@@ -1359,7 +1425,8 @@
         "grn": -1,
         "act": 0.5,
         "nzf": 1.5
-      }
+      },
+      "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
     },
     {
       "id": "nz34b",
@@ -1377,7 +1444,8 @@
         "grn": 1,
         "act": -0.5,
         "nzf": -1.5
-      }
+      },
+      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
     },
     {
       "id": "nz35a",
@@ -1396,7 +1464,8 @@
         "act": 2,
         "nzf": 0.5,
         "tpm": -1.5
-      }
+      },
+      "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
     },
     {
       "id": "nz35b",
@@ -1415,7 +1484,8 @@
         "act": -2,
         "nzf": -0.5,
         "tpm": 1.5
-      }
+      },
+      "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
     }
   ],
   "heroTitle": "Where do you stand in<br><em>New Zealand</em> politics?",

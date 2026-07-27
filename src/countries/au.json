@@ -70,7 +70,8 @@
         "grn": 2,
         "teal": 1,
         "g": 0
-      }
+      },
+      "ctx": "Medicare is Australia's public health system; 'bulk-billing' means the doctor's fee is fully covered so the visit is free. This wants both kept strong."
     },
     {
       "id": "au1b",
@@ -88,7 +89,8 @@
         "grn": -2,
         "teal": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues a bigger role for private health and competition would take pressure off the public system."
     },
     {
       "id": "au2a",
@@ -107,7 +109,8 @@
         "grn": -1.5,
         "teal": -0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Australia's immigration intake is too high and is pushing up housing costs."
     },
     {
       "id": "au2b",
@@ -126,7 +129,8 @@
         "grn": 1.5,
         "teal": 0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the pro-immigration view: that migration keeps the economy growing and brings needed skills."
     },
     {
       "id": "au3a",
@@ -145,7 +149,8 @@
         "grn": -2,
         "teal": -1
       },
-      "dec": true
+      "dec": true,
+      "ctx": "'Boat turnbacks' and 'offshore processing' send asylum seekers arriving by boat to detention in other countries. This backs the policy as necessary."
     },
     {
       "id": "au3b",
@@ -164,7 +169,8 @@
         "grn": 2,
         "teal": 1
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This condemns offshore detention as cruel and indefinite punishment of people who committed no crime."
     },
     {
       "id": "au4a",
@@ -183,7 +189,8 @@
         "grn": 2,
         "teal": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This supports cutting Australia's emissions much faster, even at a cost to its large coal and gas industries."
     },
     {
       "id": "au4b",
@@ -202,7 +209,8 @@
         "grn": -2,
         "teal": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues rushing the shift away from fossil fuels threatens jobs and reliable power for little global benefit."
     },
     {
       "id": "au5a",
@@ -220,7 +228,8 @@
         "nat": 1.5,
         "grn": -2,
         "teal": -1
-      }
+      },
+      "ctx": "Australia currently bans nuclear power. This supports building it to cut emissions while keeping reliable electricity."
     },
     {
       "id": "au5b",
@@ -238,7 +247,8 @@
         "nat": -1.5,
         "grn": 2,
         "teal": 1
-      }
+      },
+      "ctx": "This argues nuclear is too slow and expensive for Australia, and that renewables plus storage are the future."
     },
     {
       "id": "au6a",
@@ -255,7 +265,8 @@
         "nat": 2,
         "grn": -2,
         "teal": -1.5
-      }
+      },
+      "ctx": "This supports approving new coal and gas projects to keep export income and jobs strong."
     },
     {
       "id": "au6b",
@@ -272,7 +283,8 @@
         "nat": -2,
         "grn": 2,
         "teal": 1.5
-      }
+      },
+      "ctx": "This argues approving new fossil-fuel projects during a climate crisis is indefensible."
     },
     {
       "id": "au7a",
@@ -290,7 +302,8 @@
         "grn": 2,
         "teal": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports significantly higher taxes on the wealthiest Australians and big corporations."
     },
     {
       "id": "au7b",
@@ -308,7 +321,8 @@
         "grn": -2,
         "teal": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues higher taxes on wealth and business drive investment and talent away."
     },
     {
       "id": "au8a",
@@ -326,7 +340,8 @@
         "grn": 2,
         "teal": 1,
         "g": 0
-      }
+      },
+      "ctx": "'Negative gearing' and capital-gains discounts are tax breaks for property investors. This wants them wound back to cool the housing market."
     },
     {
       "id": "au8b",
@@ -344,7 +359,8 @@
         "grn": -2,
         "teal": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues cutting those tax breaks would push up rents and hurt millions of ordinary landlords."
     },
     {
       "id": "au9a",
@@ -362,7 +378,8 @@
         "grn": 2,
         "teal": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports governments building large amounts of public housing directly."
     },
     {
       "id": "au9b",
@@ -379,7 +396,8 @@
         "nat": 0.5,
         "grn": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues governments build badly, and the real fix is cutting planning red tape so the market can build."
     },
     {
       "id": "au10a",
@@ -397,7 +415,8 @@
         "nat": -2,
         "grn": 2,
         "teal": 1
-      }
+      },
+      "ctx": "The 'Voice' was a proposed Indigenous advisory body; 'treaty' and 'truth-telling' are related reconciliation steps. This supports continuing to pursue them."
     },
     {
       "id": "au10b",
@@ -415,7 +434,8 @@
         "nat": 2,
         "grn": -2,
         "teal": -1
-      }
+      },
+      "ctx": "This notes the Voice was rejected in a 2023 referendum and argues Australia should move on from these divisive proposals."
     },
     {
       "id": "au11a",
@@ -433,7 +453,8 @@
         "nat": -1.5,
         "grn": 1.5,
         "teal": 0.5
-      }
+      },
+      "ctx": "This supports Australia becoming a republic with its own head of state, instead of the British King."
     },
     {
       "id": "au11b",
@@ -451,7 +472,8 @@
         "nat": 1.5,
         "grn": -1.5,
         "teal": -0.5
-      }
+      },
+      "ctx": "This argues the current system works and gives stability, so there's no need for a republic."
     },
     {
       "id": "au12a",
@@ -469,7 +491,8 @@
         "nat": -1,
         "grn": 1.5,
         "teal": 2
-      }
+      },
+      "ctx": "This supports tougher limits on political donations and a stronger federal anti-corruption watchdog."
     },
     {
       "id": "au12b",
@@ -487,7 +510,8 @@
         "nat": 1,
         "grn": -1.5,
         "teal": -2
-      }
+      },
+      "ctx": "This argues ever more integrity rules tangle government in red tape and put good people off serving."
     },
     {
       "id": "au13a",
@@ -504,7 +528,8 @@
         "lib": 1.5,
         "nat": 1.5,
         "grn": -2
-      }
+      },
+      "ctx": "AUKUS is a deal for Australia to get nuclear-powered submarines with the US and UK. This backs it as right for national security."
     },
     {
       "id": "au13b",
@@ -521,7 +546,8 @@
         "lib": -1.5,
         "nat": -1.5,
         "grn": 2
-      }
+      },
+      "ctx": "This argues AUKUS is a hugely expensive gamble that ties Australia to America's wars."
     },
     {
       "id": "au14a",
@@ -539,7 +565,8 @@
         "nat": 1.5,
         "grn": -1,
         "teal": 0.5
-      }
+      },
+      "ctx": "This supports taking a harder line on China (a rival power) even if it costs valuable trade."
     },
     {
       "id": "au14b",
@@ -557,7 +584,8 @@
         "nat": -1.5,
         "grn": 1,
         "teal": -0.5
-      }
+      },
+      "ctx": "This argues Australia's prosperity depends on trade with China and that confrontation would wreck the economy."
     },
     {
       "id": "au15a",
@@ -574,7 +602,8 @@
         "nat": 2,
         "grn": -1.5,
         "teal": -0.5
-      }
+      },
+      "ctx": "This argues sentences are too soft and that violent and repeat offenders should spend far longer in prison."
     },
     {
       "id": "au15b",
@@ -591,7 +620,8 @@
         "nat": -2,
         "grn": 1.5,
         "teal": 0.5
-      }
+      },
+      "ctx": "This argues locking more people up hasn't cut crime, and that prevention and rehabilitation work better."
     },
     {
       "id": "au16a",
@@ -608,7 +638,8 @@
         "nat": 2,
         "grn": -2,
         "teal": -0.5
-      }
+      },
+      "ctx": "The 'age of criminal responsibility' is how young a child can be charged with a crime. This wants it kept low with real consequences for young offenders."
     },
     {
       "id": "au16b",
@@ -625,7 +656,8 @@
         "nat": -2,
         "grn": 2,
         "teal": 0.5
-      }
+      },
+      "ctx": "This argues jailing very young children is barbaric and the age of criminal responsibility must be raised."
     },
     {
       "id": "au17a",
@@ -642,7 +674,8 @@
         "nat": 1,
         "grn": -2,
         "teal": -1
-      }
+      },
+      "ctx": "This argues multiculturalism has failed, producing divided communities with little in common."
     },
     {
       "id": "au17b",
@@ -659,7 +692,8 @@
         "nat": -1,
         "grn": 2,
         "teal": 1
-      }
+      },
+      "ctx": "This celebrates Australia's multiculturalism as a genuine success and one of its greatest strengths."
     },
     {
       "id": "au18a",
@@ -677,7 +711,8 @@
         "nat": 0.5,
         "grn": -2,
         "teal": -1
-      }
+      },
+      "ctx": "This argues Islam clashes with Australian values. Supporters cite integration concerns; critics call it religious prejudice."
     },
     {
       "id": "au18b",
@@ -695,7 +730,8 @@
         "nat": -0.5,
         "grn": 2,
         "teal": 1
-      }
+      },
+      "ctx": "This holds that Muslim Australians are full members of society whose faith deserves equal respect."
     },
     {
       "id": "au19a",
@@ -713,7 +749,8 @@
         "nat": -0.5,
         "grn": -2,
         "teal": -1.5
-      }
+      },
+      "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
     },
     {
       "id": "au19b",
@@ -731,7 +768,8 @@
         "nat": 0.5,
         "grn": 2,
         "teal": 1.5
-      }
+      },
+      "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
     },
     {
       "id": "au20a",
@@ -750,7 +788,8 @@
         "grn": 2,
         "teal": 0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This supports transgender rights: the view that people should be able to have the law recognise the gender they identify as, without needing medical approval."
     },
     {
       "id": "au20b",
@@ -769,7 +808,8 @@
         "grn": -2,
         "teal": -0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the gender-critical view: that biological sex is a fixed fact the law should not allow a personal declaration to override."
     },
     {
       "id": "au21a",
@@ -787,7 +827,8 @@
         "grn": 2,
         "teal": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues public schools are underfunded while private schools get too much public money, and the balance should shift."
     },
     {
       "id": "au21b",
@@ -805,7 +846,8 @@
         "grn": -2,
         "teal": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues parents who pay for private schools save taxpayers money and deserve support, not penalties."
     },
     {
       "id": "au22a",
@@ -823,7 +865,8 @@
         "nat": -1.5,
         "grn": 1.5,
         "teal": 1
-      }
+      },
+      "ctx": "This treats abortion as a settled right that should be fully protected across all states."
     },
     {
       "id": "au22b",
@@ -841,7 +884,8 @@
         "nat": 1.5,
         "grn": -1.5,
         "teal": -1
-      }
+      },
+      "ctx": "This argues abortion ends a human life and that there should be firmer limits than exist today."
     },
     {
       "id": "au23a",
@@ -858,7 +902,8 @@
         "nat": -1,
         "grn": 2,
         "g": 0
-      }
+      },
+      "ctx": "This supports stronger unions and worker rights, and pushing harder for wage growth."
     },
     {
       "id": "au23b",
@@ -875,7 +920,8 @@
         "nat": 1,
         "grn": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues union power raises costs and holds the economy back, and that workplace rules should be loosened."
     },
     {
       "id": "au24a",
@@ -893,7 +939,8 @@
         "nat": 1.5,
         "grn": -1.5,
         "teal": -0.5
-      }
+      },
+      "ctx": "This argues Australia over-regulates business and that companies need far less red tape and lower taxes."
     },
     {
       "id": "au24b",
@@ -911,7 +958,8 @@
         "nat": -1.5,
         "grn": 1.5,
         "teal": 0.5
-      }
+      },
+      "ctx": "This argues cutting regulation just lets big companies off the hook on workers and the environment."
     },
     {
       "id": "au25a",
@@ -927,7 +975,8 @@
         "lib": -0.5,
         "grn": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports the government stepping in directly, with price caps and subsidies, to ease the cost of living."
     },
     {
       "id": "au25b",
@@ -943,7 +992,8 @@
         "lib": 0.5,
         "grn": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues price caps and handouts just fuel inflation and debt without fixing the real problem."
     },
     {
       "id": "au26a",
@@ -961,7 +1011,8 @@
         "grn": 2,
         "teal": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "JobSeeker is Australia's unemployment payment. This argues it and similar payments are too low and should be raised above the poverty line."
     },
     {
       "id": "au26b",
@@ -979,7 +1030,8 @@
         "grn": -2,
         "teal": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues raising welfare payments too far weakens the incentive to find work."
     },
     {
       "id": "au27a",
@@ -997,7 +1049,8 @@
         "nat": -0.5,
         "grn": 2,
         "teal": 1.5
-      }
+      },
+      "ctx": "This supports banning gambling advertising outright to protect people from gambling harm."
     },
     {
       "id": "au27b",
@@ -1015,7 +1068,8 @@
         "nat": 0.5,
         "grn": -2,
         "teal": -1.5
-      }
+      },
+      "ctx": "This argues banning gambling ads is 'nanny-state' overreach and that adults can decide for themselves."
     },
     {
       "id": "au28a",
@@ -1032,7 +1086,8 @@
         "nat": -2,
         "grn": 2,
         "teal": 0.5
-      }
+      },
+      "ctx": "'Pill testing' checks drugs for danger at events. This supports treating drug use as a health issue, with pill testing and decriminalisation."
     },
     {
       "id": "au28b",
@@ -1049,7 +1104,8 @@
         "nat": 2,
         "grn": -2,
         "teal": -0.5
-      }
+      },
+      "ctx": "This argues softening the approach to drugs sends the wrong message and puts more lives at risk."
     },
     {
       "id": "au29a",
@@ -1067,7 +1123,8 @@
         "nat": 0.5,
         "grn": -1,
         "teal": 0.5
-      }
+      },
+      "ctx": "This supports open global free trade as having made Australia richer."
     },
     {
       "id": "au29b",
@@ -1085,7 +1142,8 @@
         "nat": -0.5,
         "grn": 1,
         "teal": -0.5
-      }
+      },
+      "ctx": "This argues free trade hollowed out Australian manufacturing and left towns behind."
     },
     {
       "id": "au30a",
@@ -1103,7 +1161,8 @@
         "nat": -2,
         "grn": 2,
         "teal": 1.5
-      }
+      },
+      "ctx": "This puts protecting nature ahead of new mines, dams, and development."
     },
     {
       "id": "au30b",
@@ -1121,7 +1180,8 @@
         "nat": 2,
         "grn": -2,
         "teal": -1.5
-      }
+      },
+      "ctx": "This argues endless environmental objections block the projects Australia needs to prosper."
     },
     {
       "id": "au31a",
@@ -1139,7 +1199,8 @@
         "nat": 1.5,
         "grn": -2,
         "teal": -0.5
-      }
+      },
+      "ctx": "This argues immigrants who won't integrate or adopt Australian values should not be in the country."
     },
     {
       "id": "au31b",
@@ -1157,7 +1218,8 @@
         "nat": -1.5,
         "grn": 2,
         "teal": 0.5
-      }
+      },
+      "ctx": "This argues demanding cultural conformity betrays the multicultural spirit of modern Australia."
     },
     {
       "id": "au32a",
@@ -1175,7 +1237,8 @@
         "nat": 2,
         "grn": -2,
         "teal": -0.5
-      }
+      },
+      "ctx": "Australia Day (26 January) marks British settlement. This supports keeping the date."
     },
     {
       "id": "au32b",
@@ -1193,7 +1256,8 @@
         "nat": -2,
         "grn": 2,
         "teal": 0.5
-      }
+      },
+      "ctx": "This argues the date is painful for Indigenous Australians (some call it 'Invasion Day') and should change."
     },
     {
       "id": "au33a",
@@ -1211,7 +1275,8 @@
         "grn": 1.5,
         "teal": 1,
         "g": 0
-      }
+      },
+      "ctx": "The ABC is Australia's public broadcaster. This argues it is worth its public funding and must stay independent of government."
     },
     {
       "id": "au33b",
@@ -1229,7 +1294,8 @@
         "grn": -1.5,
         "teal": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues the ABC is biased and bloated and its public funding should be cut."
     },
     {
       "id": "au34a",
@@ -1247,7 +1313,8 @@
         "nat": 2,
         "grn": -1,
         "teal": -0.5
-      }
+      },
+      "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
     },
     {
       "id": "au34b",
@@ -1265,7 +1332,8 @@
         "nat": -2,
         "grn": 1,
         "teal": 0.5
-      }
+      },
+      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
     },
     {
       "id": "au35a",
@@ -1283,7 +1351,8 @@
         "nat": 1.5,
         "grn": -2,
         "teal": -0.5
-      }
+      },
+      "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
     },
     {
       "id": "au35b",
@@ -1301,7 +1370,8 @@
         "nat": -1.5,
         "grn": 2,
         "teal": 0.5
-      }
+      },
+      "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
     }
   ],
   "heroTitle": "Where do you stand in <em>Australian</em> politics?",

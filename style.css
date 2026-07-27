@@ -1032,6 +1032,57 @@ html.dark-mode .nav-badge {
 .q-opt-likert.lk2.picked,
 .q-opt-likert.lk3.picked { color: #1a1a1a; }
 
+/* "What does this mean?" context helper */
+.q-help-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 22px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #2A5DB0;
+  transition: color 0.15s;
+}
+.q-help-btn::before {
+  content: '?';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1.4px solid currentColor;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+.q-help-btn:hover { color: #17417f; }
+.q-help-btn.open::before { content: '\00d7'; }
+
+.q-context-box {
+  margin: -6px 0 24px;
+  padding: 16px 18px;
+  background: var(--parchment-warm);
+  border: 1px solid var(--border-soft);
+  border-left: 3px solid #2A5DB0;
+  border-radius: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  animation: ctxFade 0.2s ease;
+}
+@keyframes ctxFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .q-foot {
   display: flex;
   justify-content: space-between;

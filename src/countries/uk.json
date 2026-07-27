@@ -82,7 +82,8 @@
         "grn": 2,
         "snp": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "The NHS is Britain's public health service, free when you use it and funded by taxes. This wants it kept public, with private involvement reduced."
     },
     {
       "id": "uk1b",
@@ -102,7 +103,8 @@
         "grn": -2,
         "snp": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues the NHS is an inefficient monopoly, and that more private provision and competition would cut its long waiting lists."
     },
     {
       "id": "uk2a",
@@ -123,7 +125,8 @@
         "grn": -2,
         "snp": -1
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues immigration to Britain is far too high and is changing the country too fast — a central concern of the right."
     },
     {
       "id": "uk2b",
@@ -144,7 +147,8 @@
         "grn": 2,
         "snp": 1
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the pro-immigration view: that migrants keep the NHS, care sector, and economy running, so Britain needs them."
     },
     {
       "id": "uk3a",
@@ -165,7 +169,8 @@
         "grn": -2,
         "snp": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is a hardline stance on the small boats crossing the English Channel: detain and deport everyone who arrives illegally."
     },
     {
       "id": "uk3b",
@@ -186,7 +191,8 @@
         "grn": 2,
         "snp": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This opposes that stance, arguing people fleeing war are not criminals and that treating asylum seekers as invaders shames Britain."
     },
     {
       "id": "uk4a",
@@ -206,7 +212,8 @@
         "res": -2,
         "grn": 1.5,
         "snp": 1.5
-      }
+      },
+      "ctx": "Brexit was Britain's 2020 departure from the European Union. This calls it a mistake and wants Britain to move back towards rejoining."
     },
     {
       "id": "uk4b",
@@ -226,7 +233,8 @@
         "res": 2,
         "grn": -1.5,
         "snp": -1.5
-      }
+      },
+      "ctx": "This defends Brexit as having restored British control over its own laws, and opposes handing that back to Brussels (the EU)."
     },
     {
       "id": "uk5a",
@@ -246,7 +254,8 @@
         "grn": 2,
         "snp": 1,
         "g": 0
-      }
+      },
+      "ctx": "This supports taxing the very richest much more, including taxing accumulated wealth, not just income."
     },
     {
       "id": "uk5b",
@@ -266,7 +275,8 @@
         "grn": -2,
         "snp": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues high taxes drive wealthy people and their money out of Britain, harming everyone."
     },
     {
       "id": "uk6a",
@@ -286,7 +296,8 @@
         "res": 2,
         "grn": -2,
         "snp": -1
-      }
+      },
+      "ctx": "This argues Britain's benefits (welfare) bill is too high and should be capped firmly so that working always pays more than claiming."
     },
     {
       "id": "uk6b",
@@ -306,7 +317,8 @@
         "res": -2,
         "grn": 2,
         "snp": 1
-      }
+      },
+      "ctx": "This argues Britain's safety net has already been cut too far, and that caps and sanctions push disabled people and children into poverty."
     },
     {
       "id": "uk7a",
@@ -326,7 +338,8 @@
         "grn": 2,
         "snp": 1,
         "g": 0
-      }
+      },
+      "ctx": "'Net zero' is Britain's legal target to stop adding greenhouse gases by 2050. This backs hitting it even at real short-term cost."
     },
     {
       "id": "uk7b",
@@ -346,7 +359,8 @@
         "grn": -2,
         "snp": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues net zero is an unaffordable elite project that is damaging British industry and raising household bills."
     },
     {
       "id": "uk8a",
@@ -365,7 +379,8 @@
         "grn": 2,
         "snp": 1,
         "g": 0
-      }
+      },
+      "ctx": "This supports 'nationalisation' — bringing rail, water, and energy back under public ownership instead of private companies."
     },
     {
       "id": "uk8b",
@@ -384,7 +399,8 @@
         "grn": -2,
         "snp": -1,
         "g": 0
-      }
+      },
+      "ctx": "This defends private ownership of those industries, arguing that state-run versions meant strikes, waste, and decline."
     },
     {
       "id": "uk9a",
@@ -404,7 +420,8 @@
         "res": -0.5,
         "grn": -1,
         "snp": 0.5
-      }
+      },
+      "ctx": "The 'green belt' is protected countryside around cities. This supports building many more homes even there, to fix the housing shortage."
     },
     {
       "id": "uk9b",
@@ -424,7 +441,8 @@
         "res": 0.5,
         "grn": 1,
         "snp": -0.5
-      }
+      },
+      "ctx": "This defends the green belt from development, opposing building over the countryside."
     },
     {
       "id": "uk10a",
@@ -443,7 +461,8 @@
         "ref": 2,
         "res": 2,
         "grn": -1.5
-      }
+      },
+      "ctx": "This argues criminal sentences are too lenient and that violent and repeat offenders should serve much longer."
     },
     {
       "id": "uk10b",
@@ -462,7 +481,8 @@
         "ref": -2,
         "res": -2,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues locking more people up for longer has not cut crime, and that prevention and rehabilitation work better."
     },
     {
       "id": "uk11a",
@@ -483,7 +503,8 @@
         "grn": -1.5,
         "snp": -0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This refers to organised child sexual abuse ('grooming gangs') in some UK towns, and claims officials hid the offenders' ethnicity out of political correctness."
     },
     {
       "id": "uk11b",
@@ -504,7 +525,8 @@
         "grn": 1.5,
         "snp": 0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues that framing this abuse as one ethnic group's problem is a racist distortion of a crime found across all communities."
     },
     {
       "id": "uk12a",
@@ -525,7 +547,8 @@
         "grn": 1.5,
         "snp": 1
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This supports letting people change their legal gender by simple self-declaration, without needing medical sign-off."
     },
     {
       "id": "uk12b",
@@ -546,7 +569,8 @@
         "grn": -1.5,
         "snp": -1
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the gender-critical view: that a legal form cannot change biological sex, which the law should be based on."
     },
     {
       "id": "uk13a",
@@ -566,7 +590,8 @@
         "res": -2,
         "grn": 1,
         "snp": 2
-      }
+      },
+      "ctx": "This supports Scottish independence — Scotland leaving the United Kingdom to become its own country."
     },
     {
       "id": "uk13b",
@@ -586,7 +611,8 @@
         "res": 2,
         "grn": -1,
         "snp": -2
-      }
+      },
+      "ctx": "This opposes independence, arguing Scotland is stronger inside the UK and that the 2014 referendum settled the question."
     },
     {
       "id": "uk14a",
@@ -606,7 +632,8 @@
         "res": -2,
         "grn": 1,
         "snp": 0.5
-      }
+      },
+      "ctx": "This supports abolishing the monarchy and replacing the King with an elected head of state (a republic)."
     },
     {
       "id": "uk14b",
@@ -626,7 +653,8 @@
         "res": 2,
         "grn": -1,
         "snp": -0.5
-      }
+      },
+      "ctx": "This defends the monarchy as a source of stability and continuity that elected politicians cannot provide."
     },
     {
       "id": "uk15a",
@@ -645,7 +673,8 @@
         "grn": 1.5,
         "snp": 1,
         "g": 0
-      }
+      },
+      "ctx": "This backs the government's policy of charging VAT (a 20% tax) on private school fees, arguing elite schooling shouldn't be tax-exempt."
     },
     {
       "id": "uk15b",
@@ -664,7 +693,8 @@
         "grn": -1.5,
         "snp": -1,
         "g": 0
-      }
+      },
+      "ctx": "This opposes the private-school tax, arguing it punishes parents who sacrifice for their children's education and pushes pupils into state schools."
     },
     {
       "id": "uk16a",
@@ -684,7 +714,8 @@
         "res": 2,
         "grn": -2,
         "snp": -1
-      }
+      },
+      "ctx": "This argues multiculturalism has failed, producing separate communities with little in common."
     },
     {
       "id": "uk16b",
@@ -704,7 +735,8 @@
         "res": -2,
         "grn": 2,
         "snp": 1
-      }
+      },
+      "ctx": "This celebrates Britain's diversity as a strength, pointing to multicultural cities as proof it works."
     },
     {
       "id": "uk17a",
@@ -723,7 +755,8 @@
         "res": 2,
         "grn": -2,
         "snp": -1
-      }
+      },
+      "ctx": "This argues Islam clashes with British values. Supporters cite security and integration; critics call it religious prejudice."
     },
     {
       "id": "uk17b",
@@ -742,7 +775,8 @@
         "res": -2,
         "grn": 2,
         "snp": 1
-      }
+      },
+      "ctx": "This holds that British Muslims are fully part of the country and their faith deserves equal respect."
     },
     {
       "id": "uk18a",
@@ -762,7 +796,8 @@
         "res": 1,
         "grn": -2,
         "snp": -1.5
-      }
+      },
+      "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
     },
     {
       "id": "uk18b",
@@ -782,7 +817,8 @@
         "res": -1,
         "grn": 2,
         "snp": 1.5
-      }
+      },
+      "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
     },
     {
       "id": "uk19a",
@@ -802,7 +838,8 @@
         "res": 2,
         "grn": -0.5,
         "snp": -0.5
-      }
+      },
+      "ctx": "This argues free speech in Britain is genuinely threatened, pointing to people being arrested over offensive online posts or jokes."
     },
     {
       "id": "uk19b",
@@ -822,7 +859,8 @@
         "res": -2,
         "grn": 0.5,
         "snp": 0.5
-      }
+      },
+      "ctx": "This argues the free-speech complaint is really cover for wanting to abuse minorities, and that hate-speech laws protect people."
     },
     {
       "id": "uk20a",
@@ -841,7 +879,8 @@
         "res": 2,
         "grn": -1,
         "snp": -0.5
-      }
+      },
+      "ctx": "This argues police waste effort on policing online speech and identity issues while failing to investigate real crime."
     },
     {
       "id": "uk20b",
@@ -860,7 +899,8 @@
         "res": -2,
         "grn": 1,
         "snp": 0.5
-      }
+      },
+      "ctx": "This argues online abuse and hate crimes cause real harm and that police are right to take them seriously."
     },
     {
       "id": "uk21a",
@@ -880,7 +920,8 @@
         "res": 2,
         "grn": -2,
         "snp": -1
-      }
+      },
+      "ctx": "Foreign aid is money Britain gives to poorer countries. This wants that budget cut and spent at home instead."
     },
     {
       "id": "uk21b",
@@ -900,7 +941,8 @@
         "res": -2,
         "grn": 2,
         "snp": 1
-      }
+      },
+      "ctx": "This defends foreign aid as saving lives and giving Britain influence abroad, calling cuts both cruel and short-sighted."
     },
     {
       "id": "uk22a",
@@ -918,7 +960,8 @@
         "lib": 1,
         "ref": 0.5,
         "grn": -1.5
-      }
+      },
+      "ctx": "This supports sharply higher defence spending and continued military support for Ukraine against Russia."
     },
     {
       "id": "uk22b",
@@ -936,7 +979,8 @@
         "lib": -1,
         "ref": -0.5,
         "grn": 1.5
-      }
+      },
+      "ctx": "This argues money spent on weapons and foreign wars would be better used fixing problems within Britain."
     },
     {
       "id": "uk23a",
@@ -956,7 +1000,8 @@
         "res": -2,
         "grn": 1.5,
         "snp": 0.5
-      }
+      },
+      "ctx": "This supports treating drug use as a health issue and decriminalising possession of drugs for personal use."
     },
     {
       "id": "uk23b",
@@ -976,7 +1021,8 @@
         "res": 2,
         "grn": -1.5,
         "snp": -0.5
-      }
+      },
+      "ctx": "This opposes softening drug laws, arguing it fuels addiction and hands profits to criminal gangs."
     },
     {
       "id": "uk24a",
@@ -996,7 +1042,8 @@
         "res": -1.5,
         "grn": 1.5,
         "snp": 1
-      }
+      },
+      "ctx": "This treats abortion as a settled right and would if anything make access easier."
     },
     {
       "id": "uk24b",
@@ -1016,7 +1063,8 @@
         "res": 1.5,
         "grn": -1.5,
         "snp": -1
-      }
+      },
+      "ctx": "This argues abortion ends a human life and that the legal time limits should be tightened."
     },
     {
       "id": "uk25a",
@@ -1036,7 +1084,8 @@
         "res": 0.5,
         "grn": 2,
         "snp": 1
-      }
+      },
+      "ctx": "'First-past-the-post' is Britain's voting system, where the candidate with the most votes wins each seat. This wants it replaced with proportional representation, which matches seats to overall vote share."
     },
     {
       "id": "uk25b",
@@ -1056,7 +1105,8 @@
         "res": -0.5,
         "grn": -2,
         "snp": -1
-      }
+      },
+      "ctx": "This defends first-past-the-post, arguing it produces strong, stable single-party governments."
     },
     {
       "id": "uk26a",
@@ -1075,7 +1125,8 @@
         "grn": 2,
         "snp": 1,
         "g": 0
-      }
+      },
+      "ctx": "This supports stronger trade unions and worker rights, and protecting the right to strike."
     },
     {
       "id": "uk26b",
@@ -1094,7 +1145,8 @@
         "grn": -2,
         "snp": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues powerful union leaders hold the country to ransom and that strike laws should be tightened."
     },
     {
       "id": "uk27a",
@@ -1112,7 +1164,8 @@
         "res": -1,
         "grn": 1,
         "snp": 0.5
-      }
+      },
+      "ctx": "This supports giving terminally ill adults the legal right to an assisted death (medical help to end their life)."
     },
     {
       "id": "uk27b",
@@ -1130,7 +1183,8 @@
         "res": 1,
         "grn": -1,
         "snp": -0.5
-      }
+      },
+      "ctx": "This opposes assisted dying, warning it could pressure vulnerable people and crosses a moral line."
     },
     {
       "id": "uk28a",
@@ -1149,7 +1203,8 @@
         "grn": 2,
         "snp": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports raising the minimum wage significantly, even against business objections about cost."
     },
     {
       "id": "uk28b",
@@ -1168,7 +1223,8 @@
         "grn": -2,
         "snp": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues pushing wages up faster than productivity closes small businesses and cuts entry-level jobs."
     },
     {
       "id": "uk29a",
@@ -1188,7 +1244,8 @@
         "res": 2,
         "grn": -1.5,
         "snp": -0.5
-      }
+      },
+      "ctx": "This favours teaching children pride in Britain's history, including the Empire, rather than shame about it."
     },
     {
       "id": "uk29b",
@@ -1208,7 +1265,8 @@
         "res": -2,
         "grn": 1.5,
         "snp": 0.5
-      }
+      },
+      "ctx": "This supports teaching the crimes of the British Empire honestly, arguing that hiding them misleads schoolchildren."
     },
     {
       "id": "uk30a",
@@ -1227,7 +1285,8 @@
         "ref": -0.5,
         "res": -1,
         "grn": -1
-      }
+      },
+      "ctx": "This supports free trade and open global markets as having made Britain richer."
     },
     {
       "id": "uk30b",
@@ -1246,7 +1305,8 @@
         "ref": 0.5,
         "res": 1,
         "grn": 1
-      }
+      },
+      "ctx": "This argues globalisation destroyed Britain's industrial towns by moving jobs to cheaper labour abroad."
     },
     {
       "id": "uk31a",
@@ -1266,7 +1326,8 @@
         "res": -1.5,
         "grn": 2,
         "snp": 0.5
-      }
+      },
+      "ctx": "This puts protecting nature and wildlife ahead of new roads, airport runways, and development."
     },
     {
       "id": "uk31b",
@@ -1286,7 +1347,8 @@
         "res": 1.5,
         "grn": -2,
         "snp": -0.5
-      }
+      },
+      "ctx": "This argues endless environmental objections block the growth and infrastructure Britain needs."
     },
     {
       "id": "uk32a",
@@ -1306,7 +1368,8 @@
         "res": 2,
         "grn": -2,
         "snp": -1
-      }
+      },
+      "ctx": "This argues workplace diversity and inclusion schemes have gone too far and should be scrapped."
     },
     {
       "id": "uk32b",
@@ -1326,7 +1389,8 @@
         "res": -2,
         "grn": 2,
         "snp": 1
-      }
+      },
+      "ctx": "This defends diversity schemes as a response to real discrimination, arguing scrapping them protects an 'old boys' club'."
     },
     {
       "id": "uk33a",
@@ -1345,7 +1409,8 @@
         "grn": 2,
         "snp": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "A 'windfall tax' is an extra tax on unusually large profits. This wants a bigger one on energy companies making record profits."
     },
     {
       "id": "uk33b",
@@ -1364,7 +1429,8 @@
         "grn": -2,
         "snp": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues windfall taxes scare off the investment Britain needs to keep its energy supply going."
     },
     {
       "id": "uk34a",
@@ -1384,7 +1450,8 @@
         "res": 1.5,
         "grn": -1,
         "snp": -0.5
-      }
+      },
+      "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
     },
     {
       "id": "uk34b",
@@ -1404,7 +1471,8 @@
         "res": -1.5,
         "grn": 1,
         "snp": 0.5
-      }
+      },
+      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
     },
     {
       "id": "uk35a",
@@ -1423,7 +1491,8 @@
         "res": 1.5,
         "grn": -1.5,
         "snp": -1
-      }
+      },
+      "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
     },
     {
       "id": "uk35b",
@@ -1442,7 +1511,8 @@
         "res": -1.5,
         "grn": 1.5,
         "snp": 1
-      }
+      },
+      "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
     }
   ],
   "heroTitle": "Where do you stand in <em>British</em> politics?",

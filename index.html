@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.3">
+<link rel="stylesheet" href="/style.css?v=1.1.7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -297,11 +297,9 @@
       <span class="prog-txt" id="prog-txt">1 of 47</span>
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
-    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Context</div>
-      <div class="q-scenario-body" id="q-scen-body"></div>
-    </div>
     <div class="q-question" id="q-text"></div>
+    <button type="button" class="q-help-btn" id="q-help-btn" onclick="toggleQContext()" aria-expanded="false" style="display:none"></button>
+    <div class="q-context-box" id="q-context-box" style="display:none"></div>
     <div class="q-opts" id="q-opts"></div>
     <div class="q-foot">
       <button class="btn-skip" onclick="skipQ()">Skip</button>
@@ -1101,7 +1099,8 @@ const BANK = [
       "nc": -0.5,
       "ns": 1,
       "mon": -1
-    }
+    },
+    "ctx": "This is the core idea of communism: that factories, farmland, and big companies should be owned collectively or by the state instead of by private individuals. “The people” means society as a whole rather than private owners."
   },
   {
     "id": "g1b",
@@ -1125,7 +1124,8 @@ const BANK = [
       "nc": 0.5,
       "ns": -1,
       "mon": 1
-    }
+    },
+    "ctx": "This points to 20th-century communist states like the Soviet Union under Stalin and China under Mao, where abolishing private property was followed by famine, repression, and millions of deaths. It argues that history shows the idea fails catastrophically."
   },
   {
     "id": "g2a",
@@ -1148,7 +1148,8 @@ const BANK = [
       "nc": 0.5,
       "ns": -0.5,
       "mon": 0.5
-    }
+    },
+    "ctx": "Capitalism is an economic system based on private ownership and free markets. This credits it with the huge worldwide fall in extreme poverty over the last two centuries, especially where countries industrialised or opened their markets."
   },
   {
     "id": "g2b",
@@ -1171,7 +1172,8 @@ const BANK = [
       "nc": -0.5,
       "ns": 0.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "This is the Marxist critique of capitalism: the idea that company profits come from paying workers less than the value they actually produce, so the wealth at the top is built on underpaid labour."
   },
   {
     "id": "g3a",
@@ -1193,7 +1195,8 @@ const BANK = [
       "con": -1,
       "ns": 0.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "This describes a strong welfare state, where the government guarantees everyone the basics — housing, healthcare, food — no matter their income, treating them as rights rather than things you must earn."
   },
   {
     "id": "g3b",
@@ -1215,7 +1218,8 @@ const BANK = [
       "con": 1,
       "ns": -0.5,
       "mon": 0.5
-    }
+    },
+    "ctx": "This is a common argument against generous welfare: that when benefits are too high or too easy to get, some people rely on them instead of working. “Dependency” means becoming reliant on state support long-term."
   },
   {
     "id": "g4a",
@@ -1237,7 +1241,8 @@ const BANK = [
       "con": -1,
       "ns": 0.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "This argues for a hard ceiling on personal wealth through very high taxes, so no one can build up a billion-dollar fortune. It reflects a strongly equality-focused view of the economy."
   },
   {
     "id": "g4b",
@@ -1259,7 +1264,8 @@ const BANK = [
       "con": 1,
       "ns": -0.5,
       "mon": 0.5
-    }
+    },
+    "ctx": "“Confiscatory” means taxes so high they take away most of someone’s wealth. This argues that such taxes remove people’s incentive to work hard, invest, and create new things."
   },
   {
     "id": "g5a",
@@ -1282,7 +1288,8 @@ const BANK = [
       "nc": 1,
       "ns": 2,
       "mon": 1
-    }
+    },
+    "ctx": "This is a statement of racial supremacism — the belief that some races are inherently better than others. It is the foundational idea behind ideologies like Nazism and systems like apartheid."
   },
   {
     "id": "g5b",
@@ -1305,7 +1312,8 @@ const BANK = [
       "nc": -1,
       "ns": -2,
       "mon": -1
-    }
+    },
+    "ctx": "This is the principle of human equality: that every person has the same inherent worth regardless of race. It is the mainstream ethical and scientific consensus and the basis of anti-discrimination law."
   },
   {
     "id": "g6a",
@@ -1329,7 +1337,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 2,
       "mon": 1
-    }
+    },
+    "ctx": "This claims certain ethnic groups are more prone to violent crime and that saying so is being suppressed. Crime statistics do show differences between groups; the real dispute is whether the cause is the group itself or social factors like poverty."
   },
   {
     "id": "g6b",
@@ -1353,7 +1362,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -2,
       "mon": -1
-    }
+    },
+    "ctx": "This argues that where crime rates differ between ethnic groups, the true causes are poverty, discrimination, and circumstances — not anything inherent to the ethnic group."
   },
   {
     "id": "g7a",
@@ -1376,7 +1386,8 @@ const BANK = [
       "ns": 2,
       "mon": 1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This reflects a worry common on the nationalist right: that high levels of immigration change a country’s traditional culture, language, and identity too quickly. “Native culture” means the long-established way of life."
   },
   {
     "id": "g7b",
@@ -1399,7 +1410,8 @@ const BANK = [
       "ns": -2,
       "mon": -1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the positive case for immigration: that newcomers bring skills, labour, energy, and new ideas that make a country stronger economically and culturally."
   },
   {
     "id": "g8a",
@@ -1421,7 +1433,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 2,
       "mon": 1
-    }
+    },
+    "ctx": "This is a hardline immigration-enforcement position: that everyone living in the country without legal permission should be removed, whatever their personal circumstances."
   },
   {
     "id": "g8b",
@@ -1443,7 +1456,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -2,
       "mon": -1
-    }
+    },
+    "ctx": "This supports letting undocumented immigrants who have lived and worked in the country for years earn legal status, rather than deporting them. “A path” means a legal route to staying permanently."
   },
   {
     "id": "g9a",
@@ -1467,7 +1481,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 2,
       "mon": 1
-    }
+    },
+    "ctx": "This is an ethnic definition of nationhood: the idea that truly belonging to a nation comes from ancestry and shared heritage, not merely from holding citizenship papers."
   },
   {
     "id": "g9b",
@@ -1491,7 +1506,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -2,
       "mon": -1
-    }
+    },
+    "ctx": "This is a civic definition of nationhood: that anyone who adopts a country’s laws, language, and culture can become a full member of it, regardless of their ethnic origin."
   },
   {
     "id": "g10a",
@@ -1515,7 +1531,8 @@ const BANK = [
       "ns": 2,
       "mon": 1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This favours concentrating power in one strong leader who can act quickly without being held back by parliament or the courts. Critics call this authoritarianism; supporters call it decisiveness."
   },
   {
     "id": "g10b",
@@ -1539,7 +1556,8 @@ const BANK = [
       "ns": -2,
       "mon": -1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the classic warning against dictatorship: that removing the checks on a single leader reliably leads to abuse of power, corruption, and oppression."
   },
   {
     "id": "g11a",
@@ -1562,7 +1580,8 @@ const BANK = [
       "con": 1,
       "ns": -2,
       "mon": -1
-    }
+    },
+    "ctx": "This states that the only rightful basis for government is the consent of the people expressed through elections — the core principle of democracy."
   },
   {
     "id": "g11b",
@@ -1585,7 +1604,8 @@ const BANK = [
       "con": -0.5,
       "ns": 2,
       "mon": 1.5
-    }
+    },
+    "ctx": "This is an elitist critique of democracy: the idea that ordinary voters are too poorly informed or too easily manipulated to decide big questions, which should be left to experts or elites."
   },
   {
     "id": "g12a",
@@ -1608,7 +1628,8 @@ const BANK = [
       "nc": 1,
       "ns": 1.5,
       "mon": 2
-    }
+    },
+    "ctx": "This is the case for monarchy: that a king or queen who stands above party politics gives a country continuity and a unifying symbol that elected politicians, who come and go, cannot."
   },
   {
     "id": "g12b",
@@ -1631,7 +1652,8 @@ const BANK = [
       "nc": -1,
       "ns": -1.5,
       "mon": -2
-    }
+    },
+    "ctx": "This rejects inherited power and privilege — the idea that anyone should rule or enjoy status simply because of the family they were born into. It is the basis of republicanism."
   },
   {
     "id": "g13a",
@@ -1655,7 +1677,8 @@ const BANK = [
       "nc": -1,
       "ns": 2,
       "mon": -1
-    }
+    },
+    "ctx": "This is a revolutionary outlook: the belief that the powerful never give up power willingly, so real change requires force or revolution rather than gradual reform."
   },
   {
     "id": "g13b",
@@ -1679,7 +1702,8 @@ const BANK = [
       "nc": 1,
       "ns": -2,
       "mon": 1
-    }
+    },
+    "ctx": "This holds that in a working democracy, where people can vote for change peacefully, violence for political goals is never justified."
   },
   {
     "id": "g14a",
@@ -1701,7 +1725,8 @@ const BANK = [
       "nc": -1,
       "ns": -2,
       "mon": -1.5
-    }
+    },
+    "ctx": "This is a strong free-speech position: that even deeply offensive or hateful speech should stay legal, and the government should not punish people for their words."
   },
   {
     "id": "g14b",
@@ -1719,7 +1744,8 @@ const BANK = [
       "ds": 0.5,
       "sd": 0.5,
       "lib": -1
-    }
+    },
+    "ctx": "This supports hate-speech laws: the view that speech attacking minorities causes real harm and incitement, so the law should restrict it rather than protect it as free expression."
   },
   {
     "id": "g15a",
@@ -1741,7 +1767,8 @@ const BANK = [
       "nc": 1,
       "ns": 2,
       "mon": 1.5
-    }
+    },
+    "ctx": "This supports broad government surveillance for security, arguing that law-abiding people have nothing to fear — often summed up as “nothing to hide, nothing to fear.”"
   },
   {
     "id": "g15b",
@@ -1763,7 +1790,8 @@ const BANK = [
       "nc": -1,
       "ns": -2,
       "mon": -1.5
-    }
+    },
+    "ctx": "This is the privacy argument against mass surveillance: that monitoring the entire population treats innocent people as suspects and erodes basic freedom."
   },
   {
     "id": "g16a",
@@ -1785,7 +1813,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 1.5,
       "mon": 1.5
-    }
+    },
+    "ctx": "This supports capital punishment — executing people for the most serious crimes such as murder — on the grounds that some acts deserve the ultimate penalty."
   },
   {
     "id": "g16b",
@@ -1807,7 +1836,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -1.5,
       "mon": -1.5
-    }
+    },
+    "ctx": "This opposes the death penalty outright, arguing the state should never have the power to execute its citizens, partly because of the risk of killing an innocent person."
   },
   {
     "id": "g17a",
@@ -1830,7 +1860,8 @@ const BANK = [
       "nc": 1,
       "ns": 1.5,
       "mon": 1.5
-    }
+    },
+    "ctx": "This favours a tough, punishment-first approach to justice: keeping violent criminals locked up for a long time and prioritising public safety over rehabilitating offenders."
   },
   {
     "id": "g17b",
@@ -1853,7 +1884,8 @@ const BANK = [
       "nc": -1,
       "ns": -1.5,
       "mon": -1.5
-    }
+    },
+    "ctx": "This reflects the evidence-based reform view: that ever-longer prison sentences do little to reduce crime, and that prevention, treatment, and rehabilitation work better."
   },
   {
     "id": "g18a",
@@ -1872,7 +1904,8 @@ const BANK = [
       "lib": 1,
       "ns": -0.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "This is a central argument for gun rights, especially in the US: that a population allowed to own firearms is the ultimate safeguard against a government becoming tyrannical."
   },
   {
     "id": "g18b",
@@ -1891,7 +1924,8 @@ const BANK = [
       "sd": 0.5,
       "lib": -1.5,
       "ns": 1
-    }
+    },
+    "ctx": "This is the case for gun control: that widespread, easy access to firearms leads to more deaths in everyday disputes and mass shootings."
   },
   {
     "id": "g19a",
@@ -1912,7 +1946,8 @@ const BANK = [
       "con": 1,
       "nc": 1.5,
       "mon": 1.5
-    }
+    },
+    "ctx": "This reflects religious conservatism: the belief that a society’s morality rests on religious faith, and that turning away from God removes its moral foundation."
   },
   {
     "id": "g19b",
@@ -1933,7 +1968,8 @@ const BANK = [
       "con": -1,
       "nc": -1.5,
       "mon": -1.5
-    }
+    },
+    "ctx": "This is the secular principle: that laws should be based on reason and evidence and kept separate from any religion."
   },
   {
     "id": "g20a",
@@ -1955,7 +1991,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -0.5,
       "mon": -1.5
-    }
+    },
+    "ctx": "This is the pro-choice position: that whether to end a pregnancy is a private medical decision for the woman, not something the government should control."
   },
   {
     "id": "g20b",
@@ -1977,7 +2014,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 0.5,
       "mon": 1.5
-    }
+    },
+    "ctx": "This is the pro-life position: that a foetus is a human life, so abortion means taking a life, and a society is wrong to treat it as unimportant."
   },
   {
     "id": "g21a",
@@ -1999,7 +2037,8 @@ const BANK = [
       "nc": -2,
       "ns": -0.5,
       "mon": -2
-    }
+    },
+    "ctx": "This supports transgender rights: the view that a person’s gender identity determines their gender, and the law should recognise trans people as the gender they identify as."
   },
   {
     "id": "g21b",
@@ -2021,7 +2060,8 @@ const BANK = [
       "nc": 2,
       "ns": 0.5,
       "mon": 2
-    }
+    },
+    "ctx": "This is the gender-critical position: that biological sex is a fixed fact of nature that cannot be changed by identity, a legal declaration, or surgery."
   },
   {
     "id": "g22a",
@@ -2043,7 +2083,8 @@ const BANK = [
       "nc": 2,
       "ns": 0.5,
       "mon": 2
-    }
+    },
+    "ctx": "This reflects social conservatism: the belief that the married mother-father-children family is the foundation of society and should be protected and encouraged."
   },
   {
     "id": "g22b",
@@ -2065,7 +2106,8 @@ const BANK = [
       "nc": -2,
       "ns": -0.5,
       "mon": -2
-    }
+    },
+    "ctx": "This supports family diversity: the view that same-sex couples and non-traditional families raise children just as well, and that love matters more than family structure."
   },
   {
     "id": "g23a",
@@ -2087,7 +2129,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 1,
       "mon": 2
-    }
+    },
+    "ctx": "This is a traditional view of gender: that men and women are naturally different and that society works best when its roles reflect those differences."
   },
   {
     "id": "g23b",
@@ -2109,7 +2152,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -1,
       "mon": -2
-    }
+    },
+    "ctx": "This is the feminist and progressive view: that differences in men’s and women’s roles come from social conditioning and history rather than nature, and unfairly limit people."
   },
   {
     "id": "g24a",
@@ -2130,7 +2174,8 @@ const BANK = [
       "lib": -1.5,
       "con": -1,
       "nc": -1
-    }
+    },
+    "ctx": "This treats climate change as an urgent emergency that requires large, even costly, changes to the economy and energy system, and quickly."
   },
   {
     "id": "g24b",
@@ -2151,7 +2196,8 @@ const BANK = [
       "lib": 1.5,
       "con": 1,
       "nc": 1
-    }
+    },
+    "ctx": "This is climate-policy scepticism: the argument that aggressive climate measures are driven by out-of-touch elites and put an unfair burden on ordinary working people."
   },
   {
     "id": "g25a",
@@ -2172,7 +2218,8 @@ const BANK = [
       "lib": -1.5,
       "con": -1,
       "nc": -1
-    }
+    },
+    "ctx": "This reflects “degrowth” and ecological thinking: that an economy cannot keep growing forever on a planet with limited resources without eventually causing environmental collapse."
   },
   {
     "id": "g25b",
@@ -2193,7 +2240,8 @@ const BANK = [
       "lib": 1.5,
       "con": 1,
       "nc": 1
-    }
+    },
+    "ctx": "This is the eco-modernist view: that continued economic growth and new technology — not cutting back and rationing — are what actually solve environmental problems."
   },
   {
     "id": "g26a",
@@ -2215,7 +2263,8 @@ const BANK = [
       "con": -1,
       "ns": 0.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "This supports universal public healthcare, like the UK’s NHS: a system funded through taxes and free when you use it, treating medical care as a right for everyone."
   },
   {
     "id": "g26b",
@@ -2237,7 +2286,8 @@ const BANK = [
       "con": 1,
       "ns": -0.5,
       "mon": 0.5
-    }
+    },
+    "ctx": "This is the case against fully state-run healthcare: that it leads to long waiting lists, rationed treatment, and officials rather than patients controlling care."
   },
   {
     "id": "g27a",
@@ -2258,7 +2308,8 @@ const BANK = [
       "lib": -1.5,
       "con": -1,
       "mon": -1
-    }
+    },
+    "ctx": "This reflects socialist and trade-union thinking: that workers create a company’s value and therefore should have far more say in how it is run."
   },
   {
     "id": "g27b",
@@ -2279,7 +2330,8 @@ const BANK = [
       "lib": 1.5,
       "con": 1,
       "mon": 1
-    }
+    },
+    "ctx": "This is the anti-union argument: that organised labour shields unproductive workers, drives up costs, and can push businesses and whole industries into decline."
   },
   {
     "id": "g28a",
@@ -2300,7 +2352,8 @@ const BANK = [
       "lib": -1,
       "con": -1,
       "mon": -1
-    }
+    },
+    "ctx": "This argues against large inheritances: that passing down big fortunes creates a privileged class who never earned their wealth, locking inequality in place across generations."
   },
   {
     "id": "g28b",
@@ -2321,7 +2374,8 @@ const BANK = [
       "lib": 1,
       "con": 1,
       "mon": 1
-    }
+    },
+    "ctx": "This defends inheritance: the view that people have the right to leave what they built to their children, and that the state has no claim on it after death (opposing so-called “death taxes”)."
   },
   {
     "id": "g29a",
@@ -2342,7 +2396,8 @@ const BANK = [
       "lib": 1.5,
       "con": 1,
       "mon": 1
-    }
+    },
+    "ctx": "This is a meritocratic view: that as long as everyone starts with the same opportunities, differences in wealth are fair because they reflect effort and talent."
   },
   {
     "id": "g29b",
@@ -2363,7 +2418,8 @@ const BANK = [
       "lib": -1.5,
       "con": -1,
       "mon": -1
-    }
+    },
+    "ctx": "This challenges the idea of meritocracy: arguing that genuinely equal opportunity does not exist, and that the circumstances you are born into largely decide how far you get."
   },
   {
     "id": "g30a",
@@ -2382,7 +2438,8 @@ const BANK = [
       "nc": -1,
       "ns": -1.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "Free trade means countries buying and selling across borders with few tariffs or barriers. This credits it with raising living standards worldwide more than any other policy."
   },
   {
     "id": "g30b",
@@ -2401,7 +2458,8 @@ const BANK = [
       "nc": 1,
       "ns": 1.5,
       "mon": 0.5
-    }
+    },
+    "ctx": "This is the anti-globalisation argument: that free trade moved factories and jobs to countries with cheaper labour, hollowing out industrial towns and communities at home."
   },
   {
     "id": "g31a",
@@ -2423,7 +2481,8 @@ const BANK = [
       "nc": -2,
       "ns": -2,
       "mon": -1
-    }
+    },
+    "ctx": "This supports internationalism: the idea that countries must hand some decision-making power to bodies like the UN or EU to tackle problems no single nation can solve alone."
   },
   {
     "id": "g31b",
@@ -2445,7 +2504,8 @@ const BANK = [
       "nc": 2,
       "ns": 2,
       "mon": 1
-    }
+    },
+    "ctx": "This is the sovereigntist position: that no unelected international organisation should ever have the power to overrule the laws of a nation-state."
   },
   {
     "id": "g32a",
@@ -2467,7 +2527,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 2,
       "mon": 1.5
-    }
+    },
+    "ctx": "This is the “peace through strength” doctrine: the idea that a country stays safe by being militarily strong and willing to fight, which deters would-be aggressors."
   },
   {
     "id": "g32b",
@@ -2489,7 +2550,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -2,
       "mon": -1.5
-    }
+    },
+    "ctx": "This is the anti-militarist or pacifist view: that money spent on armies and weapons should go to human needs instead, and that wars mainly enrich arms makers."
   },
   {
     "id": "g33a",
@@ -2511,7 +2573,8 @@ const BANK = [
       "nc": 2,
       "ns": 1.5,
       "mon": 1.5
-    }
+    },
+    "ctx": "This supports patriotic education: teaching children to take pride in their country’s history and achievements rather than focusing on its wrongs."
   },
   {
     "id": "g33b",
@@ -2533,7 +2596,8 @@ const BANK = [
       "nc": -2,
       "ns": -1.5,
       "mon": -1.5
-    }
+    },
+    "ctx": "This supports teaching a fuller, more critical history — including crimes such as slavery or colonialism — arguing that glossing over them misleads students."
   },
   {
     "id": "g34a",
@@ -2557,7 +2621,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -2,
       "mon": -1
-    }
+    },
+    "ctx": "This is the multiculturalist view: that a society made up of many cultures living side by side is richer and stronger than one with a single, uniform culture."
   },
   {
     "id": "g34b",
@@ -2581,7 +2646,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 2,
       "mon": 1
-    }
+    },
+    "ctx": "This is the critique of multiculturalism: that instead of integrating, different groups end up living largely separate lives with little in common — so-called “parallel societies.”"
   },
   {
     "id": "g35a",
@@ -2603,7 +2669,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 2,
       "mon": 1
-    }
+    },
+    "ctx": "This argues that certain religions clash with liberal Western values such as free speech and gender equality. In practice the debate usually centres on Islam."
   },
   {
     "id": "g35b",
@@ -2625,7 +2692,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -2,
       "mon": -1
-    }
+    },
+    "ctx": "This is the principle of religious freedom and equality: that every faith deserves the same legal protection and the same respect."
   },
   {
     "id": "g36a",
@@ -2647,7 +2715,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -1.5,
       "mon": -1.5
-    }
+    },
+    "ctx": "This is the libertarian view of personal freedom: that adults own their own bodies and have the right to consume what they choose, so the state should not criminalise it."
   },
   {
     "id": "g36b",
@@ -2669,7 +2738,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 1.5,
       "mon": 1.5
-    }
+    },
+    "ctx": "This is the case against legalising drugs: that easier access increases addiction and social harm, while the profits still flow to criminal gangs."
   },
   {
     "id": "g37a",
@@ -2691,7 +2761,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -1.5,
       "mon": -2
-    }
+    },
+    "ctx": "This supports decriminalising prostitution: the argument that treating sex work as legitimate work, and regulating it, makes the people who do it safer."
   },
   {
     "id": "g37b",
@@ -2713,7 +2784,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 1.5,
       "mon": 2
-    }
+    },
+    "ctx": "This opposes legalising prostitution: the view that it is inherently exploitative, especially of vulnerable women, and that a decent society should not give it official approval."
   },
   {
     "id": "g38a",
@@ -2735,7 +2807,8 @@ const BANK = [
       "nc": 0.5,
       "ns": -0.5,
       "mon": 0.5
-    }
+    },
+    "ctx": "This favours parental control over schooling: the idea that parents, not the government or schools, should decide the moral and social values their children are taught."
   },
   {
     "id": "g38b",
@@ -2757,7 +2830,8 @@ const BANK = [
       "nc": -0.5,
       "ns": 0.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "This argues that state schools have a duty to teach shared civic values to all children, even when it conflicts with what some parents want."
   },
   {
     "id": "g39a",
@@ -2780,7 +2854,8 @@ const BANK = [
       "con": -0.5,
       "ns": 1,
       "mon": 1
-    }
+    },
+    "ctx": "This is technocracy: the idea that complex issues should be decided by qualified experts rather than by politicians who are influenced by votes and elections."
   },
   {
     "id": "g39b",
@@ -2803,7 +2878,8 @@ const BANK = [
       "con": 0.5,
       "ns": -1,
       "mon": -1
-    }
+    },
+    "ctx": "This is the populist critique of technocracy: that handing decisions to unelected experts removes democratic accountability and becomes its own kind of tyranny."
   },
   {
     "id": "g40a",
@@ -2826,7 +2902,8 @@ const BANK = [
       "nc": -1,
       "ns": 2,
       "mon": -0.5
-    }
+    },
+    "ctx": "This reflects deep distrust of the mainstream press: the view that large media outlets serve elite interests and shape public opinion to benefit the powerful."
   },
   {
     "id": "g40b",
@@ -2849,7 +2926,8 @@ const BANK = [
       "nc": 1,
       "ns": -2,
       "mon": 0.5
-    }
+    },
+    "ctx": "This defends the free press: the idea that independent journalism, whatever its faults, is essential for holding those in power to account in a democracy."
   },
   {
     "id": "g41a",
@@ -2872,7 +2950,8 @@ const BANK = [
       "nc": 0.5,
       "ns": 2,
       "mon": 1.5
-    }
+    },
+    "ctx": "This supports government action against false information online, requiring social-media companies to take down content judged dangerous or misleading."
   },
   {
     "id": "g41b",
@@ -2895,7 +2974,8 @@ const BANK = [
       "nc": -0.5,
       "ns": -2,
       "mon": -1.5
-    }
+    },
+    "ctx": "This warns against government control of information: that letting officials decide what counts as “misinformation” threatens free speech and open debate."
   },
   {
     "id": "g42a",
@@ -2915,7 +2995,8 @@ const BANK = [
       "con": -1,
       "nc": -1,
       "mon": -2
-    }
+    },
+    "ctx": "This is the principle of civil disobedience: the idea that people have a moral duty to break laws they consider deeply unjust, as seen in the civil-rights movement."
   },
   {
     "id": "g42b",
@@ -2935,7 +3016,8 @@ const BANK = [
       "con": 1,
       "nc": 1,
       "mon": 2
-    }
+    },
+    "ctx": "This defends the rule of law: that society only functions if people obey laws even when they personally disagree, rather than each person picking and choosing."
   },
   {
     "id": "g43a",
@@ -2958,7 +3040,8 @@ const BANK = [
       "nc": -0.5,
       "ns": 1,
       "mon": -1
-    }
+    },
+    "ctx": "This is the Marxist idea of class conflict: that employees and business owners have fundamentally opposing interests, since one side’s gain comes at the other’s expense."
   },
   {
     "id": "g43b",
@@ -2981,7 +3064,8 @@ const BANK = [
       "nc": 0.5,
       "ns": -1,
       "mon": 1
-    }
+    },
+    "ctx": "This rejects the idea of class conflict: the view that workers and owners share an interest in a company’s success and both do better when it thrives."
   },
   {
     "id": "g44a",
@@ -3003,7 +3087,8 @@ const BANK = [
       "con": -1,
       "ns": 0.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "Universal basic income (UBI) is a regular, no-strings payment made to every citizen. This supports it as a response to automation and machines replacing human jobs."
   },
   {
     "id": "g44b",
@@ -3025,7 +3110,8 @@ const BANK = [
       "con": 1,
       "ns": -0.5,
       "mon": 0.5
-    }
+    },
+    "ctx": "This is the argument against a basic income: that paying people whether or not they work removes the incentive and the sense of purpose that come from earning a living."
   },
   {
     "id": "g45a",
@@ -3047,7 +3133,8 @@ const BANK = [
       "con": -1,
       "ns": 0.5,
       "mon": -0.5
-    }
+    },
+    "ctx": "This treats housing as a right and objects to homes being concentrated among investors while others go without — a case for strong government intervention in the housing market."
   },
   {
     "id": "g45b",
@@ -3069,7 +3156,8 @@ const BANK = [
       "con": 1,
       "ns": -0.5,
       "mon": 0.5
-    }
+    },
+    "ctx": "This is the economic argument against rent control: that capping rents reduces how much housing gets built or offered, making shortages worse over time."
   },
   {
     "id": "g46a",
@@ -3091,7 +3179,8 @@ const BANK = [
       "nc": 1,
       "ns": 2,
       "mon": 1.5
-    }
+    },
+    "ctx": "This supports giving the police stronger powers and fewer legal restraints in order to fight crime and restore order on the streets."
   },
   {
     "id": "g46b",
@@ -3113,7 +3202,8 @@ const BANK = [
       "nc": -1,
       "ns": -2,
       "mon": -1.5
-    }
+    },
+    "ctx": "This is the civil-liberties argument: that giving police too much unchecked power leads to abuse, and that innocent and marginalised people tend to suffer first."
   },
   {
     "id": "g47a",
@@ -3135,7 +3225,8 @@ const BANK = [
       "nc": 1.5,
       "ns": 2,
       "mon": 1.5
-    }
+    },
+    "ctx": "This supports mandatory national service — a set period of military or civilian duty that all young people must complete for their country."
   },
   {
     "id": "g47b",
@@ -3157,7 +3248,8 @@ const BANK = [
       "nc": -1.5,
       "ns": -2,
       "mon": -1.5
-    }
+    },
+    "ctx": "This opposes compulsory service: the view that forcing young people to serve against their will violates their freedom and amounts to forced labour."
   },
   {
     "id": "g48a",
@@ -3178,7 +3270,8 @@ const BANK = [
       "lib": 0.5,
       "ns": -1,
       "mon": -1.5
-    }
+    },
+    "ctx": "This supports direct democracy: putting major national questions straight to the public in referendums rather than leaving them to elected representatives."
   },
   {
     "id": "g48b",
@@ -3201,7 +3294,8 @@ const BANK = [
       "con": -0.5,
       "ns": 2,
       "mon": 1.5
-    }
+    },
+    "ctx": "This is the case against referendums: that complicated issues get reduced to simple yes/no slogans and decided by emotion rather than careful judgement."
   },
   {
     "id": "g49a",
@@ -3222,7 +3316,8 @@ const BANK = [
       "con": 1.5,
       "nc": 1.5,
       "mon": 2
-    }
+    },
+    "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away."
   },
   {
     "id": "g49b",
@@ -3243,7 +3338,8 @@ const BANK = [
       "con": -1.5,
       "nc": -1.5,
       "mon": -2
-    }
+    },
+    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
   },
   {
     "id": "g50a",
@@ -3265,7 +3361,8 @@ const BANK = [
       "con": 1,
       "nc": 0.5,
       "mon": 1
-    }
+    },
+    "ctx": "This reflects a pessimistic view of human nature: that people are basically self-interested, so any realistic system must assume selfishness rather than expect generosity."
   },
   {
     "id": "g50b",
@@ -3287,7 +3384,8 @@ const BANK = [
       "con": -1,
       "nc": -0.5,
       "mon": -1
-    }
+    },
+    "ctx": "This reflects an optimistic view of human nature: that people are naturally cooperative, and that it is unjust systems and conditions that bring out cruelty."
   }
 ];
 
@@ -3353,6 +3451,6 @@ window.portalCode = 'general';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>
-<script src="/engine.js?v=1.1.3"></script>
+<script src="/engine.js?v=1.1.7"></script>
 </body>
 </html>

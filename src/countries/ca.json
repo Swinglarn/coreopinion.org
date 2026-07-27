@@ -82,7 +82,8 @@
         "blq": 1,
         "ppc": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "Canada's healthcare (Medicare) is publicly funded and universal. This wants it kept that way, resisting private pay-for-service care."
     },
     {
       "id": "ca1b",
@@ -101,7 +102,8 @@
         "blq": -1,
         "ppc": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues the public system's long wait times could be eased by allowing more private healthcare options."
     },
     {
       "id": "ca2a",
@@ -121,7 +123,8 @@
         "blq": 1,
         "ppc": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Canada's recent high immigration levels have strained housing and public services and should be cut."
     },
     {
       "id": "ca2b",
@@ -141,7 +144,8 @@
         "blq": -1,
         "ppc": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the pro-immigration view: that immigration built Canada and remains essential to its economy and future."
     },
     {
       "id": "ca3a",
@@ -159,7 +163,8 @@
         "grn": -0.5,
         "blq": 1,
         "ppc": 2
-      }
+      },
+      "ctx": "This targets the sharp rise in temporary foreign workers and international students, calling for their numbers to be cut sharply."
     },
     {
       "id": "ca3b",
@@ -177,7 +182,8 @@
         "grn": 0.5,
         "blq": -1,
         "ppc": -2
-      }
+      },
+      "ctx": "This argues those workers and students fill real gaps and enrich Canada, and shouldn't be blamed for wider problems."
     },
     {
       "id": "ca4a",
@@ -197,7 +203,8 @@
         "blq": 0.5,
         "ppc": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "The federal carbon tax charges for burning fossil fuels to fight climate change, with rebates to households. This defends it as fair and effective."
     },
     {
       "id": "ca4b",
@@ -217,7 +224,8 @@
         "blq": -0.5,
         "ppc": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This attacks the carbon tax as a money grab that raises costs for ordinary families, and wants it scrapped ('axe the tax')."
     },
     {
       "id": "ca5a",
@@ -236,7 +244,8 @@
         "grn": -2,
         "blq": -1,
         "ppc": 2
-      }
+      },
+      "ctx": "This supports expanding Canada's oil and gas industry and building more pipelines to carry it."
     },
     {
       "id": "ca5b",
@@ -255,7 +264,8 @@
         "grn": 2,
         "blq": 1,
         "ppc": -2
-      }
+      },
+      "ctx": "This argues Canada must wind down fossil-fuel expansion and leave more oil in the ground for the climate."
     },
     {
       "id": "ca6a",
@@ -274,7 +284,8 @@
         "blq": 0.5,
         "ppc": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports governments building housing directly and intervening strongly to bring down home prices."
     },
     {
       "id": "ca6b",
@@ -291,7 +302,8 @@
         "grn": -1,
         "ppc": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues the housing crisis is best fixed by cutting red tape and letting the private market build, not by government."
     },
     {
       "id": "ca7a",
@@ -310,7 +322,8 @@
         "blq": 1,
         "ppc": -2,
         "g": 0
-      }
+      },
+      "ctx": "This supports significantly higher taxes on Canada's wealthiest people and big corporations."
     },
     {
       "id": "ca7b",
@@ -329,7 +342,8 @@
         "blq": -1,
         "ppc": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues higher taxes on wealth and business drive investment and skilled people out of Canada."
     },
     {
       "id": "ca8a",
@@ -348,7 +362,8 @@
         "blq": 0.5,
         "ppc": -2,
         "g": 0
-      }
+      },
+      "ctx": "This supports expanding new national programs like public dental care and pharmacare (covering prescription drugs), even at high cost."
     },
     {
       "id": "ca8b",
@@ -367,7 +382,8 @@
         "blq": -0.5,
         "ppc": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues Canada can't afford costly new national programs and they would balloon the deficit."
     },
     {
       "id": "ca9a",
@@ -386,7 +402,8 @@
         "grn": -0.5,
         "blq": 2,
         "ppc": -2
-      }
+      },
+      "ctx": "This supports Quebec, the mainly French-speaking province, becoming an independent country."
     },
     {
       "id": "ca9b",
@@ -405,7 +422,8 @@
         "grn": 0.5,
         "blq": -2,
         "ppc": 2
-      }
+      },
+      "ctx": "This opposes Quebec independence, arguing the province is stronger within Canada."
     },
     {
       "id": "ca10a",
@@ -424,7 +442,8 @@
         "grn": -1,
         "blq": 2,
         "ppc": 0.5
-      }
+      },
+      "ctx": "Quebec's Bill 21 bans some public workers (teachers, police) from wearing religious symbols like hijabs or turbans. This defends it as legitimate secularism."
     },
     {
       "id": "ca10b",
@@ -443,7 +462,8 @@
         "grn": 1,
         "blq": -2,
         "ppc": -0.5
-      }
+      },
+      "ctx": "This condemns Bill 21 as state discrimination that punishes religious minorities for how they dress."
     },
     {
       "id": "ca11a",
@@ -461,7 +481,8 @@
         "ndp": 1.5,
         "grn": 2,
         "ppc": -2
-      }
+      },
+      "ctx": "'Reconciliation' means repairing Canada's relationship with Indigenous peoples after historical wrongs. This supports major new spending and returning control over land."
     },
     {
       "id": "ca11b",
@@ -479,7 +500,8 @@
         "ndp": -1.5,
         "grn": -2,
         "ppc": 2
-      }
+      },
+      "ctx": "This argues reconciliation spending has become an open-ended cost and that Canadians deserve firm limits."
     },
     {
       "id": "ca12a",
@@ -498,7 +520,8 @@
         "grn": 1,
         "blq": 1,
         "ppc": -2
-      }
+      },
+      "ctx": "This supports tighter gun control, including bans on assault-style firearms."
     },
     {
       "id": "ca12b",
@@ -517,7 +540,8 @@
         "grn": -1,
         "blq": -1,
         "ppc": 2
-      }
+      },
+      "ctx": "This argues gun bans punish law-abiding hunters and sport shooters while doing nothing to stop criminals."
     },
     {
       "id": "ca13a",
@@ -536,7 +560,8 @@
         "grn": 0.5,
         "blq": 1,
         "ppc": -0.5
-      }
+      },
+      "ctx": "This supports Canada standing up to the United States and retaliating against US tariffs (import taxes), whatever the cost."
     },
     {
       "id": "ca13b",
@@ -555,7 +580,8 @@
         "grn": -0.5,
         "blq": -1,
         "ppc": 0.5
-      }
+      },
+      "ctx": "This argues confronting the US is reckless because Canada's economy depends on trade with its huge neighbour."
     },
     {
       "id": "ca14a",
@@ -573,7 +599,8 @@
         "ndp": -1,
         "grn": -1,
         "ppc": 0.5
-      }
+      },
+      "ctx": "This supports sharply higher military spending to meet Canada's NATO commitments (the Western defence alliance)."
     },
     {
       "id": "ca14b",
@@ -591,7 +618,8 @@
         "ndp": 1,
         "grn": 1,
         "ppc": -0.5
-      }
+      },
+      "ctx": "This argues the billions for the military would be better spent on Canadians at home."
     },
     {
       "id": "ca15a",
@@ -610,7 +638,8 @@
         "grn": 1.5,
         "ppc": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "'Safe supply' gives drug users regulated drugs, and decriminalisation removes criminal penalties for possession. This backs both as evidence-based responses to the drug crisis."
     },
     {
       "id": "ca15b",
@@ -629,7 +658,8 @@
         "grn": -1.5,
         "ppc": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues these experiments flooded communities with drugs and disorder and should be scrapped."
     },
     {
       "id": "ca16a",
@@ -648,7 +678,8 @@
         "grn": -1.5,
         "blq": 1,
         "ppc": 2
-      }
+      },
+      "ctx": "This argues multiculturalism has failed, producing divided communities with little in common."
     },
     {
       "id": "ca16b",
@@ -667,7 +698,8 @@
         "grn": 1.5,
         "blq": -1,
         "ppc": -2
-      }
+      },
+      "ctx": "This celebrates multiculturalism as a genuine strength and a core part of Canadian identity."
     },
     {
       "id": "ca17a",
@@ -686,7 +718,8 @@
         "grn": -1.5,
         "blq": 0.5,
         "ppc": 1.5
-      }
+      },
+      "ctx": "This argues Islam clashes with Canadian values. Supporters cite integration concerns; critics call it religious prejudice."
     },
     {
       "id": "ca17b",
@@ -705,7 +738,8 @@
         "grn": 1.5,
         "blq": -0.5,
         "ppc": -1.5
-      }
+      },
+      "ctx": "This holds that Muslim Canadians are full members of society whose faith deserves equal respect."
     },
     {
       "id": "ca18a",
@@ -724,7 +758,8 @@
         "grn": -2,
         "blq": -1,
         "ppc": -0.5
-      }
+      },
+      "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
     },
     {
       "id": "ca18b",
@@ -743,7 +778,8 @@
         "grn": 2,
         "blq": 1,
         "ppc": 0.5
-      }
+      },
+      "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
     },
     {
       "id": "ca19a",
@@ -762,7 +798,8 @@
         "grn": -1,
         "blq": 0.5,
         "ppc": 2
-      }
+      },
+      "ctx": "This argues sentences are too soft and that violent and repeat offenders should spend far longer in prison."
     },
     {
       "id": "ca19b",
@@ -781,7 +818,8 @@
         "grn": 1,
         "blq": -0.5,
         "ppc": -2
-      }
+      },
+      "ctx": "This argues locking more people up hasn't made Canada safer, and that prevention and rehabilitation work better."
     },
     {
       "id": "ca20a",
@@ -800,7 +838,8 @@
         "grn": 1.5,
         "ppc": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This supports transgender rights: the view that people should be able to have the law recognise the gender they identify as, without needing medical approval."
     },
     {
       "id": "ca20b",
@@ -819,7 +858,8 @@
         "grn": -1.5,
         "ppc": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the gender-critical view: that biological sex is a fixed fact the law should not allow a personal declaration to override."
     },
     {
       "id": "ca21a",
@@ -838,7 +878,8 @@
         "grn": -1,
         "blq": 0.5,
         "ppc": 2
-      }
+      },
+      "ctx": "This argues parents should have more say over what schools teach their children about gender and sexuality."
     },
     {
       "id": "ca21b",
@@ -857,7 +898,8 @@
         "grn": 1,
         "blq": -0.5,
         "ppc": -2
-      }
+      },
+      "ctx": "This argues the curriculum should be set by educators and evidence, not by a parental veto over inclusive teaching."
     },
     {
       "id": "ca22a",
@@ -876,7 +918,8 @@
         "grn": 1.5,
         "blq": 1,
         "ppc": -1
-      }
+      },
+      "ctx": "This treats access to abortion as a settled right that should be fully protected. Canada has no specific abortion law."
     },
     {
       "id": "ca22b",
@@ -895,7 +938,8 @@
         "grn": -1.5,
         "blq": -0.5,
         "ppc": 1.5
-      }
+      },
+      "ctx": "This argues it is wrong that Canada has no legal limits on abortion at all, and that a human life is at stake."
     },
     {
       "id": "ca23a",
@@ -914,7 +958,8 @@
         "grn": 0.5,
         "blq": 1,
         "ppc": -1
-      }
+      },
+      "ctx": "MAID (Medical Assistance in Dying) is Canada's legal assisted-death system. This defends it as compassionate and broadly appropriate."
     },
     {
       "id": "ca23b",
@@ -931,7 +976,8 @@
         "con": 1,
         "blq": -0.5,
         "ppc": 1
-      }
+      },
+      "ctx": "This argues MAID has expanded too far and now risks pushing poor or disabled people toward death."
     },
     {
       "id": "ca24a",
@@ -950,7 +996,8 @@
         "blq": 1,
         "ppc": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports stronger trade unions and worker rights, and protecting the right to strike."
     },
     {
       "id": "ca24b",
@@ -969,7 +1016,8 @@
         "blq": -1,
         "ppc": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues union power raises costs and can hold the economy hostage, and that strike laws should be tightened."
     },
     {
       "id": "ca25a",
@@ -988,7 +1036,8 @@
         "grn": -1,
         "blq": -0.5,
         "ppc": 2
-      }
+      },
+      "ctx": "This argues Canada over-regulates its economy and that business needs far less red tape and lower taxes."
     },
     {
       "id": "ca25b",
@@ -1007,7 +1056,8 @@
         "grn": 1,
         "blq": 0.5,
         "ppc": -2
-      }
+      },
+      "ctx": "This argues cutting regulation just lets corporations off the hook on workers and the environment."
     },
     {
       "id": "ca26a",
@@ -1024,7 +1074,8 @@
         "ndp": 0.5,
         "grn": 0.5,
         "blq": 1.5
-      }
+      },
+      "ctx": "This supports Canada cutting ties with the British monarchy (King Charles is Canada's head of state) and choosing its own."
     },
     {
       "id": "ca26b",
@@ -1041,7 +1092,8 @@
         "ndp": -0.5,
         "grn": -0.5,
         "blq": -1.5
-      }
+      },
+      "ctx": "This defends the Crown as part of Canada's constitutional stability."
     },
     {
       "id": "ca27a",
@@ -1060,7 +1112,8 @@
         "grn": -0.5,
         "blq": 2,
         "ppc": -0.5
-      }
+      },
+      "ctx": "Quebec limits the use of English to protect French. This argues that protecting French justifies strong restrictions on English."
     },
     {
       "id": "ca27b",
@@ -1079,7 +1132,8 @@
         "grn": 0.5,
         "blq": -2,
         "ppc": 0.5
-      }
+      },
+      "ctx": "This argues language laws restricting English go too far and trample individual freedom."
     },
     {
       "id": "ca28a",
@@ -1098,7 +1152,8 @@
         "grn": 2,
         "blq": 0.5,
         "ppc": 0.5
-      }
+      },
+      "ctx": "This supports replacing 'first-past-the-post' (most votes wins each seat) with proportional representation, which matches seats to vote share."
     },
     {
       "id": "ca28b",
@@ -1117,7 +1172,8 @@
         "grn": -2,
         "blq": -0.5,
         "ppc": -0.5
-      }
+      },
+      "ctx": "This defends first-past-the-post as producing stable, accountable governments."
     },
     {
       "id": "ca29a",
@@ -1135,7 +1191,8 @@
         "ndp": -1,
         "grn": -0.5,
         "ppc": 0.5
-      }
+      },
+      "ctx": "This supports open global free trade as having made Canada richer."
     },
     {
       "id": "ca29b",
@@ -1153,7 +1210,8 @@
         "ndp": 1,
         "grn": 0.5,
         "ppc": -0.5
-      }
+      },
+      "ctx": "This argues free trade hollowed out Canadian manufacturing and left communities behind."
     },
     {
       "id": "ca30a",
@@ -1171,7 +1229,8 @@
         "grn": 2,
         "blq": 0.5,
         "ppc": -2
-      }
+      },
+      "ctx": "This puts protecting nature ahead of new resource projects (mines, pipelines) and development."
     },
     {
       "id": "ca30b",
@@ -1189,7 +1248,8 @@
         "grn": -2,
         "blq": -0.5,
         "ppc": 2
-      }
+      },
+      "ctx": "This argues endless environmental reviews block the projects Canada needs to prosper."
     },
     {
       "id": "ca31a",
@@ -1208,7 +1268,8 @@
         "grn": -1,
         "blq": 1,
         "ppc": 2
-      }
+      },
+      "ctx": "This argues immigrants who won't integrate or adopt Canadian values should not be in the country."
     },
     {
       "id": "ca31b",
@@ -1227,7 +1288,8 @@
         "grn": 1,
         "blq": -1,
         "ppc": -2
-      }
+      },
+      "ctx": "This argues demanding cultural conformity betrays the pluralism (acceptance of many cultures) that defines Canada."
     },
     {
       "id": "ca32a",
@@ -1245,7 +1307,8 @@
         "ndp": -1,
         "grn": -1,
         "ppc": 2
-      }
+      },
+      "ctx": "This favours teaching children pride in Canada's history rather than focusing mainly on its wrongs."
     },
     {
       "id": "ca32b",
@@ -1263,7 +1326,8 @@
         "ndp": 1,
         "grn": 1,
         "ppc": -2
-      }
+      },
+      "ctx": "This supports teaching hard truths like the residential schools (where Indigenous children were abused), arguing hiding them misleads students."
     },
     {
       "id": "ca33a",
@@ -1282,7 +1346,8 @@
         "blq": 0.5,
         "ppc": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues the poor and unemployed are treated with too much suspicion and that the safety net should be stronger."
     },
     {
       "id": "ca33b",
@@ -1301,7 +1366,8 @@
         "blq": -0.5,
         "ppc": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues welfare can trap people, and that stricter conditions protect the taxpayers who fund it."
     },
     {
       "id": "ca34a",
@@ -1320,7 +1386,8 @@
         "grn": -0.5,
         "blq": 0.5,
         "ppc": 1.5
-      }
+      },
+      "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
     },
     {
       "id": "ca34b",
@@ -1339,7 +1406,8 @@
         "grn": 0.5,
         "blq": -0.5,
         "ppc": -1.5
-      }
+      },
+      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
     },
     {
       "id": "ca35a",
@@ -1358,7 +1426,8 @@
         "grn": -1.5,
         "blq": -0.5,
         "ppc": 2
-      }
+      },
+      "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
     },
     {
       "id": "ca35b",
@@ -1377,7 +1446,8 @@
         "grn": 1.5,
         "blq": 0.5,
         "ppc": -2
-      }
+      },
+      "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
     }
   ],
   "heroTitle": "Where do you stand in <em>Canadian</em> politics?",

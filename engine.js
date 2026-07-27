@@ -64,7 +64,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Strongly agree', 'Agree', 'Slightly agree', 'Slightly disagree', 'Disagree', 'Strongly disagree'],
     wouldAgree: 'Would agree with this statement',
     wouldDisagree: 'Would reject this statement',
-    driftLabel: 'Framing drift'
+    driftLabel: 'Framing drift',
+    helpBtn: 'What does this mean?'
   },
   de: {
     of: 'von',
@@ -110,7 +111,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Stimme voll zu', 'Stimme zu', 'Stimme eher zu', 'Lehne eher ab', 'Lehne ab', 'Lehne völlig ab'],
     wouldAgree: 'Würde dieser Aussage zustimmen',
     wouldDisagree: 'Würde diese Aussage ablehnen',
-    driftLabel: 'Formulierungsdrift'
+    driftLabel: 'Formulierungsdrift',
+    helpBtn: 'Was bedeutet das?'
   },
   fr: {
     of: 'sur',
@@ -156,7 +158,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Tout à fait d’accord', 'D’accord', 'Plutôt d’accord', 'Plutôt pas d’accord', 'Pas d’accord', 'Pas du tout d’accord'],
     wouldAgree: 'Serait d’accord avec cette affirmation',
     wouldDisagree: 'Rejetterait cette affirmation',
-    driftLabel: 'Écart de cadrage'
+    driftLabel: 'Écart de cadrage',
+    helpBtn: 'Qu\'est-ce que cela signifie ?'
   },
   es: {
     of: 'de',
@@ -202,7 +205,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Totalmente de acuerdo', 'De acuerdo', 'Algo de acuerdo', 'Algo en desacuerdo', 'En desacuerdo', 'Totalmente en desacuerdo'],
     wouldAgree: 'Estaría de acuerdo con esta afirmación',
     wouldDisagree: 'Rechazaría esta afirmación',
-    driftLabel: 'Desviación por encuadre'
+    driftLabel: 'Desviación por encuadre',
+    helpBtn: '¿Qué significa esto?'
   },
   it: {
     of: 'di',
@@ -248,7 +252,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Del tutto d’accordo', 'D’accordo', 'Un po’ d’accordo', 'Un po’ in disaccordo', 'In disaccordo', 'Del tutto in disaccordo'],
     wouldAgree: 'Sarebbe d’accordo con questa affermazione',
     wouldDisagree: 'Rifiuterebbe questa affermazione',
-    driftLabel: 'Scostamento da incorniciamento'
+    driftLabel: 'Scostamento da incorniciamento',
+    helpBtn: 'Cosa significa?'
   },
   nl: {
     of: 'van',
@@ -294,7 +299,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Helemaal mee eens', 'Mee eens', 'Enigszins mee eens', 'Enigszins mee oneens', 'Mee oneens', 'Helemaal mee oneens'],
     wouldAgree: 'Zou het met deze stelling eens zijn',
     wouldDisagree: 'Zou deze stelling verwerpen',
-    driftLabel: 'Framingafwijking'
+    driftLabel: 'Framingafwijking',
+    helpBtn: 'Wat betekent dit?'
   },
   sv: {
     of: 'av',
@@ -340,7 +346,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Instämmer helt', 'Instämmer', 'Instämmer delvis', 'Tar delvis avstånd', 'Tar avstånd', 'Tar helt avstånd'],
     wouldAgree: 'Skulle instämma i påståendet',
     wouldDisagree: 'Skulle avvisa påståendet',
-    driftLabel: 'Formuleringsdrift'
+    driftLabel: 'Formuleringsdrift',
+    helpBtn: 'Vad betyder detta?'
   },
   da: {
     of: 'af',
@@ -386,7 +393,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Helt enig', 'Enig', 'Delvist enig', 'Delvist uenig', 'Uenig', 'Helt uenig'],
     wouldAgree: 'Ville være enig i udsagnet',
     wouldDisagree: 'Ville afvise udsagnet',
-    driftLabel: 'Formuleringsudsving'
+    driftLabel: 'Formuleringsudsving',
+    helpBtn: 'Hvad betyder det?'
   },
   no: {
     of: 'av',
@@ -432,7 +440,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Helt enig', 'Enig', 'Delvis enig', 'Delvis uenig', 'Uenig', 'Helt uenig'],
     wouldAgree: 'Ville vært enig i påstanden',
     wouldDisagree: 'Ville avvist påstanden',
-    driftLabel: 'Formuleringsavvik'
+    driftLabel: 'Formuleringsavvik',
+    helpBtn: 'Hva betyr dette?'
   },
   fi: {
     of: '/',
@@ -478,7 +487,8 @@ const ENGINE_TRANSLATIONS = {
     likert: ['Täysin samaa mieltä', 'Samaa mieltä', 'Osittain samaa mieltä', 'Osittain eri mieltä', 'Eri mieltä', 'Täysin eri mieltä'],
     wouldAgree: 'Olisi samaa mieltä väitteen kanssa',
     wouldDisagree: 'Hylkäisi väitteen',
-    driftLabel: 'Kehystyspoikkeama'
+    driftLabel: 'Kehystyspoikkeama',
+    helpBtn: 'Mitä tämä tarkoittaa?'
   }
 };
 
@@ -892,19 +902,29 @@ window.renderQ = function() {
   const qTopic = document.getElementById('q-topic');
   if (qTopic) qTopic.textContent = q.nl;
 
-  // Context situation card
-  const scenWrap = document.getElementById('q-scen-wrap');
-  const scenBody = document.getElementById('q-scen-body');
-  if (q.ctx) {
-    if (scenWrap) scenWrap.style.display = 'block';
-    if (scenBody) scenBody.textContent = q.ctx;
-  } else {
-    if (scenWrap) scenWrap.style.display = 'none';
-  }
-
   // Question statement
   const qText = document.getElementById('q-text');
   if (qText) qText.textContent = q.q;
+
+  // On-demand plain-language context ("What does this mean?")
+  const helpBtn = document.getElementById('q-help-btn');
+  const ctxBox = document.getElementById('q-context-box');
+  if (ctxBox) {
+    ctxBox.style.display = 'none';
+    ctxBox.textContent = q.ctx || '';
+  }
+  if (helpBtn) {
+    const lang2 = window.currentLang || 'en';
+    const tObj2 = ENGINE_TRANSLATIONS[lang2] || ENGINE_TRANSLATIONS['en'];
+    helpBtn.setAttribute('aria-expanded', 'false');
+    helpBtn.classList.remove('open');
+    if (q.ctx) {
+      helpBtn.style.display = '';
+      helpBtn.textContent = tObj2.helpBtn || ENGINE_TRANSLATIONS['en'].helpBtn;
+    } else {
+      helpBtn.style.display = 'none';
+    }
+  }
 
   // Options list
   const container = document.getElementById('q-opts');
@@ -948,6 +968,19 @@ window.renderQ = function() {
   // Back button state
   const bb = document.getElementById('btn-back');
   if (bb) bb.disabled = (qi === 0);
+};
+
+// Toggle the plain-language context panel under the current question
+window.toggleQContext = function() {
+  const box = document.getElementById('q-context-box');
+  const btn = document.getElementById('q-help-btn');
+  if (!box) return;
+  const willOpen = box.style.display === 'none';
+  box.style.display = willOpen ? 'block' : 'none';
+  if (btn) {
+    btn.classList.toggle('open', willOpen);
+    btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+  }
 };
 
 window.pickOpt = function(i, el) {

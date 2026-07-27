@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.3">
+<link rel="stylesheet" href="/style.css?v=1.1.7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -314,11 +314,9 @@
       <span class="prog-txt" id="prog-txt">1 of 47</span>
     </div>
     <div class="q-topic-tag" id="q-topic"></div>
-    <div class="q-scenario-box" id="q-scen-wrap" style="display:none">
-      <div class="q-scenario-tag">Context</div>
-      <div class="q-scenario-body" id="q-scen-body"></div>
-    </div>
     <div class="q-question" id="q-text"></div>
+    <button type="button" class="q-help-btn" id="q-help-btn" onclick="toggleQContext()" aria-expanded="false" style="display:none"></button>
+    <div class="q-context-box" id="q-context-box" style="display:none"></div>
     <div class="q-opts" id="q-opts"></div>
     <div class="q-foot">
       <button class="btn-skip" onclick="skipQ()">Skip</button>
@@ -1111,7 +1109,8 @@ const BANK = [
       "lib": -2,
       "grn": 2,
       "g": 0
-    }
+    },
+    "ctx": "This supports a government-guaranteed healthcare system (like 'Medicare for All') funded by taxes, so everyone is covered regardless of income."
   },
   {
     "id": "us1b",
@@ -1128,7 +1127,8 @@ const BANK = [
       "lib": 2,
       "grn": -2,
       "g": 0
-    }
+    },
+    "ctx": "This defends America's mainly private, insurance-based healthcare, warning that a government system would ration care and reduce choice."
   },
   {
     "id": "us2a",
@@ -1146,7 +1146,8 @@ const BANK = [
       "lib": -0.5,
       "grn": -2
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is a hardline border position: treating illegal immigration as an invasion to be stopped with mass deportations and a border wall."
   },
   {
     "id": "us2b",
@@ -1164,7 +1165,8 @@ const BANK = [
       "lib": 0.5,
       "grn": 2
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the pro-immigrant view: that immigrants, legal or not, are part of American society and mass deportation is cruel and against American ideals."
   },
   {
     "id": "us3a",
@@ -1181,7 +1183,8 @@ const BANK = [
       "rep": -1.5,
       "lib": 0.5,
       "grn": 1.5
-    }
+    },
+    "ctx": "This supports giving undocumented immigrants who have lived in the US for years a legal route to eventually become citizens."
   },
   {
     "id": "us3b",
@@ -1198,7 +1201,8 @@ const BANK = [
       "rep": 1.5,
       "lib": -0.5,
       "grn": -1.5
-    }
+    },
+    "ctx": "This opposes such an amnesty, arguing it rewards breaking the law and encourages more illegal immigration."
   },
   {
     "id": "us4a",
@@ -1216,7 +1220,8 @@ const BANK = [
       "lib": 0.5,
       "grn": 1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the pro-choice position. Roe v. Wade was the 1973 Supreme Court ruling that protected abortion nationwide until it was overturned in 2022, returning the decision to each state."
   },
   {
     "id": "us4b",
@@ -1234,7 +1239,8 @@ const BANK = [
       "lib": -0.5,
       "grn": -1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the pro-life position: that abortion takes an innocent life, so states are right to restrict or ban it now that Roe v. Wade is gone."
   },
   {
     "id": "us5a",
@@ -1252,7 +1258,8 @@ const BANK = [
       "lib": 1.5,
       "grn": -2
     },
-    "dec": true
+    "dec": true,
+    "ctx": "The Second Amendment is the part of the US Constitution protecting the right to bear arms. This treats that right as almost absolute, opposing gun restrictions."
   },
   {
     "id": "us5b",
@@ -1270,7 +1277,8 @@ const BANK = [
       "lib": -1,
       "grn": 2
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the gun-control view: that America's high rate of gun deaths justifies real limits, such as banning assault-style weapons."
   },
   {
     "id": "us6a",
@@ -1287,7 +1295,8 @@ const BANK = [
       "rep": -2,
       "grn": 1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This states that Donald Trump, the Republican president, endangers American democracy — a common view among his critics, especially after the January 6th Capitol riot."
   },
   {
     "id": "us6b",
@@ -1304,7 +1313,8 @@ const BANK = [
       "rep": 2,
       "grn": -1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the pro-Trump counter-view: that the real danger is a political and legal 'establishment' using the courts to go after Trump and his supporters."
   },
   {
     "id": "us7a",
@@ -1321,7 +1331,8 @@ const BANK = [
       "lib": -1.5,
       "grn": 2,
       "g": 0
-    }
+    },
+    "ctx": "This supports raising taxes substantially on the richest Americans and large corporations to fund public spending and reduce inequality."
   },
   {
     "id": "us7b",
@@ -1338,7 +1349,8 @@ const BANK = [
       "lib": 1.5,
       "grn": -2,
       "g": 0
-    }
+    },
+    "ctx": "This opposes higher taxes on the wealthy and business, arguing they discourage the investment and hiring that drive economic growth."
   },
   {
     "id": "us8a",
@@ -1355,7 +1367,8 @@ const BANK = [
       "lib": -1,
       "grn": 2,
       "g": 0
-    }
+    },
+    "ctx": "This treats climate change as an urgent crisis requiring major, even costly, changes to the US economy and energy system."
   },
   {
     "id": "us8b",
@@ -1372,7 +1385,8 @@ const BANK = [
       "lib": 1,
       "grn": -2,
       "g": 0
-    }
+    },
+    "ctx": "This is climate-policy scepticism: the argument that climate fears are exaggerated to justify expensive government control over the economy."
   },
   {
     "id": "us9a",
@@ -1389,7 +1403,8 @@ const BANK = [
       "rep": -2,
       "lib": -0.5,
       "grn": 2
-    }
+    },
+    "ctx": "'Systemic racism' means discrimination built into laws and institutions, not just individual prejudice. This holds it is real and must be actively tackled."
   },
   {
     "id": "us9b",
@@ -1406,7 +1421,8 @@ const BANK = [
       "rep": 2,
       "lib": 0.5,
       "grn": -2
-    }
+    },
+    "ctx": "This pushes back on the systemic-racism idea, arguing the focus on it is itself divisive and makes people see everything through the lens of race."
   },
   {
     "id": "us10a",
@@ -1423,7 +1439,8 @@ const BANK = [
       "rep": -1,
       "lib": -1,
       "grn": -2
-    }
+    },
+    "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
   },
   {
     "id": "us10b",
@@ -1440,7 +1457,8 @@ const BANK = [
       "rep": 1,
       "lib": 1,
       "grn": 2
-    }
+    },
+    "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
   },
   {
     "id": "us11a",
@@ -1457,7 +1475,8 @@ const BANK = [
       "rep": 2,
       "lib": -0.5,
       "grn": -2
-    }
+    },
+    "ctx": "This favours a tough-on-crime approach: more police and longer prison sentences rather than a softer response."
   },
   {
     "id": "us11b",
@@ -1474,7 +1493,8 @@ const BANK = [
       "rep": -2,
       "lib": 0.5,
       "grn": 2
-    }
+    },
+    "ctx": "This argues the tough approach has failed — America jails more people than any country — and money should go to preventing crime instead."
   },
   {
     "id": "us12a",
@@ -1492,7 +1512,8 @@ const BANK = [
       "lib": 0.5,
       "grn": 1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This supports transgender rights: letting trans Americans change their legal gender and get 'gender-affirming' medical care."
   },
   {
     "id": "us12b",
@@ -1510,7 +1531,8 @@ const BANK = [
       "lib": -0.5,
       "grn": -1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the gender-critical view: that biological sex is real and that children in particular should not be steered toward gender transition."
   },
   {
     "id": "us13a",
@@ -1527,7 +1549,8 @@ const BANK = [
       "lib": -2,
       "grn": 2,
       "g": 0
-    }
+    },
+    "ctx": "The federal minimum wage is the legal lowest hourly pay, stuck at $7.25 since 2009. This supports raising it to at least $15."
   },
   {
     "id": "us13b",
@@ -1544,7 +1567,8 @@ const BANK = [
       "lib": 2,
       "grn": -2,
       "g": 0
-    }
+    },
+    "ctx": "This opposes a big minimum-wage rise, arguing it would force small businesses to close and cut entry-level jobs."
   },
   {
     "id": "us14a",
@@ -1561,7 +1585,8 @@ const BANK = [
       "lib": -1.5,
       "grn": 2,
       "g": 0
-    }
+    },
+    "ctx": "This supports cancelling much of Americans' student loan debt, which totals over a trillion dollars and burdens many graduates."
   },
   {
     "id": "us14b",
@@ -1578,7 +1603,8 @@ const BANK = [
       "lib": 1.5,
       "grn": -2,
       "g": 0
-    }
+    },
+    "ctx": "This opposes student-debt cancellation, arguing it is unfair to make people who never went to college pay for those who did."
   },
   {
     "id": "us15a",
@@ -1595,7 +1621,8 @@ const BANK = [
       "lib": -1.5,
       "grn": 1.5,
       "g": 0
-    }
+    },
+    "ctx": "Social Security (pensions) and Medicare (healthcare for the elderly) are big federal programs. This supports expanding rather than cutting them."
   },
   {
     "id": "us15b",
@@ -1612,7 +1639,8 @@ const BANK = [
       "lib": 1.5,
       "grn": -1.5,
       "g": 0
-    }
+    },
+    "ctx": "This warns that spending on these 'entitlement' programs is unaffordable and must be reined in to control the national debt."
   },
   {
     "id": "us16a",
@@ -1629,7 +1657,8 @@ const BANK = [
       "rep": -0.5,
       "lib": -1.5,
       "grn": -1
-    }
+    },
+    "ctx": "This supports continuing US military aid to Ukraine in its war against Russia's invasion, for as long as needed."
   },
   {
     "id": "us16b",
@@ -1646,7 +1675,8 @@ const BANK = [
       "rep": 0.5,
       "lib": 1.5,
       "grn": 1
-    }
+    },
+    "ctx": "This opposes open-ended funding for the war, arguing the money should be spent on Americans at home instead."
   },
   {
     "id": "us17a",
@@ -1662,7 +1692,8 @@ const BANK = [
       "rep": 1.5,
       "lib": -0.5,
       "grn": -2
-    }
+    },
+    "ctx": "This supports continued strong US military and financial backing for Israel, a long-standing American ally."
   },
   {
     "id": "us17b",
@@ -1678,7 +1709,8 @@ const BANK = [
       "rep": -1.5,
       "lib": 0.5,
       "grn": 2
-    }
+    },
+    "ctx": "This wants the US to reduce, condition, or end its military aid to Israel, often over its conduct toward Palestinians."
   },
   {
     "id": "us18a",
@@ -1695,7 +1727,8 @@ const BANK = [
       "rep": 1.5,
       "lib": -2,
       "grn": 0.5
-    }
+    },
+    "ctx": "Tariffs are taxes on imported goods. This supports using them to protect American factories and jobs, even if it raises prices for shoppers."
   },
   {
     "id": "us18b",
@@ -1712,7 +1745,8 @@ const BANK = [
       "rep": -1.5,
       "lib": 2,
       "grn": -0.5
-    }
+    },
+    "ctx": "This opposes tariffs, arguing they raise prices for American families and trigger damaging trade wars."
   },
   {
     "id": "us19a",
@@ -1729,7 +1763,8 @@ const BANK = [
       "rep": 1.5,
       "lib": -1,
       "grn": -1.5
-    }
+    },
+    "ctx": "This is Christian nationalism: the view that America is fundamentally a Christian country whose laws should reflect Christian values."
   },
   {
     "id": "us19b",
@@ -1746,7 +1781,8 @@ const BANK = [
       "rep": -1.5,
       "lib": 1,
       "grn": 1.5
-    }
+    },
+    "ctx": "This defends the separation of church and state — a founding US principle — keeping religion out of law and government."
   },
   {
     "id": "us20a",
@@ -1763,7 +1799,8 @@ const BANK = [
       "rep": 1,
       "lib": -0.5,
       "grn": -1.5
-    }
+    },
+    "ctx": "This argues that Islam clashes with American values. Supporters cite security and social concerns; critics call it religious prejudice."
   },
   {
     "id": "us20b",
@@ -1780,7 +1817,8 @@ const BANK = [
       "rep": -1,
       "lib": 0.5,
       "grn": 1.5
-    }
+    },
+    "ctx": "This holds that Muslim Americans are full and equal citizens whose religion deserves the same respect as any other."
   },
   {
     "id": "us21a",
@@ -1797,7 +1835,8 @@ const BANK = [
       "rep": 1.5,
       "lib": 1,
       "grn": -1
-    }
+    },
+    "ctx": "'Cancel culture' refers to people losing jobs or being shamed for their opinions. This argues free speech is being suppressed, especially on campuses."
   },
   {
     "id": "us21b",
@@ -1814,7 +1853,8 @@ const BANK = [
       "rep": -1.5,
       "lib": -0.5,
       "grn": 1
-    }
+    },
+    "ctx": "This argues the free-speech alarm is overblown, and is really cover for people who want to say bigoted things without facing criticism."
   },
   {
     "id": "us22a",
@@ -1831,7 +1871,8 @@ const BANK = [
       "rep": 2,
       "lib": 0.5,
       "grn": -2
-    }
+    },
+    "ctx": "DEI stands for Diversity, Equity, and Inclusion — workplace programs to promote underrepresented groups. This argues they have gone too far and should be scrapped."
   },
   {
     "id": "us22b",
@@ -1848,7 +1889,8 @@ const BANK = [
       "rep": -2,
       "lib": -0.5,
       "grn": 2
-    }
+    },
+    "ctx": "This defends DEI programs, arguing they exist because discrimination is real and that ending them mainly protects those already in power."
   },
   {
     "id": "us23a",
@@ -1865,7 +1907,8 @@ const BANK = [
       "rep": -1,
       "lib": 2,
       "grn": 1.5
-    }
+    },
+    "ctx": "This supports legalising marijuana across the country and treating drug use as a health matter rather than a crime."
   },
   {
     "id": "us23b",
@@ -1882,7 +1925,8 @@ const BANK = [
       "rep": 1,
       "lib": -2,
       "grn": -1.5
-    }
+    },
+    "ctx": "This opposes loosening drug laws, arguing it has fuelled addiction and public disorder and should be reversed."
   },
   {
     "id": "us24a",
@@ -1899,7 +1943,8 @@ const BANK = [
       "rep": -1,
       "lib": 1.5,
       "grn": 0.5
-    }
+    },
+    "ctx": "'Medically assisted death' lets terminally ill adults choose to end their lives with medical help. This supports making it a legal right."
   },
   {
     "id": "us24b",
@@ -1916,7 +1961,8 @@ const BANK = [
       "rep": 1,
       "lib": -1,
       "grn": -0.5
-    }
+    },
+    "ctx": "This opposes assisted dying, warning it could pressure vulnerable or disabled people and crosses a moral line."
   },
   {
     "id": "us25a",
@@ -1933,7 +1979,8 @@ const BANK = [
       "lib": -0.5,
       "grn": 2,
       "g": 0
-    }
+    },
+    "ctx": "This puts protecting the environment ahead of expanding fossil fuels like oil, gas, and coal."
   },
   {
     "id": "us25b",
@@ -1950,7 +1997,8 @@ const BANK = [
       "lib": 0.5,
       "grn": -2,
       "g": 0
-    }
+    },
+    "ctx": "This prioritises cheap, home-produced energy and energy independence over restrictions on drilling and pipelines."
   },
   {
     "id": "us26a",
@@ -1967,7 +2015,8 @@ const BANK = [
       "lib": -2,
       "grn": 1.5,
       "g": 0
-    }
+    },
+    "ctx": "This supports strong government action on housing costs, including rent control (legal caps on how much rents can rise)."
   },
   {
     "id": "us26b",
@@ -1984,7 +2033,8 @@ const BANK = [
       "lib": 1.5,
       "grn": -1.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues rent control and mandates make housing shortages worse, and that cutting regulations to let builders build is the fix."
   },
   {
     "id": "us27a",
@@ -2000,7 +2050,8 @@ const BANK = [
       "dem": 1.5,
       "rep": -2,
       "grn": 1.5
-    }
+    },
+    "ctx": "The Electoral College is the system that can let a candidate win the presidency without winning the most votes nationally. This wants it abolished for a national popular vote."
   },
   {
     "id": "us27b",
@@ -2016,7 +2067,8 @@ const BANK = [
       "dem": -1.5,
       "rep": 2,
       "grn": -1.5
-    }
+    },
+    "ctx": "This defends the Electoral College, arguing it protects the influence of smaller states in presidential elections."
   },
   {
     "id": "us28a",
@@ -2033,7 +2085,8 @@ const BANK = [
       "rep": -1,
       "lib": -1,
       "grn": 1.5
-    }
+    },
+    "ctx": "This supports federal gun-safety rules: background checks for all buyers and 'red-flag' laws that let courts remove guns from dangerous people."
   },
   {
     "id": "us28b",
@@ -2050,7 +2103,8 @@ const BANK = [
       "rep": 1,
       "lib": 1,
       "grn": -1.5
-    }
+    },
+    "ctx": "This opposes those measures, seeing them as a step toward eventually confiscating law-abiding people's guns."
   },
   {
     "id": "us29a",
@@ -2066,7 +2120,8 @@ const BANK = [
       "lib": -1.5,
       "grn": 1.5,
       "g": 0
-    }
+    },
+    "ctx": "This supports breaking up and tightly regulating giant technology companies and other monopolies to curb their power."
   },
   {
     "id": "us29b",
@@ -2082,7 +2137,8 @@ const BANK = [
       "lib": 1.5,
       "grn": -1.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues heavy regulation of successful companies stifles the innovation that made the US economy strong."
   },
   {
     "id": "us30a",
@@ -2099,7 +2155,8 @@ const BANK = [
       "rep": -1.5,
       "lib": 1,
       "grn": 2
-    }
+    },
+    "ctx": "The US has by far the world's largest military budget. This argues it spends too much and should cut defense spending."
   },
   {
     "id": "us30b",
@@ -2116,7 +2173,8 @@ const BANK = [
       "rep": 1.5,
       "lib": -1,
       "grn": -2
-    }
+    },
+    "ctx": "This defends high military spending as what keeps America and its allies safe."
   },
   {
     "id": "us31a",
@@ -2132,7 +2190,8 @@ const BANK = [
       "dem": -1,
       "rep": 2,
       "grn": -1.5
-    }
+    },
+    "ctx": "This favours patriotic education: teaching children pride in America's history rather than focusing on its wrongs."
   },
   {
     "id": "us31b",
@@ -2148,7 +2207,8 @@ const BANK = [
       "dem": 1,
       "rep": -2,
       "grn": 1.5
-    }
+    },
+    "ctx": "This supports teaching the darker parts of US history, like slavery, arguing that hiding them misleads students."
   },
   {
     "id": "us32a",
@@ -2165,7 +2225,8 @@ const BANK = [
       "rep": 1.5,
       "lib": -0.5,
       "grn": -1.5
-    }
+    },
+    "ctx": "Birthright citizenship means anyone born on US soil is automatically a citizen. This wants that ended."
   },
   {
     "id": "us32b",
@@ -2182,7 +2243,8 @@ const BANK = [
       "rep": -1.5,
       "lib": 0.5,
       "grn": 1.5
-    }
+    },
+    "ctx": "This defends birthright citizenship as a constitutional guarantee (the 14th Amendment) and a core American principle."
   },
   {
     "id": "us33a",
@@ -2199,7 +2261,8 @@ const BANK = [
       "lib": -2,
       "grn": 2,
       "g": 0
-    }
+    },
+    "ctx": "This argues the poor and unemployed face too many hurdles, and that welfare and support should be stronger and easier to get."
   },
   {
     "id": "us33b",
@@ -2216,7 +2279,8 @@ const BANK = [
       "lib": 2,
       "grn": -2,
       "g": 0
-    }
+    },
+    "ctx": "This argues welfare can trap people in dependency, and that work requirements protect the taxpayers who fund it."
   },
   {
     "id": "us34a",
@@ -2232,7 +2296,8 @@ const BANK = [
       "dem": -0.5,
       "rep": 1.5,
       "grn": -1
-    }
+    },
+    "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
   },
   {
     "id": "us34b",
@@ -2248,7 +2313,8 @@ const BANK = [
       "dem": 0.5,
       "rep": -1.5,
       "grn": 1
-    }
+    },
+    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
   },
   {
     "id": "us35a",
@@ -2265,7 +2331,8 @@ const BANK = [
       "rep": 1.5,
       "lib": 1.5,
       "grn": -1.5
-    }
+    },
+    "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
   },
   {
     "id": "us35b",
@@ -2282,7 +2349,8 @@ const BANK = [
       "rep": -1.5,
       "lib": -1.5,
       "grn": 1.5
-    }
+    },
+    "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
   }
 ];
 
@@ -2323,6 +2391,6 @@ window.portalCode = 'us';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>
-<script src="/engine.js?v=1.1.3"></script>
+<script src="/engine.js?v=1.1.7"></script>
 </body>
 </html>

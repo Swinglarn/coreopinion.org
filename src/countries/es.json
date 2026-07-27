@@ -111,214 +111,284 @@
   "calibrations": {},
   "translations": {
     "es1a": {
-      "q": "La inmigración a España es demasiado alta y debe reducirse."
+      "q": "La inmigración a España es demasiado alta y debe reducirse.",
+      "ctx": "Sostiene que la inmigración a España es demasiado alta y debe reducirse."
     },
     "es1b": {
-      "q": "Los inmigrantes son esenciales para la economía española y su sociedad envejecida."
+      "q": "Los inmigrantes son esenciales para la economía española y su sociedad envejecida.",
+      "ctx": "Es la visión favorable a la inmigración: que los inmigrantes son esenciales para la economía española y su sociedad envejecida."
     },
     "es2a": {
-      "q": "Los inmigrantes que cometen delitos deben ser expulsados sin excepción."
+      "q": "Los inmigrantes que cometen delitos deben ser expulsados sin excepción.",
+      "ctx": "Apoya expulsar a los inmigrantes que cometen delitos, sin excepciones."
     },
     "es2b": {
-      "q": "Las expulsiones colectivas traicionan los derechos humanos y los valores de una sociedad decente."
+      "q": "Las expulsiones colectivas traicionan los derechos humanos y los valores de una sociedad decente.",
+      "ctx": "Sostiene que las expulsiones colectivas traicionan los derechos humanos y los valores de una sociedad decente."
     },
     "es3a": {
-      "q": "Regiones como Cataluña deberían tener derecho a un referéndum de independencia vinculante."
+      "q": "Regiones como Cataluña deberían tener derecho a un referéndum de independencia vinculante.",
+      "ctx": "Apoya que regiones como Cataluña tengan derecho a un referéndum de independencia vinculante."
     },
     "es3b": {
-      "q": "España es una nación indivisible, y los referéndums separatistas son ilegales y deben impedirse."
+      "q": "España es una nación indivisible, y los referéndums separatistas son ilegales y deben impedirse.",
+      "ctx": "Sostiene que España es una nación indivisible y que los referéndums separatistas son ilegales y deben impedirse."
     },
     "es4a": {
-      "q": "La amnistía a los independentistas catalanes fue un paso justificado hacia la reconciliación."
+      "q": "La amnistía a los independentistas catalanes fue un paso justificado hacia la reconciliación.",
+      "ctx": "El gobierno concedió una amnistía a los independentistas catalanes por el intento de 2017. Esto la defiende como reconciliación."
     },
     "es4b": {
-      "q": "La amnistía fue una traición cínica a la igualdad ante la ley para aferrarse al poder."
+      "q": "La amnistía fue una traición cínica a la igualdad ante la ley para aferrarse al poder.",
+      "ctx": "Ataca la amnistía como una traición cínica a la igualdad ante la ley, hecha para aferrarse al poder."
     },
     "es5a": {
-      "q": "España debe seguir afrontando los crímenes de la dictadura franquista mediante las leyes de memoria histórica."
+      "q": "España debe seguir afrontando los crímenes de la dictadura franquista mediante las leyes de memoria histórica.",
+      "ctx": "Las leyes de memoria histórica abordan los crímenes de la dictadura de Franco (1939–1975). Esto apoya continuar esa labor."
     },
     "es5b": {
-      "q": "Las leyes de memoria histórica solo reabren viejas heridas y reescriben el pasado con fines políticos."
+      "q": "Las leyes de memoria histórica solo reabren viejas heridas y reescriben el pasado con fines políticos.",
+      "ctx": "Sostiene que las leyes de memoria histórica solo reabren viejas heridas y reescriben el pasado con fines políticos."
     },
     "es6a": {
-      "q": "España debería abolir la monarquía y convertirse en una república."
+      "q": "España debería abolir la monarquía y convertirse en una república.",
+      "ctx": "Apoya abolir la monarquía y convertir España en una república."
     },
     "es6b": {
-      "q": "La monarquía aporta estabilidad y unidad a España y debe conservarse."
+      "q": "La monarquía aporta estabilidad y unidad a España y debe conservarse.",
+      "ctx": "Defiende la monarquía como fuente de estabilidad y unidad para España."
     },
     "es7a": {
-      "q": "Los españoles más ricos y las grandes empresas deberían pagar bastantes más impuestos."
+      "q": "Los españoles más ricos y las grandes empresas deberían pagar bastantes más impuestos.",
+      "ctx": "Apoya subir bastante los impuestos a los españoles más ricos y a las grandes empresas."
     },
     "es7b": {
-      "q": "Subir los impuestos a la riqueza y a las empresas solo expulsa la inversión y el empleo de España."
+      "q": "Subir los impuestos a la riqueza y a las empresas solo expulsa la inversión y el empleo de España.",
+      "ctx": "Sostiene que subir los impuestos a la riqueza y a las empresas expulsa la inversión y el empleo de España."
     },
     "es8a": {
-      "q": "Se necesitan topes al alquiler y más vivienda pública para afrontar la crisis de la vivienda."
+      "q": "Se necesitan topes al alquiler y más vivienda pública para afrontar la crisis de la vivienda.",
+      "ctx": "Apoya topes al alquiler y más vivienda pública para afrontar la crisis de la vivienda."
     },
     "es8b": {
-      "q": "Los topes al alquiler secan la oferta y empeoran la escasez de vivienda para todos."
+      "q": "Los topes al alquiler secan la oferta y empeoran la escasez de vivienda para todos.",
+      "ctx": "Sostiene que los topes al alquiler secan la oferta y empeoran la escasez de vivienda para todos."
     },
     "es9a": {
-      "q": "Los propietarios deberían poder desalojar a los okupas de forma rápida y sencilla."
+      "q": "Los propietarios deberían poder desalojar a los okupas de forma rápida y sencilla.",
+      "ctx": "Los okupas son personas que ocupan viviendas vacías. Esto quiere que los propietarios puedan desalojarlos de forma rápida y sencilla."
     },
     "es9b": {
-      "q": "Los desahucios exprés arrojarían a familias vulnerables a la calle sin protección."
+      "q": "Los desahucios exprés arrojarían a familias vulnerables a la calle sin protección.",
+      "ctx": "Advierte que los desahucios exprés arrojarían a familias vulnerables a la calle sin protección."
     },
     "es10a": {
-      "q": "El salario mínimo (SMI) debería seguir subiendo de forma sustancial."
+      "q": "El salario mínimo (SMI) debería seguir subiendo de forma sustancial.",
+      "ctx": "El SMI es el salario mínimo español. Esto apoya que siga subiendo de forma sustancial."
     },
     "es10b": {
-      "q": "Subir el salario mínimo demasiado rápido destruye empleo para jóvenes y menos cualificados."
+      "q": "Subir el salario mínimo demasiado rápido destruye empleo para jóvenes y menos cualificados.",
+      "ctx": "Sostiene que subir el salario mínimo demasiado rápido destruye empleo para jóvenes y menos cualificados."
     },
     "es11a": {
-      "q": "La reforma laboral que protege a los trabajadores fue acertada, y los derechos deben reforzarse aún más."
+      "q": "La reforma laboral que protege a los trabajadores fue acertada, y los derechos deben reforzarse aún más.",
+      "ctx": "La reforma laboral española de 2021 reforzó la protección de los trabajadores. Esto la respalda y quiere reforzar aún más los derechos."
     },
     "es11b": {
-      "q": "Las normas laborales rígidas solo protegen a los de dentro y dejan fuera a los jóvenes."
+      "q": "Las normas laborales rígidas solo protegen a los de dentro y dejan fuera a los jóvenes.",
+      "ctx": "Sostiene que las normas laborales rígidas protegen a los de dentro y dejan a los jóvenes fuera del empleo."
     },
     "es12a": {
-      "q": "Las sólidas leyes españolas contra la violencia de género son necesarias y deben reforzarse."
+      "q": "Las sólidas leyes españolas contra la violencia de género son necesarias y deben reforzarse.",
+      "ctx": "España tiene leyes específicas contra la violencia de los hombres hacia las mujeres. Esto dice que son necesarias y deben reforzarse."
     },
     "es12b": {
-      "q": "Las leyes de violencia de género discriminan a los hombres y presumen culpabilidad; deberían derogarse."
+      "q": "Las leyes de violencia de género discriminan a los hombres y presumen culpabilidad; deberían derogarse.",
+      "ctx": "Sostiene que las leyes de violencia de género discriminan a los hombres y presumen culpabilidad, y deberían derogarse."
     },
     "es13a": {
-      "q": "La ley trans que permite el cambio de sexo legal por autodeterminación fue acertada."
+      "q": "La ley trans que permite el cambio de sexo legal por autodeterminación fue acertada.",
+      "ctx": "La ley trans española permite cambiar el sexo legal por autodeterminación. Esto la respalda."
     },
     "es13b": {
-      "q": "El sexo legal no puede depender de una simple declaración; la realidad biológica debe prevalecer."
+      "q": "El sexo legal no puede depender de una simple declaración; la realidad biológica debe prevalecer.",
+      "ctx": "Es la visión crítica con el género: que el sexo legal no puede depender de una mera declaración y la realidad biológica debe prevalecer."
     },
     "es14a": {
-      "q": "El acceso al aborto es un derecho que debe protegerse plenamente."
+      "q": "El acceso al aborto es un derecho que debe protegerse plenamente.",
+      "ctx": "Considera el acceso al aborto un derecho que debe protegerse plenamente."
     },
     "es14b": {
-      "q": "El aborto pone fin a una vida humana, y la ley es demasiado permisiva."
+      "q": "El aborto pone fin a una vida humana, y la ley es demasiado permisiva.",
+      "ctx": "Sostiene que el aborto pone fin a una vida humana y que la ley es demasiado permisiva."
     },
     "es15a": {
-      "q": "La Iglesia católica tiene demasiada influencia y privilegios en España."
+      "q": "La Iglesia católica tiene demasiada influencia y privilegios en España.",
+      "ctx": "Sostiene que la Iglesia católica tiene demasiada influencia y demasiados privilegios en España."
     },
     "es15b": {
-      "q": "La Iglesia forma parte del patrimonio y la identidad de España y merece su lugar."
+      "q": "La Iglesia forma parte del patrimonio y la identidad de España y merece su lugar.",
+      "ctx": "Defiende a la Iglesia como parte del patrimonio y la identidad de España que merece su lugar."
     },
     "es16a": {
-      "q": "El islam no es compatible con los valores españoles."
+      "q": "El islam no es compatible con los valores españoles.",
+      "ctx": "Sostiene que el islam choca con los valores españoles. Sus defensores citan la integración; los críticos lo llaman prejuicio."
     },
     "es16b": {
-      "q": "Los españoles musulmanes son ciudadanos de pleno derecho, y su fe merece el mismo respeto que cualquier otra."
+      "q": "Los españoles musulmanes son ciudadanos de pleno derecho, y su fe merece el mismo respeto que cualquier otra.",
+      "ctx": "Considera que los españoles musulmanes son ciudadanos de pleno derecho cuya fe merece el mismo respeto."
     },
     "es17a": {
-      "q": "Algunas razas son simplemente más inteligentes o capaces que otras."
+      "q": "Algunas razas son simplemente más inteligentes o capaces que otras.",
+      "ctx": "Es supremacismo racial: la creencia de que algunas razas son por naturaleza más inteligentes o capaces. La ciencia lo rechaza; está ligado a ideologías como el nazismo."
     },
     "es17b": {
-      "q": "No hay jerarquía de razas; la idea es una pseudociencia de historia vergonzosa."
+      "q": "No hay jerarquía de razas; la idea es una pseudociencia de historia vergonzosa.",
+      "ctx": "Es el principio de igualdad humana: ninguna raza es superior por naturaleza, y la idea es una pseudociencia desacreditada de historia vergonzosa."
     },
     "es18a": {
-      "q": "La tauromaquia es parte de la cultura española y debe protegerse."
+      "q": "La tauromaquia es parte de la cultura española y debe protegerse.",
+      "ctx": "Defiende la tauromaquia como parte de la cultura española que debe protegerse."
     },
     "es18b": {
-      "q": "La tauromaquia es crueldad disfrazada de tradición y debería prohibirse."
+      "q": "La tauromaquia es crueldad disfrazada de tradición y debería prohibirse.",
+      "ctx": "Condena la tauromaquia como crueldad disfrazada de tradición y quiere prohibirla."
     },
     "es19a": {
-      "q": "España necesita penas más duras y más policía para garantizar la seguridad ciudadana."
+      "q": "España necesita penas más duras y más policía para garantizar la seguridad ciudadana.",
+      "ctx": "Sostiene que España necesita penas más duras y más policía para garantizar la seguridad."
     },
     "es19b": {
-      "q": "Las penas cada vez más duras nunca reducen el delito; la prevención y la política social sí."
+      "q": "Las penas cada vez más duras nunca reducen el delito; la prevención y la política social sí.",
+      "ctx": "Sostiene que las penas cada vez más duras nunca reducen el delito, pero la prevención y la política social sí."
     },
     "es20a": {
-      "q": "España debe actuar mucho más en el clima, incluso con coste económico."
+      "q": "España debe actuar mucho más en el clima, incluso con coste económico.",
+      "ctx": "Dice que España debe actuar mucho más en el clima, incluso con coste económico."
     },
     "es20b": {
-      "q": "Las normas climáticas punitivas aplastan a agricultores y trabajadores con poco beneficio global."
+      "q": "Las normas climáticas punitivas aplastan a agricultores y trabajadores con poco beneficio global.",
+      "ctx": "Sostiene que las normas climáticas punitivas aplastan a agricultores y trabajadores con poco beneficio global."
     },
     "es21a": {
-      "q": "Los agricultores españoles están ahogados por las normas de la UE y merecen mucha más protección."
+      "q": "Los agricultores españoles están ahogados por las normas de la UE y merecen mucha más protección.",
+      "ctx": "Sostiene que los agricultores españoles están ahogados por las normas de la UE y merecen mucha más protección."
     },
     "es21b": {
-      "q": "Los agricultores deben cumplir las normas ambientales como todos, no quedar exentos."
+      "q": "Los agricultores deben cumplir las normas ambientales como todos, no quedar exentos.",
+      "ctx": "Sostiene que los agricultores deben cumplir las mismas normas ambientales que los demás."
     },
     "es22a": {
-      "q": "El futuro de España está en una Unión Europea más fuerte e integrada."
+      "q": "El futuro de España está en una Unión Europea más fuerte e integrada.",
+      "ctx": "Ve el futuro de España en una Unión Europea más fuerte e integrada."
     },
     "es22b": {
-      "q": "Bruselas tiene demasiado poder sobre España, y la soberanía debe ir primero."
+      "q": "Bruselas tiene demasiado poder sobre España, y la soberanía debe ir primero.",
+      "ctx": "Sostiene que Bruselas tiene demasiado poder sobre España y que la soberanía debe ir primero."
     },
     "es23a": {
-      "q": "La sanidad pública debe seguir siendo universal y bien financiada, y hay que frenar la privatización."
+      "q": "La sanidad pública debe seguir siendo universal y bien financiada, y hay que frenar la privatización.",
+      "ctx": "Quiere una sanidad pública universal y bien financiada, frenando la privatización."
     },
     "es23b": {
-      "q": "Más provisión privada aliviaría la presión y reduciría las listas de espera en los hospitales públicos."
+      "q": "Más provisión privada aliviaría la presión y reduciría las listas de espera en los hospitales públicos.",
+      "ctx": "Sostiene que más provisión privada aliviaría la presión y reduciría las listas de espera públicas."
     },
     "es24a": {
-      "q": "Las pensiones públicas deben protegerse y seguir subiendo con la inflación."
+      "q": "Las pensiones públicas deben protegerse y seguir subiendo con la inflación.",
+      "ctx": "Quiere proteger las pensiones públicas y que sigan subiendo con la inflación."
     },
     "es24b": {
-      "q": "Una España que envejece no puede seguir subiendo pensiones sin arruinar a los jóvenes."
+      "q": "Una España que envejece no puede seguir subiendo pensiones sin arruinar a los jóvenes.",
+      "ctx": "Sostiene que una España que envejece no puede seguir subiendo pensiones sin arruinar a los jóvenes."
     },
     "es25a": {
-      "q": "España regula y grava en exceso a las empresas; el Estado debería apartarse."
+      "q": "España regula y grava en exceso a las empresas; el Estado debería apartarse.",
+      "ctx": "Sostiene que España regula y grava en exceso a las empresas, y que el Estado debería apartarse."
     },
     "es25b": {
-      "q": "La desregulación solo da más poder a las grandes empresas a costa de los trabajadores."
+      "q": "La desregulación solo da más poder a las grandes empresas a costa de los trabajadores.",
+      "ctx": "Sostiene que la desregulación solo da más poder a las grandes empresas a costa de los trabajadores."
     },
     "es26a": {
-      "q": "El cannabis debería legalizarse y regularse en España."
+      "q": "El cannabis debería legalizarse y regularse en España.",
+      "ctx": "Apoya legalizar y regular el cannabis en España."
     },
     "es26b": {
-      "q": "Legalizar el cannabis normaliza el consumo y haría más daño que bien."
+      "q": "Legalizar el cannabis normaliza el consumo y haría más daño que bien.",
+      "ctx": "Sostiene que legalizar el cannabis normaliza el consumo y haría más daño que bien."
     },
     "es27a": {
-      "q": "España debería defender con fuerza los derechos palestinos, aun a coste diplomático."
+      "q": "España debería defender con fuerza los derechos palestinos, aun a coste diplomático.",
+      "ctx": "Apoya que España defienda con fuerza los derechos palestinos, aun a coste diplomático."
     },
     "es27b": {
-      "q": "España debería mantenerse equilibrada sobre Oriente Medio en lugar de tomar partido."
+      "q": "España debería mantenerse equilibrada sobre Oriente Medio en lugar de tomar partido.",
+      "ctx": "Sostiene que España debería mantenerse equilibrada sobre Oriente Medio en lugar de tomar partido."
     },
     "es28a": {
-      "q": "España debería aumentar el gasto militar para cumplir sus compromisos con la OTAN."
+      "q": "España debería aumentar el gasto militar para cumplir sus compromisos con la OTAN.",
+      "ctx": "Apoya aumentar el gasto militar para cumplir los compromisos de España con la OTAN."
     },
     "es28b": {
-      "q": "El dinero para armas es dinero que debería ir a las necesidades sociales en casa."
+      "q": "El dinero para armas es dinero que debería ir a las necesidades sociales en casa.",
+      "ctx": "Sostiene que el dinero para armas debería ir a las necesidades sociales en casa."
     },
     "es29a": {
-      "q": "Los inmigrantes deben adaptarse a la cultura y los valores españoles, no al revés."
+      "q": "Los inmigrantes deben adaptarse a la cultura y los valores españoles, no al revés.",
+      "ctx": "Sostiene que los inmigrantes deben adaptarse a la cultura española en lugar de lo contrario."
     },
     "es29b": {
-      "q": "Una cultura viva siempre es mestiza; exigir asimilación empobrece a España."
+      "q": "Una cultura viva siempre es mestiza; exigir asimilación empobrece a España.",
+      "ctx": "Sostiene que una cultura viva siempre es mestiza, de modo que exigir asimilación empobrece a España."
     },
     "es30a": {
-      "q": "Proteger la naturaleza debería estar por encima de nuevos proyectos turísticos y de construcción."
+      "q": "Proteger la naturaleza debería estar por encima de nuevos proyectos turísticos y de construcción.",
+      "ctx": "Antepone la protección de la naturaleza a los nuevos proyectos turísticos y de construcción."
     },
     "es30b": {
-      "q": "Las objeciones ambientales sin fin están ahogando el crecimiento que España necesita."
+      "q": "Las objeciones ambientales sin fin están ahogando el crecimiento que España necesita.",
+      "ctx": "Sostiene que las objeciones ambientales sin fin ahogan el crecimiento que España necesita."
     },
     "es31a": {
-      "q": "La radiotelevisión pública (RTVE) merece financiación y debe seguir siendo independiente."
+      "q": "La radiotelevisión pública (RTVE) merece financiación y debe seguir siendo independiente.",
+      "ctx": "RTVE es la radiotelevisión pública española. Esto sostiene que merece financiación y debe seguir siendo independiente."
     },
     "es31b": {
-      "q": "Las cadenas públicas son sesgadas e infladas, y su financiación debería recortarse."
+      "q": "Las cadenas públicas son sesgadas e infladas, y su financiación debería recortarse.",
+      "ctx": "Sostiene que las cadenas públicas son sesgadas e infladas y su financiación debería recortarse."
     },
     "es32a": {
-      "q": "Los pobres y desempleados son tratados con demasiada sospecha; la red de protección debería ser más fuerte."
+      "q": "Los pobres y desempleados son tratados con demasiada sospecha; la red de protección debería ser más fuerte.",
+      "ctx": "Sostiene que los pobres y desempleados sufren demasiada sospecha y que la red de protección debería ser más fuerte."
     },
     "es32b": {
-      "q": "La ayuda social se convierte fácilmente en trampa, y condiciones más estrictas protegen a quienes cotizan."
+      "q": "La ayuda social se convierte fácilmente en trampa, y condiciones más estrictas protegen a quienes cotizan.",
+      "ctx": "Sostiene que la ayuda social puede atrapar a la gente, y que condiciones más estrictas protegen a quienes cotizan."
     },
     "es33a": {
-      "q": "Las grandes decisiones nacionales deberían someterse directamente al pueblo en referéndums."
+      "q": "Las grandes decisiones nacionales deberían someterse directamente al pueblo en referéndums.",
+      "ctx": "Apoya someter las grandes decisiones nacionales directamente al pueblo en referéndums."
     },
     "es33b": {
-      "q": "Los referéndums reducen cuestiones complejas a eslganes y son fáciles de manipular por demagogos."
+      "q": "Los referéndums reducen cuestiones complejas a eslganes y son fáciles de manipular por demagogos.",
+      "ctx": "Sostiene que los referéndums reducen cuestiones complejas a eslganes y son fáciles de manipular por demagogos."
     },
     "es34a": {
-      "q": "Las tradiciones arraigadas guardan la sabiduría de generaciones y no deben descartarse a la ligera."
+      "q": "Las tradiciones arraigadas guardan la sabiduría de generaciones y no deben descartarse a la ligera.",
+      "ctx": "Es la visión conservadora de la tradición: las costumbres arraigadas guardan una sabiduría acumulada, por lo que conviene ser prudente antes de descartarlas."
     },
     "es34b": {
-      "q": "Venerar la tradición solo deja que los muertos gobiernen a los vivos y bloquea el cambio necesario."
+      "q": "Venerar la tradición solo deja que los muertos gobiernen a los vivos y bloquea el cambio necesario.",
+      "ctx": "Es la réplica progresista: aferrarse a la tradición por sí misma deja que el pasado gobierne el presente y bloquea el cambio necesario."
     },
     "es35a": {
-      "q": "Una buena sociedad depende más de la responsabilidad personal que del apoyo del Estado."
+      "q": "Una buena sociedad depende más de la responsabilidad personal que del apoyo del Estado.",
+      "ctx": "Refleja un valor más de derechas: que una buena sociedad depende sobre todo de la responsabilidad personal más que del apoyo del Estado."
     },
     "es35b": {
-      "q": "Culpar a los individuos de problemas que crea el sistema es como los acomodados excusan el sufrimiento ajeno."
+      "q": "Culpar a los individuos de problemas que crea el sistema es como los acomodados excusan el sufrimiento ajeno.",
+      "ctx": "Refleja un valor más de izquierdas: que muchos problemas vienen de sistemas injustos, de modo que culpar a los individuos permite a los acomodados ignorar el sufrimiento ajeno."
     }
   },
   "bank": [
@@ -339,7 +409,8 @@
         "sumar": -2,
         "pod": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues immigration to Spain is too high and must be reduced."
     },
     {
       "id": "es1b",
@@ -358,7 +429,8 @@
         "sumar": 2,
         "pod": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This is the pro-immigration view: that immigrants are essential to Spain's economy and its ageing society."
     },
     {
       "id": "es2a",
@@ -376,7 +448,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This supports deporting immigrants who commit crimes, with no exceptions."
     },
     {
       "id": "es2b",
@@ -394,7 +467,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "This argues collective expulsions betray human rights and the values of a decent society."
     },
     {
       "id": "es3a",
@@ -413,7 +487,8 @@
         "sumar": 1,
         "pod": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This supports regions like Catalonia having the right to a binding independence referendum."
     },
     {
       "id": "es3b",
@@ -432,7 +507,8 @@
         "sumar": -1,
         "pod": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This holds Spain to be one indivisible nation and separatist referendums to be illegal and blockable."
     },
     {
       "id": "es4a",
@@ -451,7 +527,8 @@
         "sumar": 1,
         "pod": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "The government granted an amnesty to Catalan separatists over the 2017 independence bid. This defends it as reconciliation."
     },
     {
       "id": "es4b",
@@ -470,7 +547,8 @@
         "sumar": -1,
         "pod": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This attacks the amnesty as a cynical betrayal of equality before the law, done to cling to power."
     },
     {
       "id": "es5a",
@@ -488,7 +566,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "'Historical memory' laws address the crimes of Franco's 1939–1975 dictatorship. This supports continuing that work."
     },
     {
       "id": "es5b",
@@ -506,7 +585,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This argues the historical memory laws just reopen old wounds and rewrite the past for political gain."
     },
     {
       "id": "es6a",
@@ -524,7 +604,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "This supports abolishing the monarchy and making Spain a republic."
     },
     {
       "id": "es6b",
@@ -542,7 +623,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This defends the monarchy as providing stability and unity for Spain."
     },
     {
       "id": "es7a",
@@ -560,7 +642,8 @@
         "sumar": 2,
         "pod": 2,
         "g": 0
-      }
+      },
+      "ctx": "This supports significantly higher taxes on the wealthiest Spaniards and big companies."
     },
     {
       "id": "es7b",
@@ -578,7 +661,8 @@
         "sumar": -2,
         "pod": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues higher taxes on wealth and business drive investment and jobs out of Spain."
     },
     {
       "id": "es8a",
@@ -596,7 +680,8 @@
         "sumar": 2,
         "pod": 2,
         "g": 0
-      }
+      },
+      "ctx": "This supports rent caps and more public housing to tackle the housing crisis."
     },
     {
       "id": "es8b",
@@ -614,7 +699,8 @@
         "sumar": -2,
         "pod": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues rent caps dry up supply and make the housing shortage worse for everyone."
     },
     {
       "id": "es9a",
@@ -632,7 +718,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -1.5
-      }
+      },
+      "ctx": "'Okupas' are people who occupy empty properties. This wants owners to be able to evict them quickly and easily."
     },
     {
       "id": "es9b",
@@ -650,7 +737,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 1.5
-      }
+      },
+      "ctx": "This warns fast-track evictions would throw vulnerable families onto the street without protection."
     },
     {
       "id": "es10a",
@@ -668,7 +756,8 @@
         "sumar": 2,
         "pod": 2,
         "g": 0
-      }
+      },
+      "ctx": "The SMI is Spain's minimum wage. This supports it continuing to rise substantially."
     },
     {
       "id": "es10b",
@@ -686,7 +775,8 @@
         "sumar": -2,
         "pod": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues pushing the minimum wage up too fast destroys jobs for the young and low-skilled."
     },
     {
       "id": "es11a",
@@ -704,7 +794,8 @@
         "sumar": 2,
         "pod": 2,
         "g": 0
-      }
+      },
+      "ctx": "Spain's 2021 labour reform strengthened worker protections. This backs it and wants rights strengthened further."
     },
     {
       "id": "es11b",
@@ -722,7 +813,8 @@
         "sumar": -2,
         "pod": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues rigid labour rules protect 'insiders' and keep the young locked out of work."
     },
     {
       "id": "es12a",
@@ -741,7 +833,8 @@
         "sumar": 1.5,
         "pod": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "Spain has strong laws specifically against violence by men towards women. This says they're necessary and should be reinforced."
     },
     {
       "id": "es12b",
@@ -760,7 +853,8 @@
         "sumar": -1.5,
         "pod": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues gender-violence laws discriminate against men and presume guilt, and should be scrapped."
     },
     {
       "id": "es13a",
@@ -778,7 +872,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "Spain's trans law lets people change their legal gender by self-identification. This backs it."
     },
     {
       "id": "es13b",
@@ -796,7 +891,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This is the gender-critical view: that legal sex can't rest on a mere declaration and biological reality must prevail."
     },
     {
       "id": "es14a",
@@ -814,7 +910,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "This treats access to abortion as a right that must be fully protected."
     },
     {
       "id": "es14b",
@@ -832,7 +929,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This argues abortion ends a human life and the law is far too permissive."
     },
     {
       "id": "es15a",
@@ -850,7 +948,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "This argues the Catholic Church holds too much influence and too many privileges in Spain."
     },
     {
       "id": "es15b",
@@ -868,7 +967,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This defends the Church as part of Spain's heritage and identity that deserves its place."
     },
     {
       "id": "es16a",
@@ -886,7 +986,8 @@
         "sumar": -2,
         "pod": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Islam clashes with Spanish values. Supporters cite integration; critics call it prejudice."
     },
     {
       "id": "es16b",
@@ -904,7 +1005,8 @@
         "sumar": 2,
         "pod": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This holds Muslim Spaniards to be full citizens whose faith deserves equal respect."
     },
     {
       "id": "es17a",
@@ -921,7 +1023,8 @@
         "psoe": -1.5,
         "sumar": -2,
         "pod": -2
-      }
+      },
+      "ctx": "This is racial supremacism — the belief that some races are inherently more intelligent or capable. Science rejects it; it is tied to ideologies like Nazism."
     },
     {
       "id": "es17b",
@@ -938,7 +1041,8 @@
         "psoe": 1.5,
         "sumar": 2,
         "pod": 2
-      }
+      },
+      "ctx": "This is the principle of human equality: no race is inherently superior, and the idea is discredited pseudo-science with a shameful history."
     },
     {
       "id": "es18a",
@@ -956,7 +1060,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This defends bullfighting as part of Spanish culture that should be protected."
     },
     {
       "id": "es18b",
@@ -974,7 +1079,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "This condemns bullfighting as cruelty dressed up as tradition and wants it banned."
     },
     {
       "id": "es19a",
@@ -991,7 +1097,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -1.5
-      }
+      },
+      "ctx": "This argues Spain needs tougher sentences and more police to guarantee public safety."
     },
     {
       "id": "es19b",
@@ -1008,7 +1115,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 1.5
-      }
+      },
+      "ctx": "This argues ever tougher sentences never reduce crime, while prevention and social policy do."
     },
     {
       "id": "es20a",
@@ -1026,7 +1134,8 @@
         "sumar": 1.5,
         "pod": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This says Spain must act far more aggressively on climate, even at economic cost."
     },
     {
       "id": "es20b",
@@ -1044,7 +1153,8 @@
         "sumar": -1.5,
         "pod": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues punitive climate rules crush farmers and workers for little global benefit."
     },
     {
       "id": "es21a",
@@ -1061,7 +1171,8 @@
         "vox": 2,
         "sumar": -0.5,
         "pod": -0.5
-      }
+      },
+      "ctx": "This argues Spanish farmers are strangled by EU rules and deserve far more protection."
     },
     {
       "id": "es21b",
@@ -1078,7 +1189,8 @@
         "vox": -2,
         "sumar": 0.5,
         "pod": 0.5
-      }
+      },
+      "ctx": "This argues farmers must meet the same environmental standards as everyone else."
     },
     {
       "id": "es22a",
@@ -1096,7 +1208,8 @@
         "vox": -2,
         "sumar": 0.5,
         "pod": -0.5
-      }
+      },
+      "ctx": "This sees Spain's future in a stronger, more integrated European Union."
     },
     {
       "id": "es22b",
@@ -1114,7 +1227,8 @@
         "vox": 2,
         "sumar": -0.5,
         "pod": 0.5
-      }
+      },
+      "ctx": "This argues Brussels has too much power over Spain and sovereignty should come first."
     },
     {
       "id": "es23a",
@@ -1132,7 +1246,8 @@
         "sumar": 2,
         "pod": 2,
         "g": 0
-      }
+      },
+      "ctx": "This wants public healthcare kept universal and well funded, resisting privatisation."
     },
     {
       "id": "es23b",
@@ -1150,7 +1265,8 @@
         "sumar": -2,
         "pod": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues more private provision would relieve pressure and cut public-hospital waiting lists."
     },
     {
       "id": "es24a",
@@ -1167,7 +1283,8 @@
         "sumar": 1.5,
         "pod": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This wants public pensions protected and kept rising with inflation."
     },
     {
       "id": "es24b",
@@ -1185,7 +1302,8 @@
         "sumar": -1.5,
         "pod": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues an ageing Spain can't keep raising pensions without bankrupting the young."
     },
     {
       "id": "es25a",
@@ -1203,7 +1321,8 @@
         "vox": 1,
         "sumar": -2,
         "pod": -2
-      }
+      },
+      "ctx": "This argues Spain over-regulates and over-taxes business, and the state should step back."
     },
     {
       "id": "es25b",
@@ -1221,7 +1340,8 @@
         "vox": -1,
         "sumar": 2,
         "pod": 2
-      }
+      },
+      "ctx": "This argues deregulation just gives big companies more power at the expense of workers."
     },
     {
       "id": "es26a",
@@ -1238,7 +1358,8 @@
         "vox": -1.5,
         "sumar": 1.5,
         "pod": 1.5
-      }
+      },
+      "ctx": "This supports legalising and regulating cannabis in Spain."
     },
     {
       "id": "es26b",
@@ -1255,7 +1376,8 @@
         "vox": 1.5,
         "sumar": -1.5,
         "pod": -1.5
-      }
+      },
+      "ctx": "This argues legalising cannabis normalises drug use and would do more harm than good."
     },
     {
       "id": "es27a",
@@ -1273,7 +1395,8 @@
         "vox": -1.5,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "This supports Spain taking a strong stance for Palestinian rights, even at diplomatic cost."
     },
     {
       "id": "es27b",
@@ -1291,7 +1414,8 @@
         "vox": 1.5,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This argues Spain should stay balanced on the Middle East rather than taking sides."
     },
     {
       "id": "es28a",
@@ -1309,7 +1433,8 @@
         "vox": 1.5,
         "sumar": -1.5,
         "pod": -2
-      }
+      },
+      "ctx": "This supports raising military spending to meet Spain's NATO commitments."
     },
     {
       "id": "es28b",
@@ -1327,7 +1452,8 @@
         "vox": -1.5,
         "sumar": 1.5,
         "pod": 2
-      }
+      },
+      "ctx": "This argues money for weapons should go to social needs at home."
     },
     {
       "id": "es29a",
@@ -1345,7 +1471,8 @@
         "vox": 2,
         "sumar": -1.5,
         "pod": -1.5
-      }
+      },
+      "ctx": "This argues immigrants should adapt to Spanish culture rather than the reverse."
     },
     {
       "id": "es29b",
@@ -1363,7 +1490,8 @@
         "vox": -2,
         "sumar": 1.5,
         "pod": 1.5
-      }
+      },
+      "ctx": "This argues a living culture is always mixed, so demanding assimilation impoverishes Spain."
     },
     {
       "id": "es30a",
@@ -1380,7 +1508,8 @@
         "sumar": 1.5,
         "pod": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This puts protecting nature ahead of new tourism and construction projects."
     },
     {
       "id": "es30b",
@@ -1397,7 +1526,8 @@
         "sumar": -1.5,
         "pod": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues endless environmental objections are strangling the growth Spain needs."
     },
     {
       "id": "es31a",
@@ -1415,7 +1545,8 @@
         "sumar": 1,
         "pod": 1,
         "g": 0
-      }
+      },
+      "ctx": "RTVE is Spain's public broadcaster. This argues it's worth funding and must stay independent."
     },
     {
       "id": "es31b",
@@ -1433,7 +1564,8 @@
         "sumar": -1,
         "pod": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues public broadcasters are biased and bloated and their funding should be cut."
     },
     {
       "id": "es32a",
@@ -1451,7 +1583,8 @@
         "sumar": 2,
         "pod": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues the poor and unemployed face too much suspicion and the safety net should be stronger."
     },
     {
       "id": "es32b",
@@ -1469,7 +1602,8 @@
         "sumar": -2,
         "pod": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues welfare can trap people, and stricter conditions protect those who pay in."
     },
     {
       "id": "es33a",
@@ -1487,7 +1621,8 @@
         "vox": 1,
         "sumar": 1,
         "pod": 1.5
-      }
+      },
+      "ctx": "This supports putting major national decisions directly to the people in referendums."
     },
     {
       "id": "es33b",
@@ -1505,7 +1640,8 @@
         "vox": -1,
         "sumar": -1,
         "pod": -1.5
-      }
+      },
+      "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by demagogues."
     },
     {
       "id": "es34a",
@@ -1523,7 +1659,8 @@
         "vox": 1.5,
         "sumar": -1,
         "pod": -1
-      }
+      },
+      "ctx": "This is the conservative view of tradition: that long-standing customs hold accumulated wisdom, so we should be cautious about discarding them."
     },
     {
       "id": "es34b",
@@ -1541,7 +1678,8 @@
         "vox": -1.5,
         "sumar": 1,
         "pod": 1
-      }
+      },
+      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past govern the present and blocks needed change."
     },
     {
       "id": "es35a",
@@ -1559,7 +1697,8 @@
         "vox": 1,
         "sumar": -2,
         "pod": -2
-      }
+      },
+      "ctx": "This reflects a right-leaning value: that a good society rests mainly on personal responsibility rather than government support."
     },
     {
       "id": "es35b",
@@ -1577,7 +1716,8 @@
         "vox": -1,
         "sumar": 2,
         "pod": 2
-      }
+      },
+      "ctx": "This reflects a left-leaning value: that many problems come from unfair systems, so blaming individuals lets the comfortable ignore others' suffering."
     }
   ],
   "heroTitle": "¿Dónde te sitúas en la<br><em>política española</em>?",

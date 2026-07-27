@@ -86,7 +86,8 @@
         "sd": 1.5,
         "g": 0
       },
-      "dec": true
+      "dec": true,
+      "ctx": "'Council housing' is government-owned rental housing. This supports building it on a massive scale to end Ireland's housing crisis."
     },
     {
       "id": "ie1b",
@@ -106,7 +107,8 @@
         "sd": -1,
         "g": 0
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues the fix is backing private developers and cutting red tape, not more state building."
     },
     {
       "id": "ie2a",
@@ -125,7 +127,8 @@
         "lab": 1.5,
         "sd": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "A 'rent freeze' legally stops rents from rising. This supports a long-term one to protect tenants."
     },
     {
       "id": "ie2b",
@@ -144,7 +147,8 @@
         "lab": -1.5,
         "sd": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues rent freezes drive landlords out of the market and worsen the shortage for everyone."
     },
     {
       "id": "ie3a",
@@ -162,7 +166,8 @@
         "lab": -1,
         "sd": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Ireland is taking in too many asylum seekers and that immigration should be cut."
     },
     {
       "id": "ie3b",
@@ -180,7 +185,8 @@
         "lab": 1,
         "sd": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Ireland, historically a nation of emigrants, has a duty to welcome people fleeing hardship."
     },
     {
       "id": "ie4a",
@@ -199,7 +205,8 @@
         "grn": -1,
         "lab": -0.5,
         "sd": -0.5
-      }
+      },
+      "ctx": "This argues local communities should have a real say before asylum-seeker centres are opened in their area."
     },
     {
       "id": "ie4b",
@@ -218,7 +225,8 @@
         "grn": 1,
         "lab": 0.5,
         "sd": 0.5
-      }
+      },
+      "ctx": "This argues letting communities veto asylum housing gives cover to intimidation and racism."
     },
     {
       "id": "ie5a",
@@ -236,7 +244,8 @@
         "sf": 2,
         "lab": 0.5,
         "sd": 0.5
-      }
+      },
+      "ctx": "A 'united Ireland' would join the Republic with Northern Ireland (currently part of the UK). This wants a referendum ('border poll') on it within a decade."
     },
     {
       "id": "ie5b",
@@ -254,7 +263,8 @@
         "sf": -2,
         "lab": -0.5,
         "sd": -0.5
-      }
+      },
+      "ctx": "This argues a border poll now would be divisive and destabilising and should not be rushed."
     },
     {
       "id": "ie6a",
@@ -272,7 +282,8 @@
         "grn": 1,
         "lab": 1,
         "sd": 1
-      }
+      },
+      "ctx": "Ireland is militarily neutral and not in NATO (the Western defence alliance). This supports holding firmly to that neutrality."
     },
     {
       "id": "ie6b",
@@ -290,7 +301,8 @@
         "grn": -1,
         "lab": -1,
         "sd": -1
-      }
+      },
+      "ctx": "This argues neutrality means freeloading on others' defence, and that Ireland should deepen ties with Western allies."
     },
     {
       "id": "ie7a",
@@ -309,7 +321,8 @@
         "lab": 1.5,
         "sd": 2,
         "g": 0
-      }
+      },
+      "ctx": "Ireland has a mix of public and private care. This supports moving to a single-tier public system and ending private care in public hospitals."
     },
     {
       "id": "ie7b",
@@ -328,7 +341,8 @@
         "lab": -1.5,
         "sd": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues private healthcare relieves pressure on the public system and abolishing it would make waits worse."
     },
     {
       "id": "ie8a",
@@ -347,7 +361,8 @@
         "lab": 1.5,
         "sd": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports significantly higher taxes on the wealthiest people and highest earners."
     },
     {
       "id": "ie8b",
@@ -366,7 +381,8 @@
         "lab": -1.5,
         "sd": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues higher taxes on the successful drive investment and talent out of Ireland."
     },
     {
       "id": "ie9a",
@@ -385,7 +401,8 @@
         "lab": -0.5,
         "sd": -1,
         "g": 0
-      }
+      },
+      "ctx": "Ireland's low corporate tax rate attracts multinational companies. This argues it is vital and must be protected."
     },
     {
       "id": "ie9b",
@@ -404,7 +421,8 @@
         "lab": 0.5,
         "sd": 1,
         "g": 0
-      }
+      },
+      "ctx": "This argues the low corporate tax is a 'race to the bottom' that starves public services of revenue."
     },
     {
       "id": "ie10a",
@@ -422,7 +440,8 @@
         "lab": 1,
         "sd": 1,
         "g": 0
-      }
+      },
+      "ctx": "This supports cutting emissions faster, including from Ireland's large farming and cattle sector."
     },
     {
       "id": "ie10b",
@@ -440,7 +459,8 @@
         "lab": -1,
         "sd": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues climate rules that hit Irish farmers threaten rural life for tiny global benefit."
     },
     {
       "id": "ie11a",
@@ -459,7 +479,8 @@
         "grn": -2,
         "lab": -0.5,
         "sd": -0.5
-      }
+      },
+      "ctx": "This argues Irish farmers are unfairly targeted by climate policy and deserve more protection."
     },
     {
       "id": "ie11b",
@@ -478,7 +499,8 @@
         "grn": 2,
         "lab": 0.5,
         "sd": 0.5
-      }
+      },
+      "ctx": "This argues farming must meet the same environmental standards as everyone else, not be exempted."
     },
     {
       "id": "ie12a",
@@ -497,7 +519,8 @@
         "grn": 1.5,
         "lab": 1.5,
         "sd": 1.5
-      }
+      },
+      "ctx": "In a 2018 referendum Ireland legalised abortion. This defends that as the right decision."
     },
     {
       "id": "ie12b",
@@ -516,7 +539,8 @@
         "grn": -1.5,
         "lab": -1.5,
         "sd": -1.5
-      }
+      },
+      "ctx": "This argues legalising abortion was a moral wrong and that Ireland went too far."
     },
     {
       "id": "ie13a",
@@ -535,7 +559,8 @@
         "grn": 1,
         "lab": 0.5,
         "sd": 0.5
-      }
+      },
+      "ctx": "This supports actively promoting and funding the Irish (Gaelic) language."
     },
     {
       "id": "ie13b",
@@ -554,7 +579,8 @@
         "grn": -1,
         "lab": -0.5,
         "sd": -0.5
-      }
+      },
+      "ctx": "This argues compulsory Irish and heavy spending on the language are wasteful since few people use it."
     },
     {
       "id": "ie14a",
@@ -572,7 +598,8 @@
         "grn": 1,
         "lab": 1.5,
         "sd": 1.5
-      }
+      },
+      "ctx": "The Catholic Church still runs many Irish schools and hospitals. This argues it should have no such role."
     },
     {
       "id": "ie14b",
@@ -590,7 +617,8 @@
         "grn": -1,
         "lab": -1.5,
         "sd": -1.5
-      }
+      },
+      "ctx": "This argues the Church's role in Irish education and care is part of the country's heritage and does good."
     },
     {
       "id": "ie15a",
@@ -609,7 +637,8 @@
         "grn": -1.5,
         "lab": -1.5,
         "sd": -1.5
-      }
+      },
+      "ctx": "This argues Islam clashes with Irish values. Supporters cite integration concerns; critics call it religious prejudice."
     },
     {
       "id": "ie15b",
@@ -628,7 +657,8 @@
         "grn": 1.5,
         "lab": 1.5,
         "sd": 1.5
-      }
+      },
+      "ctx": "This holds that Muslim Irish people are full members of society whose faith deserves equal respect."
     },
     {
       "id": "ie16a",
@@ -647,7 +677,8 @@
         "grn": -2,
         "lab": -1.5,
         "sd": -2
-      }
+      },
+      "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
     },
     {
       "id": "ie16b",
@@ -666,7 +697,8 @@
         "grn": 2,
         "lab": 1.5,
         "sd": 2
-      }
+      },
+      "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
     },
     {
       "id": "ie17a",
@@ -685,7 +717,8 @@
         "grn": -1,
         "lab": -0.5,
         "sd": -0.5
-      }
+      },
+      "ctx": "The Gardí are Ireland's police. This argues Ireland needs more of them on the streets and tougher sentences for violent crime."
     },
     {
       "id": "ie17b",
@@ -704,7 +737,8 @@
         "grn": 1,
         "lab": 0.5,
         "sd": 0.5
-      }
+      },
+      "ctx": "This argues more police and longer sentences have never cut crime, and that prevention and services do."
     },
     {
       "id": "ie18a",
@@ -722,7 +756,8 @@
         "grn": 1.5,
         "lab": 1.5,
         "sd": 1.5
-      }
+      },
+      "ctx": "This supports transgender rights: the view that people should be able to have the law recognise the gender they identify as, without needing medical approval."
     },
     {
       "id": "ie18b",
@@ -740,7 +775,8 @@
         "grn": -1.5,
         "lab": -1.5,
         "sd": -1.5
-      }
+      },
+      "ctx": "This is the gender-critical view: that biological sex is a fixed fact the law should not allow a personal declaration to override."
     },
     {
       "id": "ie19a",
@@ -759,7 +795,8 @@
         "lab": 2,
         "sd": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports stronger unions and worker rights, and a higher 'living wage'."
     },
     {
       "id": "ie19b",
@@ -778,7 +815,8 @@
         "lab": -2,
         "sd": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues union power and higher mandated wages cost jobs and hurt small businesses."
     },
     {
       "id": "ie20a",
@@ -797,7 +835,8 @@
         "lab": 1.5,
         "sd": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues Ireland's welfare payments should be raised to protect people from poverty."
     },
     {
       "id": "ie20b",
@@ -816,7 +855,8 @@
         "lab": -1.5,
         "sd": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues raising welfare too far weakens the incentive to work."
     },
     {
       "id": "ie21a",
@@ -835,7 +875,8 @@
         "grn": -1,
         "lab": -1,
         "sd": -1
-      }
+      },
+      "ctx": "This argues Ireland over-regulates business and that companies need less red tape and lower costs."
     },
     {
       "id": "ie21b",
@@ -854,7 +895,8 @@
         "grn": 1,
         "lab": 1,
         "sd": 1
-      }
+      },
+      "ctx": "This argues cutting regulation just lets companies off the hook on workers and the environment."
     },
     {
       "id": "ie22a",
@@ -873,7 +915,8 @@
         "grn": 1.5,
         "lab": 1,
         "sd": 1.5
-      }
+      },
+      "ctx": "This supports decriminalising drug use and treating it as a health issue."
     },
     {
       "id": "ie22b",
@@ -892,7 +935,8 @@
         "grn": -1.5,
         "lab": -1,
         "sd": -1.5
-      }
+      },
+      "ctx": "This argues softening drug laws fuels addiction and disorder and should be resisted."
     },
     {
       "id": "ie23a",
@@ -909,7 +953,8 @@
         "grn": 0.5,
         "lab": 1,
         "sd": 1
-      }
+      },
+      "ctx": "This supports legalising assisted dying (medical help to die) for the terminally ill."
     },
     {
       "id": "ie23b",
@@ -926,7 +971,8 @@
         "grn": -0.5,
         "lab": -1,
         "sd": -1
-      }
+      },
+      "ctx": "This argues assisted dying pressures the vulnerable and crosses a line society shouldn't cross."
     },
     {
       "id": "ie24a",
@@ -945,7 +991,8 @@
         "grn": 1,
         "lab": 1,
         "sd": 1
-      }
+      },
+      "ctx": "This sees Ireland's future at the heart of a strong European Union."
     },
     {
       "id": "ie24b",
@@ -964,7 +1011,8 @@
         "grn": -1,
         "lab": -1,
         "sd": -1
-      }
+      },
+      "ctx": "This argues Brussels (the EU) has too much power over Ireland and that Irish sovereignty should come first."
     },
     {
       "id": "ie25a",
@@ -982,7 +1030,8 @@
         "lab": 1.5,
         "sd": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "'Vulture funds' are large investors that buy up property in bulk. This supports blocking them from buying Irish homes."
     },
     {
       "id": "ie25b",
@@ -1000,7 +1049,8 @@
         "lab": -1.5,
         "sd": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues investment funds add needed housing supply and that blocking them would backfire."
     },
     {
       "id": "ie26a",
@@ -1019,7 +1069,8 @@
         "grn": 1,
         "lab": 0.5,
         "sd": 1
-      }
+      },
+      "ctx": "Ireland changes its constitution by referendum and holds many. This argues that system is a strength worth keeping."
     },
     {
       "id": "ie26b",
@@ -1038,7 +1089,8 @@
         "grn": -1,
         "lab": -0.5,
         "sd": -1
-      }
+      },
+      "ctx": "This argues constant referendums reduce complex questions to slogans and cause needless division."
     },
     {
       "id": "ie27a",
@@ -1056,7 +1108,8 @@
         "grn": 1,
         "lab": 1,
         "sd": 1
-      }
+      },
+      "ctx": "This supports Ireland taking a strong public stand for Palestinian rights, even at a diplomatic cost."
     },
     {
       "id": "ie27b",
@@ -1074,7 +1127,8 @@
         "grn": -1,
         "lab": -1,
         "sd": -1
-      }
+      },
+      "ctx": "This argues Ireland should stay balanced on the Middle East rather than taking sides."
     },
     {
       "id": "ie28a",
@@ -1092,7 +1146,8 @@
         "lab": 0.5,
         "sd": 1,
         "g": 0
-      }
+      },
+      "ctx": "'Data centres' are large computer facilities that use a lot of power. This puts protecting nature ahead of new roads, data centres, and development."
     },
     {
       "id": "ie28b",
@@ -1110,7 +1165,8 @@
         "lab": -0.5,
         "sd": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues endless environmental objections block the housing and infrastructure Ireland needs."
     },
     {
       "id": "ie29a",
@@ -1129,7 +1185,8 @@
         "lab": 1.5,
         "sd": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports the government stepping in directly to cap energy and rent costs."
     },
     {
       "id": "ie29b",
@@ -1148,7 +1205,8 @@
         "lab": -1.5,
         "sd": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues price caps cause shortages and drive suppliers out without fixing the real problem."
     },
     {
       "id": "ie30a",
@@ -1165,7 +1223,8 @@
         "grn": -1.5,
         "lab": -1,
         "sd": -1
-      }
+      },
+      "ctx": "This argues immigrants should adapt to Irish culture and values rather than the country adapting to them."
     },
     {
       "id": "ie30b",
@@ -1182,7 +1241,8 @@
         "grn": 1.5,
         "lab": 1,
         "sd": 1
-      }
+      },
+      "ctx": "This argues a living culture is always a blend, so demanding assimilation impoverishes Ireland."
     },
     {
       "id": "ie31a",
@@ -1200,7 +1260,8 @@
         "sf": -0.5,
         "grn": -0.5,
         "lab": -0.5
-      }
+      },
+      "ctx": "This supports higher defence spending and Ireland taking its own security more seriously."
     },
     {
       "id": "ie31b",
@@ -1218,7 +1279,8 @@
         "sf": 0.5,
         "grn": 0.5,
         "lab": 0.5
-      }
+      },
+      "ctx": "This argues money for the military would be better spent on housing and health."
     },
     {
       "id": "ie32a",
@@ -1237,7 +1299,8 @@
         "lab": 1,
         "sd": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "RTÉ is Ireland's public broadcaster. This argues it is worth funding and must stay independent."
     },
     {
       "id": "ie32b",
@@ -1256,7 +1319,8 @@
         "lab": -1,
         "sd": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues RTÉ is wasteful and out of touch and its licence fee should be scrapped."
     },
     {
       "id": "ie33a",
@@ -1275,7 +1339,8 @@
         "lab": 1.5,
         "sd": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues the unemployed are treated with too much suspicion and the safety net should be stronger."
     },
     {
       "id": "ie33b",
@@ -1294,7 +1359,8 @@
         "lab": -1.5,
         "sd": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues welfare can trap people, and stricter conditions protect the taxpayers who fund it."
     },
     {
       "id": "ie34a",
@@ -1312,7 +1378,8 @@
         "grn": -1,
         "lab": -0.5,
         "sd": -0.5
-      }
+      },
+      "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
     },
     {
       "id": "ie34b",
@@ -1330,7 +1397,8 @@
         "grn": 1,
         "lab": 0.5,
         "sd": 0.5
-      }
+      },
+      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
     },
     {
       "id": "ie35a",
@@ -1349,7 +1417,8 @@
         "grn": -1,
         "lab": -1,
         "sd": -1
-      }
+      },
+      "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
     },
     {
       "id": "ie35b",
@@ -1368,7 +1437,8 @@
         "grn": 1,
         "lab": 1,
         "sd": 1
-      }
+      },
+      "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
     }
   ],
   "heroTitle": "Where do you stand in<br><em>Irish</em> politics?",
