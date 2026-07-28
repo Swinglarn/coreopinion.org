@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.7">
+<link rel="stylesheet" href="/style.css?v=1.1.9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,6 +181,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -668,6 +669,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -810,6 +812,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -923,6 +926,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1069,6 +1073,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1108,214 +1113,284 @@
 <script>
 const LOCAL_QUESTIONS = {
   "at1a": {
-    "q": "Die Zuwanderung nach Österreich ist viel zu hoch und muss drastisch reduziert werden."
+    "q": "Die Zuwanderung nach Österreich ist viel zu hoch und muss drastisch reduziert werden.",
+    "ctx": "Das fordert, dass die Zuwanderung nach Österreich viel zu hoch ist und stark gesenkt werden muss — das Kernthema der FPÖ, die eine Nationalratswahl gewann. Es geht um das Ausmaß der Zuwanderung."
   },
   "at1b": {
-    "q": "Österreich ist ein alterndes Land, das Zuwanderung für Wirtschaft und Zukunft braucht."
+    "q": "Österreich ist ein alterndes Land, das Zuwanderung für Wirtschaft und Zukunft braucht.",
+    "ctx": "Das ist die zuwanderungsfreundliche Sicht: dass das alternde Österreich Zuwanderer für Wirtschaft und Zukunft braucht. Es geht um die Rolle der Zuwanderung für das Land."
   },
   "at2a": {
-    "q": "Abgelehnte Asylwerber sollten schnell und konsequent abgeschoben werden."
+    "q": "Abgelehnte Asylwerber sollten schnell und konsequent abgeschoben werden.",
+    "ctx": "Das will abgelehnte Asylwerber schnell und konsequent abschieben, eine sich verschärfende Linie unter Druck von rechts. Es geht um Durchsetzung gegen individuelle Umstände."
   },
   "at2b": {
-    "q": "Menschen in Gefahr und Elend abzuschieben verrät die grundlegende Menschlichkeit."
+    "q": "Menschen in Gefahr und Elend abzuschieben verrät die grundlegende Menschlichkeit.",
+    "ctx": "Das argumentiert, Menschen in Gefahr und Elend abzuschieben verrate die grundlegende Menschlichkeit. Es geht um Durchsetzung gegen Mitgefühl."
   },
   "at3a": {
-    "q": "Österreich sollte an seiner Neutralität festhalten und der NATO fernbleiben."
+    "q": "Österreich sollte an seiner Neutralität festhalten und der NATO fernbleiben.",
+    "ctx": "Österreich ist verfassungsmäßig neutral und, ungewöhnlich für die EU, nicht in der NATO. Das will an dieser Neutralität festhalten. Es geht um einen Grundpfeiler der österreichischen Identität."
   },
   "at3b": {
-    "q": "In einer gefährlichen Welt ist Österreichs Neutralität eine Illusion, und es sollte sich enger an den Westen binden."
+    "q": "In einer gefährlichen Welt ist Österreichs Neutralität eine Illusion, und es sollte sich enger an den Westen binden.",
+    "ctx": "Das argumentiert, in einer gefährlicheren Welt sei Österreichs Neutralität eine Illusion und es solle sich enger an den Westen binden. Es geht um Neutralität gegen gemeinsame westliche Sicherheit."
   },
   "at4a": {
-    "q": "Österreich muss seine Abhängigkeit von russischem Gas so schnell wie möglich beenden."
+    "q": "Österreich muss seine Abhängigkeit von russischem Gas so schnell wie möglich beenden.",
+    "ctx": "Österreich hängte lange stark von russischem Gas ab, stärker als die meisten EU-Staaten. Das will diese Abhängigkeit nach dem Ukraine-Krieg so schnell wie möglich beenden. Es geht um Energiesicherheit gegen billiges russisches Gas."
   },
   "at4b": {
-    "q": "Billiges russisches Gas über Nacht zu kappen würde die österreichische Industrie und die Haushalte ruinieren."
+    "q": "Billiges russisches Gas über Nacht zu kappen würde die österreichische Industrie und die Haushalte ruinieren.",
+    "ctx": "Das warnt, billiges russisches Gas über Nacht zu kappen würde die österreichische Industrie und die Haushalte ruinieren. Es geht darum, wie schnell die Abhängigkeit zu beenden ist."
   },
   "at5a": {
-    "q": "Österreich muss viel mehr für den Klimaschutz tun, auch um den Preis der Wirtschaft."
+    "q": "Österreich muss viel mehr für den Klimaschutz tun, auch um den Preis der Wirtschaft.",
+    "ctx": "Das sagt, Österreich müsse viel mehr für den Klimaschutz tun, auch um den Preis der Wirtschaft — die Priorität der Grünen. Es geht um Klimaehrgeiz gegen die Wirtschaft."
   },
   "at5b": {
-    "q": "Teure Klimaregeln belasten normale Österreicher und bringen dem Weltklima wenig."
+    "q": "Teure Klimaregeln belasten normale Österreicher und bringen dem Weltklima wenig.",
+    "ctx": "Das argumentiert, teure Klimaregeln belasteten normale Österreicher und brächten dem Weltklima wenig. Es geht darum, wer die Kosten der Klimapolitik trägt."
   },
   "at6a": {
-    "q": "Der Staat sollte direkt eingreifen, mit Preisdeckeln, um die Inflation zu bekämpfen."
+    "q": "Der Staat sollte direkt eingreifen, mit Preisdeckeln, um die Inflation zu bekämpfen.",
+    "ctx": "Angesichts hoher Inflation will das, dass der Staat direkt eingreift, mit Preisdeckeln, um die Menschen zu schützen — eine Forderung der Linken und der KPÖ, die lokal beim Wohnen stark wurde. Es geht um Staatseingriffe gegen die Inflation."
   },
   "at6b": {
-    "q": "Preisdeckel führen zu Engpässen und beheben nicht die Ursachen der Inflation."
+    "q": "Preisdeckel führen zu Engpässen und beheben nicht die Ursachen der Inflation.",
+    "ctx": "Das argumentiert, Preisdeckel führten zu Engpässen und behöben nicht die Ursachen der Inflation. Es geht darum, ob Eingriffe helfen oder das Problem verschlimmern."
   },
   "at7a": {
-    "q": "Österreich sollte Steuern auf große Vermögen und Erbschaften einführen."
+    "q": "Österreich sollte Steuern auf große Vermögen und Erbschaften einführen.",
+    "ctx": "Österreich hat keine Vermögens- oder Erbschaftssteuer. Das will Steuern auf große Vermögen und Erbschaften einführen, während die Ungleichheit wächst. Es geht um die Besteuerung von Vermögen."
   },
   "at7b": {
-    "q": "Vermögens- und Erbschaftssteuern treiben Kapital und Familienbetriebe aus Österreich."
+    "q": "Vermögens- und Erbschaftssteuern treiben Kapital und Familienbetriebe aus Österreich.",
+    "ctx": "Das argumentiert, Vermögens- und Erbschaftssteuern trieben Kapital und Familienbetriebe aus Österreich. Es geht darum, ob solche Steuern Einnahmen bringen oder vertreiben."
   },
   "at8a": {
-    "q": "Der politische Islam ist eine echte Bedrohung für die österreichische Gesellschaft."
+    "q": "Der politische Islam ist eine echte Bedrohung für die österreichische Gesellschaft.",
+    "ctx": "Das argumentiert, der „politische Islam“ sei eine echte Bedrohung für die österreichische Gesellschaft, ein Thema, das ÖVP und FPÖ mit einer Dokumentationsstelle vorangetrieben haben. Kritiker sagen, es stigmatisiere normale Muslime. Es geht darum, ob die Sorge berechtigt oder Vorurteil ist."
   },
   "at8b": {
-    "q": "Das Gerede vom „politischen Islam“ dient meist dazu, Misstrauen gegen normale Muslime zu schüren."
+    "q": "Das Gerede vom „politischen Islam“ dient meist dazu, Misstrauen gegen normale Muslime zu schüren.",
+    "ctx": "Das argumentiert, das Gerede vom „politischen Islam“ diene vor allem dazu, Misstrauen gegen normale Muslime zu schüren. Es geht um eine echte Sorge gegen ein Mittel des Vorurteils."
   },
   "at9a": {
-    "q": "Manche Volksgruppen sind einfach krimineller und gewalttätiger veranlagt als andere."
+    "q": "Manche Volksgruppen sind einfach krimineller und gewalttätiger veranlagt als andere.",
+    "ctx": "Das behauptet, manche Volksgruppen seien von Natur aus krimineller und gewalttätiger — eine Behauptung eines angeborenen Merkmals, die die Forschung zugunsten sozialer Faktoren ablehnt. Es geht um Natur gegen Umstände."
   },
   "at9b": {
-    "q": "Keine Volksgruppe ist von Geburt an kriminell; Verhalten entsteht aus Umständen, nicht aus dem Blut."
+    "q": "Keine Volksgruppe ist von Geburt an kriminell; Verhalten entsteht aus Umständen, nicht aus dem Blut.",
+    "ctx": "Das argumentiert, keine Volksgruppe sei von Geburt an kriminell und Verhalten entstehe aus Umständen, nicht aus dem Blut. Es geht um die Ablehnung einer angeborenen Erklärung für Kriminalität."
   },
   "at10a": {
-    "q": "Es ist legitim, dass die FPÖ die Regierung führt, wenn sie die meisten Stimmen bekommt."
+    "q": "Es ist legitim, dass die FPÖ die Regierung führt, wenn sie die meisten Stimmen bekommt.",
+    "ctx": "Die FPÖ ist Österreichs rechte Partei, die 2024 die meisten Stimmen holte, aber durch eine Koalition der übrigen vom Kanzleramt ferngehalten wurde. Das argumentiert, es sei legitim, dass sie die Regierung führt, wenn sie gewinnt. Es geht um den Machtanspruch der Rechten."
   },
   "at10b": {
-    "q": "Die rechtsextreme FPÖ ist eine Gefahr für die Demokratie und sollte von der Macht ferngehalten werden."
+    "q": "Die rechtsextreme FPÖ ist eine Gefahr für die Demokratie und sollte von der Macht ferngehalten werden.",
+    "ctx": "Das argumentiert, die rechtsextreme FPÖ sei eine Gefahr für die Demokratie und solle von der Macht ferngehalten werden. Es geht um einen Cordon sanitaire gegen die Achtung des Wahlergebnisses."
   },
   "at11a": {
-    "q": "Sozialleistungen sollten für jene gekürzt werden, die sich nicht integrieren oder nicht arbeiten wollen."
+    "q": "Sozialleistungen sollten für jene gekürzt werden, die sich nicht integrieren oder nicht arbeiten wollen.",
+    "ctx": "Das will Sozialleistungen für jene kürzen, die sich nicht integrieren oder nicht arbeiten wollen — eine Forderung der Rechten, die auf Zuwanderer zielt. Es geht darum, Sozialleistungen an Integration und Arbeit zu knüpfen."
   },
   "at11b": {
-    "q": "Leistungen zu kürzen stößt Menschen, die ohnehin kämpfen, tiefer in die Armut."
+    "q": "Leistungen zu kürzen stößt Menschen, die ohnehin kämpfen, tiefer in die Armut.",
+    "ctx": "Das argumentiert, Leistungen zu kürzen stürze Menschen, die ohnehin kämpfen, tiefer in die Armut. Es geht darum, ob solche Kürzungen motivieren oder bestrafen."
   },
   "at12a": {
-    "q": "Österreich sollte den sozialen Wohnbau ausbauen und Mieten deckeln, um das Wohnen leistbar zu halten."
+    "q": "Österreich sollte den sozialen Wohnbau ausbauen und Mieten deckeln, um das Wohnen leistbar zu halten.",
+    "ctx": "Wien ist für seinen großen Bestand an gefördertem Sozialwohnbau bekannt. Das will, dass Österreich den sozialen Wohnbau ausbaut und Mieten deckelt, um das Wohnen leistbar zu halten. Es geht um ein gefeiertes Wohnmodell."
   },
   "at12b": {
-    "q": "Mietdeckel legen Investitionen lahm und verschärfen den Wohnungsmangel."
+    "q": "Mietdeckel legen Investitionen lahm und verschärfen den Wohnungsmangel.",
+    "ctx": "Das argumentiert, Mietdeckel legten Investitionen lahm und verschärften den Wohnungsmangel. Es geht darum, ob Deckel helfen oder nach hinten losgehen."
   },
   "at13a": {
-    "q": "Das Pensionsniveau muss gesichert werden, auch wenn die Beiträge steigen müssen."
+    "q": "Das Pensionsniveau muss gesichert werden, auch wenn die Beiträge steigen müssen.",
+    "ctx": "Das will das österreichische Pensionsniveau sichern, auch wenn die Beiträge steigen müssen, während die große Nachkriegsgeneration in Pension geht. Es geht um die Einlösung der Pensionen in einer alternden Gesellschaft."
   },
   "at13b": {
-    "q": "Eine alternde Gesellschaft kann nicht dieselben Pensionen weiter versprechen; das Antrittsalter muss steigen."
+    "q": "Eine alternde Gesellschaft kann nicht dieselben Pensionen weiter versprechen; das Antrittsalter muss steigen.",
+    "ctx": "Das argumentiert, eine alternde Gesellschaft könne nicht dieselben Pensionen weiter versprechen, also müsse das Antrittsalter steigen. Es geht um Gerechtigkeit zwischen den Generationen."
   },
   "at14a": {
-    "q": "Österreichs Zukunft liegt in einer starken, stärker integrierten Europäischen Union."
+    "q": "Österreichs Zukunft liegt in einer starken, stärker integrierten Europäischen Union.",
+    "ctx": "Das sieht Österreichs Zukunft in einer starken, stärker integrierten Europäischen Union. Es geht um tiefere EU-Integration."
   },
   "at14b": {
-    "q": "Brüssel hat schon zu viel Macht über Österreich, und die Souveränität muss zurück ins Land."
+    "q": "Brüssel hat schon zu viel Macht über Österreich, und die Souveränität muss zurück ins Land.",
+    "ctx": "Das argumentiert, Brüssel habe schon zu viel Macht über Österreich und die Souveränität müsse zurück ins Land — die EU-kritische Linie der FPÖ. Es geht um nationale Souveränität gegen die EU."
   },
   "at15a": {
-    "q": "Der Islam gehört zu Österreich."
+    "q": "Der Islam gehört zu Österreich.",
+    "ctx": "Das sagt, der Islam gehöre zu Österreich, das eine beträchtliche muslimische Minderheit beheimatet. Es geht darum, ob der Islam als Teil der Nation anerkannt wird."
   },
   "at15b": {
-    "q": "Der Islam ist der österreichischen Kultur grundfremd und gehört nicht hierher."
+    "q": "Der Islam ist der österreichischen Kultur grundfremd und gehört nicht hierher.",
+    "ctx": "Das argumentiert, der Islam sei der österreichischen Kultur grundfremd und gehöre nicht hierher. Es geht um nationale Identität gegen religiöse Zugehörigkeit."
   },
   "at16a": {
-    "q": "Zuwanderer müssen sich an die österreichische Leitkultur anpassen, nicht umgekehrt."
+    "q": "Zuwanderer müssen sich an die österreichische Leitkultur anpassen, nicht umgekehrt.",
+    "ctx": "Leitkultur meint eine führende nationale Kultur, an die sich Zuwanderer anpassen sollen. Das sagt, Zuwanderer müssten sich ihr anpassen. Es geht darum, ob Integration heißt, eine definierte österreichische Kultur zu übernehmen."
   },
   "at16b": {
-    "q": "Eine lebendige Kultur ist immer gemischt; Assimilierung zu fordern verarmt Österreich."
+    "q": "Eine lebendige Kultur ist immer gemischt; Assimilierung zu fordern verarmt Österreich.",
+    "ctx": "Das argumentiert, eine lebendige Kultur sei immer gemischt, sodass die Forderung nach Assimilierung Österreich verarme. Es geht um eine feste gegen eine pluralistische nationale Kultur."
   },
   "at17a": {
-    "q": "Österreich braucht härtere Strafen und mehr Polizei, um die öffentliche Sicherheit wiederherzustellen."
+    "q": "Österreich braucht härtere Strafen und mehr Polizei, um die öffentliche Sicherheit wiederherzustellen.",
+    "ctx": "Das will härtere Strafen und mehr Polizei, um die öffentliche Sicherheit wiederherzustellen, nach Debatten über Kriminalität in Wien. Es geht darum, ob eine harte Linie die Sicherheit verbessert."
   },
   "at17b": {
-    "q": "Immer härtere Strafen haben die Kriminalität nie gesenkt; Prävention und Sozialarbeit tun es."
+    "q": "Immer härtere Strafen haben die Kriminalität nie gesenkt; Prävention und Sozialarbeit tun es.",
+    "ctx": "Das argumentiert, immer härtere Strafen senkten die Kriminalität nie, während Prävention und Sozialarbeit es täten. Es geht darum, was Kriminalität wirklich senkt."
   },
   "at18a": {
-    "q": "Trans Personen sollten ihren Geschlechtseintrag per Selbsterklärung ändern können."
+    "q": "Trans Personen sollten ihren Geschlechtseintrag per Selbsterklärung ändern können.",
+    "ctx": "Das unterstützt, dass Menschen ihren Geschlechtseintrag per Selbsterklärung ändern können, als Anerkennung von Transpersonen. Es geht darum, ob Geschlecht durch Identität oder Biologie bestimmt wird."
   },
   "at18b": {
-    "q": "Das rechtliche Geschlecht kann keine bloße Erklärungssache sein; die biologische Realität muss zählen."
+    "q": "Das rechtliche Geschlecht kann keine bloße Erklärungssache sein; die biologische Realität muss zählen.",
+    "ctx": "Das ist die geschlechterkritische Sicht: dass das rechtliche Geschlecht nicht auf bloßer Erklärung beruhen könne und die biologische Realität zählen müsse. Es geht um die Bedeutung des rechtlichen Geschlechts."
   },
   "at19a": {
-    "q": "Die 32-Stunden-Woche bei vollem Lohn sollte das Ziel für österreichische Arbeitnehmer sein."
+    "q": "Die 32-Stunden-Woche bei vollem Lohn sollte das Ziel für österreichische Arbeitnehmer sein.",
+    "ctx": "Das setzt die 32-Stunden-Woche bei vollem Lohn als Ziel für österreichische Arbeitnehmer, eine Forderung von Gewerkschaften und Linken. Es geht um kürzere Arbeitszeit gegen Wettbewerbsfähigkeit."
   },
   "at19b": {
-    "q": "Eine kürzere Woche bei vollem Lohn ist eine Illusion, die die Wettbewerbsfähigkeit ruinieren würde."
+    "q": "Eine kürzere Woche bei vollem Lohn ist eine Illusion, die die Wettbewerbsfähigkeit ruinieren würde.",
+    "ctx": "Das argumentiert, eine kürzere Woche bei vollem Lohn sei eine Illusion, die die Wettbewerbsfähigkeit ruinieren würde. Es geht darum, ob sie finanzierbar ist."
   },
   "at20a": {
-    "q": "Österreich überreguliert die Wirtschaft; Unternehmen brauchen viel weniger Bürokratie."
+    "q": "Österreich überreguliert die Wirtschaft; Unternehmen brauchen viel weniger Bürokratie.",
+    "ctx": "Das argumentiert, Österreich überreguliere die Wirtschaft und Unternehmen bräuchten viel weniger Bürokratie. Es geht darum, ob Deregulierung der Wirtschaft hilft."
   },
   "at20b": {
-    "q": "Weniger Regulierung höhlt nur Arbeitnehmer-, Verbraucher- und Umweltschutz aus."
+    "q": "Weniger Regulierung höhlt nur Arbeitnehmer-, Verbraucher- und Umweltschutz aus.",
+    "ctx": "Das argumentiert, Regeln abzubauen höhle nur den Schutz von Arbeitnehmern, Verbrauchern und Umwelt aus. Es geht darum, ob Regeln Menschen schützen oder die Wirtschaft belasten."
   },
   "at21a": {
-    "q": "Der Zugang zum Schwangerschaftsabbruch sollte geschützt und in ganz Österreich erleichtert werden."
+    "q": "Der Zugang zum Schwangerschaftsabbruch sollte geschützt und in ganz Österreich erleichtert werden.",
+    "ctx": "Das will den Zugang zum Schwangerschaftsabbruch schützen und in ganz Österreich erleichtern, wo er legal ist, aber der Zugang variiert und er nicht von der Krankenkasse gedeckt wird. Es geht um den realen Zugang zu einem legalen Recht."
   },
   "at21b": {
-    "q": "Das ungeborene Kind hat ein Recht auf Leben, und der Abbruch sollte nicht erleichtert werden."
+    "q": "Das ungeborene Kind hat ein Recht auf Leben, und der Abbruch sollte nicht erleichtert werden.",
+    "ctx": "Das argumentiert, das ungeborene Kind habe ein Recht auf Leben und der Abbruch solle nicht erleichtert werden. Es geht um den moralischen Status des Ungeborenen."
   },
   "at22a": {
-    "q": "Der öffentlich-rechtliche ORF ist seine Gebühr wert und muss unabhängig bleiben."
+    "q": "Der öffentlich-rechtliche ORF ist seine Gebühr wert und muss unabhängig bleiben.",
+    "ctx": "Der ORF ist Österreichs öffentlich-rechtlicher Sender, finanziert durch eine Pflichtgebühr und oft der politischen Vereinnahmung bezichtigt. Das sagt, er sei es wert und müsse unabhängig bleiben. Es geht um Wert und Unabhängigkeit des öffentlichen Rundfunks."
   },
   "at22b": {
-    "q": "Der ORF ist aufgebläht und einseitig, und seine Zwangsgebühr gehört abgeschafft."
+    "q": "Der ORF ist aufgebläht und einseitig, und seine Zwangsgebühr gehört abgeschafft.",
+    "ctx": "Das argumentiert, der ORF sei aufgebläht und einseitig und seine Zwangsgebühr gehöre abgeschafft. Es geht darum, ob der öffentliche Rundfunk sein Geld verdient."
   },
   "at23a": {
-    "q": "Das Bargeld muss geschützt werden; Österreicher sollen immer ohne Überwachung zahlen können."
+    "q": "Das Bargeld muss geschützt werden; Österreicher sollen immer ohne Überwachung zahlen können.",
+    "ctx": "Das argumentiert, das Bargeld müsse geschützt werden — mit dem Vorschlag, es in der Verfassung zu verankern —, damit Österreicher immer ohne Überwachung zahlen können. Es geht um Privatsphäre und Freiheit gegen eine bargeldlose Wirtschaft."
   },
   "at23b": {
-    "q": "Das Bargeld zu verteidigen ist vor allem Nostalgie; eine moderne Wirtschaft läuft digital."
+    "q": "Das Bargeld zu verteidigen ist vor allem Nostalgie; eine moderne Wirtschaft läuft digital.",
+    "ctx": "Das argumentiert, das Bargeld zu verteidigen sei vor allem Nostalgie und eine moderne Wirtschaft laufe digital. Es geht um Tradition gegen Modernisierung."
   },
   "at24a": {
-    "q": "Österreich hat ein tiefes Korruptionsproblem, das harte neue Transparenzgesetze braucht."
+    "q": "Österreich hat ein tiefes Korruptionsproblem, das harte neue Transparenzgesetze braucht.",
+    "ctx": "Nach Skandalen wie der Ibiza-Affäre, die eine Regierung stürzte, argumentiert das, Österreich habe ein tiefes Korruptionsproblem, das harte neue Transparenzgesetze brauche. Es geht um die Säuberung der österreichischen Politik."
   },
   "at24b": {
-    "q": "Das ständige Korruptionsgerede ist übertrieben und vor allem eine politische Waffe."
+    "q": "Das ständige Korruptionsgerede ist übertrieben und vor allem eine politische Waffe.",
+    "ctx": "Das argumentiert, das ständige Korruptionsgerede sei übertrieben und vor allem eine politische Waffe. Es geht um ein echtes Problem gegen politisches Kleingeld."
   },
   "at25a": {
-    "q": "Cannabis sollte legalisiert und Drogenkonsum als Gesundheitsfrage behandelt werden."
+    "q": "Cannabis sollte legalisiert und Drogenkonsum als Gesundheitsfrage behandelt werden.",
+    "ctx": "Das unterstützt die Legalisierung von Cannabis und Drogenkonsum als Gesundheitsfrage zu behandeln. Es geht um Verbot gegen einen Gesundheitsansatz."
   },
   "at25b": {
-    "q": "Cannabis zu legalisieren ist ein falsches Signal und normalisiert Drogenkonsum bei Jugendlichen."
+    "q": "Cannabis zu legalisieren ist ein falsches Signal und normalisiert Drogenkonsum bei Jugendlichen.",
+    "ctx": "Das argumentiert, die Cannabis-Legalisierung sei ein falsches Signal und normalisiere Drogenkonsum bei Jugendlichen. Es geht darum, ob Legalisierung hilft oder schadet."
   },
   "at26a": {
-    "q": "Österreich sollte die Ukraine gegen Russland klar unterstützen, trotz seiner Neutralität."
+    "q": "Österreich sollte die Ukraine gegen Russland klar unterstützen, trotz seiner Neutralität.",
+    "ctx": "Das unterstützt, dass Österreich die Ukraine trotz seiner Neutralität klar gegen Russland unterstützt — ein echter Widerspruch, da Österreich noch russisches Gas kauft. Es geht um Neutralität gegen Solidarität."
   },
   "at26b": {
-    "q": "Österreich sollte strikt neutral bleiben und auf Verhandlungen drängen, statt Partei zu ergreifen."
+    "q": "Österreich sollte strikt neutral bleiben und auf Verhandlungen drängen, statt Partei zu ergreifen.",
+    "ctx": "Das argumentiert, Österreich solle strikt neutral bleiben und auf Verhandlungen drängen, statt Partei zu ergreifen. Es geht um Neutralität gegen die Unterstützung der Ukraine."
   },
   "at27a": {
-    "q": "Österreicher sollten Nationalstolz empfinden dürfen, ohne als Nationalisten zu gelten."
+    "q": "Österreicher sollten Nationalstolz empfinden dürfen, ohne als Nationalisten zu gelten.",
+    "ctx": "Wegen der NS-Zeit wird offener Nationalstolz in Österreich mit Vorsicht betrachtet. Das argumentiert, Österreicher sollten ihn empfinden dürfen, ohne als Nationalisten abgestempelt zu werden. Es geht um Patriotismus in einem Land mit dieser Geschichte."
   },
   "at27b": {
-    "q": "Angesichts seiner Geschichte sollte Österreich lautem Nationalstolz dauerhaft mit Vorsicht begegnen."
+    "q": "Angesichts seiner Geschichte sollte Österreich lautem Nationalstolz dauerhaft mit Vorsicht begegnen.",
+    "ctx": "Das argumentiert, angesichts seiner Geschichte solle Österreich lautem Nationalstolz dauerhaft mit Vorsicht begegnen. Es geht um historische Wachsamkeit gegen die Normalisierung des Patriotismus."
   },
   "at28a": {
-    "q": "Der Schutz der Natur sollte Vorrang vor neuen Straßen und Bauprojekten haben."
+    "q": "Der Schutz der Natur sollte Vorrang vor neuen Straßen und Bauprojekten haben.",
+    "ctx": "Das stellt den Schutz der Natur über neue Straßen und Bauprojekte. Es geht um Naturschutz gegen Entwicklung."
   },
   "at28b": {
-    "q": "Endlose Umwelteinwände ersticken die Projekte, die Österreich braucht."
+    "q": "Endlose Umwelteinwände ersticken die Projekte, die Österreich braucht.",
+    "ctx": "Das argumentiert, endlose Umwelteinwände erstickten die Projekte, die Österreich brauche. Es geht darum, ob Umweltregeln die Natur schützen oder den Fortschritt blockieren."
   },
   "at29a": {
-    "q": "Der offene globale Freihandel hat Österreich gutgetan und sollte verteidigt werden."
+    "q": "Der offene globale Freihandel hat Österreich gutgetan und sollte verteidigt werden.",
+    "ctx": "Das verteidigt den offenen globalen Freihandel, der dem exportorientierten Österreich gutgetan habe. Es geht um den Wert wirtschaftlicher Offenheit."
   },
   "at29b": {
-    "q": "Die Globalisierung hat die heimische Industrie ausgehöhlt und Österreich gefährlich abhängig gemacht."
+    "q": "Die Globalisierung hat die heimische Industrie ausgehöhlt und Österreich gefährlich abhängig gemacht.",
+    "ctx": "Das argumentiert, die Globalisierung habe die heimische Industrie ausgehöhlt und Österreich gefährlich abhängig gemacht. Es geht um die Risiken der Abhängigkeit."
   },
   "at30a": {
-    "q": "Kranke und Arbeitslose werden mit zu viel Misstrauen behandelt; das soziale Netz sollte stärker sein."
+    "q": "Kranke und Arbeitslose werden mit zu viel Misstrauen behandelt; das soziale Netz sollte stärker sein.",
+    "ctx": "Das argumentiert, Kranke und Arbeitslose würden mit zu viel Misstrauen behandelt und das soziale Netz solle stärker sein. Es geht um Würde gegen die Kontrolle von Sozialleistungen."
   },
   "at30b": {
-    "q": "Das Sozialsystem ist zur Hängematte geworden, und strengere Kontrollen schützen die Einzahler."
+    "q": "Das Sozialsystem ist zur Hängematte geworden, und strengere Kontrollen schützen die Einzahler.",
+    "ctx": "Das argumentiert, das Sozialsystem sei zur Hängematte geworden, die zu bequem ist, um sie zu verlassen, und strengere Kontrollen schützten die Einzahler. Es geht um Großzügigkeit gegen Missbrauch."
   },
   "at31a": {
-    "q": "Österreich sollte mehr verbindliche bundesweite Volksabstimmungen einführen."
+    "q": "Österreich sollte mehr verbindliche bundesweite Volksabstimmungen einführen.",
+    "ctx": "Österreich hat wenige bundesweite Volksabstimmungen. Das will mehr verbindliche zu großen Fragen — eine Forderung der FPÖ. Es geht um mehr direkte Demokratie."
   },
   "at31b": {
-    "q": "Volksabstimmungen verkürzen komplexe Fragen auf Parolen und werden leicht von Populisten gekapert."
+    "q": "Volksabstimmungen verkürzen komplexe Fragen auf Parolen und werden leicht von Populisten gekapert.",
+    "ctx": "Das argumentiert, Volksabstimmungen verkürzten komplexe Fragen auf Parolen und würden leicht von Populisten gekapert. Es geht darum, ob direkte Abstimmungen klug sind."
   },
   "at32a": {
-    "q": "Österreich sollte eine gemeinsame Schule für alle Kinder bis 14 einführen."
+    "q": "Österreich sollte eine gemeinsame Schule für alle Kinder bis 14 einführen.",
+    "ctx": "Österreich teilt Schüler mit 10 Jahren in verschiedene Schultypen. Das will eine gemeinsame Schule für alle Kinder bis 14, um Ungleichheit zu verringern. Es geht um Gesamtschule gegen frühe Trennung."
   },
   "at32b": {
-    "q": "Das Gymnasium fördert begabte Kinder gut und sollte nicht zerschlagen werden."
+    "q": "Das Gymnasium fördert begabte Kinder gut und sollte nicht zerschlagen werden.",
+    "ctx": "Das verteidigt das selektive Gymnasium als Förderung begabter Kinder und lehnt seine Zerschlagung ab. Es geht um schulische Auslese gegen Gleichheit."
   },
   "at33a": {
-    "q": "Alte Traditionen tragen die Weisheit der Generationen und sollten nicht leichtfertig verworfen werden."
+    "q": "Alte Traditionen tragen die Weisheit der Generationen und sollten nicht leichtfertig verworfen werden.",
+    "ctx": "Das ist die konservative Traditionsphilosophie im Sinne Edmund Burkes: dass alte Bräuche die gesammelte Weisheit der Generationen tragen, weshalb Wandel schrittweise erfolgen sollte, statt Bewährtes für unerprobte Ideen zu verwerfen."
   },
   "at33b": {
-    "q": "Traditionsverehrung lässt nur die Toten über die Lebenden herrschen und blockiert nötigen Wandel."
+    "q": "Traditionsverehrung lässt nur die Toten über die Lebenden herrschen und blockiert nötigen Wandel.",
+    "ctx": "Das ist die progressive Antwort, angelehnt an Thomas Paine, dass die Toten nicht über die Lebenden herrschen sollten: die Verehrung der Tradition lässt nur die Vorurteile der Vergangenheit überfällige Änderungen blockieren."
   },
   "at34a": {
-    "q": "Eine gute Gesellschaft beruht mehr auf Eigenverantwortung als auf staatlicher Fürsorge."
+    "q": "Eine gute Gesellschaft beruht mehr auf Eigenverantwortung als auf staatlicher Fürsorge.",
+    "ctx": "Das steht für einen zentralen eher rechten Wert: dass eine gute Gesellschaft vor allem auf Eigenverantwortung beruht statt auf staatlicher Fürsorge."
   },
   "at34b": {
-    "q": "Individuen für Probleme des Systems verantwortlich zu machen ist, wie die Bequemen das Leid anderer entschuldigen."
+    "q": "Individuen für Probleme des Systems verantwortlich zu machen ist, wie die Bequemen das Leid anderer entschuldigen.",
+    "ctx": "Das steht für einen zentralen eher linken Wert: dass viele Probleme aus ungerechten Systemen jenseits der eigenen Kontrolle entstehen, sodass die Schuldzuweisung an Einzelne den Bequemen erlaubt, das Leid anderer zu ignorieren."
   },
   "at35a": {
-    "q": "Kindern sollte Stolz auf die Geschichte Österreichs vermittelt werden, nicht vor allem Scham über die NS-Zeit."
+    "q": "Kindern sollte Stolz auf die Geschichte Österreichs vermittelt werden, nicht vor allem Scham über die NS-Zeit.",
+    "ctx": "Österreich stellte sich lange als Hitlers „erstes Opfer“ dar und spielte seine Rolle bei den NS-Verbrechen herunter. Das bevorzugt, Kindern Stolz auf die Geschichte Österreichs zu vermitteln statt vor allem Scham über die NS-Zeit. Es geht darum, wie eine schwierige Vergangenheit zu lehren ist."
   },
   "at35b": {
-    "q": "Ein Land, das seine Rolle bei den NS-Verbrechen kleinredet, belügt seine eigenen Kinder."
+    "q": "Ein Land, das seine Rolle bei den NS-Verbrechen kleinredet, belügt seine eigenen Kinder.",
+    "ctx": "Das argumentiert, ein Land, das seine Rolle bei den NS-Verbrechen kleinrede, belüge seine eigenen Kinder. Es geht um Ehrlichkeit über die Vergangenheit gegen Nationalstolz."
   }
 };
 
@@ -1339,7 +1414,8 @@ const BANK = [
       "kpoe": -1.5,
       "bier": -1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues immigration to Austria is far too high and must be cut sharply — the signature theme of the FPÖ, which topped a national election. The stake is the level of immigration."
   },
   {
     "id": "at1b",
@@ -1360,7 +1436,8 @@ const BANK = [
       "kpoe": 1.5,
       "bier": 1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the pro-immigration view: that an ageing Austria needs immigrants for its economy and future. The stake is immigration's role in sustaining the country."
   },
   {
     "id": "at2a",
@@ -1379,7 +1456,8 @@ const BANK = [
       "kpoe": -2,
       "bier": -0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This wants rejected asylum seekers deported quickly and consistently, a hardening line under pressure from the right. The stake is enforcement versus individual circumstances."
   },
   {
     "id": "at2b",
@@ -1398,7 +1476,8 @@ const BANK = [
       "kpoe": 2,
       "bier": 0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues deporting people to danger and misery betrays basic humanity. The stake is enforcement versus compassion."
   },
   {
     "id": "at3a",
@@ -1416,7 +1495,8 @@ const BANK = [
       "grn": -0.5,
       "neos": -1.5,
       "kpoe": 1.5
-    }
+    },
+    "ctx": "Austria is constitutionally neutral and, unusually for the EU, not in NATO. This wants it to hold firmly to that neutrality. The stake is a cornerstone of Austrian identity."
   },
   {
     "id": "at3b",
@@ -1434,7 +1514,8 @@ const BANK = [
       "grn": 0.5,
       "neos": 1.5,
       "kpoe": -1.5
-    }
+    },
+    "ctx": "This argues that in a more dangerous world Austria's neutrality is an illusion and it should align more closely with the West. The stake is neutrality versus shared Western security."
   },
   {
     "id": "at4a",
@@ -1453,7 +1534,8 @@ const BANK = [
       "grn": 2,
       "neos": 1.5,
       "bier": 0.5
-    }
+    },
+    "ctx": "Austria long relied heavily on Russian gas, more than most EU states. This wants that dependence ended as fast as possible after the Ukraine war. The stake is energy security versus cheap Russian gas."
   },
   {
     "id": "at4b",
@@ -1472,7 +1554,8 @@ const BANK = [
       "grn": -2,
       "neos": -1.5,
       "bier": -0.5
-    }
+    },
+    "ctx": "This warns that cutting off cheap Russian gas overnight would wreck Austrian industry and household budgets. The stake is how fast to break the dependence."
   },
   {
     "id": "at5a",
@@ -1491,7 +1574,8 @@ const BANK = [
       "grn": 2,
       "kpoe": 1,
       "bier": 0.5
-    }
+    },
+    "ctx": "This says Austria must do far more for climate protection, even at economic cost — the Greens' priority. The stake is climate ambition versus the economy."
   },
   {
     "id": "at5b",
@@ -1510,7 +1594,8 @@ const BANK = [
       "grn": -2,
       "kpoe": -1,
       "bier": -0.5
-    }
+    },
+    "ctx": "This argues costly climate rules burden ordinary Austrians while doing little for the global climate. The stake is who bears the cost of climate policy."
   },
   {
     "id": "at6a",
@@ -1530,7 +1615,8 @@ const BANK = [
       "kpoe": 1.5,
       "bier": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "Amid high inflation, this wants the state to intervene directly, with price caps, to protect people — a demand of the left and the KPÖ, which surged locally on housing. The stake is state intervention against inflation."
   },
   {
     "id": "at6b",
@@ -1550,7 +1636,8 @@ const BANK = [
       "kpoe": -1.5,
       "bier": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues price caps cause shortages and don't fix the underlying causes of inflation. The stake is whether intervention helps or worsens the problem."
   },
   {
     "id": "at7a",
@@ -1570,7 +1657,8 @@ const BANK = [
       "kpoe": 2,
       "bier": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "Austria has no wealth or inheritance tax. This wants taxes on large fortunes and inheritances introduced, as inequality grows. The stake is taxing wealth."
   },
   {
     "id": "at7b",
@@ -1590,7 +1678,8 @@ const BANK = [
       "kpoe": -2,
       "bier": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues wealth and inheritance taxes drive capital and family businesses out of Austria. The stake is whether such taxes raise revenue or repel it."
   },
   {
     "id": "at8a",
@@ -1611,7 +1700,8 @@ const BANK = [
       "kpoe": -1.5,
       "bier": -0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues 'political Islam' is a real threat to Austrian society, a theme the ÖVP and FPÖ have pushed with a documentation centre. Critics say it stigmatises ordinary Muslims. The stake is whether the concern is legitimate or prejudice."
   },
   {
     "id": "at8b",
@@ -1632,7 +1722,8 @@ const BANK = [
       "kpoe": 1.5,
       "bier": 0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues talk of 'political Islam' mostly serves to stir suspicion against ordinary Muslims. The stake is a genuine concern versus a tool of prejudice."
   },
   {
     "id": "at9a",
@@ -1652,7 +1743,8 @@ const BANK = [
       "neos": -1,
       "kpoe": -2,
       "bier": -1
-    }
+    },
+    "ctx": "This claims some ethnic groups are inherently more prone to crime and violence — asserting an innate trait, which research rejects in favour of social factors. The stake is nature versus circumstance."
   },
   {
     "id": "at9b",
@@ -1672,7 +1764,8 @@ const BANK = [
       "neos": 1,
       "kpoe": 2,
       "bier": 1
-    }
+    },
+    "ctx": "This argues no ethnic group is born criminal and that behaviour comes from circumstances, not blood. The stake is rejecting an innate explanation for crime."
   },
   {
     "id": "at10a",
@@ -1692,7 +1785,8 @@ const BANK = [
       "kpoe": -2,
       "bier": -1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "The FPÖ is Austria's far-right party, which won the most votes in 2024 but was kept from the chancellery by a coalition of the others. This argues it is legitimate for it to lead the government if it wins. The stake is the far right's claim to power."
   },
   {
     "id": "at10b",
@@ -1712,7 +1806,8 @@ const BANK = [
       "kpoe": 2,
       "bier": 1
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues the far-right FPÖ is a danger to democracy and should be kept from power. The stake is a cordon sanitaire versus respecting the vote."
   },
   {
     "id": "at11a",
@@ -1732,7 +1827,8 @@ const BANK = [
       "neos": 0.5,
       "kpoe": -2,
       "bier": -0.5
-    }
+    },
+    "ctx": "This wants social benefits cut for those who won't integrate or work — a demand of the right, targeting immigrants. The stake is conditioning welfare on integration and work."
   },
   {
     "id": "at11b",
@@ -1752,7 +1848,8 @@ const BANK = [
       "neos": -0.5,
       "kpoe": 2,
       "bier": 0.5
-    }
+    },
+    "ctx": "This argues cutting benefits just pushes people who are already struggling deeper into poverty. The stake is whether such cuts motivate or punish."
   },
   {
     "id": "at12a",
@@ -1771,7 +1868,8 @@ const BANK = [
       "kpoe": 2,
       "bier": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "Vienna is famous for its large stock of subsidised social housing. This wants Austria to expand social housing and cap rents to keep living affordable. The stake is a celebrated housing model."
   },
   {
     "id": "at12b",
@@ -1790,7 +1888,8 @@ const BANK = [
       "kpoe": -2,
       "bier": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues rent caps dry up investment and make the housing shortage worse. The stake is whether caps help or backfire."
   },
   {
     "id": "at13a",
@@ -1808,7 +1907,8 @@ const BANK = [
       "kpoe": 1.5,
       "bier": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This wants Austria's pension level protected even if contributions have to rise, as the large post-war generation retires. The stake is honouring pensions in an ageing society."
   },
   {
     "id": "at13b",
@@ -1827,7 +1927,8 @@ const BANK = [
       "kpoe": -1.5,
       "bier": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues an ageing society can't keep promising the same pensions, so the retirement age must rise. The stake is fairness between generations."
   },
   {
     "id": "at14a",
@@ -1847,7 +1948,8 @@ const BANK = [
       "neos": 1.5,
       "kpoe": -0.5,
       "bier": 0.5
-    }
+    },
+    "ctx": "This sees Austria's future in a strong, more integrated European Union. The stake is deeper EU integration."
   },
   {
     "id": "at14b",
@@ -1867,7 +1969,8 @@ const BANK = [
       "neos": -1.5,
       "kpoe": 0.5,
       "bier": -0.5
-    }
+    },
+    "ctx": "This argues Brussels already has too much power over Austria and that sovereignty must come home — the FPÖ's Eurosceptic line. The stake is national sovereignty versus the EU."
   },
   {
     "id": "at15a",
@@ -1886,7 +1989,8 @@ const BANK = [
       "grn": 1.5,
       "neos": 0.5,
       "kpoe": 1
-    }
+    },
+    "ctx": "This states that Islam is part of Austria, home to a sizeable Muslim minority. The stake is whether Islam is accepted as part of the nation."
   },
   {
     "id": "at15b",
@@ -1905,7 +2009,8 @@ const BANK = [
       "grn": -1.5,
       "neos": -0.5,
       "kpoe": -1
-    }
+    },
+    "ctx": "This argues Islam is fundamentally foreign to Austrian culture and does not belong here. The stake is national identity versus religious inclusion."
   },
   {
     "id": "at16a",
@@ -1925,7 +2030,8 @@ const BANK = [
       "neos": -0.5,
       "kpoe": -1.5,
       "bier": -0.5
-    }
+    },
+    "ctx": "'Leitkultur' means a leading national culture immigrants are expected to adopt. This says immigrants must adapt to it. The stake is whether integration means adopting a defined Austrian culture."
   },
   {
     "id": "at16b",
@@ -1945,7 +2051,8 @@ const BANK = [
       "neos": 0.5,
       "kpoe": 1.5,
       "bier": 0.5
-    }
+    },
+    "ctx": "This argues a living culture is always mixed, so demanding assimilation impoverishes Austria. The stake is a fixed versus a pluralist national culture."
   },
   {
     "id": "at17a",
@@ -1964,7 +2071,8 @@ const BANK = [
       "neos": -0.5,
       "kpoe": -1.5,
       "bier": -0.5
-    }
+    },
+    "ctx": "This wants tougher sentences and more police to restore public safety, after debates over crime in Vienna. The stake is whether a hard line improves safety."
   },
   {
     "id": "at17b",
@@ -1983,7 +2091,8 @@ const BANK = [
       "neos": 0.5,
       "kpoe": 1.5,
       "bier": 0.5
-    }
+    },
+    "ctx": "This argues ever tougher sentences never cut crime, while prevention and social work do. The stake is what actually reduces crime."
   },
   {
     "id": "at18a",
@@ -2003,7 +2112,8 @@ const BANK = [
       "neos": 1,
       "kpoe": 1,
       "bier": 0.5
-    }
+    },
+    "ctx": "This supports letting people change their legal gender by self-declaration, recognising trans identity. The stake is whether gender is defined by identity or biology."
   },
   {
     "id": "at18b",
@@ -2023,7 +2133,8 @@ const BANK = [
       "neos": -1,
       "kpoe": -1,
       "bier": -0.5
-    }
+    },
+    "ctx": "This is the gender-critical view: that legal sex can't rest on mere declaration and biological reality must prevail. The stake is the meaning of legal sex."
   },
   {
     "id": "at19a",
@@ -2042,7 +2153,8 @@ const BANK = [
       "kpoe": 2,
       "bier": 1,
       "g": 0
-    }
+    },
+    "ctx": "This sets a 32-hour working week at full pay as the goal for Austrian workers, a union and left demand. The stake is shorter hours versus competitiveness."
   },
   {
     "id": "at19b",
@@ -2061,7 +2173,8 @@ const BANK = [
       "kpoe": -2,
       "bier": -1,
       "g": 0
-    }
+    },
+    "ctx": "This argues a shorter week at full pay is a fantasy that would wreck competitiveness. The stake is whether it is affordable."
   },
   {
     "id": "at20a",
@@ -2080,7 +2193,8 @@ const BANK = [
       "grn": -1,
       "neos": 2,
       "kpoe": -1.5
-    }
+    },
+    "ctx": "This argues Austria over-regulates business and companies need far less bureaucracy. The stake is whether deregulation would help the economy."
   },
   {
     "id": "at20b",
@@ -2099,7 +2213,8 @@ const BANK = [
       "grn": 1,
       "neos": -2,
       "kpoe": 1.5
-    }
+    },
+    "ctx": "This argues cutting regulation just erodes protection for workers, consumers, and the environment. The stake is whether rules protect people or burden business."
   },
   {
     "id": "at21a",
@@ -2119,7 +2234,8 @@ const BANK = [
       "neos": 1,
       "kpoe": 1.5,
       "bier": 0.5
-    }
+    },
+    "ctx": "This wants access to abortion protected and made easier across Austria, where it is legal but access varies and it is not covered by public health insurance. The stake is real access to a legal right."
   },
   {
     "id": "at21b",
@@ -2139,7 +2255,8 @@ const BANK = [
       "neos": -1,
       "kpoe": -1.5,
       "bier": -0.5
-    }
+    },
+    "ctx": "This argues the unborn child has a right to life and abortion should not be made easier. The stake is the moral status of the unborn."
   },
   {
     "id": "at22a",
@@ -2157,7 +2274,8 @@ const BANK = [
       "grn": 1.5,
       "kpoe": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "The ORF is Austria's public broadcaster, funded by a compulsory fee and often accused of political capture. This says it is worth it and must stay independent. The stake is public media's value and independence."
   },
   {
     "id": "at22b",
@@ -2175,7 +2293,8 @@ const BANK = [
       "grn": -1.5,
       "kpoe": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues the ORF is bloated and biased and its compulsory fee should be abolished. The stake is whether public broadcasting deserves its funding."
   },
   {
     "id": "at23a",
@@ -2194,7 +2313,8 @@ const BANK = [
       "grn": -0.5,
       "kpoe": 0.5,
       "bier": 0.5
-    }
+    },
+    "ctx": "This argues cash must be protected — even proposing to enshrine it in the constitution — so Austrians can always pay without being tracked. The stake is privacy and freedom versus a cashless economy."
   },
   {
     "id": "at23b",
@@ -2213,7 +2333,8 @@ const BANK = [
       "grn": 0.5,
       "kpoe": -0.5,
       "bier": -0.5
-    }
+    },
+    "ctx": "This argues defending cash is mostly nostalgia and a modern economy runs on digital payments. The stake is tradition versus modernisation."
   },
   {
     "id": "at24a",
@@ -2233,7 +2354,8 @@ const BANK = [
       "neos": 2,
       "kpoe": 1,
       "bier": 1
-    }
+    },
+    "ctx": "After scandals like the Ibiza affair that toppled a government, this argues Austria has a deep corruption problem needing tough new transparency laws. The stake is cleaning up Austrian politics."
   },
   {
     "id": "at24b",
@@ -2253,7 +2375,8 @@ const BANK = [
       "neos": -2,
       "kpoe": -1,
       "bier": -1
-    }
+    },
+    "ctx": "This argues the endless corruption talk is exaggerated and mostly used as a political weapon. The stake is a real problem versus political point-scoring."
   },
   {
     "id": "at25a",
@@ -2272,7 +2395,8 @@ const BANK = [
       "neos": 1.5,
       "kpoe": 1,
       "bier": 1.5
-    }
+    },
+    "ctx": "This supports legalising cannabis and treating drug use as a health issue. The stake is prohibition versus a health approach."
   },
   {
     "id": "at25b",
@@ -2291,7 +2415,8 @@ const BANK = [
       "neos": -1.5,
       "kpoe": -1,
       "bier": -1.5
-    }
+    },
+    "ctx": "This argues legalising cannabis sends the wrong signal and normalises drug use among the young. The stake is whether legalisation helps or harms."
   },
   {
     "id": "at26a",
@@ -2310,7 +2435,8 @@ const BANK = [
       "grn": 1.5,
       "neos": 1.5,
       "kpoe": -1.5
-    }
+    },
+    "ctx": "This supports Austria firmly backing Ukraine against Russia despite its neutrality — a real tension, as Austria still buys Russian gas. The stake is neutrality versus solidarity."
   },
   {
     "id": "at26b",
@@ -2329,7 +2455,8 @@ const BANK = [
       "grn": -1.5,
       "neos": -1.5,
       "kpoe": 1.5
-    }
+    },
+    "ctx": "This argues Austria should stay strictly neutral and push for negotiations rather than take sides. The stake is neutrality versus backing Ukraine."
   },
   {
     "id": "at27a",
@@ -2349,7 +2476,8 @@ const BANK = [
       "neos": -0.5,
       "kpoe": -1.5,
       "bier": -0.5
-    }
+    },
+    "ctx": "Because of the Nazi era, open national pride is viewed with caution in Austria. This argues Austrians should be able to feel it without being branded nationalists. The stake is patriotism in a country with this history."
   },
   {
     "id": "at27b",
@@ -2369,7 +2497,8 @@ const BANK = [
       "neos": 0.5,
       "kpoe": 1.5,
       "bier": 0.5
-    }
+    },
+    "ctx": "This argues that given its history, Austria should treat loud national pride with lasting caution. The stake is historical vigilance versus normalising patriotism."
   },
   {
     "id": "at28a",
@@ -2388,7 +2517,8 @@ const BANK = [
       "kpoe": 0.5,
       "bier": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This puts protecting nature ahead of new roads and construction projects. The stake is conservation versus development."
   },
   {
     "id": "at28b",
@@ -2407,7 +2537,8 @@ const BANK = [
       "kpoe": -0.5,
       "bier": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues endless environmental objections are strangling the projects Austria needs. The stake is whether green rules protect nature or block progress."
   },
   {
     "id": "at29a",
@@ -2425,7 +2556,8 @@ const BANK = [
       "grn": -0.5,
       "neos": 2,
       "kpoe": -1.5
-    }
+    },
+    "ctx": "This defends open global free trade as having served export-oriented Austria well. The stake is the value of economic openness."
   },
   {
     "id": "at29b",
@@ -2443,7 +2575,8 @@ const BANK = [
       "grn": 0.5,
       "neos": -2,
       "kpoe": 1.5
-    }
+    },
+    "ctx": "This argues globalisation hollowed out local industry and made Austria dangerously dependent. The stake is the risks of dependence."
   },
   {
     "id": "at30a",
@@ -2463,7 +2596,8 @@ const BANK = [
       "kpoe": 2,
       "bier": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues the sick and unemployed are treated with too much suspicion and that the safety net should be stronger. The stake is dignity versus policing of welfare."
   },
   {
     "id": "at30b",
@@ -2483,7 +2617,8 @@ const BANK = [
       "kpoe": -2,
       "bier": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues the welfare system has become a 'hammock' too comfortable to leave, and stricter checks protect those who pay in. The stake is generosity versus abuse."
   },
   {
     "id": "at31a",
@@ -2501,7 +2636,8 @@ const BANK = [
       "neos": 0.5,
       "kpoe": 0.5,
       "bier": 1
-    }
+    },
+    "ctx": "Austria has few nationwide referendums. This wants more binding ones on major questions — a demand of the FPÖ. The stake is adding direct democracy."
   },
   {
     "id": "at31b",
@@ -2519,7 +2655,8 @@ const BANK = [
       "neos": -0.5,
       "kpoe": -0.5,
       "bier": -1
-    }
+    },
+    "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by populists. The stake is whether direct votes are wise."
   },
   {
     "id": "at32a",
@@ -2539,7 +2676,8 @@ const BANK = [
       "neos": 0.5,
       "kpoe": 1.5,
       "bier": 0.5
-    }
+    },
+    "ctx": "Austria splits pupils into different school tracks at age 10. This wants one common school for all children up to 14, to reduce inequality. The stake is comprehensive versus early-tracked schooling."
   },
   {
     "id": "at32b",
@@ -2559,7 +2697,8 @@ const BANK = [
       "neos": -0.5,
       "kpoe": -1.5,
       "bier": -0.5
-    }
+    },
+    "ctx": "This defends the selective gymnasium as serving able children well and opposes dismantling it. The stake is academic selection versus equality."
   },
   {
     "id": "at33a",
@@ -2579,7 +2718,8 @@ const BANK = [
       "neos": -0.5,
       "kpoe": -1,
       "bier": -0.5
-    }
+    },
+    "ctx": "This is the conservative philosophy of tradition, in the spirit of Edmund Burke: that long-standing customs hold the accumulated wisdom of generations, so change should be gradual rather than discarding what works for untested ideas."
   },
   {
     "id": "at33b",
@@ -2599,7 +2739,8 @@ const BANK = [
       "neos": 0.5,
       "kpoe": 1,
       "bier": 0.5
-    }
+    },
+    "ctx": "This is the progressive reply, echoing Thomas Paine that the dead should not govern the living: that venerating tradition just lets the prejudices of the past block overdue change."
   },
   {
     "id": "at34a",
@@ -2619,7 +2760,8 @@ const BANK = [
       "neos": 1.5,
       "kpoe": -2,
       "bier": -0.5
-    }
+    },
+    "ctx": "This reflects a core right-leaning value: that a good society rests mainly on personal responsibility rather than state care."
   },
   {
     "id": "at34b",
@@ -2639,7 +2781,8 @@ const BANK = [
       "neos": -1.5,
       "kpoe": 2,
       "bier": 0.5
-    }
+    },
+    "ctx": "This reflects a core left-leaning value: that many problems come from unfair systems beyond personal control, so blaming individuals lets the comfortable ignore others' suffering."
   },
   {
     "id": "at35a",
@@ -2659,7 +2802,8 @@ const BANK = [
       "neos": -1,
       "kpoe": -2,
       "bier": -0.5
-    }
+    },
+    "ctx": "Austria long portrayed itself as Hitler's 'first victim', downplaying its role in Nazi crimes. This favours teaching children pride in Austria's history rather than mainly shame about the Nazi era. The stake is how to teach a difficult past."
   },
   {
     "id": "at35b",
@@ -2679,7 +2823,8 @@ const BANK = [
       "neos": 1,
       "kpoe": 2,
       "bier": 0.5
-    }
+    },
+    "ctx": "This argues a country that plays down its role in Nazi crimes is lying to its own children. The stake is honesty about the past versus national pride."
   }
 ];
 
@@ -3170,6 +3315,6 @@ window.getQuestion = getQuestion;
 window.currentLang = currentLang;
 applyLang();
 </script>
-<script src="/engine.js?v=1.1.7"></script>
+<script src="/engine.js?v=1.1.9"></script>
 </body>
 </html>

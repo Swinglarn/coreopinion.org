@@ -119,7 +119,7 @@
         "ns": 1.0,
         "mon": -1.0
       },
-      "ctx": "This is the core idea of communism: that factories, farmland, and big companies should be owned collectively or by the state instead of by private individuals. “The people” means society as a whole rather than private owners."
+      "ctx": "This is the founding idea of communism, argued by Karl Marx: that the 'means of production' — factories, farmland, mines, big companies — should be owned in common rather than by private individuals who live off the profit. States that tried it, like the Soviet Union after 1917 and Mao's China, put nearly all industry and land under collective or state control. Supporters believe this ends the exploitation of workers and shares wealth fairly; the central dispute is whether it can be achieved without a powerful, coercive state."
     },
     {
       "id": "g1b",
@@ -144,7 +144,7 @@
         "ns": -1.0,
         "mon": 1.0
       },
-      "ctx": "This points to 20th-century communist states like the Soviet Union under Stalin and China under Mao, where abolishing private property was followed by famine, repression, and millions of deaths. It argues that history shows the idea fails catastrophically."
+      "ctx": "This points to the historical record of communist states that abolished private property. Forced collectivisation of farmland helped cause mass famines — the Soviet Holodomor of the 1930s and China's Great Leap Forward (1959–61), which together killed tens of millions — alongside secret police, gulags, and one-party rule. The argument is that these were not accidents but the predictable result of concentrating all economic power in the state."
     },
     {
       "id": "g2a",
@@ -168,7 +168,7 @@
         "ns": -0.5,
         "mon": 0.5
       },
-      "ctx": "Capitalism is an economic system based on private ownership and free markets. This credits it with the huge worldwide fall in extreme poverty over the last two centuries, especially where countries industrialised or opened their markets."
+      "ctx": "Capitalism is an economic system built on private property and voluntary market exchange. Its defenders point to the collapse of global extreme poverty — from roughly 40% of humanity in 1980 to under 10% today — driven above all by market reforms in China after 1978 and in India after 1991, which lifted well over a billion people out of destitution. The claim is that no other system has generated comparable, sustained gains in living standards."
     },
     {
       "id": "g2b",
@@ -192,7 +192,7 @@
         "ns": 0.5,
         "mon": -0.5
       },
-      "ctx": "This is the Marxist critique of capitalism: the idea that company profits come from paying workers less than the value they actually produce, so the wealth at the top is built on underpaid labour."
+      "ctx": "This is the core Marxist critique of capitalism, the theory of 'surplus value': that a company's profit comes from paying workers less than the value their labour creates, so the wealth of owners and shareholders is effectively unpaid work skimmed from employees. Modern versions point to stagnant wages alongside soaring executive pay and shareholder returns, or to sweatshops and gig-economy conditions, as evidence that the system runs on exploitation."
     },
     {
       "id": "g3a",
@@ -215,7 +215,7 @@
         "ns": 0.5,
         "mon": -0.5
       },
-      "ctx": "This describes a strong welfare state, where the government guarantees everyone the basics — housing, healthcare, food — no matter their income, treating them as rights rather than things you must earn."
+      "ctx": "This describes a strong welfare state that guarantees everyone the basics — housing, healthcare, food — as rights rather than things you must earn. The Nordic countries come closest, funding universal services through high taxes, and it echoes the UN's Universal Declaration of Human Rights, which lists an adequate standard of living as a right. The stake is how far a society is collectively responsible for protecting its weakest members from destitution."
     },
     {
       "id": "g3b",
@@ -238,7 +238,7 @@
         "ns": -0.5,
         "mon": 0.5
       },
-      "ctx": "This is a common argument against generous welfare: that when benefits are too high or too easy to get, some people rely on them instead of working. “Dependency” means becoming reliant on state support long-term."
+      "ctx": "This is the classic conservative worry about generous welfare: that benefits which are too high or too easy to claim can trap people out of work, a problem sometimes called the 'welfare trap' or 'dependency culture'. It drove reforms like the United States' 1996 welfare overhaul, which added work requirements and time limits. Critics of this view counter that most people on benefits are children, carers, the disabled, or between jobs."
     },
     {
       "id": "g4a",
@@ -261,7 +261,7 @@
         "ns": 0.5,
         "mon": -0.5
       },
-      "ctx": "This argues for a hard ceiling on personal wealth through very high taxes, so no one can build up a billion-dollar fortune. It reflects a strongly equality-focused view of the economy."
+      "ctx": "This calls for a hard ceiling on private wealth, taxing away fortunes above a certain point so that billionaires effectively cannot exist. Campaigners like US senators Bernie Sanders and Elizabeth Warren have proposed annual wealth taxes on the ultra-rich; the slogan 'every billionaire is a policy failure' captures the moral claim that such extreme concentration is itself unjust in a world with poverty."
     },
     {
       "id": "g4b",
@@ -284,7 +284,7 @@
         "ns": -0.5,
         "mon": 0.5
       },
-      "ctx": "“Confiscatory” means taxes so high they take away most of someone’s wealth. This argues that such taxes remove people’s incentive to work hard, invest, and create new things."
+      "ctx": "'Confiscatory' means taxes so high they take away most of a large fortune. This argues that such taxes destroy the incentive to build businesses, invest, and take risks, and that the wealthy simply move themselves and their money abroad — as many did from France, which scrapped its wealth tax in 2017 after years of capital flight. The underlying claim is that punishing success ultimately shrinks the pie for everyone."
     },
     {
       "id": "g5a",
@@ -308,7 +308,7 @@
         "ns": 2.0,
         "mon": 1.0
       },
-      "ctx": "This is a statement of racial supremacism — the belief that some races are inherently better than others. It is the foundational idea behind ideologies like Nazism and systems like apartheid."
+      "ctx": "This is a statement of racial supremacism — the belief that some races are innately superior to others. It is the ideological core of Nazism, which murdered six million Jews in the Holocaust, and of systems like American slavery and South African apartheid. Modern genetics finds far more variation within any so-called race than between them, and the concept has no scientific standing."
     },
     {
       "id": "g5b",
@@ -332,7 +332,7 @@
         "ns": -2.0,
         "mon": -1.0
       },
-      "ctx": "This is the principle of human equality: that every person has the same inherent worth regardless of race. It is the mainstream ethical and scientific consensus and the basis of anti-discrimination law."
+      "ctx": "This states the principle of fundamental human equality: that every person has the same inherent worth regardless of race. It underpins landmark achievements like the abolition of slavery, the US civil-rights movement, and the Universal Declaration of Human Rights, and reflects the scientific consensus that racial hierarchies are a myth. It is the moral baseline of modern anti-discrimination law."
     },
     {
       "id": "g6a",
@@ -357,7 +357,7 @@
         "ns": 2.0,
         "mon": 1.0
       },
-      "ctx": "This claims certain ethnic groups are more prone to violent crime and that saying so is being suppressed. Crime statistics do show differences between groups; the real dispute is whether the cause is the group itself or social factors like poverty."
+      "ctx": "This makes a sharp claim about crime and ethnicity, and says acknowledging it is taboo. Official statistics in many countries do show different offending rates between groups, which is not in dispute; what is fiercely contested is the cause. Researchers overwhelmingly link the gaps to poverty, unemployment, policing patterns, and age profiles rather than to ethnicity itself — the same factors that predict crime within any group."
     },
     {
       "id": "g6b",
@@ -382,7 +382,7 @@
         "ns": -2.0,
         "mon": -1.0
       },
-      "ctx": "This argues that where crime rates differ between ethnic groups, the true causes are poverty, discrimination, and circumstances — not anything inherent to the ethnic group."
+      "ctx": "This argues that where crime rates differ between ethnic groups, the real drivers are social: poverty, segregation, discrimination, and the fact that disadvantaged groups are often younger and more heavily policed. The evidence for this is that when you compare people of similar income and neighbourhood, ethnic gaps in offending shrink dramatically — suggesting circumstances, not ethnicity, are doing the work."
     },
     {
       "id": "g7a",
@@ -406,7 +406,7 @@
         "mon": 1.0
       },
       "dec": true,
-      "ctx": "This reflects a worry common on the nationalist right: that high levels of immigration change a country’s traditional culture, language, and identity too quickly. “Native culture” means the long-established way of life."
+      "ctx": "This reflects a fear common on the nationalist right: that sustained high immigration is changing a country's language, customs, and identity faster than it can absorb. Supporters point to rapidly shifting demographics in cities across Europe and the debate over integration; the most extreme version, the 'great replacement', frames it as deliberate. Critics respond that cultures have always evolved and that 'erasure' overstates what is really gradual change."
     },
     {
       "id": "g7b",
@@ -430,7 +430,7 @@
         "mon": -1.0
       },
       "dec": true,
-      "ctx": "This is the positive case for immigration: that newcomers bring skills, labour, energy, and new ideas that make a country stronger economically and culturally."
+      "ctx": "This is the economic and cultural case for immigration: that newcomers fill labour shortages, start businesses at high rates, pay taxes that help fund pensions in ageing societies, and enrich food, music, and ideas. Examples often cited include the outsized role of immigrants in founding US tech companies, or migrant workers propping up healthcare and farming across Europe. The claim is that openness makes a country stronger, not weaker."
     },
     {
       "id": "g8a",
@@ -453,7 +453,7 @@
         "ns": 2.0,
         "mon": 1.0
       },
-      "ctx": "This is a hardline immigration-enforcement position: that everyone living in the country without legal permission should be removed, whatever their personal circumstances."
+      "ctx": "This is a hardline enforcement stance: that everyone living in a country without legal permission should be removed, whatever their circumstances. Real-world versions include mass-deportation pledges and workplace raids. Supporters argue a country cannot control its borders if illegal residence carries no consequence; critics note the human cost of removing people, including those who arrived as children or have citizen families."
     },
     {
       "id": "g8b",
@@ -476,7 +476,7 @@
         "ns": -2.0,
         "mon": -1.0
       },
-      "ctx": "This supports letting undocumented immigrants who have lived and worked in the country for years earn legal status, rather than deporting them. “A path” means a legal route to staying permanently."
+      "ctx": "This supports a 'path to legal status' or amnesty: letting undocumented immigrants who have lived and worked in a country for years earn the right to stay. The United States has debated this for decades — the 1986 Reagan amnesty legalised about three million people, and the 'Dreamers' debate concerns those brought as children. The argument is that deporting long-settled, law-abiding residents is both impractical and cruel."
     },
     {
       "id": "g9a",
@@ -501,7 +501,7 @@
         "ns": 2.0,
         "mon": 1.0
       },
-      "ctx": "This is an ethnic definition of nationhood: the idea that truly belonging to a nation comes from ancestry and shared heritage, not merely from holding citizenship papers."
+      "ctx": "This is an 'ethnic' definition of nationhood: that truly belonging comes from shared ancestry and heritage, not merely from citizenship papers. It is associated with countries where nationality historically followed bloodline (jus sanguinis), such as Germany before its reforms. The stake is whether a nation is essentially a family you are born into or a community you can join."
     },
     {
       "id": "g9b",
@@ -526,7 +526,7 @@
         "ns": -2.0,
         "mon": -1.0
       },
-      "ctx": "This is a civic definition of nationhood: that anyone who adopts a country’s laws, language, and culture can become a full member of it, regardless of their ethnic origin."
+      "ctx": "This is the 'civic' definition of nationhood: that anyone who embraces a country's laws, language, and values can become a full member, whatever their origins. It reflects how nations of immigrants like the United States, Canada, and Australia understand themselves, and the principle behind birthright and naturalised citizenship. The claim is that shared commitment, not blood, makes a citizen."
     },
     {
       "id": "g10a",
@@ -551,7 +551,7 @@
         "mon": 1.0
       },
       "dec": true,
-      "ctx": "This favours concentrating power in one strong leader who can act quickly without being held back by parliament or the courts. Critics call this authoritarianism; supporters call it decisiveness."
+      "ctx": "This favours concentrating power in a single decisive leader, unconstrained by parliaments or courts — the appeal behind 'strongman' politics from Hungary's Orbán to historical dictators. Supporters value the ability to act fast and cut through gridlock. The counter-argument is that the checks being dismissed — elections, independent judges, a free press — are exactly what stops a leader from becoming a tyrant."
     },
     {
       "id": "g10b",
@@ -576,7 +576,7 @@
         "mon": -1.0
       },
       "dec": true,
-      "ctx": "This is the classic warning against dictatorship: that removing the checks on a single leader reliably leads to abuse of power, corruption, and oppression."
+      "ctx": "This is the classic warning against dictatorship: that removing the limits on a single ruler predictably leads to corruption, repression, and disaster, from Stalin and Hitler to more recent strongmen. It reflects the idea, central to modern constitutions, of the 'separation of powers' — dividing authority so no one person controls everything. The lesson drawn is that unchecked power always ends badly."
     },
     {
       "id": "g11a",
@@ -600,7 +600,7 @@
         "ns": -2.0,
         "mon": -1.0
       },
-      "ctx": "This states that the only rightful basis for government is the consent of the people expressed through elections — the core principle of democracy."
+      "ctx": "This states that the only legitimate basis for government is the consent of the people through free elections — the core principle of democracy, traceable to thinkers like John Locke and the American and French revolutions. The stake is whether rulers derive their authority from the governed, or from tradition, force, or claimed superior wisdom."
     },
     {
       "id": "g11b",
@@ -624,7 +624,7 @@
         "ns": 2.0,
         "mon": 1.5
       },
-      "ctx": "This is an elitist critique of democracy: the idea that ordinary voters are too poorly informed or too easily manipulated to decide big questions, which should be left to experts or elites."
+      "ctx": "This is an elitist critique of democracy, echoing Plato's warning about the 'ignorant mob': that ordinary voters are too uninformed or too easily manipulated to decide complex questions, which should be left to experts or a qualified elite. Modern versions point to misinformation and populism. Democrats reply that no elite can be trusted to rule without accountability, and that ordinary people generally know their own interests best."
     },
     {
       "id": "g12a",
@@ -648,7 +648,7 @@
         "ns": 1.5,
         "mon": 2.0
       },
-      "ctx": "This is the case for monarchy: that a king or queen who stands above party politics gives a country continuity and a unifying symbol that elected politicians, who come and go, cannot."
+      "ctx": "This is the case for monarchy: that a hereditary king or queen who stands above party politics provides stability, continuity, and a unifying national symbol that transient elected politicians cannot. Supporters point to enduring constitutional monarchies like Britain, the Netherlands, and Japan, where the monarch reigns but does not rule. The claim is that a fixed point above the political fray strengthens a nation."
     },
     {
       "id": "g12b",
@@ -672,7 +672,7 @@
         "ns": -1.5,
         "mon": -2.0
       },
-      "ctx": "This rejects inherited power and privilege — the idea that anyone should rule or enjoy status simply because of the family they were born into. It is the basis of republicanism."
+      "ctx": "This rejects inherited power and privilege — the idea that anyone should rule or enjoy status simply because of the family they were born into. It is the founding principle of republicanism, expressed in the American and French revolutions' rejection of kings and aristocracy. The stake is whether authority should ever be handed down by birth rather than earned or elected."
     },
     {
       "id": "g13a",
@@ -697,7 +697,7 @@
         "ns": 2.0,
         "mon": -1.0
       },
-      "ctx": "This is a revolutionary outlook: the belief that the powerful never give up power willingly, so real change requires force or revolution rather than gradual reform."
+      "ctx": "This is a revolutionary outlook: that entrenched elites never surrender power voluntarily, so real change requires force. It draws on examples where oppression ended only through uprising or war, and on thinkers from Marx to Frantz Fanon. The opposing view holds that violent revolutions usually devour their own and produce new tyrannies rather than liberation."
     },
     {
       "id": "g13b",
@@ -722,7 +722,7 @@
         "ns": -2.0,
         "mon": 1.0
       },
-      "ctx": "This holds that in a working democracy, where people can vote for change peacefully, violence for political goals is never justified."
+      "ctx": "This holds that in a functioning democracy — where people can vote, organise, and protest peacefully — political violence is never justified. It reflects the philosophy of figures like Gandhi and Martin Luther King, who achieved sweeping change without arms. The stake is whether the ballot box and peaceful protest are always preferable to the bullet."
     },
     {
       "id": "g14a",
@@ -745,7 +745,7 @@
         "ns": -2.0,
         "mon": -1.5
       },
-      "ctx": "This is a strong free-speech position: that even deeply offensive or hateful speech should stay legal, and the government should not punish people for their words."
+      "ctx": "This is a strong free-speech position, associated with the US First Amendment and thinkers like John Stuart Mill: that even offensive or hateful speech should be legal, because the alternative — letting the state decide which opinions are forbidden — is more dangerous. Supporters argue bad ideas are best defeated by open debate, not bans."
     },
     {
       "id": "g14b",
@@ -764,7 +764,7 @@
         "sd": 0.5,
         "lib": -1.0
       },
-      "ctx": "This supports hate-speech laws: the view that speech attacking minorities causes real harm and incitement, so the law should restrict it rather than protect it as free expression."
+      "ctx": "This supports hate-speech laws, the approach taken across much of Europe (Germany, for example, bans Holocaust denial and incitement). The argument is that speech dehumanising minorities is not harmless opinion but a weapon that fuels discrimination and violence, so a decent society draws a legal line. The stake is where free expression ends and real-world harm begins."
     },
     {
       "id": "g15a",
@@ -787,7 +787,7 @@
         "ns": 2.0,
         "mon": 1.5
       },
-      "ctx": "This supports broad government surveillance for security, arguing that law-abiding people have nothing to fear — often summed up as “nothing to hide, nothing to fear.”"
+      "ctx": "This supports broad government surveillance — monitoring communications and movements — to prevent terrorism and serious crime, on the logic that law-abiding people have nothing to fear. It reflects the powers expanded after 9/11, such as the US Patriot Act. Supporters weigh security first; the phrase 'nothing to hide, nothing to fear' captures the sentiment."
     },
     {
       "id": "g15b",
@@ -810,7 +810,7 @@
         "ns": -2.0,
         "mon": -1.5
       },
-      "ctx": "This is the privacy argument against mass surveillance: that monitoring the entire population treats innocent people as suspects and erodes basic freedom."
+      "ctx": "This is the civil-liberties case against mass surveillance: that monitoring an entire population treats everyone as a suspect and hands the state dangerous power, as Edward Snowden's 2013 leaks about bulk data collection dramatised. The argument, echoing George Orwell's 1984, is that privacy is essential to freedom and that 'nothing to hide' misunderstands why it matters."
     },
     {
       "id": "g16a",
@@ -833,7 +833,7 @@
         "ns": 1.5,
         "mon": 1.5
       },
-      "ctx": "This supports capital punishment — executing people for the most serious crimes such as murder — on the grounds that some acts deserve the ultimate penalty."
+      "ctx": "This supports capital punishment — executing people for the gravest crimes such as murder — on the grounds that some acts are so heinous that justice demands the ultimate penalty, and that it may deter others. It remains law in countries including the United States, China, and Japan. The stake is whether the state should ever have the power to kill."
     },
     {
       "id": "g16b",
@@ -856,7 +856,7 @@
         "ns": -1.5,
         "mon": -1.5
       },
-      "ctx": "This opposes the death penalty outright, arguing the state should never have the power to execute its citizens, partly because of the risk of killing an innocent person."
+      "ctx": "This opposes the death penalty outright. Its strongest argument is irreversibility: over 190 people on US death rows have later been exonerated, meaning innocent people have almost certainly been executed. Most democracies, including the entire European Union, have abolished it, arguing the state should never hold the power to kill its own citizens."
     },
     {
       "id": "g17a",
@@ -880,7 +880,7 @@
         "ns": 1.5,
         "mon": 1.5
       },
-      "ctx": "This favours a tough, punishment-first approach to justice: keeping violent criminals locked up for a long time and prioritising public safety over rehabilitating offenders."
+      "ctx": "This favours a punishment-first approach to justice: long prison sentences for violent and repeat offenders, prioritising public safety and retribution over rehabilitating criminals. It reflects 'tough on crime' policies like America's 'three strikes' laws. Supporters argue dangerous people belong off the streets and that victims deserve to see justice done."
     },
     {
       "id": "g17b",
@@ -904,7 +904,7 @@
         "ns": -1.5,
         "mon": -1.5
       },
-      "ctx": "This reflects the evidence-based reform view: that ever-longer prison sentences do little to reduce crime, and that prevention, treatment, and rehabilitation work better."
+      "ctx": "This reflects the evidence from criminology: that ever-longer sentences do little to reduce crime, while prevention, treatment, and rehabilitation do more. Countries like Norway, with a strong focus on rehabilitation, have among the world's lowest reoffending rates, whereas mass incarceration in the US did not deliver proportionate safety. The claim is that prison should aim to reduce future crime, not just punish."
     },
     {
       "id": "g18a",
@@ -924,7 +924,7 @@
         "ns": -0.5,
         "mon": -0.5
       },
-      "ctx": "This is a central argument for gun rights, especially in the US: that a population allowed to own firearms is the ultimate safeguard against a government becoming tyrannical."
+      "ctx": "This is a core argument for gun rights, central to US debates and the Second Amendment: that an armed population is the ultimate safeguard against a government turning tyrannical. Supporters invoke historical examples where disarmed populations were oppressed. Critics reply that no civilian arsenal could realistically resist a modern state, and that the everyday cost in deaths is enormous."
     },
     {
       "id": "g18b",
@@ -944,7 +944,7 @@
         "lib": -1.5,
         "ns": 1.0
       },
-      "ctx": "This is the case for gun control: that widespread, easy access to firearms leads to more deaths in everyday disputes and mass shootings."
+      "ctx": "This is the case for gun control: that easy access to firearms turns ordinary disputes deadly and enables mass shootings, of which the United States — with more guns than people — suffers far more than comparable nations. Supporters point to countries like Australia, whose 1996 gun buyback after a massacre was followed by a sharp drop in gun deaths."
     },
     {
       "id": "g19a",
@@ -966,7 +966,7 @@
         "nc": 1.5,
         "mon": 1.5
       },
-      "ctx": "This reflects religious conservatism: the belief that a society’s morality rests on religious faith, and that turning away from God removes its moral foundation."
+      "ctx": "This reflects religious conservatism: the belief that a society's morality rests on religious faith, and that abandoning God erodes its ethical foundations. It underlies movements like Christian nationalism in the US and features in debates over the role of religion in law. The stake is whether shared morality needs a religious basis or can stand on reason alone."
     },
     {
       "id": "g19b",
@@ -988,7 +988,7 @@
         "nc": -1.5,
         "mon": -1.5
       },
-      "ctx": "This is the secular principle: that laws should be based on reason and evidence and kept separate from any religion."
+      "ctx": "This is the principle of secularism: that laws should rest on reason and evidence, not religious doctrine, and that church and state should be separate. It is enshrined in the US Constitution and, more strictly, in France's laïcité. The argument is that in a diverse society, no single faith should dictate the rules everyone lives by."
     },
     {
       "id": "g20a",
@@ -1011,7 +1011,7 @@
         "ns": -0.5,
         "mon": -1.5
       },
-      "ctx": "This is the pro-choice position: that whether to end a pregnancy is a private medical decision for the woman, not something the government should control."
+      "ctx": "This is the pro-choice position: that whether to end a pregnancy is a private decision for the woman and her doctor, not the government. It reflects the reasoning of the US Supreme Court's Roe v. Wade (1973–2022) and abortion-rights movements worldwide, centring on bodily autonomy — the right to control one's own body."
     },
     {
       "id": "g20b",
@@ -1034,7 +1034,7 @@
         "ns": 0.5,
         "mon": 1.5
       },
-      "ctx": "This is the pro-life position: that a foetus is a human life, so abortion means taking a life, and a society is wrong to treat it as unimportant."
+      "ctx": "This is the pro-life position: that a foetus is a human life from conception (or early in pregnancy), so abortion is the taking of a life and society is wrong to treat it lightly. It is rooted in Catholic and evangelical teaching and drove the campaign to overturn Roe v. Wade in the US. The stake is the moral status of the unborn."
     },
     {
       "id": "g21a",
@@ -1057,7 +1057,7 @@
         "ns": -0.5,
         "mon": -2.0
       },
-      "ctx": "This supports transgender rights: the view that a person’s gender identity determines their gender, and the law should recognise trans people as the gender they identify as."
+      "ctx": "This supports transgender rights: the view that a person's gender identity should determine their legal gender, and that the law should recognise trans women as women and trans men as men. 'Self-identification' laws, in force in countries like Ireland and Argentina, let people change their legal gender without medical approval. The stake is whether gender is defined by identity or by biology."
     },
     {
       "id": "g21b",
@@ -1080,7 +1080,7 @@
         "ns": 0.5,
         "mon": 2.0
       },
-      "ctx": "This is the gender-critical position: that biological sex is a fixed fact of nature that cannot be changed by identity, a legal declaration, or surgery."
+      "ctx": "This is the 'gender-critical' view: that biological sex is a fixed, binary fact that no declaration or surgery can change, and that the law should be based on it — for example in single-sex spaces or women's sport. Associated with feminists like J.K. Rowling and campaigners against self-ID laws, it clashes directly with the identity-based view. The stake is what 'man' and 'woman' mean in law."
     },
     {
       "id": "g22a",
@@ -1103,7 +1103,7 @@
         "ns": 0.5,
         "mon": 2.0
       },
-      "ctx": "This reflects social conservatism: the belief that the married mother-father-children family is the foundation of society and should be protected and encouraged."
+      "ctx": "This reflects social conservatism: the belief that the married mother-father-children family is the bedrock of a stable society and should be actively protected and promoted through law and culture. It underlies opposition to redefining marriage and support for 'family values' policy. The stake is whether the state should favour one family model over others."
     },
     {
       "id": "g22b",
@@ -1126,7 +1126,7 @@
         "ns": -0.5,
         "mon": -2.0
       },
-      "ctx": "This supports family diversity: the view that same-sex couples and non-traditional families raise children just as well, and that love matters more than family structure."
+      "ctx": "This supports family diversity: the view that same-sex couples, single parents, and blended families raise children just as well, and that a stable, loving home matters far more than its structure. Decades of child-development research find no disadvantage for children of same-sex parents. It reflects the reasoning behind legalising same-sex marriage across dozens of countries since 2000."
     },
     {
       "id": "g23a",
@@ -1149,7 +1149,7 @@
         "ns": 1.0,
         "mon": 2.0
       },
-      "ctx": "This is a traditional view of gender: that men and women are naturally different and that society works best when its roles reflect those differences."
+      "ctx": "This is a traditional view of gender roles: that men and women are naturally suited to somewhat different tasks (for example, women more to caregiving), and society works best when it respects those differences rather than forcing sameness. Supporters cite biology and stable family life. Critics argue such 'natural' roles were historically used to justify keeping women out of work and power."
     },
     {
       "id": "g23b",
@@ -1172,7 +1172,7 @@
         "ns": -1.0,
         "mon": -2.0
       },
-      "ctx": "This is the feminist and progressive view: that differences in men’s and women’s roles come from social conditioning and history rather than nature, and unfairly limit people."
+      "ctx": "This is the feminist view: that most differences in men's and women's roles come from centuries of social conditioning and law, not biology, and that they have unfairly limited both sexes. Supporters point to how quickly women moved into work, universities, and leadership once barriers fell. The claim is that 'natural' roles are largely a cage built by history."
     },
     {
       "id": "g24a",
@@ -1194,7 +1194,7 @@
         "con": -1.0,
         "nc": -1.0
       },
-      "ctx": "This treats climate change as an urgent emergency that requires large, even costly, changes to the economy and energy system, and quickly."
+      "ctx": "This treats climate change as an emergency demanding rapid, sweeping transformation of the economy and energy system, even at real cost. It reflects the scientific consensus (the IPCC) that warming must be limited to avoid severe harm, and movements like the Green New Deal and Greta Thunberg's activism. The stake is how much economic disruption is worth accepting now to limit future damage."
     },
     {
       "id": "g24b",
@@ -1216,7 +1216,7 @@
         "con": 1.0,
         "nc": 1.0
       },
-      "ctx": "This is climate-policy scepticism: the argument that aggressive climate measures are driven by out-of-touch elites and put an unfair burden on ordinary working people."
+      "ctx": "This is climate-policy scepticism: not necessarily denying warming, but arguing that aggressive net-zero measures are pushed by out-of-touch elites and dump the costs — higher energy bills, lost jobs — onto ordinary workers. It fuelled protests like France's 'yellow vests', sparked by a fuel-tax rise. The claim is that the cure is being made more painful than it needs to be."
     },
     {
       "id": "g25a",
@@ -1238,7 +1238,7 @@
         "con": -1.0,
         "nc": -1.0
       },
-      "ctx": "This reflects “degrowth” and ecological thinking: that an economy cannot keep growing forever on a planet with limited resources without eventually causing environmental collapse."
+      "ctx": "This reflects 'degrowth' and ecological economics: the idea that an economy cannot expand forever on a planet with finite resources without eventually causing collapse — through resource depletion, pollution, or climate breakdown. It draws on the 1972 report 'The Limits to Growth'. The stake is whether prosperity must be rethought away from endless GDP growth."
     },
     {
       "id": "g25b",
@@ -1260,7 +1260,7 @@
         "con": 1.0,
         "nc": 1.0
       },
-      "ctx": "This is the eco-modernist view: that continued economic growth and new technology — not cutting back and rationing — are what actually solve environmental problems."
+      "ctx": "This is the eco-modernist view: that human ingenuity, technology, and continued growth — not shrinking the economy — are what solve environmental problems, as cleaner energy, more efficient farming, and innovation have repeatedly done. Supporters note that rich countries can better afford green investment. The claim is that growth is the solution, not the enemy."
     },
     {
       "id": "g26a",
@@ -1283,7 +1283,7 @@
         "ns": 0.5,
         "mon": -0.5
       },
-      "ctx": "This supports universal public healthcare, like the UK’s NHS: a system funded through taxes and free when you use it, treating medical care as a right for everyone."
+      "ctx": "This supports universal public healthcare — funded by taxes and free when you use it — treating medical care as a right for all, as in Britain's NHS or Canada's Medicare. The argument is that no one should be bankrupted or denied treatment because they are poor, and that pooling risk across everyone is fairer and often cheaper overall."
     },
     {
       "id": "g26b",
@@ -1306,7 +1306,7 @@
         "ns": -0.5,
         "mon": 0.5
       },
-      "ctx": "This is the case against fully state-run healthcare: that it leads to long waiting lists, rationed treatment, and officials rather than patients controlling care."
+      "ctx": "This is the case against fully state-run healthcare: that government systems ration care and produce long waiting lists (a frequent criticism of the NHS and Canada's system), and that competition and private options deliver faster, more responsive treatment. The stake is whether the state or the market better organises something as vital as health."
     },
     {
       "id": "g27a",
@@ -1328,7 +1328,7 @@
         "con": -1.0,
         "mon": -1.0
       },
-      "ctx": "This reflects socialist and trade-union thinking: that workers create a company’s value and therefore should have far more say in how it is run."
+      "ctx": "This reflects socialist and trade-union thinking: that because workers create a company's value, they deserve far more say over how it is run — through strong unions, or models like Germany's 'co-determination', where employees sit on company boards, or worker cooperatives. The stake is how much power employees should have versus owners and shareholders."
     },
     {
       "id": "g27b",
@@ -1350,7 +1350,7 @@
         "con": 1.0,
         "mon": 1.0
       },
-      "ctx": "This is the anti-union argument: that organised labour shields unproductive workers, drives up costs, and can push businesses and whole industries into decline."
+      "ctx": "This is the anti-union argument: that organised labour protects unproductive workers, drives up costs, and can cripple whole industries, as strikes did in 1970s Britain before the Thatcher-era reforms. Supporters of this view favour flexible labour markets. Critics counter that unions are what won the weekend, safe workplaces, and decent pay."
     },
     {
       "id": "g28a",
@@ -1372,7 +1372,7 @@
         "con": -1.0,
         "mon": -1.0
       },
-      "ctx": "This argues against large inheritances: that passing down big fortunes creates a privileged class who never earned their wealth, locking inequality in place across generations."
+      "ctx": "This argues against large inheritances: that passing down big fortunes creates a hereditary elite who never earned their wealth, entrenching inequality across generations — a concern raised by economists like Thomas Piketty, who warns of a return to 'patrimonial' capitalism. Inheritance or 'estate' taxes are the main tool. The stake is fairness between those born rich and everyone else."
     },
     {
       "id": "g28b",
@@ -1394,7 +1394,7 @@
         "con": 1.0,
         "mon": 1.0
       },
-      "ctx": "This defends inheritance: the view that people have the right to leave what they built to their children, and that the state has no claim on it after death (opposing so-called “death taxes”)."
+      "ctx": "This defends inheritance: that people have every right to pass on what they built to their children, and that taxing it again after death (often called a 'death tax') is double taxation of money already earned and taxed. It is a powerful argument in family-business and farming communities. The stake is the right to provide for one's own family versus limiting dynastic wealth."
     },
     {
       "id": "g29a",
@@ -1416,7 +1416,7 @@
         "con": 1.0,
         "mon": 1.0
       },
-      "ctx": "This is a meritocratic view: that as long as everyone starts with the same opportunities, differences in wealth are fair because they reflect effort and talent."
+      "ctx": "This is a meritocratic view: that as long as everyone starts with fair opportunities, unequal outcomes are just, because they reflect differences in effort and talent rather than unfairness. It underpins much centre-right economic thinking and the 'American Dream'. The stake is whether inequality is acceptable when the race is fair."
     },
     {
       "id": "g29b",
@@ -1438,7 +1438,7 @@
         "con": -1.0,
         "mon": -1.0
       },
-      "ctx": "This challenges the idea of meritocracy: arguing that genuinely equal opportunity does not exist, and that the circumstances you are born into largely decide how far you get."
+      "ctx": "This challenges the idea of meritocracy: arguing that genuinely equal opportunity does not exist, because the family, wealth, schools, and connections you are born into shape your life chances far more than effort — a point made in books like Michael Sandel's 'The Tyranny of Merit'. The claim is that the 'level playing field' is largely a comforting myth for the winners."
     },
     {
       "id": "g30a",
@@ -1458,7 +1458,7 @@
         "ns": -1.5,
         "mon": -0.5
       },
-      "ctx": "Free trade means countries buying and selling across borders with few tariffs or barriers. This credits it with raising living standards worldwide more than any other policy."
+      "ctx": "This defends free trade — buying and selling across borders with few tariffs — as one of the greatest engines of prosperity in history, lowering prices for consumers and lifting poor countries by letting them export. Economists across the spectrum broadly support it, citing the theory of 'comparative advantage'. The stake is the benefit of an open global economy."
     },
     {
       "id": "g30b",
@@ -1478,7 +1478,7 @@
         "ns": 1.5,
         "mon": 0.5
       },
-      "ctx": "This is the anti-globalisation argument: that free trade moved factories and jobs to countries with cheaper labour, hollowing out industrial towns and communities at home."
+      "ctx": "This is the anti-globalisation argument: that free trade let companies move factories to countries with cheaper labour, hollowing out industrial towns in the West — the 'Rust Belt' in the US, or the decline of northern English mill towns. It fuelled support for Brexit and Trump's tariffs. The claim is that open trade enriched shareholders while abandoning working communities."
     },
     {
       "id": "g31a",
@@ -1501,7 +1501,7 @@
         "ns": -2.0,
         "mon": -1.0
       },
-      "ctx": "This supports internationalism: the idea that countries must hand some decision-making power to bodies like the UN or EU to tackle problems no single nation can solve alone."
+      "ctx": "This supports internationalism: that problems like climate change, pandemics, and war cross borders, so countries must pool some sovereignty in bodies like the UN, the EU, or the World Health Organization to solve them. The stake is whether shared global institutions are worth the loss of some national control."
     },
     {
       "id": "g31b",
@@ -1524,7 +1524,7 @@
         "ns": 2.0,
         "mon": 1.0
       },
-      "ctx": "This is the sovereigntist position: that no unelected international organisation should ever have the power to overrule the laws of a nation-state."
+      "ctx": "This is the sovereigntist position: that no unelected international body should be able to overrule a nation's own laws and voters, a central argument of Brexit ('take back control') and of Eurosceptic movements. The stake is where final authority should sit — with the nation-state or with supranational institutions."
     },
     {
       "id": "g32a",
@@ -1547,7 +1547,7 @@
         "ns": 2.0,
         "mon": 1.5
       },
-      "ctx": "This is the “peace through strength” doctrine: the idea that a country stays safe by being militarily strong and willing to fight, which deters would-be aggressors."
+      "ctx": "This is the 'peace through strength' doctrine: that a country stays safe by being militarily strong and visibly willing to fight, which deters aggressors, whereas weakness invites attack. It is often illustrated by the failure of 1930s appeasement to stop Hitler. The stake is whether security comes from armed deterrence or from restraint."
     },
     {
       "id": "g32b",
@@ -1570,7 +1570,7 @@
         "ns": -2.0,
         "mon": -1.5
       },
-      "ctx": "This is the anti-militarist or pacifist view: that money spent on armies and weapons should go to human needs instead, and that wars mainly enrich arms makers."
+      "ctx": "This is the anti-militarist and pacifist view: that vast military budgets divert money from human needs and that wars mainly enrich arms manufacturers while the poor do the dying — US President Eisenhower's warning about the 'military-industrial complex'. The stake is whether spending on armies makes a society safer or simply poorer and more warlike."
     },
     {
       "id": "g33a",
@@ -1593,7 +1593,7 @@
         "ns": 1.5,
         "mon": 1.5
       },
-      "ctx": "This supports patriotic education: teaching children to take pride in their country’s history and achievements rather than focusing on its wrongs."
+      "ctx": "This favours patriotic education: teaching children to take pride in their nation's history and achievements, arguing that a shared, positive story builds social cohesion and belonging. It clashes with movements to foreground historical wrongs. The stake is what story a country tells its next generation about itself."
     },
     {
       "id": "g33b",
@@ -1616,7 +1616,7 @@
         "ns": -1.5,
         "mon": -1.5
       },
-      "ctx": "This supports teaching a fuller, more critical history — including crimes such as slavery or colonialism — arguing that glossing over them misleads students."
+      "ctx": "This supports teaching an honest, critical history — including slavery, colonialism, or genocide — arguing that a nation that hides its crimes from schoolchildren cannot learn from them. Germany's frank teaching of the Nazi era is often held up as a model. The stake is whether patriotism requires comfort or honesty about the past."
     },
     {
       "id": "g34a",
@@ -1641,7 +1641,7 @@
         "ns": -2.0,
         "mon": -1.0
       },
-      "ctx": "This is the multiculturalist view: that a society made up of many cultures living side by side is richer and stronger than one with a single, uniform culture."
+      "ctx": "This is the multiculturalist view: that a society of many cultures living side by side is richer and more dynamic than a uniform one, pointing to diverse global cities like London, Toronto, or New York. The stake is whether diversity is fundamentally a strength to be celebrated."
     },
     {
       "id": "g34b",
@@ -1666,7 +1666,7 @@
         "ns": 2.0,
         "mon": 1.0
       },
-      "ctx": "This is the critique of multiculturalism: that instead of integrating, different groups end up living largely separate lives with little in common — so-called “parallel societies.”"
+      "ctx": "This is the critique of multiculturalism: that instead of integrating, groups can end up living separate lives with little in common — 'parallel societies' — a concern raised even by leaders like Angela Merkel, who in 2010 said German multiculturalism had 'utterly failed'. The stake is whether diversity without a shared common culture breeds division."
     },
     {
       "id": "g35a",
@@ -1689,7 +1689,7 @@
         "ns": 2.0,
         "mon": 1.0
       },
-      "ctx": "This argues that certain religions clash with liberal Western values such as free speech and gender equality. In practice the debate usually centres on Islam."
+      "ctx": "This argues that some religions clash with liberal Western values like free speech, gender equality, and gay rights. In practice the debate centres on Islam, following controversies over blasphemy, the veil, and extremism. Critics of this view warn it unfairly tars over a billion diverse believers with the actions of a few."
     },
     {
       "id": "g35b",
@@ -1712,7 +1712,7 @@
         "ns": -2.0,
         "mon": -1.0
       },
-      "ctx": "This is the principle of religious freedom and equality: that every faith deserves the same legal protection and the same respect."
+      "ctx": "This is the principle of religious freedom and equality: that every faith deserves the same legal protection and respect, a cornerstone of liberal democracies and human-rights law. The argument is that singling out one religion as incompatible is a form of prejudice, and that the vast majority of believers of any faith live peacefully by the law."
     },
     {
       "id": "g36a",
@@ -1735,7 +1735,7 @@
         "ns": -1.5,
         "mon": -1.5
       },
-      "ctx": "This is the libertarian view of personal freedom: that adults own their own bodies and have the right to consume what they choose, so the state should not criminalise it."
+      "ctx": "This is the libertarian principle of self-ownership: that adults own their own bodies and may consume what they choose — drugs included — so long as they harm no one else, an idea from John Stuart Mill's 'harm principle'. Portugal's 2001 decriminalisation of all drugs, which cut overdose deaths, is a frequent example. The stake is where personal freedom ends and the state's right to intervene begins."
     },
     {
       "id": "g36b",
@@ -1758,7 +1758,7 @@
         "ns": 1.5,
         "mon": 1.5
       },
-      "ctx": "This is the case against legalising drugs: that easier access increases addiction and social harm, while the profits still flow to criminal gangs."
+      "ctx": "This is the case against legalising drugs: that easier access spreads addiction and social harm, and that even a legal market leaves organised crime and misery in its wake. Supporters point to the damage of opioid and methamphetamine epidemics. The stake is whether liberalising drug laws helps users or simply normalises a destructive trade."
     },
     {
       "id": "g37a",
@@ -1781,7 +1781,7 @@
         "ns": -1.5,
         "mon": -2.0
       },
-      "ctx": "This supports decriminalising prostitution: the argument that treating sex work as legitimate work, and regulating it, makes the people who do it safer."
+      "ctx": "This supports decriminalising sex work: the argument, backed by some public-health bodies, that treating it as legitimate work and regulating it makes those who do it safer — able to report violence, access healthcare, and work without criminal records. New Zealand's 2003 decriminalisation is the model. The stake is whether legalising it protects or endangers vulnerable people."
     },
     {
       "id": "g37b",
@@ -1804,7 +1804,7 @@
         "ns": 1.5,
         "mon": 2.0
       },
-      "ctx": "This opposes legalising prostitution: the view that it is inherently exploitative, especially of vulnerable women, and that a decent society should not give it official approval."
+      "ctx": "This opposes legalising prostitution: the view, reflected in the 'Nordic model' that criminalises buyers, that sex work is inherently exploitative — often bound up with trafficking and coercion of vulnerable women — and that a decent society should not put a licence on it. The stake is whether the trade can ever be made genuinely safe and consensual."
     },
     {
       "id": "g38a",
@@ -1827,7 +1827,7 @@
         "ns": -0.5,
         "mon": 0.5
       },
-      "ctx": "This favours parental control over schooling: the idea that parents, not the government or schools, should decide the moral and social values their children are taught."
+      "ctx": "This favours parental authority over education: that parents, not schools or the state, should decide the moral, religious, and social values their children are taught — a live issue in fights over school curricula on sex, gender, and religion. The stake is who holds ultimate authority over what children learn."
     },
     {
       "id": "g38b",
@@ -1850,7 +1850,7 @@
         "ns": 0.5,
         "mon": -0.5
       },
-      "ctx": "This argues that state schools have a duty to teach shared civic values to all children, even when it conflicts with what some parents want."
+      "ctx": "This argues that state schools have a duty to teach shared civic values — tolerance, democracy, critical thinking — to all children, even against some parents' wishes, because education also serves society, not just the family. The stake is balancing parents' rights against a child's exposure to the wider world."
     },
     {
       "id": "g39a",
@@ -1874,7 +1874,7 @@
         "ns": 1.0,
         "mon": 1.0
       },
-      "ctx": "This is technocracy: the idea that complex issues should be decided by qualified experts rather than by politicians who are influenced by votes and elections."
+      "ctx": "This is technocracy: the idea that complex issues — pandemics, economics, climate — should be decided by qualified experts insulated from short-term electoral pressure, as central banks set interest rates independently of politicians. The stake is whether expertise or democratic accountability should have the final say."
     },
     {
       "id": "g39b",
@@ -1898,7 +1898,7 @@
         "ns": -1.0,
         "mon": -1.0
       },
-      "ctx": "This is the populist critique of technocracy: that handing decisions to unelected experts removes democratic accountability and becomes its own kind of tyranny."
+      "ctx": "This is the populist critique of technocracy: that handing decisions to unelected experts strips power from voters and can become 'rule by the credentialed', deaf to ordinary people's lives — a resentment that fuelled Brexit and other revolts against 'the experts'. The stake is the danger of a governing class accountable to no one."
     },
     {
       "id": "g40a",
@@ -1922,7 +1922,7 @@
         "ns": 2.0,
         "mon": -0.5
       },
-      "ctx": "This reflects deep distrust of the mainstream press: the view that large media outlets serve elite interests and shape public opinion to benefit the powerful."
+      "ctx": "This reflects deep distrust of the mainstream press: the view, sharpened by Noam Chomsky's 'manufacturing consent' thesis, that big media outlets serve the interests of their wealthy owners and advertisers and shape public opinion to protect the powerful. The stake is whether establishment journalism can be trusted to hold power to account."
     },
     {
       "id": "g40b",
@@ -1946,7 +1946,7 @@
         "ns": -2.0,
         "mon": 0.5
       },
-      "ctx": "This defends the free press: the idea that independent journalism, whatever its faults, is essential for holding those in power to account in a democracy."
+      "ctx": "This defends the free press as a pillar of democracy — the 'fourth estate' that exposes corruption and abuses, from Watergate to countless modern scandals — arguing that despite its flaws, independent journalism is something no free society can do without. The stake is the role of a free press in checking power."
     },
     {
       "id": "g41a",
@@ -1970,7 +1970,7 @@
         "ns": 2.0,
         "mon": 1.5
       },
-      "ctx": "This supports government action against false information online, requiring social-media companies to take down content judged dangerous or misleading."
+      "ctx": "This supports government action against online falsehoods: requiring platforms like Facebook and X to remove dangerous misinformation, as debates over vaccine lies and election fraud claims intensified. Supporters argue viral lies cause real harm. The stake is whether the state should police truth online."
     },
     {
       "id": "g41b",
@@ -1994,7 +1994,7 @@
         "ns": -2.0,
         "mon": -1.5
       },
-      "ctx": "This warns against government control of information: that letting officials decide what counts as “misinformation” threatens free speech and open debate."
+      "ctx": "This warns against government control of information: that letting officials define 'misinformation' is a slippery slope to censorship and the suppression of dissent, since today's 'misinformation' has sometimes turned out to be true. It echoes free-speech fears about who gets to decide what is true. The stake is the danger of an official arbiter of truth."
     },
     {
       "id": "g42a",
@@ -2015,7 +2015,7 @@
         "nc": -1.0,
         "mon": -2.0
       },
-      "ctx": "This is the principle of civil disobedience: the idea that people have a moral duty to break laws they consider deeply unjust, as seen in the civil-rights movement."
+      "ctx": "This is the principle of civil disobedience: that people have a moral duty to break laws they consider deeply unjust, accepting the consequences to expose the injustice — the method of Gandhi's independence struggle, the US civil-rights movement, and the suffragettes. The stake is whether conscience can override the law."
     },
     {
       "id": "g42b",
@@ -2036,7 +2036,7 @@
         "nc": 1.0,
         "mon": 2.0
       },
-      "ctx": "This defends the rule of law: that society only functions if people obey laws even when they personally disagree, rather than each person picking and choosing."
+      "ctx": "This defends the rule of law: that a society only works if people obey laws even when they personally disagree, because letting everyone pick and choose which laws to follow leads to chaos. The stake is the balance between individual conscience and the shared rules that hold a society together."
     },
     {
       "id": "g43a",
@@ -2060,7 +2060,7 @@
         "ns": 1.0,
         "mon": -1.0
       },
-      "ctx": "This is the Marxist idea of class conflict: that employees and business owners have fundamentally opposing interests, since one side’s gain comes at the other’s expense."
+      "ctx": "This is the Marxist idea of class conflict: that employers and employees have fundamentally opposing interests, since profit for one side means lower wages or harder conditions for the other, making the workplace a site of permanent struggle. The stake is whether society is best understood as a contest between classes."
     },
     {
       "id": "g43b",
@@ -2084,7 +2084,7 @@
         "ns": -1.0,
         "mon": 1.0
       },
-      "ctx": "This rejects the idea of class conflict: the view that workers and owners share an interest in a company’s success and both do better when it thrives."
+      "ctx": "This rejects the idea of inherent class conflict: the view that workers and owners share an interest in a company's success — growth means more jobs, higher pay, and profit together — and that framing them as enemies (class war) impoverishes everyone. The stake is whether cooperation or conflict better describes economic life."
     },
     {
       "id": "g44a",
@@ -2107,7 +2107,7 @@
         "ns": 0.5,
         "mon": -0.5
       },
-      "ctx": "Universal basic income (UBI) is a regular, no-strings payment made to every citizen. This supports it as a response to automation and machines replacing human jobs."
+      "ctx": "Universal Basic Income (UBI) is a regular, unconditional payment to every citizen. This supports it as an answer to automation — as AI and robots replace jobs — and as a floor against poverty. Pilot schemes have run from Finland to Kenya. The stake is whether guaranteeing everyone a basic income is a sane response to a changing economy."
     },
     {
       "id": "g44b",
@@ -2130,7 +2130,7 @@
         "ns": -0.5,
         "mon": 0.5
       },
-      "ctx": "This is the argument against a basic income: that paying people whether or not they work removes the incentive and the sense of purpose that come from earning a living."
+      "ctx": "This is the argument against a basic income: that paying people whether or not they work removes the incentive and the sense of purpose and dignity that come from earning a living, and would cost enormous sums. The stake is whether unconditional payments would free people or corrode the value of work."
     },
     {
       "id": "g45a",
@@ -2153,7 +2153,7 @@
         "ns": 0.5,
         "mon": -0.5
       },
-      "ctx": "This treats housing as a right and objects to homes being concentrated among investors while others go without — a case for strong government intervention in the housing market."
+      "ctx": "This treats housing as a right and objects to homes being hoarded as investments while others sleep rough — a case for strong intervention like public house-building, rent control, or limits on second homes. It reflects the politics behind housing crises in cities from Berlin to San Francisco. The stake is whether shelter is a market commodity or a basic entitlement."
     },
     {
       "id": "g45b",
@@ -2176,7 +2176,7 @@
         "ns": -0.5,
         "mon": 0.5
       },
-      "ctx": "This is the economic argument against rent control: that capping rents reduces how much housing gets built or offered, making shortages worse over time."
+      "ctx": "This is the mainstream economic argument against rent control: that capping rents discourages building and maintenance, shrinking the supply of housing over time and making shortages worse — as many economists argued happened after Berlin's rent freeze. The claim is that the real fix is building more, not capping prices."
     },
     {
       "id": "g46a",
@@ -2199,7 +2199,7 @@
         "ns": 2.0,
         "mon": 1.5
       },
-      "ctx": "This supports giving the police stronger powers and fewer legal restraints in order to fight crime and restore order on the streets."
+      "ctx": "This supports giving police more powers and fewer restraints — stop-and-search, surveillance, tougher tactics — to fight crime and restore order, a stance that hardens after crime waves or riots. The stake is how much authority to hand the police in the name of safety."
     },
     {
       "id": "g46b",
@@ -2222,7 +2222,7 @@
         "ns": -2.0,
         "mon": -1.5
       },
-      "ctx": "This is the civil-liberties argument: that giving police too much unchecked power leads to abuse, and that innocent and marginalised people tend to suffer first."
+      "ctx": "This is the civil-liberties argument: that unchecked police power leads to abuse, and that the innocent and marginalised suffer first — concerns dramatised by the Black Lives Matter movement after killings like that of George Floyd. The stake is guarding against the state's own enforcers overstepping."
     },
     {
       "id": "g47a",
@@ -2245,7 +2245,7 @@
         "ns": 2.0,
         "mon": 1.5
       },
-      "ctx": "This supports mandatory national service — a set period of military or civilian duty that all young people must complete for their country."
+      "ctx": "This supports mandatory national service: a period of military or civilian duty that all young people must complete, as exists in countries like Switzerland, Israel, and South Korea. Supporters argue it builds shared identity, discipline, and civic duty across class and ethnic lines. The stake is whether citizens owe their country compulsory service."
     },
     {
       "id": "g47b",
@@ -2268,7 +2268,7 @@
         "ns": -2.0,
         "mon": -1.5
       },
-      "ctx": "This opposes compulsory service: the view that forcing young people to serve against their will violates their freedom and amounts to forced labour."
+      "ctx": "This opposes conscription: the view that forcing young people to serve against their will violates their freedom and effectively amounts to forced labour, and that armies are better staffed by volunteers. The stake is whether the state may compel a period of a young person's life."
     },
     {
       "id": "g48a",
@@ -2290,7 +2290,7 @@
         "ns": -1.0,
         "mon": -1.5
       },
-      "ctx": "This supports direct democracy: putting major national questions straight to the public in referendums rather than leaving them to elected representatives."
+      "ctx": "This supports direct democracy: putting major decisions straight to voters in referendums, as Switzerland does routinely and as Britain did over Brexit. Supporters argue it gives people a direct voice on the questions that matter most. The stake is whether big choices belong to the public or to elected representatives."
     },
     {
       "id": "g48b",
@@ -2314,7 +2314,7 @@
         "ns": 2.0,
         "mon": 1.5
       },
-      "ctx": "This is the case against referendums: that complicated issues get reduced to simple yes/no slogans and decided by emotion rather than careful judgement."
+      "ctx": "This is the case against referendums: that they compress complicated questions into a yes/no slogan, are decided by emotion and misinformation, and can lock in narrow, hard-to-reverse results — an argument sharpened for many by the Brexit vote. The stake is whether some decisions are too complex for a simple public vote."
     },
     {
       "id": "g49a",
@@ -2336,7 +2336,7 @@
         "nc": 1.5,
         "mon": 2.0
       },
-      "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away."
+      "ctx": "This is the conservative philosophy of tradition, associated with Edmund Burke: that long-standing customs and institutions carry the accumulated, hard-won wisdom of generations, so we should reform them cautiously rather than sweep them away for untested ideas. The stake is how much respect the inherited order deserves."
     },
     {
       "id": "g49b",
@@ -2358,7 +2358,7 @@
         "nc": -1.5,
         "mon": -2.0
       },
-      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
+      "ctx": "This is the progressive reply, in the spirit of Thomas Paine's 'the dead should not govern the living': that treating tradition as sacred simply lets the prejudices of the past block overdue reform — as appeals to 'tradition' once defended slavery and denying women the vote. The stake is whether the past should constrain the present."
     },
     {
       "id": "g50a",
@@ -2381,7 +2381,7 @@
         "nc": 0.5,
         "mon": 1.0
       },
-      "ctx": "This reflects a pessimistic view of human nature: that people are basically self-interested, so any realistic system must assume selfishness rather than expect generosity."
+      "ctx": "This reflects a pessimistic view of human nature, associated with Thomas Hobbes: that people are fundamentally self-interested, so any workable system must channel that selfishness (as markets do) rather than assume people will act for the common good. The stake is what to build politics and economics on."
     },
     {
       "id": "g50b",
@@ -2404,7 +2404,7 @@
         "nc": -0.5,
         "mon": -1.0
       },
-      "ctx": "This reflects an optimistic view of human nature: that people are naturally cooperative, and that it is unjust systems and conditions that bring out cruelty."
+      "ctx": "This reflects an optimistic view of human nature, associated with Rousseau and much modern social science: that people are naturally cooperative and empathetic, and that greed and cruelty are mostly produced by unjust or scarce conditions. The stake is whether human beings are basically selfish or basically social."
     }
   ],
   "heroTitle": "A political compass test<br>built for <em>nuance.</em>",

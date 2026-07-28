@@ -2707,14 +2707,45 @@ html.dark-mode .book-card:hover {
   width: 100%;
 }
 
-body:has(#books-grid) .content-shell {
+body:has(#books-grid) .content-shell,
+body:has(#flags-grid) .content-shell {
   max-width: 1140px;
 }
 
 @media (min-width: 769px) {
-  body:has(#books-grid) .books-grid {
+  body:has(#books-grid) .books-grid,
+  body:has(#flags-grid) .flags-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
+  }
+}
+
+/* --- Flags Page (reuses the books card system, landscape flag image) --- */
+.flags-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.flag-cover-wrap {
+  flex-shrink: 0;
+  width: 132px;
+  height: 88px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--parchment-warm);
+  border: 1px solid var(--border-soft);
+  align-self: flex-start;
+}
+.flag-cover-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 600px) {
+  .flag-cover-wrap {
+    width: 168px;
+    height: 112px;
   }
 }
 

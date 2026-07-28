@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.7">
+<link rel="stylesheet" href="/style.css?v=1.1.9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,6 +181,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -658,6 +659,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -800,6 +802,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -913,6 +916,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1059,6 +1063,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1116,7 +1121,7 @@ const BANK = [
       "teal": 1,
       "g": 0
     },
-    "ctx": "Medicare is Australia's public health system; 'bulk-billing' means the doctor's fee is fully covered so the visit is free. This wants both kept strong."
+    "ctx": "Medicare is Australia's public health system; 'bulk-billing' means the doctor bills the government directly so the patient pays nothing. This wants both kept strong, as bulk-billing rates fall and out-of-pocket costs rise. The stake is preserving free access to care."
   },
   {
     "id": "au1b",
@@ -1135,7 +1140,7 @@ const BANK = [
       "teal": -1,
       "g": 0
     },
-    "ctx": "This argues a bigger role for private health and competition would take pressure off the public system."
+    "ctx": "This argues a bigger role for private health and competition would take pressure off an overstretched public system and cut waiting times. The stake is whether more private care would relieve or undermine Medicare."
   },
   {
     "id": "au2a",
@@ -1155,7 +1160,7 @@ const BANK = [
       "teal": -0.5
     },
     "dec": true,
-    "ctx": "This argues Australia's immigration intake is too high and is pushing up housing costs."
+    "ctx": "This argues Australia's immigration intake — which rebounded strongly after the pandemic — is too high and is worsening a housing squeeze in cities like Sydney and Melbourne. The stake is whether high migration is straining housing and services."
   },
   {
     "id": "au2b",
@@ -1175,7 +1180,7 @@ const BANK = [
       "teal": 0.5
     },
     "dec": true,
-    "ctx": "This is the pro-immigration view: that migration keeps the economy growing and brings needed skills."
+    "ctx": "This is the pro-immigration view: that migration keeps Australia's economy growing and supplies skills the country lacks, a pillar of its post-war success. The stake is immigration's role in Australian prosperity."
   },
   {
     "id": "au3a",
@@ -1195,7 +1200,7 @@ const BANK = [
       "teal": -1
     },
     "dec": true,
-    "ctx": "'Boat turnbacks' and 'offshore processing' send asylum seekers arriving by boat to detention in other countries. This backs the policy as necessary."
+    "ctx": "'Boat turnbacks' and offshore processing (detaining boat arrivals on Nauru and formerly Manus Island) are Australia's hardline border policy, credited by supporters with stopping deaths at sea. This backs continuing it. The stake is deterrence versus the treatment of asylum seekers."
   },
   {
     "id": "au3b",
@@ -1215,7 +1220,7 @@ const BANK = [
       "teal": 1
     },
     "dec": true,
-    "ctx": "This condemns offshore detention as cruel and indefinite punishment of people who committed no crime."
+    "ctx": "This condemns offshore detention as cruel and indefinite punishment of people who committed no crime, citing years-long detention and self-harm among detainees. The stake is border control versus human rights."
   },
   {
     "id": "au4a",
@@ -1235,7 +1240,7 @@ const BANK = [
       "teal": 2
     },
     "dec": true,
-    "ctx": "This supports cutting Australia's emissions much faster, even at a cost to its large coal and gas industries."
+    "ctx": "This supports cutting Australia's emissions much faster, even at a cost to its coal and gas industries — among the world's biggest fossil-fuel exporters. Australia is highly exposed to climate impacts like bushfires. The stake is climate action versus a huge export sector."
   },
   {
     "id": "au4b",
@@ -1255,7 +1260,7 @@ const BANK = [
       "teal": -2
     },
     "dec": true,
-    "ctx": "This argues rushing the shift away from fossil fuels threatens jobs and reliable power for little global benefit."
+    "ctx": "This argues rushing the shift away from fossil fuels threatens jobs, industry, and reliable power for little global gain, since Australia's own emissions are a small share of the world total. The stake is whether the transition is being pushed too fast."
   },
   {
     "id": "au5a",
@@ -1274,7 +1279,7 @@ const BANK = [
       "grn": -2,
       "teal": -1
     },
-    "ctx": "Australia currently bans nuclear power. This supports building it to cut emissions while keeping reliable electricity."
+    "ctx": "Australia bans nuclear power. This supports building it to cut emissions while keeping electricity reliable — the Coalition's policy. Critics say it is too slow and costly for Australia's needs. The stake is whether nuclear should be part of the energy mix."
   },
   {
     "id": "au5b",
@@ -1293,7 +1298,7 @@ const BANK = [
       "grn": 2,
       "teal": 1
     },
-    "ctx": "This argues nuclear is too slow and expensive for Australia, and that renewables plus storage are the future."
+    "ctx": "This argues nuclear is too slow and expensive for Australia, which is rich in sun and wind, and that renewables plus storage are the cheaper, faster path. The stake is the best route to clean, reliable power."
   },
   {
     "id": "au6a",
@@ -1311,7 +1316,7 @@ const BANK = [
       "grn": -2,
       "teal": -1.5
     },
-    "ctx": "This supports approving new coal and gas projects to keep export income and jobs strong."
+    "ctx": "This supports approving new coal and gas projects to keep export income and jobs strong, especially in resource states like Queensland. The stake is economic benefit versus climate commitments."
   },
   {
     "id": "au6b",
@@ -1329,7 +1334,7 @@ const BANK = [
       "grn": 2,
       "teal": 1.5
     },
-    "ctx": "This argues approving new fossil-fuel projects during a climate crisis is indefensible."
+    "ctx": "This argues approving new fossil-fuel projects during a climate crisis is indefensible and locks in decades of emissions. The stake is whether new coal and gas can be justified."
   },
   {
     "id": "au7a",
@@ -1348,7 +1353,7 @@ const BANK = [
       "teal": 0.5,
       "g": 0
     },
-    "ctx": "This supports significantly higher taxes on the wealthiest Australians and big corporations."
+    "ctx": "This supports significantly higher taxes on the wealthiest Australians and big corporations — including the highly profitable mining giants — to fund services and reduce inequality. The stake is whether the top should pay more."
   },
   {
     "id": "au7b",
@@ -1367,7 +1372,7 @@ const BANK = [
       "teal": -0.5,
       "g": 0
     },
-    "ctx": "This argues higher taxes on wealth and business drive investment and talent away."
+    "ctx": "This argues higher taxes on wealth and business drive investment and talent away and harm the economy. The stake is whether taxing the top raises revenue or repels it."
   },
   {
     "id": "au8a",
@@ -1386,7 +1391,7 @@ const BANK = [
       "teal": 1,
       "g": 0
     },
-    "ctx": "'Negative gearing' and capital-gains discounts are tax breaks for property investors. This wants them wound back to cool the housing market."
+    "ctx": "'Negative gearing' lets property investors deduct losses from their tax, and the capital-gains discount halves tax on investment profits — tax breaks blamed for pricing first-home buyers out. This wants them wound back. The stake is cooling the housing market versus investor interests."
   },
   {
     "id": "au8b",
@@ -1405,7 +1410,7 @@ const BANK = [
       "teal": -1,
       "g": 0
     },
-    "ctx": "This argues cutting those tax breaks would push up rents and hurt millions of ordinary landlords."
+    "ctx": "This argues winding back those tax breaks would push up rents and hurt the millions of ordinary Australians who own a single investment property. The stake is whether reform would help buyers or backfire on renters and small landlords."
   },
   {
     "id": "au9a",
@@ -1424,7 +1429,7 @@ const BANK = [
       "teal": 0.5,
       "g": 0
     },
-    "ctx": "This supports governments building large amounts of public housing directly."
+    "ctx": "This supports governments building large amounts of public housing directly to tackle a severe affordability and homelessness problem. The stake is how directly the state should provide housing."
   },
   {
     "id": "au9b",
@@ -1442,7 +1447,7 @@ const BANK = [
       "grn": -1.5,
       "g": 0
     },
-    "ctx": "This argues governments build badly, and the real fix is cutting planning red tape so the market can build."
+    "ctx": "This argues governments build slowly and badly, and the real fix is cutting the planning red tape that blocks private construction. The stake is whether government or the market should lead on housing."
   },
   {
     "id": "au10a",
@@ -1461,7 +1466,7 @@ const BANK = [
       "grn": 2,
       "teal": 1
     },
-    "ctx": "The 'Voice' was a proposed Indigenous advisory body; 'treaty' and 'truth-telling' are related reconciliation steps. This supports continuing to pursue them."
+    "ctx": "The 'Voice' was a proposed Indigenous advisory body to Parliament; 'treaty' and 'truth-telling' are related steps toward reconciliation with Aboriginal and Torres Strait Islander peoples. This supports continuing to pursue them. The stake is how Australia addresses Indigenous disadvantage and history."
   },
   {
     "id": "au10b",
@@ -1480,7 +1485,7 @@ const BANK = [
       "grn": -2,
       "teal": -1
     },
-    "ctx": "This notes the Voice was rejected in a 2023 referendum and argues Australia should move on from these divisive proposals."
+    "ctx": "This notes the Voice was decisively rejected in the 2023 referendum (60% No) and argues Australia should move on from these divisive proposals. The stake is respecting that result versus continuing reconciliation efforts."
   },
   {
     "id": "au11a",
@@ -1499,7 +1504,7 @@ const BANK = [
       "grn": 1.5,
       "teal": 0.5
     },
-    "ctx": "This supports Australia becoming a republic with its own head of state, instead of the British King."
+    "ctx": "This supports Australia becoming a republic with its own head of state instead of the British King — a cause defeated in a 1999 referendum but still alive. The stake is whether Australia should cut its constitutional ties to the monarchy."
   },
   {
     "id": "au11b",
@@ -1518,7 +1523,7 @@ const BANK = [
       "grn": -1.5,
       "teal": -0.5
     },
-    "ctx": "This argues the current system works and gives stability, so there's no need for a republic."
+    "ctx": "This argues the current system works and provides stability, so there is no need for a republic. The stake is the value of keeping the monarchy."
   },
   {
     "id": "au12a",
@@ -1537,7 +1542,7 @@ const BANK = [
       "grn": 1.5,
       "teal": 2
     },
-    "ctx": "This supports tougher limits on political donations and a stronger federal anti-corruption watchdog."
+    "ctx": "This supports tougher limits on political donations and a stronger federal anti-corruption commission, after scandals eroded trust in politics. The stake is cleaning up political influence."
   },
   {
     "id": "au12b",
@@ -1556,7 +1561,7 @@ const BANK = [
       "grn": -1.5,
       "teal": -2
     },
-    "ctx": "This argues ever more integrity rules tangle government in red tape and put good people off serving."
+    "ctx": "This argues ever more integrity rules tie government in red tape and deter capable people from public life. The stake is whether more oversight improves or hampers governance."
   },
   {
     "id": "au13a",
@@ -1574,7 +1579,7 @@ const BANK = [
       "nat": 1.5,
       "grn": -2
     },
-    "ctx": "AUKUS is a deal for Australia to get nuclear-powered submarines with the US and UK. This backs it as right for national security."
+    "ctx": "AUKUS is a 2021 pact for Australia to acquire nuclear-powered submarines with US and UK help, aimed at countering China — a defence deal costing hundreds of billions. This backs it as vital security. The stake is a massive, long-term strategic bet."
   },
   {
     "id": "au13b",
@@ -1592,7 +1597,7 @@ const BANK = [
       "nat": -1.5,
       "grn": 2
     },
-    "ctx": "This argues AUKUS is a hugely expensive gamble that ties Australia to America's wars."
+    "ctx": "This argues AUKUS is a wildly expensive gamble that ties Australia to America's wars and priorities. The stake is whether the submarine deal is worth the cost and dependence."
   },
   {
     "id": "au14a",
@@ -1611,7 +1616,7 @@ const BANK = [
       "grn": -1,
       "teal": 0.5
     },
-    "ctx": "This supports taking a harder line on China (a rival power) even if it costs valuable trade."
+    "ctx": "This supports taking a harder line on China — Australia's biggest trading partner but a strategic rival — even at the cost of trade, after Beijing imposed punishing tariffs on Australian goods. The stake is security versus economic dependence on China."
   },
   {
     "id": "au14b",
@@ -1630,7 +1635,7 @@ const BANK = [
       "grn": 1,
       "teal": -0.5
     },
-    "ctx": "This argues Australia's prosperity depends on trade with China and that confrontation would wreck the economy."
+    "ctx": "This argues Australia's prosperity depends on trade with China, so confrontation would wreck the economy. The stake is standing firm versus protecting a crucial market."
   },
   {
     "id": "au15a",
@@ -1648,7 +1653,7 @@ const BANK = [
       "grn": -1.5,
       "teal": -0.5
     },
-    "ctx": "This argues sentences are too soft and that violent and repeat offenders should spend far longer in prison."
+    "ctx": "This argues sentences are too soft and violent and repeat offenders should spend far longer in prison. The stake is whether harsher punishment improves safety."
   },
   {
     "id": "au15b",
@@ -1666,7 +1671,7 @@ const BANK = [
       "grn": 1.5,
       "teal": 0.5
     },
-    "ctx": "This argues locking more people up hasn't cut crime, and that prevention and rehabilitation work better."
+    "ctx": "This argues locking more people up has not cut crime and that prevention and rehabilitation work better — relevant given the stark over-imprisonment of Indigenous Australians. The stake is what actually reduces crime."
   },
   {
     "id": "au16a",
@@ -1684,7 +1689,7 @@ const BANK = [
       "grn": -2,
       "teal": -0.5
     },
-    "ctx": "The 'age of criminal responsibility' is how young a child can be charged with a crime. This wants it kept low with real consequences for young offenders."
+    "ctx": "The 'age of criminal responsibility' is how young a child can be charged with a crime — as low as 10 in parts of Australia. This wants it kept low with real consequences for young offenders. The stake is how to handle child offending."
   },
   {
     "id": "au16b",
@@ -1702,7 +1707,7 @@ const BANK = [
       "grn": 2,
       "teal": 0.5
     },
-    "ctx": "This argues jailing very young children is barbaric and the age of criminal responsibility must be raised."
+    "ctx": "This argues jailing 10-year-olds is barbaric, disproportionately harms Indigenous children, and that the age must be raised, as UN bodies urge. The stake is treating children as criminals versus as kids needing help."
   },
   {
     "id": "au17a",
@@ -1720,7 +1725,7 @@ const BANK = [
       "grn": -2,
       "teal": -1
     },
-    "ctx": "This argues multiculturalism has failed, producing divided communities with little in common."
+    "ctx": "This argues multiculturalism has failed, producing divided communities with little in common. The stake is whether Australia's diversity model works."
   },
   {
     "id": "au17b",
@@ -1738,7 +1743,7 @@ const BANK = [
       "grn": 2,
       "teal": 1
     },
-    "ctx": "This celebrates Australia's multiculturalism as a genuine success and one of its greatest strengths."
+    "ctx": "This celebrates Australia's multiculturalism — one of the world's most successful, with nearly half the population born overseas or with a migrant parent — as a great strength. The stake is whether that diversity is a success."
   },
   {
     "id": "au18a",
@@ -1757,7 +1762,7 @@ const BANK = [
       "grn": -2,
       "teal": -1
     },
-    "ctx": "This argues Islam clashes with Australian values. Supporters cite integration concerns; critics call it religious prejudice."
+    "ctx": "This argues Islam clashes with Australian values. Critics call it prejudice against a diverse community. The stake is whether the concern is legitimate or bigoted."
   },
   {
     "id": "au18b",
@@ -1776,7 +1781,7 @@ const BANK = [
       "grn": 2,
       "teal": 1
     },
-    "ctx": "This holds that Muslim Australians are full members of society whose faith deserves equal respect."
+    "ctx": "This holds that Muslim Australians are full members of society whose faith deserves equal respect. The stake is religious equality versus singling out one faith."
   },
   {
     "id": "au19a",
@@ -1795,7 +1800,7 @@ const BANK = [
       "grn": -2,
       "teal": -1.5
     },
-    "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
+    "ctx": "This is a statement of racial supremacism — the belief that some races are innately more intelligent or capable than others. It was the ideological engine of Nazism and the Holocaust, and of systems like slavery and apartheid. Modern genetics finds more variation within any racial group than between them, and the idea has no scientific standing."
   },
   {
     "id": "au19b",
@@ -1814,7 +1819,7 @@ const BANK = [
       "grn": 2,
       "teal": 1.5
     },
-    "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
+    "ctx": "This states the principle of fundamental human equality: that no race is innately superior in intelligence or ability, and that racial hierarchies are discredited pseudo-science with a shameful history behind slavery and apartheid. It is the moral baseline of modern anti-discrimination law."
   },
   {
     "id": "au20a",
@@ -1834,7 +1839,7 @@ const BANK = [
       "teal": 0.5
     },
     "dec": true,
-    "ctx": "This supports transgender rights: the view that people should be able to have the law recognise the gender they identify as, without needing medical approval."
+    "ctx": "This supports transgender rights: letting people have the law recognise the gender they identify as and access gender-affirming care. 'Self-identification' laws, used in countries like Ireland and Argentina, allow a legal gender change without medical gatekeeping. The stake is whether gender is defined by identity or by biology."
   },
   {
     "id": "au20b",
@@ -1854,7 +1859,7 @@ const BANK = [
       "teal": -0.5
     },
     "dec": true,
-    "ctx": "This is the gender-critical view: that biological sex is a fixed fact the law should not allow a personal declaration to override."
+    "ctx": "This is the 'gender-critical' view: that biological sex is a fixed, binary reality no declaration or surgery can change, and that the law should rest on it — in single-sex spaces, sport, and official data. Associated with feminists like J.K. Rowling, it clashes head-on with the identity-based view."
   },
   {
     "id": "au21a",
@@ -1873,7 +1878,7 @@ const BANK = [
       "teal": 0.5,
       "g": 0
     },
-    "ctx": "This argues public schools are underfunded while private schools get too much public money, and the balance should shift."
+    "ctx": "Australia funds both public and private schools, and this argues public schools are underfunded while private schools get too much taxpayer money, and the balance should shift. The stake is fair funding between the two sectors."
   },
   {
     "id": "au21b",
@@ -1892,7 +1897,7 @@ const BANK = [
       "teal": -0.5,
       "g": 0
     },
-    "ctx": "This argues parents who pay for private schools save taxpayers money and deserve support, not penalties."
+    "ctx": "This argues parents who pay for private schools save taxpayers money and deserve support, not penalties. The stake is whether public funding of private schools is fair."
   },
   {
     "id": "au22a",
@@ -1911,7 +1916,7 @@ const BANK = [
       "grn": 1.5,
       "teal": 1
     },
-    "ctx": "This treats abortion as a settled right that should be fully protected across all states."
+    "ctx": "This treats abortion — legal across all Australian states, though only recently in some — as a settled right to be fully protected nationwide. The stake is securing consistent abortion access."
   },
   {
     "id": "au22b",
@@ -1930,7 +1935,7 @@ const BANK = [
       "grn": -1.5,
       "teal": -1
     },
-    "ctx": "This argues abortion ends a human life and that there should be firmer limits than exist today."
+    "ctx": "This argues abortion ends a human life and there should be firmer limits than exist today. The stake is the moral status of the unborn."
   },
   {
     "id": "au23a",
@@ -1948,7 +1953,7 @@ const BANK = [
       "grn": 2,
       "g": 0
     },
-    "ctx": "This supports stronger unions and worker rights, and pushing harder for wage growth."
+    "ctx": "This supports stronger unions and worker rights and pushing harder for wage growth, after years of stagnant real wages. The stake is the balance of power between workers and employers."
   },
   {
     "id": "au23b",
@@ -1966,7 +1971,7 @@ const BANK = [
       "grn": -2,
       "g": 0
     },
-    "ctx": "This argues union power raises costs and holds the economy back, and that workplace rules should be loosened."
+    "ctx": "This argues union power raises costs and holds the economy back, and that workplace rules should be loosened. The stake is protecting workers versus business flexibility."
   },
   {
     "id": "au24a",
@@ -1985,7 +1990,7 @@ const BANK = [
       "grn": -1.5,
       "teal": -0.5
     },
-    "ctx": "This argues Australia over-regulates business and that companies need far less red tape and lower taxes."
+    "ctx": "This argues Australia over-regulates business and companies need far less red tape and lower taxes. The stake is whether deregulation would boost the economy."
   },
   {
     "id": "au24b",
@@ -2004,7 +2009,7 @@ const BANK = [
       "grn": 1.5,
       "teal": 0.5
     },
-    "ctx": "This argues cutting regulation just lets big companies off the hook on workers and the environment."
+    "ctx": "This argues cutting regulation just lets big companies off the hook on workers, consumers, and the environment. The stake is whether rules protect people or burden business."
   },
   {
     "id": "au25a",
@@ -2021,7 +2026,7 @@ const BANK = [
       "grn": 1.5,
       "g": 0
     },
-    "ctx": "This supports the government stepping in directly, with price caps and subsidies, to ease the cost of living."
+    "ctx": "This supports the government intervening directly, with price caps and subsidies (as on energy bills), to ease a sharp cost-of-living squeeze. The stake is how far the state should intervene in prices."
   },
   {
     "id": "au25b",
@@ -2038,7 +2043,7 @@ const BANK = [
       "grn": -1.5,
       "g": 0
     },
-    "ctx": "This argues price caps and handouts just fuel inflation and debt without fixing the real problem."
+    "ctx": "This argues price caps and handouts just fuel inflation and debt without fixing the underlying causes. The stake is whether intervention helps or worsens the cost of living."
   },
   {
     "id": "au26a",
@@ -2057,7 +2062,7 @@ const BANK = [
       "teal": 0.5,
       "g": 0
     },
-    "ctx": "JobSeeker is Australia's unemployment payment. This argues it and similar payments are too low and should be raised above the poverty line."
+    "ctx": "JobSeeker is Australia's unemployment payment, widely criticised as below the poverty line. This argues it and similar payments should be raised well above it. The stake is the adequacy of the safety net."
   },
   {
     "id": "au26b",
@@ -2076,7 +2081,7 @@ const BANK = [
       "teal": -0.5,
       "g": 0
     },
-    "ctx": "This argues raising welfare payments too far weakens the incentive to find work."
+    "ctx": "This argues raising welfare payments too far weakens the incentive to find work. The stake is balancing support against work incentives."
   },
   {
     "id": "au27a",
@@ -2095,7 +2100,7 @@ const BANK = [
       "grn": 2,
       "teal": 1.5
     },
-    "ctx": "This supports banning gambling advertising outright to protect people from gambling harm."
+    "ctx": "Australia is one of the world's biggest per-capita gamblers, and gambling ads saturate sport broadcasts. This supports banning them outright to reduce harm. The stake is public health versus advertising freedom and revenue."
   },
   {
     "id": "au27b",
@@ -2114,7 +2119,7 @@ const BANK = [
       "grn": -2,
       "teal": -1.5
     },
-    "ctx": "This argues banning gambling ads is 'nanny-state' overreach and that adults can decide for themselves."
+    "ctx": "This argues banning gambling ads is 'nanny-state' overreach and that adults can make their own choices. The stake is protecting people versus personal freedom."
   },
   {
     "id": "au28a",
@@ -2132,7 +2137,7 @@ const BANK = [
       "grn": 2,
       "teal": 0.5
     },
-    "ctx": "'Pill testing' checks drugs for danger at events. This supports treating drug use as a health issue, with pill testing and decriminalisation."
+    "ctx": "'Pill testing' lets people check drugs for dangerous contents at festivals. This supports treating drug use as a health issue, with pill testing and decriminalisation, to cut deaths. The stake is harm reduction versus deterrence."
   },
   {
     "id": "au28b",
@@ -2150,7 +2155,7 @@ const BANK = [
       "grn": -2,
       "teal": -0.5
     },
-    "ctx": "This argues softening the approach to drugs sends the wrong message and puts more lives at risk."
+    "ctx": "This argues softening the approach to drugs sends the wrong message and puts more lives at risk. The stake is whether a health approach helps or encourages use."
   },
   {
     "id": "au29a",
@@ -2169,7 +2174,7 @@ const BANK = [
       "grn": -1,
       "teal": 0.5
     },
-    "ctx": "This supports open global free trade as having made Australia richer."
+    "ctx": "This defends open global free trade as having made Australia, a major commodity exporter, richer. The stake is the value of economic openness."
   },
   {
     "id": "au29b",
@@ -2188,7 +2193,7 @@ const BANK = [
       "grn": 1,
       "teal": -0.5
     },
-    "ctx": "This argues free trade hollowed out Australian manufacturing and left towns behind."
+    "ctx": "This argues free trade hollowed out Australian manufacturing — like the car industry that closed in 2017 — and left towns behind. The stake is who globalisation left behind."
   },
   {
     "id": "au30a",
@@ -2207,7 +2212,7 @@ const BANK = [
       "grn": 2,
       "teal": 1.5
     },
-    "ctx": "This puts protecting nature ahead of new mines, dams, and development."
+    "ctx": "This puts protecting nature ahead of new mines, dams, and development, safeguarding Australia's unique environment and species. The stake is conservation versus resource development."
   },
   {
     "id": "au30b",
@@ -2226,7 +2231,7 @@ const BANK = [
       "grn": -2,
       "teal": -1.5
     },
-    "ctx": "This argues endless environmental objections block the projects Australia needs to prosper."
+    "ctx": "This argues endless environmental objections are strangling the projects Australia needs to prosper. The stake is whether green rules protect nature or block growth."
   },
   {
     "id": "au31a",
@@ -2245,7 +2250,7 @@ const BANK = [
       "grn": -2,
       "teal": -0.5
     },
-    "ctx": "This argues immigrants who won't integrate or adopt Australian values should not be in the country."
+    "ctx": "This argues immigrants who won't integrate or adopt Australian values should not be in the country. The stake is how much cultural conformity to expect of newcomers."
   },
   {
     "id": "au31b",
@@ -2264,7 +2269,7 @@ const BANK = [
       "grn": 2,
       "teal": 0.5
     },
-    "ctx": "This argues demanding cultural conformity betrays the multicultural spirit of modern Australia."
+    "ctx": "This argues demanding cultural conformity betrays the multicultural spirit that defines modern Australia. The stake is integration versus multiculturalism."
   },
   {
     "id": "au32a",
@@ -2283,7 +2288,7 @@ const BANK = [
       "grn": -2,
       "teal": -0.5
     },
-    "ctx": "Australia Day (26 January) marks British settlement. This supports keeping the date."
+    "ctx": "Australia Day (26 January) marks the 1788 arrival of British settlers. This supports keeping the date. The stake is whether the national day should change."
   },
   {
     "id": "au32b",
@@ -2302,7 +2307,7 @@ const BANK = [
       "grn": 2,
       "teal": 0.5
     },
-    "ctx": "This argues the date is painful for Indigenous Australians (some call it 'Invasion Day') and should change."
+    "ctx": "This argues 26 January is painful for Indigenous Australians — who call it 'Invasion Day' — and the date should change. The stake is national celebration versus Indigenous grief."
   },
   {
     "id": "au33a",
@@ -2321,7 +2326,7 @@ const BANK = [
       "teal": 1,
       "g": 0
     },
-    "ctx": "The ABC is Australia's public broadcaster. This argues it is worth its public funding and must stay independent of government."
+    "ctx": "The ABC is Australia's public broadcaster. This argues it is worth its public funding and must stay independent of government. The stake is the value and independence of public media."
   },
   {
     "id": "au33b",
@@ -2340,7 +2345,7 @@ const BANK = [
       "teal": -1,
       "g": 0
     },
-    "ctx": "This argues the ABC is biased and bloated and its public funding should be cut."
+    "ctx": "This argues the ABC is biased and bloated and its public funding should be cut. The stake is whether public broadcasting deserves its funding."
   },
   {
     "id": "au34a",
@@ -2359,7 +2364,7 @@ const BANK = [
       "grn": -1,
       "teal": -0.5
     },
-    "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
+    "ctx": "This is the conservative philosophy of tradition, associated with Edmund Burke: that long-standing customs and institutions hold the accumulated, hard-won wisdom of generations, so change should be gradual and cautious rather than sweeping away what works for untested ideas."
   },
   {
     "id": "au34b",
@@ -2378,7 +2383,7 @@ const BANK = [
       "grn": 1,
       "teal": 0.5
     },
-    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
+    "ctx": "This is the progressive reply, in the spirit of Thomas Paine's line that 'the dead should not govern the living': that treating tradition as sacred just lets the prejudices of the past block overdue reform — as appeals to tradition once defended slavery and denying women the vote."
   },
   {
     "id": "au35a",
@@ -2397,7 +2402,7 @@ const BANK = [
       "grn": -2,
       "teal": -0.5
     },
-    "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
+    "ctx": "This reflects a core right-leaning value: that a healthy society depends mainly on individuals taking responsibility for their own choices and lives, and that leaning too heavily on government breeds dependence and saps initiative."
   },
   {
     "id": "au35b",
@@ -2416,7 +2421,7 @@ const BANK = [
       "grn": 2,
       "teal": 0.5
     },
-    "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
+    "ctx": "This reflects a core left-leaning value: that many hardships — poverty, poor health, joblessness — stem from unfair systems and circumstances beyond personal control, so blaming individuals lets the comfortable ignore problems they benefit from or could help fix."
   }
 ];
 
@@ -2452,6 +2457,6 @@ window.portalCode = 'au';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>
-<script src="/engine.js?v=1.1.7"></script>
+<script src="/engine.js?v=1.1.9"></script>
 </body>
 </html>

@@ -145,7 +145,8 @@
         "Æ": 2,
         "Ø": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "Denmark, though led by Social Democrats, runs one of Europe's strictest immigration policies. This defends that line and wants it kept tough. The stake is Denmark's hardline model on immigration."
     },
     {
       "id": "dk1b",
@@ -167,7 +168,8 @@
         "Æ": -2,
         "Ø": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This calls Denmark's harsh immigration line inhumane and wants it softened, citing rules like the 'jewellery law' that let authorities seize asylum seekers' valuables. The stake is toughness versus humanity."
     },
     {
       "id": "dk2a",
@@ -189,7 +191,8 @@
         "Æ": 2,
         "Ø": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This wants rejected asylum seekers and foreign criminals deported far more consistently. The stake is enforcement versus the risk faced by those sent back."
     },
     {
       "id": "dk2b",
@@ -211,7 +214,8 @@
         "Æ": -2,
         "Ø": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues deporting people to danger and tearing up settled lives betrays basic humanity. The stake is enforcement versus compassion."
     },
     {
       "id": "dk3a",
@@ -233,7 +237,8 @@
         "Æ": 2,
         "Ø": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "Denmark's 'ghetto laws' let the state break up neighbourhoods with many non-Western residents, including demolishing homes and relocating families. This backs actively breaking up such 'parallel societies'. The stake is integration by force."
     },
     {
       "id": "dk3b",
@@ -255,7 +260,8 @@
         "Æ": -2,
         "Ø": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This condemns bulldozing neighbourhoods and moving families based on ethnicity as state discrimination, which EU courts have questioned. The stake is integration policy versus discrimination."
     },
     {
       "id": "dk4a",
@@ -276,7 +282,8 @@
         "Æ": 2,
         "Ø": -2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Islam clashes with Danish values. Denmark has taken a notably tough line on immigration and Islam. Critics call it prejudice against fellow citizens. The stake is whether the concern is legitimate or bigotry."
     },
     {
       "id": "dk4b",
@@ -297,7 +304,8 @@
         "Æ": -2,
         "Ø": 2
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This holds Danish Muslims to be full members of society whose faith deserves equal respect. The stake is religious equality versus singling out one faith."
     },
     {
       "id": "dk5a",
@@ -318,7 +326,8 @@
         "C": -0.5,
         "Æ": 1,
         "Ø": -2
-      }
+      },
+      "ctx": "This claims some ethnic groups are inherently more prone to crime and violence than others — asserting an innate trait, which mainstream research rejects in favour of social factors like poverty and age. The stake is nature versus circumstance."
     },
     {
       "id": "dk5b",
@@ -339,7 +348,8 @@
         "C": 0.5,
         "Æ": -1,
         "Ø": 2
-      }
+      },
+      "ctx": "This argues no ethnic group is born criminal and that behaviour comes from circumstances, not blood. The stake is rejecting an innate explanation for crime."
     },
     {
       "id": "dk6a",
@@ -360,7 +370,8 @@
         "Æ": 0.5,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "This defends Denmark's universal welfare state — free healthcare, education, and generous benefits — as worth its very high taxes. The stake is the tax-funded 'Nordic model'."
     },
     {
       "id": "dk6b",
@@ -381,7 +392,8 @@
         "Æ": -0.5,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues the welfare state has grown too big and taxes are too high, and both should be cut. The stake is the size of the state."
     },
     {
       "id": "dk7a",
@@ -401,7 +413,8 @@
         "C": -1.5,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "This wants top earners and large fortunes to pay more tax, not less. The stake is whether the top should pay more."
     },
     {
       "id": "dk7b",
@@ -421,7 +434,8 @@
         "C": 1.5,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues Denmark's high taxes on success drive talent and investment abroad. The stake is whether high taxes raise revenue or repel it."
     },
     {
       "id": "dk8a",
@@ -442,7 +456,8 @@
         "Æ": 1,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "Denmark abolished a public holiday, Great Prayer Day, in 2023 to raise money for defence, over union anger. This calls that wrong and wants it reversed. The stake is a symbolic fight over work and defence."
     },
     {
       "id": "dk8b",
@@ -463,7 +478,8 @@
         "Æ": -1,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues cutting a holiday to pay for defence was a reasonable priority as the war in Ukraine raised security fears. The stake is sacrifice for security."
     },
     {
       "id": "dk9a",
@@ -484,7 +500,8 @@
         "C": 1.5,
         "Æ": 1,
         "Ø": -1.5
-      }
+      },
+      "ctx": "This supports Denmark continuing to raise defence spending and strongly backing Ukraine — Denmark has been among its most generous per-capita supporters. The stake is Denmark's defence commitment."
     },
     {
       "id": "dk9b",
@@ -505,7 +522,8 @@
         "C": -1.5,
         "Æ": -1,
         "Ø": 1.5
-      }
+      },
+      "ctx": "This argues billions poured into the military drain money from welfare for uncertain gain. The stake is the trade-off between defence and welfare."
     },
     {
       "id": "dk10a",
@@ -526,7 +544,8 @@
         "Æ": -2,
         "Ø": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "Denmark introduced the world's first CO2 tax on farming, aimed at its large agricultural emissions. This defends it as right. The stake is climate leadership versus farmers."
     },
     {
       "id": "dk10b",
@@ -547,7 +566,8 @@
         "Æ": 2,
         "Ø": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues a CO2 tax on farming punishes Danish farmers and just exports jobs and food production to countries with laxer rules. The stake is protecting farming versus climate goals."
     },
     {
       "id": "dk11a",
@@ -567,7 +587,8 @@
         "Æ": -1.5,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "This says Denmark, already a green-energy pioneer, must lead on climate even when it costs growth and jobs. The stake is leading by example at a price."
     },
     {
       "id": "dk11b",
@@ -587,7 +608,8 @@
         "Æ": 1.5,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues costly climate ambitions burden ordinary Danes for a tiny effect on the global climate. The stake is whether national action is worth the cost."
     },
     {
       "id": "dk12a",
@@ -608,7 +630,8 @@
         "Æ": 1.5,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "Denmark's retirement age rises automatically with life expectancy and is set to become one of Europe's highest. This argues it is too high and should be capped. The stake is how long people must work."
     },
     {
       "id": "dk12b",
@@ -629,7 +652,8 @@
         "Æ": -1.5,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues that since people live longer, a rising retirement age is simply necessary to keep the welfare state affordable. The stake is fiscal reality versus a decent retirement."
     },
     {
       "id": "dk13a",
@@ -649,7 +673,8 @@
         "C": 1.5,
         "Æ": -1.5,
         "Ø": -1.5
-      }
+      },
+      "ctx": "This sees Denmark's future in closer European cooperation, including on defence — Danes voted in 2022 to drop their EU defence opt-out. The stake is deeper EU ties."
     },
     {
       "id": "dk13b",
@@ -669,7 +694,8 @@
         "C": -1.5,
         "Æ": 1.5,
         "Ø": 1.5
-      }
+      },
+      "ctx": "This argues Brussels already has too much power over Denmark and that sovereignty must come first. The stake is national control versus the EU."
     },
     {
       "id": "dk14a",
@@ -690,7 +716,8 @@
         "Æ": 0.5,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "This wants public healthcare funded far more, resisting private provision, amid staff shortages and waiting times. The stake is preserving a fully public system."
     },
     {
       "id": "dk14b",
@@ -711,7 +738,8 @@
         "Æ": -0.5,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues more private provision would relieve pressure and cut waiting times. The stake is whether private care helps or entrenches inequality."
     },
     {
       "id": "dk15a",
@@ -731,7 +759,8 @@
         "C": -1,
         "Æ": -1.5,
         "Ø": 2
-      }
+      },
+      "ctx": "This supports letting people change their legal gender by self-declaration, recognising trans identity. The stake is whether gender is defined by identity or biology."
     },
     {
       "id": "dk15b",
@@ -751,7 +780,8 @@
         "C": 1,
         "Æ": 1.5,
         "Ø": -2
-      }
+      },
+      "ctx": "This is the gender-critical view: that legal sex can't rest on mere declaration and that biological reality must prevail. The stake is the meaning of legal sex."
     },
     {
       "id": "dk16a",
@@ -771,7 +801,8 @@
         "Æ": 0.5,
         "Ø": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "'Flexicurity' is Denmark's admired model combining easy hiring and firing with strong benefits and retraining. This wants it and strong unions protected. The stake is a distinctive labour model."
     },
     {
       "id": "dk16b",
@@ -791,7 +822,8 @@
         "Æ": -0.5,
         "Ø": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues the labour market needs less union power and more flexibility for employers. The stake is protecting workers versus business flexibility."
     },
     {
       "id": "dk17a",
@@ -812,7 +844,8 @@
         "Æ": 1,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "The 'Arne pension' lets people worn out by decades of physical work retire a few years early. This wants it kept and expanded. The stake is a right to early retirement for the worn-out."
     },
     {
       "id": "dk17b",
@@ -833,7 +866,8 @@
         "Æ": -1,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues special early-retirement schemes are expensive and unfair to everyone who must work longer. The stake is fairness and cost."
     },
     {
       "id": "dk18a",
@@ -854,7 +888,8 @@
         "C": 1.5,
         "Æ": 0.5,
         "Ø": -2
-      }
+      },
+      "ctx": "This argues Denmark over-regulates business and companies need far less red tape and lower taxes. The stake is whether deregulation would help the economy."
     },
     {
       "id": "dk18b",
@@ -875,7 +910,8 @@
         "C": -1.5,
         "Æ": -0.5,
         "Ø": 2
-      }
+      },
+      "ctx": "This argues cutting regulation just erodes protection for workers, consumers, and the climate. The stake is whether rules protect people or burden business."
     },
     {
       "id": "dk19a",
@@ -895,7 +931,8 @@
         "C": -1,
         "Æ": -1,
         "Ø": 1.5
-      }
+      },
+      "ctx": "This wants access to abortion protected and the time limit extended (Denmark moved it from 12 to 18 weeks). The stake is expanding abortion rights."
     },
     {
       "id": "dk19b",
@@ -915,7 +952,8 @@
         "C": 1,
         "Æ": 1,
         "Ø": -1.5
-      }
+      },
+      "ctx": "This argues extending the abortion time limit goes too far and devalues human life. The stake is the moral status of the unborn."
     },
     {
       "id": "dk20a",
@@ -936,7 +974,8 @@
         "C": 1,
         "Æ": 0.5,
         "Ø": 1
-      }
+      },
+      "ctx": "Greenland is a self-governing part of the Danish realm that Donald Trump has repeatedly said the US should acquire. This wants Denmark to firmly defend Greenland's right to decide its own future. The stake is sovereignty against great-power pressure."
     },
     {
       "id": "dk20b",
@@ -957,7 +996,8 @@
         "C": -1,
         "Æ": -0.5,
         "Ø": -1
-      }
+      },
+      "ctx": "This argues Denmark should focus on its own security and not cling romantically to Greenland. The stake is realism versus attachment to the realm."
     },
     {
       "id": "dk21a",
@@ -977,7 +1017,8 @@
         "C": 1.5,
         "Æ": 2,
         "Ø": -2
-      }
+      },
+      "ctx": "This wants tougher sentences and more police powers, including in deprived neighbourhoods, after gang and knife crime. The stake is whether a hard line improves safety."
     },
     {
       "id": "dk21b",
@@ -997,7 +1038,8 @@
         "C": -1.5,
         "Æ": -2,
         "Ø": 2
-      }
+      },
+      "ctx": "This argues ever tougher sentences never cut crime, while prevention and social effort do. The stake is what actually reduces crime."
     },
     {
       "id": "dk22a",
@@ -1018,7 +1060,8 @@
         "C": -1.5,
         "Æ": -1.5,
         "Ø": 1.5
-      }
+      },
+      "ctx": "This supports legalising and regulating cannabis, pointing to the semi-tolerated 'Pusher Street' in Copenhagen's Christiania. The stake is prohibition versus regulation."
     },
     {
       "id": "dk22b",
@@ -1039,7 +1082,8 @@
         "C": 1.5,
         "Æ": 1.5,
         "Ø": -1.5
-      }
+      },
+      "ctx": "This argues legalising cannabis would normalise drug use and do more harm than good. The stake is whether legalisation helps or harms."
     },
     {
       "id": "dk23a",
@@ -1059,7 +1103,8 @@
         "Æ": -1.5,
         "Ø": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "DR is Denmark's public broadcaster. This argues it is worth its funding and must stay independent. The stake is the value and independence of public media."
     },
     {
       "id": "dk23b",
@@ -1079,7 +1124,8 @@
         "Æ": 1.5,
         "Ø": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues DR is bloated and biased and its funding should be cut sharply. The stake is whether public broadcasting deserves its funding."
     },
     {
       "id": "dk24a",
@@ -1100,7 +1146,8 @@
         "C": 1,
         "Æ": 2,
         "Ø": -2
-      }
+      },
+      "ctx": "This argues immigrants must adapt to Danish culture and values rather than the reverse. The stake is how much cultural conformity to expect of newcomers."
     },
     {
       "id": "dk24b",
@@ -1121,7 +1168,8 @@
         "C": -1,
         "Æ": -2,
         "Ø": 2
-      }
+      },
+      "ctx": "This argues a living culture is always mixed, so demanding assimilation impoverishes Denmark. The stake is integration versus multiculturalism."
     },
     {
       "id": "dk25a",
@@ -1141,7 +1189,8 @@
         "Æ": -1.5,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "This puts protecting nature ahead of farmland and new development in one of Europe's most intensively farmed countries. The stake is conservation versus agriculture."
     },
     {
       "id": "dk25b",
@@ -1161,7 +1210,8 @@
         "Æ": 1.5,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues endless environmental rules strangle farming and the growth Denmark needs. The stake is whether green rules protect nature or block progress."
     },
     {
       "id": "dk26a",
@@ -1182,7 +1232,8 @@
         "C": 1.5,
         "Æ": -0.5,
         "Ø": -1.5
-      }
+      },
+      "ctx": "As a small, open economy, this defends open global free trade as having made Denmark richer. The stake is the value of economic openness."
     },
     {
       "id": "dk26b",
@@ -1203,7 +1254,8 @@
         "C": -1.5,
         "Æ": 0.5,
         "Ø": 1.5
-      }
+      },
+      "ctx": "This argues globalisation hollowed out Danish jobs and made the country too dependent. The stake is who globalisation left behind."
     },
     {
       "id": "dk27a",
@@ -1223,7 +1275,8 @@
         "I": 1.5,
         "C": -1.5,
         "Ø": 0.5
-      }
+      },
+      "ctx": "This supports Denmark legalising assisted dying for the terminally ill, which a citizens' council has recommended exploring. The stake is control over the end of life."
     },
     {
       "id": "dk27b",
@@ -1243,7 +1296,8 @@
         "I": -1.5,
         "C": 1.5,
         "Ø": -0.5
-      }
+      },
+      "ctx": "This argues assisted dying pressures the vulnerable and crosses a line society shouldn't cross. The stake is whether the safeguards protect the weak."
     },
     {
       "id": "dk28a",
@@ -1263,7 +1317,8 @@
         "C": -0.5,
         "Æ": 1.5,
         "Ø": 1
-      }
+      },
+      "ctx": "Denmark holds referendums mainly on EU questions. This wants more binding referendums on major issues generally. The stake is more direct democracy."
     },
     {
       "id": "dk28b",
@@ -1283,7 +1338,8 @@
         "C": 0.5,
         "Æ": -1.5,
         "Ø": -1
-      }
+      },
+      "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by populists. The stake is whether direct votes are wise."
     },
     {
       "id": "dk29a",
@@ -1304,7 +1360,8 @@
         "Æ": 0.5,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "This argues the unemployed face too much suspicion and control, and that unemployment benefits (dagpenge) should be higher. The stake is dignity versus policing of welfare."
     },
     {
       "id": "dk29b",
@@ -1325,7 +1382,8 @@
         "Æ": -0.5,
         "Ø": -2,
         "g": 0
-      }
+      },
+      "ctx": "This argues generous benefits weaken the incentive to work and must be kept in check. The stake is generosity versus work incentives."
     },
     {
       "id": "dk30a",
@@ -1344,7 +1402,8 @@
         "C": -0.5,
         "Æ": -2,
         "Ø": 2
-      }
+      },
+      "ctx": "'Quota refugees' are resettled in an orderly way through the UN, unlike spontaneous arrivals. This wants Denmark to take in more of them. The stake is orderly humanitarian intake."
     },
     {
       "id": "dk30b",
@@ -1363,7 +1422,8 @@
         "C": 0.5,
         "Æ": 2,
         "Ø": -2
-      }
+      },
+      "ctx": "This argues Denmark already does enough and taking more refugees only adds to the strain. The stake is capacity versus humanitarian duty."
     },
     {
       "id": "dk31a",
@@ -1383,7 +1443,8 @@
         "C": 1,
         "Æ": 2,
         "Ø": -1.5
-      }
+      },
+      "ctx": "This argues Danes should be able to express national pride and celebrate Danishness openly. The stake is the space for patriotism."
     },
     {
       "id": "dk31b",
@@ -1403,7 +1464,8 @@
         "C": -1,
         "Æ": -2,
         "Ø": 1.5
-      }
+      },
+      "ctx": "This argues loud nationalism too easily shades into excluding those who don't fit a narrow idea of Danishness. The stake is pride versus inclusion."
     },
     {
       "id": "dk32a",
@@ -1424,7 +1486,8 @@
         "Æ": 1,
         "Ø": 1.5,
         "g": 0
-      }
+      },
+      "ctx": "This wants the government to intervene directly to protect people from rising prices. The stake is how far the state should cushion inflation."
     },
     {
       "id": "dk32b",
@@ -1445,7 +1508,8 @@
         "Æ": -1,
         "Ø": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues price measures and handouts just fuel inflation without fixing the cause. The stake is whether intervention helps or worsens the problem."
     },
     {
       "id": "dk33a",
@@ -1464,7 +1528,8 @@
         "C": 1.5,
         "Æ": 1.5,
         "Ø": -1
-      }
+      },
+      "ctx": "This is the conservative philosophy of tradition, in the spirit of Edmund Burke: that long-standing customs hold the accumulated wisdom of generations, so change should be gradual rather than discarding what works for untested ideas."
     },
     {
       "id": "dk33b",
@@ -1483,7 +1548,8 @@
         "C": -1.5,
         "Æ": -1.5,
         "Ø": 1
-      }
+      },
+      "ctx": "This is the progressive reply, echoing Thomas Paine that the dead should not govern the living: that venerating tradition just lets the prejudices of the past block overdue change."
     },
     {
       "id": "dk34a",
@@ -1504,7 +1570,8 @@
         "C": 1.5,
         "Æ": 0.5,
         "Ø": -2
-      }
+      },
+      "ctx": "This reflects a core right-leaning value: that a good society rests mainly on personal responsibility rather than government support."
     },
     {
       "id": "dk34b",
@@ -1525,7 +1592,8 @@
         "C": -1.5,
         "Æ": -0.5,
         "Ø": 2
-      }
+      },
+      "ctx": "This reflects a core left-leaning value: that many problems come from unfair systems beyond personal control, so blaming individuals lets the comfortable ignore others' suffering."
     },
     {
       "id": "dk35a",
@@ -1546,7 +1614,8 @@
         "Æ": 0.5,
         "Ø": 2,
         "g": 0
-      }
+      },
+      "ctx": "This wants the state to build far more affordable public housing (almene boliger) to keep cities liveable as prices rise. The stake is how directly the state should provide housing."
     },
     {
       "id": "dk35b",
@@ -1566,219 +1635,290 @@
         "C": 1,
         "Ø": -1.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues the housing fix is cutting red tape and letting the market build, not more public housing. The stake is whether the state or the market should lead."
     }
   ],
   "translations": {
     "dk1a": {
-      "q": "Danmarks stramme udlændingepolitik er rigtig og bør forblive hård."
+      "q": "Danmarks stramme udlændingepolitik er rigtig og bør forblive hård.",
+      "ctx": "Danmark fører, selv under Socialdemokratiet, en af Europas strammeste udlændingepolitikker. Det forsvarer den linje og vil holde den hård. På spil står Danmarks hårde model på udlændingeområdet."
     },
     "dk1b": {
-      "q": "Danmarks hårde udlændingelinje er umenneskelig og bør løsnes."
+      "q": "Danmarks hårde udlændingelinje er umenneskelig og bør løsnes.",
+      "ctx": "Det kalder Danmarks hårde udlændingelinje umenneskelig og vil løsne den, med henvisning til regler som 'smykkeloven', der lod myndigheder beslaglægge asylansøgeres værdier. På spil står hårdhed over for menneskelighed."
     },
     "dk2a": {
-      "q": "Afviste asylansøgere og kriminelle udlændinge bør udvises langt mere konsekvent."
+      "q": "Afviste asylansøgere og kriminelle udlændinge bør udvises langt mere konsekvent.",
+      "ctx": "Det vil have afviste asylansøgere og kriminelle udlændinge udvist langt mere konsekvent. På spil står håndhævelse over for risikoen for de hjemsendte."
     },
     "dk2b": {
-      "q": "At udvise mennesker til fare og rive deres liv op forråder grundlæggende menneskelighed."
+      "q": "At udvise mennesker til fare og rive deres liv op forråder grundlæggende menneskelighed.",
+      "ctx": "Det argumenterer for, at det at udvise mennesker til fare og rive etablerede liv op forråder grundlæggende menneskelighed. På spil står håndhævelse over for medfølelse."
     },
     "dk3a": {
-      "q": "Staten bør aktivt bryde „parallelsamfund“ og ikke-vestlige enklaver op."
+      "q": "Staten bør aktivt bryde „parallelsamfund“ og ikke-vestlige enklaver op.",
+      "ctx": "Danmarks 'ghettolove' lader staten bryde kvarterer med mange ikke-vestlige beboere op, herunder rive boliger ned og flytte familier. Det støtter aktivt at bryde sådanne 'parallelsamfund' op. På spil står integration med tvang."
     },
     "dk3b": {
-      "q": "At rive kvarterer ned og flytte familier efter etnicitet er statslig diskrimination."
+      "q": "At rive kvarterer ned og flytte familier efter etnicitet er statslig diskrimination.",
+      "ctx": "Det førdømmer at rive kvarterer ned og flytte familier ud fra etnicitet som statslig diskrimination, som EU-domstole har sat spørgsmålstegn ved. På spil står integrationspolitik over for diskrimination."
     },
     "dk4a": {
-      "q": "Islam er ikke forenelig med danske værdier."
+      "q": "Islam er ikke forenelig med danske værdier.",
+      "ctx": "Det hævder, at islam er uforenelig med danske værdier. Danmark har ført en markant hård linje over for indvandring og islam. Kritikere kalder det fordom mod medborgere. På spil står, om bekymringen er legitim eller fordom."
     },
     "dk4b": {
-      "q": "Danske muslimer er fuldgyldige medlemmer af samfundet, og deres tro fortjener lige respekt."
+      "q": "Danske muslimer er fuldgyldige medlemmer af samfundet, og deres tro fortjener lige respekt.",
+      "ctx": "Det mener, at danske muslimer er fuldgyldige medlemmer af samfundet, hvis tro fortjener lige respekt. På spil står religiøs lighed over for at udpege én tro."
     },
     "dk5a": {
-      "q": "Nogle etniske grupper er simpelthen mere tilbøjelige til kriminalitet og vold end andre."
+      "q": "Nogle etniske grupper er simpelthen mere tilbøjelige til kriminalitet og vold end andre.",
+      "ctx": "Det hævder, at nogle etniske grupper af natur er mere tilbøjelige til kriminalitet og vold end andre — en påstand om et medfødt træk, som forskningen afviser til fordel for sociale faktorer som fattigdom og alder. På spil står natur over for omstændigheder."
     },
     "dk5b": {
-      "q": "Ingen etnisk gruppe er født kriminel; adfærd skyldes omstændigheder, ikke blod."
+      "q": "Ingen etnisk gruppe er født kriminel; adfærd skyldes omstændigheder, ikke blod.",
+      "ctx": "Det argumenterer for, at ingen etnisk gruppe er født kriminel, og at adfærd skyldes omstændigheder, ikke blod. På spil står afvisningen af en medfødt forklaring på kriminalitet."
     },
     "dk6a": {
-      "q": "Danmarks universelle velfærdsstat skal forsvares, selv med høje skatter."
+      "q": "Danmarks universelle velfærdsstat skal forsvares, selv med høje skatter.",
+      "ctx": "Det forsvarer Danmarks universelle velfærdsstat — gratis sundhed, uddannelse og generøse ydelser — som de meget høje skatter værd. På spil står den skattefinansierede nordiske model."
     },
     "dk6b": {
-      "q": "Velfærdsstaten er vokset sig for stor, og skatterne er for høje; begge bør skæres ned."
+      "q": "Velfærdsstaten er vokset sig for stor, og skatterne er for høje; begge bør skæres ned.",
+      "ctx": "Det argumenterer for, at velfærdsstaten er blevet for stor og skatterne for høje, og at begge bør skæres ned. På spil står statens størrelse."
     },
     "dk7a": {
-      "q": "Topindkomster og store formårer bør betale mere i skat, ikke mindre."
+      "q": "Topindkomster og store formårer bør betale mere i skat, ikke mindre.",
+      "ctx": "Det vil have topindkomster og store formårer til at betale mere i skat, ikke mindre. På spil står, om de øverste skal betale mere."
     },
     "dk7b": {
-      "q": "De høje danske skatter på succes driver talent og investeringer ud af landet."
+      "q": "De høje danske skatter på succes driver talent og investeringer ud af landet.",
+      "ctx": "Det argumenterer for, at Danmarks høje skatter på succes driver talent og investeringer til udlandet. På spil står, om høje skatter giver indtægter eller skræmmer væk."
     },
     "dk8a": {
-      "q": "At afskaffe store bededag som fridag for at finansiere forsvaret var forkert og bør rulles tilbage."
+      "q": "At afskaffe store bededag som fridag for at finansiere forsvaret var forkert og bør rulles tilbage.",
+      "ctx": "Danmark afskaffede en helligdag, store bededag, i 2023 for at skaffe penge til forsvaret, trods fagforeningernes vrede. Det kalder det forkert og vil rulle det tilbage. På spil står en symbolsk strid om arbejde og forsvar."
     },
     "dk8b": {
-      "q": "At droppe en fridag for at betale for forsvaret var en rimelig prioritering i farlige tider."
+      "q": "At droppe en fridag for at betale for forsvaret var en rimelig prioritering i farlige tider.",
+      "ctx": "Det argumenterer for, at det at droppe en fridag for at betale for forsvaret var en rimelig prioritering, da krigen i Ukraine øgede sikkerhedsfrygten. På spil står offer for sikkerhed."
     },
     "dk9a": {
-      "q": "Danmark bør fortsat hæve forsvarsudgifterne og støtte Ukraine kraftigt."
+      "q": "Danmark bør fortsat hæve forsvarsudgifterne og støtte Ukraine kraftigt.",
+      "ctx": "Det støtter, at Danmark fortsat hæver forsvarsudgifterne og støtter Ukraine kraftigt — Danmark har været blandt de mest generøse pr. indbygger. På spil står Danmarks forsvarsindsats."
     },
     "dk9b": {
-      "q": "At øse milliarder i militæret dræner penge fra velfærden for usikker gevinst."
+      "q": "At øse milliarder i militæret dræner penge fra velfærden for usikker gevinst.",
+      "ctx": "Det argumenterer for, at milliarder øst i militæret dræner penge fra velfærden for usikker gevinst. På spil står afvejningen mellem forsvar og velfærd."
     },
     "dk10a": {
-      "q": "Danmark gjorde ret i at indføre verdens første CO2-afgift på landbruget."
+      "q": "Danmark gjorde ret i at indføre verdens første CO2-afgift på landbruget.",
+      "ctx": "Danmark indførte verdens første CO2-afgift på landbruget, rettet mod de store landbrugsudslip. Det forsvarer den som rigtig. På spil står klimalederskab over for landmændene."
     },
     "dk10b": {
-      "q": "En CO2-afgift på landbruget straffer danske landmænd og eksporterer job og fødevareproduktion til udlandet."
+      "q": "En CO2-afgift på landbruget straffer danske landmænd og eksporterer job og fødevareproduktion til udlandet.",
+      "ctx": "Det argumenterer for, at en CO2-afgift på landbruget straffer danske landmænd og blot eksporterer job og fødevareproduktion til lande med slappere regler. På spil står beskyttelse af landbruget over for klimamål."
     },
     "dk11a": {
-      "q": "Danmark skal gå forrest på klimaet, selv når det koster vækst og job."
+      "q": "Danmark skal gå forrest på klimaet, selv når det koster vækst og job.",
+      "ctx": "Det siger, at Danmark, allerede en pioner inden for grøn energi, skal gå forrest på klimaet, selv når det koster vækst og job. På spil står at gå forrest til en pris."
     },
     "dk11b": {
-      "q": "Dyre klimaambitioner belaster almindelige danskere for en lille effekt på verdensklimaet."
+      "q": "Dyre klimaambitioner belaster almindelige danskere for en lille effekt på verdensklimaet.",
+      "ctx": "Det argumenterer for, at dyre klimaambitioner belaster almindelige danskere for en lille effekt på verdensklimaet. På spil står, om national indsats er omkostningen værd."
     },
     "dk12a": {
-      "q": "Danmarks automatisk stigende pensionsalder er for høj og bør have et loft."
+      "q": "Danmarks automatisk stigende pensionsalder er for høj og bør have et loft.",
+      "ctx": "Danmarks pensionsalder stiger automatisk med levealderen og er på vej til at blive en af Europas højeste. Det argumenterer for, at den er for høj og bør have et loft. På spil står, hvor længe folk skal arbejde."
     },
     "dk12b": {
-      "q": "Folk lever længere, så en stigende pensionsalder er nødvendig for at finansiere velfærden."
+      "q": "Folk lever længere, så en stigende pensionsalder er nødvendig for at finansiere velfærden.",
+      "ctx": "Det argumenterer for, at da folk lever længere, er en stigende pensionsalder nødvendig for at holde velfærdsstaten betalelig. På spil står økonomisk virkelighed over for en anstændig pension."
     },
     "dk13a": {
-      "q": "Danmarks fremtid ligger i tættere europæisk samarbejde, også om forsvar."
+      "q": "Danmarks fremtid ligger i tættere europæisk samarbejde, også om forsvar.",
+      "ctx": "Det ser Danmarks fremtid i tættere europæisk samarbejde, også om forsvar — danskerne stemte i 2022 for at afskaffe deres EU-forsvarsforbehold. På spil står tættere EU-bånd."
     },
     "dk13b": {
-      "q": "Bruxelles har allerede for meget magt over Danmark, og suveræniteten skal komme først."
+      "q": "Bruxelles har allerede for meget magt over Danmark, og suveræniteten skal komme først.",
+      "ctx": "Det argumenterer for, at Bruxelles allerede har for meget magt over Danmark, og at suveræniteten skal komme først. På spil står national kontrol over for EU."
     },
     "dk14a": {
-      "q": "Den offentlige sundhed skal finansieres langt mere, og privat behandling holdes tilbage."
+      "q": "Den offentlige sundhed skal finansieres langt mere, og privat behandling holdes tilbage.",
+      "ctx": "Det vil have den offentlige sundhed finansieret langt mere og holde privat behandling tilbage, midt i personalemangel og ventetider. På spil står at bevare et helt offentligt system."
     },
     "dk14b": {
-      "q": "Mere privat behandling ville lette presset og forkorte ventetiderne i det offentlige."
+      "q": "Mere privat behandling ville lette presset og forkorte ventetiderne i det offentlige.",
+      "ctx": "Det argumenterer for, at mere privat behandling ville lette presset og forkorte ventetiderne. På spil står, om privat behandling hjælper eller cementerer ulighed."
     },
     "dk15a": {
-      "q": "Transpersoner bør kunne ændre deres juridiske køn ved selverklæring."
+      "q": "Transpersoner bør kunne ændre deres juridiske køn ved selverklæring.",
+      "ctx": "Det støtter, at folk kan ændre deres juridiske køn ved selverklæring, som anerkendelse af transidentitet. På spil står, om køn defineres af identitet eller biologi."
     },
     "dk15b": {
-      "q": "Juridisk køn kan ikke være en ren erklæringssag; den biologiske virkelighed må gælde."
+      "q": "Juridisk køn kan ikke være en ren erklæringssag; den biologiske virkelighed må gælde.",
+      "ctx": "Det er det kønskritiske syn: at juridisk køn ikke kan hvile på en ren erklæring, og at den biologiske virkelighed må gælde. På spil står betydningen af juridisk køn."
     },
     "dk16a": {
-      "q": "Den danske flexicurity-model med stærke fagforeninger bør beskyttes."
+      "q": "Den danske flexicurity-model med stærke fagforeninger bør beskyttes.",
+      "ctx": "'Flexicurity' er Danmarks beundrede model, der kombinerer let ansættelse og afskedigelse med stærke ydelser og efteruddannelse. Det vil beskytte den og stærke fagforeninger. På spil står en særegen arbejdsmarkedsmodel."
     },
     "dk16b": {
-      "q": "Arbejdsmarkedet har brug for mindre fagforeningsmagt og mere fleksibilitet for arbejdsgiverne."
+      "q": "Arbejdsmarkedet har brug for mindre fagforeningsmagt og mere fleksibilitet for arbejdsgiverne.",
+      "ctx": "Det argumenterer for, at arbejdsmarkedet har brug for mindre fagforeningsmagt og mere fleksibilitet for arbejdsgiverne. På spil står beskyttelse af lønmodtagere over for virksomhedernes fleksibilitet."
     },
     "dk17a": {
-      "q": "Den tidlige tilbagetrækning, „Arne-pensionen“, for nedslidte bør bevares og udvides."
+      "q": "Den tidlige tilbagetrækning, „Arne-pensionen“, for nedslidte bør bevares og udvides.",
+      "ctx": "Arne-pensionen lader folk, der er nedslidte af årtiers fysisk arbejde, gå nogle år tidligere på pension. Det vil bevare og udvide den. På spil står retten til tidlig tilbagetrækning for de nedslidte."
     },
     "dk17b": {
-      "q": "Særlige tidlige tilbagetrækningsordninger er dyre og urimelige over for alle, der må arbejde længere."
+      "q": "Særlige tidlige tilbagetrækningsordninger er dyre og urimelige over for alle, der må arbejde længere.",
+      "ctx": "Det argumenterer for, at særlige tidlige tilbagetrækningsordninger er dyre og urimelige over for alle, der må arbejde længere. På spil står rimelighed og økonomi."
     },
     "dk18a": {
-      "q": "Danmark overregulerer erhvervslivet; virksomheder har brug for langt mindre bureaukrati og lavere skatter."
+      "q": "Danmark overregulerer erhvervslivet; virksomheder har brug for langt mindre bureaukrati og lavere skatter.",
+      "ctx": "Det argumenterer for, at Danmark overregulerer erhvervslivet, og virksomheder har brug for langt mindre bureaukrati og lavere skatter. På spil står, om deregulering ville hjælpe økonomien."
     },
     "dk18b": {
-      "q": "At skære i reguleringen udhuler bare beskyttelsen af lønmodtagere, forbrugere og klimaet."
+      "q": "At skære i reguleringen udhuler bare beskyttelsen af lønmodtagere, forbrugere og klimaet.",
+      "ctx": "Det argumenterer for, at det at skære i reguleringen blot udhuler beskyttelsen af lønmodtagere, forbrugere og klimaet. På spil står, om regler beskytter folk eller belaster erhvervslivet."
     },
     "dk19a": {
-      "q": "Adgangen til abort bør beskyttes, og tidsgrænsen udvides."
+      "q": "Adgangen til abort bør beskyttes, og tidsgrænsen udvides.",
+      "ctx": "Det vil have adgangen til abort beskyttet og tidsgrænsen udvidet (Danmark flyttede den fra 12 til 18 uger). På spil står udvidelsen af abortretten."
     },
     "dk19b": {
-      "q": "At udvide abortgrænsen går for vidt og forringer det menneskelige livs værd."
+      "q": "At udvide abortgrænsen går for vidt og forringer det menneskelige livs værd.",
+      "ctx": "Det argumenterer for, at det at udvide abortgrænsen går for vidt og forringer menneskelivets værd. På spil står det ufødte livs moralske status."
     },
     "dk20a": {
-      "q": "Danmark skal klart forsvare Grønlands ret til selv at bestemme sin fremtid mod ydre pres."
+      "q": "Danmark skal klart forsvare Grønlands ret til selv at bestemme sin fremtid mod ydre pres.",
+      "ctx": "Grønland er en selvstyrende del af rigsfællesskabet, som Donald Trump gentagne gange har sagt, at USA bør overtage. Det vil have Danmark til klart at forsvare Grønlands ret til selv at bestemme sin fremtid. På spil står suverænitet mod stormagtspres."
     },
     "dk20b": {
-      "q": "Danmark bør fokusere på sin egen sikkerhed og ikke romantisere sit greb om Grønland."
+      "q": "Danmark bør fokusere på sin egen sikkerhed og ikke romantisere sit greb om Grønland.",
+      "ctx": "Det argumenterer for, at Danmark bør fokusere på sin egen sikkerhed og ikke klynge sig romantisk til Grønland. På spil står realisme over for tilknytning til rigsfællesskabet."
     },
     "dk21a": {
-      "q": "Danmark har brug for hårdere straffe og flere politibeføjelser, også i udsatte områder."
+      "q": "Danmark har brug for hårdere straffe og flere politibeføjelser, også i udsatte områder.",
+      "ctx": "Det vil have hårdere straffe og flere politibeføjelser, også i udsatte områder, efter bande- og knivkriminalitet. På spil står, om en hård linje forbedrer tryghed."
     },
     "dk21b": {
-      "q": "Stadig hårdere straffe sænker aldrig kriminaliteten; forebyggelse og social indsats gør."
+      "q": "Stadig hårdere straffe sænker aldrig kriminaliteten; forebyggelse og social indsats gør.",
+      "ctx": "Det argumenterer for, at stadig hårdere straffe aldrig sænker kriminaliteten, mens forebyggelse og social indsats gør. På spil står, hvad der faktisk mindsker kriminalitet."
     },
     "dk22a": {
-      "q": "Cannabis bør legaliseres og reguleres i Danmark."
+      "q": "Cannabis bør legaliseres og reguleres i Danmark.",
+      "ctx": "Det støtter at legalisere og regulere cannabis, med henvisning til den halvt tolererede Pusher Street i Københavns Christiania. På spil står forbud over for regulering."
     },
     "dk22b": {
-      "q": "At legalisere cannabis ville normalisere stofbrug og gøre mere skade end gavn."
+      "q": "At legalisere cannabis ville normalisere stofbrug og gøre mere skade end gavn.",
+      "ctx": "Det argumenterer for, at legalisering af cannabis ville normalisere stofbrug og gøre mere skade end gavn. På spil står, om legalisering hjælper eller skader."
     },
     "dk23a": {
-      "q": "Public service (DR) er sin finansiering værd og skal forblive uafhængig."
+      "q": "Public service (DR) er sin finansiering værd og skal forblive uafhængig.",
+      "ctx": "DR er Danmarks public service. Det argumenterer for, at den er pengene værd og skal forblive uafhængig. På spil står public services værdi og uafhængighed."
     },
     "dk23b": {
-      "q": "DR er oppustet og ensidig, og finansieringen bør skæres kraftigt ned."
+      "q": "DR er oppustet og ensidig, og finansieringen bør skæres kraftigt ned.",
+      "ctx": "Det argumenterer for, at DR er oppustet og ensidig, og at finansieringen bør skæres kraftigt ned. På spil står, om public service fortjener sin finansiering."
     },
     "dk24a": {
-      "q": "Indvandrere skal tilpasse sig dansk kultur og danske værdier, ikke omvendt."
+      "q": "Indvandrere skal tilpasse sig dansk kultur og danske værdier, ikke omvendt.",
+      "ctx": "Det argumenterer for, at indvandrere skal tilpasse sig dansk kultur og danske værdier frem for omvendt. På spil står, hvor meget kulturel tilpasning man skal forvente af nytilkomne."
     },
     "dk24b": {
-      "q": "En levende kultur er altid blandet; at kræve assimilation forarmer Danmark."
+      "q": "En levende kultur er altid blandet; at kræve assimilation forarmer Danmark.",
+      "ctx": "Det argumenterer for, at en levende kultur altid er blandet, så krav om assimilation forarmer Danmark. På spil står integration over for multikulturalisme."
     },
     "dk25a": {
-      "q": "Beskyttelse af naturen bør prioriteres over landbrugsjord og nyt byggeri."
+      "q": "Beskyttelse af naturen bør prioriteres over landbrugsjord og nyt byggeri.",
+      "ctx": "Det prioriterer at beskytte naturen over landbrugsjord og nyt byggeri i et af Europas mest intensivt opdyrkede lande. På spil står naturbeskyttelse over for landbrug."
     },
     "dk25b": {
-      "q": "Endeløse miljøregler kvæler landbruget og den vækst, Danmark har brug for."
+      "q": "Endeløse miljøregler kvæler landbruget og den vækst, Danmark har brug for.",
+      "ctx": "Det argumenterer for, at endeløse miljøregler kvæler landbruget og den vækst, Danmark har brug for. På spil står, om miljøregler beskytter naturen eller blokerer fremskridt."
     },
     "dk26a": {
-      "q": "Den åbne globale frihandel har gjort Danmark rigere og bør forsvares."
+      "q": "Den åbne globale frihandel har gjort Danmark rigere og bør forsvares.",
+      "ctx": "Som en lille, åben økonomi forsvarer det den åbne globale frihandel som noget, der har gjort Danmark rigere. På spil står værdien af økonomisk åbenhed."
     },
     "dk26b": {
-      "q": "Globaliseringen udhulede danske job og gjorde landet for afhængigt."
+      "q": "Globaliseringen udhulede danske job og gjorde landet for afhængigt.",
+      "ctx": "Det argumenterer for, at globaliseringen udhulede danske job og gjorde landet for afhængigt. På spil står, hvem globaliseringen efterlod."
     },
     "dk27a": {
-      "q": "Danmark bør legalisere aktiv dødshjælp for uhelbredeligt syge."
+      "q": "Danmark bør legalisere aktiv dødshjælp for uhelbredeligt syge.",
+      "ctx": "Det støtter, at Danmark legaliserer aktiv dødshjælp for uhelbredeligt syge, som et borgerting har anbefalet at undersøge. På spil står kontrollen over livets afslutning."
     },
     "dk27b": {
-      "q": "Aktiv dødshjælp lægger pres på de svage og overskrider en grænse, samfundet ikke bør overskride."
+      "q": "Aktiv dødshjælp lægger pres på de svage og overskrider en grænse, samfundet ikke bør overskride.",
+      "ctx": "Det argumenterer for, at aktiv dødshjælp lægger pres på de svage og overskrider en grænse, samfundet ikke bør overskride. På spil står, om værnene beskytter de svage."
     },
     "dk28a": {
-      "q": "Danmark bør bruge flere bindende folkeafstemninger om store spørgsmål."
+      "q": "Danmark bør bruge flere bindende folkeafstemninger om store spørgsmål.",
+      "ctx": "Danmark holder mest folkeafstemninger om EU-spørgsmål. Det vil have flere bindende folkeafstemninger om store spørgsmål generelt. På spil står mere direkte demokrati."
     },
     "dk28b": {
-      "q": "Folkeafstemninger reducerer komplekse spørgsmål til slogans og kapres let af populister."
+      "q": "Folkeafstemninger reducerer komplekse spørgsmål til slogans og kapres let af populister.",
+      "ctx": "Det argumenterer for, at folkeafstemninger reducerer komplekse spørgsmål til slogans og let kapres af populister. På spil står, om direkte afstemninger er kloge."
     },
     "dk29a": {
-      "q": "De arbejdsløse mødes med for meget mistillid; dagpengene bør være højere."
+      "q": "De arbejdsløse mødes med for meget mistillid; dagpengene bør være højere.",
+      "ctx": "Det argumenterer for, at de arbejdsløse mødes med for meget mistillid og kontrol, og at dagpengene bør være højere. På spil står værdighed over for kontrol af ydelser."
     },
     "dk29b": {
-      "q": "Generøse ydelser svækker tilskyndelsen til at arbejde og må holdes i ave."
+      "q": "Generøse ydelser svækker tilskyndelsen til at arbejde og må holdes i ave.",
+      "ctx": "Det argumenterer for, at generøse ydelser svækker tilskyndelsen til at arbejde og må holdes i ave. På spil står generøsitet over for arbejdsincitament."
     },
     "dk30a": {
-      "q": "Danmark bør tage imod flere kvoteflygtninge gennem FN-systemet."
+      "q": "Danmark bør tage imod flere kvoteflygtninge gennem FN-systemet.",
+      "ctx": "Kvoteflygtninge genbosættes på ordnet vis gennem FN, i modsætning til spontane ankomster. Det vil have Danmark til at tage imod flere af dem. På spil står ordnet humanitær modtagelse."
     },
     "dk30b": {
-      "q": "Danmark gør allerede nok, og at tage flere flygtninge øger kun presset."
+      "q": "Danmark gør allerede nok, og at tage flere flygtninge øger kun presset.",
+      "ctx": "Det argumenterer for, at Danmark allerede gør nok, og at flere flygtninge kun øger presset. På spil står kapacitet over for humanitær pligt."
     },
     "dk31a": {
-      "q": "Danskere skal kunne udtrykke nationalstolthed og fejre danskhed åbent."
+      "q": "Danskere skal kunne udtrykke nationalstolthed og fejre danskhed åbent.",
+      "ctx": "Det argumenterer for, at danskere skal kunne udtrykke nationalstolthed og fejre danskhed åbent. På spil står rummet for patriotisme."
     },
     "dk31b": {
-      "q": "Højrøstet nationalisme skrider for let over i at udelukke dem, der ikke passer ind i en snæver idé om danskhed."
+      "q": "Højrøstet nationalisme skrider for let over i at udelukke dem, der ikke passer ind i en snæver idé om danskhed.",
+      "ctx": "Det argumenterer for, at højrøstet nationalisme for let skrider over i at udelukke dem, der ikke passer ind i en snæver idé om danskhed. På spil står stolthed over for inklusion."
     },
     "dk32a": {
-      "q": "Regeringen bør gribe direkte ind for at beskytte folk mod stigende priser."
+      "q": "Regeringen bør gribe direkte ind for at beskytte folk mod stigende priser.",
+      "ctx": "Det vil have staten til at gribe direkte ind for at beskytte folk mod stigende priser. På spil står, hvor meget staten skal dæmpe inflationen."
     },
     "dk32b": {
-      "q": "Prisindgreb og tilskud nærer bare inflationen; de løser ikke årsagen."
+      "q": "Prisindgreb og tilskud nærer bare inflationen; de løser ikke årsagen.",
+      "ctx": "Det argumenterer for, at prisindgreb og tilskud blot nærer inflationen uden at løse årsagen. På spil står, om indgreb hjælper eller forværrer problemet."
     },
     "dk33a": {
-      "q": "Gamle traditioner bærer generationers visdom og bør ikke kasseres letsindigt."
+      "q": "Gamle traditioner bærer generationers visdom og bør ikke kasseres letsindigt.",
+      "ctx": "Det er den konservative traditionsfilosofi i Edmund Burkes ånd: at gamle skikke rummer generationers opsamlede visdom, så forandring bør ske gradvist frem for at kassere det, der virker, for uafprøvede idéer."
     },
     "dk33b": {
-      "q": "At dyrke tradition lader bare de døde styre de levende og blokerer nødvendig forandring."
+      "q": "At dyrke tradition lader bare de døde styre de levende og blokerer nødvendig forandring.",
+      "ctx": "Det er det progressive modsvar i Thomas Paines ånd om at de døde ikke bør styre de levende: at dyrke tradition lader blot fortidens fordomme blokere nødvendig forandring."
     },
     "dk34a": {
-      "q": "Et godt samfund afhænger mere af personligt ansvar end af statslig støtte."
+      "q": "Et godt samfund afhænger mere af personligt ansvar end af statslig støtte.",
+      "ctx": "Det afspejler en central mere højreorienteret værdi: at et godt samfund hviler mest på personligt ansvar frem for statslig støtte."
     },
     "dk34b": {
-      "q": "At give individet skylden for problemer, systemet skaber, er måden, de privilegerede undskylder andres lidelse."
+      "q": "At give individet skylden for problemer, systemet skaber, er måden, de privilegerede undskylder andres lidelse.",
+      "ctx": "Det afspejler en central mere venstreorienteret værdi: at mange problemer skyldes uretfærdige systemer uden for den enkeltes kontrol, så at give individet skylden lader de privilegerede ignorere andres lidelse."
     },
     "dk35a": {
-      "q": "Staten bør bygge langt mere billig almen bolig for at holde byerne til at bo i."
+      "q": "Staten bør bygge langt mere billig almen bolig for at holde byerne til at bo i.",
+      "ctx": "Det vil have staten til at bygge langt mere billig almen bolig for at holde byerne til at bo i, mens priserne stiger. På spil står, hvor direkte staten skal skaffe boliger."
     },
     "dk35b": {
-      "q": "Løsningen på boligmanglen er mindre bureaukrati og at lade markedet bygge, ikke mere almen bolig."
+      "q": "Løsningen på boligmanglen er mindre bureaukrati og at lade markedet bygge, ikke mere almen bolig.",
+      "ctx": "Det argumenterer for, at løsningen på boligmanglen er mindre bureaukrati og at lade markedet bygge, ikke mere almen bolig. På spil står, om staten eller markedet skal føre an."
     }
   },
   "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#E41A22\"></div>\n      <div class=\"party-name\">Socialdemokratiet</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Socialdemokratiet (A). Du støtter en stærk velfærdsstat, offentlige ydelser finansieret af progressiv beskatning og en reguleret markedsøkonomi.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#004F7E\"></div>\n      <div class=\"party-name\">Venstre</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Venstre (V). Du støtter personlig frihed, lavere skatter, markedsbaserede løsninger og finansiel disciplin i den offentlige sektor.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#6F3F7A\"></div>\n      <div class=\"party-name\">Moderaterne</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Moderaterne (M). Du foretrækker pragmatiske, midtsøgende reformer, samarbejde på tværs af blokkene og økonomisk modernisering.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#CE1126\"></div>\n      <div class=\"party-name\">Socialistisk Folkeparti</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Socialistisk Folkeparti (SF). Du prioriterer grøn omstilling, klimaforanstaltninger, social retfærdighed og udbygning af velfærden.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#003865\"></div>\n      <div class=\"party-name\">Danmarksdemokraterne</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Danmarksdemokraterne (Æ). Du støtter stram indvandringspolitik, decentralisering, fokus på landdistrikter og traditionelle værdier.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#3F3F3F\"></div>\n      <div class=\"party-name\">Liberal Alliance</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Liberal Alliance (I). Du går ind for vidtgående skattelettelser, deregulering, en væsentligt mindre offentlig sektor og personligt ansvar.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#00583C\"></div>\n      <div class=\"party-name\">Det Konservative Folkeparti</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Det Konservative Folkeparti (C). Du vægter ret og orden, erhvervsvenlig politik, bevarelse af kulturarven og stærkt forsvar.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#F04D23\"></div>\n      <div class=\"party-name\">Enhedslisten</div>\n      <div class=\"party-desc\">Dine svar passer bedst med Enhedslisten (Ø). Du støtter en demokratisk socialistisk økonomi, markant omfordeling, bekæmpelse af ulighed og kompromisløs klimahandling.</div>\n    </div>\n  </div>",

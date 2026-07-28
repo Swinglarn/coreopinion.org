@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.7">
+<link rel="stylesheet" href="/style.css?v=1.1.9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,6 +181,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -663,6 +664,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -805,6 +807,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -918,6 +921,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1064,6 +1068,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1123,7 +1128,7 @@ const BANK = [
       "tpm": -2
     },
     "dec": true,
-    "ctx": "The Treaty of Waitangi (1840) is NZ's founding agreement with Māori. This supports having its principles defined by a public referendum rather than the courts."
+    "ctx": "The Treaty of Waitangi (1840) is New Zealand's founding agreement between the Crown and Māori, whose 'principles' the courts have developed over decades. This supports defining those principles by a public referendum instead — the ACT party's controversial Treaty Principles Bill. The stake is who gets to define the Treaty's meaning."
   },
   {
     "id": "nz1b",
@@ -1144,7 +1149,7 @@ const BANK = [
       "tpm": 2
     },
     "dec": true,
-    "ctx": "This argues redefining the Treaty by referendum attacks Māori rights and the founding agreement itself."
+    "ctx": "This argues that redefining the Treaty by a majority referendum attacks Māori rights and the founding agreement itself — the view behind the huge 2024 protest march (hīkoi) to Parliament. The stake is protecting Treaty rights from a popular vote."
   },
   {
     "id": "nz2a",
@@ -1165,7 +1170,7 @@ const BANK = [
       "tpm": -2
     },
     "dec": true,
-    "ctx": "'Co-governance' gives Māori a shared role in running some public services. This argues it has gone too far."
+    "ctx": "'Co-governance' gives Māori a shared role in running some public services and resources, reflecting Treaty partnership. This argues it has gone too far and become undemocratic. The stake is how far Māori should share in governance."
   },
   {
     "id": "nz2b",
@@ -1186,7 +1191,7 @@ const BANK = [
       "tpm": 2
     },
     "dec": true,
-    "ctx": "This defends co-governance as honouring the Treaty partnership and wants it expanded, not cut back."
+    "ctx": "This defends co-governance as honouring the Treaty partnership between Māori and the Crown, and wants it expanded, not cut. The stake is the meaning of that partnership today."
   },
   {
     "id": "nz3a",
@@ -1206,7 +1211,7 @@ const BANK = [
       "nzf": -1.5,
       "tpm": 2
     },
-    "ctx": "'Te reo' is the Māori language. This supports actively promoting Māori language and culture across New Zealand life."
+    "ctx": "'Te reo' is the Māori language, revived from near-extinction. This supports actively promoting Māori language and culture across New Zealand life, as recent governments have. The stake is how central Māori culture should be to national identity."
   },
   {
     "id": "nz3b",
@@ -1226,7 +1231,7 @@ const BANK = [
       "nzf": 1.5,
       "tpm": -2
     },
-    "ctx": "This argues pushing Māori language and culture into everything is divisive and should stop."
+    "ctx": "This argues pushing te reo and Māori culture into everything — place names, government departments — is divisive and should stop. The stake is cultural revival versus a backlash against it."
   },
   {
     "id": "nz4a",
@@ -1246,7 +1251,7 @@ const BANK = [
       "tpm": 1.5,
       "g": 0
     },
-    "ctx": "A capital gains tax taxes profit made from selling assets like property or shares. New Zealand has none; this supports finally introducing one."
+    "ctx": "New Zealand is rare in having no capital gains tax (on profits from selling assets like property), which critics say fuels property speculation. This supports finally introducing one. The stake is taxing investment gains to improve fairness."
   },
   {
     "id": "nz4b",
@@ -1266,7 +1271,7 @@ const BANK = [
       "tpm": -1.5,
       "g": 0
     },
-    "ctx": "This argues a capital gains tax would punish savers and investors and drive money out of the country."
+    "ctx": "This argues a capital gains tax would punish savers and investors and drive money out of the country. The stake is whether such a tax would raise fair revenue or deter investment."
   },
   {
     "id": "nz5a",
@@ -1285,7 +1290,7 @@ const BANK = [
       "tpm": 2,
       "g": 0
     },
-    "ctx": "This supports significantly higher taxes on the wealthiest New Zealanders."
+    "ctx": "This supports significantly higher taxes on the wealthiest New Zealanders to fund services and reduce inequality. The stake is whether the rich should pay more."
   },
   {
     "id": "nz5b",
@@ -1304,7 +1309,7 @@ const BANK = [
       "tpm": -2,
       "g": 0
     },
-    "ctx": "This argues higher taxes on the successful just drive talent and money to Australia ('across the Tasman')."
+    "ctx": "This argues higher taxes on the successful just drive talent and capital to Australia — 'across the Tasman' — where many New Zealanders already migrate for higher pay. The stake is taxing the top versus a brain drain."
   },
   {
     "id": "nz6a",
@@ -1324,7 +1329,7 @@ const BANK = [
       "tpm": 1.5,
       "g": 0
     },
-    "ctx": "This wants public healthcare kept well funded and free, resisting privatisation."
+    "ctx": "This wants public healthcare kept well funded and free, resisting privatisation, amid strain on hospitals and staff. The stake is preserving a fully public system."
   },
   {
     "id": "nz6b",
@@ -1344,7 +1349,7 @@ const BANK = [
       "tpm": -1.5,
       "g": 0
     },
-    "ctx": "This argues more private provision and competition would cut the public system's crippling waiting lists."
+    "ctx": "This argues more private provision and competition would cut the public system's crippling waiting lists. The stake is whether private care would relieve or undermine public health."
   },
   {
     "id": "nz7a",
@@ -1364,7 +1369,7 @@ const BANK = [
       "tpm": 1.5,
       "g": 0
     },
-    "ctx": "'State housing' is government-owned rental housing. This supports building it on a large scale to fix the housing crisis."
+    "ctx": "'State housing' is government-owned rental housing. This supports building it on a large scale to tackle a severe housing and homelessness crisis. The stake is how directly the state should provide housing."
   },
   {
     "id": "nz7b",
@@ -1383,7 +1388,7 @@ const BANK = [
       "tpm": -1,
       "g": 0
     },
-    "ctx": "This argues the fix is freeing up land and cutting red tape, not more government building."
+    "ctx": "This argues the fix is freeing up land and cutting the red tape that blocks building, not more government construction. The stake is whether government or the market should lead on housing."
   },
   {
     "id": "nz8a",
@@ -1403,7 +1408,7 @@ const BANK = [
       "nzf": 2,
       "tpm": -1.5
     },
-    "ctx": "This supports a crackdown on gangs and violent crime: tougher sentences and more police powers."
+    "ctx": "This supports a crackdown on gangs and violent crime — a high-profile issue — with tougher sentences and more police powers, including gang patch bans. The stake is whether a hard line improves safety."
   },
   {
     "id": "nz8b",
@@ -1423,7 +1428,7 @@ const BANK = [
       "nzf": -2,
       "tpm": 1.5
     },
-    "ctx": "This argues locking more people up hasn't cut crime, and that tackling poverty and addiction does."
+    "ctx": "This argues locking more people up has not cut crime and that tackling poverty and addiction, the roots of gang membership, works better. The stake is what actually reduces crime."
   },
   {
     "id": "nz9a",
@@ -1443,7 +1448,7 @@ const BANK = [
       "nzf": 1.5,
       "tpm": -1.5
     },
-    "ctx": "'Ram raids' are smash-and-grab robberies, often by youths. This supports real consequences for young repeat offenders, including boot camps."
+    "ctx": "'Ram raids' — smash-and-grab robberies often by youths driving into shopfronts — surged and alarmed the public. This supports real consequences for young repeat offenders, including military-style boot camps. The stake is how to handle youth crime."
   },
   {
     "id": "nz9b",
@@ -1463,7 +1468,7 @@ const BANK = [
       "nzf": -1.5,
       "tpm": 1.5
     },
-    "ctx": "This argues boot camps for children are proven to fail and that these kids need support, not punishment."
+    "ctx": "This argues boot camps for children are proven to fail and often make reoffending worse, and that these kids need support, not punishment. The stake is discipline versus rehabilitation for young offenders."
   },
   {
     "id": "nz10a",
@@ -1483,7 +1488,7 @@ const BANK = [
       "nzf": -1.5,
       "tpm": 1
     },
-    "ctx": "This supports cutting emissions faster, including from farming, which is NZ's biggest emissions source."
+    "ctx": "This supports cutting emissions faster, including from agriculture — New Zealand's biggest emissions source, through methane from its huge dairy herds. The stake is climate action versus the farming economy."
   },
   {
     "id": "nz10b",
@@ -1503,7 +1508,7 @@ const BANK = [
       "nzf": 1.5,
       "tpm": -1
     },
-    "ctx": "This argues emissions rules on farmers threaten the backbone of the economy for tiny global benefit."
+    "ctx": "This argues emissions rules on farmers threaten the backbone of the economy for tiny global benefit, given New Zealand's small share of world emissions. The stake is protecting farming versus climate goals."
   },
   {
     "id": "nz11a",
@@ -1522,7 +1527,7 @@ const BANK = [
       "nzf": 2
     },
     "dec": true,
-    "ctx": "This argues immigration levels are too high and are straining housing and infrastructure."
+    "ctx": "This argues immigration levels are too high and are straining housing and infrastructure. The stake is whether the pace of migration outran capacity."
   },
   {
     "id": "nz11b",
@@ -1541,7 +1546,7 @@ const BANK = [
       "nzf": -2
     },
     "dec": true,
-    "ctx": "This is the pro-immigration view: that migrants bring skills and workers New Zealand needs."
+    "ctx": "This is the pro-immigration view: that migrants bring skills and workers New Zealand needs and should not be cut. The stake is immigration's economic role."
   },
   {
     "id": "nz12a",
@@ -1560,7 +1565,7 @@ const BANK = [
       "nzf": -1.5,
       "tpm": 0.5
     },
-    "ctx": "This holds that multiculturalism has been good for New Zealand."
+    "ctx": "This holds that multiculturalism has been good for New Zealand, an increasingly diverse Pacific nation. The stake is whether that diversity is a success."
   },
   {
     "id": "nz12b",
@@ -1579,7 +1584,7 @@ const BANK = [
       "nzf": 1.5,
       "tpm": -0.5
     },
-    "ctx": "This argues mass immigration and multiculturalism are eroding New Zealand's character."
+    "ctx": "This argues mass immigration and multiculturalism are eroding New Zealand's character. The stake is whether rapid diversification threatens national identity."
   },
   {
     "id": "nz13a",
@@ -1599,7 +1604,7 @@ const BANK = [
       "nzf": 1,
       "tpm": -1
     },
-    "ctx": "This argues Islam clashes with New Zealand values. Supporters cite integration concerns; critics call it religious prejudice."
+    "ctx": "This argues Islam clashes with New Zealand values — a sensitive claim in a country scarred by the 2019 Christchurch mosque attacks. Critics call it the kind of prejudice that fuels such violence. The stake is whether the concern is legitimate or bigoted."
   },
   {
     "id": "nz13b",
@@ -1619,7 +1624,7 @@ const BANK = [
       "nzf": -1,
       "tpm": 1
     },
-    "ctx": "This holds that Muslim New Zealanders are full members of society whose faith deserves equal respect."
+    "ctx": "This holds that Muslim New Zealanders are full members of society whose faith deserves equal respect, a message of solidarity after Christchurch. The stake is religious equality versus singling out one faith."
   },
   {
     "id": "nz14a",
@@ -1639,7 +1644,7 @@ const BANK = [
       "nzf": -0.5,
       "tpm": -2
     },
-    "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
+    "ctx": "This is a statement of racial supremacism — the belief that some races are innately more intelligent or capable than others. It was the ideological engine of Nazism and the Holocaust, and of systems like slavery and apartheid. Modern genetics finds more variation within any racial group than between them, and the idea has no scientific standing."
   },
   {
     "id": "nz14b",
@@ -1659,7 +1664,7 @@ const BANK = [
       "nzf": 0.5,
       "tpm": 2
     },
-    "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
+    "ctx": "This states the principle of fundamental human equality: that no race is innately superior in intelligence or ability, and that racial hierarchies are discredited pseudo-science with a shameful history behind slavery and apartheid. It is the moral baseline of modern anti-discrimination law."
   },
   {
     "id": "nz15a",
@@ -1679,7 +1684,7 @@ const BANK = [
       "tpm": 1
     },
     "dec": true,
-    "ctx": "This supports transgender rights: the view that people should be able to have the law recognise the gender they identify as, without needing medical approval."
+    "ctx": "This supports transgender rights: letting people have the law recognise the gender they identify as and access gender-affirming care. 'Self-identification' laws, used in countries like Ireland and Argentina, allow a legal gender change without medical gatekeeping. The stake is whether gender is defined by identity or by biology."
   },
   {
     "id": "nz15b",
@@ -1699,7 +1704,7 @@ const BANK = [
       "tpm": -1
     },
     "dec": true,
-    "ctx": "This is the gender-critical view: that biological sex is a fixed fact the law should not allow a personal declaration to override."
+    "ctx": "This is the 'gender-critical' view: that biological sex is a fixed, binary reality no declaration or surgery can change, and that the law should rest on it — in single-sex spaces, sport, and official data. Associated with feminists like J.K. Rowling, it clashes head-on with the identity-based view."
   },
   {
     "id": "nz16a",
@@ -1718,7 +1723,7 @@ const BANK = [
       "tpm": 1.5,
       "g": 0
     },
-    "ctx": "'Fair-pay agreements' set industry-wide pay deals. This supports stronger unions and worker rights and bringing those agreements back."
+    "ctx": "'Fair-pay agreements' set minimum pay and conditions across whole industries. This supports stronger unions and worker rights and bringing those agreements back after they were repealed. The stake is the balance of power between workers and employers."
   },
   {
     "id": "nz16b",
@@ -1737,7 +1742,7 @@ const BANK = [
       "tpm": -1.5,
       "g": 0
     },
-    "ctx": "This argues union power and central pay deals hold the economy back and cost jobs."
+    "ctx": "This argues union power and centrally negotiated pay deals hold the economy back and cost jobs. The stake is protecting workers versus business flexibility."
   },
   {
     "id": "nz17a",
@@ -1756,7 +1761,7 @@ const BANK = [
       "tpm": 2,
       "g": 0
     },
-    "ctx": "This argues welfare benefits are too low and should be raised to lift people out of poverty."
+    "ctx": "This argues welfare benefits are too low and should be raised to lift people out of poverty. The stake is the adequacy of the safety net."
   },
   {
     "id": "nz17b",
@@ -1775,7 +1780,7 @@ const BANK = [
       "tpm": -2,
       "g": 0
     },
-    "ctx": "This argues raising benefits too far weakens the incentive to work."
+    "ctx": "This argues raising benefits too far weakens the incentive to work. The stake is balancing support against work incentives."
   },
   {
     "id": "nz18a",
@@ -1795,7 +1800,7 @@ const BANK = [
       "nzf": 0.5,
       "tpm": -1
     },
-    "ctx": "This argues New Zealand over-regulates business and companies need far less red tape."
+    "ctx": "This argues New Zealand over-regulates business and companies need far less red tape. The stake is whether deregulation would boost the economy."
   },
   {
     "id": "nz18b",
@@ -1815,7 +1820,7 @@ const BANK = [
       "nzf": -0.5,
       "tpm": 1
     },
-    "ctx": "This argues cutting regulation just lets companies off the hook on workers and the environment."
+    "ctx": "This argues cutting regulation just lets companies off the hook on workers and the environment. The stake is whether rules protect people or burden business."
   },
   {
     "id": "nz19a",
@@ -1835,7 +1840,7 @@ const BANK = [
       "nzf": -1,
       "tpm": 1
     },
-    "ctx": "After the 2019 Christchurch mosque attacks, NZ banned many semi-automatic weapons. This supports keeping those tighter gun laws."
+    "ctx": "After the 2019 Christchurch terror attack, New Zealand swiftly banned most semi-automatic weapons. This supports keeping those tighter gun laws. The stake is public safety versus gun owners' rights."
   },
   {
     "id": "nz19b",
@@ -1855,7 +1860,7 @@ const BANK = [
       "nzf": 1,
       "tpm": -1
     },
-    "ctx": "This argues the post-Christchurch gun laws punished law-abiding owners and should be loosened."
+    "ctx": "This argues the post-Christchurch gun laws punished law-abiding owners — farmers and sport shooters — without stopping criminals, and should be loosened. The stake is whether the ban targets the right people."
   },
   {
     "id": "nz20a",
@@ -1874,7 +1879,7 @@ const BANK = [
       "nzf": -0.5,
       "tpm": 1
     },
-    "ctx": "This treats abortion as a settled right whose access should be protected. NZ decriminalised abortion in 2020."
+    "ctx": "This treats abortion — decriminalised and made a health matter in 2020 — as a settled right whose access should be protected. The stake is securing abortion access."
   },
   {
     "id": "nz20b",
@@ -1893,7 +1898,7 @@ const BANK = [
       "nzf": 0.5,
       "tpm": -1
     },
-    "ctx": "This argues abortion ends a human life and the current law is too permissive."
+    "ctx": "This argues abortion ends a human life and the current law is too permissive. The stake is the moral status of the unborn."
   },
   {
     "id": "nz21a",
@@ -1912,7 +1917,7 @@ const BANK = [
       "act": 1.5,
       "tpm": -0.5
     },
-    "ctx": "NZ legalised assisted dying for the terminally ill in 2021. This defends that as the right, compassionate choice."
+    "ctx": "New Zealand legalised assisted dying for the terminally ill in 2021, after a public referendum. This defends that as the right, compassionate choice. The stake is control over one's own death."
   },
   {
     "id": "nz21b",
@@ -1931,7 +1936,7 @@ const BANK = [
       "act": -1.5,
       "tpm": 0.5
     },
-    "ctx": "This argues assisted dying pressures the vulnerable and crosses a line society shouldn't cross."
+    "ctx": "This argues assisted dying pressures the vulnerable and crosses a line society shouldn't cross. The stake is whether the safeguards protect the vulnerable."
   },
   {
     "id": "nz22a",
@@ -1951,7 +1956,7 @@ const BANK = [
       "nzf": -1.5,
       "tpm": 1.5
     },
-    "ctx": "This supports treating drug use as a health issue and legalising cannabis."
+    "ctx": "This supports treating drug use as a health issue and legalising cannabis — which New Zealanders narrowly rejected in a 2020 referendum. The stake is whether prohibition or regulation better handles cannabis."
   },
   {
     "id": "nz22b",
@@ -1971,7 +1976,7 @@ const BANK = [
       "nzf": 1.5,
       "tpm": -1.5
     },
-    "ctx": "This argues softening drug laws fuels addiction and harm and should be reversed."
+    "ctx": "This argues softening drug laws fuels addiction and harm and should be reversed. The stake is whether easing drug laws helps or hurts."
   },
   {
     "id": "nz23a",
@@ -1990,7 +1995,7 @@ const BANK = [
       "nzf": 0.5,
       "tpm": -0.5
     },
-    "ctx": "This supports taking a harder line on China (a major power) even at the cost of trade."
+    "ctx": "This supports taking a harder line on China — a major trading partner but a strategic concern — even at the cost of trade. The stake is security versus economic dependence."
   },
   {
     "id": "nz23b",
@@ -2009,7 +2014,7 @@ const BANK = [
       "nzf": -0.5,
       "tpm": 0.5
     },
-    "ctx": "This argues New Zealand's prosperity depends on trade with China and confrontation would be reckless."
+    "ctx": "This argues New Zealand's prosperity depends on trade with China, its largest market for dairy and other exports, so confrontation would be reckless. The stake is standing firm versus protecting trade."
   },
   {
     "id": "nz24a",
@@ -2029,7 +2034,7 @@ const BANK = [
       "nzf": 0.5,
       "tpm": -1.5
     },
-    "ctx": "This supports higher defence spending and aligning more with allies, such as the AUKUS security pact."
+    "ctx": "This supports higher defence spending and aligning more closely with allies, such as the AUKUS security pact. The stake is whether New Zealand should shed some of its independent, nuclear-free stance."
   },
   {
     "id": "nz24b",
@@ -2049,7 +2054,7 @@ const BANK = [
       "nzf": -0.5,
       "tpm": 1.5
     },
-    "ctx": "This argues NZ should stay independent and nuclear-free rather than be pulled into a military bloc."
+    "ctx": "This argues New Zealand should stay independent and nuclear-free — a proud national position since the 1980s — rather than be pulled into a military bloc against China. The stake is independence versus alliance."
   },
   {
     "id": "nz25a",
@@ -2069,7 +2074,7 @@ const BANK = [
       "tpm": 1.5,
       "g": 0
     },
-    "ctx": "This puts protecting nature ahead of new mining and development."
+    "ctx": "This puts protecting nature ahead of new mining and development, safeguarding New Zealand's 'clean, green' environment. The stake is conservation versus resource development."
   },
   {
     "id": "nz25b",
@@ -2089,7 +2094,7 @@ const BANK = [
       "tpm": -1.5,
       "g": 0
     },
-    "ctx": "This argues endless environmental objections block the projects New Zealand needs."
+    "ctx": "This argues endless environmental objections are strangling the projects New Zealand needs. The stake is whether green rules protect nature or block growth."
   },
   {
     "id": "nz26a",
@@ -2109,7 +2114,7 @@ const BANK = [
       "tpm": 1.5,
       "g": 0
     },
-    "ctx": "This supports the government stepping in with price controls to ease the cost of living."
+    "ctx": "This supports the government intervening with price controls to ease a sharp cost-of-living squeeze. The stake is how far the state should intervene in prices."
   },
   {
     "id": "nz26b",
@@ -2129,7 +2134,7 @@ const BANK = [
       "tpm": -1.5,
       "g": 0
     },
-    "ctx": "This argues price controls just cause shortages and don't fix the real problem."
+    "ctx": "This argues price controls just cause shortages and don't fix the underlying causes. The stake is whether intervention helps or worsens the cost of living."
   },
   {
     "id": "nz27a",
@@ -2148,7 +2153,7 @@ const BANK = [
       "nzf": 2,
       "tpm": -0.5
     },
-    "ctx": "This supports direct democracy: putting major decisions to the public in binding referendums."
+    "ctx": "This supports direct democracy: putting major decisions to the public in binding referendums, which New Zealand uses occasionally. The stake is whether big choices belong to voters or representatives."
   },
   {
     "id": "nz27b",
@@ -2167,7 +2172,7 @@ const BANK = [
       "nzf": -2,
       "tpm": 0.5
     },
-    "ctx": "This argues referendums reduce complex issues to slogans and are easily hijacked by populists."
+    "ctx": "This argues referendums reduce complex issues to slogans and are easily hijacked by populists. The stake is whether some decisions are too complex for a public vote."
   },
   {
     "id": "nz28a",
@@ -2187,7 +2192,7 @@ const BANK = [
       "tpm": 1,
       "g": 0
     },
-    "ctx": "RNZ and TVNZ are New Zealand's public media. This argues they are worth their funding and must stay independent."
+    "ctx": "RNZ and TVNZ are New Zealand's public media. This argues they are worth their funding and must stay independent. The stake is the value and independence of public broadcasting."
   },
   {
     "id": "nz28b",
@@ -2207,7 +2212,7 @@ const BANK = [
       "tpm": -1,
       "g": 0
     },
-    "ctx": "This argues public broadcasters are biased and bloated and their funding should be cut."
+    "ctx": "This argues public broadcasters are biased and bloated and their funding should be cut. The stake is whether public media deserves its funding."
   },
   {
     "id": "nz29a",
@@ -2226,7 +2231,7 @@ const BANK = [
       "nzf": 2,
       "tpm": -1
     },
-    "ctx": "This argues immigrants should adapt to New Zealand's culture rather than the country adapting to them."
+    "ctx": "This argues immigrants should adapt to New Zealand culture rather than the country adapting to them. The stake is how much cultural conformity to expect of newcomers."
   },
   {
     "id": "nz29b",
@@ -2245,7 +2250,7 @@ const BANK = [
       "nzf": -2,
       "tpm": 1
     },
-    "ctx": "This argues a living culture is always a blend, so demanding assimilation impoverishes New Zealand."
+    "ctx": "This argues a living culture is always a blend, so demanding assimilation impoverishes New Zealand. The stake is integration versus multiculturalism."
   },
   {
     "id": "nz30a",
@@ -2265,7 +2270,7 @@ const BANK = [
       "nzf": 2,
       "tpm": -1
     },
-    "ctx": "This argues parents should have more control over what schools teach their children about gender and identity."
+    "ctx": "This argues parents should have more control over what schools teach their children about gender and identity. The stake is who controls sensitive parts of the curriculum."
   },
   {
     "id": "nz30b",
@@ -2285,7 +2290,7 @@ const BANK = [
       "nzf": -2,
       "tpm": 1
     },
-    "ctx": "This argues the curriculum should be set by educators and evidence, not by a parental veto over inclusion."
+    "ctx": "This argues the curriculum should be set by educators and evidence, not a parental veto over inclusive teaching. The stake is parental authority versus professional education."
   },
   {
     "id": "nz31a",
@@ -2305,7 +2310,7 @@ const BANK = [
       "nzf": -0.5,
       "tpm": -0.5
     },
-    "ctx": "This supports free trade as having made New Zealand richer."
+    "ctx": "This supports free trade as having made New Zealand, a small trading nation reliant on exports, richer. The stake is the value of economic openness."
   },
   {
     "id": "nz31b",
@@ -2325,7 +2330,7 @@ const BANK = [
       "nzf": 0.5,
       "tpm": 0.5
     },
-    "ctx": "This argues free trade left New Zealand exposed, dependent, and with communities left behind."
+    "ctx": "This argues free trade left New Zealand exposed and dependent, with communities left behind. The stake is who globalisation left behind."
   },
   {
     "id": "nz32a",
@@ -2344,7 +2349,7 @@ const BANK = [
       "tpm": 2,
       "g": 0
     },
-    "ctx": "This argues the unemployed are treated with too much suspicion and the safety net should be stronger."
+    "ctx": "This argues the unemployed are treated with too much suspicion and the safety net should be stronger. The stake is how generous and accessible welfare should be."
   },
   {
     "id": "nz32b",
@@ -2363,7 +2368,7 @@ const BANK = [
       "tpm": -2,
       "g": 0
     },
-    "ctx": "This argues welfare can trap people, and sanctions protect the taxpayers who fund it."
+    "ctx": "This argues welfare can trap people, and sanctions protect the taxpayers who fund it. The stake is whether conditions on aid help or punish recipients."
   },
   {
     "id": "nz33a",
@@ -2383,7 +2388,7 @@ const BANK = [
       "nzf": 2,
       "tpm": -1
     },
-    "ctx": "This argues New Zealanders should be able to express national pride without being accused of racism."
+    "ctx": "This argues New Zealanders should be able to express national pride without being accused of racism. The stake is the space for patriotism in a country reckoning with its colonial past."
   },
   {
     "id": "nz33b",
@@ -2403,7 +2408,7 @@ const BANK = [
       "nzf": -2,
       "tpm": 1
     },
-    "ctx": "This argues uncritical national pride glosses over colonisation and its ongoing harms to Māori."
+    "ctx": "This argues uncritical national pride glosses over colonisation and its ongoing harms to Māori. The stake is patriotism versus honesty about the past."
   },
   {
     "id": "nz34a",
@@ -2422,7 +2427,7 @@ const BANK = [
       "act": 0.5,
       "nzf": 1.5
     },
-    "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
+    "ctx": "This is the conservative philosophy of tradition, associated with Edmund Burke: that long-standing customs and institutions hold the accumulated, hard-won wisdom of generations, so change should be gradual and cautious rather than sweeping away what works for untested ideas."
   },
   {
     "id": "nz34b",
@@ -2441,7 +2446,7 @@ const BANK = [
       "act": -0.5,
       "nzf": -1.5
     },
-    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
+    "ctx": "This is the progressive reply, in the spirit of Thomas Paine's line that 'the dead should not govern the living': that treating tradition as sacred just lets the prejudices of the past block overdue reform — as appeals to tradition once defended slavery and denying women the vote."
   },
   {
     "id": "nz35a",
@@ -2461,7 +2466,7 @@ const BANK = [
       "nzf": 0.5,
       "tpm": -1.5
     },
-    "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
+    "ctx": "This reflects a core right-leaning value: that a healthy society depends mainly on individuals taking responsibility for their own choices and lives, and that leaning too heavily on government breeds dependence and saps initiative."
   },
   {
     "id": "nz35b",
@@ -2481,7 +2486,7 @@ const BANK = [
       "nzf": -0.5,
       "tpm": 1.5
     },
-    "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
+    "ctx": "This reflects a core left-leaning value: that many hardships — poverty, poor health, joblessness — stem from unfair systems and circumstances beyond personal control, so blaming individuals lets the comfortable ignore problems they benefit from or could help fix."
   }
 ];
 
@@ -2562,6 +2567,6 @@ window.portalCode = 'nz';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>
-<script src="/engine.js?v=1.1.7"></script>
+<script src="/engine.js?v=1.1.9"></script>
 </body>
 </html>

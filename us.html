@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.7">
+<link rel="stylesheet" href="/style.css?v=1.1.9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,6 +181,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -653,6 +654,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -795,6 +797,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -908,6 +911,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1054,6 +1058,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1110,7 +1115,7 @@ const BANK = [
       "grn": 2,
       "g": 0
     },
-    "ctx": "This supports a government-guaranteed healthcare system (like 'Medicare for All') funded by taxes, so everyone is covered regardless of income."
+    "ctx": "This supports a single, government-guaranteed health system funded by taxes so everyone is covered — the idea behind 'Medicare for All', championed by Bernie Sanders. The US is the only rich country without universal coverage, and medical bills are a leading cause of personal bankruptcy. The stake is whether healthcare is a right or a product you buy."
   },
   {
     "id": "us1b",
@@ -1128,7 +1133,7 @@ const BANK = [
       "grn": -2,
       "g": 0
     },
-    "ctx": "This defends America's mainly private, insurance-based healthcare, warning that a government system would ration care and reduce choice."
+    "ctx": "This defends America's mainly private, insurance-based system, warning that a government takeover would mean rationing, waiting lists, and less choice and innovation. Supporters point to the US leading in new drugs and specialist care. The stake is whether the state or the market should run something as vital as health."
   },
   {
     "id": "us2a",
@@ -1147,7 +1152,7 @@ const BANK = [
       "grn": -2
     },
     "dec": true,
-    "ctx": "This is a hardline border position: treating illegal immigration as an invasion to be stopped with mass deportations and a border wall."
+    "ctx": "This is a hardline border stance: treating illegal immigration as an 'invasion' to be stopped by mass deportation and a border wall, as Donald Trump has pledged. Around 11 million people live in the US without legal status. The stake is how far a country should go to enforce its borders."
   },
   {
     "id": "us2b",
@@ -1166,7 +1171,7 @@ const BANK = [
       "grn": 2
     },
     "dec": true,
-    "ctx": "This is the pro-immigrant view: that immigrants, legal or not, are part of American society and mass deportation is cruel and against American ideals."
+    "ctx": "This is the pro-immigrant view: that undocumented people — many of whom have lived and worked in the US for decades and have citizen children — are part of American society, and that mass deportation would be cruel, costly, and economically damaging. The stake is how a nation of immigrants treats those without papers."
   },
   {
     "id": "us3a",
@@ -1184,7 +1189,7 @@ const BANK = [
       "lib": 0.5,
       "grn": 1.5
     },
-    "ctx": "This supports giving undocumented immigrants who have lived in the US for years a legal route to eventually become citizens."
+    "ctx": "This supports a 'path to citizenship': letting undocumented immigrants who have lived and worked in the US for years earn legal status. Reagan's 1986 amnesty did this for about three million people; the 'Dreamers' debate concerns those brought as children. The stake is whether long-settled residents should be legalised or removed."
   },
   {
     "id": "us3b",
@@ -1202,7 +1207,7 @@ const BANK = [
       "lib": -0.5,
       "grn": -1.5
     },
-    "ctx": "This opposes such an amnesty, arguing it rewards breaking the law and encourages more illegal immigration."
+    "ctx": "This opposes an amnesty, arguing that rewarding people who broke immigration law encourages more illegal crossings — a 'magnet' effect. Supporters want enforcement first. The stake is whether legalising the undocumented is fair to legal immigrants and a deterrent or an incentive."
   },
   {
     "id": "us4a",
@@ -1221,7 +1226,7 @@ const BANK = [
       "grn": 1.5
     },
     "dec": true,
-    "ctx": "This is the pro-choice position. Roe v. Wade was the 1973 Supreme Court ruling that protected abortion nationwide until it was overturned in 2022, returning the decision to each state."
+    "ctx": "This is the pro-choice position. Roe v. Wade was the 1973 Supreme Court ruling that made abortion a nationwide right until the Court overturned it in 2022, letting states ban it — which many did. The argument centres on a woman's control over her own body. The stake is who decides: the woman or the state."
   },
   {
     "id": "us4b",
@@ -1240,7 +1245,7 @@ const BANK = [
       "grn": -1.5
     },
     "dec": true,
-    "ctx": "This is the pro-life position: that abortion takes an innocent life, so states are right to restrict or ban it now that Roe v. Wade is gone."
+    "ctx": "This is the pro-life position: that a foetus is a human life, so abortion takes a life and states are right to restrict or ban it now that Roe v. Wade is gone. It is rooted in Catholic and evangelical teaching and drove the decades-long campaign against Roe. The stake is the moral status of the unborn."
   },
   {
     "id": "us5a",
@@ -1259,7 +1264,7 @@ const BANK = [
       "grn": -2
     },
     "dec": true,
-    "ctx": "The Second Amendment is the part of the US Constitution protecting the right to bear arms. This treats that right as almost absolute, opposing gun restrictions."
+    "ctx": "The Second Amendment protects the right to bear arms, and this treats it as nearly absolute. The US has more guns than people, and courts have expanded gun rights. Supporters see private firearms as both a constitutional right and a check on tyranny. The stake is where that right meets public safety."
   },
   {
     "id": "us5b",
@@ -1278,7 +1283,7 @@ const BANK = [
       "grn": 2
     },
     "dec": true,
-    "ctx": "This is the gun-control view: that America's high rate of gun deaths justifies real limits, such as banning assault-style weapons."
+    "ctx": "This is the gun-control case: that America's uniquely high rate of gun deaths and mass shootings — in schools, churches, and stores — demands real limits like banning assault-style rifles. Supporters point to far lower gun-death rates in countries with strict laws. The stake is how many restrictions the Second Amendment should allow."
   },
   {
     "id": "us6a",
@@ -1296,7 +1301,7 @@ const BANK = [
       "grn": 1.5
     },
     "dec": true,
-    "ctx": "This states that Donald Trump, the Republican president, endangers American democracy — a common view among his critics, especially after the January 6th Capitol riot."
+    "ctx": "This holds that Donald Trump endangers American democracy — a widespread view among his critics, sharpened by his attempt to overturn the 2020 election result and the January 6th 2021 Capitol riot. The stake is whether Trump is a normal politician or a threat to democratic norms."
   },
   {
     "id": "us6b",
@@ -1314,7 +1319,7 @@ const BANK = [
       "grn": -1.5
     },
     "dec": true,
-    "ctx": "This is the pro-Trump counter-view: that the real danger is a political and legal 'establishment' using the courts to go after Trump and his supporters."
+    "ctx": "This is the pro-Trump counter-view: that the real danger comes from a political and legal 'establishment' that has weaponised prosecutions and the courts against Trump and, by extension, his tens of millions of voters. The stake is whether the many criminal cases against Trump are justice or persecution."
   },
   {
     "id": "us7a",
@@ -1332,7 +1337,7 @@ const BANK = [
       "grn": 2,
       "g": 0
     },
-    "ctx": "This supports raising taxes substantially on the richest Americans and large corporations to fund public spending and reduce inequality."
+    "ctx": "This supports much higher taxes on the ultra-wealthy and big corporations to fund public services and curb inequality, echoing proposals from Sanders and Elizabeth Warren for wealth taxes. US inequality is near its highest in a century. The stake is whether the rich pay their 'fair share'."
   },
   {
     "id": "us7b",
@@ -1350,7 +1355,7 @@ const BANK = [
       "grn": -2,
       "g": 0
     },
-    "ctx": "This opposes higher taxes on the wealthy and business, arguing they discourage the investment and hiring that drive economic growth."
+    "ctx": "This opposes higher taxes on the wealthy and business, arguing they are the 'job creators' whose investment drives growth, and that heavy taxes push capital and companies offshore. It reflects supply-side ('trickle-down') economics. The stake is whether taxing the top helps or harms everyone else."
   },
   {
     "id": "us8a",
@@ -1368,7 +1373,7 @@ const BANK = [
       "grn": 2,
       "g": 0
     },
-    "ctx": "This treats climate change as an urgent crisis requiring major, even costly, changes to the US economy and energy system."
+    "ctx": "This treats climate change as a crisis requiring rapid, sweeping change to the US economy — the thinking behind the Green New Deal and the Biden-era clean-energy law. Scientists warn of worsening heat, fires, and storms. The stake is how much economic disruption is worth accepting to cut emissions."
   },
   {
     "id": "us8b",
@@ -1386,7 +1391,7 @@ const BANK = [
       "grn": -2,
       "g": 0
     },
-    "ctx": "This is climate-policy scepticism: the argument that climate fears are exaggerated to justify expensive government control over the economy."
+    "ctx": "This is climate-policy scepticism: that 'alarmism' is exaggerated and used to justify costly government control over energy and the economy, hitting ordinary families with higher bills for little gain while China keeps emitting. The stake is whether aggressive climate policy is prudent or self-harming."
   },
   {
     "id": "us9a",
@@ -1404,7 +1409,7 @@ const BANK = [
       "lib": -0.5,
       "grn": 2
     },
-    "ctx": "'Systemic racism' means discrimination built into laws and institutions, not just individual prejudice. This holds it is real and must be actively tackled."
+    "ctx": "'Systemic racism' means discrimination built into institutions — policing, housing, hiring — rather than just individual prejudice. This holds it is real and must be actively addressed, the view behind Black Lives Matter and DEI programs. The stake is whether racial inequality today is mainly structural."
   },
   {
     "id": "us9b",
@@ -1422,7 +1427,7 @@ const BANK = [
       "lib": 0.5,
       "grn": -2
     },
-    "ctx": "This pushes back on the systemic-racism idea, arguing the focus on it is itself divisive and makes people see everything through the lens of race."
+    "ctx": "This pushes back on the systemic-racism framework, arguing that constantly foregrounding race is itself divisive, teaches people to see everything through a racial lens, and downplays how far America has progressed. It reflects opposition to 'critical race theory' in schools. The stake is how to think about race in modern America."
   },
   {
     "id": "us10a",
@@ -1440,7 +1445,7 @@ const BANK = [
       "lib": -1,
       "grn": -2
     },
-    "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
+    "ctx": "This is a statement of racial supremacism — the belief that some races are innately more intelligent or capable than others. It was the ideological engine of Nazism and the Holocaust, and of systems like slavery and apartheid. Modern genetics finds more variation within any racial group than between them, and the idea has no scientific standing."
   },
   {
     "id": "us10b",
@@ -1458,7 +1463,7 @@ const BANK = [
       "lib": 1,
       "grn": 2
     },
-    "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
+    "ctx": "This states the principle of fundamental human equality: that no race is innately superior in intelligence or ability, and that racial hierarchies are discredited pseudo-science with a shameful history behind slavery and apartheid. It is the moral baseline of modern anti-discrimination law."
   },
   {
     "id": "us11a",
@@ -1476,7 +1481,7 @@ const BANK = [
       "lib": -0.5,
       "grn": -2
     },
-    "ctx": "This favours a tough-on-crime approach: more police and longer prison sentences rather than a softer response."
+    "ctx": "This favours a tough-on-crime approach — more police, longer sentences — echoing the 1990s 'three strikes' era. Supporters point to crime spikes and argue dangerous offenders belong behind bars. The US already jails a larger share of its people than any nation. The stake is whether more policing and prison make people safer."
   },
   {
     "id": "us11b",
@@ -1494,7 +1499,7 @@ const BANK = [
       "lib": 0.5,
       "grn": 2
     },
-    "ctx": "This argues the tough approach has failed — America jails more people than any country — and money should go to preventing crime instead."
+    "ctx": "This argues America's experiment with mass incarceration and aggressive policing failed — it locked up millions without proportionate safety gains — and that money should shift to prevention, mental health, and addiction. It reflects criminal-justice reform and 'defund' debates. The stake is what actually reduces crime."
   },
   {
     "id": "us12a",
@@ -1513,7 +1518,7 @@ const BANK = [
       "grn": 1.5
     },
     "dec": true,
-    "ctx": "This supports transgender rights: letting trans Americans change their legal gender and get 'gender-affirming' medical care."
+    "ctx": "This supports letting trans Americans change their legal gender and access gender-affirming care such as hormones. It is a flashpoint in US 'culture war' politics, especially over care for minors. The stake is how the law and medicine should treat gender identity."
   },
   {
     "id": "us12b",
@@ -1532,7 +1537,7 @@ const BANK = [
       "grn": -1.5
     },
     "dec": true,
-    "ctx": "This is the gender-critical view: that biological sex is real and that children in particular should not be steered toward gender transition."
+    "ctx": "This is the gender-critical view: that biological sex is real and fixed, and that children especially should not be steered toward medical transition, given debate over its long-term effects. Several US states have restricted youth care. The stake is the balance between trans rights and caution, particularly for minors."
   },
   {
     "id": "us13a",
@@ -1550,7 +1555,7 @@ const BANK = [
       "grn": 2,
       "g": 0
     },
-    "ctx": "The federal minimum wage is the legal lowest hourly pay, stuck at $7.25 since 2009. This supports raising it to at least $15."
+    "ctx": "The federal minimum wage has been stuck at $7.25 an hour since 2009. This supports raising it to at least $15, as the 'Fight for $15' movement demands, arguing full-time work should lift people out of poverty. The stake is whether a wage floor should guarantee a living."
   },
   {
     "id": "us13b",
@@ -1568,7 +1573,7 @@ const BANK = [
       "grn": -2,
       "g": 0
     },
-    "ctx": "This opposes a big minimum-wage rise, arguing it would force small businesses to close and cut entry-level jobs."
+    "ctx": "This opposes a large minimum-wage rise, arguing that forcing pay above what a job produces leads employers to cut hours, automate, or close — hurting the very low-skilled workers it aims to help. The stake is whether higher minimums lift workers or cost them jobs."
   },
   {
     "id": "us14a",
@@ -1586,7 +1591,7 @@ const BANK = [
       "grn": 2,
       "g": 0
     },
-    "ctx": "This supports cancelling much of Americans' student loan debt, which totals over a trillion dollars and burdens many graduates."
+    "ctx": "Americans owe over $1.7 trillion in student loans, and this supports cancelling much of it, as Biden attempted before the courts blocked parts. Supporters say the debt crushes a generation's ability to buy homes or start families. The stake is whether that debt is a public burden to relieve."
   },
   {
     "id": "us14b",
@@ -1604,7 +1609,7 @@ const BANK = [
       "grn": -2,
       "g": 0
     },
-    "ctx": "This opposes student-debt cancellation, arguing it is unfair to make people who never went to college pay for those who did."
+    "ctx": "This opposes student-debt cancellation as unfair: it makes taxpayers who never went to college, or who repaid their loans, foot the bill for those who borrowed — often for degrees that raise their earnings. The stake is who should bear the cost of higher education."
   },
   {
     "id": "us15a",
@@ -1622,7 +1627,7 @@ const BANK = [
       "grn": 1.5,
       "g": 0
     },
-    "ctx": "Social Security (pensions) and Medicare (healthcare for the elderly) are big federal programs. This supports expanding rather than cutting them."
+    "ctx": "Social Security (pensions) and Medicare (elderly healthcare) are huge, popular federal programs that tens of millions rely on. This supports expanding rather than cutting them. Both face long-term funding gaps as the population ages. The stake is how America keeps its promises to older citizens."
   },
   {
     "id": "us15b",
@@ -1640,7 +1645,7 @@ const BANK = [
       "grn": -1.5,
       "g": 0
     },
-    "ctx": "This warns that spending on these 'entitlement' programs is unaffordable and must be reined in to control the national debt."
+    "ctx": "This warns that spending on these 'entitlements', which dominate the federal budget, is driving an unsustainable national debt and must be reined in — for instance by raising the retirement age. The stake is balancing support for the elderly against long-term solvency."
   },
   {
     "id": "us16a",
@@ -1658,7 +1663,7 @@ const BANK = [
       "lib": -1.5,
       "grn": -1
     },
-    "ctx": "This supports continuing US military aid to Ukraine in its war against Russia's invasion, for as long as needed."
+    "ctx": "This supports continuing US military and financial aid to Ukraine against Russia's 2022 invasion, for as long as it takes. Supporters argue letting Russia win would embolden aggressors and endanger NATO allies. The stake is America's role in defending Ukraine."
   },
   {
     "id": "us16b",
@@ -1676,7 +1681,7 @@ const BANK = [
       "lib": 1.5,
       "grn": 1
     },
-    "ctx": "This opposes open-ended funding for the war, arguing the money should be spent on Americans at home instead."
+    "ctx": "This opposes open-ended funding for the war, an 'America First' argument that the tens of billions sent to Ukraine should be spent on Americans at home and that the US should not be the world's policeman. The stake is how far US interests extend abroad."
   },
   {
     "id": "us17a",
@@ -1693,7 +1698,7 @@ const BANK = [
       "lib": -0.5,
       "grn": -2
     },
-    "ctx": "This supports continued strong US military and financial backing for Israel, a long-standing American ally."
+    "ctx": "This supports continued strong US military and financial backing for Israel, a long-standing ally, especially amid its war in Gaza. Supporters cite shared democratic values and strategic interest. The stake is the depth of America's commitment to Israel."
   },
   {
     "id": "us17b",
@@ -1710,7 +1715,7 @@ const BANK = [
       "lib": 0.5,
       "grn": 2
     },
-    "ctx": "This wants the US to reduce, condition, or end its military aid to Israel, often over its conduct toward Palestinians."
+    "ctx": "This wants the US to condition or end military aid to Israel, a view that grew on the left over the civilian toll in Gaza. Supporters argue American weapons should not enable what they see as disproportionate harm. The stake is whether US support for Israel should be unconditional."
   },
   {
     "id": "us18a",
@@ -1728,7 +1733,7 @@ const BANK = [
       "lib": -2,
       "grn": 0.5
     },
-    "ctx": "Tariffs are taxes on imported goods. This supports using them to protect American factories and jobs, even if it raises prices for shoppers."
+    "ctx": "Tariffs are taxes on imported goods. This backs using them to protect American factories and jobs from cheaper foreign competition, even if it raises prices — the logic behind Trump's tariffs on China and others. The stake is whether protecting industry is worth costlier goods."
   },
   {
     "id": "us18b",
@@ -1746,7 +1751,7 @@ const BANK = [
       "lib": 2,
       "grn": -0.5
     },
-    "ctx": "This opposes tariffs, arguing they raise prices for American families and trigger damaging trade wars."
+    "ctx": "This opposes tariffs, arguing they are really a tax on American families through higher prices, and that they provoke retaliatory trade wars that hurt US farmers and exporters. Most economists share this view. The stake is whether tariffs help or harm the wider economy."
   },
   {
     "id": "us19a",
@@ -1764,7 +1769,7 @@ const BANK = [
       "lib": -1,
       "grn": -1.5
     },
-    "ctx": "This is Christian nationalism: the view that America is fundamentally a Christian country whose laws should reflect Christian values."
+    "ctx": "This is Christian nationalism: the belief that America is fundamentally a Christian nation whose laws should reflect Christian values, on issues from abortion to school prayer. Supporters see faith as the nation's moral foundation. The stake is the role of religion in American law."
   },
   {
     "id": "us19b",
@@ -1782,7 +1787,7 @@ const BANK = [
       "lib": 1,
       "grn": 1.5
     },
-    "ctx": "This defends the separation of church and state — a founding US principle — keeping religion out of law and government."
+    "ctx": "This defends the separation of church and state, a founding US principle in the First Amendment, keeping government neutral on religion so no faith is imposed on a diverse population. The stake is whether law should rest on religious doctrine or secular reasoning."
   },
   {
     "id": "us20a",
@@ -1800,7 +1805,7 @@ const BANK = [
       "lib": -0.5,
       "grn": -1.5
     },
-    "ctx": "This argues that Islam clashes with American values. Supporters cite security and social concerns; critics call it religious prejudice."
+    "ctx": "This argues Islam clashes with American values on issues like free speech and women's rights — a view that fuelled support for measures like Trump's 2017 'travel ban'. Critics call it prejudice against a diverse faith of millions of Americans. The stake is whether the concern is about security or bigotry."
   },
   {
     "id": "us20b",
@@ -1818,7 +1823,7 @@ const BANK = [
       "lib": 0.5,
       "grn": 1.5
     },
-    "ctx": "This holds that Muslim Americans are full and equal citizens whose religion deserves the same respect as any other."
+    "ctx": "This holds that Muslim Americans are full and equal citizens whose faith deserves the same respect and protection as any other under the Constitution. The stake is religious equality versus singling out one faith."
   },
   {
     "id": "us21a",
@@ -1836,7 +1841,7 @@ const BANK = [
       "lib": 1,
       "grn": -1
     },
-    "ctx": "'Cancel culture' refers to people losing jobs or being shamed for their opinions. This argues free speech is being suppressed, especially on campuses."
+    "ctx": "'Cancel culture' refers to people losing jobs or being publicly shamed over their opinions, especially on campuses. This argues free speech is genuinely under threat from this and from ideological conformity. Supporters span left and right libertarians. The stake is whether open debate is being chilled."
   },
   {
     "id": "us21b",
@@ -1854,7 +1859,7 @@ const BANK = [
       "lib": -0.5,
       "grn": 1
     },
-    "ctx": "This argues the free-speech alarm is overblown, and is really cover for people who want to say bigoted things without facing criticism."
+    "ctx": "This argues the free-speech panic is overblown and often a shield for people who want to voice bigotry without criticism — that facing social consequences for what you say is not censorship. The stake is the line between free speech and accountability for it."
   },
   {
     "id": "us22a",
@@ -1872,7 +1877,7 @@ const BANK = [
       "lib": 0.5,
       "grn": -2
     },
-    "ctx": "DEI stands for Diversity, Equity, and Inclusion — workplace programs to promote underrepresented groups. This argues they have gone too far and should be scrapped."
+    "ctx": "DEI — Diversity, Equity, and Inclusion — refers to workplace and campus programs to boost underrepresented groups. This argues they have overreached, become box-ticking or ideological, and should be scrapped, as several states and companies have begun doing. The stake is whether such programs fix bias or create it."
   },
   {
     "id": "us22b",
@@ -1890,7 +1895,7 @@ const BANK = [
       "lib": -0.5,
       "grn": 2
     },
-    "ctx": "This defends DEI programs, arguing they exist because discrimination is real and that ending them mainly protects those already in power."
+    "ctx": "This defends DEI as a response to real, documented discrimination in hiring and promotion, arguing that scrapping it mainly protects those who already hold advantages. The stake is whether deliberate inclusion efforts are fair correction or unfair preference."
   },
   {
     "id": "us23a",
@@ -1908,7 +1913,7 @@ const BANK = [
       "lib": 2,
       "grn": 1.5
     },
-    "ctx": "This supports legalising marijuana across the country and treating drug use as a health matter rather than a crime."
+    "ctx": "This supports legalising marijuana nationwide — already legal in many states — and treating drug use as a health issue, not a crime, to cut the harms of the 'war on drugs' and mass incarceration. The stake is whether prohibition or regulation better handles drugs."
   },
   {
     "id": "us23b",
@@ -1926,7 +1931,7 @@ const BANK = [
       "lib": -2,
       "grn": -1.5
     },
-    "ctx": "This opposes loosening drug laws, arguing it has fuelled addiction and public disorder and should be reversed."
+    "ctx": "This argues loosening drug laws has fuelled addiction, homelessness, and public disorder — pointing to open-air drug scenes in some liberal cities — and should be reversed. The stake is whether a permissive approach helps users or worsens the crisis."
   },
   {
     "id": "us24a",
@@ -1944,7 +1949,7 @@ const BANK = [
       "lib": 1.5,
       "grn": 0.5
     },
-    "ctx": "'Medically assisted death' lets terminally ill adults choose to end their lives with medical help. This supports making it a legal right."
+    "ctx": "'Medically assisted death' lets terminally ill adults end their lives with a doctor's help, legal in states like Oregon and California under strict rules. This supports it as a compassionate right over one's own death. The stake is control over the end of life."
   },
   {
     "id": "us24b",
@@ -1962,7 +1967,7 @@ const BANK = [
       "lib": -1,
       "grn": -0.5
     },
-    "ctx": "This opposes assisted dying, warning it could pressure vulnerable or disabled people and crosses a moral line."
+    "ctx": "This opposes assisted dying, warning it can pressure the elderly, disabled, or depressed toward death and crosses a line by involving doctors in ending life. The stake is whether the right to die risks the vulnerable being pushed toward it."
   },
   {
     "id": "us25a",
@@ -1980,7 +1985,7 @@ const BANK = [
       "grn": 2,
       "g": 0
     },
-    "ctx": "This puts protecting the environment ahead of expanding fossil fuels like oil, gas, and coal."
+    "ctx": "This puts protecting the environment ahead of expanding oil, gas, and coal — favouring limits on drilling and pipelines to cut emissions and safeguard land and water. The stake is the balance between conservation and fossil-fuel production."
   },
   {
     "id": "us25b",
@@ -1998,7 +2003,7 @@ const BANK = [
       "grn": -2,
       "g": 0
     },
-    "ctx": "This prioritises cheap, home-produced energy and energy independence over restrictions on drilling and pipelines."
+    "ctx": "This prioritises cheap, home-produced energy and 'energy independence' over environmental restrictions, arguing US oil and gas keep prices low and reduce reliance on hostile states. The stake is whether energy security or climate should drive policy."
   },
   {
     "id": "us26a",
@@ -2016,7 +2021,7 @@ const BANK = [
       "grn": 1.5,
       "g": 0
     },
-    "ctx": "This supports strong government action on housing costs, including rent control (legal caps on how much rents can rise)."
+    "ctx": "This supports strong government action on housing costs, including rent control (legal caps on rent rises), as cities like New York use. Supporters say the market has failed ordinary renters. The stake is how far government should intervene in housing."
   },
   {
     "id": "us26b",
@@ -2034,7 +2039,7 @@ const BANK = [
       "grn": -1.5,
       "g": 0
     },
-    "ctx": "This argues rent control and mandates make housing shortages worse, and that cutting regulations to let builders build is the fix."
+    "ctx": "This argues rent control and building mandates backfire — discouraging construction and worsening shortages — and that cutting zoning and permit red tape to let builders build is the real fix. Most economists are sceptical of rent control. The stake is whether regulation or deregulation solves the shortage."
   },
   {
     "id": "us27a",
@@ -2051,7 +2056,7 @@ const BANK = [
       "rep": -2,
       "grn": 1.5
     },
-    "ctx": "The Electoral College is the system that can let a candidate win the presidency without winning the most votes nationally. This wants it abolished for a national popular vote."
+    "ctx": "The Electoral College can hand the presidency to a candidate who loses the national popular vote, as happened in 2000 and 2016 (both won by Republicans). This wants it abolished so the most-voted candidate wins. The stake is how America chooses its president."
   },
   {
     "id": "us27b",
@@ -2068,7 +2073,7 @@ const BANK = [
       "rep": 2,
       "grn": -1.5
     },
-    "ctx": "This defends the Electoral College, arguing it protects the influence of smaller states in presidential elections."
+    "ctx": "This defends the Electoral College, arguing it forces candidates to build broad geographic coalitions and protects smaller and rural states from being ignored by big-city majorities. The stake is whether the system unfairly distorts votes or usefully balances regions."
   },
   {
     "id": "us28a",
@@ -2086,7 +2091,7 @@ const BANK = [
       "lib": -1,
       "grn": 1.5
     },
-    "ctx": "This supports federal gun-safety rules: background checks for all buyers and 'red-flag' laws that let courts remove guns from dangerous people."
+    "ctx": "This supports federal gun-safety measures: universal background checks on buyers and 'red-flag' laws letting courts temporarily remove guns from people deemed dangerous. Polls show broad support even among gun owners. The stake is finding limits compatible with gun rights."
   },
   {
     "id": "us28b",
@@ -2104,7 +2109,7 @@ const BANK = [
       "lib": 1,
       "grn": -1.5
     },
-    "ctx": "This opposes those measures, seeing them as a step toward eventually confiscating law-abiding people's guns."
+    "ctx": "This opposes those measures as a 'slippery slope' toward registration and eventual confiscation, arguing checks and red-flag laws burden the law-abiding without stopping criminals. The stake is whether such rules are common sense or the thin end of a wedge."
   },
   {
     "id": "us29a",
@@ -2121,7 +2126,7 @@ const BANK = [
       "grn": 1.5,
       "g": 0
     },
-    "ctx": "This supports breaking up and tightly regulating giant technology companies and other monopolies to curb their power."
+    "ctx": "This supports breaking up and tightly regulating 'Big Tech' giants like Google, Amazon, and Meta, and other monopolies, on the grounds that their dominance harms competition, privacy, and democracy. It has support on both left and populist right. The stake is curbing corporate power."
   },
   {
     "id": "us29b",
@@ -2138,7 +2143,7 @@ const BANK = [
       "grn": -1.5,
       "g": 0
     },
-    "ctx": "This argues heavy regulation of successful companies stifles the innovation that made the US economy strong."
+    "ctx": "This argues heavy-handed regulation of successful companies kills the innovation and dynamism that made America's economy the world's most powerful, and that today's giants can be displaced by tomorrow's startups. The stake is whether antitrust action protects or stifles the economy."
   },
   {
     "id": "us30a",
@@ -2156,7 +2161,7 @@ const BANK = [
       "lib": 1,
       "grn": 2
     },
-    "ctx": "The US has by far the world's largest military budget. This argues it spends too much and should cut defense spending."
+    "ctx": "The US spends more on its military than the next several countries combined. This argues that is excessive and the defense budget should be cut to fund domestic needs. The stake is whether America over-invests in its armed forces."
   },
   {
     "id": "us30b",
@@ -2174,7 +2179,7 @@ const BANK = [
       "lib": -1,
       "grn": -2
     },
-    "ctx": "This defends high military spending as what keeps America and its allies safe."
+    "ctx": "This defends high military spending as what underwrites American and allied security and deters rivals like China and Russia. Supporters see strength as the guarantor of peace. The stake is whether that spending buys safety or crowds out other priorities."
   },
   {
     "id": "us31a",
@@ -2191,7 +2196,7 @@ const BANK = [
       "rep": 2,
       "grn": -1.5
     },
-    "ctx": "This favours patriotic education: teaching children pride in America's history rather than focusing on its wrongs."
+    "ctx": "This favours patriotic education — teaching pride in America's founding and achievements rather than dwelling on its sins — the impulse behind Trump's '1776 Commission'. The stake is whether schools should build national pride or foreground historical wrongs."
   },
   {
     "id": "us31b",
@@ -2208,7 +2213,7 @@ const BANK = [
       "rep": -2,
       "grn": 1.5
     },
-    "ctx": "This supports teaching the darker parts of US history, like slavery, arguing that hiding them misleads students."
+    "ctx": "This supports teaching the hard parts of US history — slavery, segregation, treatment of Native Americans — arguing that hiding them, as fights over 'critical race theory' and banned books suggest, misleads students. The stake is honesty versus comfort in the classroom."
   },
   {
     "id": "us32a",
@@ -2226,7 +2231,7 @@ const BANK = [
       "lib": -0.5,
       "grn": -1.5
     },
-    "ctx": "Birthright citizenship means anyone born on US soil is automatically a citizen. This wants that ended."
+    "ctx": "Birthright citizenship — automatic citizenship for anyone born on US soil — comes from the 14th Amendment. This wants it ended, arguing it draws 'birth tourism' and rewards illegal entry. The stake is a change that would require altering or reinterpreting the Constitution."
   },
   {
     "id": "us32b",
@@ -2244,7 +2249,7 @@ const BANK = [
       "lib": 0.5,
       "grn": 1.5
     },
-    "ctx": "This defends birthright citizenship as a constitutional guarantee (the 14th Amendment) and a core American principle."
+    "ctx": "This defends birthright citizenship as a constitutional guarantee and a defining American principle that has helped integrate generations of immigrants. The stake is whether a core 14th-Amendment right should be preserved."
   },
   {
     "id": "us33a",
@@ -2262,7 +2267,7 @@ const BANK = [
       "grn": 2,
       "g": 0
     },
-    "ctx": "This argues the poor and unemployed face too many hurdles, and that welfare and support should be stronger and easier to get."
+    "ctx": "This argues the poor and unemployed face too many hurdles — paperwork, work tests, benefit cliffs — and that the safety net should be stronger and easier to access. It reflects support for expanded aid like the pandemic-era child tax credit. The stake is how generous and accessible welfare should be."
   },
   {
     "id": "us33b",
@@ -2280,7 +2285,7 @@ const BANK = [
       "grn": -2,
       "g": 0
     },
-    "ctx": "This argues welfare can trap people in dependency, and that work requirements protect the taxpayers who fund it."
+    "ctx": "This argues welfare can trap people in dependency and that work requirements, like those in the 1996 reform, protect the taxpayers who fund it and encourage self-reliance. The stake is whether conditions on aid help recipients or punish them."
   },
   {
     "id": "us34a",
@@ -2297,7 +2302,7 @@ const BANK = [
       "rep": 1.5,
       "grn": -1
     },
-    "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
+    "ctx": "This is the conservative philosophy of tradition, associated with Edmund Burke: that long-standing customs and institutions hold the accumulated, hard-won wisdom of generations, so change should be gradual and cautious rather than sweeping away what works for untested ideas."
   },
   {
     "id": "us34b",
@@ -2314,7 +2319,7 @@ const BANK = [
       "rep": -1.5,
       "grn": 1
     },
-    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
+    "ctx": "This is the progressive reply, in the spirit of Thomas Paine's line that 'the dead should not govern the living': that treating tradition as sacred just lets the prejudices of the past block overdue reform — as appeals to tradition once defended slavery and denying women the vote."
   },
   {
     "id": "us35a",
@@ -2332,7 +2337,7 @@ const BANK = [
       "lib": 1.5,
       "grn": -1.5
     },
-    "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
+    "ctx": "This reflects a core right-leaning value: that a healthy society depends mainly on individuals taking responsibility for their own choices and lives, and that leaning too heavily on government breeds dependence and saps initiative."
   },
   {
     "id": "us35b",
@@ -2350,7 +2355,7 @@ const BANK = [
       "lib": -1.5,
       "grn": 1.5
     },
-    "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
+    "ctx": "This reflects a core left-leaning value: that many hardships — poverty, poor health, joblessness — stem from unfair systems and circumstances beyond personal control, so blaming individuals lets the comfortable ignore problems they benefit from or could help fix."
   }
 ];
 
@@ -2391,6 +2396,6 @@ window.portalCode = 'us';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>
-<script src="/engine.js?v=1.1.7"></script>
+<script src="/engine.js?v=1.1.9"></script>
 </body>
 </html>

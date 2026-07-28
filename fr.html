@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.7">
+<link rel="stylesheet" href="/style.css?v=1.1.9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,6 +181,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -663,6 +664,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -805,6 +807,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -918,6 +921,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1064,6 +1068,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1104,283 +1109,283 @@
 const LOCAL_QUESTIONS = {
   "fr1a": {
     "q": "L’immigration en France est bien trop élevée et doit être drastiquement réduite.",
-    "ctx": "Cela affirme que l'immigration en France est bien trop élevée et doit être fortement réduite — une revendication centrale de la droite."
+    "ctx": "Cela affirme que l'immigration en France est bien trop élevée et doit être fortement réduite — un thème central du Rassemblement national de Marine Le Pen, désormais une force majeure. L'enjeu est le niveau de l'immigration."
   },
   "fr1b": {
     "q": "L’immigration est une richesse pour la France, qui a besoin de nouveaux arrivants pour son économie et son avenir.",
-    "ctx": "C'est la vision favorable à l'immigration : elle est une richesse et la France a besoin de nouveaux arrivants pour son économie et son avenir."
+    "ctx": "C'est la vision favorable à l'immigration : elle est une richesse et la France, vieillissante, a besoin de nouveaux arrivants pour son économie et son avenir. L'enjeu est sa valeur à long terme."
   },
   "fr2a": {
     "q": "Les étrangers qui commettent des délits doivent être expulsés systématiquement, sans exception.",
-    "ctx": "Cela soutient l'expulsion systématique des étrangers qui commettent des délits, sans exception."
+    "ctx": "Cela soutient l'expulsion systématique des étrangers qui commettent des délits, sans exception — une position sécuritaire dure. L'enjeu est la fermeté face aux situations individuelles."
   },
   "fr2b": {
     "q": "Les expulsions collectives et la double peine trahissent les valeurs de la République française.",
-    "ctx": "La « double peine », c'est emprisonner puis expulser un étranger. Cela affirme que les expulsions collectives trahissent les valeurs de la République."
+    "ctx": "La double peine, c'est emprisonner un étranger puis l'expulser. Cela affirme que les expulsions collectives et la double peine trahissent les valeurs républicaines de justice individuelle. L'enjeu est la sécurité face au principe républicain."
   },
   "fr3a": {
     "q": "La France devrait mettre fin à l’acquisition automatique de la nationalité par le droit du sol.",
-    "ctx": "Le droit du sol accorde automatiquement la nationalité à ceux qui naissent sur le sol français. Cela veut y mettre fin."
+    "ctx": "Le droit du sol accorde automatiquement la nationalité à ceux qui naissent sur le sol français. Cela veut y mettre fin, exigeant que la nationalité se mérite — une revendication ancienne de la droite. L'enjeu est la façon de devenir français."
   },
   "fr3b": {
     "q": "Être né et élevé en France, c’est être français; supprimer le droit du sol trahit la République.",
-    "ctx": "Cela affirme qu'être né et élevé en France, c'est être français, et que supprimer le droit du sol trahit la République."
+    "ctx": "Cela affirme qu'être né et élevé en France, c'est être français, et que supprimer le droit du sol — principe depuis le XIXe siècle — trahit la République. L'enjeu est une conception inclusive ou restrictive de la nationalité."
   },
   "fr4a": {
     "q": "Le report de l’âge de la retraite à 64 ans était une réforme nécessaire.",
-    "ctx": "La France a reporté l'âge de la retraite à 64 ans lors d'une réforme controversée en 2023. Cela juge la réforme nécessaire."
+    "ctx": "En 2023, Macron a reporté l'âge de la retraite de 62 à 64 ans, déclenchant des mois de grèves et de manifestations massives. Cela juge la réforme d'une nécessité douloureuse pour financer les retraites. L'enjeu est une réforme économique très contestée."
   },
   "fr4b": {
     "q": "La réforme des retraites était une attaque brutale contre les travailleurs et doit être abrogée.",
-    "ctx": "Cela qualifie la réforme des retraites d'attaque brutale contre les travailleurs et demande son abrogation."
+    "ctx": "Cela qualifie la réforme des retraites d'attaque brutale contre les travailleurs, imposée sans vote du Parlement (via le 49.3), et en demande l'abrogation. L'enjeu est les droits des travailleurs face à l'équilibre budgétaire."
   },
   "fr5a": {
     "q": "La laïcité doit être appliquée strictement, y compris l’interdiction des signes religieux dans l’espace public.",
-    "ctx": "La laïcité est la stricte séparation française entre religion et vie publique. Cela veut l'appliquer fermement, y compris l'interdiction des signes religieux."
+    "ctx": "La laïcité est la séparation stricte à la française entre religion et vie publique, bien plus poussée qu'ailleurs — par exemple l'interdiction du voile à l'école. Cela veut l'appliquer fermement. L'enjeu est le modèle français de laïcité."
   },
   "fr5b": {
     "q": "La laïcité agressive est devenue un prétexte pour cibler les musulmans et contrôler la manière dont les gens s’habillent.",
-    "ctx": "Cela affirme que la laïcité agressive est devenue un prétexte pour cibler les musulmans et contrôler la façon dont les gens s'habillent."
+    "ctx": "Cela affirme que la laïcité agressive est devenue un prétexte pour cibler les musulmans — surtout la tenue des femmes — plutôt que de protéger la neutralité. L'enjeu est de savoir si la laïcité défend la liberté ou surveille les minorités."
   },
   "fr6a": {
     "q": "L’islam pose un problème spécifique à la République française et à ses valeurs.",
-    "ctx": "Cela affirme que l'islam pose un problème spécifique à la République et à ses valeurs."
+    "ctx": "Cela affirme que l'islam pose un problème spécifique à la République et à ses valeurs, thème récurrent après les attentats islamistes. Les critiques y voient la stigmatisation de millions de citoyens musulmans ordinaires. L'enjeu est une inquiétude légitime ou un préjugé."
   },
   "fr6b": {
     "q": "Les musulmans français sont des citoyens à part entière, et leur foi mérite le même respect que toute autre.",
-    "ctx": "Cela considère que les musulmans français sont des citoyens à part entière dont la foi mérite le même respect que toute autre."
+    "ctx": "Cela considère que les musulmans français sont des citoyens à part entière dont la foi mérite le même respect que toute autre. L'enjeu est l'égalité religieuse face à la stigmatisation d'une foi."
   },
   "fr7a": {
     "q": "Il y a un « grand remplacement » de la population française de souche en cours.",
-    "ctx": "Le « grand remplacement » est une théorie selon laquelle les Français de souche seraient délibérément remplacés par des immigrés. Cela affirme que c'est en cours."
+    "ctx": "Le « grand remplacement » est une théorie, popularisée par l'écrivain Renaud Camus, selon laquelle les Français de souche seraient délibérément remplacés par des immigrés. Cela affirme que c'est en cours. L'enjeu est une théorie du complot liée à des violences d'extrême droite."
   },
   "fr7b": {
     "q": "Le « grand remplacement » est une théorie du complot raciste sans aucun fondement.",
-    "ctx": "Cela qualifie le « grand remplacement » de théorie du complot raciste sans aucun fondement."
+    "ctx": "Cela qualifie le grand remplacement de théorie du complot raciste sans fondement, invoquée par des tueurs de masse. L'enjeu est le rejet d'une idée démentie et dangereuse."
   },
   "fr8a": {
     "q": "Certaines races ou certains peuples sont tout simplement plus doués ou capables que d’autres.",
-    "ctx": "Cela prétend que certaines races ou certains peuples sont par nature plus doués ou capables que d'autres."
+    "ctx": "C'est le suprémacisme racial — l'idée que certaines races ou certains peuples sont par nature plus doués que d'autres. Ce fut le moteur du nazisme et du colonialisme, et la génétique moderne n'y trouve aucun fondement. L'enjeu est une idée discréditée et dangereuse."
   },
   "fr8b": {
     "q": "Aucune race n’est supérieure à une autre; cette idée est une pseudo-science à l’histoire honteuse.",
-    "ctx": "C'est le principe de l'égalité humaine : aucune race n'est supérieure, et cette idée est une pseudo-science discréditée."
+    "ctx": "Cela pose le principe de l'égalité humaine : aucune race n'est supérieure, et cette idée est une pseudo-science discréditée à l'histoire honteuse, derrière l'esclavage et la colonisation."
   },
   "fr9a": {
     "q": "La France devrait rétablir l’impôt sur la fortune (ISF) sur les plus riches.",
-    "ctx": "L'ISF était l'impôt français sur les grandes fortunes, supprimé sous Macron. Cela veut le rétablir pour les plus riches."
+    "ctx": "L'ISF était l'impôt français sur les grandes fortunes, supprimé par Macron en 2017. Cela veut le rétablir pour les plus riches, revendication clé de la gauche. L'enjeu est la taxation du patrimoine."
   },
   "fr9b": {
     "q": "L’ISF a fait fuir les capitaux et les entrepreneurs; le rétablir répéterait l’erreur.",
-    "ctx": "Cela affirme que l'ISF a fait fuir les capitaux et les entrepreneurs, et que le rétablir répéterait l'erreur."
+    "ctx": "Cela affirme que l'ISF a fait fuir les capitaux et les entrepreneurs avant sa suppression, et que le rétablir répéterait l'erreur. L'enjeu est de savoir si l'impôt rapporte ou fait fuir."
   },
   "fr10a": {
     "q": "Restaurer le pouvoir d’achat des Français ordinaires devrait être la priorité du gouvernement.",
-    "ctx": "Le pouvoir d'achat est une préoccupation politique majeure en France. Cela veut en faire la priorité du gouvernement."
+    "ctx": "Le pouvoir d'achat est régulièrement la première préoccupation des Français. Cela veut en faire la priorité du gouvernement. L'enjeu est le coût de la vie comme question politique centrale."
   },
   "fr10b": {
     "q": "Courir après le pouvoir d’achat à coups de subventions et de blocages des prix ne fait qu’alimenter la dette et l’inflation.",
-    "ctx": "Cela affirme que courir après le pouvoir d'achat à coups de subventions et de blocages des prix ne fait qu'alimenter la dette et l'inflation."
+    "ctx": "Cela affirme que courir après le pouvoir d'achat à coups de subventions et de blocages des prix ne fait qu'alimenter la dette et l'inflation sans traiter les causes. L'enjeu est l'efficacité de ces aides."
   },
   "fr11a": {
     "q": "Le nucléaire est propre et fiable, et la France devrait construire de nombreux nouveaux réacteurs.",
-    "ctx": "La France tire l'essentiel de son électricité du nucléaire. Cela le juge propre et fiable et veut de nombreux nouveaux réacteurs."
+    "ctx": "La France tire environ 70 % de son électricité du nucléaire, plus que tout grand pays. Cela le juge propre et fiable et veut de nombreux nouveaux réacteurs. L'enjeu est de miser encore sur le nucléaire."
   },
   "fr11b": {
     "q": "Le nucléaire est dangereux et lent, et la France devrait basculer résolument vers les énergies renouvelables.",
-    "ctx": "Cela juge le nucléaire dangereux et lent et veut que la France bascule résolument vers les énergies renouvelables."
+    "ctx": "Cela juge le nucléaire dangereux et lent à construire, et veut que la France bascule résolument vers les renouvelables. L'enjeu est nucléaire contre renouvelables."
   },
   "fr12a": {
     "q": "La France doit agir bien plus fortement pour le climat, même au prix de la croissance.",
-    "ctx": "Cela affirme que la France doit agir bien plus fortement pour le climat, même au prix de la croissance."
+    "ctx": "Cela affirme que la France doit agir bien plus fortement pour le climat, même au prix de la croissance. L'enjeu est l'ambition climatique face à l'économie."
   },
   "fr12b": {
     "q": "Les mesures écologiques punitives écrasent les agriculteurs et les travailleurs sans presque rien changer au climat mondial.",
-    "ctx": "Cela affirme que les mesures écologiques punitives écrasent les agriculteurs et les travailleurs sans presque rien changer au climat mondial."
+    "ctx": "Cela affirme que les mesures écologiques punitives écrasent agriculteurs et travailleurs — comme la hausse de la taxe sur le carburant a déclenché les « gilets jaunes » — pour un effet minime sur le climat mondial. L'enjeu est qui paie la politique climatique."
   },
   "fr13a": {
     "q": "L’avenir de la France passe par une Union européenne plus forte et plus intégrée.",
-    "ctx": "Cela voit l'avenir de la France dans une Union européenne plus forte et plus intégrée."
+    "ctx": "Cela voit l'avenir de la France dans une Union européenne plus forte et plus intégrée, pilier du projet de Macron. L'enjeu est l'approfondissement de l'intégration européenne."
   },
   "fr13b": {
     "q": "Bruxelles dicte déjà trop de choses à la France, et la souveraineté doit revenir au pays.",
-    "ctx": "Cela affirme que Bruxelles dicte déjà trop de choses à la France et que la souveraineté doit revenir au pays."
+    "ctx": "Cela affirme que Bruxelles dicte déjà trop de choses à la France et que la souveraineté doit revenir au pays — vision eurosceptique du RN et d'une partie de la gauche. L'enjeu est la souveraineté face à l'UE."
   },
   "fr14a": {
     "q": "La police a besoin de plus de moyens et de soutien, et les critiques à son encontre sont allées trop loin.",
-    "ctx": "Cela affirme que la police a besoin de plus de moyens et de soutien, et que les critiques à son égard sont allées trop loin."
+    "ctx": "Cela affirme que la police a besoin de plus de moyens et de soutien et que les critiques sont allées trop loin, position forte à droite après les émeutes. L'enjeu est le soutien à la police face à son contrôle."
   },
   "fr14b": {
     "q": "Les violences policières dans les banlieues sont un vrai scandale que l’État continue de couvrir.",
-    "ctx": "Les banlieues sont les périphéries souvent défavorisées. Cela affirme que les violences policières y sont un vrai scandale que l'État continue de couvrir."
+    "ctx": "Les banlieues sont les périphéries souvent défavorisées, où les rapports avec la police sont tendus. Cela affirme que les violences policières y sont un vrai scandale que l'État couvre, comme la mort du jeune Nahel en 2023 l'a montré. L'enjeu est la responsabilité de la police."
   },
   "fr15a": {
     "q": "Les peines sont trop clémentes et les criminels dangereux devraient rester bien plus longtemps en prison.",
-    "ctx": "Cela affirme que les peines sont trop clémentes et que les criminels dangereux devraient rester bien plus longtemps en prison."
+    "ctx": "Cela affirme que les peines sont trop clémentes et que les criminels dangereux devraient rester bien plus longtemps en prison. L'enjeu est de savoir si des peines plus dures améliorent la sécurité."
   },
   "fr15b": {
     "q": "Des peines toujours plus dures n’ont jamais fait baisser la délinquance; seules la prévention et la réinsertion le font.",
-    "ctx": "Cela affirme que des peines toujours plus dures n'ont jamais fait baisser la délinquance, et que seules la prévention et la réinsertion le font."
+    "ctx": "Cela affirme que des peines toujours plus dures n'ont jamais fait baisser la délinquance, et que seules la prévention et la réinsertion le font. L'enjeu est ce qui réduit vraiment la délinquance."
   },
   "fr16a": {
     "q": "Le salaire minimum (SMIC) devrait être nettement augmenté.",
-    "ctx": "Le SMIC est le salaire minimum français. Cela veut l'augmenter nettement."
+    "ctx": "Le SMIC est le salaire minimum français, parmi les plus élevés d'Europe. Cela veut l'augmenter nettement pour protéger les bas salaires. L'enjeu est un plancher de salaire face aux coûts des employeurs."
   },
   "fr16b": {
     "q": "Augmenter le SMIC trop vite ne fait que détruire des emplois pour les jeunes et les moins qualifiés.",
-    "ctx": "Cela affirme qu'augmenter le SMIC trop vite détruit des emplois pour les jeunes et les moins qualifiés."
+    "ctx": "Cela affirme qu'augmenter le SMIC trop vite détruit des emplois pour les jeunes et les moins qualifiés. L'enjeu est de savoir si un SMIC plus haut aide ou détruit des emplois."
   },
   "fr17a": {
     "q": "Les 35 heures doivent être préservées; la France ne doit pas travailler plus pour le même salaire.",
-    "ctx": "La durée légale du travail en France est de 35 heures. Cela veut la préserver et refuse de travailler plus pour le même salaire."
+    "ctx": "La durée légale du travail est de 35 heures, instaurée en 2000 et devenue un marqueur identitaire. Cela veut la préserver et refuse de travailler plus pour le même salaire. L'enjeu est un symbole du modèle social français."
   },
   "fr17b": {
     "q": "Les 35 heures ont rendu la France moins compétitive, et chacun devrait être libre de travailler et gagner plus.",
-    "ctx": "Cela affirme que les 35 heures ont rendu la France moins compétitive et que chacun devrait être libre de travailler et gagner plus."
+    "ctx": "Cela affirme que les 35 heures ont rendu la France moins compétitive, et que chacun devrait être libre de travailler et gagner plus. L'enjeu est la compétitivité face au temps de travail protégé."
   },
   "fr18a": {
     "q": "La France sur-réglemente et sur-taxe les entreprises; l’État devrait s’effacer.",
-    "ctx": "Cela affirme que la France sur-réglemente et sur-taxe les entreprises, et que l'État devrait s'effacer."
+    "ctx": "Cela affirme que la France sur-réglemente et sur-taxe les entreprises — avec l'une des dépenses publiques les plus élevées de l'UE — et que l'État devrait s'effacer. L'enjeu est de savoir si un État plus léger relancerait l'économie."
   },
   "fr18b": {
     "q": "La déréglementation ne fait que donner plus de pouvoir aux grandes entreprises au détriment des travailleurs et de l’environnement.",
-    "ctx": "Cela affirme que la déréglementation ne fait que donner plus de pouvoir aux grandes entreprises au détriment des travailleurs et de l'environnement."
+    "ctx": "Cela affirme que la déréglementation ne fait que donner plus de pouvoir aux grandes entreprises au détriment des travailleurs et de l'environnement. L'enjeu est de savoir si les règles protègent ou pèsent."
   },
   "fr19a": {
     "q": "Il est temps d’arrêter de diaboliser le Rassemblement national; c’est désormais un parti comme les autres.",
-    "ctx": "Le Rassemblement national (RN) est le parti d'extrême droite de Marine Le Pen. Cela affirme qu'il devrait désormais être traité comme un parti ordinaire."
+    "ctx": "Le Rassemblement national (RN) est le parti d'extrême droite de Marine Le Pen, longtemps tenu à l'écart du pouvoir par un « front républicain ». Cela affirme qu'il devrait désormais être traité comme un parti ordinaire. L'enjeu est la normalisation de l'extrême droite."
   },
   "fr19b": {
     "q": "L’extrême droite reste un danger pour la République et le « front républicain » contre elle doit tenir.",
-    "ctx": "Le « front républicain », c'est l'union des autres partis pour barrer la route au RN. Cela affirme que l'extrême droite reste un danger et que ce front doit tenir."
+    "ctx": "Le « front républicain », c'est l'union des autres partis pour barrer la route au RN. Cela affirme que l'extrême droite reste un danger pour la République et que ce front doit tenir. L'enjeu est le cordon sanitaire autour du RN."
   },
   "fr20a": {
     "q": "Inscrire l’avortement dans la Constitution était une bonne chose.",
-    "ctx": "En 2024, la France a inscrit le droit à l'avortement dans sa Constitution. Cela juge que c'était une bonne chose."
+    "ctx": "En 2024, la France est devenue le premier pays à inscrire le droit à l'avortement dans sa Constitution. Cela juge que c'était une bonne chose, le protégeant durablement. L'enjeu est d'ancrer l'avortement comme droit fondamental."
   },
   "fr20b": {
     "q": "Inscrire l’avortement dans la Constitution était un coup idéologique qui a étouffé un débat légitime.",
-    "ctx": "Cela affirme qu'inscrire l'avortement dans la Constitution était un coup idéologique qui a étouffé un débat légitime."
+    "ctx": "Cela affirme qu'inscrire l'avortement dans la Constitution était un coup idéologique qui a étouffé un débat légitime. L'enjeu est de savoir si le changement était nécessaire ou politique."
   },
   "fr21a": {
     "q": "La France a eu raison de légaliser l’aide à mourir pour les malades en fin de vie.",
-    "ctx": "Cela soutient que la France légalise l'aide à mourir pour les malades en fin de vie."
+    "ctx": "La France a récemment avancé vers la légalisation de l'aide à mourir pour les malades en fin de vie. Cela la soutient comme un droit de compassion. L'enjeu est la maîtrise de la fin de vie."
   },
   "fr21b": {
     "q": "Légaliser l’euthanasie fait pression sur les plus fragiles et franchit une ligne que la société ne devrait pas franchir.",
-    "ctx": "Cela affirme que légaliser l'euthanasie fait pression sur les plus fragiles et franchit une ligne que la société ne devrait pas franchir."
+    "ctx": "Cela affirme que légaliser l'euthanasie fait pression sur les plus fragiles et franchit une ligne que la société ne devrait pas franchir. L'enjeu est de savoir si les garde-fous protègent les plus faibles."
   },
   "fr22a": {
     "q": "Les personnes trans devraient pouvoir changer d’état civil facilement, sur la base de l’autodétermination.",
-    "ctx": "Cela soutient que les personnes trans puissent changer d'état civil facilement, sur la base de l'autodétermination."
+    "ctx": "Cela soutient que les personnes trans puissent changer d'état civil facilement, par autodétermination, en reconnaissant leur identité. L'enjeu est de savoir si le genre est défini par l'identité ou la biologie."
   },
   "fr22b": {
     "q": "Le sexe à l’état civil ne peut dépendre d’une simple déclaration; la réalité biologique doit primer.",
-    "ctx": "C'est la vision critique du genre : le sexe à l'état civil ne peut dépendre d'une simple déclaration et la réalité biologique doit primer."
+    "ctx": "C'est la vision critique du genre : le sexe à l'état civil ne peut dépendre d'une simple déclaration et la réalité biologique doit primer, par exemple dans les espaces non mixtes et le sport."
   },
   "fr23a": {
     "q": "Les agriculteurs français sont étranglés par les normes et les importations bon marché, et méritent bien plus de protection.",
-    "ctx": "Cela affirme que les agriculteurs français sont étranglés par les normes et les importations bon marché et méritent bien plus de protection."
+    "ctx": "Les agriculteurs français, qui ont mené d'immenses manifestations en 2024, se sentent étranglés par les normes de l'UE et les importations bon marché. Cela affirme qu'ils méritent bien plus de protection. L'enjeu est la défense de l'agriculture française."
   },
   "fr23b": {
     "q": "Les agriculteurs doivent respecter les normes environnementales comme tout le monde, pas en être dispensés.",
-    "ctx": "Cela affirme que les agriculteurs doivent respecter les mêmes normes environnementales que tous, sans exemption."
+    "ctx": "Cela affirme que les agriculteurs doivent respecter les mêmes normes environnementales que tous, sans exemption. L'enjeu est de savoir si l'agriculture mérite un traitement à part."
   },
   "fr24a": {
     "q": "La France devrait continuer à soutenir l’Ukraine avec des armes aussi longtemps que nécessaire.",
-    "ctx": "Cela soutient que la France continue d'armer l'Ukraine contre la Russie aussi longtemps que nécessaire."
+    "ctx": "Cela soutient que la France continue d'armer l'Ukraine contre la Russie aussi longtemps que nécessaire. L'enjeu est le rôle de la France dans la guerre."
   },
   "fr24b": {
     "q": "Les livraisons d’armes sans fin ne font que prolonger la guerre; la France devrait pousser à une paix négociée.",
-    "ctx": "Cela affirme que les livraisons d'armes sans fin ne font que prolonger la guerre et que la France devrait pousser à une paix négociée."
+    "ctx": "Cela affirme que les livraisons d'armes sans fin ne font que prolonger la guerre et que la France devrait pousser à une paix négociée — vision partagée à l'extrême gauche comme à l'extrême droite. L'enjeu est les armes face à la diplomatie."
   },
   "fr25a": {
     "q": "La France devrait protéger ses industries et acheter français, quitte à restreindre le libre-échange.",
-    "ctx": "Cela soutient de protéger l'industrie française et d'acheter français, quitte à restreindre le libre-échange."
+    "ctx": "Cela soutient de protéger l'industrie française et d'acheter français, quitte à restreindre le libre-échange — le patriotisme économique. L'enjeu est le protectionnisme face aux marchés ouverts."
   },
   "fr25b": {
     "q": "Le libre-échange a enrichi la France, et le protectionnisme ne ferait qu’augmenter les prix et provoquer des représailles.",
-    "ctx": "Cela affirme que le libre-échange a enrichi la France et que le protectionnisme ne ferait qu'augmenter les prix et provoquer des représailles."
+    "ctx": "Cela affirme que le libre-échange a enrichi la France et que le protectionnisme ne ferait qu'augmenter les prix et provoquer des représailles. L'enjeu est la valeur des marchés ouverts."
   },
   "fr26a": {
     "q": "L’hôpital public s’effondre et a besoin d’une injection massive d’argent de l’État.",
-    "ctx": "Cela affirme que l'hôpital public français s'effondre et a besoin d'une injection massive d'argent de l'État."
+    "ctx": "L'hôpital public français souffre de pénuries de personnel et de tensions. Cela affirme que le système s'effondre et a besoin d'une injection massive d'argent public. L'enjeu est le sauvetage de l'hôpital public."
   },
   "fr26b": {
     "q": "Déverser plus d’argent sur l’hôpital sans réforme ne fait qu’alimenter une bureaucratie qui gaspille déjà des milliards.",
-    "ctx": "Cela affirme que déverser plus d'argent sur l'hôpital sans réforme ne fait qu'alimenter une bureaucratie qui gaspille."
+    "ctx": "Cela affirme que déverser plus d'argent sur l'hôpital sans réforme ne fait qu'alimenter une bureaucratie qui gaspille. L'enjeu est le financement face à la réforme."
   },
   "fr27a": {
     "q": "Les grandes décisions nationales devraient être soumises directement au peuple par référendum.",
-    "ctx": "Cela soutient la démocratie directe : soumettre les grandes décisions nationales directement au peuple par référendum."
+    "ctx": "Cela soutient la démocratie directe : soumettre les grandes décisions au peuple par référendum — revendication portée par les « gilets jaunes ». L'enjeu est de savoir si les grands choix reviennent aux électeurs ou aux élus."
   },
   "fr27b": {
     "q": "Les référendums réduisent des questions complexes à des slogans et sont facilement détournés par les démagogues.",
-    "ctx": "Cela affirme que les référendums réduisent des questions complexes à des slogans et sont facilement détournés par les démagogues."
+    "ctx": "Cela affirme que les référendums réduisent des questions complexes à des slogans et sont facilement détournés par les démagogues. L'enjeu est de savoir si certaines décisions sont trop complexes pour un vote populaire."
   },
   "fr28a": {
     "q": "Le président a trop de pouvoir; la France a besoin d’une VIe République avec un parlement plus fort.",
-    "ctx": "Le président français dispose de pouvoirs étendus. Cela juge que c'est trop et réclame une VIe République au parlement renforcé."
+    "ctx": "Le président français dispose de pouvoirs inhabituellement forts sous la Ve République. Cela juge que c'est trop et réclame une VIe République au parlement renforcé — revendication clé de la gauche (LFI). L'enjeu est le rééquilibrage des institutions."
   },
   "fr28b": {
     "q": "La présidence forte donne à la France sa stabilité, et la démanteler apporterait le chaos et la paralysie.",
-    "ctx": "Cela affirme que la présidence forte donne à la France sa stabilité et que la démanteler apporterait le chaos et la paralysie."
+    "ctx": "Cela affirme que la présidence forte donne à la France sa stabilité, et que la démanteler apporterait chaos et paralysie. L'enjeu est la stabilité face à un régime plus parlementaire."
   },
   "fr29a": {
     "q": "Les immigrés doivent s’assimiler à la culture française, pas conserver les coutumes de leur pays d’origine.",
-    "ctx": "Cela affirme que les immigrés doivent s'assimiler à la culture française plutôt que de conserver les coutumes de leur pays d'origine."
+    "ctx": "Cela affirme que les immigrés doivent s'assimiler à la culture française — le modèle républicain traditionnel — plutôt que de conserver les coutumes de leur origine. L'enjeu est l'assimilation face au multiculturalisme."
   },
   "fr29b": {
     "q": "Une culture vivante est toujours métissée; exiger une assimilation totale appauvrit la France elle-même.",
-    "ctx": "Cela affirme qu'une culture vivante est toujours métissée, si bien qu'exiger une assimilation totale appauvrit la France elle-même."
+    "ctx": "Cela affirme qu'une culture vivante est toujours métissée, si bien qu'exiger une assimilation totale appauvrit la France elle-même. L'enjeu est une culture nationale figée ou évolutive."
   },
   "fr30a": {
     "q": "On devrait apprendre aux enfants à être fiers de l’histoire de France, pas honteux de son passé colonial.",
-    "ctx": "Cela préfère apprendre aux enfants la fierté de l'histoire de France plutôt que la honte de son passé colonial."
+    "ctx": "Cela préfère apprendre aux enfants la fierté de l'histoire de France plutôt que la honte de son passé colonial. L'enjeu est le récit que la France fait de son empire."
   },
   "fr30b": {
     "q": "Une nation qui cache à ses enfants les crimes de la colonisation leur ment.",
-    "ctx": "Cela affirme qu'une nation qui cache à ses enfants les crimes de la colonisation leur ment."
+    "ctx": "Cela affirme qu'une nation qui cache à ses enfants les crimes de la colonisation — en Algérie et ailleurs — leur ment. L'enjeu est l'honnêteté sur le passé colonial."
   },
   "fr31a": {
     "q": "Le cannabis devrait être légalisé et l’usage de drogues traité comme un problème de santé, pas un délit.",
-    "ctx": "Cela soutient la légalisation du cannabis et de traiter l'usage de drogues comme une question de santé plutôt qu'un délit."
+    "ctx": "Cela soutient la légalisation du cannabis et de traiter l'usage comme une question de santé plutôt qu'un délit — la France a des lois parmi les plus dures d'Europe mais un usage parmi les plus élevés. L'enjeu est la prohibition face à la régulation."
   },
   "fr31b": {
     "q": "Légaliser le cannabis reviendrait à abandonner les quartiers au trafic et à banaliser l’addiction chez les jeunes.",
-    "ctx": "Cela affirme que légaliser le cannabis reviendrait à abandonner les quartiers au trafic et à banaliser l'addiction chez les jeunes."
+    "ctx": "Cela affirme que légaliser le cannabis reviendrait à abandonner les quartiers au trafic et à banaliser l'addiction chez les jeunes. L'enjeu est de savoir si la légalisation aide ou nuit."
   },
   "fr32a": {
     "q": "Les chômeurs et les pauvres sont traités avec trop de méfiance; le filet social français devrait être renforcé.",
-    "ctx": "Cela affirme que les chômeurs et les pauvres subissent trop de méfiance et que le filet social français devrait être renforcé."
+    "ctx": "Cela affirme que les chômeurs et les pauvres subissent trop de méfiance et que le filet social français devrait être renforcé, contre le durcissement des aides. L'enjeu est la dignité face au contrôle des aides."
   },
   "fr32b": {
     "q": "La protection sociale française est devenue un hamac, et des conditions plus strictes protègent ceux qui travaillent et cotisent vraiment.",
-    "ctx": "Cela affirme que la protection sociale française est devenue un hamac et que des conditions plus strictes protègent ceux qui travaillent et cotisent."
+    "ctx": "Cela affirme que la protection sociale française est devenue un hamac et que des conditions plus strictes protègent ceux qui travaillent et cotisent. L'enjeu est la générosité face aux abus."
   },
   "fr33a": {
     "q": "Les traditions anciennes portent la sagesse des générations et ne devraient pas être abandonnées à la légère.",
-    "ctx": "C'est la vision conservatrice de la tradition : les coutumes anciennes recèlent une sagesse accumulée, il faut donc être prudent avant de les balayer."
+    "ctx": "C'est la philosophie conservatrice de la tradition, dans l'esprit d'Edmund Burke : les coutumes et institutions anciennes recèlent la sagesse accumulée des générations, si bien que le changement doit être graduel plutôt que balayer ce qui marche pour des idées non éprouvées."
   },
   "fr33b": {
     "q": "Vénérer la tradition ne fait que laisser les morts gouverner les vivants et bloque le progrès nécessaire.",
-    "ctx": "C'est la réponse progressiste : s'accrocher à la tradition pour elle-même laisse le passé dicter le présent et bloque le progrès nécessaire."
+    "ctx": "C'est la réponse progressiste, dans l'esprit de Thomas Paine selon qui les morts ne doivent pas gouverner les vivants : vénérer la tradition ne fait que laisser les préjugés du passé bloquer un progrès attendu."
   },
   "fr34a": {
     "q": "Une bonne société dépend plus de la responsabilité individuelle que de l’État qui prend soin des gens.",
-    "ctx": "Cela reflète une valeur plutôt de droite : une bonne société repose surtout sur la responsabilité individuelle plutôt que sur l'État qui prend soin des gens."
+    "ctx": "Cela reflète une valeur centrale plutôt de droite : une société saine repose surtout sur la responsabilité individuelle plutôt que sur l'État qui prend soin des gens."
   },
   "fr34b": {
     "q": "Rendre les individus responsables des problèmes créés par le système, c’est ainsi que les nantis excusent la souffrance des autres.",
-    "ctx": "Cela reflète une valeur plutôt de gauche : beaucoup de problèmes viennent de systèmes injustes, si bien qu'accuser les individus permet aux nantis d'ignorer la souffrance des autres."
+    "ctx": "Cela reflète une valeur centrale plutôt de gauche : bien des difficultés viennent de systèmes injustes hors du contrôle de chacun, si bien qu'accuser les individus permet aux nantis d'ignorer la souffrance des autres."
   },
   "fr35a": {
     "q": "Les loyers dans les villes françaises sont hors de contrôle et un encadrement bien plus strict est nécessaire.",
-    "ctx": "Cela affirme que les loyers dans les villes françaises sont hors de contrôle et qu'un encadrement bien plus strict est nécessaire."
+    "ctx": "Cela affirme que les loyers dans les villes françaises sont hors de contrôle et qu'un encadrement bien plus strict est nécessaire. L'enjeu est la protection des locataires face à l'offre de logements."
   },
   "fr35b": {
     "q": "L’encadrement des loyers assèche l’offre de logements et aggrave la pénurie pour tout le monde.",
-    "ctx": "Cela affirme que l'encadrement des loyers assèche l'offre de logements et aggrave la pénurie pour tout le monde."
+    "ctx": "Cela affirme que l'encadrement des loyers assèche l'offre de logements et aggrave la pénurie pour tout le monde. L'enjeu est de savoir si l'encadrement aide ou nuit."
   }
 };
 
@@ -1403,7 +1408,7 @@ const BANK = [
       "grn": -2
     },
     "dec": true,
-    "ctx": "This argues immigration to France is far too high and must be cut sharply — a central demand of the right."
+    "ctx": "This argues immigration to France is far too high and must be cut sharply — a central theme of Marine Le Pen's National Rally, now a major force. The stake is the scale of immigration."
   },
   {
     "id": "fr1b",
@@ -1423,7 +1428,7 @@ const BANK = [
       "grn": 2
     },
     "dec": true,
-    "ctx": "This is the pro-immigration view: that immigration is a strength and France needs newcomers for its economy and future."
+    "ctx": "This is the pro-immigration view: that immigration is a strength and that France, with an ageing population, needs newcomers for its economy and future. The stake is immigration's long-term value."
   },
   {
     "id": "fr2a",
@@ -1444,7 +1449,7 @@ const BANK = [
       "grn": -1.5
     },
     "dec": true,
-    "ctx": "This supports systematically deporting foreigners who commit crimes, with no exceptions."
+    "ctx": "This supports systematically deporting foreigners who commit crimes, with no exceptions — a hardline security stance. The stake is enforcement versus individual circumstances."
   },
   {
     "id": "fr2b",
@@ -1465,7 +1470,7 @@ const BANK = [
       "grn": 1.5
     },
     "dec": true,
-    "ctx": "'Double punishment' means jailing then deporting a foreigner. This argues collective expulsions betray French Republican values."
+    "ctx": "'Double punishment' (double peine) means jailing a foreigner and then deporting them. This argues collective expulsions and double punishment betray French Republican values of individual justice. The stake is security versus republican principle."
   },
   {
     "id": "fr3a",
@@ -1485,7 +1490,7 @@ const BANK = [
       "ps": -1.5,
       "grn": -2
     },
-    "ctx": "'Droit du sol' automatically grants citizenship to those born on French soil. This wants to end it."
+    "ctx": "'Droit du sol' automatically grants French nationality to those born on French soil. This wants to end it, requiring citizenship to be earned — a long-standing demand of the right. The stake is how one becomes French."
   },
   {
     "id": "fr3b",
@@ -1505,7 +1510,7 @@ const BANK = [
       "ps": 1.5,
       "grn": 2
     },
-    "ctx": "This argues being born and raised in France means being French, so ending droit du sol betrays the Republic."
+    "ctx": "This argues that being born and raised in France means being French, and that ending droit du sol — a principle since the 19th century — betrays the Republic. The stake is an inclusive versus a restrictive idea of nationality."
   },
   {
     "id": "fr4a",
@@ -1526,7 +1531,7 @@ const BANK = [
       "grn": -1.5
     },
     "dec": true,
-    "ctx": "France raised its retirement age to 64 in a controversial 2023 reform. This calls the reform necessary."
+    "ctx": "In 2023 Macron raised the retirement age from 62 to 64, triggering months of mass strikes and protests. This calls the reform a painful necessity to fund pensions. The stake is a bitterly contested economic reform."
   },
   {
     "id": "fr4b",
@@ -1547,7 +1552,7 @@ const BANK = [
       "grn": 1.5
     },
     "dec": true,
-    "ctx": "This calls the pension reform a brutal attack on workers that should be repealed."
+    "ctx": "This calls the pension reform a brutal attack on workers, pushed through without a parliamentary vote (using article 49.3), and demands it be repealed. The stake is workers' rights versus fiscal sustainability."
   },
   {
     "id": "fr5a",
@@ -1566,7 +1571,7 @@ const BANK = [
       "lr": 1.5,
       "grn": -1
     },
-    "ctx": "'Laïcité' is France's strict separation of religion and public life. This wants it firmly enforced, including bans on religious symbols."
+    "ctx": "'Laïcité' is France's strict separation of religion and public life, going far beyond most countries — for example banning headscarves in schools. This wants it firmly enforced. The stake is France's distinctive model of secularism."
   },
   {
     "id": "fr5b",
@@ -1585,7 +1590,7 @@ const BANK = [
       "lr": -1.5,
       "grn": 1
     },
-    "ctx": "This argues aggressive secularism has become a pretext to target Muslims and police how people dress."
+    "ctx": "This argues aggressive secularism has become a pretext to target Muslims — especially women's dress — rather than protect neutrality. The stake is whether laïcité defends freedom or polices minorities."
   },
   {
     "id": "fr6a",
@@ -1605,7 +1610,7 @@ const BANK = [
       "grn": -1.5
     },
     "dec": true,
-    "ctx": "This argues Islam poses a specific problem for the French Republic and its values."
+    "ctx": "This argues Islam poses a specific problem for the French Republic and its values, a recurring theme after Islamist terror attacks. Critics say it stigmatises millions of ordinary Muslim citizens. The stake is whether the concern is legitimate or prejudice."
   },
   {
     "id": "fr6b",
@@ -1625,7 +1630,7 @@ const BANK = [
       "grn": 1.5
     },
     "dec": true,
-    "ctx": "This holds that French Muslims are full citizens whose faith deserves the same respect as any other."
+    "ctx": "This holds that French Muslims are full citizens whose faith deserves the same respect as any other. The stake is religious equality versus singling out one faith."
   },
   {
     "id": "fr7a",
@@ -1644,7 +1649,7 @@ const BANK = [
       "ps": -2,
       "grn": -2
     },
-    "ctx": "The 'great replacement' is a theory claiming native French people are being deliberately replaced by immigrants. This says it's happening."
+    "ctx": "The 'great replacement' (grand remplacement) is a theory, popularised by writer Renaud Camus, claiming native French people are being deliberately replaced by immigrants. This says it is happening. The stake is a conspiracy theory tied to far-right violence."
   },
   {
     "id": "fr7b",
@@ -1663,7 +1668,7 @@ const BANK = [
       "ps": 2,
       "grn": 2
     },
-    "ctx": "This calls the 'great replacement' a racist conspiracy theory with no basis in fact."
+    "ctx": "This calls the great replacement a racist conspiracy theory with no basis in fact, cited by mass shooters. The stake is rejecting a debunked and dangerous idea."
   },
   {
     "id": "fr8a",
@@ -1682,7 +1687,7 @@ const BANK = [
       "ps": -2,
       "grn": -2
     },
-    "ctx": "This claims some races or peoples are inherently more gifted or capable than others."
+    "ctx": "This is racial supremacism — the belief that some races or peoples are innately more gifted than others. It was the engine of Nazism and colonialism, and modern genetics finds no basis for it. The stake is a discredited and dangerous idea."
   },
   {
     "id": "fr8b",
@@ -1701,7 +1706,7 @@ const BANK = [
       "ps": 2,
       "grn": 2
     },
-    "ctx": "This is the principle of human equality: that no race is superior, and the idea is discredited pseudo-science."
+    "ctx": "This states the principle of human equality: that no race is superior, and that the idea is discredited pseudo-science with a shameful history behind slavery and colonial rule."
   },
   {
     "id": "fr9a",
@@ -1720,7 +1725,7 @@ const BANK = [
       "ps": 1.5,
       "grn": 1.5
     },
-    "ctx": "The ISF was France's tax on large fortunes, abolished under Macron. This wants it brought back for the richest."
+    "ctx": "The ISF was France's tax on large fortunes, which Macron abolished in 2017. This wants it brought back for the richest, a key demand of the left. The stake is taxing wealth."
   },
   {
     "id": "fr9b",
@@ -1739,7 +1744,7 @@ const BANK = [
       "ps": -1.5,
       "grn": -1.5
     },
-    "ctx": "This argues the wealth tax drove capital and entrepreneurs out of France, and reviving it would repeat the error."
+    "ctx": "This argues the wealth tax drove capital and entrepreneurs out of France before its abolition, and reviving it would repeat that mistake. The stake is whether the tax raises revenue or repels it."
   },
   {
     "id": "fr10a",
@@ -1759,7 +1764,7 @@ const BANK = [
       "ps": 1,
       "grn": 0.5
     },
-    "ctx": "'Purchasing power' — how much people can afford — is a top French political concern. This wants restoring it made the government's priority."
+    "ctx": "'Purchasing power' (pouvoir d'achat) — what households can afford — is consistently the top concern of French voters. This wants restoring it made the government's priority. The stake is the cost of living as the central political issue."
   },
   {
     "id": "fr10b",
@@ -1779,7 +1784,7 @@ const BANK = [
       "ps": -1,
       "grn": -0.5
     },
-    "ctx": "This argues chasing purchasing power with subsidies and price caps just fuels debt and inflation."
+    "ctx": "This argues chasing purchasing power with subsidies and price caps just fuels debt and inflation without fixing the causes. The stake is whether such help works."
   },
   {
     "id": "fr11a",
@@ -1798,7 +1803,7 @@ const BANK = [
       "lr": 1.5,
       "grn": -2
     },
-    "ctx": "France gets most of its electricity from nuclear power. This calls it clean and reliable and wants many new reactors."
+    "ctx": "France gets about 70% of its electricity from nuclear power, more than any large country. This calls it clean and reliable and wants many new reactors. The stake is doubling down on nuclear."
   },
   {
     "id": "fr11b",
@@ -1817,7 +1822,7 @@ const BANK = [
       "lr": -1.5,
       "grn": 2
     },
-    "ctx": "This calls nuclear power dangerous and slow and wants France to switch decisively to renewables."
+    "ctx": "This calls nuclear power dangerous and slow to build, and wants France to switch decisively to renewables instead. The stake is nuclear versus renewables."
   },
   {
     "id": "fr12a",
@@ -1836,7 +1841,7 @@ const BANK = [
       "ps": 1,
       "grn": 2
     },
-    "ctx": "This says France must act far more aggressively on climate, even at a cost to economic growth."
+    "ctx": "This says France must act far more aggressively on climate, even at a cost to growth. The stake is climate ambition versus the economy."
   },
   {
     "id": "fr12b",
@@ -1855,7 +1860,7 @@ const BANK = [
       "ps": -1,
       "grn": -2
     },
-    "ctx": "This argues punitive green measures crush farmers and workers while barely affecting the global climate."
+    "ctx": "This argues punitive green measures crush farmers and workers — as the fuel-tax rise sparked the 'yellow vest' revolt — while barely affecting the global climate. The stake is who bears the cost of climate policy."
   },
   {
     "id": "fr13a",
@@ -1875,7 +1880,7 @@ const BANK = [
       "ps": 1,
       "grn": 1
     },
-    "ctx": "This sees France's future in a stronger, more integrated European Union."
+    "ctx": "This sees France's future in a stronger, more integrated European Union, a pillar of Macron's project. The stake is deeper European integration."
   },
   {
     "id": "fr13b",
@@ -1895,7 +1900,7 @@ const BANK = [
       "ps": -1,
       "grn": -1
     },
-    "ctx": "This argues Brussels already dictates too much to France and sovereignty must be brought back home."
+    "ctx": "This argues Brussels already dictates too much to France and that sovereignty must be brought back home — the Eurosceptic view of the RN and part of the left. The stake is national sovereignty versus the EU."
   },
   {
     "id": "fr14a",
@@ -1915,7 +1920,7 @@ const BANK = [
       "ps": -0.5,
       "grn": -1.5
     },
-    "ctx": "This argues the police need more powers and support, and that criticism of them has gone too far."
+    "ctx": "This argues the police need more powers and support and that criticism of them has gone too far, a stance strong on the right after riots. The stake is backing the police versus scrutinising them."
   },
   {
     "id": "fr14b",
@@ -1935,7 +1940,7 @@ const BANK = [
       "ps": 0.5,
       "grn": 1.5
     },
-    "ctx": "The 'banlieues' are France's often-deprived suburbs. This argues police violence there is a real scandal the state keeps covering up."
+    "ctx": "The 'banlieues' are France's often-deprived suburbs, where relations with police are tense. This argues police violence there is a real scandal the state keeps covering up, as the 2023 killing of teenager Nahel inflamed. The stake is police accountability."
   },
   {
     "id": "fr15a",
@@ -1955,7 +1960,7 @@ const BANK = [
       "ps": -0.5,
       "grn": -1.5
     },
-    "ctx": "This argues sentences are too lenient and dangerous criminals should spend far longer in prison."
+    "ctx": "This argues sentences are too lenient and dangerous criminals should spend far longer in prison. The stake is whether harsher punishment improves safety."
   },
   {
     "id": "fr15b",
@@ -1975,7 +1980,7 @@ const BANK = [
       "ps": 0.5,
       "grn": 1.5
     },
-    "ctx": "This argues ever tougher sentences never reduced crime, and only prevention and rehabilitation do."
+    "ctx": "This argues ever tougher sentences never reduced crime, and only prevention and rehabilitation do. The stake is what actually cuts crime."
   },
   {
     "id": "fr16a",
@@ -1995,7 +2000,7 @@ const BANK = [
       "ps": 1.5,
       "grn": 1.5
     },
-    "ctx": "The SMIC is France's minimum wage. This wants it raised substantially."
+    "ctx": "The SMIC is France's minimum wage, among Europe's higher ones. This wants it raised substantially to protect low earners. The stake is a wage floor versus employer costs."
   },
   {
     "id": "fr16b",
@@ -2015,7 +2020,7 @@ const BANK = [
       "ps": -1.5,
       "grn": -1.5
     },
-    "ctx": "This argues raising the SMIC too fast destroys jobs for the young and the low-skilled."
+    "ctx": "This argues raising the SMIC too fast destroys jobs for the young and low-skilled. The stake is whether higher minimums help or cost jobs."
   },
   {
     "id": "fr17a",
@@ -2035,7 +2040,7 @@ const BANK = [
       "ps": 1,
       "grn": 1
     },
-    "ctx": "France's legal working week is 35 hours. This wants that protected, opposing working more for the same pay."
+    "ctx": "France's legal working week is 35 hours, introduced in 2000 and a point of national identity. This wants it protected, opposing working more for the same pay. The stake is a symbol of the French social model."
   },
   {
     "id": "fr17b",
@@ -2055,7 +2060,7 @@ const BANK = [
       "ps": -1,
       "grn": -1
     },
-    "ctx": "This argues the 35-hour week made France less competitive and people should be free to work and earn more."
+    "ctx": "This argues the 35-hour week made France less competitive, and that people should be free to work and earn more. The stake is competitiveness versus protected working time."
   },
   {
     "id": "fr18a",
@@ -2074,7 +2079,7 @@ const BANK = [
       "ps": -1,
       "grn": -1.5
     },
-    "ctx": "This argues France over-regulates and over-taxes business, and the state should step back."
+    "ctx": "This argues France over-regulates and over-taxes business — with among the highest public spending in the EU — and the state should step back. The stake is whether shrinking the state would revive the economy."
   },
   {
     "id": "fr18b",
@@ -2093,7 +2098,7 @@ const BANK = [
       "ps": 1,
       "grn": 1.5
     },
-    "ctx": "This argues deregulation just gives big companies more power at the expense of workers and the environment."
+    "ctx": "This argues deregulation just hands more power to big companies at the expense of workers and the environment. The stake is whether rules protect people or burden business."
   },
   {
     "id": "fr19a",
@@ -2112,7 +2117,7 @@ const BANK = [
       "ps": -1.5,
       "grn": -2
     },
-    "ctx": "The National Rally (RN) is the far-right party of Marine Le Pen. This argues it should now be treated as a normal party."
+    "ctx": "The National Rally (RN) is Marine Le Pen's far-right party, long kept from power by a 'republican front' of other parties. This argues it should now be treated as a normal party. The stake is normalising the far right."
   },
   {
     "id": "fr19b",
@@ -2131,7 +2136,7 @@ const BANK = [
       "ps": 1.5,
       "grn": 2
     },
-    "ctx": "The 'republican front' is other parties uniting to keep the RN from power. This argues the far right remains a danger and that front must hold."
+    "ctx": "The 'republican front' is other parties uniting to keep the RN from power. This argues the far right remains a danger to the Republic and that front must hold. The stake is the cordon sanitaire around the RN."
   },
   {
     "id": "fr20a",
@@ -2151,7 +2156,7 @@ const BANK = [
       "ps": 1.5,
       "grn": 1.5
     },
-    "ctx": "In 2024 France added the right to abortion to its constitution. This calls that the right thing to do."
+    "ctx": "In 2024 France became the first country to write the right to abortion into its constitution. This calls that the right thing to do, protecting it for good. The stake is entrenching abortion as a fundamental right."
   },
   {
     "id": "fr20b",
@@ -2171,7 +2176,7 @@ const BANK = [
       "ps": -1.5,
       "grn": -1.5
     },
-    "ctx": "This argues putting abortion in the constitution was an ideological move that shut down legitimate debate."
+    "ctx": "This argues putting abortion in the constitution was an ideological move that shut down legitimate debate. The stake is whether the change was necessary or political."
   },
   {
     "id": "fr21a",
@@ -2191,7 +2196,7 @@ const BANK = [
       "ps": 1,
       "grn": 1
     },
-    "ctx": "This supports France legalising assisted dying (medical help to die) for the terminally ill."
+    "ctx": "France recently moved to legalise assisted dying (aide à mourir) for the terminally ill. This supports it as a compassionate right. The stake is control over the end of life."
   },
   {
     "id": "fr21b",
@@ -2211,7 +2216,7 @@ const BANK = [
       "ps": -1,
       "grn": -1
     },
-    "ctx": "This argues legalising euthanasia pressures the vulnerable and crosses a line society shouldn't cross."
+    "ctx": "This argues legalising euthanasia pressures the vulnerable and crosses a line society shouldn't cross. The stake is whether the safeguards protect the weak."
   },
   {
     "id": "fr22a",
@@ -2230,7 +2235,7 @@ const BANK = [
       "ps": 1,
       "grn": 1.5
     },
-    "ctx": "This supports letting trans people change their legal gender easily, based on self-identification."
+    "ctx": "This supports letting trans people change their legal gender easily, by self-identification, recognising their identity. The stake is whether gender is defined by identity or biology."
   },
   {
     "id": "fr22b",
@@ -2249,7 +2254,7 @@ const BANK = [
       "ps": -1,
       "grn": -1.5
     },
-    "ctx": "This is the gender-critical view: that legal sex can't rest on simple declaration and biological reality must prevail."
+    "ctx": "This is the gender-critical view: that legal sex can't rest on a simple declaration and that biological reality must prevail, for example in single-sex spaces and sport."
   },
   {
     "id": "fr23a",
@@ -2268,7 +2273,7 @@ const BANK = [
       "ps": 0.5,
       "grn": -0.5
     },
-    "ctx": "This argues French farmers are strangled by rules and cheap imports and deserve far more protection."
+    "ctx": "French farmers, who staged huge protests in 2024, feel squeezed by EU rules and cheap imports. This argues they deserve far more protection. The stake is defending French agriculture."
   },
   {
     "id": "fr23b",
@@ -2285,7 +2290,7 @@ const BANK = [
       "lr": -1,
       "grn": 1.5
     },
-    "ctx": "This argues farmers must meet the same environmental standards as everyone else, not be exempted."
+    "ctx": "This argues farmers must meet the same environmental standards as everyone else, not be exempted. The stake is whether agriculture deserves special treatment."
   },
   {
     "id": "fr24a",
@@ -2305,7 +2310,7 @@ const BANK = [
       "ps": 1,
       "grn": 1
     },
-    "ctx": "This supports France continuing to arm Ukraine against Russia for as long as necessary."
+    "ctx": "This supports France continuing to arm Ukraine against Russia for as long as necessary. The stake is France's role in the war."
   },
   {
     "id": "fr24b",
@@ -2325,7 +2330,7 @@ const BANK = [
       "ps": -1,
       "grn": -1
     },
-    "ctx": "This argues endless arms shipments only prolong the war and France should push for a negotiated peace."
+    "ctx": "This argues endless arms shipments only prolong the war and that France should push for a negotiated peace — a view shared across parts of the far left and far right. The stake is arms versus diplomacy."
   },
   {
     "id": "fr25a",
@@ -2345,7 +2350,7 @@ const BANK = [
       "ps": 0.5,
       "grn": 0.5
     },
-    "ctx": "This supports protecting French industry and buying French, even at the cost of free trade."
+    "ctx": "This supports protecting French industry and buying French, even at the cost of free trade — economic patriotism. The stake is protectionism versus open markets."
   },
   {
     "id": "fr25b",
@@ -2365,7 +2370,7 @@ const BANK = [
       "ps": -0.5,
       "grn": -0.5
     },
-    "ctx": "This argues open trade made France richer and protectionism would only raise prices and invite retaliation."
+    "ctx": "This argues open trade made France richer and that protectionism would only raise prices and invite retaliation. The stake is the value of open markets."
   },
   {
     "id": "fr26a",
@@ -2384,7 +2389,7 @@ const BANK = [
       "ps": 1.5,
       "grn": 1.5
     },
-    "ctx": "This argues France's public hospitals are collapsing and need a massive injection of state money."
+    "ctx": "France's public hospitals face staff shortages and strain. This argues the system is collapsing and needs a massive injection of state money. The stake is rescuing public healthcare."
   },
   {
     "id": "fr26b",
@@ -2403,7 +2408,7 @@ const BANK = [
       "ps": -1.5,
       "grn": -1.5
     },
-    "ctx": "This argues throwing more money at hospitals without reform just feeds a wasteful bureaucracy."
+    "ctx": "This argues throwing more money at hospitals without reform just feeds a wasteful bureaucracy. The stake is funding versus reform."
   },
   {
     "id": "fr27a",
@@ -2421,7 +2426,7 @@ const BANK = [
       "lfi": 1.5,
       "grn": 0.5
     },
-    "ctx": "This supports direct democracy: putting major national decisions straight to the people in referendums."
+    "ctx": "This supports direct democracy: putting major national decisions to the people in referendums — a demand raised by the 'yellow vests'. The stake is whether big choices belong to voters or representatives."
   },
   {
     "id": "fr27b",
@@ -2439,7 +2444,7 @@ const BANK = [
       "lfi": -1.5,
       "grn": -0.5
     },
-    "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by demagogues."
+    "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by demagogues. The stake is whether some decisions are too complex for a public vote."
   },
   {
     "id": "fr28a",
@@ -2459,7 +2464,7 @@ const BANK = [
       "ps": 1,
       "grn": 1.5
     },
-    "ctx": "France's president holds strong powers. This argues it's too much and wants a 'Sixth Republic' with a stronger parliament."
+    "ctx": "France's president holds unusually strong powers under the Fifth Republic. This argues that is too much and wants a 'Sixth Republic' with a stronger parliament — a key demand of the left (LFI). The stake is rebalancing France's institutions."
   },
   {
     "id": "fr28b",
@@ -2479,7 +2484,7 @@ const BANK = [
       "ps": -1,
       "grn": -1.5
     },
-    "ctx": "This argues the strong presidency gives France stability and dismantling it would bring chaos and paralysis."
+    "ctx": "This argues the strong presidency gives France stability, and that dismantling it would bring chaos and paralysis. The stake is stability versus a more parliamentary system."
   },
   {
     "id": "fr29a",
@@ -2499,7 +2504,7 @@ const BANK = [
       "ps": -0.5,
       "grn": -1.5
     },
-    "ctx": "This argues immigrants must assimilate into French culture rather than keep the customs of their origin."
+    "ctx": "This argues immigrants must assimilate into French culture — the traditional Republican model — rather than keep the customs of their origin. The stake is assimilation versus multiculturalism."
   },
   {
     "id": "fr29b",
@@ -2519,7 +2524,7 @@ const BANK = [
       "ps": 0.5,
       "grn": 1.5
     },
-    "ctx": "This argues a living culture is always mixed, so demanding total assimilation impoverishes France itself."
+    "ctx": "This argues a living culture is always mixed, so demanding total assimilation impoverishes France itself. The stake is a fixed versus an evolving national culture."
   },
   {
     "id": "fr30a",
@@ -2538,7 +2543,7 @@ const BANK = [
       "ps": -0.5,
       "grn": -1.5
     },
-    "ctx": "This favours teaching children pride in France's history rather than shame about its colonial past."
+    "ctx": "This favours teaching children pride in France's history rather than shame about its colonial past. The stake is what story France tells about its empire."
   },
   {
     "id": "fr30b",
@@ -2557,7 +2562,7 @@ const BANK = [
       "ps": 0.5,
       "grn": 1.5
     },
-    "ctx": "This argues a nation that hides the crimes of colonialism from its children is lying to them."
+    "ctx": "This argues a nation that hides the crimes of colonialism — in Algeria and elsewhere — from its children is lying to them. The stake is honesty about the colonial past."
   },
   {
     "id": "fr31a",
@@ -2577,7 +2582,7 @@ const BANK = [
       "ps": 0.5,
       "grn": 1.5
     },
-    "ctx": "This supports legalising cannabis and treating drug use as a health issue rather than a crime."
+    "ctx": "This supports legalising cannabis and treating drug use as a health issue, not a crime — France has some of Europe's toughest drug laws yet highest use. The stake is prohibition versus regulation."
   },
   {
     "id": "fr31b",
@@ -2597,7 +2602,7 @@ const BANK = [
       "ps": -0.5,
       "grn": -1.5
     },
-    "ctx": "This argues legalising cannabis would surrender neighbourhoods to dealing and normalise addiction among the young."
+    "ctx": "This argues legalising cannabis would surrender neighbourhoods to dealing and normalise addiction among the young. The stake is whether legalisation helps or harms."
   },
   {
     "id": "fr32a",
@@ -2617,7 +2622,7 @@ const BANK = [
       "ps": 1.5,
       "grn": 1.5
     },
-    "ctx": "This argues the unemployed and poor face too much suspicion and France's safety net should be stronger."
+    "ctx": "This argues the unemployed and poor face too much suspicion and that France's safety net should be stronger, resisting benefit tightening. The stake is dignity versus policing of welfare."
   },
   {
     "id": "fr32b",
@@ -2637,7 +2642,7 @@ const BANK = [
       "ps": -1.5,
       "grn": -1.5
     },
-    "ctx": "This argues French welfare has become a 'hammock' and tighter conditions protect those who work and pay."
+    "ctx": "This argues French welfare has become a 'hammock' and that tighter conditions protect those who actually work and pay. The stake is generosity versus abuse."
   },
   {
     "id": "fr33a",
@@ -2656,7 +2661,7 @@ const BANK = [
       "ps": -0.5,
       "grn": -1
     },
-    "ctx": "This is the conservative view of tradition: that long-standing customs hold accumulated wisdom, so we should be cautious about sweeping them away."
+    "ctx": "This is the conservative philosophy of tradition, in the spirit of Edmund Burke: that long-standing customs and institutions hold the accumulated wisdom of generations, so change should be gradual rather than sweeping away what works for untested ideas."
   },
   {
     "id": "fr33b",
@@ -2675,7 +2680,7 @@ const BANK = [
       "ps": 0.5,
       "grn": 1
     },
-    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks needed progress."
+    "ctx": "This is the progressive reply, echoing Thomas Paine's idea that the dead should not govern the living: that treating tradition as sacred just lets the prejudices of the past block overdue progress."
   },
   {
     "id": "fr34a",
@@ -2695,7 +2700,7 @@ const BANK = [
       "ps": -1,
       "grn": -1.5
     },
-    "ctx": "This reflects a right-leaning value: that a good society rests mainly on individual responsibility rather than the state looking after people."
+    "ctx": "This reflects a core right-leaning value: that a healthy society rests mainly on individual responsibility rather than the state looking after people."
   },
   {
     "id": "fr34b",
@@ -2715,7 +2720,7 @@ const BANK = [
       "ps": 1,
       "grn": 1.5
     },
-    "ctx": "This reflects a left-leaning value: that many problems come from unfair systems, so blaming individuals lets the comfortable ignore others' suffering."
+    "ctx": "This reflects a core left-leaning value: that many hardships come from unfair systems beyond personal control, so blaming individuals lets the comfortable ignore others' suffering."
   },
   {
     "id": "fr35a",
@@ -2735,7 +2740,7 @@ const BANK = [
       "ps": 1.5,
       "grn": 1.5
     },
-    "ctx": "This argues rents in French cities are out of control and much stronger rent controls are needed."
+    "ctx": "This argues rents in French cities are out of control and that much stronger rent controls (encadrement des loyers) are needed. The stake is protecting tenants versus housing supply."
   },
   {
     "id": "fr35b",
@@ -2755,7 +2760,7 @@ const BANK = [
       "ps": -1.5,
       "grn": -1.5
     },
-    "ctx": "This argues rent controls dry up housing supply and make the shortage worse for everyone."
+    "ctx": "This argues rent controls dry up housing supply and make the shortage worse for everyone. The stake is whether caps help or backfire."
   }
 ];
 
@@ -3234,6 +3239,6 @@ window.getQuestion = getQuestion;
 window.currentLang = currentLang;
 applyLang();
 </script>
-<script src="/engine.js?v=1.1.7"></script>
+<script src="/engine.js?v=1.1.9"></script>
 </body>
 </html>

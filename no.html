@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.7">
+<link rel="stylesheet" href="/style.css?v=1.1.9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,6 +181,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -673,6 +674,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -815,6 +817,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -928,6 +931,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1074,6 +1078,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1113,214 +1118,284 @@
 <script>
 const LOCAL_QUESTIONS = {
   "no1a": {
-    "q": "Norge bør fortsette å lete etter og produsere olje og gass i tiår fremover."
+    "q": "Norge bør fortsette å lete etter og produsere olje og gass i tiår fremover.",
+    "ctx": "Olje og gass gjorde Norge til et av verdens rikeste land og finansierer det enorme oljefondet. Dette vil at leting og produksjon fortsetter i tiår fremover. Det står om fremtiden til Norges viktigste næring."
   },
   "no1b": {
-    "q": "Norge må trappe ned olje og gass og slutte å lete etter nye felt."
+    "q": "Norge må trappe ned olje og gass og slutte å lete etter nye felt.",
+    "ctx": "Dette argumenterer for at Norge må trappe ned olje og gass og slutte å lete etter nye felt for å innfri klimaansvaret — en vanskelig spenning for en oljestat. Det står om klimaplikt mot oljeøkonomien."
   },
   "no2a": {
-    "q": "Staten bør innføre makspris på strøm og ta politisk kontroll over krafteksporten."
+    "q": "Staten bør innføre makspris på strøm og ta politisk kontroll over krafteksporten.",
+    "ctx": "Etter at strømprisene skjøt i været under energikrisen, vil dette at staten setter makspris og tar politisk kontroll over krafteksporten til utlandet. Det står om å beskytte forbrukerne mot det åpne kraftmarkedet."
   },
   "no2b": {
-    "q": "Å gripe inn i kraftmarkedet og eksporten ville undergrave investeringer og våre allierte."
+    "q": "Å gripe inn i kraftmarkedet og eksporten ville undergrave investeringer og våre allierte.",
+    "ctx": "Dette argumenterer for at å gripe inn i kraftmarkedet og eksporten ville undergrave investeringer og svikte Norges europeiske allierte som er avhengige av kraften. Det står om kortsiktig lettelse mot langsiktig pålitelighet."
   },
   "no3a": {
-    "q": "Formuesskatten på de rikeste bør beholdes og økes."
+    "q": "Formuesskatten på de rikeste bør beholdes og økes.",
+    "ctx": "Formuesskatten skattlegger de rikestes eiendeler, og Norge er ett av få land som beholder en. Dette vil beholde og øke den. Det står om å skattlegge formue selv om noen rike nordmenn utvandrer."
   },
   "no3b": {
-    "q": "Formuesskatten driver norske gründere ut av landet og bør avskaffes."
+    "q": "Formuesskatten driver norske gründere ut av landet og bør avskaffes.",
+    "ctx": "Dette argumenterer for at formuesskatten driver norske gründere til lavskatteland som Sveits — en reell nylig utvandring — og bør avskaffes. Det står om skatten gir inntekter eller skremmer vekk."
   },
   "no4a": {
-    "q": "Innvandringen til Norge er for høy og bør kuttes kraftig."
+    "q": "Innvandringen til Norge er for høy og bør kuttes kraftig.",
+    "ctx": "Dette argumenterer for at innvandringen til Norge er for høy og bør kuttes kraftig — Fremskrittspartiets kjernesak. Det står om innvandringsnivået."
   },
   "no4b": {
-    "q": "Innvandrere styrker norsk økonomi og samfunn, og asyl er en humanitær plikt."
+    "q": "Innvandrere styrker norsk økonomi og samfunn, og asyl er en humanitær plikt.",
+    "ctx": "Dette er det innvandringsvennlige synet: at innvandrere styrker Norges økonomi og samfunn, og at asyl er en humanitær plikt. Det står om innvandringens rolle."
   },
   "no5a": {
-    "q": "Makt, arbeidsplasser og tjenester bør flyttes ut av Oslo og tilbake til distriktene."
+    "q": "Makt, arbeidsplasser og tjenester bør flyttes ut av Oslo og tilbake til distriktene.",
+    "ctx": "Dette argumenterer for at makt, arbeidsplasser og tjenester bør flyttes ut av Oslo og tilbake til distriktene — en dyp skillelinje i norsk politikk drevet av Senterpartiet. Det står om balansen mellom by og bygd."
   },
   "no5b": {
-    "q": "Å samle aktivitet der folk faktisk bor og jobber er mer effektivt enn å holde distriktene kunstig i live."
+    "q": "Å samle aktivitet der folk faktisk bor og jobber er mer effektivt enn å holde distriktene kunstig i live.",
+    "ctx": "Dette argumenterer for at å samle aktivitet der folk faktisk bor og jobber er mer effektivt enn å holde fraflyttingsdistrikter oppe med subsidier. Det står om effektivitet mot å holde distriktene i live."
   },
   "no6a": {
-    "q": "Bompenger er en urettferdig byrde på vanlige folk og bør fjernes."
+    "q": "Bompenger er en urettferdig byrde på vanlige folk og bør fjernes.",
+    "ctx": "Bompenger finansierer veiene og er en tilbakevendende stridssak som til og med skapte protestpartier. Dette kaller dem en urettferdig byrde på vanlige folk og vil fjerne dem. Det står om et populistisk stridstema om levekostnader."
   },
   "no6b": {
-    "q": "Bompenger får forurensere og bilister til å betale sin del og finansierer veiene."
+    "q": "Bompenger får forurensere og bilister til å betale sin del og finansierer veiene.",
+    "ctx": "Dette argumenterer for at bompenger får forurensere og bilister til å betale sin del og trengs for å finansiere veiene. Det står om at brukeren betaler mot at det skal være til å leve med."
   },
   "no7a": {
-    "q": "Norge bør beholde EØS-avtalen som knytter landet tæt til EU."
+    "q": "Norge bør beholde EØS-avtalen som knytter landet tæt til EU.",
+    "ctx": "EØS-avtalen gir Norge, som står utenfor EU, tilgang til det indre markedet ved å ta inn de fleste EU-reglene uten å stemme over dem. Dette vil beholde den, slik næringslivet stort sett vil. Det står om markedstilgang mot innflytelse."
   },
   "no7b": {
-    "q": "EØS-avtalen gir Brüssel for mye makt over Norge og bør reforhandles eller sies opp."
+    "q": "EØS-avtalen gir Brüssel for mye makt over Norge og bør reforhandles eller sies opp.",
+    "ctx": "Dette argumenterer for at EØS-avtalen gir Brüssel for mye makt over Norge — regler Norge må følge, men aldri har stemt over — og bør reforhandles eller sies opp. Det står om suverenitet mot markedstilgang."
   },
   "no8a": {
-    "q": "Norge må kutte sine egne utslipp mye raskere, selv om det koster økonomisk."
+    "q": "Norge må kutte sine egne utslipp mye raskere, selv om det koster økonomisk.",
+    "ctx": "Dette sier at Norge — som ble rikt på oljen verden brenner — må kutte sine egne utslipp mye raskere, selv med økonomiske kostnader. Det står om klimaansvar for en oljestat."
   },
   "no8b": {
-    "q": "Dyre klimatiltak hjemme betyr lite globalt og belaster bare vanlige nordmenn."
+    "q": "Dyre klimatiltak hjemme betyr lite globalt og belaster bare vanlige nordmenn.",
+    "ctx": "Dette argumenterer for at dyre klimatiltak hjemme betyr lite globalt og bare belaster vanlige nordmenn. Det står om national innsats er verdt kostnaden."
   },
   "no9a": {
-    "q": "Grunnrenteskatten på oppdrettslaks er rettferdig og bør bli stående."
+    "q": "Grunnrenteskatten på oppdrettslaks er rettferdig og bør bli stående.",
+    "ctx": "En ny grunnrenteskatt på oppdrettslaks deler de store overskuddene med fellesskapet, noe som utløste protester fra næringen. Dette forsvarer den som rettferdig. Det står om å skattlegge en voksende kystressurs."
   },
   "no9b": {
-    "q": "Lakseskatten straffer kystnæringen og driver investeringer ut av Norge."
+    "q": "Lakseskatten straffer kystnæringen og driver investeringer ut av Norge.",
+    "ctx": "Dette argumenterer for at lakseskatten straffer en livsviktig kystnæring og driver investeringer ut av Norge. Det står om fellesskapets del mot næringens konkurransekraft."
   },
   "no10a": {
-    "q": "Norges oljeformue bør brukes mer generøst på velferd her og nå."
+    "q": "Norges oljeformue bør brukes mer generøst på velferd her og nå.",
+    "ctx": "Norge sparer oljeinntektene i et stort oljefond og bruker bare en del hvert år. Dette vil bruke mer av den formuen på velferd nå. Det står om dagens behov mot fremtidige generasjoner."
   },
   "no10b": {
-    "q": "Å bruke mer av oljefondet nå ville drive inflasjon og frarøve fremtidige generasjoner."
+    "q": "Å bruke mer av oljefondet nå ville drive inflasjon og frarøve fremtidige generasjoner.",
+    "ctx": "Dette argumenterer for at å bruke mer av oljefondet nå ville drive inflasjon og frarøve fremtidige generasjoner formuen det skal bevare. Det står om budsjettdisiplin mot å bruke rikdommen."
   },
   "no11a": {
-    "q": "Norge bør verne ulv og andre rovdyr selv når de truer beitedyr."
+    "q": "Norge bør verne ulv og andre rovdyr selv når de truer beitedyr.",
+    "ctx": "Dette støtter å verne ulv og andre rovdyr selv når de truer sauehold — en bitter konflikt mellom vernere og bygdesamfunn. Det står om vilt mot levebrød."
   },
   "no11b": {
-    "q": "Bønder og bygdesamfunn kommer først; rovdyrbestanden må holdes bestemt nede."
+    "q": "Bønder og bygdesamfunn kommer først; rovdyrbestanden må holdes bestemt nede.",
+    "ctx": "Dette argumenterer for at bønder og bygdesamfunn kommer først, og at rovdyrbestanden må holdes bestemt nede. Det står om bygdenes levebrød mot biologisk mangfold."
   },
   "no12a": {
-    "q": "Den offentlige helsetjenesten må finansieres mye mer, og private klinikker begrenses."
+    "q": "Den offentlige helsetjenesten må finansieres mye mer, og private klinikker begrenses.",
+    "ctx": "Dette vil ha den offentlige helsetjenesten finansiert mye mer, med private klinikker begrenset. Det står om å bevare et helt offentlig system."
   },
   "no12b": {
-    "q": "Mer privat tilbud ville lette presset og korte ned ventetidene i det offentlige."
+    "q": "Mer privat tilbud ville lette presset og korte ned ventetidene i det offentlige.",
+    "ctx": "Dette argumenterer for at mer privat tilbud ville lette presset og korte ned ventetidene. Det står om privat behandling hjelper eller sementerer ulikhet."
   },
   "no13a": {
-    "q": "Transpersoner bør kunne endre juridisk kjønn ved egenerklæring."
+    "q": "Transpersoner bør kunne endre juridisk kjønn ved egenerklæring.",
+    "ctx": "Dette støtter at folk kan endre sitt juridiske kjønn ved egenerklæring, som anerkjennelse av transidentitet. Det står om kjønn defineres av identitet eller biologi."
   },
   "no13b": {
-    "q": "Juridisk kjønn kan ikke være en ren erklæringssak; den biologiske virkeligheten må gjelde."
+    "q": "Juridisk kjønn kan ikke være en ren erklæringssak; den biologiske virkeligheten må gjelde.",
+    "ctx": "Dette er det kjønnskritiske synet: at juridisk kjønn ikke kan hvile på en ren erklæring, og at den biologiske virkeligheten må gjelde. Det står om betydningen av juridisk kjønn."
   },
   "no14a": {
-    "q": "Islam er ikke forenlig med norske verdier."
+    "q": "Islam er ikke forenlig med norske verdier.",
+    "ctx": "Dette hevder at islam er uforenlig med norske verdier — et tema skjerpet av terrorangrepet fra høyreekstremt hold i 2011, hvis gjerningsmann viste til anti-islamsk ideologi. Kritikere kaller påstanden fordom. Det står om påstanden er legitim eller fordom."
   },
   "no14b": {
-    "q": "Norske muslimer er fullverdige medlemmer av samfunnet, og troen deres fortjener lik respekt."
+    "q": "Norske muslimer er fullverdige medlemmer av samfunnet, og troen deres fortjener lik respekt.",
+    "ctx": "Dette mener at norske muslimer er fullverdige medlemmer av samfunnet, hvis tro fortjener lik respekt. Det står om religiøs likhet mot å peke ut én tro."
   },
   "no15a": {
-    "q": "Noen etniske grupper er rett og slett mer tilbøyelige til kriminalitet og vold enn andre."
+    "q": "Noen etniske grupper er rett og slett mer tilbøyelige til kriminalitet og vold enn andre.",
+    "ctx": "Dette hevder at noen etniske grupper av natur er mer tilbøyelige til kriminalitet og vold — en påstand om et medfødt trekk, som forskningen avviser til fordel for sosiale faktorer. Det står om natur mot omstendigheter."
   },
   "no15b": {
-    "q": "Ingen etnisk gruppe er født kriminell; atferd skyldes omstendigheter, ikke blod."
+    "q": "Ingen etnisk gruppe er født kriminell; atferd skyldes omstendigheter, ikke blod.",
+    "ctx": "Dette argumenterer for at ingen etnisk gruppe er født kriminell og at atferd skyldes omstendigheter, ikke blod. Det står om å avvise en medfødt forklaring på kriminalitet."
   },
   "no16a": {
-    "q": "Fagforeninger og arbeidstakerrettigheter bør styrkes, og innleie begrenses."
+    "q": "Fagforeninger og arbeidstakerrettigheter bør styrkes, og innleie begrenses.",
+    "ctx": "Dette vil styrke fagforeninger og arbeidstakerrettigheter og begrense innleie fra bemanningsbyråer, slik den Ap-ledede regjeringen har gjort. Det står om trygge jobber mot fleksibel bemanning."
   },
   "no16b": {
-    "q": "Stive arbeidslivsregler og fagforeningsmakt koster arbeidsplasser og rammer små bedrifter."
+    "q": "Stive arbeidslivsregler og fagforeningsmakt koster arbeidsplasser og rammer små bedrifter.",
+    "ctx": "Dette argumenterer for at stive arbeidslivsregler og fagforeningsmakt koster arbeidsplasser og rammer små bedrifter. Det står om å beskytte arbeidstakere mot næringslivets fleksibilitet."
   },
   "no17a": {
-    "q": "Norge trenger strengere straffer og mer politi for å holde folk trygge."
+    "q": "Norge trenger strengere straffer og mer politi for å holde folk trygge.",
+    "ctx": "Dette argumenterer for at Norge trenger strengere straffer og mer politi for å holde folk trygge. Det står om strengere straff bedrer tryggheten."
   },
   "no17b": {
-    "q": "Stadig strengere straffer senker aldri kriminaliteten; forebygging og rehabilitering gjør det."
+    "q": "Stadig strengere straffer senker aldri kriminaliteten; forebygging og rehabilitering gjør det.",
+    "ctx": "Dette argumenterer for at stadig strengere straffer aldri senker kriminaliteten, mens forebygging og rehabilitering gjør det — Norges fengselsmodell med lav tilbakefallsrate er verdenskjent. Det står om hva som faktisk reduserer kriminalitet."
   },
   "no18a": {
-    "q": "Norge bør øke forsvarsbudsjettet og støtte Ukraina bestemt mot Russland."
+    "q": "Norge bør øke forsvarsbudsjettet og støtte Ukraina bestemt mot Russland.",
+    "ctx": "Dette støtter høyere forsvarsbudsjett og å støtte Ukraina bestemt mot Russland, som Norge deler en arktisk grense med. Det står om sikkerhet i et spent naboskap."
   },
   "no18b": {
-    "q": "Penger til forsvaret er penger som burde gå til velferd og klima hjemme."
+    "q": "Penger til forsvaret er penger som burde gå til velferd og klima hjemme.",
+    "ctx": "Dette argumenterer for at penger til forsvaret bør gå til velferd og klima hjemme. Det står om prioritering mellom forsvar og innenlandske behov."
   },
   "no19a": {
-    "q": "Norge overregulerer og overbeskatter næringslivet; staten bør trekke seg tilbake."
+    "q": "Norge overregulerer og overbeskatter næringslivet; staten bør trekke seg tilbake.",
+    "ctx": "Dette argumenterer for at Norge overregulerer og overbeskatter næringslivet, og at staten bør trekke seg tilbake. Det står om en lettere stat ville hjelpe økonomien."
   },
   "no19b": {
-    "q": "Å kutte regulering uthuler bare vernet av arbeidstakere, forbrukere og naturen."
+    "q": "Å kutte regulering uthuler bare vernet av arbeidstakere, forbrukere og naturen.",
+    "ctx": "Dette argumenterer for at å kutte regulering bare uthuler vernet av arbeidstakere, forbrukere og naturen. Det står om regler beskytter folk eller belaster næringslivet."
   },
   "no20a": {
-    "q": "Vinmonopolet og de strenge alkoholreglene bør beholdes."
+    "q": "Vinmonopolet og de strenge alkoholreglene bør beholdes.",
+    "ctx": "Vinmonopolet er statens alkoholmonopol; brennevin og vin selges bare i dets butikker. Dette vil beholde det og de strenge alkoholreglene av folkehelsehensyn. Det står om en formyndersk, men populær institusjon."
   },
   "no20b": {
-    "q": "Voksne kan ta egne valg; alkohol bør selges fritt i butikkene."
+    "q": "Voksne kan ta egne valg; alkohol bør selges fritt i butikkene.",
+    "ctx": "Dette argumenterer for at voksne kan ta egne valg og at alkohol bør selges fritt i vanlige butikker. Det står om personlig frihet mot folkehelsekontroll."
   },
   "no21a": {
-    "q": "Retten til abort bør utvides, for eksempel til uke 18."
+    "q": "Retten til abort bør utvides, for eksempel til uke 18.",
+    "ctx": "Dette vil utvide retten til abort, for eksempel fra uke 12 til uke 18, slik det nylig ble diskutert. Det står om å utvide abortretten."
   },
   "no21b": {
-    "q": "Å utvide abortgrensen går for langt og forringer menneskelivets verdi."
+    "q": "Å utvide abortgrensen går for langt og forringer menneskelivets verdi.",
+    "ctx": "Dette argumenterer for at å utvide abortgrensen går for langt og forringer menneskelivets verdi. Det står om det ufødte livets moralske status."
   },
   "no22a": {
-    "q": "Bruk av narkotika bør avkriminaliseres og behandles som helse (rusreformen Norge sa nei til)."
+    "q": "Bruk av narkotika bør avkriminaliseres og behandles som helse (rusreformen Norge sa nei til).",
+    "ctx": "Stortinget avviste en foreslått rusreform som skulle avkriminalisere personlig narkotikabruk. Dette støtter å behandle rusbruk som helse fremfor kriminalitet. Det står om straff mot skadereduksjon."
   },
   "no22b": {
-    "q": "Å avkriminalisere narkotika sender feil signal og ville forverre avhengighet."
+    "q": "Å avkriminalisere narkotika sender feil signal og ville forverre avhengighet.",
+    "ctx": "Dette argumenterer for at å avkriminalisere narkotika sender feil signal og ville forverre avhengighet. Det står om en mildere linje hjelper eller skader."
   },
   "no23a": {
-    "q": "Samiske rettigheter til land, språk og reindrift bør styrkes."
+    "q": "Samiske rettigheter til land, språk og reindrift bør styrkes.",
+    "ctx": "Samene er Norges urfolk, og saker som Fosen-vindkraftsaken setter deres rettigheter opp mot utbygging. Dette vil styrke deres rettigheter til land, språk og reindrift. Det står om urfolks rettigheter."
   },
   "no23b": {
-    "q": "Særlige samiske rettigheter over land og ressurser har gått for langt og hemmer utvikling."
+    "q": "Særlige samiske rettigheter over land og ressurser har gått for langt og hemmer utvikling.",
+    "ctx": "Dette argumenterer for at særlige samiske rettigheter over land og ressurser har gått for langt og hemmer utvikling. Det står om urfolks rettigheter mot utvikling."
   },
   "no24a": {
-    "q": "Innvandrere bør tilpasse seg norsk kultur og norske verdier, ikke omvendt."
+    "q": "Innvandrere bør tilpasse seg norsk kultur og norske verdier, ikke omvendt.",
+    "ctx": "Dette argumenterer for at innvandrere bør tilpasse seg norsk kultur og norske verdier fremfor omvendt. Det står om hvor mye kulturell tilpasning man skal forvente av nyankomne."
   },
   "no24b": {
-    "q": "En levende kultur er alltid blandet; å kreve assimilering forarmer Norge."
+    "q": "En levende kultur er alltid blandet; å kreve assimilering forarmer Norge.",
+    "ctx": "Dette argumenterer for at en levende kultur alltid er blandet, så å kreve assimilering forarmer Norge. Det står om integrering mot multikulturalisme."
   },
   "no25a": {
-    "q": "Allmennkringkasteren NRK er lisenspengene verdt og må forbli uavhengig."
+    "q": "Allmennkringkasteren NRK er lisenspengene verdt og må forbli uavhengig.",
+    "ctx": "NRK er Norges allmennkringkaster. Dette argumenterer for at den er pengene verdt og må forbli uavhengig. Det står om verdien og uavhengigheten til allmennkringkastingen."
   },
   "no25b": {
-    "q": "NRK er oppblåst og ensidig, og finansieringen bør kuttes kraftig."
+    "q": "NRK er oppblåst og ensidig, og finansieringen bør kuttes kraftig.",
+    "ctx": "Dette argumenterer for at NRK er oppblåst og ensidig og at finansieringen bør kuttes kraftig. Det står om allmennkringkastingen fortjener finansieringen sin."
   },
   "no26a": {
-    "q": "Vern av urrørt natur bør prioriteres over nye vindparker og gruver."
+    "q": "Vern av urrørt natur bør prioriteres over nye vindparker og gruver.",
+    "ctx": "Vindparker og gruver griper stadig mer inn i norsk villmark. Dette prioriterer vern av urrørt natur foran dem. Det står om uberørt natur mot ny energi og industri."
   },
   "no26b": {
-    "q": "Norge trenger ny energi og industri, selv om noe natur må vike."
+    "q": "Norge trenger ny energi og industri, selv om noe natur må vike.",
+    "ctx": "Dette argumenterer for at Norge trenger ny energi og industri, selv om noe natur må vike. Det står om utvikling mot vern."
   },
   "no27a": {
-    "q": "Private skoler bør begrenses; den offentlige skolen må komme først."
+    "q": "Private skoler bør begrenses; den offentlige skolen må komme først.",
+    "ctx": "Dette argumenterer for at private skoler bør begrenses og at den offentlige skolen må komme først, en langvarig posisjon for Ap og venstresiden. Det står om en samlet offentlig skole mot skolevalg."
   },
   "no27b": {
-    "q": "Foreldre bør stå fritt til å velge private og alternative skoler for barna sine."
+    "q": "Foreldre bør stå fritt til å velge private og alternative skoler for barna sine.",
+    "ctx": "Dette argumenterer for at foreldre bør stå fritt til å velge private og alternative skoler for barna sine. Det står om skolevalg mot en felles offentlig skole."
   },
   "no28a": {
-    "q": "Den åpne globale frihandelen har tjent Norge godt og bør forsvares."
+    "q": "Den åpne globale frihandelen har tjent Norge godt og bør forsvares.",
+    "ctx": "Dette forsvarer den åpne globale frihandelen som noe som har tjent Norges eksportøkonomi godt. Det står om verdien av økonomisk åpenhet."
   },
   "no28b": {
-    "q": "Globaliseringen gjør Norge for avhengig og undergraver lokal produksjon og matsikkerhet."
+    "q": "Globaliseringen gjør Norge for avhengig og undergraver lokal produksjon og matsikkerhet.",
+    "ctx": "Dette argumenterer for at globaliseringen gjør Norge for avhengig og undergraver lokal produksjon og matsikkerhet. Det står om selvforsyning mot åpne markeder."
   },
   "no29a": {
-    "q": "Syke og arbeidsledige møtes med for mye mistillit; ytelsene bør være høyere."
+    "q": "Syke og arbeidsledige møtes med for mye mistillit; ytelsene bør være høyere.",
+    "ctx": "Dette argumenterer for at syke og arbeidsledige møtes med for mye mistillit og at ytelsene bør være høyere. Det står om verdighet mot kontroll av ytelser."
   },
   "no29b": {
-    "q": "Generøse ytelser svekker arbeidslysten og må holdes i sjakk."
+    "q": "Generøse ytelser svekker arbeidslysten og må holdes i sjakk.",
+    "ctx": "Dette argumenterer for at generøse ytelser svekker arbeidslysten og må holdes i sjakk. Det står om generøsitet mot arbeidsincitament."
   },
   "no30a": {
-    "q": "Norge bør bruke flere bindende folkeavstemninger om store spørsmål."
+    "q": "Norge bør bruke flere bindende folkeavstemninger om store spørsmål.",
+    "ctx": "Dette støtter å bruke flere bindende folkeavstemninger om store spørsmål. Det står om de store valgene tilhører velgerne eller de folkevalgte."
   },
   "no30b": {
-    "q": "Folkeavstemninger reduserer komplekse spørsmål til slagord og kapres lett av populister."
+    "q": "Folkeavstemninger reduserer komplekse spørsmål til slagord og kapres lett av populister.",
+    "ctx": "Dette argumenterer for at folkeavstemninger reduserer komplekse spørsmål til slagord og lett kapres av populister. Det står om direkte avstemninger er kloke."
   },
   "no31a": {
-    "q": "Staten bør gripe direkte inn med støtte og pristiltak mot dyrtiden."
+    "q": "Staten bør gripe direkte inn med støtte og pristiltak mot dyrtiden.",
+    "ctx": "Dette vil at staten griper direkte inn med støtte og pristiltak mot den høye dyrtiden. Det står om hvor mye staten skal dempe prisene."
   },
   "no31b": {
-    "q": "Støtteordninger og pristiltak nærer bare inflasjonen; de løser ikke årsaken."
+    "q": "Støtteordninger og pristiltak nærer bare inflasjonen; de løser ikke årsaken.",
+    "ctx": "Dette argumenterer for at støtteordninger og pristiltak bare nærer inflasjonen uten å løse årsaken. Det står om inngrep hjelper eller forverrer problemet."
   },
   "no32a": {
-    "q": "Noen raser er rett og slett mer intelligente eller dyktige enn andre."
+    "q": "Noen raser er rett og slett mer intelligente eller dyktige enn andre.",
+    "ctx": "Dette er rasesupremaki — troen på at noen raser av natur er mer intelligente eller dyktige. Det drev nazismen, og moderne genetikk finner ingen grunnlag for det. Det står om en avfældiget, farlig idé."
   },
   "no32b": {
-    "q": "Det finnes ikke noe rasehierarki; ideen er pseudovitenskap med en skammelig historie."
+    "q": "Det finnes ikke noe rasehierarki; ideen er pseudovitenskap med en skammelig historie.",
+    "ctx": "Dette slår fast prinsippet om menneskelig likeverd: ingen rase er overlegen, og idéen er avfældiget pseudovitenskap med en skammelig historie. Det står om det moralske grunnlaget for ikke-diskriminering."
   },
   "no33a": {
-    "q": "Gamle tradisjoner bærer generasjoners visdom og bør ikke kastes lettvint."
+    "q": "Gamle tradisjoner bærer generasjoners visdom og bør ikke kastes lettvint.",
+    "ctx": "Dette er den konservative tradisjonsfilosofien i Edmund Burkes ånd: at gamle skikker rommer generasjoners oppsamlede visdom, så endring bør skje gradvis fremfor å kaste det som virker for uutprøvde ideer."
   },
   "no33b": {
-    "q": "Å dyrke tradisjon lar bare de døde styre de levende og blokkerer nødvendig endring."
+    "q": "Å dyrke tradisjon lar bare de døde styre de levende og blokkerer nødvendig endring.",
+    "ctx": "Dette er det progressive svaret i Thomas Paines ånd om at de døde ikke skal styre de levende: å dyrke tradisjon lar bare fortidens fordommer blokkere nødvendig endring."
   },
   "no34a": {
-    "q": "Et godt samfunn avhenger mer av personlig ansvar enn av statlig støtte."
+    "q": "Et godt samfunn avhenger mer av personlig ansvar enn av statlig støtte.",
+    "ctx": "Dette gjenspeiler en sentral mer høyreorientert verdi: at et godt samfunn hviler mest på personlig ansvar fremfor statlig støtte."
   },
   "no34b": {
-    "q": "Å gi individet skylden for problemer systemet skaper, er hvordan de privilegerte unnskylder andres lidelse."
+    "q": "Å gi individet skylden for problemer systemet skaper, er hvordan de privilegerte unnskylder andres lidelse.",
+    "ctx": "Dette gjenspeiler en sentral mer venstreorientert verdi: at mange problemer skyldes urettferdige systemer utenfor egen kontroll, så å gi individet skylden lar de privilegerte ignorere andres lidelse."
   },
   "no35a": {
-    "q": "Staten bør gjøre mye mer for å hjelpe unge inn på boligmarkedet."
+    "q": "Staten bør gjøre mye mer for å hjelpe unge inn på boligmarkedet.",
+    "ctx": "Bolig er blitt uoverkommelig for unge nordmenn i byer som Oslo. Dette vil at staten gjør mye mer for å hjelpe dem inn på markedet. Det står om en generasjonskløft i boligmarkedet."
   },
   "no35b": {
-    "q": "Tung statlig innblanding i boligmarkedet forstyrrer markedet og gjør mer skade enn nytte."
+    "q": "Tung statlig innblanding i boligmarkedet forstyrrer markedet og gjør mer skade enn nytte.",
+    "ctx": "Dette argumenterer for at tung statlig innblanding i boligmarkedet forstyrrer markedet og gjør mer skade enn nytte. Det står om staten eller markedet skal føre an."
   }
 };
 
@@ -1345,7 +1420,8 @@ const BANK = [
       "V": -1,
       "MDG": -2
     },
-    "dec": true
+    "dec": true,
+    "ctx": "Oil and gas made Norway one of the world's richest countries and fund its vast sovereign wealth fund. This wants exploration and production to continue for decades. The stake is the future of Norway's defining industry."
   },
   {
     "id": "no1b",
@@ -1367,7 +1443,8 @@ const BANK = [
       "V": 1,
       "MDG": 2
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues Norway must wind down oil and gas and stop searching for new fields to meet its climate responsibilities — an awkward tension for a petroleum state. The stake is climate duty versus the oil economy."
   },
   {
     "id": "no2a",
@@ -1389,7 +1466,8 @@ const BANK = [
       "V": -1.5,
       "MDG": -0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "After electricity prices spiked following the energy crisis, this wants the state to cap them and take political control of power exports abroad. The stake is protecting consumers versus the open power market."
   },
   {
     "id": "no2b",
@@ -1411,7 +1489,8 @@ const BANK = [
       "V": 1.5,
       "MDG": 0.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues interfering with the power market and exports would undermine investment and betray Norway's European allies who rely on its energy. The stake is short-term relief versus long-term reliability."
   },
   {
     "id": "no3a",
@@ -1433,7 +1512,8 @@ const BANK = [
       "MDG": 1,
       "g": 0
     },
-    "dec": true
+    "dec": true,
+    "ctx": "The wealth tax (formuesskatt) taxes the assets of the richest, and Norway is one of few countries to keep one. This wants it kept and increased. The stake is taxing wealth even as some rich Norwegians emigrate."
   },
   {
     "id": "no3b",
@@ -1455,7 +1535,8 @@ const BANK = [
       "MDG": -1,
       "g": 0
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues the wealth tax is driving Norway's entrepreneurs to lower-tax countries like Switzerland — a real recent exodus — and should be abolished. The stake is whether the tax raises revenue or repels it."
   },
   {
     "id": "no4a",
@@ -1476,7 +1557,8 @@ const BANK = [
       "V": -1,
       "MDG": -1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues immigration to Norway is too high and should be cut sharply — the core issue of the Progress Party. The stake is the level of immigration."
   },
   {
     "id": "no4b",
@@ -1497,7 +1579,8 @@ const BANK = [
       "V": 1,
       "MDG": 1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This is the pro-immigration view: that immigrants strengthen Norway's economy and society and that asylum is a humanitarian duty. The stake is immigration's role."
   },
   {
     "id": "no5a",
@@ -1518,7 +1601,8 @@ const BANK = [
       "R": 1,
       "V": -1,
       "MDG": -0.5
-    }
+    },
+    "ctx": "This argues power, jobs, and services should move out of Oslo and back to the rural 'districts' — a deep divide in Norwegian politics driven by the Centre Party. The stake is the city-countryside balance."
   },
   {
     "id": "no5b",
@@ -1539,7 +1623,8 @@ const BANK = [
       "R": -1,
       "V": 1,
       "MDG": 0.5
-    }
+    },
+    "ctx": "This argues concentrating activity where people actually live and work is more efficient than propping up depopulating districts with subsidies. The stake is efficiency versus keeping the regions alive."
   },
   {
     "id": "no6a",
@@ -1560,7 +1645,8 @@ const BANK = [
       "R": 0.5,
       "V": -1.5,
       "MDG": -2
-    }
+    },
+    "ctx": "'Bompenger' (road tolls) fund roads and are a perennial hot-button issue that even spawned protest parties. This calls them an unfair burden on ordinary people and wants them scrapped. The stake is a populist cost-of-living flashpoint."
   },
   {
     "id": "no6b",
@@ -1581,7 +1667,8 @@ const BANK = [
       "R": -0.5,
       "V": 1.5,
       "MDG": 2
-    }
+    },
+    "ctx": "This argues tolls make polluters and road users pay their fair share and are needed to fund the roads. The stake is user-pays fairness versus affordability."
   },
   {
     "id": "no7a",
@@ -1602,7 +1689,8 @@ const BANK = [
       "R": -2,
       "V": 1.5,
       "MDG": 0.5
-    }
+    },
+    "ctx": "The EEA agreement (EØS) gives non-EU Norway access to the single market by adopting most EU rules without a vote on them. This wants it kept, as most business does. The stake is market access versus influence."
   },
   {
     "id": "no7b",
@@ -1623,7 +1711,8 @@ const BANK = [
       "R": 2,
       "V": -1.5,
       "MDG": -0.5
-    }
+    },
+    "ctx": "This argues the EEA agreement hands too much power over Norway to Brussels — rules Norway must obey but never voted on — and should be renegotiated or scrapped. The stake is sovereignty versus market access."
   },
   {
     "id": "no8a",
@@ -1643,7 +1732,8 @@ const BANK = [
       "V": 1,
       "MDG": 2,
       "g": 0
-    }
+    },
+    "ctx": "This says Norway — which grew rich on the oil the world burns — must cut its own emissions far faster, even at economic cost. The stake is climate responsibility for a petroleum state."
   },
   {
     "id": "no8b",
@@ -1663,7 +1753,8 @@ const BANK = [
       "V": -1,
       "MDG": -2,
       "g": 0
-    }
+    },
+    "ctx": "This argues costly climate measures at home mean little globally and just burden ordinary Norwegians. The stake is whether national action is worth the cost."
   },
   {
     "id": "no9a",
@@ -1684,7 +1775,8 @@ const BANK = [
       "V": -0.5,
       "MDG": 1,
       "g": 0
-    }
+    },
+    "ctx": "A new 'ground rent' tax on salmon farming shares its large profits with the public, sparking industry backlash. This defends it as fair. The stake is taxing a booming coastal resource."
   },
   {
     "id": "no9b",
@@ -1705,7 +1797,8 @@ const BANK = [
       "V": 0.5,
       "MDG": -1,
       "g": 0
-    }
+    },
+    "ctx": "This argues the salmon tax punishes a vital coastal industry and drives investment out of Norway. The stake is community wealth-sharing versus industry competitiveness."
   },
   {
     "id": "no10a",
@@ -1725,7 +1818,8 @@ const BANK = [
       "V": -1,
       "MDG": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "Norway saves its oil income in a huge sovereign wealth fund, spending only a slice each year. This wants more of that wealth spent on welfare now. The stake is present needs versus future generations."
   },
   {
     "id": "no10b",
@@ -1745,7 +1839,8 @@ const BANK = [
       "V": 1,
       "MDG": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues spending more of the oil fund now would fuel inflation and rob future generations of the wealth it is meant to preserve. The stake is fiscal discipline versus spending the windfall."
   },
   {
     "id": "no11a",
@@ -1765,7 +1860,8 @@ const BANK = [
       "R": 0.5,
       "V": 1,
       "MDG": 2
-    }
+    },
+    "ctx": "This supports protecting wolves and other predators even when they threaten sheep farming — a bitter conflict between conservationists and rural communities. The stake is wildlife versus livelihoods."
   },
   {
     "id": "no11b",
@@ -1785,7 +1881,8 @@ const BANK = [
       "R": -0.5,
       "V": -1,
       "MDG": -2
-    }
+    },
+    "ctx": "This argues farmers and rural communities come first and predator numbers must be kept firmly down. The stake is rural livelihoods versus biodiversity."
   },
   {
     "id": "no12a",
@@ -1806,7 +1903,8 @@ const BANK = [
       "V": -0.5,
       "MDG": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This wants public healthcare funded far more, with private clinics rolled back. The stake is preserving a fully public system."
   },
   {
     "id": "no12b",
@@ -1827,7 +1925,8 @@ const BANK = [
       "V": 0.5,
       "MDG": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues more private provision would relieve pressure and cut waiting times. The stake is whether private care helps or entrenches inequality."
   },
   {
     "id": "no13a",
@@ -1847,7 +1946,8 @@ const BANK = [
       "R": 1.5,
       "V": 1,
       "MDG": 1.5
-    }
+    },
+    "ctx": "This supports letting people change their legal gender by self-declaration, recognising trans identity. The stake is whether gender is defined by identity or biology."
   },
   {
     "id": "no13b",
@@ -1867,7 +1967,8 @@ const BANK = [
       "R": -1.5,
       "V": -1,
       "MDG": -1.5
-    }
+    },
+    "ctx": "This is the gender-critical view: that legal sex can't rest on mere declaration and that biological reality must prevail. The stake is the meaning of legal sex."
   },
   {
     "id": "no14a",
@@ -1888,7 +1989,8 @@ const BANK = [
       "V": -1,
       "MDG": -1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This argues Islam clashes with Norwegian values — a theme sharpened by the 2011 far-right terror attack, whose perpetrator cited anti-Islam ideology. Critics call the claim prejudice. The stake is whether the concern is legitimate or bigotry."
   },
   {
     "id": "no14b",
@@ -1909,7 +2011,8 @@ const BANK = [
       "V": 1,
       "MDG": 1.5
     },
-    "dec": true
+    "dec": true,
+    "ctx": "This holds Norwegian Muslims to be full members of society whose faith deserves equal respect. The stake is religious equality versus singling out one faith."
   },
   {
     "id": "no15a",
@@ -1930,7 +2033,8 @@ const BANK = [
       "R": -2,
       "V": -1,
       "MDG": -1.5
-    }
+    },
+    "ctx": "This claims some ethnic groups are inherently more prone to crime and violence — asserting an innate trait, which research rejects in favour of social factors. The stake is nature versus circumstance."
   },
   {
     "id": "no15b",
@@ -1951,7 +2055,8 @@ const BANK = [
       "R": 2,
       "V": 1,
       "MDG": 1.5
-    }
+    },
+    "ctx": "This argues no ethnic group is born criminal and that behaviour comes from circumstances, not blood. The stake is rejecting an innate explanation for crime."
   },
   {
     "id": "no16a",
@@ -1972,7 +2077,8 @@ const BANK = [
       "V": -1,
       "MDG": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This wants unions and workers' rights strengthened and temporary staffing agencies ('innleie') restricted, as the Labour-led government has done. The stake is secure jobs versus flexible hiring."
   },
   {
     "id": "no16b",
@@ -1993,7 +2099,8 @@ const BANK = [
       "V": 1,
       "MDG": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues rigid labour rules and union power cost jobs and hurt small businesses. The stake is protecting workers versus business flexibility."
   },
   {
     "id": "no17a",
@@ -2013,7 +2120,8 @@ const BANK = [
       "R": -1.5,
       "V": -0.5,
       "MDG": -1
-    }
+    },
+    "ctx": "This argues Norway needs tougher sentences and more police to keep people safe. The stake is whether harsher punishment improves safety."
   },
   {
     "id": "no17b",
@@ -2033,7 +2141,8 @@ const BANK = [
       "R": 1.5,
       "V": 0.5,
       "MDG": 1
-    }
+    },
+    "ctx": "This argues ever tougher sentences never cut crime, while prevention and rehabilitation do — Norway's low-reoffending prison model is world-famous. The stake is what actually reduces crime."
   },
   {
     "id": "no18a",
@@ -2053,7 +2162,8 @@ const BANK = [
       "SV": -1,
       "R": -2,
       "V": 1
-    }
+    },
+    "ctx": "This supports higher defence spending and firmly backing Ukraine against Russia, with which Norway shares an Arctic border. The stake is security in a tense neighbourhood."
   },
   {
     "id": "no18b",
@@ -2073,7 +2183,8 @@ const BANK = [
       "SV": 1,
       "R": 2,
       "V": -1
-    }
+    },
+    "ctx": "This argues money for the military should go to welfare and climate at home. The stake is priorities between defence and domestic needs."
   },
   {
     "id": "no19a",
@@ -2094,7 +2205,8 @@ const BANK = [
       "R": -2,
       "V": 1,
       "MDG": -1
-    }
+    },
+    "ctx": "This argues Norway over-regulates and over-taxes business and the state should step back. The stake is whether a lighter state would help the economy."
   },
   {
     "id": "no19b",
@@ -2115,7 +2227,8 @@ const BANK = [
       "R": 2,
       "V": -1,
       "MDG": 1
-    }
+    },
+    "ctx": "This argues cutting regulation just erodes protection for workers, consumers, and nature. The stake is whether rules protect people or burden business."
   },
   {
     "id": "no20a",
@@ -2135,7 +2248,8 @@ const BANK = [
       "R": 1,
       "V": -0.5,
       "MDG": 0.5
-    }
+    },
+    "ctx": "'Vinmonopolet' is the state alcohol monopoly; spirits and wine can only be sold in its shops. This wants it and strict alcohol rules kept, on public-health grounds. The stake is a paternalist but popular institution."
   },
   {
     "id": "no20b",
@@ -2155,7 +2269,8 @@ const BANK = [
       "R": -1,
       "V": 0.5,
       "MDG": -0.5
-    }
+    },
+    "ctx": "This argues adults can make their own choices and alcohol should be sold freely in ordinary shops. The stake is personal freedom versus public-health control."
   },
   {
     "id": "no21a",
@@ -2176,7 +2291,8 @@ const BANK = [
       "R": 1.5,
       "V": 0.5,
       "MDG": 1
-    }
+    },
+    "ctx": "This wants the right to abortion extended, for example from 12 to 18 weeks, as recently debated. The stake is expanding abortion rights."
   },
   {
     "id": "no21b",
@@ -2197,7 +2313,8 @@ const BANK = [
       "R": -1.5,
       "V": -0.5,
       "MDG": -1
-    }
+    },
+    "ctx": "This argues extending the abortion limit goes too far and devalues human life. The stake is the moral status of the unborn."
   },
   {
     "id": "no22a",
@@ -2218,7 +2335,8 @@ const BANK = [
       "R": 1.5,
       "V": 2,
       "MDG": 1.5
-    }
+    },
+    "ctx": "Norway's parliament rejected a proposed reform to decriminalise personal drug use. This supports treating drug use as a health issue rather than a crime. The stake is punishment versus harm reduction."
   },
   {
     "id": "no22b",
@@ -2239,7 +2357,8 @@ const BANK = [
       "R": -1.5,
       "V": -2,
       "MDG": -1.5
-    }
+    },
+    "ctx": "This argues decriminalising drugs sends the wrong signal and would worsen addiction. The stake is whether a softer approach helps or harms."
   },
   {
     "id": "no23a",
@@ -2260,7 +2379,8 @@ const BANK = [
       "R": 1.5,
       "V": 1,
       "MDG": 1.5
-    }
+    },
+    "ctx": "The Sami are Norway's indigenous people, and disputes like the Fosen wind-farm case pit their rights against development. This wants their rights to land, language, and reindeer herding strengthened. The stake is indigenous rights."
   },
   {
     "id": "no23b",
@@ -2281,7 +2401,8 @@ const BANK = [
       "R": -1.5,
       "V": -1,
       "MDG": -1.5
-    }
+    },
+    "ctx": "This argues special Sami rights over land and resources have gone too far and hold back development. The stake is indigenous rights versus development."
   },
   {
     "id": "no24a",
@@ -2302,7 +2423,8 @@ const BANK = [
       "R": -1.5,
       "V": -0.5,
       "MDG": -1
-    }
+    },
+    "ctx": "This argues immigrants should adapt to Norwegian culture and values rather than the reverse. The stake is how much cultural conformity to expect of newcomers."
   },
   {
     "id": "no24b",
@@ -2323,7 +2445,8 @@ const BANK = [
       "R": 1.5,
       "V": 0.5,
       "MDG": 1
-    }
+    },
+    "ctx": "This argues a living culture is always mixed, so demanding assimilation impoverishes Norway. The stake is integration versus multiculturalism."
   },
   {
     "id": "no25a",
@@ -2342,7 +2465,8 @@ const BANK = [
       "R": 0.5,
       "MDG": 1,
       "g": 0
-    }
+    },
+    "ctx": "NRK is Norway's public broadcaster. This argues it is worth its funding and must stay independent. The stake is the value and independence of public media."
   },
   {
     "id": "no25b",
@@ -2361,7 +2485,8 @@ const BANK = [
       "R": -0.5,
       "MDG": -1,
       "g": 0
-    }
+    },
+    "ctx": "This argues NRK is bloated and biased and its funding should be cut sharply. The stake is whether public broadcasting deserves its funding."
   },
   {
     "id": "no26a",
@@ -2382,7 +2507,8 @@ const BANK = [
       "R": 0.5,
       "V": 0.5,
       "MDG": 2
-    }
+    },
+    "ctx": "Wind farms and mines increasingly encroach on Norway's wilderness. This puts protecting untouched nature ahead of them. The stake is pristine nature versus new energy and industry."
   },
   {
     "id": "no26b",
@@ -2403,7 +2529,8 @@ const BANK = [
       "R": -0.5,
       "V": -0.5,
       "MDG": -2
-    }
+    },
+    "ctx": "This argues Norway needs new energy and industry, even if some nature must give way. The stake is development versus conservation."
   },
   {
     "id": "no27a",
@@ -2424,7 +2551,8 @@ const BANK = [
       "R": 1.5,
       "V": -1,
       "MDG": 0.5
-    }
+    },
+    "ctx": "This argues private schools should be limited and public schooling must come first, a long-standing Labour and left position. The stake is a unified public school versus school choice."
   },
   {
     "id": "no27b",
@@ -2445,7 +2573,8 @@ const BANK = [
       "R": -1.5,
       "V": 1,
       "MDG": -0.5
-    }
+    },
+    "ctx": "This argues parents should be free to choose private and alternative schools for their children. The stake is school choice versus a common public school."
   },
   {
     "id": "no28a",
@@ -2466,7 +2595,8 @@ const BANK = [
       "R": -1.5,
       "V": 1.5,
       "MDG": -0.5
-    }
+    },
+    "ctx": "This defends open global free trade as having served Norway's exporting economy well. The stake is the value of economic openness."
   },
   {
     "id": "no28b",
@@ -2487,7 +2617,8 @@ const BANK = [
       "R": 1.5,
       "V": -1.5,
       "MDG": 0.5
-    }
+    },
+    "ctx": "This argues globalisation makes Norway too dependent and undermines local production and food security. The stake is self-sufficiency versus open markets."
   },
   {
     "id": "no29a",
@@ -2508,7 +2639,8 @@ const BANK = [
       "V": -1,
       "MDG": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues the sick and unemployed are met with too much suspicion and that benefits should be higher. The stake is dignity versus policing of welfare."
   },
   {
     "id": "no29b",
@@ -2529,7 +2661,8 @@ const BANK = [
       "V": 1,
       "MDG": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues generous benefits weaken the incentive to work and must be kept in check. The stake is generosity versus work incentives."
   },
   {
     "id": "no30a",
@@ -2548,7 +2681,8 @@ const BANK = [
       "Sp": 1,
       "SV": 0.5,
       "R": 1
-    }
+    },
+    "ctx": "This supports using more binding referendums on major questions. The stake is whether big choices belong to voters or representatives."
   },
   {
     "id": "no30b",
@@ -2567,7 +2701,8 @@ const BANK = [
       "Sp": -1,
       "SV": -0.5,
       "R": -1
-    }
+    },
+    "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by populists. The stake is whether direct votes are wise."
   },
   {
     "id": "no31a",
@@ -2587,7 +2722,8 @@ const BANK = [
       "R": 2,
       "V": -1,
       "g": 0
-    }
+    },
+    "ctx": "This wants the state to intervene directly with support and price measures against the high cost of living. The stake is how far the state should cushion prices."
   },
   {
     "id": "no31b",
@@ -2607,7 +2743,8 @@ const BANK = [
       "R": -2,
       "V": 1,
       "g": 0
-    }
+    },
+    "ctx": "This argues handouts and price measures just fuel inflation without fixing the cause. The stake is whether intervention helps or worsens the problem."
   },
   {
     "id": "no32a",
@@ -2628,7 +2765,8 @@ const BANK = [
       "R": -2,
       "V": -1.5,
       "MDG": -2
-    }
+    },
+    "ctx": "This is racial supremacism — the belief that some races are innately more intelligent or capable. It drove Nazism, and modern genetics finds no basis for it. The stake is a discredited, dangerous idea."
   },
   {
     "id": "no32b",
@@ -2649,7 +2787,8 @@ const BANK = [
       "R": 2,
       "V": 1.5,
       "MDG": 2
-    }
+    },
+    "ctx": "This states the principle of human equality: no race is superior, and the idea is discredited pseudo-science with a shameful history. The stake is the moral baseline of anti-discrimination."
   },
   {
     "id": "no33a",
@@ -2669,7 +2808,8 @@ const BANK = [
       "R": -1,
       "V": -0.5,
       "MDG": -0.5
-    }
+    },
+    "ctx": "This is the conservative philosophy of tradition, in the spirit of Edmund Burke: that long-standing customs hold the accumulated wisdom of generations, so change should be gradual rather than discarding what works for untested ideas."
   },
   {
     "id": "no33b",
@@ -2689,7 +2829,8 @@ const BANK = [
       "R": 1,
       "V": 0.5,
       "MDG": 0.5
-    }
+    },
+    "ctx": "This is the progressive reply, echoing Thomas Paine that the dead should not govern the living: that venerating tradition just lets the prejudices of the past block overdue change."
   },
   {
     "id": "no34a",
@@ -2709,7 +2850,8 @@ const BANK = [
       "R": -2,
       "V": 1,
       "MDG": -1
-    }
+    },
+    "ctx": "This reflects a core right-leaning value: that a good society rests mainly on personal responsibility rather than government support."
   },
   {
     "id": "no34b",
@@ -2729,7 +2871,8 @@ const BANK = [
       "R": 2,
       "V": -1,
       "MDG": 1
-    }
+    },
+    "ctx": "This reflects a core left-leaning value: that many problems come from unfair systems beyond personal control, so blaming individuals lets the comfortable ignore others' suffering."
   },
   {
     "id": "no35a",
@@ -2750,7 +2893,8 @@ const BANK = [
       "V": -0.5,
       "MDG": 0.5,
       "g": 0
-    }
+    },
+    "ctx": "Housing has become unaffordable for young Norwegians in cities like Oslo. This wants the state to do far more to help them into the market. The stake is a generational housing divide."
   },
   {
     "id": "no35b",
@@ -2771,7 +2915,8 @@ const BANK = [
       "V": 0.5,
       "MDG": -0.5,
       "g": 0
-    }
+    },
+    "ctx": "This argues heavy state intervention in housing distorts the market and does more harm than good. The stake is whether the state or the market should lead."
   }
 ];
 
@@ -3265,6 +3410,6 @@ window.getQuestion = getQuestion;
 window.currentLang = currentLang;
 applyLang();
 </script>
-<script src="/engine.js?v=1.1.7"></script>
+<script src="/engine.js?v=1.1.9"></script>
 </body>
 </html>

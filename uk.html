@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.7">
+<link rel="stylesheet" href="/style.css?v=1.1.9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,6 +181,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -668,6 +669,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -810,6 +812,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -923,6 +926,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1069,6 +1073,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1128,7 +1133,7 @@ const BANK = [
       "snp": 1.5,
       "g": 0
     },
-    "ctx": "The NHS is Britain's public health service, free when you use it and funded by taxes. This wants it kept public, with private involvement reduced."
+    "ctx": "The NHS, founded in 1948, provides healthcare free at the point of use, funded by taxes — a source of national pride. This wants it kept public, with private involvement rolled back. It faces record waiting lists and funding strain. The stake is preserving a fully public health service."
   },
   {
     "id": "uk1b",
@@ -1149,7 +1154,7 @@ const BANK = [
       "snp": -1.5,
       "g": 0
     },
-    "ctx": "This argues the NHS is an inefficient monopoly, and that more private provision and competition would cut its long waiting lists."
+    "ctx": "This argues the NHS has become an inefficient state monopoly whose waiting lists cost lives, and that more private provision and competition would speed up care, as in many European mixed systems. The stake is whether markets could fix the NHS or would undermine it."
   },
   {
     "id": "uk2a",
@@ -1171,7 +1176,7 @@ const BANK = [
       "snp": -1
     },
     "dec": true,
-    "ctx": "This argues immigration to Britain is far too high and is changing the country too fast — a central concern of the right."
+    "ctx": "This argues immigration to Britain — which hit record net levels after Brexit — is far too high and is changing the country too fast. It is a defining issue for the right and drove support for Reform UK. The stake is how much immigration Britain can absorb."
   },
   {
     "id": "uk2b",
@@ -1193,7 +1198,7 @@ const BANK = [
       "snp": 1
     },
     "dec": true,
-    "ctx": "This is the pro-immigration view: that migrants keep the NHS, care sector, and economy running, so Britain needs them."
+    "ctx": "This is the pro-immigration view: that migrants staff the NHS, care homes, farms, and hospitality, and that an ageing Britain depends on them. Supporters note the health service would collapse without foreign-born workers. The stake is immigration's role in keeping Britain running."
   },
   {
     "id": "uk3a",
@@ -1215,7 +1220,7 @@ const BANK = [
       "snp": -1.5
     },
     "dec": true,
-    "ctx": "This is a hardline stance on the small boats crossing the English Channel: detain and deport everyone who arrives illegally."
+    "ctx": "This is a hardline stance on the small boats crossing the English Channel — tens of thousands a year: detain and deport everyone who arrives illegally, the thinking behind the (blocked) Rwanda deportation scheme. The stake is how Britain handles irregular Channel arrivals."
   },
   {
     "id": "uk3b",
@@ -1237,7 +1242,7 @@ const BANK = [
       "snp": 1.5
     },
     "dec": true,
-    "ctx": "This opposes that stance, arguing people fleeing war are not criminals and that treating asylum seekers as invaders shames Britain."
+    "ctx": "This opposes that approach, arguing that people fleeing war and persecution are not criminals and that treating asylum seekers as an 'invasion' betrays British values and legal duties. The stake is compassion and law versus deterrence at the border."
   },
   {
     "id": "uk4a",
@@ -1258,7 +1263,7 @@ const BANK = [
       "grn": 1.5,
       "snp": 1.5
     },
-    "ctx": "Brexit was Britain's 2020 departure from the European Union. This calls it a mistake and wants Britain to move back towards rejoining."
+    "ctx": "Brexit was Britain's 2020 departure from the European Union after the narrow 2016 referendum. This calls it a mistake — citing trade friction and economic drag — and wants Britain to move back toward the EU. The stake is whether to reverse the biggest political decision in a generation."
   },
   {
     "id": "uk4b",
@@ -1279,7 +1284,7 @@ const BANK = [
       "grn": -1.5,
       "snp": -1.5
     },
-    "ctx": "This defends Brexit as having restored British control over its own laws, and opposes handing that back to Brussels (the EU)."
+    "ctx": "This defends Brexit as having restored British control over its own laws, borders, and money ('take back control'), and opposes surrendering that to Brussels again. The stake is national sovereignty versus the benefits of EU membership."
   },
   {
     "id": "uk5a",
@@ -1300,7 +1305,7 @@ const BANK = [
       "snp": 1,
       "g": 0
     },
-    "ctx": "This supports taxing the very richest much more, including taxing accumulated wealth, not just income."
+    "ctx": "This supports taxing the very richest much more, including a tax on accumulated wealth, not just income, to fund public services and reduce inequality. The stake is whether Britain should tax fortunes as well as earnings."
   },
   {
     "id": "uk5b",
@@ -1321,7 +1326,7 @@ const BANK = [
       "snp": -1,
       "g": 0
     },
-    "ctx": "This argues high taxes drive wealthy people and their money out of Britain, harming everyone."
+    "ctx": "This argues that ever-higher taxes drive wealthy people, entrepreneurs, and their money out of Britain — pointing to 'non-doms' and millionaires leaving — which ultimately shrinks tax revenue. The stake is whether taxing wealth raises money or repels it."
   },
   {
     "id": "uk6a",
@@ -1342,7 +1347,7 @@ const BANK = [
       "grn": -2,
       "snp": -1
     },
-    "ctx": "This argues Britain's benefits (welfare) bill is too high and should be capped firmly so that working always pays more than claiming."
+    "ctx": "This argues Britain's welfare bill — swollen by rising disability and sickness claims — is out of control and should be capped so that work always pays more than benefits. The stake is controlling welfare spending and work incentives."
   },
   {
     "id": "uk6b",
@@ -1363,7 +1368,7 @@ const BANK = [
       "grn": 2,
       "snp": 1
     },
-    "ctx": "This argues Britain's safety net has already been cut too far, and that caps and sanctions push disabled people and children into poverty."
+    "ctx": "This argues Britain's safety net has already been cut to the bone by a decade of austerity, and that caps and sanctions push disabled people and children into destitution, driving the rise of food banks. The stake is whether welfare is too generous or too harsh."
   },
   {
     "id": "uk7a",
@@ -1384,7 +1389,7 @@ const BANK = [
       "snp": 1,
       "g": 0
     },
-    "ctx": "'Net zero' is Britain's legal target to stop adding greenhouse gases by 2050. This backs hitting it even at real short-term cost."
+    "ctx": "'Net zero' is Britain's legal target to cut greenhouse gases to net nil by 2050. This backs hitting it even at short-term cost, as a climate leader. The stake is how much economic pain is worth accepting now to meet the target."
   },
   {
     "id": "uk7b",
@@ -1405,7 +1410,7 @@ const BANK = [
       "snp": -1,
       "g": 0
     },
-    "ctx": "This argues net zero is an unaffordable elite project that is damaging British industry and raising household bills."
+    "ctx": "This argues net zero is an unaffordable project pushed by a comfortable middle class that is raising energy bills and hurting industry, while Britain's emissions are tiny globally. It fuelled backlash over boiler and car rules. The stake is whether the transition is being done too fast."
   },
   {
     "id": "uk8a",
@@ -1425,7 +1430,7 @@ const BANK = [
       "snp": 1,
       "g": 0
     },
-    "ctx": "This supports 'nationalisation' — bringing rail, water, and energy back under public ownership instead of private companies."
+    "ctx": "This supports 'nationalisation' — bringing privatised rail, water, and energy back into public ownership — after years of complaints about fares, sewage spills, and bills. It was Labour policy under Corbyn. The stake is who should own Britain's essential services."
   },
   {
     "id": "uk8b",
@@ -1445,7 +1450,7 @@ const BANK = [
       "snp": -1,
       "g": 0
     },
-    "ctx": "This defends private ownership of those industries, arguing that state-run versions meant strikes, waste, and decline."
+    "ctx": "This defends private ownership of those industries, arguing the nationalised versions before the 1980s meant strikes, underinvestment, and decline, and that regulation, not state control, is the answer. The stake is whether public or private hands run utilities better."
   },
   {
     "id": "uk9a",
@@ -1466,7 +1471,7 @@ const BANK = [
       "grn": -1,
       "snp": 0.5
     },
-    "ctx": "The 'green belt' is protected countryside around cities. This supports building many more homes even there, to fix the housing shortage."
+    "ctx": "The 'green belt' is protected countryside ringing cities to stop urban sprawl. This supports building many more homes even there, to tackle a housing crisis of high prices and scarce supply. The stake is countryside protection versus desperately needed housing."
   },
   {
     "id": "uk9b",
@@ -1487,7 +1492,7 @@ const BANK = [
       "grn": 1,
       "snp": -0.5
     },
-    "ctx": "This defends the green belt from development, opposing building over the countryside."
+    "ctx": "This defends the green belt and countryside from developers, arguing Britain should build on brownfield (previously used) land instead of concreting over nature. The stake is where new housing should go."
   },
   {
     "id": "uk10a",
@@ -1507,7 +1512,7 @@ const BANK = [
       "res": 2,
       "grn": -1.5
     },
-    "ctx": "This argues criminal sentences are too lenient and that violent and repeat offenders should serve much longer."
+    "ctx": "This argues sentences are too lenient and that violent and repeat offenders should serve much longer, reflecting 'tough on crime' politics. Prisons are already near capacity. The stake is whether harsher punishment makes the public safer."
   },
   {
     "id": "uk10b",
@@ -1527,7 +1532,7 @@ const BANK = [
       "res": -2,
       "grn": 1.5
     },
-    "ctx": "This argues locking more people up for longer has not cut crime, and that prevention and rehabilitation work better."
+    "ctx": "This argues that locking more people up for longer has not cut crime, that prisons are overcrowded 'universities of crime', and that prevention and rehabilitation work better — as lower-reoffending systems abroad suggest. The stake is what actually reduces offending."
   },
   {
     "id": "uk11a",
@@ -1549,7 +1554,7 @@ const BANK = [
       "snp": -0.5
     },
     "dec": true,
-    "ctx": "This refers to organised child sexual abuse ('grooming gangs') in some UK towns, and claims officials hid the offenders' ethnicity out of political correctness."
+    "ctx": "This refers to organised sexual abuse by 'grooming gangs' in towns like Rotherham, and claims authorities hid the offenders' largely Pakistani-heritage background out of fear of appearing racist. Official inquiries confirmed failures to act. The stake is confronting a sensitive truth versus stoking prejudice."
   },
   {
     "id": "uk11b",
@@ -1571,7 +1576,7 @@ const BANK = [
       "snp": 0.5
     },
     "dec": true,
-    "ctx": "This argues that framing this abuse as one ethnic group's problem is a racist distortion of a crime found across all communities."
+    "ctx": "This argues that framing child sexual abuse as one ethnic group's problem is a racist distortion, since abuse occurs across all communities and most offenders nationally are white. The stake is how to discuss ethnicity and crime without scapegoating."
   },
   {
     "id": "uk12a",
@@ -1593,7 +1598,7 @@ const BANK = [
       "snp": 1
     },
     "dec": true,
-    "ctx": "This supports letting people change their legal gender by simple self-declaration, without needing medical sign-off."
+    "ctx": "This supports letting people change their legal gender by self-declaration, without a medical diagnosis — the reform Scotland passed but the UK government blocked. The stake is whether legal gender should rest on self-identification."
   },
   {
     "id": "uk12b",
@@ -1615,7 +1620,7 @@ const BANK = [
       "snp": -1
     },
     "dec": true,
-    "ctx": "This is the gender-critical view: that a legal form cannot change biological sex, which the law should be based on."
+    "ctx": "This is the gender-critical view, prominent in Britain's fierce debate: that a man cannot become a woman by filling in a form and that the law must rest on biological sex, for example in women's prisons, wards, and sport. The stake is how the law defines sex and gender."
   },
   {
     "id": "uk13a",
@@ -1636,7 +1641,7 @@ const BANK = [
       "grn": 1,
       "snp": 2
     },
-    "ctx": "This supports Scottish independence — Scotland leaving the United Kingdom to become its own country."
+    "ctx": "This supports Scottish independence — Scotland leaving the United Kingdom, as the SNP campaigns for and as the 2014 referendum (55% No) rejected. Brexit, which Scotland opposed, revived the question. The stake is the break-up of the UK."
   },
   {
     "id": "uk13b",
@@ -1657,7 +1662,7 @@ const BANK = [
       "grn": -1,
       "snp": -2
     },
-    "ctx": "This opposes independence, arguing Scotland is stronger inside the UK and that the 2014 referendum settled the question."
+    "ctx": "This opposes independence, arguing Scotland is stronger inside the UK's larger economy and shared institutions, and that the 2014 vote settled the matter 'for a generation'. The stake is keeping the United Kingdom together."
   },
   {
     "id": "uk14a",
@@ -1678,7 +1683,7 @@ const BANK = [
       "grn": 1,
       "snp": 0.5
     },
-    "ctx": "This supports abolishing the monarchy and replacing the King with an elected head of state (a republic)."
+    "ctx": "This supports abolishing the monarchy and replacing the King with an elected head of state — a republic. Supporters object to inherited power and its cost. The stake is whether Britain should keep a hereditary head of state."
   },
   {
     "id": "uk14b",
@@ -1699,7 +1704,7 @@ const BANK = [
       "grn": -1,
       "snp": -0.5
     },
-    "ctx": "This defends the monarchy as a source of stability and continuity that elected politicians cannot provide."
+    "ctx": "This defends the monarchy as a source of stability, continuity, and national unity that stands above party politics, as it has for centuries. The stake is the value of a symbolic, non-political crown."
   },
   {
     "id": "uk15a",
@@ -1719,7 +1724,7 @@ const BANK = [
       "snp": 1,
       "g": 0
     },
-    "ctx": "This backs the government's policy of charging VAT (a 20% tax) on private school fees, arguing elite schooling shouldn't be tax-exempt."
+    "ctx": "This backs the government charging 20% VAT on private school fees, arguing elite education should not enjoy a tax break while state schools are stretched. About 7% of UK pupils attend private schools. The stake is fairness between private and state education."
   },
   {
     "id": "uk15b",
@@ -1739,7 +1744,7 @@ const BANK = [
       "snp": -1,
       "g": 0
     },
-    "ctx": "This opposes the private-school tax, arguing it punishes parents who sacrifice for their children's education and pushes pupils into state schools."
+    "ctx": "This opposes the private-school tax, arguing it punishes parents who sacrifice to educate their children, could force some pupils into an already-strained state system, and hits middle-income families, not just the rich. The stake is whether the policy is fair or spiteful."
   },
   {
     "id": "uk16a",
@@ -1760,7 +1765,7 @@ const BANK = [
       "grn": -2,
       "snp": -1
     },
-    "ctx": "This argues multiculturalism has failed, producing separate communities with little in common."
+    "ctx": "This argues Britain's multiculturalism has failed, producing communities that live separate, parallel lives with little in common — a claim heard after riots and over integration. The stake is whether diversity without a shared culture divides Britain."
   },
   {
     "id": "uk16b",
@@ -1781,7 +1786,7 @@ const BANK = [
       "grn": 2,
       "snp": 1
     },
-    "ctx": "This celebrates Britain's diversity as a strength, pointing to multicultural cities as proof it works."
+    "ctx": "This celebrates Britain's diversity as one of its greatest strengths, pointing to vibrant, successful multicultural cities like London. The stake is whether Britain's mix of cultures is a success or a problem."
   },
   {
     "id": "uk17a",
@@ -1801,7 +1806,7 @@ const BANK = [
       "grn": -2,
       "snp": -1
     },
-    "ctx": "This argues Islam clashes with British values. Supporters cite security and integration; critics call it religious prejudice."
+    "ctx": "This argues Islam clashes with British values on free speech and equality — a view aired in debates over extremism and integration. Critics call it prejudice against millions of ordinary British Muslims. The stake is whether the concern is legitimate or bigoted."
   },
   {
     "id": "uk17b",
@@ -1821,7 +1826,7 @@ const BANK = [
       "grn": 2,
       "snp": 1
     },
-    "ctx": "This holds that British Muslims are fully part of the country and their faith deserves equal respect."
+    "ctx": "This holds that British Muslims are as much a part of the country as anyone and their faith deserves equal respect and protection. The stake is religious equality versus singling out one faith."
   },
   {
     "id": "uk18a",
@@ -1842,7 +1847,7 @@ const BANK = [
       "grn": -2,
       "snp": -1.5
     },
-    "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
+    "ctx": "This is a statement of racial supremacism — the belief that some races are innately more intelligent or capable than others. It was the ideological engine of Nazism and the Holocaust, and of systems like slavery and apartheid. Modern genetics finds more variation within any racial group than between them, and the idea has no scientific standing."
   },
   {
     "id": "uk18b",
@@ -1863,7 +1868,7 @@ const BANK = [
       "grn": 2,
       "snp": 1.5
     },
-    "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
+    "ctx": "This states the principle of fundamental human equality: that no race is innately superior in intelligence or ability, and that racial hierarchies are discredited pseudo-science with a shameful history behind slavery and apartheid. It is the moral baseline of modern anti-discrimination law."
   },
   {
     "id": "uk19a",
@@ -1884,7 +1889,7 @@ const BANK = [
       "grn": -0.5,
       "snp": -0.5
     },
-    "ctx": "This argues free speech in Britain is genuinely threatened, pointing to people being arrested over offensive online posts or jokes."
+    "ctx": "This argues free speech in Britain is genuinely threatened, pointing to people being arrested or investigated over offensive social-media posts and jokes under communications and public-order laws. The stake is whether Britain polices speech too heavily."
   },
   {
     "id": "uk19b",
@@ -1905,7 +1910,7 @@ const BANK = [
       "grn": 0.5,
       "snp": 0.5
     },
-    "ctx": "This argues the free-speech complaint is really cover for wanting to abuse minorities, and that hate-speech laws protect people."
+    "ctx": "This argues the free-speech complaint is often cover for wanting to abuse minorities without consequence, and that hate-speech laws protect vulnerable people from real harm. The stake is the line between free expression and hate."
   },
   {
     "id": "uk20a",
@@ -1925,7 +1930,7 @@ const BANK = [
       "grn": -1,
       "snp": -0.5
     },
-    "ctx": "This argues police waste effort on policing online speech and identity issues while failing to investigate real crime."
+    "ctx": "This argues police waste time on 'non-crime hate incidents' and policing online speech while burglaries and thefts go uninvestigated, reflecting frustration over charge rates. The stake is whether police priorities are misplaced."
   },
   {
     "id": "uk20b",
@@ -1945,7 +1950,7 @@ const BANK = [
       "grn": 1,
       "snp": 0.5
     },
-    "ctx": "This argues online abuse and hate crimes cause real harm and that police are right to take them seriously."
+    "ctx": "This argues online abuse and hate crime cause real harm and that police are right to take them seriously, not just 'traditional' crime. The stake is whether such policing is a distraction or a duty."
   },
   {
     "id": "uk21a",
@@ -1966,7 +1971,7 @@ const BANK = [
       "grn": -2,
       "snp": -1
     },
-    "ctx": "Foreign aid is money Britain gives to poorer countries. This wants that budget cut and spent at home instead."
+    "ctx": "Britain commits 0.7% (recently cut to 0.5%) of national income to foreign aid. This wants that budget cut and spent at home instead. The stake is whether aid to poorer countries is a worthy commitment or a luxury."
   },
   {
     "id": "uk21b",
@@ -1987,7 +1992,7 @@ const BANK = [
       "grn": 2,
       "snp": 1
     },
-    "ctx": "This defends foreign aid as saving lives and giving Britain influence abroad, calling cuts both cruel and short-sighted."
+    "ctx": "This defends foreign aid as saving lives, fighting disease and poverty, and buying Britain 'soft power' and influence abroad, calling cuts both cruel and short-sighted. The stake is Britain's role and generosity in the world."
   },
   {
     "id": "uk22a",
@@ -2006,7 +2011,7 @@ const BANK = [
       "ref": 0.5,
       "grn": -1.5
     },
-    "ctx": "This supports sharply higher defence spending and continued military support for Ukraine against Russia."
+    "ctx": "This supports sharply higher defence spending and continued arming of Ukraine against Russia, as threats from Russia grow. The stake is how much Britain should invest in the military and Ukraine's defence."
   },
   {
     "id": "uk22b",
@@ -2025,7 +2030,7 @@ const BANK = [
       "ref": -0.5,
       "grn": 1.5
     },
-    "ctx": "This argues money spent on weapons and foreign wars would be better used fixing problems within Britain."
+    "ctx": "This argues the billions spent on weapons and foreign wars would be better used fixing Britain's own public services and cost-of-living problems. The stake is priorities between defence abroad and needs at home."
   },
   {
     "id": "uk23a",
@@ -2046,7 +2051,7 @@ const BANK = [
       "grn": 1.5,
       "snp": 0.5
     },
-    "ctx": "This supports treating drug use as a health issue and decriminalising possession of drugs for personal use."
+    "ctx": "This supports treating drug use as a health issue and decriminalising possession for personal use, following evidence from countries like Portugal that this cuts deaths and crime. The stake is whether prohibition or a health approach works better."
   },
   {
     "id": "uk23b",
@@ -2067,7 +2072,7 @@ const BANK = [
       "grn": -1.5,
       "snp": -0.5
     },
-    "ctx": "This opposes softening drug laws, arguing it fuels addiction and hands profits to criminal gangs."
+    "ctx": "This opposes softening drug laws, arguing it floods streets with addiction and hands profits to the criminal gangs behind 'county lines' dealing. The stake is whether easing drug laws helps users or empowers dealers."
   },
   {
     "id": "uk24a",
@@ -2088,7 +2093,7 @@ const BANK = [
       "grn": 1.5,
       "snp": 1
     },
-    "ctx": "This treats abortion as a settled right and would if anything make access easier."
+    "ctx": "This treats abortion — legal in Britain up to 24 weeks — as a settled right and would if anything ease access, for example by decriminalising it fully. The stake is protecting or expanding abortion rights."
   },
   {
     "id": "uk24b",
@@ -2109,7 +2114,7 @@ const BANK = [
       "grn": -1.5,
       "snp": -1
     },
-    "ctx": "This argues abortion ends a human life and that the legal time limits should be tightened."
+    "ctx": "This argues abortion ends a human life and that the 24-week time limit, high by European standards, should be tightened rather than loosened. The stake is the moral status of the unborn and the legal limit."
   },
   {
     "id": "uk25a",
@@ -2130,7 +2135,7 @@ const BANK = [
       "grn": 2,
       "snp": 1
     },
-    "ctx": "'First-past-the-post' is Britain's voting system, where the candidate with the most votes wins each seat. This wants it replaced with proportional representation, which matches seats to overall vote share."
+    "ctx": "'First-past-the-post' means whoever gets the most votes in each seat wins, which can produce big majorities on a minority of the national vote. This wants it replaced with proportional representation, matching seats to overall votes. The stake is how fairly votes translate into power."
   },
   {
     "id": "uk25b",
@@ -2151,7 +2156,7 @@ const BANK = [
       "grn": -2,
       "snp": -1
     },
-    "ctx": "This defends first-past-the-post, arguing it produces strong, stable single-party governments."
+    "ctx": "This defends first-past-the-post, arguing it delivers strong, stable single-party governments and a clear local MP, whereas proportional systems bring unstable coalitions. The stake is stability versus proportionality in Britain's democracy."
   },
   {
     "id": "uk26a",
@@ -2171,7 +2176,7 @@ const BANK = [
       "snp": 1,
       "g": 0
     },
-    "ctx": "This supports stronger trade unions and worker rights, and protecting the right to strike."
+    "ctx": "This supports stronger trade unions and worker rights, and protecting the right to strike, after a wave of strikes over pay by nurses, rail and other workers. The stake is the balance of power between workers and employers."
   },
   {
     "id": "uk26b",
@@ -2191,7 +2196,7 @@ const BANK = [
       "snp": -1,
       "g": 0
     },
-    "ctx": "This argues powerful union leaders hold the country to ransom and that strike laws should be tightened."
+    "ctx": "This argues powerful union leaders hold the country to ransom with strikes that disrupt millions, and that strike laws should be tightened, echoing the Thatcher-era reforms. The stake is curbing union power versus protecting workers' leverage."
   },
   {
     "id": "uk27a",
@@ -2210,7 +2215,7 @@ const BANK = [
       "grn": 1,
       "snp": 0.5
     },
-    "ctx": "This supports giving terminally ill adults the legal right to an assisted death (medical help to end their life)."
+    "ctx": "This supports giving terminally ill adults the legal right to an assisted death — the subject of a live parliamentary vote — as legal in parts of Europe, Canada, and Australia. The stake is control over one's own death."
   },
   {
     "id": "uk27b",
@@ -2229,7 +2234,7 @@ const BANK = [
       "grn": -1,
       "snp": -0.5
     },
-    "ctx": "This opposes assisted dying, warning it could pressure vulnerable people and crosses a moral line."
+    "ctx": "This opposes legalising assisted dying, warning it would pressure the vulnerable, elderly, or disabled toward death and change the doctor's role, pointing to concerns over how Canada's system has expanded. The stake is whether the safeguards can hold."
   },
   {
     "id": "uk28a",
@@ -2249,7 +2254,7 @@ const BANK = [
       "snp": 1.5,
       "g": 0
     },
-    "ctx": "This supports raising the minimum wage significantly, even against business objections about cost."
+    "ctx": "This supports raising the minimum wage significantly, even against business objections, so that work pays a decent living. Britain's minimum wage is already among the higher ones internationally. The stake is a decent wage floor versus employer costs."
   },
   {
     "id": "uk28b",
@@ -2269,7 +2274,7 @@ const BANK = [
       "snp": -1.5,
       "g": 0
     },
-    "ctx": "This argues pushing wages up faster than productivity closes small businesses and cuts entry-level jobs."
+    "ctx": "This argues pushing wages up faster than productivity forces small businesses to cut jobs or close and fuels inflation. The stake is whether higher minimums help workers or cost them jobs."
   },
   {
     "id": "uk29a",
@@ -2290,7 +2295,7 @@ const BANK = [
       "grn": -1.5,
       "snp": -0.5
     },
-    "ctx": "This favours teaching children pride in Britain's history, including the Empire, rather than shame about it."
+    "ctx": "This favours teaching children pride in Britain's history, including the Empire, rather than shame — a stance in the 'culture war' over statues and how history is taught. The stake is what story Britain tells about its imperial past."
   },
   {
     "id": "uk29b",
@@ -2311,7 +2316,7 @@ const BANK = [
       "grn": 1.5,
       "snp": 0.5
     },
-    "ctx": "This supports teaching the crimes of the British Empire honestly, arguing that hiding them misleads schoolchildren."
+    "ctx": "This supports teaching the crimes of the British Empire — famines, slavery, colonial violence — honestly, arguing that glossing over them misleads schoolchildren. The stake is honesty versus pride in teaching the imperial past."
   },
   {
     "id": "uk30a",
@@ -2331,7 +2336,7 @@ const BANK = [
       "res": -1,
       "grn": -1
     },
-    "ctx": "This supports free trade and open global markets as having made Britain richer."
+    "ctx": "This defends free trade and open global markets as having made Britain, historically a trading nation, richer through cheaper goods and exports. The stake is the value of economic openness."
   },
   {
     "id": "uk30b",
@@ -2351,7 +2356,7 @@ const BANK = [
       "res": 1,
       "grn": 1
     },
-    "ctx": "This argues globalisation destroyed Britain's industrial towns by moving jobs to cheaper labour abroad."
+    "ctx": "This argues globalisation gutted Britain's industrial towns — the closed mines, mills, and factories of the north and midlands — by sending jobs to cheaper labour abroad, feeding the resentment behind Brexit. The stake is who globalisation left behind."
   },
   {
     "id": "uk31a",
@@ -2372,7 +2377,7 @@ const BANK = [
       "grn": 2,
       "snp": 0.5
     },
-    "ctx": "This puts protecting nature and wildlife ahead of new roads, airport runways, and development."
+    "ctx": "This puts protecting nature and wildlife ahead of new roads, airport runways, and housing, reflecting environmental opposition to projects like airport expansion. The stake is conservation versus development and growth."
   },
   {
     "id": "uk31b",
@@ -2393,7 +2398,7 @@ const BANK = [
       "grn": -2,
       "snp": -0.5
     },
-    "ctx": "This argues endless environmental objections block the growth and infrastructure Britain needs."
+    "ctx": "This argues endless environmental objections and planning rules are strangling the growth, housing, and infrastructure Britain badly needs. The stake is whether green rules protect nature or block progress."
   },
   {
     "id": "uk32a",
@@ -2414,7 +2419,7 @@ const BANK = [
       "grn": -2,
       "snp": -1
     },
-    "ctx": "This argues workplace diversity and inclusion schemes have gone too far and should be scrapped."
+    "ctx": "This argues workplace diversity and inclusion schemes have gone too far into box-ticking and ideology and should be scrapped, echoing a wider backlash against 'woke' corporate policy. The stake is whether such schemes fix bias or impose it."
   },
   {
     "id": "uk32b",
@@ -2435,7 +2440,7 @@ const BANK = [
       "grn": 2,
       "snp": 1
     },
-    "ctx": "This defends diversity schemes as a response to real discrimination, arguing scrapping them protects an 'old boys' club'."
+    "ctx": "This defends diversity schemes as a response to real discrimination, arguing scrapping them just protects the old, closed networks (the 'old boys' club') that kept women and minorities out. The stake is whether inclusion efforts are fair or unfair."
   },
   {
     "id": "uk33a",
@@ -2455,7 +2460,7 @@ const BANK = [
       "snp": 1.5,
       "g": 0
     },
-    "ctx": "A 'windfall tax' is an extra tax on unusually large profits. This wants a bigger one on energy companies making record profits."
+    "ctx": "A 'windfall tax' is a one-off levy on unusually large profits. This wants a bigger one on energy companies that made record profits during the price crisis, to fund help with bills. The stake is taxing extraordinary profits to ease the cost of living."
   },
   {
     "id": "uk33b",
@@ -2475,7 +2480,7 @@ const BANK = [
       "snp": -1.5,
       "g": 0
     },
-    "ctx": "This argues windfall taxes scare off the investment Britain needs to keep its energy supply going."
+    "ctx": "This argues windfall taxes scare off the investment Britain needs in energy — including new North Sea and green projects — to keep the lights on. The stake is whether taxing profits raises useful money or deters investment."
   },
   {
     "id": "uk34a",
@@ -2496,7 +2501,7 @@ const BANK = [
       "grn": -1,
       "snp": -0.5
     },
-    "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
+    "ctx": "This is the conservative philosophy of tradition, associated with Edmund Burke: that long-standing customs and institutions hold the accumulated, hard-won wisdom of generations, so change should be gradual and cautious rather than sweeping away what works for untested ideas."
   },
   {
     "id": "uk34b",
@@ -2517,7 +2522,7 @@ const BANK = [
       "grn": 1,
       "snp": 0.5
     },
-    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
+    "ctx": "This is the progressive reply, in the spirit of Thomas Paine's line that 'the dead should not govern the living': that treating tradition as sacred just lets the prejudices of the past block overdue reform — as appeals to tradition once defended slavery and denying women the vote."
   },
   {
     "id": "uk35a",
@@ -2537,7 +2542,7 @@ const BANK = [
       "grn": -1.5,
       "snp": -1
     },
-    "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
+    "ctx": "This reflects a core right-leaning value: that a healthy society depends mainly on individuals taking responsibility for their own choices and lives, and that leaning too heavily on government breeds dependence and saps initiative."
   },
   {
     "id": "uk35b",
@@ -2557,7 +2562,7 @@ const BANK = [
       "grn": 1.5,
       "snp": 1
     },
-    "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
+    "ctx": "This reflects a core left-leaning value: that many hardships — poverty, poor health, joblessness — stem from unfair systems and circumstances beyond personal control, so blaming individuals lets the comfortable ignore problems they benefit from or could help fix."
   }
 ];
 
@@ -2610,6 +2615,6 @@ window.portalCode = 'uk';
 window.currentLang = 'en';
 window.getQuestion = q => q;
 </script>
-<script src="/engine.js?v=1.1.7"></script>
+<script src="/engine.js?v=1.1.9"></script>
 </body>
 </html>

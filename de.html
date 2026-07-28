@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=1.1.7">
+<link rel="stylesheet" href="/style.css?v=1.1.9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,6 +181,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -668,6 +669,7 @@
       <a href="/fr" class="nav-shortcut">France</a>
       <a href="/de" class="nav-shortcut">Germany</a>
       <a href="/books" class="nav-link-highlight">Books <span class="nav-badge">Curated</span></a>
+      <a href="/flags" class="nav-link-highlight">Flags</a>
       <a href="/about">About</a>
     </div>
     <div class="nav-controls">
@@ -810,6 +812,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -923,6 +926,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1069,6 +1073,7 @@
       <div style="display:flex;gap:20px;">
         <a href="/about" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">About</a>
         <a href="/books" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Books</a>
+        <a href="/flags" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Flags</a>
         <a href="/privacy" style="color:var(--ink-muted);text-decoration:none;transition:color 0.15s;">Privacy Policy</a>
       </div>
     </footer>
@@ -1109,283 +1114,283 @@
 const LOCAL_QUESTIONS = {
   "de1a": {
     "q": "Die Zuwanderung nach Deutschland ist viel zu hoch und muss drastisch reduziert werden.",
-    "ctx": "Das fordert, dass die Zuwanderung nach Deutschland viel zu hoch ist und stark gesenkt werden muss — eine zentrale Forderung der Rechten."
+    "ctx": "Das fordert, dass die Zuwanderung nach Deutschland — das 2015/16 über eine Million Flüchtlinge aufnahm — viel zu hoch ist und stark gesenkt werden muss, eine zentrale Forderung der AfD und zunehmend der bürgerlichen Rechten. Es geht um das Ausmaß der Zuwanderung."
   },
   "de1b": {
     "q": "Deutschland ist ein alterndes Land, das Zuwanderung für seine Wirtschaft und seine Zukunft braucht.",
-    "ctx": "Das ist die zuwanderungsfreundliche Sicht: dass das alternde Deutschland Zuwanderer für Wirtschaft und Zukunft braucht."
+    "ctx": "Das ist die zuwanderungsfreundliche Sicht: dass ein rasch alterndes Deutschland mit schrumpfender Erwerbsbevölkerung und niedriger Geburtenrate Zuwanderer für Wirtschaft und Zukunft braucht. Es geht um die Rolle der Zuwanderung für Deutschlands Bestand."
   },
   "de2a": {
     "q": "Abgelehnte Asylbewerber sollten schnell und konsequent abgeschoben werden, auch nach Ländern wie Syrien und Afghanistan.",
-    "ctx": "Das befürwortet, abgelehnte Asylbewerber schnell und konsequent abzuschieben, auch in gefährliche Länder wie Syrien und Afghanistan."
+    "ctx": "Das befürwortet, abgelehnte Asylbewerber schnell und konsequent abzuschieben, auch in gefährliche Länder wie Syrien und Afghanistan — eine sich verschärfende Haltung nach aufsehenerregenden Anschlägen. Es geht um Durchsetzung gegen das Risiko für die Abgeschobenen."
   },
   "de2b": {
     "q": "Menschen in Kriegsgebiete und Diktaturen abzuschieben verletzt die Menschlichkeit, die Deutschland nach seiner eigenen Geschichte schuldet.",
-    "ctx": "Das argumentiert, Menschen in Kriegsgebiete und Diktaturen abzuschieben verletze die Menschlichkeit, die Deutschland aufgrund seiner Geschichte schuldet."
+    "ctx": "Das argumentiert, Menschen in Kriegsgebiete und Diktaturen abzuschieben verletze die Menschlichkeit, die Deutschland gerade wegen seiner NS-Vergangenheit schuldet, die seine starken Grundrechte geprägt hat. Es geht um Durchsetzung gegen historische und moralische Pflicht."
   },
   "de3a": {
     "q": "Das Grundrecht auf Asyl im Grundgesetz ist unantastbar und darf niemals geschwächt werden.",
-    "ctx": "Das deutsche Grundgesetz garantiert ein Asylrecht. Das hält dieses Recht für unantastbar und sagt, es dürfe nie geschwächt werden."
+    "ctx": "Das deutsche Grundgesetz garantiert ein Asylrecht, verfasst als direkte Antwort auf jene, die vor den Nazis flohen. Das hält dieses Recht für unantastbar und sagt, es dürfe nie geschwächt werden. Es geht um ein aus der Geschichte geborenes Verfassungsprinzip."
   },
   "de3b": {
     "q": "Das Asylsystem wird massenhaft missbraucht, und Deutschland muss Menschen an seinen Grenzen abweisen können.",
-    "ctx": "Das argumentiert, das Asylsystem werde massenhaft missbraucht und Deutschland müsse Menschen an seinen Grenzen abweisen können."
+    "ctx": "Das argumentiert, das Asylsystem werde massenhaft missbraucht und Deutschland müsse Menschen an seinen Grenzen abweisen können, wie es mit Kontrollen begann. Es geht um nationale Kontrolle gegen das Recht, Asyl zu suchen."
   },
   "de4a": {
     "q": "Die anderen Parteien tun recht daran, jede Zusammenarbeit mit der AfD abzulehnen.",
-    "ctx": "Die AfD ist eine rechte Partei, mit der andere nicht regieren wollen (die „Brandmauer“). Das unterstützt diese Verweigerung."
+    "ctx": "Die AfD ist eine rechte Partei, mit der andere nicht regieren wollen — die sogenannte Brandmauer —, wobei Teile vom Verfassungsschutz als extremistisch beobachtet werden. Das unterstützt diese Verweigerung. Es geht um die Ausgrenzung der Rechten."
   },
   "de4b": {
     "q": "Die Weigerung, mit der AfD zusammenzuarbeiten, ignoriert Millionen Wähler und ist undemokratisch.",
-    "ctx": "Das argumentiert, jede Zusammenarbeit mit der AfD zu verweigern ignoriere ihre Millionen Wähler und sei undemokratisch."
+    "ctx": "Das argumentiert, jede Zusammenarbeit mit der AfD zu verweigern ignoriere ihre Millionen Wähler — in manchen Umfragen die stärkste Kraft im Osten — und sei selbst undemokratisch. Es geht darum, ob die Brandmauer die Demokratie schützt oder untergräbt."
   },
   "de5a": {
     "q": "Das Bürgergeld ist zu großzügig und schafft zu wenig Anreiz zu arbeiten.",
-    "ctx": "Das Bürgergeld ist die deutsche Grundsicherung für Arbeitslose. Das argumentiert, es sei zu großzügig und schwäche den Arbeitsanreiz."
+    "ctx": "Das Bürgergeld ist die deutsche Grundsicherung für Arbeitslose, die das härtere Hartz IV ablöste. Das argumentiert, es sei zu großzügig und schwäche den Arbeitsanreiz. Es geht um Großzügigkeit gegen Arbeitsanreiz."
   },
   "de5b": {
     "q": "Das Bürgergeld zu kürzen stößt Menschen, die ohnehin kämpfen, in die Armut.",
-    "ctx": "Das argumentiert, das Bürgergeld zu kürzen stürze Menschen, die ohnehin kämpfen, in die Armut."
+    "ctx": "Das argumentiert, das Bürgergeld zu kürzen stürze Menschen, die ohnehin kämpfen, tiefer in die Armut. Es geht darum, ob die Leistung zu weich oder ein Grundschutz ist."
   },
   "de6a": {
     "q": "Die Abschaltung der deutschen Kernkraftwerke war ein Fehler, und sie sollten wieder ans Netz.",
-    "ctx": "Deutschland schaltete 2023 seine letzten Kernkraftwerke ab. Das nennt das einen Fehler und will sie zurückholen."
+    "ctx": "Deutschland schaltete 2023 seine letzten Kernkraftwerke ab, eine nach Fukushima beschleunigte Entscheidung. Das nennt es angesichts der Energiesorgen einen Fehler und will sie zurückholen. Es geht um die Rücknahme des Atomausstiegs."
   },
   "de6b": {
     "q": "Der Atomausstieg war richtig; die Zukunft gehört den Erneuerbaren, nicht Reaktoren und ihrem Müll.",
-    "ctx": "Das verteidigt den Atomausstieg und argumentiert, die Zukunft gehöre den Erneuerbaren, nicht Reaktoren und ihrem Müll."
+    "ctx": "Das verteidigt den Atomausstieg und argumentiert, die Zukunft gehöre den Erneuerbaren, nicht Reaktoren und dem radioaktiven Müll, den sie hinterlassen. Es geht um Kernkraft gegen Erneuerbare."
   },
   "de7a": {
     "q": "Deutschland muss beim Klimaschutz vorangehen, auch wenn es Arbeitsplätze und Wachstum kostet.",
-    "ctx": "Das sagt, Deutschland müsse beim Klimaschutz vorangehen, auch wenn es Arbeitsplätze und Wachstum kostet."
+    "ctx": "Als Industriegigant sind Deutschlands Klimaentscheidungen bedeutsam. Das sagt, es müsse beim Klimaschutz vorangehen, auch wenn es Arbeitsplätze und Wachstum kostet. Es geht um Klimaführung zum industriellen Preis."
   },
   "de7b": {
     "q": "Die deutsche Industrie mit Klimaregeln zu ruinieren, während China weiter verschmutzt, ist wirtschaftlicher Selbstmord.",
-    "ctx": "Das argumentiert, die deutsche Industrie mit Klimaregeln zu ruinieren, während China weiter verschmutzt, sei wirtschaftlicher Selbstmord."
+    "ctx": "Das argumentiert, die deutsche Industrie mit Klimaregeln zu ruinieren, während China weiter Kohlekraftwerke baut, sei wirtschaftlicher Selbstmord für geringen globalen Nutzen. Es geht darum, ob einseitige Klimapolitik den Preis wert ist."
   },
   "de8a": {
     "q": "Das Heizungsgesetz, das Gas- und Ölheizungen verdrängt, war der richtige Schritt fürs Klima.",
-    "ctx": "Das „Heizungsgesetz“ verdrängt Gas- und Ölheizungen aus Klimagründen. Das verteidigt es als richtigen Schritt."
+    "ctx": "Das Heizungsgesetz verdrängt Gas- und Ölheizungen zugunsten von Wärmepumpen aus Klimagründen. Das verteidigt es als richtigen Schritt. Es geht um eine teure, aber klimagetriebene Änderung beim Heizen."
   },
   "de8b": {
     "q": "Das Heizungsgesetz war eine teure, von oben verordnete Zumutung, die normale Hausbesitzer verschreckt hat.",
-    "ctx": "Das kritisiert das Heizungsgesetz als teure, von oben verordnete Vorschrift, die normale Hausbesitzer verschreckt hat."
+    "ctx": "Das kritisiert das Heizungsgesetz als teure, von oben verordnete Zumutung, die normale Hausbesitzer mit den Kosten des Heizungstauschs verschreckte und den Grünen schwer schadete. Es geht um Klimaehrgeiz gegen öffentliches Vertrauen."
   },
   "de9a": {
     "q": "Deutschland sollte seine Schuldenbremse lockern, um in Infrastruktur und Verteidigung zu investieren.",
-    "ctx": "Die Schuldenbremse ist eine verfassungsmäßige Grenze für staatliche Schulden. Das will sie lockern, um in Infrastruktur und Verteidigung zu investieren."
+    "ctx": "Die Schuldenbremse ist eine verfassungsmäßige Grenze für die Staatsverschuldung. Das will sie lockern, um in marode Infrastruktur und Verteidigung zu investieren. Es geht um Haushaltsdisziplin gegen nötige Investitionen."
   },
   "de9b": {
     "q": "Die Schuldenbremse schützt künftige Generationen, und sie aufzugeben lässt Politiker nur hemmungslos ausgeben.",
-    "ctx": "Das verteidigt die Schuldenbremse als Schutz künftiger Generationen vor hemmungslosen Staatsausgaben."
+    "ctx": "Das verteidigt die Schuldenbremse als Schutz künftiger Generationen vor einem Schuldenberg und als Zwang zur Priorisierung. Es geht um den Schutz vor hemmungslosen Ausgaben."
   },
   "de10a": {
     "q": "Deutschland sollte eine Vermögensteuer für die Allerreichsten wieder einführen.",
-    "ctx": "Das will, dass Deutschland eine Vermögensteuer für die Allerreichsten wieder einführt."
+    "ctx": "Deutschland hat keine Vermögensteuer (seit 1997 ausgesetzt). Das will sie für die Allerreichsten wieder einführen, während die Ungleichheit wächst. Es geht um die Besteuerung großer Vermögen."
   },
   "de10b": {
     "q": "Eine Vermögensteuer treibt Kapital und Familienunternehmen aus Deutschland und vernichtet Arbeitsplätze.",
-    "ctx": "Das argumentiert, eine Vermögensteuer treibe Kapital und Familienbetriebe aus Deutschland und vernichte Arbeitsplätze."
+    "ctx": "Das argumentiert, eine Vermögensteuer treibe Kapital und Deutschlands viele familiäre Mittelstandsunternehmen ins Ausland und vernichte Arbeitsplätze. Es geht darum, ob die Steuer Einnahmen bringt oder vertreibt."
   },
   "de11a": {
     "q": "Deutschland sollte die Ukraine so lange mit Waffen unterstützen, wie es nötig ist.",
-    "ctx": "Das unterstützt, dass Deutschland die Ukraine gegen Russland so lange mit Waffen versorgt, wie es nötig ist."
+    "ctx": "Das unterstützt, dass Deutschland — einer der größten Unterstützer der Ukraine — weiter Waffen gegen Russland liefert, solange es nötig ist, ein scharfer Bruch mit seiner militärischen Zurückhaltung. Es geht um Deutschlands Rolle im Krieg."
   },
   "de11b": {
     "q": "Immer mehr Waffen zu liefern verlängert nur den Krieg; Deutschland sollte stattdessen auf Verhandlungen drängen.",
-    "ctx": "Das argumentiert, immer mehr Waffen verlängerten nur den Krieg, und Deutschland solle auf Verhandlungen drängen."
+    "ctx": "Das argumentiert, immer mehr Waffen verlängerten nur den Krieg und riskierten Eskalation, und Deutschland solle auf Verhandlungen drängen — eine im BSW und Teilen der Linken starke Sicht. Es geht um Waffen gegen Diplomatie."
   },
   "de12a": {
     "q": "Deutschland muss die Verteidigungsausgaben massiv erhöhen, um sich selbst verteidigen zu können.",
-    "ctx": "Das sagt, Deutschland müsse die Verteidigungsausgaben stark erhöhen, um sich selbst verteidigen zu können."
+    "ctx": "Nach Jahrzehnten der Vernachlässigung sagt das, Deutschland müsse die Verteidigungsausgaben stark erhöhen, um sich selbst verteidigen zu können, und stützt die Zeitenwende nach 2022. Es geht um die Aufrüstung eines lange pazifistischen Landes."
   },
   "de12b": {
     "q": "Jede Milliarde für das Militär ist eine Milliarde, die bei Schulen, Pflege und Renten fehlt.",
-    "ctx": "Das argumentiert, jede Milliarde fürs Militär fehle bei Schulen, Pflege und Renten."
+    "ctx": "Das argumentiert, jede Milliarde fürs Militär fehle bei Schulen, Pflege und Renten. Es geht um die Abwägung zwischen Verteidigung und Sozialem."
   },
   "de13a": {
     "q": "Deutschlands Zukunft liegt in einer stärkeren, stärker integrierten Europäischen Union.",
-    "ctx": "Das sieht Deutschlands Zukunft in einer stärkeren, stärker integrierten Europäischen Union."
+    "ctx": "Als größte Volkswirtschaft der EU sieht das Deutschlands Zukunft in einer stärkeren, stärker integrierten Union. Es geht um tiefere europäische Integration."
   },
   "de13b": {
     "q": "Brüssel hat schon zu viel Macht über Deutschland, und mehr Integration bedeutet weniger Demokratie.",
-    "ctx": "Das argumentiert, Brüssel habe schon zu viel Macht über Deutschland, und mehr EU-Integration bedeute weniger Demokratie."
+    "ctx": "Das argumentiert, Brüssel habe schon zu viel Macht über Deutschland und mehr Integration bedeute weniger Demokratie. Es geht um nationale Souveränität gegen die EU."
   },
   "de14a": {
     "q": "Das EU-Verbot neuer Verbrenner ab 2035 ist richtig und sollte bestehen bleiben.",
-    "ctx": "Die EU verbietet ab 2035 neue Benzin- und Dieselautos. Das unterstützt dieses Verbot fürs Klima."
+    "ctx": "Die EU verbietet ab 2035 neue Benzin- und Dieselautos. Das unterstützt das Verbot fürs Klima, trotz der Herausforderung für Deutschlands Autobauer. Es geht um Klimapolitik gegen eine Schlüsselindustrie."
   },
   "de14b": {
     "q": "Das Verbrenner-Verbot bedroht das Herz der deutschen Industrie und gehört abgeschafft.",
-    "ctx": "Das argumentiert, das Verbrenner-Verbot bedrohe das Herz der deutschen Industrie und gehöre abgeschafft."
+    "ctx": "Das argumentiert, das Verbrenner-Verbot bedrohe das Herz der deutschen Industrie — den Automobilbau und seine Zulieferer — und gehöre abgeschafft. Es geht um den Schutz der Autoindustrie."
   },
   "de15a": {
     "q": "Deutschland überreguliert seine Wirtschaft; Unternehmen brauchen viel weniger Bürokratie.",
-    "ctx": "Das argumentiert, Deutschland überreguliere seine Wirtschaft und Unternehmen bräuchten viel weniger Bürokratie."
+    "ctx": "Deutschland ist für seine Bürokratie bekannt. Das argumentiert, es überreguliere seine Wirtschaft und Unternehmen bräuchten viel weniger Bürokratie, um wettbewerbsfähig zu sein. Es geht darum, ob Deregulierung das Wachstum belebt."
   },
   "de15b": {
     "q": "Weniger Regulierung bedeutet meist, Arbeitnehmer-, Verbraucher- und Umweltschutz auszuhöhlen.",
-    "ctx": "Das argumentiert, Regeln abzubauen bedeute meist, den Schutz von Arbeitnehmern, Verbrauchern und Umwelt auszuhöhlen."
+    "ctx": "Das argumentiert, Regeln abzubauen bedeute meist, den Schutz von Arbeitnehmern, Verbrauchern und Umwelt auszuhöhlen. Es geht darum, ob Regeln Menschen schützen oder nur die Wirtschaft belasten."
   },
   "de16a": {
     "q": "Der Mindestlohn sollte deutlich angehoben werden, auf 15 Euro pro Stunde.",
-    "ctx": "Das unterstützt, den deutschen Mindestlohn deutlich anzuheben, auf 15 Euro pro Stunde."
+    "ctx": "Das unterstützt, den deutschen Mindestlohn deutlich auf 15 Euro pro Stunde anzuheben, um Geringverdiener zu stärken. Es geht um einen anständigen Lohnboden gegen die Kosten der Arbeitgeber."
   },
   "de16b": {
     "q": "Löhne per Gesetz hochzutreiben vernichtet nur Arbeitsplätze und trifft kleine Betriebe am härtesten.",
-    "ctx": "Das argumentiert, Löhne per Gesetz hochzutreiben vernichte Arbeitsplätze und treffe kleine Betriebe am härtesten."
+    "ctx": "Das argumentiert, Löhne per Gesetz hochzutreiben vernichte Arbeitsplätze und treffe kleine Betriebe am härtesten. Es geht darum, ob höhere Mindestlöhne Arbeitern helfen oder Jobs kosten."
   },
   "de17a": {
     "q": "Die Mieten in deutschen Städten sind außer Kontrolle, und ein bundesweiter Mietendeckel ist nötig.",
-    "ctx": "Das argumentiert, die Mieten in deutschen Städten seien außer Kontrolle und ein bundesweiter Mietendeckel sei nötig."
+    "ctx": "Die Mieten in Städten wie Berlin und München sind stark gestiegen. Das argumentiert, sie seien außer Kontrolle und ein bundesweiter Mietendeckel sei nötig. Es geht um Mieterschutz gegen das Wohnungsangebot."
   },
   "de17b": {
     "q": "Mietendeckel legen Wohnungsinvestitionen lahm und verschärfen den Mangel, wie Berlin schon gezeigt hat.",
-    "ctx": "Das argumentiert, Mietendeckel legten Wohnungsinvestitionen lahm und verschärften den Mangel, wie Berlins Versuch zeigte."
+    "ctx": "Das argumentiert, Mietendeckel legten Wohnungsinvestitionen lahm und verschärften den Mangel — mit Verweis auf Berlins Mietendeckel, den Gerichte kippten und der mit weniger Wohnungen im Angebot einherging. Es geht darum, ob Deckel helfen oder nach hinten losgehen."
   },
   "de18a": {
     "q": "Das Rentenniveau muss gesichert werden, auch wenn das höhere Beiträge der Arbeitnehmer bedeutet.",
-    "ctx": "Das will das deutsche Rentenniveau sichern, auch wenn Arbeitnehmer höhere Beiträge zahlen müssen."
+    "ctx": "Das will das deutsche Rentenniveau sichern, auch wenn Arbeitnehmer höhere Beiträge zahlen müssen, während die große Babyboomer-Generation in Rente geht. Es geht um die Einlösung der Renten in einer alternden Gesellschaft."
   },
   "de18b": {
     "q": "Eine alternde Gesellschaft kann nicht dieselben Renten weiter versprechen; das Renteneintrittsalter muss steigen.",
-    "ctx": "Das argumentiert, eine alternde Gesellschaft könne nicht dieselben Renten weiter versprechen, also müsse das Renteneintrittsalter steigen."
+    "ctx": "Das argumentiert, eine alternde Gesellschaft könne nicht dieselben Renten weiter versprechen, ohne die Jungen zu erdrücken, also müsse das Renteneintrittsalter steigen. Es geht um Gerechtigkeit zwischen den Generationen."
   },
   "de19a": {
     "q": "Der Islam gehört zu Deutschland.",
-    "ctx": "Das sagt, der Islam gehöre zu Deutschland — ein bekannter Satz aus der Integrationsdebatte."
+    "ctx": "Das greift den berühmten Satz von Alt-Bundespräsident Wulff auf, der Islam gehöre zu Deutschland, wo Millionen Muslime leben. Es geht darum, ob der Islam als Teil der Nation anerkannt wird."
   },
   "de19b": {
     "q": "Der Islam ist der deutschen Kultur grundfremd und gehört nicht hierher.",
-    "ctx": "Das argumentiert, der Islam sei der deutschen Kultur grundfremd und gehöre nicht hierher."
+    "ctx": "Das argumentiert, der Islam sei der deutschen Kultur grundfremd und gehöre nicht hierher — die mit der AfD verbundene Gegenparole. Es geht um nationale Identität gegen religiöse Zugehörigkeit."
   },
   "de20a": {
     "q": "Deutschland braucht eine Leitkultur, an die sich Zuwanderer anpassen müssen.",
-    "ctx": "Leitkultur meint eine führende nationale Kultur, an die sich Zuwanderer anpassen sollen. Das sagt, Deutschland brauche eine."
+    "ctx": "Leitkultur meint eine führende nationale Kultur, an die sich Zuwanderer anpassen sollen. Das sagt, Deutschland brauche eine, um die Gesellschaft zusammenzuhalten. Es geht darum, ob Integration heißt, eine definierte deutsche Kultur zu übernehmen."
   },
   "de20b": {
     "q": "Eine lebendige Kultur ist immer gemischt; eine einzige Leitkultur zu fordern ist ausgrenzender Unsinn.",
-    "ctx": "Das argumentiert, eine lebendige Kultur sei immer gemischt, sodass die Forderung nach einer einzigen Leitkultur ausgrenzender Unsinn sei."
+    "ctx": "Das argumentiert, eine lebendige Kultur sei immer gemischt und im Wandel, sodass die Forderung nach einer einzigen Leitkultur ausgrenzender Unsinn sei. Es geht um eine feste nationale Kultur gegen eine pluralistische."
   },
   "de21a": {
     "q": "Ausländer und Migranten sind bei Gewaltverbrechen stark überrepräsentiert, und das muss offen gesagt werden.",
-    "ctx": "Das sagt, Ausländer und Migranten seien bei Gewaltverbrechen stark überrepräsentiert und das müsse offen gesagt werden."
+    "ctx": "Das sagt, Ausländer und Migranten seien bei Gewaltverbrechen stark überrepräsentiert und das müsse offen gesagt werden. Die Statistik zeigt Unterschiede; heftig umstritten ist, ob die Ursache Herkunft oder Faktoren wie Alter, Geschlecht und Armut sind. Es geht um ein Tabu über Kriminalität und Herkunft."
   },
   "de21b": {
     "q": "Kriminalität entsteht durch Armut und Alter, nicht durch Herkunft, und Migranten herauszugreifen ist rassistische Sündenbockpolitik.",
-    "ctx": "Das argumentiert, Kriminalität entstehe durch Armut und Alter, nicht durch Herkunft, und Migranten herauszugreifen sei rassistische Sündenbockpolitik."
+    "ctx": "Das argumentiert, Kriminalität entstehe durch Armut, Alter und dadurch, jung und männlich zu sein, nicht durch Herkunft, und Migranten herauszugreifen sei rassistische Sündenbockpolitik. Es geht darum, ob die Ursache sozial statt ethnisch ist."
   },
   "de22a": {
     "q": "Manche Volksgruppen sind einfach krimineller und gewalttätiger veranlagt als andere.",
-    "ctx": "Das behauptet, manche Volksgruppen seien von Natur aus krimineller und gewalttätiger als andere."
+    "ctx": "Das behauptet, manche Volksgruppen seien von Natur aus krimineller und gewalttätiger als andere. Das geht über Statistik hinaus und behauptet eine angeborene Eigenschaft — was die Forschung zugunsten sozialer Erklärungen ablehnt. Es geht um Natur gegen Umstände."
   },
   "de22b": {
     "q": "Keine Volksgruppe ist von Geburt an kriminell; Verhalten entsteht aus Umständen, nicht aus dem Blut.",
-    "ctx": "Das argumentiert, keine Volksgruppe sei von Geburt an kriminell; Verhalten entstehe aus Umständen, nicht aus dem Blut."
+    "ctx": "Das argumentiert, keine Volksgruppe sei von Geburt an kriminell und Verhalten entstehe aus Umständen, nicht aus dem Blut. Es geht um die Ablehnung einer angeborenen Erklärung für Kriminalität."
   },
   "de23a": {
     "q": "Das Selbstbestimmungsgesetz, das die Änderung des Geschlechtseintrags per Erklärung erlaubt, war richtig.",
-    "ctx": "Das deutsche Selbstbestimmungsgesetz erlaubt, den Geschlechtseintrag per Erklärung zu ändern. Das unterstützt es."
+    "ctx": "Das deutsche Selbstbestimmungsgesetz lässt Erwachsene ihren Geschlechtseintrag per einfacher Erklärung ändern. Das unterstützt es als Anerkennung von Transpersonen. Es geht darum, ob Geschlecht durch Identität oder Biologie bestimmt wird."
   },
   "de23b": {
     "q": "Das rechtliche Geschlecht kann keine bloße Erklärungssache sein; das biologische Geschlecht ist eine Realität.",
-    "ctx": "Das ist die geschlechterkritische Sicht: dass das rechtliche Geschlecht nicht auf bloßer Erklärung beruhen könne, da das biologische Geschlecht real sei."
+    "ctx": "Das ist die geschlechterkritische Sicht: dass das rechtliche Geschlecht nicht auf bloßer Erklärung beruhen könne, weil das biologische Geschlecht real ist und in Recht und geschlechtergetrennten Räumen zählt. Es geht um die Bedeutung des rechtlichen Geschlechts."
   },
   "de24a": {
     "q": "Schwangerschaftsabbruch sollte vollständig legalisiert und aus dem Strafgesetzbuch gestrichen werden.",
-    "ctx": "Abtreibung ist in Deutschland formal rechtswidrig, aber in der Frühphase straffrei. Das will sie vollständig legalisieren und aus dem Strafgesetzbuch streichen."
+    "ctx": "Abtreibung ist in Deutschland formal rechtswidrig, bleibt aber in der Frühphase nach Paragraf 218 straffrei. Das will sie vollständig legalisieren und aus dem Strafgesetzbuch streichen. Es geht um die Modernisierung eines Kompromissgesetzes."
   },
   "de24b": {
     "q": "Das ungeborene Kind hat ein Recht auf Leben, das der Staat weiter schützen muss.",
-    "ctx": "Das argumentiert, das ungeborene Kind habe ein Recht auf Leben, das der Staat weiter schützen müsse."
+    "ctx": "Das argumentiert, das ungeborene Kind habe ein Recht auf Leben, das der Staat weiter schützen müsse. Es geht um den moralischen Status des Ungeborenen."
   },
   "de25a": {
     "q": "Die Cannabis-Legalisierung war richtig, und die Drogenpolitik sollte weiter liberalisiert werden.",
-    "ctx": "Deutschland legalisierte 2024 Cannabis. Das nennt das richtig und will die Drogenpolitik weiter liberalisieren."
+    "ctx": "Deutschland legalisierte 2024 Cannabis zum Freizeitkonsum. Das nennt es richtig und will die Drogenpolitik weiter liberalisieren. Es geht darum, Drogen als Frage von Freiheit und Gesundheit zu behandeln."
   },
   "de25b": {
     "q": "Die Cannabis-Legalisierung war ein falsches Signal und hat Drogenkonsum bei Jugendlichen normalisiert.",
-    "ctx": "Das argumentiert, die Cannabis-Legalisierung sei ein falsches Signal gewesen und habe Drogenkonsum bei Jugendlichen normalisiert."
+    "ctx": "Das argumentiert, die Cannabis-Legalisierung sei ein falsches Signal gewesen und habe den Drogenkonsum bei Jugendlichen normalisiert. Es geht darum, ob Legalisierung hilft oder den Konsum fördert."
   },
   "de26a": {
     "q": "Die öffentlich-rechtlichen Sender (ARD/ZDF) sind ihren Rundfunkbeitrag wert und müssen unabhängig bleiben.",
-    "ctx": "ARD und ZDF sind die öffentlich-rechtlichen Sender, finanziert durch einen Pflichtbeitrag. Das sagt, sie seien es wert und müssten unabhängig bleiben."
+    "ctx": "ARD und ZDF sind die öffentlich-rechtlichen Sender, finanziert durch einen Pflichtbeitrag pro Haushalt. Das sagt, sie seien es wert und müssten unabhängig bleiben. Es geht um Wert und Unabhängigkeit der öffentlich-rechtlichen Medien."
   },
   "de26b": {
     "q": "Die aufgeblähten öffentlich-rechtlichen Sender sind einseitig, und ihr Zwangsbeitrag gehört abgeschafft.",
-    "ctx": "Das argumentiert, die aufgeblähten öffentlich-rechtlichen Sender seien einseitig und ihr Zwangsbeitrag gehöre abgeschafft."
+    "ctx": "Das argumentiert, die aufgeblähten öffentlich-rechtlichen Sender seien einseitig und ihr Zwangsbeitrag gehöre abgeschafft. Es geht darum, ob der öffentlich-rechtliche Rundfunk sein Geld verdient."
   },
   "de27a": {
     "q": "Deutschland sollte gegenüber China härter auftreten, auch auf Kosten seiner Exporte.",
-    "ctx": "Das unterstützt, dass Deutschland gegenüber China härter auftritt, auch auf Kosten seiner wichtigen Exporte."
+    "ctx": "China ist Deutschlands größter Handelspartner, aber ein strategischer Rivale. Das unterstützt einen härteren Kurs, auch auf Kosten der Exporte. Es geht um Sicherheit gegen wirtschaftliche Abhängigkeit von China."
   },
   "de27b": {
     "q": "Deutschlands Wohlstand hängt vom Handel mit China ab, und Konfrontation würde die Wirtschaft ruinieren.",
-    "ctx": "Das argumentiert, der deutsche Wohlstand hänge vom Handel mit China ab und Konfrontation würde die Wirtschaft ruinieren."
+    "ctx": "Das argumentiert, der deutsche Wohlstand hänge vom Handel mit China ab — lebenswichtig für Autobauer und Maschinenbau — sodass Konfrontation die Wirtschaft ruinieren würde. Es geht um Standhaftigkeit gegen den Schutz der Exporte."
   },
   "de28a": {
     "q": "Deutschland sollte bundesweite Volksabstimmungen zu großen Fragen einführen.",
-    "ctx": "Deutschland hat fast keine bundesweiten Volksabstimmungen. Das will sie für große Fragen einführen."
+    "ctx": "Deutschland hat fast keine bundesweiten Volksabstimmungen, teils aus Nachkriegsvorsicht gegen Demagogie. Das will sie für große Fragen einführen. Es geht um mehr direkte Demokratie."
   },
   "de28b": {
     "q": "Volksabstimmungen verkürzen komplexe Fragen auf Parolen und werden leicht von Populisten gekapert.",
-    "ctx": "Das argumentiert, Volksabstimmungen verkürzten komplexe Fragen auf Parolen und würden leicht von Populisten gekapert."
+    "ctx": "Das argumentiert, Volksabstimmungen verkürzten komplexe Fragen auf Parolen und würden leicht von Populisten gekapert — eine Lehre, die Deutsche aus ihrer Geschichte ziehen. Es geht darum, ob direkte Abstimmungen sicher sind."
   },
   "de29a": {
     "q": "Deutsche sollten normalen Nationalstolz empfinden dürfen, ohne als Nationalisten zu gelten.",
-    "ctx": "Das argumentiert, Deutsche sollten normalen Nationalstolz empfinden dürfen, ohne als Nationalisten abgestempelt zu werden."
+    "ctx": "Wegen der NS-Zeit wird offener deutscher Nationalstolz oft mit Argwohn betrachtet. Das argumentiert, Deutsche sollten normalen Stolz empfinden dürfen, ohne als Nationalisten abgestempelt zu werden. Es geht um das Verhältnis eines Landes mit dieser Geschichte zum Patriotismus."
   },
   "de29b": {
     "q": "Angesichts seiner Geschichte sollte Deutschland lautem Nationalstolz dauerhaft mit Vorsicht begegnen.",
-    "ctx": "Das argumentiert, Deutschland solle angesichts seiner Geschichte lautem Nationalstolz dauerhaft mit Vorsicht begegnen."
+    "ctx": "Das argumentiert, gerade wegen seiner Geschichte solle Deutschland lautem Nationalstolz dauerhaft mit Vorsicht begegnen. Es geht um historische Wachsamkeit gegen die Normalisierung des Patriotismus."
   },
   "de30a": {
     "q": "Der offene globale Freihandel hat Deutschland gutgetan und sollte verteidigt werden.",
-    "ctx": "Das verteidigt den offenen globalen Freihandel, der Deutschland als Exportnation gutgetan habe."
+    "ctx": "Als einer der größten Exporteure der Welt verteidigt das den offenen globalen Freihandel, der Deutschland gutgetan habe. Es geht um den Wert wirtschaftlicher Offenheit."
   },
   "de30b": {
     "q": "Die Globalisierung hat deutsche Industriestädte ausgehöhlt und das Land gefährlich abhängig gemacht.",
-    "ctx": "Das argumentiert, die Globalisierung habe deutsche Industriestädte ausgehöhlt und das Land gefährlich abhängig gemacht."
+    "ctx": "Das argumentiert, die Globalisierung habe deutsche Industriestädte ausgehöhlt und das Land gefährlich abhängig gemacht — von russischem Gas und chinesischen Märkten. Es geht um die Risiken der Abhängigkeit, die jüngste Krisen offenlegten."
   },
   "de31a": {
     "q": "Umweltschutz sollte Vorrang vor dem Bau neuer Straßen und Fabriken haben.",
-    "ctx": "Das stellt den Umweltschutz über den Bau neuer Straßen und Fabriken."
+    "ctx": "Das stellt den Umweltschutz über den Bau neuer Straßen und Fabriken. Es geht um Naturschutz gegen Entwicklung."
   },
   "de31b": {
     "q": "Endlose Umweltauflagen ersticken das Wachstum und die Infrastruktur, die Deutschland braucht.",
-    "ctx": "Das argumentiert, endlose Umweltauflagen erstickten das Wachstum und die Infrastruktur, die Deutschland braucht."
+    "ctx": "Das argumentiert, endlose Umweltauflagen und lange Genehmigungen erstickten das Wachstum und die Infrastruktur, die Deutschland braucht. Es geht darum, ob Umweltregeln die Natur schützen oder den Fortschritt blockieren."
   },
   "de32a": {
     "q": "Kranke und Arbeitslose werden mit zu viel Misstrauen behandelt; das soziale Netz sollte stärker sein.",
-    "ctx": "Das argumentiert, Kranke und Arbeitslose stüßen auf zu viel Misstrauen, und das soziale Netz solle stärker sein."
+    "ctx": "Das argumentiert, Kranke und Arbeitslose stüßen auf zu viel Misstrauen und Kontrolle, und das soziale Netz solle stärker sein. Es geht um Würde gegen die Kontrolle von Sozialleistungen."
   },
   "de32b": {
     "q": "Das Sozialsystem ist zur Hängematte geworden, und strengere Kontrollen schützen die, die tatsächlich einzahlen.",
-    "ctx": "Das argumentiert, das Sozialsystem sei zur Hängematte geworden, und strengere Kontrollen schützten die Einzahler."
+    "ctx": "Das argumentiert, das Sozialsystem sei zur Hängematte geworden, die zu bequem ist, um sie zu verlassen, und strengere Kontrollen schützten die Einzahler. Es geht um Großzügigkeit gegen Missbrauch."
   },
   "de33a": {
     "q": "Alte Traditionen tragen die Weisheit der Generationen und sollten nicht leichtfertig verworfen werden.",
-    "ctx": "Das ist die konservative Sicht auf Tradition: dass alte Bräuche gesammelte Weisheit enthalten, weshalb man sie nicht leichtfertig abschaffen sollte."
+    "ctx": "Das ist die konservative Traditionsphilosophie im Sinne Edmund Burkes: dass alte Bräuche und Institutionen die gesammelte, hart erarbeitete Weisheit der Generationen tragen, weshalb Wandel schrittweise erfolgen sollte, statt Bewährtes für unerprobte Ideen abzuschaffen."
   },
   "de33b": {
     "q": "Traditionsverehrung lässt nur die Toten über die Lebenden herrschen und blockiert nötigen Wandel.",
-    "ctx": "Das ist die progressive Antwort: dass das Festhalten an Tradition um ihrer selbst willen die Vergangenheit über die Gegenwart herrschen lässt und nötigen Wandel blockiert."
+    "ctx": "Das ist die progressive Antwort, angelehnt an Thomas Paines Gedanken, dass die Toten nicht über die Lebenden herrschen sollten: dass die Verehrung der Tradition nur die Vorurteile der Vergangenheit überfällige Reformen blockieren lässt — wie sie einst Monarchie und Frauenwahlrechts-Verbot verteidigte."
   },
   "de34a": {
     "q": "Eine gute Gesellschaft beruht mehr auf Eigenverantwortung als auf staatlicher Fürsorge.",
-    "ctx": "Das steht für einen eher rechten Wert: dass eine gute Gesellschaft vor allem auf Eigenverantwortung beruht statt auf staatlicher Fürsorge."
+    "ctx": "Das steht für einen zentralen eher rechten Wert: dass eine gesunde Gesellschaft vor allem darauf beruht, dass Menschen Verantwortung für ihr eigenes Leben übernehmen, und dass zu viel Verlass auf den Staat Abhängigkeit erzeugt und die Eigeninitiative lähmt."
   },
   "de34b": {
     "q": "Individuen für Probleme des Systems verantwortlich zu machen ist, wie die Bequemen das Leid anderer entschuldigen.",
-    "ctx": "Das steht für einen eher linken Wert: dass viele Probleme durch ungerechte Systeme entstehen, sodass die Schuld beim Einzelnen den Bequemen erlaubt, das Leid anderer zu ignorieren."
+    "ctx": "Das steht für einen zentralen eher linken Wert: dass viele Nöte aus ungerechten Systemen und Umständen jenseits der eigenen Kontrolle entstehen, sodass die Schuldzuweisung an Einzelne den Bequemen erlaubt, Probleme zu ignorieren, von denen sie profitieren oder die sie mildern könnten."
   },
   "de35a": {
     "q": "Deutschland sollte endlich ein generelles Tempolimit auf der Autobahn einführen.",
-    "ctx": "Die deutsche Autobahn ist für Abschnitte ohne Tempolimit bekannt. Das unterstützt, endlich ein generelles einzuführen."
+    "ctx": "Die deutsche Autobahn ist für Abschnitte ohne Tempolimit berühmt, ein Punkt nationalen Stolzes. Das unterstützt, endlich ein generelles einzuführen, was Emissionen und Tote senken würde. Es geht um ein kulturelles Symbol gegen Sicherheit und Klima."
   },
   "de35b": {
     "q": "Die Freiheit, ohne festes Limit zu fahren, gehört zum deutschen Leben und sollte bleiben.",
-    "ctx": "Das verteidigt die Freiheit, ohne festes Limit zu fahren, als Teil des deutschen Lebens."
+    "ctx": "Das verteidigt die Freiheit, ohne festes Limit zu fahren, als geschätzten Teil des deutschen Lebens. Es geht um persönliche Freiheit gegen Sicherheit und Emissionen."
   }
 };
 
@@ -1409,7 +1414,7 @@ const BANK = [
       "bsw": 1.5
     },
     "dec": true,
-    "ctx": "This argues immigration to Germany is far too high and must be cut sharply — a central demand of the right."
+    "ctx": "This argues immigration to Germany — which took in over a million refugees in 2015–16 — is far too high and must be cut sharply, a central demand of the AfD and increasingly the mainstream right. The stake is the scale of immigration."
   },
   {
     "id": "de1b",
@@ -1430,7 +1435,7 @@ const BANK = [
       "bsw": -1.5
     },
     "dec": true,
-    "ctx": "This is the pro-immigration view: that an ageing Germany needs immigrants for its economy and future."
+    "ctx": "This is the pro-immigration view: that a rapidly ageing Germany, with a shrinking workforce and low birth rate, needs immigrants for its economy and future. The stake is immigration's role in sustaining Germany."
   },
   {
     "id": "de2a",
@@ -1451,7 +1456,7 @@ const BANK = [
       "bsw": 1
     },
     "dec": true,
-    "ctx": "This supports deporting rejected asylum seekers quickly and consistently, even to dangerous countries like Syria and Afghanistan."
+    "ctx": "This supports deporting rejected asylum seekers quickly and consistently, even to dangerous countries like Syria and Afghanistan — a hardening position after high-profile attacks. The stake is enforcement versus the risk faced by those sent back."
   },
   {
     "id": "de2b",
@@ -1472,7 +1477,7 @@ const BANK = [
       "bsw": -1
     },
     "dec": true,
-    "ctx": "This argues deporting people to war zones and dictatorships violates the humanity Germany owes given its own history."
+    "ctx": "This argues deporting people to war zones and dictatorships violates the humanity Germany especially owes given its own Nazi past, which shaped its strong constitutional protections. The stake is enforcement versus historical and moral duty."
   },
   {
     "id": "de3a",
@@ -1492,7 +1497,7 @@ const BANK = [
       "lnk": 2,
       "bsw": -0.5
     },
-    "ctx": "Germany's constitution guarantees a right to asylum. This holds that right sacred and says it must never be weakened."
+    "ctx": "Germany's Basic Law guarantees a right to asylum, written in direct response to those who fled the Nazis. This holds that right sacred and says it must never be weakened. The stake is a constitutional principle born of history."
   },
   {
     "id": "de3b",
@@ -1512,7 +1517,7 @@ const BANK = [
       "lnk": -2,
       "bsw": 0.5
     },
-    "ctx": "This argues the asylum system is being widely abused and Germany must be able to turn people away at its borders."
+    "ctx": "This argues the asylum system is being abused on a massive scale and that Germany must be able to turn people away at its borders, as it began doing with checks. The stake is national control versus the right to seek asylum."
   },
   {
     "id": "de4a",
@@ -1532,7 +1537,7 @@ const BANK = [
       "afd": -2,
       "lnk": 2
     },
-    "ctx": "The AfD is a hard-right party other parties refuse to govern with (the 'firewall'). This backs that refusal."
+    "ctx": "The AfD is a hard-right party that other parties refuse to govern with — the so-called 'firewall' (Brandmauer) — with parts of it under domestic-intelligence watch as extremist. This backs that refusal. The stake is isolating the far right."
   },
   {
     "id": "de4b",
@@ -1553,7 +1558,7 @@ const BANK = [
       "lnk": -2,
       "bsw": 0.5
     },
-    "ctx": "This argues refusing all cooperation with the AfD ignores its millions of voters and is undemocratic."
+    "ctx": "This argues that refusing all cooperation with the AfD ignores its millions of voters — by some polls the strongest party in the east — and is itself undemocratic. The stake is whether the 'firewall' defends or subverts democracy."
   },
   {
     "id": "de5a",
@@ -1573,7 +1578,7 @@ const BANK = [
       "afd": 1.5,
       "lnk": -2
     },
-    "ctx": "The Bürgergeld is Germany's basic unemployment benefit. This argues it is too generous and weakens the incentive to work."
+    "ctx": "The Bürgergeld is Germany's basic income for the unemployed, which replaced the tougher Hartz IV system. This argues it is too generous and weakens the incentive to work. The stake is welfare generosity versus work incentives."
   },
   {
     "id": "de5b",
@@ -1593,7 +1598,7 @@ const BANK = [
       "afd": -1.5,
       "lnk": 2
     },
-    "ctx": "This argues cutting the Bürgergeld just pushes people who are already struggling into poverty."
+    "ctx": "This argues cutting the Bürgergeld simply pushes people who are already struggling deeper into poverty. The stake is whether the payment is too soft or a basic safeguard."
   },
   {
     "id": "de6a",
@@ -1614,7 +1619,7 @@ const BANK = [
       "lnk": -1.5,
       "bsw": 0.5
     },
-    "ctx": "Germany shut its last nuclear plants in 2023. This calls that a mistake and wants them brought back."
+    "ctx": "Germany shut its last nuclear plants in 2023, a decision hastened after Fukushima. This calls that a mistake amid energy worries and wants them brought back. The stake is reversing the nuclear phase-out."
   },
   {
     "id": "de6b",
@@ -1635,7 +1640,7 @@ const BANK = [
       "lnk": 1.5,
       "bsw": -0.5
     },
-    "ctx": "This defends the nuclear phase-out, arguing the future belongs to renewables, not reactors and their waste."
+    "ctx": "This defends the nuclear phase-out, arguing the future belongs to renewables, not to reactors and the radioactive waste they leave behind. The stake is nuclear versus renewables."
   },
   {
     "id": "de7a",
@@ -1656,7 +1661,7 @@ const BANK = [
       "lnk": 1,
       "bsw": -1
     },
-    "ctx": "This says Germany must lead on climate protection even when it costs jobs and growth."
+    "ctx": "As an industrial giant, Germany's climate choices matter. This says it must lead on climate protection even when it costs jobs and growth. The stake is climate leadership at an industrial price."
   },
   {
     "id": "de7b",
@@ -1677,7 +1682,7 @@ const BANK = [
       "lnk": -1,
       "bsw": 1
     },
-    "ctx": "This argues wrecking German industry with climate rules while China keeps polluting is economic suicide."
+    "ctx": "This argues wrecking German industry with climate rules while China keeps building coal plants is economic suicide for little global gain. The stake is whether unilateral climate policy is worth the cost."
   },
   {
     "id": "de8a",
@@ -1698,7 +1703,7 @@ const BANK = [
       "lnk": 0.5,
       "bsw": -1
     },
-    "ctx": "The 'heating law' phases out gas and oil boilers for climate reasons. This defends it as the right step."
+    "ctx": "The 'heating law' (Heizungsgesetz) phases out gas and oil boilers in favour of heat pumps for climate reasons. This defends it as the right step. The stake is a costly but climate-driven change to how homes are heated."
   },
   {
     "id": "de8b",
@@ -1719,7 +1724,7 @@ const BANK = [
       "lnk": -0.5,
       "bsw": 1
     },
-    "ctx": "This attacks the heating law as a costly, top-down rule that frightened ordinary homeowners."
+    "ctx": "This attacks the heating law as a costly, top-down imposition that frightened ordinary homeowners with the price of replacing their heating, and badly damaged the Greens. The stake is climate ambition versus public trust."
   },
   {
     "id": "de9a",
@@ -1740,7 +1745,7 @@ const BANK = [
       "lnk": 1.5,
       "bsw": 0.5
     },
-    "ctx": "The 'debt brake' is a constitutional limit on government borrowing. This wants it relaxed to invest in infrastructure and defence."
+    "ctx": "The 'debt brake' (Schuldenbremse) is a constitutional limit on government borrowing. This wants it relaxed to invest in crumbling infrastructure and defence. The stake is fiscal discipline versus needed investment."
   },
   {
     "id": "de9b",
@@ -1761,7 +1766,7 @@ const BANK = [
       "lnk": -1.5,
       "bsw": -0.5
     },
-    "ctx": "This defends the debt brake as protecting future generations from reckless government spending."
+    "ctx": "This defends the debt brake as protecting future generations from a mountain of debt and forcing governments to prioritise. The stake is guarding against reckless spending."
   },
   {
     "id": "de10a",
@@ -1782,7 +1787,7 @@ const BANK = [
       "lnk": 2,
       "bsw": 1.5
     },
-    "ctx": "This wants Germany to reintroduce a wealth tax on the very richest."
+    "ctx": "Germany has no wealth tax (suspended since 1997). This wants one reintroduced on the very richest, as inequality grows. The stake is taxing large fortunes."
   },
   {
     "id": "de10b",
@@ -1803,7 +1808,7 @@ const BANK = [
       "lnk": -2,
       "bsw": -1.5
     },
-    "ctx": "This argues a wealth tax drives capital and family businesses out of Germany and destroys jobs."
+    "ctx": "This argues a wealth tax drives capital and Germany's many family-owned 'Mittelstand' businesses abroad, destroying jobs. The stake is whether the tax raises revenue or repels it."
   },
   {
     "id": "de11a",
@@ -1824,7 +1829,7 @@ const BANK = [
       "lnk": -1.5,
       "bsw": -2
     },
-    "ctx": "This supports Germany continuing to supply weapons to Ukraine against Russia for as long as it takes."
+    "ctx": "This supports Germany — one of Ukraine's biggest backers — continuing to supply weapons against Russia for as long as it takes, a sharp break from its post-war military caution. The stake is Germany's role in the war."
   },
   {
     "id": "de11b",
@@ -1845,7 +1850,7 @@ const BANK = [
       "lnk": 1.5,
       "bsw": 2
     },
-    "ctx": "This argues sending ever more weapons only prolongs the war, and Germany should push for negotiations."
+    "ctx": "This argues sending ever more weapons only prolongs the war and risks escalation, and that Germany should press for negotiations — a view strong in the BSW and parts of the left. The stake is arms versus diplomacy."
   },
   {
     "id": "de12a",
@@ -1865,7 +1870,7 @@ const BANK = [
       "lnk": -2,
       "bsw": -1.5
     },
-    "ctx": "This says Germany must sharply raise defence spending to be able to defend itself."
+    "ctx": "After decades of neglect, this says Germany must sharply raise defence spending to be able to defend itself, backing the post-2022 'Zeitenwende' (turning point). The stake is rearming a long-pacifist country."
   },
   {
     "id": "de12b",
@@ -1885,7 +1890,7 @@ const BANK = [
       "lnk": 2,
       "bsw": 1.5
     },
-    "ctx": "This argues every billion for the military is missing from schools, care, and pensions."
+    "ctx": "This argues every billion for the military is missing from schools, care, and pensions. The stake is the trade-off between defence and social spending."
   },
   {
     "id": "de13a",
@@ -1905,7 +1910,7 @@ const BANK = [
       "afd": -2,
       "bsw": -1.5
     },
-    "ctx": "This sees Germany's future in a stronger, more integrated European Union."
+    "ctx": "As the EU's largest economy, this sees Germany's future in a stronger, more integrated Union. The stake is deeper European integration."
   },
   {
     "id": "de13b",
@@ -1925,7 +1930,7 @@ const BANK = [
       "afd": 2,
       "bsw": 1.5
     },
-    "ctx": "This argues Brussels already has too much power over Germany, and more EU integration means less democracy."
+    "ctx": "This argues Brussels already has too much power over Germany and that more integration means less democracy. The stake is national sovereignty versus the EU."
   },
   {
     "id": "de14a",
@@ -1946,7 +1951,7 @@ const BANK = [
       "lnk": 0.5,
       "bsw": -1
     },
-    "ctx": "The EU will ban new petrol and diesel cars from 2035. This backs that ban for the climate."
+    "ctx": "The EU will ban new petrol and diesel cars from 2035. This backs the ban for the climate, despite the challenge to Germany's carmakers. The stake is climate policy versus a flagship industry."
   },
   {
     "id": "de14b",
@@ -1967,7 +1972,7 @@ const BANK = [
       "lnk": -0.5,
       "bsw": 1
     },
-    "ctx": "This argues banning the combustion engine threatens the heart of German industry and should be scrapped."
+    "ctx": "This argues banning the combustion engine threatens the heart of German industry — carmaking and its supply chains — and should be scrapped. The stake is protecting the auto industry."
   },
   {
     "id": "de15a",
@@ -1987,7 +1992,7 @@ const BANK = [
       "afd": 1,
       "lnk": -1
     },
-    "ctx": "This argues Germany over-regulates its economy and businesses need far less bureaucracy."
+    "ctx": "Germany is famous for bureaucracy. This argues it over-regulates its economy and businesses need far less red tape to compete. The stake is whether deregulation would revive growth."
   },
   {
     "id": "de15b",
@@ -2007,7 +2012,7 @@ const BANK = [
       "afd": -1,
       "lnk": 1
     },
-    "ctx": "This argues cutting regulation usually means gutting protections for workers, consumers, and the environment."
+    "ctx": "This argues cutting regulation usually means gutting protections for workers, consumers, and the environment. The stake is whether rules protect people or just burden business."
   },
   {
     "id": "de16a",
@@ -2027,7 +2032,7 @@ const BANK = [
       "lnk": 2,
       "bsw": 1.5
     },
-    "ctx": "This supports raising Germany's minimum wage substantially, to 15 euros an hour."
+    "ctx": "This supports raising Germany's minimum wage substantially, to 15 euros an hour, to lift low earners. The stake is a decent wage floor versus employer costs."
   },
   {
     "id": "de16b",
@@ -2047,7 +2052,7 @@ const BANK = [
       "lnk": -2,
       "bsw": -1.5
     },
-    "ctx": "This argues forcing wages up by law destroys jobs and hits small businesses hardest."
+    "ctx": "This argues forcing wages up by law destroys jobs and hits small businesses hardest. The stake is whether higher minimums help workers or cost them jobs."
   },
   {
     "id": "de17a",
@@ -2067,7 +2072,7 @@ const BANK = [
       "lnk": 2,
       "bsw": 1
     },
-    "ctx": "This argues rents in German cities are out of control and a nationwide rent cap is needed."
+    "ctx": "Rents in cities like Berlin and Munich have soared. This argues they are out of control and a nationwide rent cap (Mietendeckel) is needed. The stake is protecting tenants versus housing supply."
   },
   {
     "id": "de17b",
@@ -2087,7 +2092,7 @@ const BANK = [
       "lnk": -2,
       "bsw": -1
     },
-    "ctx": "This argues rent caps dry up housing investment and worsen the shortage, as Berlin's attempt showed."
+    "ctx": "This argues rent caps dry up housing investment and worsen shortages — pointing to Berlin's rent cap, which courts struck down and which coincided with fewer flats on offer. The stake is whether caps help or backfire."
   },
   {
     "id": "de18a",
@@ -2107,7 +2112,7 @@ const BANK = [
       "lnk": 1.5,
       "bsw": 1.5
     },
-    "ctx": "This wants Germany's pension level protected even if workers must pay higher contributions."
+    "ctx": "This wants Germany's pension level protected even if workers must pay higher contributions, as the huge baby-boomer generation retires. The stake is honouring pensions in an ageing society."
   },
   {
     "id": "de18b",
@@ -2128,7 +2133,7 @@ const BANK = [
       "lnk": -1.5,
       "bsw": -1.5
     },
-    "ctx": "This argues an ageing society can't keep promising the same pensions, so the retirement age must rise."
+    "ctx": "This argues an ageing society can't keep promising the same pensions without crushing the young, so the retirement age must rise. The stake is fairness between generations."
   },
   {
     "id": "de19a",
@@ -2150,7 +2155,7 @@ const BANK = [
       "bsw": -0.5
     },
     "dec": true,
-    "ctx": "This states that Islam is part of Germany — a well-known phrase in the integration debate."
+    "ctx": "This echoes former President Wulff's famous line that 'Islam belongs to Germany', home to millions of Muslims. The stake is whether Islam is accepted as part of the nation."
   },
   {
     "id": "de19b",
@@ -2172,7 +2177,7 @@ const BANK = [
       "bsw": 0.5
     },
     "dec": true,
-    "ctx": "This argues Islam is fundamentally foreign to German culture and does not belong here."
+    "ctx": "This argues Islam is fundamentally foreign to German culture and does not belong here — the counter-slogan associated with the AfD. The stake is national identity versus religious inclusion."
   },
   {
     "id": "de20a",
@@ -2193,7 +2198,7 @@ const BANK = [
       "lnk": -1.5,
       "bsw": 1
     },
-    "ctx": "'Leitkultur' means a leading national culture immigrants are expected to adopt. This says Germany needs one."
+    "ctx": "'Leitkultur' means a leading national culture that immigrants are expected to adopt. This says Germany needs one to bind society together. The stake is whether integration means adopting a defined German culture."
   },
   {
     "id": "de20b",
@@ -2214,7 +2219,7 @@ const BANK = [
       "lnk": 1.5,
       "bsw": -1
     },
-    "ctx": "This argues a living culture is always mixed, so demanding a single Leitkultur is exclusionary nonsense."
+    "ctx": "This argues a living culture is always mixed and evolving, so demanding a single Leitkultur is exclusionary nonsense. The stake is a fixed national culture versus a pluralist one."
   },
   {
     "id": "de21a",
@@ -2235,7 +2240,7 @@ const BANK = [
       "bsw": 1
     },
     "dec": true,
-    "ctx": "This states that foreigners and migrants are heavily overrepresented in violent crime and that this must be said openly."
+    "ctx": "This states that foreigners and migrants are heavily overrepresented in violent crime and that this must be said openly. German statistics show gaps; the fierce dispute is whether the cause is origin or factors like age, sex, and poverty. The stake is a taboo claim about crime and background."
   },
   {
     "id": "de21b",
@@ -2256,7 +2261,7 @@ const BANK = [
       "bsw": -1
     },
     "dec": true,
-    "ctx": "This argues crime is driven by poverty and age, not origin, and that singling out migrants is racist scapegoating."
+    "ctx": "This argues crime is driven by poverty, age, and being young and male, not origin, and that singling out migrants is racist scapegoating. The stake is whether the cause is social rather than ethnic."
   },
   {
     "id": "de22a",
@@ -2277,7 +2282,7 @@ const BANK = [
       "lnk": -2,
       "bsw": -0.5
     },
-    "ctx": "This claims some ethnic groups are inherently more prone to crime and violence than others."
+    "ctx": "This claims some ethnic groups are inherently more prone to crime and violence than others. It is a step beyond citing statistics, asserting an innate trait — a claim mainstream research rejects in favour of social explanations. The stake is nature versus circumstance."
   },
   {
     "id": "de22b",
@@ -2298,7 +2303,7 @@ const BANK = [
       "lnk": 2,
       "bsw": 0.5
     },
-    "ctx": "This argues no ethnic group is born criminal; behaviour comes from circumstances, not blood."
+    "ctx": "This argues no ethnic group is born criminal and that behaviour comes from circumstances, not blood. The stake is rejecting an innate explanation for crime."
   },
   {
     "id": "de23a",
@@ -2319,7 +2324,7 @@ const BANK = [
       "lnk": 1.5,
       "bsw": -1
     },
-    "ctx": "Germany's self-determination law lets people change their legal gender by declaration. This backs it."
+    "ctx": "Germany's self-determination law lets adults change their legal gender by simple declaration. This backs it as recognising trans people. The stake is whether gender is defined by identity or biology."
   },
   {
     "id": "de23b",
@@ -2340,7 +2345,7 @@ const BANK = [
       "lnk": -1.5,
       "bsw": 1
     },
-    "ctx": "This is the gender-critical view: that legal gender can't rest on mere declaration, since biological sex is real."
+    "ctx": "This is the gender-critical view: that legal gender can't rest on mere declaration because biological sex is real and matters in law and single-sex spaces. The stake is the meaning of legal sex."
   },
   {
     "id": "de24a",
@@ -2361,7 +2366,7 @@ const BANK = [
       "lnk": 1.5,
       "bsw": 0.5
     },
-    "ctx": "Abortion in Germany is technically illegal but unpunished in early pregnancy. This wants it fully legalised and out of the criminal code."
+    "ctx": "Abortion in Germany is technically illegal but goes unpunished in early pregnancy under Paragraph 218. This wants it fully legalised and removed from the criminal code. The stake is modernising a compromise law."
   },
   {
     "id": "de24b",
@@ -2382,7 +2387,7 @@ const BANK = [
       "lnk": -1.5,
       "bsw": -0.5
     },
-    "ctx": "This argues the unborn child has a right to life that the law must keep protecting."
+    "ctx": "This argues the unborn child has a right to life that the law must keep protecting. The stake is the moral status of the unborn."
   },
   {
     "id": "de25a",
@@ -2403,7 +2408,7 @@ const BANK = [
       "lnk": 1,
       "bsw": -0.5
     },
-    "ctx": "Germany legalised cannabis in 2024. This calls that the right move and wants drug policy to keep liberalising."
+    "ctx": "Germany legalised recreational cannabis in 2024. This calls that the right move and wants drug policy to keep liberalising. The stake is treating drugs as a matter of freedom and health."
   },
   {
     "id": "de25b",
@@ -2424,7 +2429,7 @@ const BANK = [
       "lnk": -1,
       "bsw": 0.5
     },
-    "ctx": "This argues legalising cannabis sent the wrong signal and normalised drug use among young people."
+    "ctx": "This argues legalising cannabis sent the wrong signal and normalised drug use among young people. The stake is whether legalisation helps or encourages use."
   },
   {
     "id": "de26a",
@@ -2445,7 +2450,7 @@ const BANK = [
       "lnk": 1,
       "bsw": -1
     },
-    "ctx": "ARD and ZDF are Germany's public broadcasters, funded by a compulsory fee. This says they're worth it and must stay independent."
+    "ctx": "ARD and ZDF are Germany's public broadcasters, funded by a compulsory household fee. This says they are worth it and must stay independent. The stake is the value and independence of public media."
   },
   {
     "id": "de26b",
@@ -2466,7 +2471,7 @@ const BANK = [
       "lnk": -1,
       "bsw": 1
     },
-    "ctx": "This argues the bloated public broadcasters are biased and their compulsory fee should be abolished."
+    "ctx": "This argues the bloated public broadcasters are biased and their compulsory fee should be abolished. The stake is whether public broadcasting deserves its funding."
   },
   {
     "id": "de27a",
@@ -2486,7 +2491,7 @@ const BANK = [
       "lnk": -1,
       "bsw": -1.5
     },
-    "ctx": "This supports Germany taking a harder line on China even at the cost of its valuable exports."
+    "ctx": "China is Germany's biggest trading partner but a strategic rival. This supports a harder line even at the cost of exports. The stake is security versus economic dependence on China."
   },
   {
     "id": "de27b",
@@ -2506,7 +2511,7 @@ const BANK = [
       "lnk": 1,
       "bsw": 1.5
     },
-    "ctx": "This argues German prosperity depends on trade with China and confrontation would wreck the economy."
+    "ctx": "This argues German prosperity depends on trade with China — vital for its carmakers and machinery firms — so confrontation would wreck the economy. The stake is standing firm versus protecting exports."
   },
   {
     "id": "de28a",
@@ -2526,7 +2531,7 @@ const BANK = [
       "lnk": 1,
       "bsw": 1.5
     },
-    "ctx": "Germany has almost no national referendums. This wants to introduce them for major questions."
+    "ctx": "Germany has almost no nationwide referendums, partly by post-war design to guard against demagoguery. This wants them introduced for major questions. The stake is adding direct democracy."
   },
   {
     "id": "de28b",
@@ -2546,7 +2551,7 @@ const BANK = [
       "lnk": -1,
       "bsw": -1.5
     },
-    "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by populists."
+    "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by populists — a lesson Germans draw from their own history. The stake is whether direct votes are safe."
   },
   {
     "id": "de29a",
@@ -2566,7 +2571,7 @@ const BANK = [
       "lnk": -1.5,
       "bsw": 1
     },
-    "ctx": "This argues Germans should be able to feel ordinary national pride without being branded nationalists."
+    "ctx": "Because of the Nazi era, open German national pride is often viewed with suspicion. This argues Germans should be able to feel normal pride without being branded nationalists. The stake is how a country with this history relates to patriotism."
   },
   {
     "id": "de29b",
@@ -2586,7 +2591,7 @@ const BANK = [
       "lnk": 1.5,
       "bsw": -1
     },
-    "ctx": "This argues that given its history, Germany should treat loud national pride with lasting caution."
+    "ctx": "This argues that precisely because of its history, Germany should treat loud national pride with lasting caution. The stake is historical vigilance versus normalising patriotism."
   },
   {
     "id": "de30a",
@@ -2606,7 +2611,7 @@ const BANK = [
       "lnk": -1,
       "bsw": -1.5
     },
-    "ctx": "This defends open global free trade as having served Germany, an export nation, well."
+    "ctx": "As one of the world's biggest exporters, this defends open global free trade as having served Germany well. The stake is the value of economic openness."
   },
   {
     "id": "de30b",
@@ -2626,7 +2631,7 @@ const BANK = [
       "lnk": 1,
       "bsw": 1.5
     },
-    "ctx": "This argues globalisation hollowed out German industrial towns and made the country dangerously dependent."
+    "ctx": "This argues globalisation hollowed out German industrial towns and made the country dangerously dependent — on Russian gas, and on Chinese markets. The stake is the risks of dependence exposed by recent crises."
   },
   {
     "id": "de31a",
@@ -2646,7 +2651,7 @@ const BANK = [
       "lnk": 0.5,
       "bsw": -0.5
     },
-    "ctx": "This puts protecting the environment ahead of building new roads and factories."
+    "ctx": "This puts protecting the environment ahead of building new roads and factories. The stake is conservation versus development."
   },
   {
     "id": "de31b",
@@ -2666,7 +2671,7 @@ const BANK = [
       "lnk": -0.5,
       "bsw": 0.5
     },
-    "ctx": "This argues endless environmental rules are strangling the growth and infrastructure Germany needs."
+    "ctx": "This argues endless environmental rules and lengthy approvals are strangling the growth and infrastructure Germany needs. The stake is whether green rules protect nature or block progress."
   },
   {
     "id": "de32a",
@@ -2687,7 +2692,7 @@ const BANK = [
       "lnk": 2,
       "bsw": 1
     },
-    "ctx": "This argues sick and unemployed people face too much suspicion, and the safety net should be stronger."
+    "ctx": "This argues sick and unemployed people face too much suspicion and control, and that the safety net should be stronger. The stake is dignity versus policing of welfare."
   },
   {
     "id": "de32b",
@@ -2708,7 +2713,7 @@ const BANK = [
       "lnk": -2,
       "bsw": -1
     },
-    "ctx": "This argues the welfare system has become a 'hammock', and stricter checks protect those who pay in."
+    "ctx": "This argues the welfare system has become a 'hammock' too comfortable to leave, and that stricter checks protect those who pay in. The stake is generosity versus abuse."
   },
   {
     "id": "de33a",
@@ -2729,7 +2734,7 @@ const BANK = [
       "lnk": -1,
       "bsw": 0.5
     },
-    "ctx": "This is the conservative view of tradition: that long-standing customs hold accumulated wisdom, so we should be cautious about sweeping them away."
+    "ctx": "This is the conservative philosophy of tradition, in the spirit of Edmund Burke: that long-standing customs and institutions hold the accumulated, hard-won wisdom of generations, so change should be gradual rather than sweeping away what works for untested ideas."
   },
   {
     "id": "de33b",
@@ -2750,7 +2755,7 @@ const BANK = [
       "lnk": 1,
       "bsw": -0.5
     },
-    "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks needed change."
+    "ctx": "This is the progressive reply, echoing Thomas Paine's idea that the dead should not rule the living: that treating tradition as sacred just lets the prejudices of the past block overdue reform — as appeals to tradition once defended monarchy and denying women the vote."
   },
   {
     "id": "de34a",
@@ -2771,7 +2776,7 @@ const BANK = [
       "lnk": -2,
       "bsw": -0.5
     },
-    "ctx": "This reflects a right-leaning value: that a good society rests mainly on individual responsibility rather than the state looking after people."
+    "ctx": "This reflects a core right-leaning value: that a healthy society rests mainly on individuals taking responsibility for their own lives, and that leaning too heavily on the state breeds dependence and saps initiative."
   },
   {
     "id": "de34b",
@@ -2792,7 +2797,7 @@ const BANK = [
       "lnk": 2,
       "bsw": 0.5
     },
-    "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable ignore others' suffering."
+    "ctx": "This reflects a core left-leaning value: that many hardships stem from unfair systems and circumstances beyond personal control, so blaming individuals lets the comfortable ignore problems they benefit from or could help fix."
   },
   {
     "id": "de35a",
@@ -2813,7 +2818,7 @@ const BANK = [
       "lnk": 1,
       "bsw": -0.5
     },
-    "ctx": "Germany's Autobahn is famous for stretches with no speed limit. This supports finally introducing a general one."
+    "ctx": "Germany's Autobahn is famous for stretches with no speed limit, a point of national pride. This supports finally introducing a general one, which would cut emissions and deaths. The stake is a cultural icon versus safety and climate."
   },
   {
     "id": "de35b",
@@ -2834,7 +2839,7 @@ const BANK = [
       "lnk": -1,
       "bsw": 0.5
     },
-    "ctx": "This defends the freedom to drive without a fixed limit as part of German life."
+    "ctx": "This defends the freedom to drive without a fixed limit as a cherished part of German life. The stake is personal freedom versus safety and emissions."
   }
 ];
 
@@ -3325,6 +3330,6 @@ window.getQuestion = getQuestion;
 window.currentLang = currentLang;
 applyLang();
 </script>
-<script src="/engine.js?v=1.1.7"></script>
+<script src="/engine.js?v=1.1.9"></script>
 </body>
 </html>

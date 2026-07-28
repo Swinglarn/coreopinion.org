@@ -151,7 +151,8 @@
         "KD": 0.5,
         "g": 0
       },
-      "dec": true
+      "dec": true,
+      "ctx": "Prime Minister Orpo's centre-right government made large cuts to welfare and benefits to rein in Finland's rising public debt. This defends them as a painful necessity. The stake is austerity to fix the state's finances."
     },
     {
       "id": "fi1b",
@@ -173,7 +174,8 @@
         "KD": -0.5,
         "g": 0
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues the austerity cuts hit the poorest hardest and were a cruel political choice, not an economic necessity. The stake is who bears the cost of balancing the budget."
     },
     {
       "id": "fi2a",
@@ -195,7 +197,8 @@
         "RKP": -1.5,
         "KD": 0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues immigration to Finland is too high and that asylum-based immigration should be cut sharply — the core issue of the Finns Party. The stake is the level of humanitarian immigration."
     },
     {
       "id": "fi2b",
@@ -217,7 +220,8 @@
         "RKP": 1.5,
         "KD": -0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues an ageing Finland, with a shrinking workforce, needs immigrants, and that asylum is a basic humanitarian duty. The stake is immigration's role in Finland's future."
     },
     {
       "id": "fi3a",
@@ -238,7 +242,8 @@
         "Vas": 1,
         "RKP": 1.5,
         "KD": 0.5
-      }
+      },
+      "ctx": "Finland faces labour shortages in care, tech, and services. This argues it does need more work-based immigration to fill them. The stake is economic migration to plug gaps."
     },
     {
       "id": "fi3b",
@@ -259,7 +264,8 @@
         "Vas": -1,
         "RKP": -1.5,
         "KD": -0.5
-      }
+      },
+      "ctx": "This argues even work-based immigration should be limited and that Finland should rely on its own people first. The stake is self-reliance versus imported labour."
     },
     {
       "id": "fi4a",
@@ -281,7 +287,8 @@
         "KD": 0.5,
         "g": 0
       },
-      "dec": true
+      "dec": true,
+      "ctx": "The government's labour reforms make it easier to hire and fire and curb strikes, aiming to boost competitiveness. This backs them. The stake is a pro-employer overhaul of the labour market."
     },
     {
       "id": "fi4b",
@@ -303,7 +310,8 @@
         "KD": -0.5,
         "g": 0
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues the reforms strip workers of hard-won rights and tilt all the power to employers, provoking Finland's biggest strikes in decades. The stake is the balance of power at work."
     },
     {
       "id": "fi5a",
@@ -324,7 +332,8 @@
         "RKP": -1,
         "KD": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This wants unions and the right to political strikes protected, not restricted — after the government moved to limit them amid mass strikes. The stake is workers' right to protest."
     },
     {
       "id": "fi5b",
@@ -345,7 +354,8 @@
         "RKP": 1,
         "KD": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues endless political strikes hold the whole country hostage and should be curbed. The stake is limiting strikes versus protecting the right to strike."
     },
     {
       "id": "fi6a",
@@ -366,7 +376,8 @@
         "Vas": -0.5,
         "RKP": 2,
         "KD": 1.5
-      }
+      },
+      "ctx": "Finland abandoned decades of neutrality to join NATO in 2023 after Russia — with which it shares a 1,300 km border — invaded Ukraine. This calls that the right decision. The stake is a historic security shift."
     },
     {
       "id": "fi6b",
@@ -387,7 +398,8 @@
         "Vas": 0.5,
         "RKP": -2,
         "KD": -1.5
-      }
+      },
+      "ctx": "This argues rushing into NATO tied Finland to great-power conflicts it should have stayed out of, ending a long tradition of neutrality. The stake is alliance versus non-alignment."
     },
     {
       "id": "fi7a",
@@ -407,7 +419,8 @@
         "Vas": -0.5,
         "RKP": 1,
         "KD": 1.5
-      }
+      },
+      "ctx": "After Russia funnelled migrants to the frontier in an apparent 'hybrid' pressure campaign, Finland closed its eastern border. This wants it kept firmly shut. The stake is border security versus openness."
     },
     {
       "id": "fi7b",
@@ -427,7 +440,8 @@
         "Vas": 0.5,
         "RKP": -1,
         "KD": -1.5
-      }
+      },
+      "ctx": "This argues a permanently sealed border harms border communities and denies people the legal right to seek asylum. The stake is security versus asylum rights."
     },
     {
       "id": "fi8a",
@@ -448,7 +462,8 @@
         "RKP": -1,
         "KD": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This supports significantly higher taxes on the wealthiest Finns and big companies to fund services and reduce inequality. The stake is whether the top should pay more."
     },
     {
       "id": "fi8b",
@@ -469,7 +484,8 @@
         "RKP": 1,
         "KD": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues higher taxes on success and business drive investment and jobs out of Finland. The stake is whether taxing the top raises revenue or repels it."
     },
     {
       "id": "fi9a",
@@ -490,7 +506,8 @@
         "RKP": 0.5,
         "KD": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "Finland has legislated ambitious carbon-neutrality targets. This says it must reach them even at economic cost. The stake is climate ambition versus the economy."
     },
     {
       "id": "fi9b",
@@ -511,7 +528,8 @@
         "RKP": -0.5,
         "KD": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues costly climate targets burden ordinary Finns and hurt forestry and industry for little global gain. The stake is who bears the cost of climate policy."
     },
     {
       "id": "fi10a",
@@ -530,7 +548,8 @@
         "Vas": 1.5,
         "KD": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "Forestry is central to Finland's economy but its forests are also a vital carbon sink now under strain. This argues they are being logged too heavily and logging should be cut back. The stake is the forest as industry versus carbon sink."
     },
     {
       "id": "fi10b",
@@ -549,7 +568,8 @@
         "Vas": -1.5,
         "KD": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues forestry is the backbone of the Finnish economy and shouldn't be strangled by green rules. The stake is protecting a key industry versus climate goals."
     },
     {
       "id": "fi11a",
@@ -568,7 +588,8 @@
         "Vas": 2,
         "KD": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "The 'wellbeing counties' now run Finland's health and social services after a major reform. This wants them funded far more, not cut, amid deficits. The stake is funding a strained new system."
     },
     {
       "id": "fi11b",
@@ -587,7 +608,8 @@
         "Vas": -2,
         "KD": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues the wellbeing counties waste money and that more private provision would cut the long queues. The stake is whether private care helps or entrenches inequality."
     },
     {
       "id": "fi12a",
@@ -608,7 +630,8 @@
         "RKP": 1,
         "KD": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "Finland's schools are world-famous for their results. This argues cutting education spending is short-sighted and it should invest more, not less. The stake is protecting a national strength."
     },
     {
       "id": "fi12b",
@@ -629,7 +652,8 @@
         "RKP": -1,
         "KD": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues Finland can no longer afford to protect every budget line and even education must take its share of cuts. The stake is austerity versus a treasured sector."
     },
     {
       "id": "fi13a",
@@ -650,7 +674,8 @@
         "Vas": -1.5,
         "RKP": -1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues Islam clashes with Finnish values. Critics call it prejudice against a small but growing community. The stake is whether the concern is legitimate or bigotry."
     },
     {
       "id": "fi13b",
@@ -671,7 +696,8 @@
         "Vas": 1.5,
         "RKP": 1.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This holds Finnish Muslims to be full members of society whose faith deserves equal respect. The stake is religious equality versus singling out one faith."
     },
     {
       "id": "fi14a",
@@ -692,7 +718,8 @@
         "Vas": -2,
         "RKP": -1.5,
         "KD": -0.5
-      }
+      },
+      "ctx": "This claims some ethnic groups are inherently more prone to crime and violence — asserting an innate trait, which research rejects in favour of social factors like poverty and age. The stake is nature versus circumstance."
     },
     {
       "id": "fi14b",
@@ -713,7 +740,8 @@
         "Vas": 2,
         "RKP": 1.5,
         "KD": 0.5
-      }
+      },
+      "ctx": "This argues no ethnic group is born criminal and that behaviour comes from circumstances, not blood. The stake is rejecting an innate explanation for crime."
     },
     {
       "id": "fi15a",
@@ -732,7 +760,8 @@
         "Vihr": -0.5,
         "RKP": -2,
         "KD": 0.5
-      }
+      },
+      "ctx": "'Pakkoruotsi' is compulsory Swedish in Finnish schools, reflecting Finland's official bilingualism though Swedish speakers are a small minority. This wants it abolished. The stake is a long-running language-policy fight."
     },
     {
       "id": "fi15b",
@@ -751,7 +780,8 @@
         "Vihr": 0.5,
         "RKP": 2,
         "KD": -0.5
-      }
+      },
+      "ctx": "This argues compulsory Swedish protects Finland's bilingual heritage and the rights of its Swedish-speaking minority, and should stay. The stake is bilingual heritage versus practical value."
     },
     {
       "id": "fi16a",
@@ -772,7 +802,8 @@
         "Vas": 1.5,
         "RKP": 1.5,
         "KD": -1.5
-      }
+      },
+      "ctx": "Finland's 2023 trans law lets adults change their legal gender by self-declaration, without medical requirements. This backs it as recognising trans identity. The stake is whether gender is defined by identity or biology."
     },
     {
       "id": "fi16b",
@@ -793,7 +824,8 @@
         "Vas": -1.5,
         "RKP": -1.5,
         "KD": 1.5
-      }
+      },
+      "ctx": "This is the gender-critical view: that legal sex can't rest on mere declaration and that biological reality must prevail. The stake is the meaning of legal sex."
     },
     {
       "id": "fi17a",
@@ -814,7 +846,8 @@
         "Vas": -2,
         "RKP": 1,
         "KD": 0.5
-      }
+      },
+      "ctx": "This argues Finland over-regulates business and companies need far less red tape and lower taxes to compete. The stake is whether deregulation would revive the economy."
     },
     {
       "id": "fi17b",
@@ -835,7 +868,8 @@
         "Vas": 2,
         "RKP": -1,
         "KD": -0.5
-      }
+      },
+      "ctx": "This argues cutting regulation just erodes protection for workers, consumers, and nature. The stake is whether rules protect people or burden business."
     },
     {
       "id": "fi18a",
@@ -855,7 +889,8 @@
         "Vas": -1.5,
         "RKP": -0.5,
         "KD": 1
-      }
+      },
+      "ctx": "This argues Finland needs tougher sentences and more police to keep people safe. The stake is whether harsher punishment improves safety."
     },
     {
       "id": "fi18b",
@@ -875,7 +910,8 @@
         "Vas": 1.5,
         "RKP": 0.5,
         "KD": -1
-      }
+      },
+      "ctx": "This argues ever tougher sentences never cut crime, while prevention and social work do. The stake is what actually reduces crime."
     },
     {
       "id": "fi19a",
@@ -895,7 +931,8 @@
         "Vihr": -0.5,
         "Vas": 1,
         "KD": 0.5
-      }
+      },
+      "ctx": "As people move south to the cities, this argues services and jobs should be kept alive across the whole country, not concentrated in the south — the Centre Party's cause. The stake is regional balance."
     },
     {
       "id": "fi19b",
@@ -915,7 +952,8 @@
         "Vihr": 0.5,
         "Vas": -1,
         "KD": -0.5
-      }
+      },
+      "ctx": "This argues concentrating activity where people live is more efficient than propping up emptying regions. The stake is efficiency versus keeping the regions alive."
     },
     {
       "id": "fi20a",
@@ -934,7 +972,8 @@
         "Vihr": 1.5,
         "Vas": -0.5,
         "RKP": 1.5
-      }
+      },
+      "ctx": "This sees Finland's future in a stronger, more integrated European Union, which it firmly embraced after independence from Russian influence. The stake is deeper EU integration."
     },
     {
       "id": "fi20b",
@@ -953,7 +992,8 @@
         "Vihr": -1.5,
         "Vas": 0.5,
         "RKP": -1.5
-      }
+      },
+      "ctx": "This argues Brussels already has too much power over Finland and that sovereignty must come first — the Finns Party's Eurosceptic line. The stake is national sovereignty versus the EU."
     },
     {
       "id": "fi21a",
@@ -973,7 +1013,8 @@
         "Vas": 2,
         "RKP": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This wants the safety net for the unemployed and sick strengthened, not tightened as the government has done. The stake is how generous the welfare state should be."
     },
     {
       "id": "fi21b",
@@ -993,7 +1034,8 @@
         "Vas": -2,
         "RKP": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues generous benefits weaken the incentive to work and must be kept in check. The stake is generosity versus work incentives."
     },
     {
       "id": "fi22a",
@@ -1014,7 +1056,8 @@
         "Vas": 1.5,
         "RKP": 1.5,
         "KD": -2
-      }
+      },
+      "ctx": "This wants Finland's liberal abortion rights firmly protected. The stake is securing abortion rights."
     },
     {
       "id": "fi22b",
@@ -1035,7 +1078,8 @@
         "Vas": -1.5,
         "RKP": -1.5,
         "KD": 2
-      }
+      },
+      "ctx": "This argues abortion ends a human life and that the law should do more to protect the unborn. The stake is the moral status of the unborn."
     },
     {
       "id": "fi23a",
@@ -1055,7 +1099,8 @@
         "Vas": -2,
         "RKP": -1.5,
         "KD": -1
-      }
+      },
+      "ctx": "This is racial supremacism — the belief that some races are innately more intelligent or capable. It drove Nazism, and modern genetics finds no basis for it. The stake is a discredited, dangerous idea."
     },
     {
       "id": "fi23b",
@@ -1075,7 +1120,8 @@
         "Vas": 2,
         "RKP": 1.5,
         "KD": 1
-      }
+      },
+      "ctx": "This states the principle of human equality: no race is superior, and the idea is discredited pseudo-science with a shameful history. The stake is the moral baseline of anti-discrimination."
     },
     {
       "id": "fi24a",
@@ -1096,7 +1142,8 @@
         "Vas": 1.5,
         "RKP": 0.5,
         "KD": -1.5
-      }
+      },
+      "ctx": "This supports decriminalising cannabis use and treating it as a health issue. The stake is prohibition versus a health approach."
     },
     {
       "id": "fi24b",
@@ -1117,7 +1164,8 @@
         "Vas": -1.5,
         "RKP": -0.5,
         "KD": 1.5
-      }
+      },
+      "ctx": "This argues loosening drug laws normalises use and would do more harm than good. The stake is whether easing drug laws helps or harms."
     },
     {
       "id": "fi25a",
@@ -1137,7 +1185,8 @@
         "Vas": -1.5,
         "RKP": -1,
         "KD": 0.5
-      }
+      },
+      "ctx": "This argues immigrants should adapt to Finnish culture and values rather than the reverse. The stake is how much cultural conformity to expect of newcomers."
     },
     {
       "id": "fi25b",
@@ -1157,7 +1206,8 @@
         "Vas": 1.5,
         "RKP": 1,
         "KD": -0.5
-      }
+      },
+      "ctx": "This argues a living culture is always mixed, so demanding assimilation impoverishes Finland. The stake is integration versus multiculturalism."
     },
     {
       "id": "fi26a",
@@ -1178,7 +1228,8 @@
         "RKP": 1,
         "KD": -0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "After ministers' past extremist-tinged remarks caused a scandal, this argues Finnish politics has a real racism problem that must be confronted honestly. The stake is reckoning with racism in politics."
     },
     {
       "id": "fi26b",
@@ -1199,7 +1250,8 @@
         "RKP": -1,
         "KD": 0.5
       },
-      "dec": true
+      "dec": true,
+      "ctx": "This argues the constant accusations of racism are exaggerated and used to silence legitimate debate. The stake is confronting racism versus overusing the label."
     },
     {
       "id": "fi27a",
@@ -1220,7 +1272,8 @@
         "Vas": 1,
         "RKP": -0.5,
         "KD": 1.5
-      }
+      },
+      "ctx": "'Alko' is Finland's state alcohol monopoly; wine and spirits are sold only in its shops. This wants it and strict alcohol rules kept, on public-health grounds. The stake is a paternalist but ingrained institution."
     },
     {
       "id": "fi27b",
@@ -1241,7 +1294,8 @@
         "Vas": -1,
         "RKP": 0.5,
         "KD": -1.5
-      }
+      },
+      "ctx": "This argues adults can make their own choices and wine and spirits should be sold freely in ordinary shops. The stake is personal freedom versus public-health control."
     },
     {
       "id": "fi28a",
@@ -1262,7 +1316,8 @@
         "Vas": -1,
         "RKP": 1,
         "KD": 1
-      }
+      },
+      "ctx": "This supports keeping defence spending high and strongly supporting Ukraine, given Finland's long border with Russia. The stake is security in a tense neighbourhood."
     },
     {
       "id": "fi28b",
@@ -1283,7 +1338,8 @@
         "Vas": 1,
         "RKP": -1,
         "KD": -1
-      }
+      },
+      "ctx": "This argues money for weapons should go to welfare and services at home. The stake is priorities between defence and domestic needs."
     },
     {
       "id": "fi29a",
@@ -1303,7 +1359,8 @@
         "Vas": 1,
         "RKP": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "Yle is Finland's public broadcaster. This argues it is worth its funding and must stay independent. The stake is the value and independence of public media."
     },
     {
       "id": "fi29b",
@@ -1323,7 +1380,8 @@
         "Vas": -1,
         "RKP": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues Yle is too big and its funding should be cut back sharply. The stake is whether public broadcasting deserves its funding."
     },
     {
       "id": "fi30a",
@@ -1344,7 +1402,8 @@
         "RKP": 1,
         "KD": 1,
         "g": 0
-      }
+      },
+      "ctx": "This argues Finland must cut its public debt even if it means painful spending cuts now — the government's austerity rationale. The stake is fiscal discipline versus social spending."
     },
     {
       "id": "fi30b",
@@ -1365,7 +1424,8 @@
         "RKP": -1,
         "KD": -1,
         "g": 0
-      }
+      },
+      "ctx": "This argues slashing spending in a weak economy just deepens the downturn, and that investment matters more than debt reduction. The stake is austerity versus stimulus."
     },
     {
       "id": "fi31a",
@@ -1385,7 +1445,8 @@
         "Vas": -1.5,
         "RKP": 1.5,
         "KD": 0.5
-      }
+      },
+      "ctx": "This defends open global free trade as having made Finland, a high-tech exporter, richer. The stake is the value of economic openness."
     },
     {
       "id": "fi31b",
@@ -1405,7 +1466,8 @@
         "Vas": 1.5,
         "RKP": -1.5,
         "KD": -0.5
-      }
+      },
+      "ctx": "This argues globalisation made Finland too dependent and hollowed out local production. The stake is self-sufficiency versus open markets."
     },
     {
       "id": "fi32a",
@@ -1424,7 +1486,8 @@
         "Vas": 0.5,
         "RKP": -0.5,
         "KD": 0.5
-      }
+      },
+      "ctx": "This supports using more binding referendums on major questions. The stake is whether big choices belong to voters or representatives."
     },
     {
       "id": "fi32b",
@@ -1443,7 +1506,8 @@
         "Vas": -0.5,
         "RKP": 0.5,
         "KD": -0.5
-      }
+      },
+      "ctx": "This argues referendums reduce complex questions to slogans and are easily hijacked by populists. The stake is whether direct votes are wise."
     },
     {
       "id": "fi33a",
@@ -1462,7 +1526,8 @@
         "Vas": 1.5,
         "KD": -0.5,
         "g": 0
-      }
+      },
+      "ctx": "Peatlands and old-growth forest are major carbon stores and habitats in Finland. This puts protecting them ahead of new industry. The stake is conservation versus development."
     },
     {
       "id": "fi33b",
@@ -1481,7 +1546,8 @@
         "Vas": -1.5,
         "KD": 0.5,
         "g": 0
-      }
+      },
+      "ctx": "This argues endless environmental protection blocks the projects and jobs Finland needs. The stake is whether green rules protect nature or block progress."
     },
     {
       "id": "fi34a",
@@ -1501,7 +1567,8 @@
         "Vihr": -1,
         "Vas": -1,
         "KD": 1.5
-      }
+      },
+      "ctx": "This is the conservative philosophy of tradition, in the spirit of Edmund Burke: that long-standing customs hold the accumulated wisdom of generations, so change should be gradual rather than discarding what works for untested ideas."
     },
     {
       "id": "fi34b",
@@ -1521,7 +1588,8 @@
         "Vihr": 1,
         "Vas": 1,
         "KD": -1.5
-      }
+      },
+      "ctx": "This is the progressive reply, echoing Thomas Paine that the dead should not govern the living: that venerating tradition just lets the prejudices of the past block overdue change."
     },
     {
       "id": "fi35a",
@@ -1542,7 +1610,8 @@
         "Vas": -2,
         "RKP": 0.5,
         "KD": 1
-      }
+      },
+      "ctx": "This reflects a core right-leaning value: that a good society rests mainly on personal responsibility rather than government support."
     },
     {
       "id": "fi35b",
@@ -1563,219 +1632,290 @@
         "Vas": 2,
         "RKP": -0.5,
         "KD": -1
-      }
+      },
+      "ctx": "This reflects a core left-leaning value: that many problems come from unfair systems beyond personal control, so blaming individuals lets the comfortable ignore others' suffering."
     }
   ],
   "translations": {
     "fi1a": {
-      "q": "Hallituksen leikkaukset sosiaaliturvaan ja etuuksiin olivat välttämättömiä Suomen talouden korjaamiseksi."
+      "q": "Hallituksen leikkaukset sosiaaliturvaan ja etuuksiin olivat välttämättömiä Suomen talouden korjaamiseksi.",
+      "ctx": "Pääministeri Orpon oikeistohallitus teki suuria leikkauksia sosiaaliturvaan ja etuuksiin hillitäkseen Suomen kasvavaa velkaa. Tämä puolustaa niitä kivuliaana välttämättömyytenä. Kyse on säästöistä valtiontalouden korjaamiseksi."
     },
     "fi1b": {
-      "q": "Leikkaukset osuivat kaikkein köyhimpiin ja olivat julma poliittinen valinta."
+      "q": "Leikkaukset osuivat kaikkein köyhimpiin ja olivat julma poliittinen valinta.",
+      "ctx": "Tämä väittää, että leikkaukset osuivat kaikkein köyhimpiin ja olivat julma poliittinen valinta, ei taloudellinen pakko. Kyse on siitä, kuka maksaa budjetin tasapainottamisen."
     },
     "fi2a": {
-      "q": "Maahanmuutto Suomeen on liian suurta ja turvapaikkaperustaista maahanmuuttoa pitäisi leikata rajusti."
+      "q": "Maahanmuutto Suomeen on liian suurta ja turvapaikkaperustaista maahanmuuttoa pitäisi leikata rajusti.",
+      "ctx": "Tämä väittää, että maahanmuutto Suomeen on liian suurta ja että turvapaikkaperustaista maahanmuuttoa pitäisi leikata rajusti — Perussuomalaisten ydinkysymys. Kyse on humanitaarisen maahanmuuton määrästä."
     },
     "fi2b": {
-      "q": "Suomi ikääntyy ja tarvitsee maahanmuuttajia; turvapaikka on myös perustavaa laatua oleva ihmisoikeus."
+      "q": "Suomi ikääntyy ja tarvitsee maahanmuuttajia; turvapaikka on myös perustavaa laatua oleva ihmisoikeus.",
+      "ctx": "Tämä katsoo, että ikääntyvä Suomi, jonka työvoima supistuu, tarvitsee maahanmuuttajia, ja että turvapaikka on perustava ihmisoikeus. Kyse on maahanmuuton roolista Suomen tulevaisuudessa."
     },
     "fi3a": {
-      "q": "Suomi tarvitsee lisää työperäistä maahanmuuttoa työvoimapulan paikkaamiseksi."
+      "q": "Suomi tarvitsee lisää työperäistä maahanmuuttoa työvoimapulan paikkaamiseksi.",
+      "ctx": "Suomessa on työvoimapulaa hoivassa, tekniikassa ja palveluissa. Tämä katsoo, että lisää työperäistä maahanmuuttoa tarvitaan niiden paikkaamiseen. Kyse on työperäisestä maahanmuutosta aukkojen täyttämiseksi."
     },
     "fi3b": {
-      "q": "Myös työperäistä maahanmuuttoa tulisi rajoittaa; Suomen pitäisi luottaa ensin omiin ihmisiinsä."
+      "q": "Myös työperäistä maahanmuuttoa tulisi rajoittaa; Suomen pitäisi luottaa ensin omiin ihmisiinsä.",
+      "ctx": "Tämä katsoo, että myös työperäistä maahanmuuttoa pitäisi rajoittaa ja että Suomen tulisi luottaa ensin omiin ihmisiinsä. Kyse on omavaraisuudesta vastaan tuotu työvoima."
     },
     "fi4a": {
-      "q": "Hallituksen työmarkkinauudistukset, jotka helpottavat palkkaamista ja irtisanomista, olivat oikeita."
+      "q": "Hallituksen työmarkkinauudistukset, jotka helpottavat palkkaamista ja irtisanomista, olivat oikeita.",
+      "ctx": "Hallituksen työmarkkinauudistukset helpottavat palkkaamista ja irtisanomista ja rajoittavat lakkoja kilpailukyvyn parantamiseksi. Tämä tukee niitä. Kyse on työnantajamyönteisestä työmarkkinauudistuksesta."
     },
     "fi4b": {
-      "q": "Uudistukset riistävät työntekijöiltä vaikeasti saavutetut oikeudet ja siirtävät vallan työnantajille."
+      "q": "Uudistukset riistävät työntekijöiltä vaikeasti saavutetut oikeudet ja siirtävät vallan työnantajille.",
+      "ctx": "Tämä väittää, että uudistukset riistävät työntekijöiltä vaikeasti saavutetut oikeudet ja siirtävät vallan työnantajille, mikä johti Suomen suurimpiin lakkoihin vuosikymmeniin. Kyse on työelämän voimatasapainosta."
     },
     "fi5a": {
-      "q": "Ammattiliittoja ja poliittisen lakon oikeutta tulisi suojella, ei rajoittaa."
+      "q": "Ammattiliittoja ja poliittisen lakon oikeutta tulisi suojella, ei rajoittaa.",
+      "ctx": "Tämä haluaa suojella ammattiliittoja ja poliittisen lakon oikeutta, ei rajoittaa niitä — sen jälkeen kun hallitus alkoi rajoittaa niitä suurlakkojen keskellä. Kyse on työntekijöiden oikeudesta protestoida."
     },
     "fi5b": {
-      "q": "Loputtomat poliittiset lakot pitävät koko maata panttivankina ja niitä pitäisi hillitä."
+      "q": "Loputtomat poliittiset lakot pitävät koko maata panttivankina ja niitä pitäisi hillitä.",
+      "ctx": "Tämä väittää, että loputtomat poliittiset lakot pitävät koko maata panttivankina ja niitä pitäisi hillitä. Kyse on lakkojen rajoittamisesta vastaan lakko-oikeuden suoja."
     },
     "fi6a": {
-      "q": "Nato-jäsenyys oli oikea päätös Suomen turvallisuudelle."
+      "q": "Nato-jäsenyys oli oikea päätös Suomen turvallisuudelle.",
+      "ctx": "Suomi luopui vuosikymmenten puolueettomuudesta ja liittyi Natoon 2023, kun Venäjä — jonka kanssa sillä on 1 300 km rajaa — hyökkäsi Ukrainaan. Tämä pitää sitä oikeana päätöksenä. Kyse on historiallisesta turvallisuuskäänteestä."
     },
     "fi6b": {
-      "q": "Kiireinen Nato-jäsenyys sitoi Suomen suurvaltakonflikteihin, joista sen olisi pitänyt pysyä erossa."
+      "q": "Kiireinen Nato-jäsenyys sitoi Suomen suurvaltakonflikteihin, joista sen olisi pitänyt pysyä erossa.",
+      "ctx": "Tämä väittää, että kiireinen Nato-jäsenyys sitoi Suomen suurvaltakonflikteihin, joista sen olisi pitänyt pysyä erossa, ja lopetti pitkän puolueettomuuden perinteen. Kyse on liittoutumisesta vastaan liittoutumattomuus."
     },
     "fi7a": {
-      "q": "Itäraja Venäjän kanssa tulisi pitää tiukasti kiinni."
+      "q": "Itäraja Venäjän kanssa tulisi pitää tiukasti kiinni.",
+      "ctx": "Sen jälkeen kun Venäjä ohjasi siirtolaisia rajalle ilmeisen hybridivaikuttamisen keinona, Suomi sulki itärajansa. Tämä haluaa pitää sen tiukasti kiinni. Kyse on rajaturvallisuudesta vastaan avoimuus."
     },
     "fi7b": {
-      "q": "Pysyvästi suljettu raja vahingoittaa rajaseutuja ja evää ihmisiltä oikeuden hakea turvapaikkaa."
+      "q": "Pysyvästi suljettu raja vahingoittaa rajaseutuja ja evää ihmisiltä oikeuden hakea turvapaikkaa.",
+      "ctx": "Tämä väittää, että pysyvästi suljettu raja vahingoittaa rajaseutuja ja evää ihmisiltä laillisen oikeuden hakea turvapaikkaa. Kyse on turvallisuudesta vastaan turvapaikkaoikeus."
     },
     "fi8a": {
-      "q": "Kaikkein rikkaimpien suomalaisten ja suuryritysten tulisi maksaa selvästi enemmän veroa."
+      "q": "Kaikkein rikkaimpien suomalaisten ja suuryritysten tulisi maksaa selvästi enemmän veroa.",
+      "ctx": "Tämä tukee selvästi korkeampia veroja rikkaimmille suomalaisille ja suuryrityksille palvelujen rahoittamiseksi ja eriarvoisuuden vähentämiseksi. Kyse on siitä, pitäisikö huipun maksaa enemmän."
     },
     "fi8b": {
-      "q": "Korkeammat verot menestykselle ja yrityksille vain ajavat investoinnit ja työpaikat pois Suomesta."
+      "q": "Korkeammat verot menestykselle ja yrityksille vain ajavat investoinnit ja työpaikat pois Suomesta.",
+      "ctx": "Tämä väittää, että korkeammat verot menestykselle ja yrityksille ajavat investoinnit ja työpaikat pois Suomesta. Kyse on siitä, kerääkö huipun verotus tuloja vai karkottaako se ne."
     },
     "fi9a": {
-      "q": "Suomen on saavutettava kunnianhimoiset ilmastotavoitteensa myös taloudellisin kustannuksin."
+      "q": "Suomen on saavutettava kunnianhimoiset ilmastotavoitteensa myös taloudellisin kustannuksin.",
+      "ctx": "Suomi on säätänyt kunnianhimoisia hiilineutraaliustavoitteita. Tämä sanoo, että ne on saavutettava myös taloudellisin kustannuksin. Kyse on ilmastokunnianhimosta vastaan talous."
     },
     "fi9b": {
-      "q": "Kalliit ilmastotavoitteet rasittavat tavallisia suomalaisia ja vahingoittavat metsätaloutta ja teollisuutta vähäisellä hyödyllä."
+      "q": "Kalliit ilmastotavoitteet rasittavat tavallisia suomalaisia ja vahingoittavat metsätaloutta ja teollisuutta vähäisellä hyödyllä.",
+      "ctx": "Tämä väittää, että kalliit ilmastotavoitteet rasittavat tavallisia suomalaisia ja vahingoittavat metsätaloutta ja teollisuutta vähäisellä globaalilla hyödyllä. Kyse on siitä, kuka maksaa ilmastopolitiikan."
     },
     "fi10a": {
-      "q": "Suomen metsät hakataan liian rajusti ja hakkuita tulisi vähentää."
+      "q": "Suomen metsät hakataan liian rajusti ja hakkuita tulisi vähentää.",
+      "ctx": "Metsätalous on keskeistä Suomen taloudelle, mutta metsät ovat myös tärkeä hiilinielu, joka on nyt paineessa. Tämä väittää, että niitä hakataan liikaa ja hakkuita pitäisi vähentää. Kyse on metsästä teollisuutena vastaan hiilinieluna."
     },
     "fi10b": {
-      "q": "Metsätalous on Suomen talouden selkäranka, eikä sitä pidä kuristaa ympäristösäännöillä."
+      "q": "Metsätalous on Suomen talouden selkäranka, eikä sitä pidä kuristaa ympäristösäännöillä.",
+      "ctx": "Tämä väittää, että metsätalous on Suomen talouden selkäranka eikä sitä pidä kuristaa ympäristösäännöillä. Kyse on avainteollisuuden suojelusta vastaan ilmastotavoitteet."
     },
     "fi11a": {
-      "q": "Julkista terveydenhuoltoa ja hyvinvointialueita on rahoitettava selvästi enemmän, ei leikattava."
+      "q": "Julkista terveydenhuoltoa ja hyvinvointialueita on rahoitettava selvästi enemmän, ei leikattava.",
+      "ctx": "Hyvinvointialueet vastaavat nyt Suomen sosiaali- ja terveyspalveluista suuren uudistuksen jälkeen. Tämä haluaa niille selvästi enemmän rahaa, ei leikkauksia, alijäämäistä huolimatta. Kyse on kuormittuneen uuden järjestelmän rahoituksesta."
     },
     "fi11b": {
-      "q": "Hyvinvointialueet tuhlaavat rahaa, ja yksityisen palvelun lisääminen lyhentäisi jonoja."
+      "q": "Hyvinvointialueet tuhlaavat rahaa, ja yksityisen palvelun lisääminen lyhentäisi jonoja.",
+      "ctx": "Tämä väittää, että hyvinvointialueet tuhlaavat rahaa ja että yksityisen palvelun lisääminen lyhentäisi pitkiä jonoja. Kyse on siitä, auttaako yksityinen hoito vai cementoiko se eriarvoisuutta."
     },
     "fi12a": {
-      "q": "Koulutuksesta leikkaaminen on lyhytnäköistä, ja Suomen tulisi panostaa enemmän, ei vähemmän."
+      "q": "Koulutuksesta leikkaaminen on lyhytnäköistä, ja Suomen tulisi panostaa enemmän, ei vähemmän.",
+      "ctx": "Suomen koulut ovat maailmankuuluja tuloksistaan. Tämä väittää, että koulutuksesta leikkaaminen on lyhytnäköistä ja että sen tulisi panostaa enemmän, ei vähemmän. Kyse on kansallisen vahvuuden suojelusta."
     },
     "fi12b": {
-      "q": "Suomella ei ole enää varaa suojella jokaista budjettikohtaa; myös koulutuksen on kannettava osansa leikkauksista."
+      "q": "Suomella ei ole enää varaa suojella jokaista budjettikohtaa; myös koulutuksen on kannettava osansa leikkauksista.",
+      "ctx": "Tämä väittää, ettei Suomella ole enää varaa suojella jokaista budjettikohtaa ja että myös koulutuksen on kannettava osansa leikkauksista. Kyse on säästöistä vastaan arvostettu ala."
     },
     "fi13a": {
-      "q": "Islam ei ole yhteensopiva suomalaisten arvojen kanssa."
+      "q": "Islam ei ole yhteensopiva suomalaisten arvojen kanssa.",
+      "ctx": "Tämä väittää, että islam on ristiriidassa suomalaisten arvojen kanssa. Kriitikot kutsuvat sitä ennakkoluuloksi pientä mutta kasvavaa yhteisöä kohtaan. Kyse on siitä, onko huoli oikeutettu vai ennakkoluulo."
     },
     "fi13b": {
-      "q": "Suomalaiset muslimit ovat täysivaltaisia yhteiskunnan jäseniä, ja heidän uskontonsa ansaitsee saman kunnioituksen."
+      "q": "Suomalaiset muslimit ovat täysivaltaisia yhteiskunnan jäseniä, ja heidän uskontonsa ansaitsee saman kunnioituksen.",
+      "ctx": "Tämä katsoo, että suomalaiset muslimit ovat täysivaltaisia yhteiskunnan jäseniä, joiden usko ansaitsee saman kunnioituksen. Kyse on uskonnollisesta yhdenvertaisuudesta vastaan yhden uskonnon leimaaminen."
     },
     "fi14a": {
-      "q": "Jotkut etniset ryhmät ovat yksinkertaisesti taipuvaisempia rikollisuuteen ja väkivaltaan kuin toiset."
+      "q": "Jotkut etniset ryhmät ovat yksinkertaisesti taipuvaisempia rikollisuuteen ja väkivaltaan kuin toiset.",
+      "ctx": "Tämä väittää, että jotkin etniset ryhmät ovat luonnostaan taipuvaisempia rikollisuuteen ja väkivaltaan — väite synnynnäisestä piirteestä, jonka tutkimus hylkää sosiaalisten tekijöiden kuten köyhyyden ja iän hyväksi. Kyse on luonteesta vastaan olosuhteet."
     },
     "fi14b": {
-      "q": "Mikään etninen ryhmä ei ole syntymältään rikollinen; käytös johtuu olosuhteista, ei verestä."
+      "q": "Mikään etninen ryhmä ei ole syntymältään rikollinen; käytös johtuu olosuhteista, ei verestä.",
+      "ctx": "Tämä katsoo, ettei mikään etninen ryhmä ole syntymältään rikollinen ja että käytös johtuu olosuhteista, ei verestä. Kyse on synnynnäisen rikosselityksen hylkäämisestä."
     },
     "fi15a": {
-      "q": "Pakkoruotsi kouluissa tulisi lakkauttaa."
+      "q": "Pakkoruotsi kouluissa tulisi lakkauttaa.",
+      "ctx": "Pakkoruotsi tarkoittaa pakollista ruotsia suomalaisissa kouluissa, mikä heijastaa Suomen virallista kaksikielisyyttä, vaikka ruotsinkielisiä on pieni vähemmistö. Tämä haluaa lakkauttaa sen. Kyse on pitkästä kielipoliittisesta kiistasta."
     },
     "fi15b": {
-      "q": "Pakollinen ruotsi suojelee Suomen kaksikielistä perintöä ja sen tulisi säilyä."
+      "q": "Pakollinen ruotsi suojelee Suomen kaksikielistä perintöä ja sen tulisi säilyä.",
+      "ctx": "Tämä väittää, että pakollinen ruotsi suojelee Suomen kaksikielistä perintöä ja ruotsinkielisen vähemmistön oikeuksia ja sen tulisi säilyä. Kyse on kaksikielisestä perinnöstä vastaan käytännön hyöty."
     },
     "fi16a": {
-      "q": "Translaki, joka antaa muuttaa juridisen sukupuolen omalla ilmoituksella, oli oikea."
+      "q": "Translaki, joka antaa muuttaa juridisen sukupuolen omalla ilmoituksella, oli oikea.",
+      "ctx": "Suomen 2023 translaki antaa aikuisten muuttaa juridisen sukupuolensa omalla ilmoituksella ilman lääketieteellisiä vaatimuksia. Tämä tukee sitä transidentiteetin tunnustamisena. Kyse on siitä, määritelläänkö sukupuoli identiteetin vai biologian mukaan."
     },
     "fi16b": {
-      "q": "Juridinen sukupuoli ei voi olla pelkkä ilmoitusasia; biologisen todellisuuden on ratkaistava."
+      "q": "Juridinen sukupuoli ei voi olla pelkkä ilmoitusasia; biologisen todellisuuden on ratkaistava.",
+      "ctx": "Tämä on sukupuolikriittinen näkemys: juridinen sukupuoli ei voi perustua pelkkään ilmoitukseen ja biologisen todellisuuden on ratkaistava. Kyse on juridisen sukupuolen merkityksestä."
     },
     "fi17a": {
-      "q": "Suomi ylisäätelee yrityksiä; yritykset tarvitsevat paljon vähemmän byrokratiaa ja matalampia veroja."
+      "q": "Suomi ylisäätelee yrityksiä; yritykset tarvitsevat paljon vähemmän byrokratiaa ja matalampia veroja.",
+      "ctx": "Tämä väittää, että Suomi ylisäätelee yrityksiä ja että ne tarvitsevat paljon vähemmän byrokratiaa ja matalampia veroja kilpaillakseen. Kyse on siitä, elvyttäisikö sääntelyn purku talouden."
     },
     "fi17b": {
-      "q": "Sääntelyn karsiminen vain heikentää työntekijöiden, kuluttajien ja luonnon suojaa."
+      "q": "Sääntelyn karsiminen vain heikentää työntekijöiden, kuluttajien ja luonnon suojaa.",
+      "ctx": "Tämä väittää, että sääntelyn karsiminen vain heikentää työntekijöiden, kuluttajien ja luonnon suojaa. Kyse on siitä, suojaavatko säännöt ihmisiä vai rasittavatko ne yrityksiä."
     },
     "fi18a": {
-      "q": "Suomi tarvitsee kovempia rangaistuksia ja lisää poliiseja pitääkseen ihmiset turvassa."
+      "q": "Suomi tarvitsee kovempia rangaistuksia ja lisää poliiseja pitääkseen ihmiset turvassa.",
+      "ctx": "Tämä väittää, että Suomi tarvitsee kovempia rangaistuksia ja lisää poliiseja pitääkseen ihmiset turvassa. Kyse on siitä, parantaako kovempi rangaistus turvallisuutta."
     },
     "fi18b": {
-      "q": "Yhä kovemmat rangaistukset eivät koskaan vähennä rikollisuutta; ennaltaehkäisy ja sosiaalityö tekevät."
+      "q": "Yhä kovemmat rangaistukset eivät koskaan vähennä rikollisuutta; ennaltaehkäisy ja sosiaalityö tekevät.",
+      "ctx": "Tämä väittää, että yhä kovemmat rangaistukset eivät koskaan vähennä rikollisuutta, mutta ennaltaehkäisy ja sosiaalityö tekevät. Kyse on siitä, mikä oikeasti vähentää rikoksia."
     },
     "fi19a": {
-      "q": "Palvelut ja työpaikat tulisi pitää elossa koko maassa, ei keskittää etelään."
+      "q": "Palvelut ja työpaikat tulisi pitää elossa koko maassa, ei keskittää etelään.",
+      "ctx": "Väestön muuttaessa etelän kaupunkeihin tämä väittää, että palvelut ja työpaikat tulisi pitää elossa koko maassa, ei keskittää etelään — Keskustan asia. Kyse on alueellisesta tasapainosta."
     },
     "fi19b": {
-      "q": "Toiminnan keskittäminen sinne missä ihmiset asuvat on tehokkaampaa kuin tyhjenevien alueiden tekohengitys."
+      "q": "Toiminnan keskittäminen sinne missä ihmiset asuvat on tehokkaampaa kuin tyhjenevien alueiden tekohengitys.",
+      "ctx": "Tämä väittää, että toiminnan keskittäminen sinne missä ihmiset asuvat on tehokkaampaa kuin tyhjenevien alueiden tekohengitys. Kyse on tehokkuudesta vastaan alueiden ylläpito."
     },
     "fi20a": {
-      "q": "Suomen tulevaisuus on vahvemmassa ja tiiviimmin integroituneessa Euroopan unionissa."
+      "q": "Suomen tulevaisuus on vahvemmassa ja tiiviimmin integroituneessa Euroopan unionissa.",
+      "ctx": "Tämä näkee Suomen tulevaisuuden vahvemmassa, tiiviimmin integroituneessa Euroopan unionissa, johon se sitoutui vahvasti irrottauduttuaan Venäjän vaikutuspiiristä. Kyse on syvemmästä EU-integraatiosta."
     },
     "fi20b": {
-      "q": "Brysselillä on jo liikaa valtaa Suomeen, ja suvereniteetin on tultava ensin."
+      "q": "Brysselillä on jo liikaa valtaa Suomeen, ja suvereniteetin on tultava ensin.",
+      "ctx": "Tämä väittää, että Brysselillä on jo liikaa valtaa Suomeen ja että suvereniteetin on tultava ensin — Perussuomalaisten EU-kriittinen linja. Kyse on kansallisesta suvereniteetista vastaan EU."
     },
     "fi21a": {
-      "q": "Työttömien ja sairaiden turvaverkkoa tulisi vahvistaa, ei kiristää."
+      "q": "Työttömien ja sairaiden turvaverkkoa tulisi vahvistaa, ei kiristää.",
+      "ctx": "Tämä haluaa vahvistaa työttömien ja sairaiden turvaverkkoa, ei kiristää sitä kuten hallitus on tehnyt. Kyse on siitä, kuinka antelias hyvinvointivaltion tulisi olla."
     },
     "fi21b": {
-      "q": "Antelias sosiaaliturva heikentää työnteon kannustimia ja se on pidettävä kurissa."
+      "q": "Antelias sosiaaliturva heikentää työnteon kannustimia ja se on pidettävä kurissa.",
+      "ctx": "Tämä väittää, että antelias sosiaaliturva heikentää työnteon kannustimia ja se on pidettävä kurissa. Kyse on anteliaisuudesta vastaan työnteon kannustimet."
     },
     "fi22a": {
-      "q": "Suomen liberaalit aborttioikeudet tulisi suojata tiukasti."
+      "q": "Suomen liberaalit aborttioikeudet tulisi suojata tiukasti.",
+      "ctx": "Tämä haluaa suojata tiukasti Suomen liberaalit aborttioikeudet. Kyse on aborttioikeuksien turvaamisesta."
     },
     "fi22b": {
-      "q": "Abortti päättää ihmiselmän, ja lain tulisi suojata syntymätöntä enemmän."
+      "q": "Abortti päättää ihmiselmän, ja lain tulisi suojata syntymätöntä enemmän.",
+      "ctx": "Tämä väittää, että abortti päättää ihmiselmän ja että lain tulisi suojata syntymätöntä enemmän. Kyse on syntymättömän moraalisesta asemasta."
     },
     "fi23a": {
-      "q": "Jotkut rodut ovat yksinkertaisesti älykkäämpiä tai kyvykkäämpiä kuin toiset."
+      "q": "Jotkut rodut ovat yksinkertaisesti älykkäämpiä tai kyvykkäämpiä kuin toiset.",
+      "ctx": "Tämä on rotuylivaltaa — usko, että jotkin rodut ovat luonnostaan älykkäämpiä tai kyvykkäämpiä. Se ajoi natsismia, eikä moderni genetiikka löydä sille perustaa. Kyse on epäuskottavasta, vaarallisesta ajatuksesta."
     },
     "fi23b": {
-      "q": "Rotujen välillä ei ole hierarkiaa; ajatus on pseudotiedettä, jolla on häpeällinen historia."
+      "q": "Rotujen välillä ei ole hierarkiaa; ajatus on pseudotiedettä, jolla on häpeällinen historia.",
+      "ctx": "Tämä esittää ihmisten yhdenvertaisuuden periaatteen: mikään rotu ei ole ylivertainen, ja ajatus on epäuskottavaa pseudotiedettä, jolla on häpeällinen historia. Kyse on syrjinnänvastaisuuden moraalisesta perustasta."
     },
     "fi24a": {
-      "q": "Kannabiksen käyttö tulisi dekriminalisoida ja käsitellä terveyskysymyksenä."
+      "q": "Kannabiksen käyttö tulisi dekriminalisoida ja käsitellä terveyskysymyksenä.",
+      "ctx": "Tämä tukee kannabiksen käytön dekriminalisointia ja sen käsittelemistä terveyskysymyksenä. Kyse on kiellosta vastaan terveyslähestymistapa."
     },
     "fi24b": {
-      "q": "Huumelakien löysentäminen normalisoi käytön ja tekisi enemmän haittaa kuin hyötyä."
+      "q": "Huumelakien löysentäminen normalisoi käytön ja tekisi enemmän haittaa kuin hyötyä.",
+      "ctx": "Tämä väittää, että huumelakien löysentäminen normalisoi käytön ja tekisi enemmän haittaa kuin hyötyä. Kyse on siitä, auttaako huumelakien löysentäminen vai vahingoittaako se."
     },
     "fi25a": {
-      "q": "Maahanmuuttajien tulisi sopeutua suomalaiseen kulttuuriin ja arvoihin, ei toisin päin."
+      "q": "Maahanmuuttajien tulisi sopeutua suomalaiseen kulttuuriin ja arvoihin, ei toisin päin.",
+      "ctx": "Tämä väittää, että maahanmuuttajien tulisi sopeutua suomalaiseen kulttuuriin ja arvoihin eikä toisin päin. Kyse on siitä, kuinka paljon kulttuurista mukautumista tulokkailta odotetaan."
     },
     "fi25b": {
-      "q": "Elävä kulttuuri on aina sekoitus; assimilaation vaatiminen köyhdyttää Suomea."
+      "q": "Elävä kulttuuri on aina sekoitus; assimilaation vaatiminen köyhdyttää Suomea.",
+      "ctx": "Tämä väittää, että elävä kulttuuri on aina sekoitus, joten assimilaation vaatiminen köyhdyttää Suomea. Kyse on kotoutumisesta vastaan monikulttuurisuus."
     },
     "fi26a": {
-      "q": "Suomen politiikassa on todellinen rasismiongelma, joka on kohdattava rehellisesti."
+      "q": "Suomen politiikassa on todellinen rasismiongelma, joka on kohdattava rehellisesti.",
+      "ctx": "Sen jälkeen kun ministerien aiemmat äärioikeistoon vivahtavat lausunnot aiheuttivat kohun, tämä väittää, että Suomen politiikassa on todellinen rasismiongelma, joka on kohdattava rehellisesti. Kyse on rasismin tunnistamisesta politiikassa."
     },
     "fi26b": {
-      "q": "Jatkuvat rasismisyytökset ovat liioiteltuja ja niitä käytetään vaientamaan oikeutettu keskustelu."
+      "q": "Jatkuvat rasismisyytökset ovat liioiteltuja ja niitä käytetään vaientamaan oikeutettu keskustelu.",
+      "ctx": "Tämä väittää, että jatkuvat rasismisyytökset ovat liioiteltuja ja niitä käytetään vaientamaan oikeutettu keskustelu. Kyse on rasismin kohtaamisesta vastaan leiman ylikäyttö."
     },
     "fi27a": {
-      "q": "Valtion alkoholimonopoli (Alko) ja tiukat alkoholisäännöt tulisi säilyttää."
+      "q": "Valtion alkoholimonopoli (Alko) ja tiukat alkoholisäännöt tulisi säilyttää.",
+      "ctx": "Alko on Suomen valtion alkoholimonopoli; viini ja väkevät myydään vain sen myymälöissä. Tämä haluaa säilyttää sen ja tiukat alkoholisäännöt kansanterveyden vuoksi. Kyse on holhoavasta mutta juurtuneesta instituutiosta."
     },
     "fi27b": {
-      "q": "Aikuiset voivat tehdä omat valintansa; viini ja väkevemmät tulisi myydä vapaasti kaupoissa."
+      "q": "Aikuiset voivat tehdä omat valintansa; viini ja väkevemmät tulisi myydä vapaasti kaupoissa.",
+      "ctx": "Tämä väittää, että aikuiset voivat tehdä omat valintansa ja että viini ja väkevät tulisi myydä vapaasti tavallisissa kaupoissa. Kyse on henkilökohtaisesta vapaudesta vastaan kansanterveyden kontrolli."
     },
     "fi28a": {
-      "q": "Suomen tulisi pitää puolustusmenot korkeina ja tukea Ukrainaa vahvasti."
+      "q": "Suomen tulisi pitää puolustusmenot korkeina ja tukea Ukrainaa vahvasti.",
+      "ctx": "Tämä tukee puolustusmenojen pitämistä korkeina ja Ukrainan vahvaa tukemista Suomen pitkän Venäjän-rajan vuoksi. Kyse on turvallisuudesta jännittyneessä naapurustossa."
     },
     "fi28b": {
-      "q": "Aseisiin menevä raha on rahaa, jonka pitäisi mennä hyvinvointiin ja palveluihin kotimaassa."
+      "q": "Aseisiin menevä raha on rahaa, jonka pitäisi mennä hyvinvointiin ja palveluihin kotimaassa.",
+      "ctx": "Tämä väittää, että aseisiin menevän rahan pitäisi mennä hyvinvointiin ja palveluihin kotimaassa. Kyse on painotuksesta puolustuksen ja kotimaan tarpeiden välillä."
     },
     "fi29a": {
-      "q": "Julkinen yleisradio (Yle) on rahoituksensa arvoinen ja sen on pysyttävä riippumattomana."
+      "q": "Julkinen yleisradio (Yle) on rahoituksensa arvoinen ja sen on pysyttävä riippumattomana.",
+      "ctx": "Yle on Suomen julkinen yleisradio. Tämä väittää, että se on rahoituksensa arvoinen ja sen on pysyttävä riippumattomana. Kyse on julkisen median arvosta ja riippumattomuudesta."
     },
     "fi29b": {
-      "q": "Yle on liian suuri ja sen rahoitusta tulisi leikata rajusti."
+      "q": "Yle on liian suuri ja sen rahoitusta tulisi leikata rajusti.",
+      "ctx": "Tämä väittää, että Yle on liian suuri ja sen rahoitusta tulisi leikata rajusti. Kyse on siitä, ansaitseeko julkinen yleisradio rahoituksensa."
     },
     "fi30a": {
-      "q": "Suomen on leikattava velkaansa, vaikka se merkitsee kipeitä menoleikkauksia nyt."
+      "q": "Suomen on leikattava velkaansa, vaikka se merkitsee kipeitä menoleikkauksia nyt.",
+      "ctx": "Tämä väittää, että Suomen on leikattava velkaansa, vaikka se merkitsisi kipeitä menoleikkauksia nyt — hallituksen säästöperustelu. Kyse on budjettikurista vastaan sosiaalimenot."
     },
     "fi30b": {
-      "q": "Menojen leikkaaminen heikossa taloudessa vain syventää taantumaa; investoinnit ovat velkaa tärkeämpiä."
+      "q": "Menojen leikkaaminen heikossa taloudessa vain syventää taantumaa; investoinnit ovat velkaa tärkeämpiä.",
+      "ctx": "Tämä väittää, että menojen leikkaaminen heikossa taloudessa vain syventää taantumaa, ja että investoinnit ovat velan vähentämistä tärkeämpiä. Kyse on säästöistä vastaan elvytys."
     },
     "fi31a": {
-      "q": "Avoin globaali vapaakauppa on tehnyt Suomesta rikkaamman ja sitä tulisi puolustaa."
+      "q": "Avoin globaali vapaakauppa on tehnyt Suomesta rikkaamman ja sitä tulisi puolustaa.",
+      "ctx": "Tämä puolustaa avointa globaalia vapaakauppaa, joka on tehnyt Suomesta, korkean teknologian viejästä, rikkaamman. Kyse on taloudellisen avoimuuden arvosta."
     },
     "fi31b": {
-      "q": "Globalisaatio teki Suomesta liian riippuvaisen ja tyhjensi paikallista tuotantoa."
+      "q": "Globalisaatio teki Suomesta liian riippuvaisen ja tyhjensi paikallista tuotantoa.",
+      "ctx": "Tämä väittää, että globalisaatio teki Suomesta liian riippuvaisen ja tyhjensi paikallista tuotantoa. Kyse on omavaraisuudesta vastaan avoimet markkinat."
     },
     "fi32a": {
-      "q": "Suomen tulisi käyttää enemmän sitovia kansanäänestyksiä suurista kysymyksistä."
+      "q": "Suomen tulisi käyttää enemmän sitovia kansanäänestyksiä suurista kysymyksistä.",
+      "ctx": "Tämä tukee useampien sitovien kansanäänestysten käyttöä suurista kysymyksistä. Kyse on siitä, kuuluvatko suuret valinnat äänestäjille vai edustajille."
     },
     "fi32b": {
-      "q": "Kansanäänestykset typistävät monimutkaiset kysymykset iskulauseiksi ja populistit kaappaavat ne helposti."
+      "q": "Kansanäänestykset typistävät monimutkaiset kysymykset iskulauseiksi ja populistit kaappaavat ne helposti.",
+      "ctx": "Tämä väittää, että kansanäänestykset typistävät monimutkaiset kysymykset iskulauseiksi ja populistit kaappaavat ne helposti. Kyse on siitä, ovatko suorat äänestykset viisaita."
     },
     "fi33a": {
-      "q": "Soiden ja vanhojen metsän suojelun tulisi mennä uuden teollisuuden edelle."
+      "q": "Soiden ja vanhojen metsän suojelun tulisi mennä uuden teollisuuden edelle.",
+      "ctx": "Suot ja vanhat metsät ovat Suomessa merkittäviä hiilivarastoja ja elinympäristöjä. Tämä asettaa niiden suojelun uuden teollisuuden edelle. Kyse on suojelusta vastaan kehitys."
     },
     "fi33b": {
-      "q": "Loputon ympäristönsuojelu estää hankkeet ja työpaikat, joita Suomi tarvitsee."
+      "q": "Loputon ympäristönsuojelu estää hankkeet ja työpaikat, joita Suomi tarvitsee.",
+      "ctx": "Tämä väittää, että loputon ympäristönsuojelu estää hankkeet ja työpaikat, joita Suomi tarvitsee. Kyse on siitä, suojaavatko ympäristösäännöt luontoa vai estävätkö ne edistyksen."
     },
     "fi34a": {
-      "q": "Pitkät perinteet kantavat sukupolvien viisautta, eikä niitä pidä hylätä kevyesti."
+      "q": "Pitkät perinteet kantavat sukupolvien viisautta, eikä niitä pidä hylätä kevyesti.",
+      "ctx": "Tämä on konservatiivinen perinnefilosofia Edmund Burken hengessä: vanhat tavat sisältävät sukupolvien kertyneen viisauden, joten muutoksen tulisi olla asteittaista eikä heittää toimivaa pois koettelemattomien ideoiden vuoksi."
     },
     "fi34b": {
-      "q": "Perinteen palvonta antaa vain kuolleiden hallita eläviä ja estää tarpeellisen muutoksen."
+      "q": "Perinteen palvonta antaa vain kuolleiden hallita eläviä ja estää tarpeellisen muutoksen.",
+      "ctx": "Tämä on edistyksellinen vastaus Thomas Painen hengessä, ettei kuolleiden pitäisi hallita eläviä: perinteen palvonta antaa vain menneisyyden ennakkoluulojen estää tarpeellisen muutoksen."
     },
     "fi35a": {
-      "q": "Hyvä yhteiskunta perustuu enemmän henkilökohtaiseen vastuuseen kuin valtion tukeen."
+      "q": "Hyvä yhteiskunta perustuu enemmän henkilökohtaiseen vastuuseen kuin valtion tukeen.",
+      "ctx": "Tämä heijastaa keskeistä oikeistolaista arvoa: hyvä yhteiskunta perustuu ennen kaikkea henkilökohtaiseen vastuuseen eikä valtion tukeen."
     },
     "fi35b": {
-      "q": "Yksilöiden syyttäminen järjestelmän luomista ongelmista on tapa, jolla hyväosaiset selittävät muiden kärsimyksen."
+      "q": "Yksilöiden syyttäminen järjestelmän luomista ongelmista on tapa, jolla hyväosaiset selittävät muiden kärsimyksen.",
+      "ctx": "Tämä heijastaa keskeistä vasemmistolaista arvoa: monet ongelmat johtuvat epäoikeudenmukaisista järjestelmistä oman hallinnan ulkopuolella, joten yksilöiden syyttäminen antaa hyväosaisten sivuuttaa muiden kärsimyksen."
     }
   },
   "partyStripHtml": "<div class=\"party-strip\">\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#006288\"></div>\n      <div class=\"party-name\">Kansallinen Kokoomus</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Kansallisen Kokoomuksen (Kok) ohjelmaan. Kannatat markkinataloutta, yksilönvapautta, työn verotuksen keventämistä ja Suomen tiivistä EU- ja Nato-yhteistyötä.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#FFDE55\"></div>\n      <div class=\"party-name\">Perussuomalaiset</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Perussuomalaisten (PS) ohjelmaan. Kannatat tiukkaa maahanmuuttopolitiikkaa, kansallista etua, perinteisiä arvoja ja suhtaudut kriittisesti EU-integraatioon.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#E11933\"></div>\n      <div class=\"party-name\">Suomen Sosialidemokraattinen Puolue</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Suomen Sosialidemokraattisen Puolueen (SDP) ohjelmaan. Kannatat vahvaa hyvinvointivaltiota, reiluja työehtoja, julkisia palveluja ja oikeudenmukaista verotusta.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#009E5C\"></div>\n      <div class=\"party-name\">Suomen Keskusta</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Suomen Keskustan (Kesk) ohjelmaan. Korostat alueiden tasapuolista kehittämistä, kotimaista ruoantuotantoa, hajauttamista ja perheiden valinnanvapautta.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#009F4D\"></div>\n      <div class=\"party-name\">Vihreä liitto</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Vihreän liiton (Vihr) ohjelmaan. Asetat ilmastonmuutoksen torjunnan ja luonnonsuojelun etusijalle, kannatat ihmisoikeuksia ja korkeaa koulutusta.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#A60A3D\"></div>\n      <div class=\"party-name\">Vasemmistoliitto</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Vasemmistoliiton (Vas) ohjelmaan. Kannatat tuloerojen kaventamista, vahvaa julkista sektoria ilman yksityistämistä ja kunnianhimoista ympäristöpolitiikkaa.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#004580\"></div>\n      <div class=\"party-name\">Suomen Ruotsalainen Kansanpuolue</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Suomen Ruotsalaisen Kansanpuolueen (RKP) ohjelmaan. Kannatat kaksikielistä Suomea, sosiaaliliberaaleja arvoja, yrittäjyyttä ja eurooppalaista yhteistyötä.</div>\n    </div>\n    <div class=\"party-cell\">\n      <div class=\"party-dot\" style=\"background:#001D6E\"></div>\n      <div class=\"party-name\">Suomen Kristillisdemokraatit</div>\n      <div class=\"party-desc\">Vastauksesi sopivat parhaiten Kristillisdemokraattien (KD) ohjelmaan. Arvostat kristillisiä ja perinteisiä perhearvoja, lähiyhteisöjen tukea ja vastuullista taloudenhoitoa.</div>\n    </div>\n  </div>",

@@ -83,7 +83,7 @@
         "ppc": -1.5,
         "g": 0
       },
-      "ctx": "Canada's healthcare (Medicare) is publicly funded and universal. This wants it kept that way, resisting private pay-for-service care."
+      "ctx": "Canada's Medicare provides universal, publicly funded healthcare, and this wants it kept that way, resisting private pay-for-service care. Wait times for procedures and family doctors are a growing strain. The stake is preserving a fully public system as pressure mounts."
     },
     {
       "id": "ca1b",
@@ -103,7 +103,7 @@
         "ppc": 1.5,
         "g": 0
       },
-      "ctx": "This argues the public system's long wait times could be eased by allowing more private healthcare options."
+      "ctx": "This argues the public monopoly's long wait times could be eased by allowing more private options, as some provinces and European systems do. Critics fear a two-tier system favouring the wealthy. The stake is whether private care would relieve or undermine Medicare."
     },
     {
       "id": "ca2a",
@@ -124,7 +124,7 @@
         "ppc": 2
       },
       "dec": true,
-      "ctx": "This argues Canada's recent high immigration levels have strained housing and public services and should be cut."
+      "ctx": "This argues Canada's recent record-high immigration — driven by ambitious federal targets — has strained housing and healthcare faster than they can cope, a view that grew as rents soared. The stake is whether the pace of immigration outran the country's capacity."
     },
     {
       "id": "ca2b",
@@ -145,7 +145,7 @@
         "ppc": -2
       },
       "dec": true,
-      "ctx": "This is the pro-immigration view: that immigration built Canada and remains essential to its economy and future."
+      "ctx": "This is the pro-immigration view: that immigration built Canada and remains essential to its economy and ageing workforce, a long-standing national consensus. The stake is immigration's central place in Canada's identity and economy."
     },
     {
       "id": "ca3a",
@@ -164,7 +164,7 @@
         "blq": 1,
         "ppc": 2
       },
-      "ctx": "This targets the sharp rise in temporary foreign workers and international students, calling for their numbers to be cut sharply."
+      "ctx": "This targets the sharp rise in temporary foreign workers and international students, whose numbers ballooned and who have been linked to housing and wage pressures, prompting federal caps. The stake is whether these temporary inflows should be sharply cut."
     },
     {
       "id": "ca3b",
@@ -183,7 +183,7 @@
         "blq": -1,
         "ppc": -2
       },
-      "ctx": "This argues those workers and students fill real gaps and enrich Canada, and shouldn't be blamed for wider problems."
+      "ctx": "This argues temporary workers and students fill real labour and revenue gaps and enrich Canada, and that blaming them for the housing crisis is scapegoating. The stake is whether they are a problem or a benefit unfairly targeted."
     },
     {
       "id": "ca4a",
@@ -204,7 +204,7 @@
         "ppc": -2
       },
       "dec": true,
-      "ctx": "The federal carbon tax charges for burning fossil fuels to fight climate change, with rebates to households. This defends it as fair and effective."
+      "ctx": "The federal carbon tax puts a price on fossil fuels to cut emissions, with most revenue rebated to households. This defends it as fair and effective, backed by most economists. The stake is whether carbon pricing is the smart way to fight climate change."
     },
     {
       "id": "ca4b",
@@ -225,7 +225,7 @@
         "ppc": 2
       },
       "dec": true,
-      "ctx": "This attacks the carbon tax as a money grab that raises costs for ordinary families, and wants it scrapped ('axe the tax')."
+      "ctx": "This attacks the carbon tax as a cost-of-living burden on ordinary families — the Conservative 'axe the tax' campaign — arguing the rebates don't offset the pain. The stake is whether the tax is fair climate policy or a punishing 'cash grab'."
     },
     {
       "id": "ca5a",
@@ -245,7 +245,7 @@
         "blq": -1,
         "ppc": 2
       },
-      "ctx": "This supports expanding Canada's oil and gas industry and building more pipelines to carry it."
+      "ctx": "This supports expanding Canada's huge oil and gas industry — centred on Alberta's oil sands — and building more pipelines to get it to market, for jobs and export income. The stake is the future of a sector central to Canada's economy."
     },
     {
       "id": "ca5b",
@@ -265,7 +265,7 @@
         "blq": 1,
         "ppc": -2
       },
-      "ctx": "This argues Canada must wind down fossil-fuel expansion and leave more oil in the ground for the climate."
+      "ctx": "This argues Canada must wind down fossil-fuel expansion and leave more oil in the ground to meet climate goals, even at economic cost to oil-producing regions. The stake is climate action versus a major industry."
     },
     {
       "id": "ca6a",
@@ -285,7 +285,7 @@
         "ppc": -1.5,
         "g": 0
       },
-      "ctx": "This supports governments building housing directly and intervening strongly to bring down home prices."
+      "ctx": "This supports governments building housing directly and intervening hard to bring down prices, after home costs in cities like Toronto and Vancouver became among the world's least affordable. The stake is how forcefully the state should act on housing."
     },
     {
       "id": "ca6b",
@@ -303,7 +303,7 @@
         "ppc": 1.5,
         "g": 0
       },
-      "ctx": "This argues the housing crisis is best fixed by cutting red tape and letting the private market build, not by government."
+      "ctx": "This argues the housing crisis is best solved by cutting the red tape and zoning rules that block building, and letting the private market build more, not by government construction. The stake is whether government or the market fixes housing."
     },
     {
       "id": "ca7a",
@@ -323,7 +323,7 @@
         "ppc": -2,
         "g": 0
       },
-      "ctx": "This supports significantly higher taxes on Canada's wealthiest people and big corporations."
+      "ctx": "This supports significantly higher taxes on Canada's wealthiest people and big corporations to fund services and reduce inequality. The stake is whether the rich should pay more."
     },
     {
       "id": "ca7b",
@@ -343,7 +343,7 @@
         "ppc": 2,
         "g": 0
       },
-      "ctx": "This argues higher taxes on wealth and business drive investment and skilled people out of Canada."
+      "ctx": "This argues higher taxes on wealth and business drive investment and skilled people to lower-tax places like the US, hurting Canada's competitiveness. The stake is whether taxing the top raises revenue or repels it."
     },
     {
       "id": "ca8a",
@@ -363,7 +363,7 @@
         "ppc": -2,
         "g": 0
       },
-      "ctx": "This supports expanding new national programs like public dental care and pharmacare (covering prescription drugs), even at high cost."
+      "ctx": "This supports expanding new national social programs — public dental care and pharmacare (prescription drug coverage), recently introduced — even at high cost. The stake is extending the welfare state despite budget pressure."
     },
     {
       "id": "ca8b",
@@ -383,7 +383,7 @@
         "ppc": 2,
         "g": 0
       },
-      "ctx": "This argues Canada can't afford costly new national programs and they would balloon the deficit."
+      "ctx": "This argues Canada cannot afford costly new national programs that will balloon the deficit and debt. The stake is the affordability of expanding social spending."
     },
     {
       "id": "ca9a",
@@ -403,7 +403,7 @@
         "blq": 2,
         "ppc": -2
       },
-      "ctx": "This supports Quebec, the mainly French-speaking province, becoming an independent country."
+      "ctx": "This supports Quebec, the mainly French-speaking province, becoming an independent country — the cause behind two referendums (1980 and a razor-thin 1995 No vote). The stake is the possible break-up of Canada."
     },
     {
       "id": "ca9b",
@@ -423,7 +423,7 @@
         "blq": -2,
         "ppc": 2
       },
-      "ctx": "This opposes Quebec independence, arguing the province is stronger within Canada."
+      "ctx": "This opposes Quebec independence, arguing the province is stronger economically and socially within Canada. The stake is keeping the country united."
     },
     {
       "id": "ca10a",
@@ -443,7 +443,7 @@
         "blq": 2,
         "ppc": 0.5
       },
-      "ctx": "Quebec's Bill 21 bans some public workers (teachers, police) from wearing religious symbols like hijabs or turbans. This defends it as legitimate secularism."
+      "ctx": "Quebec's Bill 21 bars some public workers — teachers, police, judges — from wearing religious symbols like hijabs, turbans, or kippahs, in the name of secularism. This defends it as legitimate. The stake is state neutrality versus religious freedom."
     },
     {
       "id": "ca10b",
@@ -463,7 +463,7 @@
         "blq": -2,
         "ppc": -0.5
       },
-      "ctx": "This condemns Bill 21 as state discrimination that punishes religious minorities for how they dress."
+      "ctx": "This condemns Bill 21 as state discrimination that punishes religious minorities — disproportionately Muslim women — for how they dress. The stake is whether the law is secularism or prejudice."
     },
     {
       "id": "ca11a",
@@ -482,7 +482,7 @@
         "grn": 2,
         "ppc": -2
       },
-      "ctx": "'Reconciliation' means repairing Canada's relationship with Indigenous peoples after historical wrongs. This supports major new spending and returning control over land."
+      "ctx": "'Reconciliation' means repairing Canada's relationship with Indigenous peoples after abuses like the residential schools. This supports major new spending and returning control over land and resources. The stake is how far Canada should go to make amends."
     },
     {
       "id": "ca11b",
@@ -501,7 +501,7 @@
         "grn": -2,
         "ppc": 2
       },
-      "ctx": "This argues reconciliation spending has become an open-ended cost and that Canadians deserve firm limits."
+      "ctx": "This argues reconciliation spending has become an open-ended, poorly accountable cost, and Canadians deserve firm limits. The stake is balancing redress for historic wrongs against fiscal control."
     },
     {
       "id": "ca12a",
@@ -521,7 +521,7 @@
         "blq": 1,
         "ppc": -2
       },
-      "ctx": "This supports tighter gun control, including bans on assault-style firearms."
+      "ctx": "This supports tighter gun control, including bans on 'assault-style' firearms enacted after mass shootings. The stake is reducing gun violence versus the rights of lawful owners."
     },
     {
       "id": "ca12b",
@@ -541,7 +541,7 @@
         "blq": -1,
         "ppc": 2
       },
-      "ctx": "This argues gun bans punish law-abiding hunters and sport shooters while doing nothing to stop criminals."
+      "ctx": "This argues gun bans punish law-abiding hunters and sport shooters — important in rural Canada — while doing little about criminals using smuggled guns. The stake is whether the bans target the right people."
     },
     {
       "id": "ca13a",
@@ -561,7 +561,7 @@
         "blq": 1,
         "ppc": -0.5
       },
-      "ctx": "This supports Canada standing up to the United States and retaliating against US tariffs (import taxes), whatever the cost."
+      "ctx": "This supports Canada standing up to the United States and retaliating against its tariffs, whatever the cost, amid Trump-era trade threats. The US takes about three-quarters of Canada's exports. The stake is national pride and leverage versus economic dependence."
     },
     {
       "id": "ca13b",
@@ -581,7 +581,7 @@
         "blq": -1,
         "ppc": 0.5
       },
-      "ctx": "This argues confronting the US is reckless because Canada's economy depends on trade with its huge neighbour."
+      "ctx": "This argues confronting the US is reckless because Canada's economy depends overwhelmingly on trade with its giant neighbour, so getting along is vital. The stake is standing firm versus protecting a crucial relationship."
     },
     {
       "id": "ca14a",
@@ -600,7 +600,7 @@
         "grn": -1,
         "ppc": 0.5
       },
-      "ctx": "This supports sharply higher military spending to meet Canada's NATO commitments (the Western defence alliance)."
+      "ctx": "This supports sharply higher military spending to meet Canada's NATO commitment (2% of GDP), which it has long fallen short of, amid allied pressure. The stake is whether Canada should invest much more in defence."
     },
     {
       "id": "ca14b",
@@ -619,7 +619,7 @@
         "grn": 1,
         "ppc": -0.5
       },
-      "ctx": "This argues the billions for the military would be better spent on Canadians at home."
+      "ctx": "This argues the billions for the military would be better spent on Canadians' domestic needs like health and housing. The stake is priorities between defence and social spending."
     },
     {
       "id": "ca15a",
@@ -639,7 +639,7 @@
         "ppc": -2
       },
       "dec": true,
-      "ctx": "'Safe supply' gives drug users regulated drugs, and decriminalisation removes criminal penalties for possession. This backs both as evidence-based responses to the drug crisis."
+      "ctx": "'Safe supply' gives drug users regulated drugs to prevent overdoses, and decriminalisation removes penalties for possession — approaches British Columbia trialled amid a deadly opioid crisis. This backs them as evidence-based. The stake is harm reduction versus enabling drug use."
     },
     {
       "id": "ca15b",
@@ -659,7 +659,7 @@
         "ppc": 2
       },
       "dec": true,
-      "ctx": "This argues these experiments flooded communities with drugs and disorder and should be scrapped."
+      "ctx": "This argues those experiments flooded communities with drugs and public disorder and should be scrapped — pointing to BC's partial rollback. The stake is whether harm-reduction policies help or worsen the crisis."
     },
     {
       "id": "ca16a",
@@ -679,7 +679,7 @@
         "blq": 1,
         "ppc": 2
       },
-      "ctx": "This argues multiculturalism has failed, producing divided communities with little in common."
+      "ctx": "This argues multiculturalism — a Canadian official policy since the 1970s — has failed, producing divided communities with little in common. The stake is whether Canada's model of diversity works."
     },
     {
       "id": "ca16b",
@@ -699,7 +699,7 @@
         "blq": -1,
         "ppc": -2
       },
-      "ctx": "This celebrates multiculturalism as a genuine strength and a core part of Canadian identity."
+      "ctx": "This celebrates multiculturalism as a genuine strength and a defining part of Canadian identity. The stake is whether Canada's diversity is a success to defend."
     },
     {
       "id": "ca17a",
@@ -719,7 +719,7 @@
         "blq": 0.5,
         "ppc": 1.5
       },
-      "ctx": "This argues Islam clashes with Canadian values. Supporters cite integration concerns; critics call it religious prejudice."
+      "ctx": "This argues Islam clashes with Canadian values — a view aired in integration and security debates. Critics call it prejudice against a diverse community of Canadians. The stake is whether the concern is legitimate or bigoted."
     },
     {
       "id": "ca17b",
@@ -739,7 +739,7 @@
         "blq": -0.5,
         "ppc": -1.5
       },
-      "ctx": "This holds that Muslim Canadians are full members of society whose faith deserves equal respect."
+      "ctx": "This holds that Muslim Canadians are full members of society whose faith deserves equal respect. The stake is religious equality versus singling out one faith."
     },
     {
       "id": "ca18a",
@@ -759,7 +759,7 @@
         "blq": -1,
         "ppc": -0.5
       },
-      "ctx": "This is a statement of racial supremacism — the belief that some races are inherently more intelligent or capable than others. Mainstream science rejects it, and it is historically tied to ideologies like Nazism and systems like apartheid."
+      "ctx": "This is a statement of racial supremacism — the belief that some races are innately more intelligent or capable than others. It was the ideological engine of Nazism and the Holocaust, and of systems like slavery and apartheid. Modern genetics finds more variation within any racial group than between them, and the idea has no scientific standing."
     },
     {
       "id": "ca18b",
@@ -779,7 +779,7 @@
         "blq": 1,
         "ppc": 0.5
       },
-      "ctx": "This is the principle of human equality: that no race is inherently smarter or more capable, and that the idea of a racial hierarchy is discredited pseudo-science with a shameful history."
+      "ctx": "This states the principle of fundamental human equality: that no race is innately superior in intelligence or ability, and that racial hierarchies are discredited pseudo-science with a shameful history behind slavery and apartheid. It is the moral baseline of modern anti-discrimination law."
     },
     {
       "id": "ca19a",
@@ -799,7 +799,7 @@
         "blq": 0.5,
         "ppc": 2
       },
-      "ctx": "This argues sentences are too soft and that violent and repeat offenders should spend far longer in prison."
+      "ctx": "This argues sentences are too soft and that violent and repeat offenders should spend far longer in prison, reflecting Conservative 'tough on crime' policy. The stake is whether harsher punishment improves safety."
     },
     {
       "id": "ca19b",
@@ -819,7 +819,7 @@
         "blq": -0.5,
         "ppc": -2
       },
-      "ctx": "This argues locking more people up hasn't made Canada safer, and that prevention and rehabilitation work better."
+      "ctx": "This argues locking more people up has not made Canada safer and that prevention and rehabilitation work better. The stake is what actually reduces crime."
     },
     {
       "id": "ca20a",
@@ -839,7 +839,7 @@
         "ppc": -2
       },
       "dec": true,
-      "ctx": "This supports transgender rights: the view that people should be able to have the law recognise the gender they identify as, without needing medical approval."
+      "ctx": "This supports transgender rights: letting people have the law recognise the gender they identify as and access gender-affirming care. 'Self-identification' laws, used in countries like Ireland and Argentina, allow a legal gender change without medical gatekeeping. The stake is whether gender is defined by identity or by biology."
     },
     {
       "id": "ca20b",
@@ -859,7 +859,7 @@
         "ppc": 2
       },
       "dec": true,
-      "ctx": "This is the gender-critical view: that biological sex is a fixed fact the law should not allow a personal declaration to override."
+      "ctx": "This is the 'gender-critical' view: that biological sex is a fixed, binary reality no declaration or surgery can change, and that the law should rest on it — in single-sex spaces, sport, and official data. Associated with feminists like J.K. Rowling, it clashes head-on with the identity-based view."
     },
     {
       "id": "ca21a",
@@ -879,7 +879,7 @@
         "blq": 0.5,
         "ppc": 2
       },
-      "ctx": "This argues parents should have more say over what schools teach their children about gender and sexuality."
+      "ctx": "This argues parents should have more say over what schools teach their children about gender and sexuality — the issue behind 'parental rights' policies in several provinces. The stake is who controls sensitive parts of the curriculum."
     },
     {
       "id": "ca21b",
@@ -899,7 +899,7 @@
         "blq": -0.5,
         "ppc": -2
       },
-      "ctx": "This argues the curriculum should be set by educators and evidence, not by a parental veto over inclusive teaching."
+      "ctx": "This argues the curriculum should be set by educators and evidence, not by a parental veto over inclusive teaching that protects LGBTQ students. The stake is parental authority versus professional, inclusive education."
     },
     {
       "id": "ca22a",
@@ -919,7 +919,7 @@
         "blq": 1,
         "ppc": -1
       },
-      "ctx": "This treats access to abortion as a settled right that should be fully protected. Canada has no specific abortion law."
+      "ctx": "This treats abortion as a settled right that must be fully protected. Canada, unusually, has no abortion law at all — it is treated like any medical procedure. The stake is keeping abortion access unrestricted."
     },
     {
       "id": "ca22b",
@@ -939,7 +939,7 @@
         "blq": -0.5,
         "ppc": 1.5
       },
-      "ctx": "This argues it is wrong that Canada has no legal limits on abortion at all, and that a human life is at stake."
+      "ctx": "This argues it is wrong that Canada has no legal limits on abortion whatsoever, and that a human life is at stake, favouring at least some restrictions. The stake is whether the total absence of limits is right."
     },
     {
       "id": "ca23a",
@@ -959,7 +959,7 @@
         "blq": 1,
         "ppc": -1
       },
-      "ctx": "MAID (Medical Assistance in Dying) is Canada's legal assisted-death system. This defends it as compassionate and broadly appropriate."
+      "ctx": "MAID (Medical Assistance in Dying) is Canada's assisted-death law, among the world's most permissive. This defends it as compassionate and broadly appropriate. The stake is the right to a chosen death."
     },
     {
       "id": "ca23b",
@@ -977,7 +977,7 @@
         "blq": -0.5,
         "ppc": 1
       },
-      "ctx": "This argues MAID has expanded too far and now risks pushing poor or disabled people toward death."
+      "ctx": "This argues MAID has expanded dangerously — with proposals to include mental illness — and now risks pushing poor, disabled, or ill people toward death for lack of support. The stake is whether the safeguards have eroded."
     },
     {
       "id": "ca24a",
@@ -997,7 +997,7 @@
         "ppc": -1.5,
         "g": 0
       },
-      "ctx": "This supports stronger trade unions and worker rights, and protecting the right to strike."
+      "ctx": "This supports stronger trade unions and worker rights, including protecting the right to strike, after high-profile labour disputes. The stake is the balance of power between workers and employers."
     },
     {
       "id": "ca24b",
@@ -1017,7 +1017,7 @@
         "ppc": 1.5,
         "g": 0
       },
-      "ctx": "This argues union power raises costs and can hold the economy hostage, and that strike laws should be tightened."
+      "ctx": "This argues union power drives up costs and can hold the economy hostage — as rail or port strikes show — and that strike laws should be tightened. The stake is curbing union power versus protecting workers' leverage."
     },
     {
       "id": "ca25a",
@@ -1037,7 +1037,7 @@
         "blq": -0.5,
         "ppc": 2
       },
-      "ctx": "This argues Canada over-regulates its economy and that business needs far less red tape and lower taxes."
+      "ctx": "This argues Canada over-regulates its economy and that business needs far less red tape and lower taxes to stay competitive, especially against the US. The stake is whether deregulation would spur growth."
     },
     {
       "id": "ca25b",
@@ -1057,7 +1057,7 @@
         "blq": 0.5,
         "ppc": -2
       },
-      "ctx": "This argues cutting regulation just lets corporations off the hook on workers and the environment."
+      "ctx": "This argues cutting regulation just lets corporations off the hook on worker safety, consumer protection, and the environment. The stake is whether rules protect people or just burden business."
     },
     {
       "id": "ca26a",
@@ -1075,7 +1075,7 @@
         "grn": 0.5,
         "blq": 1.5
       },
-      "ctx": "This supports Canada cutting ties with the British monarchy (King Charles is Canada's head of state) and choosing its own."
+      "ctx": "This supports Canada cutting ties with the British monarchy — King Charles remains head of state — and choosing its own. Support has grown, especially in Quebec. The stake is whether Canada should keep a foreign, hereditary head of state."
     },
     {
       "id": "ca26b",
@@ -1093,7 +1093,7 @@
         "grn": -0.5,
         "blq": -1.5
       },
-      "ctx": "This defends the Crown as part of Canada's constitutional stability."
+      "ctx": "This defends the Crown as part of Canada's stable constitutional order and parliamentary tradition. The stake is the value of keeping the monarchy."
     },
     {
       "id": "ca27a",
@@ -1113,7 +1113,7 @@
         "blq": 2,
         "ppc": -0.5
       },
-      "ctx": "Quebec limits the use of English to protect French. This argues that protecting French justifies strong restrictions on English."
+      "ctx": "Quebec's language laws (like Bill 101 and Bill 96) restrict English to protect the French language in a mostly English-speaking continent. This argues that protection justifies strong limits on English. The stake is safeguarding French versus individual language freedom."
     },
     {
       "id": "ca27b",
@@ -1133,7 +1133,7 @@
         "blq": -2,
         "ppc": 0.5
       },
-      "ctx": "This argues language laws restricting English go too far and trample individual freedom."
+      "ctx": "This argues language laws restricting English — on signs, in business, in schooling — go too far and trample individual freedom. The stake is minority-language protection versus personal rights."
     },
     {
       "id": "ca28a",
@@ -1153,7 +1153,7 @@
         "blq": 0.5,
         "ppc": 0.5
       },
-      "ctx": "This supports replacing 'first-past-the-post' (most votes wins each seat) with proportional representation, which matches seats to vote share."
+      "ctx": "This supports replacing first-past-the-post (most votes wins each riding) with proportional representation, so seats better match the national vote — a reform Trudeau promised but dropped. The stake is how fairly votes translate into seats."
     },
     {
       "id": "ca28b",
@@ -1173,7 +1173,7 @@
         "blq": -0.5,
         "ppc": -0.5
       },
-      "ctx": "This defends first-past-the-post as producing stable, accountable governments."
+      "ctx": "This defends first-past-the-post as producing stable, accountable majority governments and a clear local MP, unlike coalition-prone proportional systems. The stake is stability versus proportionality."
     },
     {
       "id": "ca29a",
@@ -1192,7 +1192,7 @@
         "grn": -0.5,
         "ppc": 0.5
       },
-      "ctx": "This supports open global free trade as having made Canada richer."
+      "ctx": "This defends open global free trade as having made Canada, a major exporter, richer. The stake is the value of economic openness."
     },
     {
       "id": "ca29b",
@@ -1211,7 +1211,7 @@
         "grn": 0.5,
         "ppc": -0.5
       },
-      "ctx": "This argues free trade hollowed out Canadian manufacturing and left communities behind."
+      "ctx": "This argues free trade hollowed out Canadian manufacturing — factory towns in Ontario and Quebec — and left communities behind. The stake is who globalisation left behind."
     },
     {
       "id": "ca30a",
@@ -1230,7 +1230,7 @@
         "blq": 0.5,
         "ppc": -2
       },
-      "ctx": "This puts protecting nature ahead of new resource projects (mines, pipelines) and development."
+      "ctx": "This puts protecting nature ahead of new resource projects — mines, pipelines, dams — and development, prioritising land, water, and Indigenous rights. The stake is conservation versus resource development, a defining Canadian tension."
     },
     {
       "id": "ca30b",
@@ -1249,7 +1249,7 @@
         "blq": -0.5,
         "ppc": 2
       },
-      "ctx": "This argues endless environmental reviews block the projects Canada needs to prosper."
+      "ctx": "This argues endless environmental reviews and approvals are strangling the resource and infrastructure projects Canada's economy needs. The stake is whether the process protects nature or blocks prosperity."
     },
     {
       "id": "ca31a",
@@ -1269,7 +1269,7 @@
         "blq": 1,
         "ppc": 2
       },
-      "ctx": "This argues immigrants who won't integrate or adopt Canadian values should not be in the country."
+      "ctx": "This argues immigrants who won't integrate or adopt Canadian values should not be in the country. The stake is how much cultural conformity Canada should expect of newcomers."
     },
     {
       "id": "ca31b",
@@ -1289,7 +1289,7 @@
         "blq": -1,
         "ppc": -2
       },
-      "ctx": "This argues demanding cultural conformity betrays the pluralism (acceptance of many cultures) that defines Canada."
+      "ctx": "This argues demanding cultural conformity betrays the pluralism — acceptance of many cultures — that defines Canada. The stake is integration versus Canada's multicultural ideal."
     },
     {
       "id": "ca32a",
@@ -1308,7 +1308,7 @@
         "grn": -1,
         "ppc": 2
       },
-      "ctx": "This favours teaching children pride in Canada's history rather than focusing mainly on its wrongs."
+      "ctx": "This favours teaching children pride in Canada's history rather than focusing mainly on its wrongs. The stake is what balance schools should strike about the national past."
     },
     {
       "id": "ca32b",
@@ -1327,7 +1327,7 @@
         "grn": 1,
         "ppc": -2
       },
-      "ctx": "This supports teaching hard truths like the residential schools (where Indigenous children were abused), arguing hiding them misleads students."
+      "ctx": "This supports teaching hard truths like the residential schools — where Indigenous children were taken from families and abused, with unmarked graves found in 2021 — arguing hiding them misleads students. The stake is honesty about historic wrongs."
     },
     {
       "id": "ca33a",
@@ -1347,7 +1347,7 @@
         "ppc": -2,
         "g": 0
       },
-      "ctx": "This argues the poor and unemployed are treated with too much suspicion and that the safety net should be stronger."
+      "ctx": "This argues the poor and unemployed are treated with too much suspicion and that the safety net should be stronger and easier to access. The stake is how generous and accessible welfare should be."
     },
     {
       "id": "ca33b",
@@ -1367,7 +1367,7 @@
         "ppc": 2,
         "g": 0
       },
-      "ctx": "This argues welfare can trap people, and that stricter conditions protect the taxpayers who fund it."
+      "ctx": "This argues welfare can trap people in dependency, and that stricter conditions protect the taxpayers who fund it. The stake is whether conditions on aid help or punish recipients."
     },
     {
       "id": "ca34a",
@@ -1387,7 +1387,7 @@
         "blq": 0.5,
         "ppc": 1.5
       },
-      "ctx": "This is the conservative view of tradition: that long-standing customs and institutions hold accumulated wisdom, so we should be cautious about sweeping them away for something new."
+      "ctx": "This is the conservative philosophy of tradition, associated with Edmund Burke: that long-standing customs and institutions hold the accumulated, hard-won wisdom of generations, so change should be gradual and cautious rather than sweeping away what works for untested ideas."
     },
     {
       "id": "ca34b",
@@ -1407,7 +1407,7 @@
         "blq": -0.5,
         "ppc": -1.5
       },
-      "ctx": "This is the progressive reply: that clinging to tradition for its own sake lets the past dictate to the present and blocks change that is needed."
+      "ctx": "This is the progressive reply, in the spirit of Thomas Paine's line that 'the dead should not govern the living': that treating tradition as sacred just lets the prejudices of the past block overdue reform — as appeals to tradition once defended slavery and denying women the vote."
     },
     {
       "id": "ca35a",
@@ -1427,7 +1427,7 @@
         "blq": -0.5,
         "ppc": 2
       },
-      "ctx": "This reflects a right-leaning value: that a good society rests mainly on individuals taking responsibility for their own lives, rather than leaning on government."
+      "ctx": "This reflects a core right-leaning value: that a healthy society depends mainly on individuals taking responsibility for their own choices and lives, and that leaning too heavily on government breeds dependence and saps initiative."
     },
     {
       "id": "ca35b",
@@ -1447,7 +1447,7 @@
         "blq": 0.5,
         "ppc": -2
       },
-      "ctx": "This reflects a left-leaning value: that many problems are caused by unfair systems, so blaming individuals lets the comfortable look past suffering they may benefit from."
+      "ctx": "This reflects a core left-leaning value: that many hardships — poverty, poor health, joblessness — stem from unfair systems and circumstances beyond personal control, so blaming individuals lets the comfortable ignore problems they benefit from or could help fix."
     }
   ],
   "heroTitle": "Where do you stand in <em>Canadian</em> politics?",
