@@ -26,6 +26,42 @@ const FLAGS_DATA = [
     links: {
       us: "https://amzn.to/4fBgTN9"
     }
+  },
+  {
+    id: "uk-flag",
+    name: "United Kingdom Flag",
+    code: "uk",
+    description: "The Union Jack. Combining the crosses of St George, St Andrew, and St Patrick - the national flag of the United Kingdom.",
+    links: {
+      uk: "https://link.amazon/B073VsPCJ"
+    }
+  },
+  {
+    id: "england-flag",
+    name: "England Flag",
+    code: "england",
+    description: "The Cross of St George. A red cross on a white field - the national flag of England.",
+    links: {
+      uk: "https://link.amazon/B084TWlHa"
+    }
+  },
+  {
+    id: "fi-flag",
+    name: "Finland Flag",
+    code: "fi",
+    description: "The Siniristilippu. A blue Nordic cross on a white field - the national flag of Finland.",
+    links: {
+      se: "https://amzn.to/4yOVjxE"
+    }
+  },
+  {
+    id: "se-flag",
+    name: "Sweden Flag",
+    code: "se",
+    description: "The Sveriges flagga. A yellow Nordic cross on a blue field - the national flag of Sweden.",
+    links: {
+      se: "https://amzn.to/4gZoyaC"
+    }
   }
 ];
 
