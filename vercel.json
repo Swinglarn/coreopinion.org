@@ -1,7 +1,7 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "buildCommand": "node build.js",
+  "buildCommand": "node build.js && node prerender.js",
   "outputDirectory": ".",
   "framework": null,
   "rewrites": [

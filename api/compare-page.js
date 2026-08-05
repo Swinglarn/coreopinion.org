@@ -62,6 +62,9 @@ module.exports = async function handler(req, res) {
     // so a poisoned row can't break out of the content="" attribute.
     const safeTitle = escapeHtml(title);
     const safeDescription = escapeHtml(description);
+    // Pairwise comparisons are combinatorial and user-specific, so they stay out
+    // of the index for the same reason individual results do.
+    html = html.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, follow">');
     html = html.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonicalUrl}">`);
     html = html.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonicalUrl}">`);
     html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${safeTitle}">`);

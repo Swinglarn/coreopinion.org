@@ -754,6 +754,54 @@ html.dark-mode .nav-badge {
   font-weight: 300;
 }
 
+/* Country political landscape, below the test on each country portal */
+.country-context {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 52px 8px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.country-context h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+  margin: 0 0 18px;
+}
+
+.country-context h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+  margin: 34px 0 12px;
+}
+
+.country-context p {
+  font-size: 16.5px;
+  color: var(--ink-muted);
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0 0 16px;
+}
+
+.country-context a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.country-context a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+  .country-context { padding: 48px 24px 8px; }
+  .country-context h2 { font-size: 27px; }
+  .country-context h3 { font-size: 20px; }
+}
+
 .mini-compass {
   width: 160px;
   height: 160px;

@@ -791,6 +791,9 @@ configFiles.forEach(file => {
   html = html.replace(/\{\{LABEL\}\}/g, config.localLabel || '');
   html = html.replace(/\{\{HERO_TITLE\}\}/g, config.heroTitle || '');
   html = html.replace(/\{\{HERO_SUB\}\}/g, config.heroSub || '');
+  // Country-specific written context. Without it every portal is the same
+  // template with a different question bank, which reads as duplicate content.
+  html = html.replace(/\{\{COUNTRY_CONTEXT\}\}/g, config.context || '');
 
   // Hreflang and Lang substitutions
   const lang = (langConfig && langConfig.langCode) ? langConfig.langCode : 'en';
@@ -821,7 +824,7 @@ configFiles.forEach(file => {
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "email": "contact@coreopinion.org",
+          "email": "contact@webbitar.com",
           "contactType": "customer support"
         }
       },
@@ -1195,13 +1198,24 @@ window.getQuestion = q => q;`;
   fs.writeFileSync(outputPath, html, 'utf8');
   console.log(`Generated ${outputName} (size: ${html.length} bytes)`);
   if (isGeneral) {
+    // result.html and compare.html are templates for the dynamic /result/:id and
+    // /compare/:a/:b routes, which api/result-page.js and api/compare-page.js
+    // fill in per request. They are copies of the general test page, so leaving
+    // them indexable would publish two more duplicates of the homepage and let
+    // every user-generated result URL into the index. Mark them noindex here;
+    // the API handlers re-apply the same directive on the pages they serve.
+    const shellHtml = html.replace(
+      /<meta name="robots" content="[^"]*">/,
+      '<meta name="robots" content="noindex, follow">'
+    );
+
     const resultPath = path.join(outputDir, 'result.html');
-    fs.writeFileSync(resultPath, html, 'utf8');
-    console.log(`Generated result.html (size: ${html.length} bytes)`);
-    
+    fs.writeFileSync(resultPath, shellHtml, 'utf8');
+    console.log(`Generated result.html (size: ${shellHtml.length} bytes, noindex)`);
+
     const comparePath = path.join(outputDir, 'compare.html');
-    fs.writeFileSync(comparePath, html, 'utf8');
-    console.log(`Generated compare.html (size: ${html.length} bytes)`);
+    fs.writeFileSync(comparePath, shellHtml, 'utf8');
+    console.log(`Generated compare.html (size: ${shellHtml.length} bytes, noindex)`);
   }
 });
 
@@ -1257,7 +1271,7 @@ if (fs.existsSync(contentDir) && fs.existsSync(contentTemplatePath)) {
           },
           "contactPoint": {
             "@type": "ContactPoint",
-            "email": "contact@coreopinion.org",
+            "email": "contact@webbitar.com",
             "contactType": "customer support"
           }
         },
