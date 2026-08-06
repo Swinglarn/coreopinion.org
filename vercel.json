@@ -4,6 +4,14 @@
   "buildCommand": "node build.js && node prerender.js",
   "outputDirectory": ".",
   "framework": null,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.coreopinion.org" }],
+      "destination": "https://coreopinion.org/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/ideology/:slug",
