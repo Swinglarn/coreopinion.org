@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    COREOPINION.ORG - UNIFIED JAVASCRIPT STATE & SCORING ENGINE
    ============================================================ */
 
@@ -42,6 +42,58 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Your result is close - only {gap} points separates you from {nextPartyName}. You may genuinely straddle both traditions.',
     gapModerate: 'You align meaningfully with {nextPartyName} too, scoring {nextPct}%.',
     gapClear: 'Your alignment with {topPartyName} is clear, with {gap} points separating you from the next closest party.',
+    saveEmailInvalid: 'Please enter a valid email.',
+    saving: 'Saving...',
+    saveSuccess: 'Saved successfully! We have emailed your diagnostic report to {email}.',
+    saveError: 'Something went wrong. Please try again.',
+    partyAlignment: 'Party alignment',
+    compassTitle: 'Political compass position',
+    compassAuth: 'Authoritarian',
+    compassLib: 'Libertarian',
+    compassLeft: 'Left',
+    compassRight: 'Right',
+    axisEcon: 'Economic',
+    axisGov: 'Governance',
+    whatThisMeans: 'What this means',
+    topicHeatmapTitle: 'Policy Topic Stances',
+    topicHeatmapDesc: 'Your average ideological stance broken down by policy topic area.',
+    biasCardEyebrow: 'Framing Bias Score',
+    shareResultsTitle: 'Share your results',
+    shareBtn: 'Share',
+    exploreBooksPre: 'Explore our curated list of ',
+    exploreBooksLink: 'Books about politics',
+    tabAgreements: 'ðŸ¤ Agreements',
+    tabDisagreements: 'âš¡ Disagreements',
+    noAgreements: 'No direct policy agreements found.',
+    noDisagreements: 'No policy disagreements found! You are in perfect alignment.',
+    alignedChoice: 'Your aligned choice:',
+    closeBtn: 'Close',
+    saveEmailInvalid: 'Please enter a valid email.',
+    saving: 'Saving...',
+    saveSuccess: 'Saved successfully! We have emailed your diagnostic report to {email}.',
+    saveError: 'Something went wrong. Please try again.',
+    partyAlignment: 'Party alignment',
+    compassTitle: 'Political compass position',
+    compassAuth: 'Authoritarian',
+    compassLib: 'Libertarian',
+    compassLeft: 'Left',
+    compassRight: 'Right',
+    axisEcon: 'Economic',
+    axisGov: 'Governance',
+    whatThisMeans: 'What this means',
+    topicHeatmapTitle: 'Policy Topic Stances',
+    topicHeatmapDesc: 'Your average ideological stance broken down by policy topic area.',
+    biasCardEyebrow: 'Framing Bias Score',
+    shareResultsTitle: 'Share your results',
+    shareBtn: 'Share',
+    exploreBooksPre: 'Explore our curated list of ',
+    exploreBooksLink: 'Books about politics',
+    tabAgreements: 'ðŸ¤ Agreements',
+    tabDisagreements: 'âš¡ Disagreements',
+    noAgreements: 'No direct policy agreements found.',
+    noDisagreements: 'No policy disagreements found! You are in perfect alignment.',
+    alignedChoice: 'Your aligned choice:',
+    closeBtn: 'Close',
     profiles: {
       axiom: { name: 'The Axiom', icon: '🔷', desc: 'Unmovable. Your principles hold regardless of framing, context, or emotional appeal.' },
       analyst: { name: 'The Analyst', icon: '🔬', desc: 'Highly consistent with minor contextual flexibility. You distinguish policy mechanics from rhetoric.' },
@@ -89,6 +141,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Dein Ergebnis ist knapp - nur {gap} Punkte trennen dich von der {nextPartyName}. Du stehst möglicherweise zwischen beiden Traditionen.',
     gapModerate: 'Du weist auch eine deutliche Übereinstimmung mit der {nextPartyName} auf ({nextPct}%).',
     gapClear: 'Deine Übereinstimmung mit der {topPartyName} ist eindeutig, mit {gap} Punkten Vorsprung vor der nächsten Partei.',
+    saveEmailInvalid: 'Bitte gib eine gÃ¼ltige E-Mail-Adresse ein.',
+    saving: 'Speichern...',
+    saveSuccess: 'Erfolgreich gespeichert! Wir haben deinen Diagnosebericht an {email} gesendet.',
+    saveError: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
+    partyAlignment: 'ParteiÃ¼bereinstimmung',
+    compassTitle: 'Position im politischen Kompass',
+    compassAuth: 'AutoritÃ¤r',
+    compassLib: 'LibertÃ¤r',
+    compassLeft: 'Links',
+    compassRight: 'Rechts',
+    axisEcon: 'Wirtschaft',
+    axisGov: 'Staat & Ordnung',
+    whatThisMeans: 'Was das bedeutet',
+    topicHeatmapTitle: 'Positionen nach Themenbereichen',
+    topicHeatmapDesc: 'Deine durchschnittliche ideologische Haltung aufgeschlÃ¼sselt nach Themenbereichen.',
+    biasCardEyebrow: 'Framing-Verzerrungs-Score',
+    shareResultsTitle: 'Teile deine Ergebnisse',
+    shareBtn: 'Teilen',
+    exploreBooksPre: 'Entdecke unsere kuratierte Liste von ',
+    exploreBooksLink: 'BÃ¼chern Ã¼ber Politik',
+    tabAgreements: 'ðŸ¤ Ãœbereinstimmungen',
+    tabDisagreements: 'âš¡ Abweichungen',
+    noAgreements: 'Keine direkten politischen Ãœbereinstimmungen gefunden.',
+    noDisagreements: 'Keine politischen Abweichungen gefunden! Vollkommene Ãœbereinstimmung.',
+    alignedChoice: 'Deine Ã¼bereinstimmende Antwort:',
+    closeBtn: 'SchlieÃŸen',
     profiles: {
       axiom: { name: 'Das Axiom', icon: '🔷', desc: 'Unerschütterlich. Deine Prinzipien gelten unabhängig von Formulierung, Kontext oder emotionalem Appell.' },
       analyst: { name: 'Der Analyst', icon: '🔬', desc: 'Sehr konsistent mit geringer kontextueller Flexibilität. Du unterscheidest politische Mechanismen von Rhetorik.' },
@@ -136,6 +214,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Votre résultat est serré - seulement {gap} points vous séparent de {nextPartyName}. Vous chevauchez probablement les deux sensibilités.',
     gapModerate: 'Vous vous alignez également de manière significative avec {nextPartyName}, avec un score de {nextPct}%.',
     gapClear: "Votre alignement avec {topPartyName} est clair, avec {gap} points d'écart avec le parti suivant.",
+    saveEmailInvalid: 'Veuillez saisir une adresse e-mail valide.',
+    saving: 'Enregistrement...',
+    saveSuccess: 'EnregistrÃ© avec succÃ¨s ! Nous avons envoyÃ© votre rapport de diagnostic Ã  {email}.',
+    saveError: 'Une erreur s\'est produite. Veuillez rÃ©essayer.',
+    partyAlignment: 'Alignement partisan',
+    compassTitle: 'Position sur l\'Ã©chiquier politique',
+    compassAuth: 'Autoritaire',
+    compassLib: 'Libertaire',
+    compassLeft: 'Gauche',
+    compassRight: 'Droite',
+    axisEcon: 'Ã‰conomie',
+    axisGov: 'Gouvernance & LibertÃ©s',
+    whatThisMeans: 'Ce que cela signifie',
+    topicHeatmapTitle: 'Positions par thÃ©matique politique',
+    topicHeatmapDesc: 'Votre positionnement idÃ©ologique moyen ventilÃ© par domaine de politique publique.',
+    biasCardEyebrow: 'Score de biais de formulation',
+    shareResultsTitle: 'Partagez vos rÃ©sultats',
+    shareBtn: 'Partager',
+    exploreBooksPre: 'DÃ©couvrez notre sÃ©lection de ',
+    exploreBooksLink: 'Livres sur la politique',
+    tabAgreements: 'ðŸ¤ Accords',
+    tabDisagreements: 'âš¡ DÃ©saccords',
+    noAgreements: 'Aucun accord direct sur les politiques trouvÃ©.',
+    noDisagreements: 'Aucun dÃ©saccord politique trouvÃ© ! Vous Ãªtes en parfait alignement.',
+    alignedChoice: 'Votre choix concordant :',
+    closeBtn: 'Fermer',
     profiles: {
       axiom: { name: "L'Axiome", icon: '🔷', desc: "Inébranlable. Vos principes tiennent indépendamment de la formulation, du contexte ou de l'appel émotionnel." },
       analyst: { name: "L'Analyste", icon: '🔬', desc: "Très cohérent avec une flexibilité contextuelle mineure. Vous distinguez les mécanismes politiques de la rhétorique." },
@@ -183,6 +287,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Tu resultado es estrecho: solo {gap} puntos te separan de {nextPartyName}. Podrías estar entre ambas tradiciones.',
     gapModerate: 'También te alineas significativamente con {nextPartyName} ({nextPct}%).',
     gapClear: 'Tu alineación con {topPartyName} es clara, con {gap} puntos de ventaja sobre el siguiente partido.',
+    saveEmailInvalid: 'Por favor ingresa un correo electrÃ³nico vÃ¡lido.',
+    saving: 'Guardando...',
+    saveSuccess: 'Â¡Guardado con Ã©xito! Hemos enviado tu informe de diagnÃ³stico a {email}.',
+    saveError: 'Algo saliÃ³ mal. Por favor intÃ©ntalo de nuevo.',
+    partyAlignment: 'AlineaciÃ³n partidaria',
+    compassTitle: 'PosiciÃ³n en la brÃºjula polÃ­tica',
+    compassAuth: 'Autoritario',
+    compassLib: 'Libertario',
+    compassLeft: 'Izquierda',
+    compassRight: 'Derecha',
+    axisEcon: 'EconomÃ­a',
+    axisGov: 'Gobernanza',
+    whatThisMeans: 'QuÃ© significa esto',
+    topicHeatmapTitle: 'Posturas por Ã¡rea temÃ¡tica',
+    topicHeatmapDesc: 'Tu postura ideolÃ³gica promedio desglosada por Ã¡rea de polÃ­tica pÃºblica.',
+    biasCardEyebrow: 'PuntuaciÃ³n de sesgo de encuadre',
+    shareResultsTitle: 'Comparte tus resultados',
+    shareBtn: 'Compartir',
+    exploreBooksPre: 'Explora nuestra lista seleccionada de ',
+    exploreBooksLink: 'Libros sobre polÃ­tica',
+    tabAgreements: 'ðŸ¤ Coincidencias',
+    tabDisagreements: 'âš¡ Discrepancias',
+    noAgreements: 'No se encontraron coincidencias directas de polÃ­ticas.',
+    noDisagreements: 'Â¡No se encontraron discrepancias polÃ­ticas! Tienes una alineaciÃ³n perfecta.',
+    alignedChoice: 'Tu elecciÃ³n coincidente:',
+    closeBtn: 'Cerrar',
     profiles: {
       axiom: { name: 'El Axioma', icon: '🔷', desc: 'Inamovible. Tus principios se mantienen firmes sin importar el encuadre, el contexto o el llamado emocional.' },
       analyst: { name: 'El Analista', icon: '🔬', desc: 'Altamente consistente con una leve flexibilidad contextual. Distingues los mecanismos de política de la retórica.' },
@@ -230,6 +360,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Il tuo risultato è ravvicinato: solo {gap} punti ti separano da {nextPartyName}. Potresti trovarti tra le due tradizioni.',
     gapModerate: 'Ti allinei in modo significativo anche con {nextPartyName} ({nextPct}%).',
     gapClear: 'Il tuo allineamento con {topPartyName} è chiaro, con {gap} punti di distacco dal partito successivo.',
+    saveEmailInvalid: 'Inserisci un indirizzo email valido.',
+    saving: 'Salvataggio...',
+    saveSuccess: 'Salvato con successo! Abbiamo inviato il tuo report diagnostico a {email}.',
+    saveError: 'Qualcosa Ã¨ andato storto. Per favore riprova.',
+    partyAlignment: 'Allineamento partitico',
+    compassTitle: 'Posizione sulla bussola politica',
+    compassAuth: 'Autoritario',
+    compassLib: 'Libertario',
+    compassLeft: 'Sinistra',
+    compassRight: 'Destra',
+    axisEcon: 'Economia',
+    axisGov: 'Governance',
+    whatThisMeans: 'Cosa significa',
+    topicHeatmapTitle: 'Posizioni per aree tematiche',
+    topicHeatmapDesc: 'La tua posizione ideologica media suddivisa per area politica.',
+    biasCardEyebrow: 'Punteggio del bias di formulazione',
+    shareResultsTitle: 'Condividi i tuoi risultati',
+    shareBtn: 'Condividi',
+    exploreBooksPre: 'Esplora la nostra lista curata di ',
+    exploreBooksLink: 'Libri sulla politica',
+    tabAgreements: 'ðŸ¤ Concordanze',
+    tabDisagreements: 'âš¡ Divergenze',
+    noAgreements: 'Nessuna concordanza politica diretta trovata.',
+    noDisagreements: 'Nessuna divergenza politica trovata! Sei in perfetto allineamento.',
+    alignedChoice: 'La tua scelta conforme:',
+    closeBtn: 'Chiudi',
     profiles: {
       axiom: { name: "L'Assioma", icon: '🔷', desc: "Inamovibile. I tuoi principi rimangono saldi indipendentemente dall'incorniciamento, dal contesto o dal richiamo emotivo." },
       analyst: { name: "L'Analista", icon: '🔬', desc: 'Altamente coerente con una lieve flessibilità contestuale. Distingui i meccanismi politici dalla retorica.' },
@@ -277,6 +433,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Je resultaat ligt dicht bij elkaar - slechts {gap} punten scheiden je van {nextPartyName}. Je staat mogelijk tussen beide tradities in.',
     gapModerate: 'Je hebt ook een duidelijke overeenkomst met {nextPartyName} ({nextPct}%).',
     gapClear: 'Je overeenkomst met {topPartyName} is duidelijk, met {gap} punten voorsprong op de volgende partij.',
+    saveEmailInvalid: 'Voer een geldig e-mailadres in.',
+    saving: 'Opslaan...',
+    saveSuccess: 'Succesvol opgeslagen! We hebben je diagnostisch rapport gemaild naar {email}.',
+    saveError: 'Er is iets misgegaan. Probeer het opnieuw.',
+    partyAlignment: 'Partijovereenkomst',
+    compassTitle: 'Positie op het politieke kompas',
+    compassAuth: 'Autoritair',
+    compassLib: 'Libertair',
+    compassLeft: 'Links',
+    compassRight: 'Rechts',
+    axisEcon: 'Economie',
+    axisGov: 'Bestuur',
+    whatThisMeans: 'Wat dit betekent',
+    topicHeatmapTitle: 'Standpunten per beleidsthema',
+    topicHeatmapDesc: 'Jouw gemiddelde ideologische standpunt uitgesplitst per beleidsterrein.',
+    biasCardEyebrow: 'Framing-bias Score',
+    shareResultsTitle: 'Deel je resultaten',
+    shareBtn: 'Delen',
+    exploreBooksPre: 'Ontdek onze samengestelde lijst van ',
+    exploreBooksLink: 'Boeken over politiek',
+    tabAgreements: 'ðŸ¤ Overeenkomsten',
+    tabDisagreements: 'âš¡ Verschillen',
+    noAgreements: 'Geen directe beleidsovereenkomsten gevonden.',
+    noDisagreements: 'Geen beleidsverschillen gevonden! Je bent in perfecte harmonie.',
+    alignedChoice: 'Jouw overeenkomstige keuze:',
+    closeBtn: 'Sluiten',
     profiles: {
       axiom: { name: 'Het Axioma', icon: '🔷', desc: 'Onwrikbaar. Jouw principes houden stand ongeacht de formulering, context of emotionele oproep.' },
       analyst: { name: 'De Analist', icon: '🔬', desc: 'Zeer consistent met minimale contextuele flexibiliteit. Je onderscheidt beleidsmechanismen van retoriek.' },
@@ -324,6 +506,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Ditt resultat är jämnt - endast {gap} poäng skiljer dig från {nextPartyName}. Du står möjligen mellan båda traditionerna.',
     gapModerate: 'Du har också en tydlig överensstämmelse med {nextPartyName} ({nextPct}%).',
     gapClear: 'Din överensstämmelse med {topPartyName} är tydlig, med {gap} poängs marginal till nästa parti.',
+    saveEmailInvalid: 'Ange en giltig e-postadress.',
+    saving: 'Sparar...',
+    saveSuccess: 'Sparat! Vi har skickat din diagnosrapport till {email}.',
+    saveError: 'NÃ¥got gick fel. FÃ¶rsÃ¶k igen.',
+    partyAlignment: 'PartiÃ¶verensstÃ¤mmelse',
+    compassTitle: 'Position pÃ¥ den politiska kompassen',
+    compassAuth: 'AuktoritÃ¤r',
+    compassLib: 'LibertÃ¤r',
+    compassLeft: 'VÃ¤nster',
+    compassRight: 'HÃ¶ger',
+    axisEcon: 'Ekonomi',
+    axisGov: 'Stat & frihet',
+    whatThisMeans: 'Vad detta innebÃ¤r',
+    topicHeatmapTitle: 'StÃ¥ndpunkter per sakomrÃ¥de',
+    topicHeatmapDesc: 'Din genomsnittliga ideologiska stÃ¥ndpunkt uppdelad per sakomrÃ¥de.',
+    biasCardEyebrow: 'Formuleringsbias',
+    shareResultsTitle: 'Dela dina resultat',
+    shareBtn: 'Dela',
+    exploreBooksPre: 'Utforska vÃ¥r kurerade lista Ã¶ver ',
+    exploreBooksLink: 'BÃ¶cker om politik',
+    tabAgreements: 'ðŸ¤ Ã–verensstÃ¤mmelser',
+    tabDisagreements: 'âš¡ Skiljaktigheter',
+    noAgreements: 'Inga direkta politiska Ã¶verensstÃ¤mmelser hittades.',
+    noDisagreements: 'Inga politiska skiljaktigheter hittades! Du har fullstÃ¤ndig Ã¶verensstÃ¤mmelse.',
+    alignedChoice: 'Ditt Ã¶verensstÃ¤mmande val:',
+    closeBtn: 'StÃ¤ng',
     profiles: {
       axiom: { name: 'Axiomet', icon: '🔷', desc: 'Orubblig. Dina principer håller oavsett formulering, sammanhang eller emotionella argument.' },
       analyst: { name: 'Analytikern', icon: '🔬', desc: 'Mycket konsekvent med mindre kontextuell flexibilitet. Du skiljer på sakpolitik och retorik.' },
@@ -371,6 +579,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Dit resultat er tæt - kun {gap} point adskiller dig fra {nextPartyName}. Du står muligvis mellem begge traditioner.',
     gapModerate: 'Du har også en tydelig overensstemmelse med {nextPartyName} ({nextPct}%).',
     gapClear: 'Din overensstemmelse med {topPartyName} er tydelig, med en margen på {gap} point til næste parti.',
+    saveEmailInvalid: 'Indtast en gyldig e-mailadresse.',
+    saving: 'Gemmer...',
+    saveSuccess: 'Gemt! Vi har sendt din diagnosticeringsrapport til {email}.',
+    saveError: 'Noget gik galt. PrÃ¸v venligst igen.',
+    partyAlignment: 'Partioverensstemmelse',
+    compassTitle: 'Position pÃ¥ det politiske kompas',
+    compassAuth: 'AutoritÃ¦r',
+    compassLib: 'LibertÃ¦r',
+    compassLeft: 'Venstre',
+    compassRight: 'HÃ¸jre',
+    axisEcon: 'Ã˜konomi',
+    axisGov: 'Styreform & Frihed',
+    whatThisMeans: 'Hvad dette betyder',
+    topicHeatmapTitle: 'Holdninger efter politisk tema',
+    topicHeatmapDesc: 'Din gennemsnitlige ideologiske holdning opdelt efter politisk tema.',
+    biasCardEyebrow: 'Framing-bias score',
+    shareResultsTitle: 'Del dine resultater',
+    shareBtn: 'Del',
+    exploreBooksPre: 'Udforsk vores kuraterede liste over ',
+    exploreBooksLink: 'BÃ¸ger om politik',
+    tabAgreements: 'ðŸ¤ Overensstemmelser',
+    tabDisagreements: 'âš¡ Uoverensstemmelser',
+    noAgreements: 'Ingen direkte politiske overensstemmelser fundet.',
+    noDisagreements: 'Ingen politiske uoverensstemmelser fundet! Du er i perfekt samklang.',
+    alignedChoice: 'Dit overensstemmende valg:',
+    closeBtn: 'Luk',
     profiles: {
       axiom: { name: 'Aksiomet', icon: '🔷', desc: 'Urokkelig. Dine principper holder uanset formulering, kontekst eller følelsesmæssig appel.' },
       analyst: { name: 'Analytikeren', icon: '🔬', desc: 'Meget konsekvent med mindre kontekstuel fleksibilitet. Du skelner mellem politiske mekanismer og retorik.' },
@@ -418,6 +652,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Resultatet ditt er jevnt - bare {gap} poeng skiller deg fra {nextPartyName}. Du står muligens mellom begge tradisjonene.',
     gapModerate: 'Du har også et tydelig samsvar med {nextPartyName} ({nextPct}%).',
     gapClear: 'Samsvaret ditt med {topPartyName} er tydelig, med en margin på {gap} poeng til neste parti.',
+    saveEmailInvalid: 'Vennligst skriv inn en gyldig e-postadresse.',
+    saving: 'Lagrer...',
+    saveSuccess: 'Lagret! Vi har sendt diagnoserapporten din til {email}.',
+    saveError: 'Noe gikk galt. Vennligst prÃ¸v igjen.',
+    partyAlignment: 'Partioverensstemmelse',
+    compassTitle: 'Posisjon pÃ¥ det politiske kompasset',
+    compassAuth: 'AutoritÃ¦r',
+    compassLib: 'LibertÃ¦r',
+    compassLeft: 'Venstre',
+    compassRight: 'HÃ¸yre',
+    axisEcon: 'Ã˜konomi',
+    axisGov: 'Styresett & Frihet',
+    whatThisMeans: 'Hva dette betyr',
+    topicHeatmapTitle: 'Standpunkter per saksfelt',
+    topicHeatmapDesc: 'Ditt gjennomsnittlige ideologiske standpunkt fordelt pÃ¥ politiske saksomrÃ¥der.',
+    biasCardEyebrow: 'Framing-bias poengsum',
+    shareResultsTitle: 'Del resultatene dine',
+    shareBtn: 'Del',
+    exploreBooksPre: 'Utforsk vÃ¥r kuraterte liste over ',
+    exploreBooksLink: 'BÃ¸ker om politikk',
+    tabAgreements: 'ðŸ¤ Enigheter',
+    tabDisagreements: 'âš¡ Uenigheter',
+    noAgreements: 'Ingen direkte politiske enigheter funnet.',
+    noDisagreements: 'Ingen politiske uenigheter funnet! Du er i fullstendig overensstemmelse.',
+    alignedChoice: 'Ditt samsvarende valg:',
+    closeBtn: 'Lukk',
     profiles: {
       axiom: { name: 'Aksiomet', icon: '🔷', desc: 'Urokkelig. Dine prinsipper holder uanset formulering, kontekst eller følelsesmessig appell.' },
       analyst: { name: 'Analytikeren', icon: '🔬', desc: 'Svært konsekvent med mindre kontekstuell fleksibilitet. Du skiller mellom politiske mekanismer og retorikk.' },
@@ -465,6 +725,32 @@ const ENGINE_TRANSLATIONS = {
     gapClose: 'Tuloksesi on täpärä - vain {gap} pistettä erottaa sinut puolueesta {nextPartyName}. Saatat olla näiden kahden välillä.',
     gapModerate: 'Sovit myös merkittävästi yhteen puolueen {nextPartyName} kanssa ({nextPct}%).',
     gapClear: 'Yhteensopivuutesi puolueen {topPartyName} kanssa on selvä, {gap} pisteen erolla seuraavaan puolueeseen.',
+    saveEmailInvalid: 'Anna kelvollinen sÃ¤hkÃ¶postiosoite.',
+    saving: 'Tallennetaan...',
+    saveSuccess: 'Tallennettu onnistuneesti! Olemme lÃ¤hettÃ¤neet diagnoosiraporttisi osoitteeseen {email}.',
+    saveError: 'Jokin meni pieleen. YritÃ¤ uudelleen.',
+    partyAlignment: 'Puolueyhteensopivuus',
+    compassTitle: 'Sijainti poliittisella kompassilla',
+    compassAuth: 'Autoritaarinen',
+    compassLib: 'Libertaarinen',
+    compassLeft: 'Vasen',
+    compassRight: 'Oikea',
+    axisEcon: 'Talous',
+    axisGov: 'Hallinto & Vapaus',
+    whatThisMeans: 'MitÃ¤ tÃ¤mÃ¤ tarkoittaa',
+    topicHeatmapTitle: 'Kannat aihealueittain',
+    topicHeatmapDesc: 'KeskimÃ¤Ã¤rÃ¤inen ideologinen kantasi eriteltynÃ¤ politiikan aihealueittain.',
+    biasCardEyebrow: 'Kehystysharhapisteet',
+    shareResultsTitle: 'Jaa tuloksesi',
+    shareBtn: 'Jaa',
+    exploreBooksPre: 'Tutustu kuratoituun listaamme ',
+    exploreBooksLink: 'Politiikkaa kÃ¤sittelevistÃ¤ kirjoista',
+    tabAgreements: 'ðŸ¤ YhtÃ¤lÃ¤isyydet',
+    tabDisagreements: 'âš¡ Erimielisyydet',
+    noAgreements: 'Suoria poliittisia yhtÃ¤lÃ¤isyyksiÃ¤ ei lÃ¶ytynyt.',
+    noDisagreements: 'Poliittisia erimielisyyksiÃ¤ ei lÃ¶ytynyt! Olet tÃ¤ydellisessÃ¤ linjassa.',
+    alignedChoice: 'Linjassa oleva valintasi:',
+    closeBtn: 'Sulje',
     profiles: {
       axiom: { name: 'Aksiooma', icon: '🔷', desc: 'Horjumaton. Periaatteesi pitävät riippumatta kehystyksestä, kontekstista tai tunnevalituksista.' },
       analyst: { name: 'Analyytikko', icon: '🔬', desc: 'Erittäin johdonmukainen vähäisellä kontekstuaalisella joustavuudella. Erotat politiikan mekaniikan retoriikasta.' },
@@ -489,6 +775,161 @@ const ENGINE_TRANSLATIONS = {
     wouldDisagree: 'Hylkäisi väitteen',
     driftLabel: 'Kehystyspoikkeama',
     helpBtn: 'Mitä tämä tarkoittaa?'
+  }
+};
+
+// ============================================================
+// TOPIC TRANSLATIONS DICTIONARY (ALL 77 TOPICS x 10 LANGUAGES)
+// ============================================================
+const TOPIC_TRANSLATIONS = {
+  "Abortion & Bodily Autonomy": { en: "Abortion & Bodily Autonomy", de: "Abtreibung & kÃ¶rperliche Selbstbestimmung", fr: "Avortement & autonomie corporelle", es: "Aborto y autonomÃ­a corporal", it: "Aborto e autonomia corporea", nl: "Abortus & lichamelijke autonomie", sv: "Abort & kroppslig autonomi", da: "Abort og kropslig autonomi", no: "Abort og kroppslig autonomi", fi: "Abortti ja ruumiillinen itsemÃ¤Ã¤rÃ¤Ã¤misoikeus" },
+  "Academic Freedom": { en: "Academic Freedom", de: "Akademische Freiheit", fr: "LibertÃ© acadÃ©mique", es: "Libertad acadÃ©mica", it: "LibertÃ  accademica", nl: "Academische vrijheid", sv: "Akademisk frihet", da: "Akademisk frihed", no: "Akademisk frihet", fi: "Akateeminen vapaus" },
+  "Affordable Housing": { en: "Affordable Housing", de: "Bezahlbarer Wohnraum", fr: "Logement abordable", es: "Vivienda asequible", it: "Alloggi a prezzi accessibili", nl: "Betaalbare huisvesting", sv: "PrisvÃ¤rda bostÃ¤der", da: "Betalelige boliger", no: "Rimelige boliger", fi: "Kohtuuhintainen asuminen" },
+  "Agricultural Subsidies": { en: "Agricultural Subsidies", de: "Agrarsubventionen", fr: "Subventions agricoles", es: "Subsidios agrÃ­colas", it: "Sussidi agricoli", nl: "Landbouwsubsidies", sv: "JordbruksstÃ¶d", da: "LandbrugsstÃ¸tte", no: "LandbruksstÃ¸tte", fi: "Maataloustuet" },
+  "Agriculture & Subsidies": { en: "Agriculture & Subsidies", de: "Landwirtschaft & Subventionen", fr: "Agriculture & subventions", es: "Agricultura y subsidios", it: "Agricoltura e sussidi", nl: "Landbouw & subsidies", sv: "Jordbruk & subventioner", da: "Landbrug og stÃ¸tte", no: "Landbruk og subsidier", fi: "Maatalous ja tuet" },
+  "Artificial Intelligence & Automation": { en: "Artificial Intelligence & Automation", de: "KÃ¼nstliche Intelligenz & Automatisierung", fr: "Intelligence artificielle & automatisation", es: "Inteligencia artificial y automatizaciÃ³n", it: "Intelligenza artificiale e automazione", nl: "Kunstmatige intelligentie & automatisering", sv: "Artificiell intelligens & automatisering", da: "Kunstig intelligens og automatisering", no: "Kunstig intelligens og automatisering", fi: "TekoÃ¤ly ja automaatio" },
+  "Arts & Culture Funding": { en: "Arts & Culture Funding", de: "Kunst- & KulturfÃ¶rderung", fr: "Financement des arts & de la culture", es: "FinanciaciÃ³n de arte y cultura", it: "Finanziamenti per arte e cultura", nl: "Financiering kunst & cultuur", sv: "KulturstÃ¶d", da: "KulturstÃ¸tte", no: "KulturstÃ¸tte", fi: "Taiteen ja kulttuurin rahoitus" },
+  "Assisted Dying & Euthanasia": { en: "Assisted Dying & Euthanasia", de: "Sterbehilfe & Euthanasie", fr: "Fin de vie assistÃ©e & euthanasie", es: "Muerte asistida y eutanasia", it: "Fine vita assistito ed eutanasia", nl: "Euthanasie & hulp bij zelfdoding", sv: "DÃ¶dshjÃ¤lp & eutanasi", da: "Aktiv dÃ¸dshjÃ¦lp", no: "Aktiv dÃ¸dshjelp", fi: "Eutanasia ja avustettu kuolema" },
+  "Aviation & Transport Decarbonization": { en: "Aviation & Transport Decarbonization", de: "Dekarbonisierung des Verkehrs & Luftverkehrs", fr: "DÃ©carbonation des transports & de l'aviation", es: "DescarbonizaciÃ³n del transporte y la aviaciÃ³n", it: "Decarbonizzazione dei trasporti e dell'aviazione", nl: "Verduurzaming luchtvaart & transport", sv: "Transport- & flygomstÃ¤llning", da: "Afkarbonisering af luftfart og transport", no: "Avkarbonisering av luftfart og transport", fi: "Ilmailun ja liikenteen hiilidioksidipÃ¤Ã¤stÃ¶jen vÃ¤hentÃ¤minen" },
+  "Carbon Pricing & Climate Policy": { en: "Carbon Pricing & Climate Policy", de: "CO2-Bepreisung & Klimapolitik", fr: "Tarification du carbone & politique climatique", es: "Precio al carbono y polÃ­tica climÃ¡tica", it: "Prezzo del carbonio e politica climatica", nl: "CO2-beprijzing & klimaatbeleid", sv: "Koldioxidskatt & klimatpolitik", da: "CO2-afgift og klimapolitik", no: "Karbonprising og klimapolitikk", fi: "Hiilihinnoittelu ja ilmastopolitiikka" },
+  "Carbon Tax & Industry": { en: "Carbon Tax & Industry", de: "CO2-Steuer & Industrie", fr: "Taxe carbone & industrie", es: "Impuesto al carbono e industria", it: "Carbon tax e industria", nl: "CO2-heffing & industrie", sv: "Koldioxidskatt & industri", da: "CO2-afgift og industri", no: "Karbonavgift og industri", fi: "Hiilivero ja teollisuus" },
+  "Central Banking & Monetary Policy": { en: "Central Banking & Monetary Policy", de: "Zentralbankwesen & Geldpolitik", fr: "Banque centrale & politique monÃ©taire", es: "Banca central y polÃ­tica monetaria", it: "Banche centrali e politica monetaria", nl: "Centrale bank & monetair beleid", sv: "Centralbank & penningpolitik", da: "Centralbank og pengepolitik", no: "Sentralbank og pengepolitikk", fi: "Keskuspankkitoiminta ja rahapolitiikka" },
+  "Civil Liberties & State Power": { en: "Civil Liberties & State Power", de: "BÃ¼rgerrechte & Staatsmacht", fr: "LibertÃ©s civiles & pouvoir d'Ã‰tat", es: "Libertades civiles y poder estatal", it: "LibertÃ  civili e potere statale", nl: "Burgerlijke vrijheden & staatsmacht", sv: "Medborgerliga rÃ¤ttigheter & statsmakt", da: "Borgerrettigheder og statsmagt", no: "Borgerrettigheter og statsmakt", fi: "Kansalaisvapaudet ja valtion valta" },
+  "Climate Action & Fossil Fuel Phaseout": { en: "Climate Action & Fossil Fuel Phaseout", de: "Klimaschutz & Ausstieg aus fossilen Energien", fr: "Action climatique & sortie des Ã©nergies fossiles", es: "AcciÃ³n climÃ¡tica y eliminaciÃ³n de combustibles fÃ³siles", it: "Azione per il clima e abbandono dei combustibili fossili", nl: "Klimaatactie & uitfasering fossiele brandstoffen", sv: "KlimatÃ¥tgÃ¤rder & utfasning av fossila brÃ¤nslen", da: "Klimaindsats og udfasning af fossile brÃ¦ndstoffer", no: "Klimatiltak og utfasing av fossile brensler", fi: "Ilmastotoimet ja fossiilisten polttoaineiden alasajo" },
+  "Climate & Environment": { en: "Climate & Environment", de: "Klima & Umwelt", fr: "Climat & environnement", es: "Clima y medio ambiente", it: "Clima e ambiente", nl: "Klimaat & milieu", sv: "Klimat & miljÃ¶", da: "Klima og miljÃ¸", no: "Klima og miljÃ¸", fi: "Ilmasto ja ympÃ¤ristÃ¶" },
+  "Constitutional Reform & Devolution": { en: "Constitutional Reform & Devolution", de: "Verfassungsreform & Dezentralisierung", fr: "RÃ©forme constitutionnelle & dÃ©centralisation", es: "Reforma constitucional y descentralizaciÃ³n", it: "Riforma costituzionale e decentramento", nl: "Grondwetsherziening & decentralisatie", sv: "Konstitutionell reform & decentralisering", da: "Forfatningsreform og decentralisering", no: "Grunnlovsreform og desentralisering", fi: "Perustuslakiuudistus ja vallan hajauttaminen" },
+  "Corporate Tax & Competitiveness": { en: "Corporate Tax & Competitiveness", de: "Unternehmenssteuer & WettbewerbsfÃ¤higkeit", fr: "ImpÃ´t sur les sociÃ©tÃ©s & compÃ©titivitÃ©", es: "Impuesto de sociedades y competitividad", it: "Imposte sulle societÃ  e competitivitÃ ", nl: "Vennootschapsbelasting & concurrentiekracht", sv: "Bolagsskatt & konkurrenskraft", da: "Selskabsskat og konkurrenceevne", no: "Selskapsskatt og konkurransekraft", fi: "YhteisÃ¶vero ja kilpailukyky" },
+  "Criminal Justice & Sentencing": { en: "Criminal Justice & Sentencing", de: "Strafjustiz & Strafzumessung", fr: "Justice pÃ©nale & peines", es: "Justicia penal y sentencias", it: "Giustizia penale e pene", nl: "Strafrecht & straftoemeting", sv: "RÃ¤ttsvÃ¤sen & straffmÃ¤tning", da: "Strafferet og strafudmÃ¥ling", no: "Strafferett og straffeutmÃ¥ling", fi: "Rikosoikeus ja rangaistukset" },
+  "Crypto & Digital Assets": { en: "Crypto & Digital Assets", de: "Krypto & digitale VermÃ¶genswerte", fr: "Crypto & actifs numÃ©riques", es: "Cripto y activos digitales", it: "Cripto e asset digitali", nl: "Crypto & digitale activa", sv: "Krypto & digitala tillgÃ¥ngar", da: "Krypto og digitale aktiver", no: "Krypto og digitale eiendeler", fi: "Krypto ja digitaaliset varat" },
+  "Data Privacy & Surveillance": { en: "Data Privacy & Surveillance", de: "Datenschutz & Ãœberwachung", fr: "Protection des donnÃ©es & surveillance", es: "Privacidad de datos y vigilancia", it: "Privacy dei dati e sorveglianza", nl: "Gegevensbescherming & toezicht", sv: "Integritet & Ã¶vervakning", da: "Databeskyttelse og overvÃ¥gning", no: "Personvern og overvÃ¥king", fi: "Tietosuoja ja valvonta" },
+  "Decentralization & Local Power": { en: "Decentralization & Local Power", de: "Dezentralisierung & kommunale Selbstverwaltung", fr: "DÃ©centralisation & pouvoir local", es: "DescentralizaciÃ³n y poder local", it: "Decentramento e potere locale", nl: "Decentralisatie & lokale autonomie", sv: "Decentralisering & lokalt sjÃ¤lvstyre", da: "Decentralisering og lokalt styre", no: "Desentralisering og lokalt styre", fi: "Hajauttaminen ja paikallishallinto" },
+  "Defense Spending & Military": { en: "Defense Spending & Military", de: "Verteidigungsausgaben & MilitÃ¤r", fr: "DÃ©penses de dÃ©fense & armÃ©e", es: "Gasto en defensa y fuerzas armadas", it: "Spesa per la difesa e forze armate", nl: "Defensie-uitgaven & krijgsmacht", sv: "FÃ¶rsvarsutgifter & militÃ¤r", da: "Forsvarsudgifter og militÃ¦r", no: "Forsvarsutgifter og militÃ¦r", fi: "Puolustusmenot ja armeija" },
+  "Digital ID & Biometrics": { en: "Digital ID & Biometrics", de: "Digitale IdentitÃ¤t & Biometrie", fr: "IdentitÃ© numÃ©rique & biomÃ©trie", es: "Identidad digital y biometrÃ­a", it: "IdentitÃ  digitale e biometria", nl: "Digitale identiteit & biometrie", sv: "Digitalt ID & biometri", da: "Digitalt ID og biometri", no: "Digital ID og biometri", fi: "Digitaalinen henkilÃ¶llisyys ja biometria" },
+  "Direct Democracy & Referendums": { en: "Direct Democracy & Referendums", de: "Direkte Demokratie & Volksabstimmungen", fr: "DÃ©mocratie directe & rÃ©fÃ©rendums", es: "Democracia directa y referÃ©ndums", it: "Democrazia diretta e referendum", nl: "Directe democratie & referenda", sv: "Direktdemokrati & folkomrÃ¶stningar", da: "Direkte demokrati og folkeafstemninger", no: "Direktedemokrati og folkeavstemninger", fi: "Suora demokratia ja kansanÃ¤Ã¤nestykset" },
+  "Drug Policy & Decriminalization": { en: "Drug Policy & Decriminalization", de: "Drogenpolitik & Entkriminalisierung", fr: "Politique des drogues & dÃ©pÃ©nalisation", es: "PolÃ­tica de drogas y despenalizaciÃ³n", it: "Politica sulle droghe e depenalizzazione", nl: "Drugsbeleid & decriminalisering", sv: "Narkotikapolitik & avkriminalisering", da: "Narkotikapolitik og afkriminalisering", no: "Narkotikapolitikk og avkriminalisering", fi: "Huumepolitiikka ja dekriminalisointi" },
+  "Economic Planning vs Free Markets": { en: "Economic Planning vs Free Markets", de: "Planwirtschaft vs. freie MÃ¤rkte", fr: "Planification Ã©conomique vs libre marchÃ©", es: "PlanificaciÃ³n econÃ³mica vs libre mercado", it: "Pianificazione economica vs libero mercato", nl: "Economische planning vs vrije markt", sv: "Statlig styrning vs fri marknad", da: "Ã˜konomisk planlÃ¦gning vs frie markeder", no: "Ã˜konomisk planlegging vs frie markeder", fi: "Taloussuunnittelu vs vapaat markkinat" },
+  "Economic Redistribution": { en: "Economic Redistribution", de: "Wirtschaftliche Umverteilung", fr: "Redistribution Ã©conomique", es: "RedistribuciÃ³n econÃ³mica", it: "Ridistribuzione economica", nl: "Economische herverdeling", sv: "Ekonomisk omfÃ¶rdelning", da: "Ã˜konomisk omfordeling", no: "Ã˜konomisk omfordeling", fi: "Taloudellinen uudelleenjako" },
+  "Education Funding & School Choice": { en: "Education Funding & School Choice", de: "Bildungsfinanzierung & Schulwahl", fr: "Financement de l'Ã©ducation & choix scolaire", es: "FinanciaciÃ³n educativa y elecciÃ³n de escuela", it: "Finanziamento dell'istruzione e scelta scolastica", nl: "Onderwijsfinanciering & schoolkeuze", sv: "Skolpeng & valfrihet i skolan", da: "UddannelsesstÃ¸tte og frit skolevalg", no: "UtdanningsstÃ¸tte og fritt skolevalg", fi: "Koulutuksen rahoitus ja kouluvalinta" },
+  "Energy Transition & Grid Infrastructure": { en: "Energy Transition & Grid Infrastructure", de: "Energiewende & Netzinfrastruktur", fr: "Transition Ã©nergÃ©tique & rÃ©seau Ã©lectrique", es: "TransiciÃ³n energÃ©tica e infraestructura de red", it: "Transizione energetica e infrastruttura di rete", nl: "Energietransitie & netinfrastructuur", sv: "EnergiomstÃ¤llning & elnÃ¤tsinfrastruktur", da: "Energiomstilling og elnet", no: "Energiomstilling og strÃ¸mnett", fi: "EnergiasiirtymÃ¤ ja sÃ¤hkÃ¶verkkoinfrastruktuuri" },
+  "Environmental Protection vs Industry": { en: "Environmental Protection vs Industry", de: "Umweltschutz vs. Industrie", fr: "Protection de l'environnement vs industrie", es: "ProtecciÃ³n ambiental vs industria", it: "Protezione ambientale vs industria", nl: "Milieubescherming vs industrie", sv: "MiljÃ¶skydd vs industri", da: "MiljÃ¸beskyttelse vs industri", no: "MiljÃ¸vern vs industri", fi: "YmpÃ¤ristÃ¶nsuojelu vs teollisuus" },
+  "EU & Sovereignty": { en: "EU & Sovereignty", de: "EU & staatliche SouverÃ¤nitÃ¤t", fr: "UE & souverainetÃ©", es: "UE y soberanÃ­a", it: "UE e sovranitÃ ", nl: "EU & soevereiniteit", sv: "EU & nationell suverÃ¤nitet", da: "EU og suverÃ¦nitet", no: "EU og suverenitet", fi: "EU ja suvereniteetti" },
+  "Fiscal Discipline & Debt": { en: "Fiscal Discipline & Debt", de: "Haushaltsdisziplin & Schuldenbremse", fr: "Discipline budgÃ©taire & dette", es: "Disciplina fiscal y deuda", it: "Disciplina fiscale e debito", nl: "Begrotingsdiscipline & staatsschuld", sv: "Finanspolitisk disciplin & statsskuld", da: "Finanspolitisk disciplin og statsgÃ¦ld", no: "Finanspolitisk disiplin og statsgjeld", fi: "Finanssikuri ja valtionvelka" },
+  "Foreign Aid & Development": { en: "Foreign Aid & Development", de: "Entwicklungshilfe & internationale Zusammenarbeit", fr: "Aide au dÃ©veloppement & solidaritÃ© internationale", es: "Ayuda exterior y desarrollo", it: "Aiuti esteri e cooperazione allo sviluppo", nl: "Ontwikkelingssamenwerking", sv: "BistÃ¥nd & utveckling", da: "Udviklingsbistand", no: "Bistand og utvikling", fi: "Kehitysapu ja kansainvÃ¤linen yhteistyÃ¶" },
+  "Foreign Policy & Alliances": { en: "Foreign Policy & Alliances", de: "AuÃŸenpolitik & BÃ¼ndnisse", fr: "Politique Ã©trangÃ¨re & alliances", es: "PolÃ­tica exterior y alianzas", it: "Politica estera e alleanze", nl: "Buitenlands beleid & bondgenootschappen", sv: "Utrikespolitik & allianser", da: "Udenrigspolitik og alliancer", no: "Utenrikspolitikk og allianser", fi: "Ulkopolitiikka ja liittolaisuudet" },
+  "Free Speech & Censorship": { en: "Free Speech & Censorship", de: "Meinungsfreiheit & Zensur", fr: "LibertÃ© d'expression & censure", es: "Libertad de expresiÃ³n y censura", it: "LibertÃ  di espressione e censura", nl: "Vrijheid van meningsuiting & censuur", sv: "Yttrandefrihet & censur", da: "Ytringsfrihed og censur", no: "Ytringsfrihet og sensur", fi: "Sananvapaus ja sensuuri" },
+  "Free Trade vs Protectionism": { en: "Free Trade vs Protectionism", de: "Freihandel vs. Protektionismus", fr: "Libre-Ã©change vs protectionnisme", es: "Libre comercio vs proteccionismo", it: "Libero scambio vs protezionismo", nl: "Vrijhandel vs protectionisme", sv: "Frihandel vs protektionism", da: "Frihandel vs protektionisme", no: "Frihandel vs proteksjonisme", fi: "Vapaakauppa vs protektionismi" },
+  "Gig Economy & Worker Classification": { en: "Gig Economy & Worker Classification", de: "Gig-Economy & ScheinselbststÃ¤ndigkeit", fr: "Ã‰conomie des plateformes & statut des travailleurs", es: "EconomÃ­a de plataformas y derechos laborales", it: "Gig economy e tutele dei lavoratori", nl: "Platformeconomie & schijnzelfstandigheid", sv: "Gig-ekonomi & anstÃ¤llningsskydd", da: "PlatformsÃ¸konomi og arbejdstagerrettigheder", no: "PlattformÃ¸konomi og arbeidstakerrettigheter", fi: "Alustatalous ja tyÃ¶ntekijÃ¶iden asema" },
+  "Green Transition Speed": { en: "Green Transition Speed", de: "Tempo der Energiewende", fr: "Rythme de la transition Ã©cologique", es: "Ritmo de la transiciÃ³n ecolÃ³gica", it: "VelocitÃ  della transizione verde", nl: "Tempo van de energietransitie", sv: "Den grÃ¶na omstÃ¤llningens takt", da: "GrÃ¸n omstillingstempo", no: "GrÃ¸nt omstillingstempo", fi: "VihreÃ¤n siirtymÃ¤n nopeus" },
+  "Gun Ownership & Regulation": { en: "Gun Ownership & Regulation", de: "Waffenbesitz & Regulierung", fr: "Port d'armes & rÃ©glementation", es: "PosesiÃ³n de armas y regulaciÃ³n", it: "Possesso di armi e regolamentazione", nl: "Wapenbezit & regulering", sv: "Vapenlagar & reglering", da: "VÃ¥benlovgivning og kontrol", no: "VÃ¥penlovgivning og kontroll", fi: "Aseiden omistus ja sÃ¤Ã¤ntely" },
+  "Healthcare System Structure": { en: "Healthcare System Structure", de: "Gesundheitssystem-Struktur", fr: "Organisation du systÃ¨me de santÃ©", es: "Estructura del sistema de salud", it: "Struttura del sistema sanitario", nl: "Structuur van de gezondheidszorg", sv: "SjukvÃ¥rdens organisation", da: "SundhedsvÃ¦senets struktur", no: "Helsevesenets struktur", fi: "TerveydenhuoltojÃ¤rjestelmÃ¤n rakenne" },
+  "Housing & Rent Control": { en: "Housing & Rent Control", de: "Wohnen & Mietpreisbremse", fr: "Logement & encadrement des loyers", es: "Vivienda y control de alquileres", it: "Casa e blocco degli affitti", nl: "Huisvesting & huurprijsregulering", sv: "Bostadspolitik & hyresreglering", da: "Boligpolitik og huslejeregulering", no: "Boligpolitikk og husleieregulering", fi: "Asuminen ja vuokrasÃ¤Ã¤ntely" },
+  "Immigration & Border Control": { en: "Immigration & Border Control", de: "Einwanderung & Grenzkontrollen", fr: "Immigration & contrÃ´le des frontiÃ¨res", es: "InmigraciÃ³n y control de fronteras", it: "Immigrazione e controllo delle frontiere", nl: "Immigratie & grenscontroles", sv: "Invandring & grÃ¤nskontroll", da: "Indvandring og grÃ¦nsekontrol", no: "Innvandring og grensekontroll", fi: "Maahanmuutto ja rajavalvonta" },
+  "Indigenous Rights & Sovereignty": { en: "Indigenous Rights & Sovereignty", de: "Rechte indigener VÃ¶lker & SouverÃ¤nitÃ¤t", fr: "Droits des peuples autochtones & souverainetÃ©", es: "Derechos indÃ­genas y soberanÃ­a", it: "Diritti delle popolazioni indigene e sovranitÃ ", nl: "Rechten van inheemse volkeren", sv: "UrfÃ¶redomsrÃ¤tt & urfolksrÃ¤ttigheter", da: "Oprindelige folks rettigheder", no: "Urfolks rettigheter og suverenitet", fi: "AlkuperÃ¤iskansojen oikeudet ja itsemÃ¤Ã¤rÃ¤Ã¤misoikeus" },
+  "Inheritance Tax": { en: "Inheritance Tax", de: "Erbschaftssteuer", fr: "Droits de succession", es: "Impuesto de sucesiones", it: "Imposta sulle successioni", nl: "Erfbelasting", sv: "Arvsskatt", da: "Arveafgift", no: "Arveavgift", fi: "PerintÃ¶vero" },
+  "Integration & Cultural Assimilation": { en: "Integration & Cultural Assimilation", de: "Integration & Assimilation", fr: "IntÃ©gration & assimilation culturelle", es: "IntegraciÃ³n y asimilaciÃ³n cultural", it: "Integrazione e assimilazione culturale", nl: "Integratie & inburgering", sv: "Integration & assimilering", da: "Integration og assimilation", no: "Integrering og assimilering", fi: "Kotoutuminen ja kulttuurinen assimilaatio" },
+  "Judicial Independence": { en: "Judicial Independence", de: "UnabhÃ¤ngigkeit der Justiz", fr: "IndÃ©pendance de la justice", es: "Independencia judicial", it: "Indipendenza della magistratura", nl: "Onafhankelijkheid van de rechtspraak", sv: "Domstolarnas oberoende", da: "Domstolenes uafhÃ¦ngighed", no: "Domstolenes uavhengighet", fi: "Oikeuslaitoksen riippumattomuus" },
+  "Labor Protections & Union Power": { en: "Labor Protections & Union Power", de: "Arbeitnehmerrechte & Gewerkschaftsmacht", fr: "Code du travail & pouvoir syndical", es: "ProtecciÃ³n laboral y poder sindical", it: "Tutela del lavoro e potere sindacale", nl: "Arbeidsbescherming & vakbondsmacht", sv: "ArbetsrÃ¤tt & facklig makt", da: "Arbejdstagerbeskyttelse og fagforeninger", no: "Arbeidstakervern og fagforeningsmakt", fi: "TyÃ¶suojelu ja ammattiliittojen valta" },
+  "LGBTQ+ Rights & Protections": { en: "LGBTQ+ Rights & Protections", de: "LGBTQ+-Rechte & Diskriminierungsschutz", fr: "Droits LGBTQ+ & protections", es: "Derechos LGBTQ+ y protecciÃ³n", it: "Diritti LGBTQ+ e tutele", nl: "LHBTI+-rechten & bescherming", sv: "HBTQ+-rÃ¤ttigheter & skydd", da: "LGBTQ+-rettigheder og beskyttelse", no: "LHBTQ+-rettigheter og vern", fi: "LGBTQ+-oikeudet ja suoja" },
+  "Media Regulation & Public Broadcasting": { en: "Media Regulation & Public Broadcasting", de: "Medienregulierung & Ã¶ffentlich-rechtlicher Rundfunk", fr: "RÃ©gulation des mÃ©dias & audiovisuel public", es: "RegulaciÃ³n de medios y radiotelevisiÃ³n pÃºblica", it: "Regolamentazione dei media e servizio pubblico", nl: "Mediaregulering & publieke omroep", sv: "Mediereglering & public service", da: "Medieregulering og public service", no: "Medieregulering og allmennkringkasting", fi: "MediasÃ¤Ã¤ntely ja julkinen yleisradiotoiminta" },
+  "Minimum Wage Policy": { en: "Minimum Wage Policy", de: "Mindestlohnpolitik", fr: "Politique du salaire minimum", es: "PolÃ­tica de salario mÃ­nimo", it: "Politica sul salario minimo", nl: "Minimumloonbeleid", sv: "LÃ¤gstalÃ¶ner & lÃ¶nebildning", da: "MindstelÃ¸nspolitik", no: "MinstelÃ¸nnspolitikk", fi: "VÃ¤himmÃ¤ispalkkapolitiikka" },
+  "Monarchy vs Republic": { en: "Monarchy vs Republic", de: "Monarchie vs. Republik", fr: "Monarchie vs RÃ©publique", es: "MonarquÃ­a vs RepÃºblica", it: "Monarchia vs Repubblica", nl: "Monarchie vs republiek", sv: "Monarki vs republik", da: "Monarki vs republik", no: "Monarki vs republikk", fi: "Monarkia vs tasavalta" },
+  "Monopoly & Big Tech Antitrust": { en: "Monopoly & Big Tech Antitrust", de: "Monopolkontrolle & Big-Tech-Kartellrecht", fr: "Antitrust & rÃ©gulation des gÃ©ants de la tech", es: "Antimonopolio y regulaciÃ³n de las Big Tech", it: "Antitrust e regolamentazione delle Big Tech", nl: "Mededinging & regulering van Big Tech", sv: "Monopolkontroll & Big Tech-lagstiftning", da: "Konkurrencelovgivning og Big Tech", no: "Konkurranselovgivning og Big Tech", fi: "Monopolien purkaminen ja Big Tech -sÃ¤Ã¤ntely" },
+  "Nuclear Energy Policy": { en: "Nuclear Energy Policy", de: "Kernenergiepolitik", fr: "Politique de l'Ã©nergie nuclÃ©aire", es: "PolÃ­tica de energÃ­a nuclear", it: "Politica sull'energia nucleare", nl: "Kernenergiebeleid", sv: "KÃ¤rnkraftspolitik", da: "Atomkraftpolitik", no: "Kjernekraftpolitikk", fi: "Ydinvoimapolitiikka" },
+  "Parental Leave & Childcare": { en: "Parental Leave & Childcare", de: "Elternzeit & Kinderbetreuung", fr: "CongÃ© parental & garde d'enfants", es: "Baja parental y cuidado infantil", it: "Congedo parentale e asili nido", nl: "Ouderschapsverlof & kinderopvang", sv: "FÃ¶rÃ¤ldraledighet & barnomsorg", da: "ForÃ¦ldreorlov og bÃ¸rnepasning", no: "Foreldrepermisjon og barnehager", fi: "Vanhempainvapaa ja lastenhoito" },
+  "Pension Age & Retirement Policy": { en: "Pension Age & Retirement Policy", de: "Rentenalter & Altersvorsorge", fr: "Ã‚ge de dÃ©part Ã  la retraite & pensions", es: "Edad de jubilaciÃ³n y pensiones", it: "EtÃ  pensionabile e sistema previdenziale", nl: "Pensioenleeftijd & AOW", sv: "PensionsÃ¥lder & pensionspolitik", da: "Pensionsalder og pensionspolitik", no: "Pensionsalder og pensjonspolitikk", fi: "ElÃ¤keikÃ¤ ja elÃ¤kepolitiikka" },
+  "Police Reform & Law Enforcement": { en: "Police Reform & Law Enforcement", de: "Polizeireform & Strafverfolgung", fr: "RÃ©forme de la police & maintien de l'ordre", es: "Reforma policial y seguridad ciudadana", it: "Riforma della polizia e ordine pubblico", nl: "Politieregeling & wetshandhaving", sv: "Polisreform & brottsbekÃ¤mpning", da: "Politireform og retshÃ¥ndhÃ¦velse", no: "Politireform og rettshÃ¥ndhevelse", fi: "Poliisiuudistus ja lainvalvonta" },
+  "Prison Policy & Rehabilitation": { en: "Prison Policy & Rehabilitation", de: "Strafvollzug & Resozialisierung", fr: "SystÃ¨me pÃ©nitentiaire & rÃ©insertion", es: "PolÃ­tica penitenciaria y reinserciÃ³n", it: "Politica carceraria e riabilitazione", nl: "Gevangenisbeleid & reclassering", sv: "KriminalvÃ¥rd & Ã¥teranpassning", da: "Kriminalforsorg og resocialisering", no: "Kriminalomsorg og rehabilitering", fi: "Vankilapolitiikka ja kuntoutus" },
+  "Prostitution & Sex Work": { en: "Prostitution & Sex Work", de: "Prostitution & Sexarbeit", fr: "Prostitution & travail du sexe", es: "ProstituciÃ³n y trabajo sexual", it: "Prostituzione e lavoro sessuale", nl: "Prostitutie & sekswerk", sv: "SexkÃ¶pslag & sexarbete", da: "Prostitution og sexarbejde", no: "Prostitusjon og sexarbeid", fi: "Prostituutio ja seksityÃ¶" },
+  "Public Infrastructure Investment": { en: "Public Infrastructure Investment", de: "Ã–ffentliche Infrastrukturinvestitionen", fr: "Investissements dans les infrastructures publiques", es: "InversiÃ³n en infraestructuras pÃºblicas", it: "Investimenti in infrastrutture pubbliche", nl: "Investeringen in publieke infrastructuur", sv: "Infrastruktursatsningar", da: "Offentlige infrastrukturinvesteringer", no: "Offentlige infrastrukturinvesteringer", fi: "Julkiset infrastruktuuri-investoinnit" },
+  "Public Sector Wages": { en: "Public Sector Wages", de: "GehÃ¤lter im Ã¶ffentlichen Dienst", fr: "RÃ©munÃ©ration du secteur public", es: "Salarios del sector pÃºblico", it: "Retribuzioni del settore pubblico", nl: "Salarissen in de publieke sector", sv: "LÃ¶ner i offentlig sektor", da: "LÃ¸nninger i den offentlige sektor", no: "LÃ¸nninger i offentlig sektor", fi: "Julkisen sektorin palkat" },
+  "Public Transit Investment": { en: "Public Transit Investment", de: "Investitionen in den Ã¶ffentlichen Nahverkehr", fr: "Transports en commun & mobilitÃ©s durables", es: "InversiÃ³n en transporte pÃºblico", it: "Investimenti nel trasporto pubblico", nl: "Investeringen in openbaar vervoer", sv: "Kollektivtrafiksatsningar", da: "Investeringer i offentlig transport", no: "Investeringer i kollektivtransport", fi: "Joukkoliikenneinvestoinnit" },
+  "Religion & State Secularism": { en: "Religion & State Secularism", de: "Religion & Laizismus / Trennung von Staat und Kirche", fr: "LaÃ¯citÃ© & neutralitÃ© de l'Ã‰tat", es: "ReligiÃ³n y laicidad del Estado", it: "Religione e laicitÃ  dello Stato", nl: "Religie & scheiding van kerk en staat", sv: "Sekularism & relationen stat-religion", da: "Religion og sekularisme", no: "Religion og sekularisme", fi: "Uskonto ja valtion maallisuus" },
+  "Renewable Energy Investment": { en: "Renewable Energy Investment", de: "FÃ¶rderung erneuerbarer Energien", fr: "Investissement dans les Ã©nergies renouvelables", es: "InversiÃ³n en energÃ­as renovables", it: "Investimenti nelle energie rinnovabili", nl: "Investeringen in hernieuwbare energie", sv: "FÃ¶rnybar energi & investeringar", da: "Investeringer i vedvarende energi", no: "Investeringer i fornybar energi", fi: "Uusiutuvan energian investoinnit" },
+  "Space Exploration Funding": { en: "Space Exploration Funding", de: "Finanzierung der Raumfahrt", fr: "Financement de l'exploration spatiale", es: "FinanciaciÃ³n de la exploraciÃ³n espacial", it: "Finanziamenti per l'esplorazione spaziale", nl: "Financiering van ruimtevaart", sv: "Rymdforskning & finansiering", da: "Finansiering af rumforskning", no: "Finansiering av romforskning", fi: "Avaruustutkimuksen rahoitus" },
+  "State-Owned Enterprises & Privatization": { en: "State-Owned Enterprises & Privatization", de: "Staatsunternehmen & Privatisierung", fr: "Entreprises publiques & privatisations", es: "Empresas pÃºblicas y privatizaciÃ³n", it: "Imprese pubbliche e privatizzazioni", nl: "Staatsbedrijven & privatisering", sv: "Statliga bolag & privatisering", da: "Statskreditter og privatisering", no: "Statlige selskaper og privatisering", fi: "ValtionyhtiÃ¶t ja yksityistÃ¤minen" },
+  "Surveillance & National Security": { en: "Surveillance & National Security", de: "Ãœberwachung & nationale Sicherheit", fr: "Surveillance & sÃ©curitÃ© nationale", es: "Vigilancia y seguridad nacional", it: "Sorveglianza e sicurezza nazionale", nl: "Surveillance & nationale veiligheid", sv: "Ã–vervakning & nationell sÃ¤kerhet", da: "OvervÃ¥gning og national sikkerhed", no: "OvervÃ¥king og nasjonal sikkerhet", fi: "Valvonta ja kansallinen turvallisuus" },
+  "Taxes & Economy": { en: "Taxes & Economy", de: "Steuern & Wirtschaft", fr: "FiscalitÃ© & Ã©conomie", es: "Impuestos y economÃ­a", it: "Fisco ed economia", nl: "Belastingen & economie", sv: "Skatter & ekonomi", da: "Skatter og Ã¸konomi", no: "Skatt og Ã¸konomi", fi: "Verot ja talous" },
+  "Universal Basic Income": { en: "Universal Basic Income", de: "Bedingungsloses Grundeinkommen", fr: "Revenu universel de base", es: "Renta bÃ¡sica universal", it: "Reddito di base universale", nl: "Universeel basisinkomen", sv: "MedborgarlÃ¶n / basinkomst", da: "BorgerlÃ¸n / basisindkomst", no: "BorgerlÃ¸nn / basisinntekt", fi: "Perustulo / kansalaispalkka" },
+  "Vaccine Mandates & Public Health": { en: "Vaccine Mandates & Public Health", de: "Impfpflicht & Ã¶ffentliche Gesundheit", fr: "Obligations vaccinales & santÃ© publique", es: "Mandatos de vacunaciÃ³n y salud pÃºblica", it: "Obblighi vaccinali e sanitÃ  pubblica", nl: "Vaccinatieplichten & volksgezondheid", sv: "Vaccinkrav & folkhÃ¤lsa", da: "Vaccinationskrav og folkesundhed", no: "Vaksinemandater og folkehelse", fi: "Rokotepakko ja kansanterveys" },
+  "Voting Age & Electoral Reform": { en: "Voting Age & Electoral Reform", de: "Wahlalter & Wahlrechtsreform", fr: "Ã‚ge de vote & rÃ©forme Ã©lectorale", es: "Edad para votar y reforma electoral", it: "EtÃ  di voto e riforma elettorale", nl: "Kiesleeftijd & kiesstelselherziening", sv: "RÃ¶strÃ¤ttsÃ¥lder & valsystem", da: "Valgretsalder og valgreform", no: "Stemmerettsalder og valgreform", fi: "Ã„Ã¤nestysikÃ¤ ja vaalijÃ¤rjestelmÃ¤uudistus" },
+  "Wealth Tax & Inequality": { en: "Wealth Tax & Inequality", de: "VermÃ¶genssteuer & soziale Ungleichheit", fr: "ImpÃ´t sur la fortune & inÃ©galitÃ©s", es: "Impuesto a la riqueza y desigualdad", it: "Imposta patrimoniale e disuguaglianza", nl: "Vermogensbelasting & ongelijkheid", sv: "FÃ¶rmÃ¶genhetsskatt & ojÃ¤mlikhet", da: "Formueskat og ulighed", no: "Formuesskatt og ulikhet", fi: "Varallisuusvero ja eriarvoisuus" },
+  "Welfare Conditionality & Work Requirements": { en: "Welfare Conditionality & Work Requirements", de: "Bedingungen fÃ¼r Sozialleistungen & Arbeitsauflagen", fr: "ConditionnalitÃ© des aides & obligation d'activitÃ©", es: "Condicionalidad del bienestar y requisitos laborales", it: "CondizionalitÃ  del welfare e requisiti lavorativi", nl: "Sociale zekerheid & tegenprestatie", sv: "Bidragsvillkor & aktivitetskrav", da: "Ydelsesbetingelser og arbejdspligt", no: "YtelsesvilkÃ¥r og aktivitetsplikt", fi: "Sosiaaliturvan ehdollisuus ja tyÃ¶velvoitteet" },
+  "Workplace Democracy & Co-determination": { en: "Workplace Democracy & Co-determination", de: "Mitbestimmung & Demokratie am Arbeitsplatz", fr: "DÃ©mocratie d'entreprise & codÃ©cision", es: "Democracia laboral y cogestiÃ³n", it: "Democrazia nei luoghi di lavoro e cogestione", nl: "Medezeggenschap & democratie op het werk", sv: "FÃ¶retagsdemokrati & medbestÃ¤mmande (MBL)", da: "Demokrati pÃ¥ arbejdspladsen og medbestemmelse", no: "Arbeidsplassdemokrati og medbestemmelse", fi: "TyÃ¶paikkademokratia ja myÃ¶tÃ¤mÃ¤Ã¤rÃ¤Ã¤misoikeus" }
+};
+
+function getTopicName(topic, lang) {
+  if (!topic) return '';
+  const currentLanguage = lang || window.currentLang || 'en';
+  if (TOPIC_TRANSLATIONS[topic]) {
+    return TOPIC_TRANSLATIONS[topic][currentLanguage] || TOPIC_TRANSLATIONS[topic]['en'] || topic;
+  }
+  return topic;
+}
+window.getTopicName = getTopicName;
+
+// ============================================================
+// PARTY LOCALIZATION HELPERS
+// ============================================================
+function getPartyName(meta, lang) {
+  if (!meta) return '';
+  const currentLanguage = lang || window.currentLang || 'en';
+  if (typeof meta.name === 'object' && meta.name !== null) {
+    return meta.name[currentLanguage] || meta.name.en || Object.values(meta.name)[0] || '';
+  }
+  return meta.name || '';
+}
+window.getPartyName = getPartyName;
+
+function getPartyDesc(meta, lang) {
+  if (!meta) return '';
+  const currentLanguage = lang || window.currentLang || 'en';
+  if (typeof meta.desc === 'object' && meta.desc !== null) {
+    return meta.desc[currentLanguage] || meta.desc.en || Object.values(meta.desc)[0] || '';
+  }
+  return meta.desc || '';
+}
+window.getPartyDesc = getPartyDesc;
+
+const PARTY_PICKER_STRINGS = {
+  en: { placeholder: "Select your party...", independent: "Independent / Other" },
+  sv: { placeholder: "VÃ¤lj ditt parti...", independent: "Oberoende / Annat" },
+  de: { placeholder: "Partei wÃ¤hlen...", independent: "UnabhÃ¤ngig / Andere" },
+  fr: { placeholder: "SÃ©lectionnez votre parti...", independent: "IndÃ©pendant / Autre" },
+  es: { placeholder: "Selecciona tu partido...", independent: "Independiente / Otro" },
+  it: { placeholder: "Seleziona il tuo partito...", independent: "Indipendente / Altro" },
+  nl: { placeholder: "Selecteer je partij...", independent: "Onafhankelijk / Anders" },
+  da: { placeholder: "VÃ¦lg dit parti...", independent: "UafhÃ¦ngig / Andet" },
+  no: { placeholder: "Velg partiet ditt...", independent: "Uavhengig / Annet" },
+  fi: { placeholder: "Valitse puolueesi...", independent: "Riippumaton / Muu" }
+};
+
+window.updatePartyPickerLang = function(lang) {
+  const currentLanguage = lang || window.currentLang || 'en';
+  const str = PARTY_PICKER_STRINGS[currentLanguage] || PARTY_PICKER_STRINGS.en;
+  
+  const select = document.getElementById('d-party');
+  if (select && typeof PARTY_META !== 'undefined' && Object.keys(PARTY_META).length > 0) {
+    const currentValue = select.value;
+    select.innerHTML = '';
+    
+    const optDefault = document.createElement('option');
+    optDefault.value = '';
+    optDefault.textContent = str.placeholder;
+    select.appendChild(optDefault);
+    
+    Object.entries(PARTY_META).forEach(([key, pMeta]) => {
+      const opt = document.createElement('option');
+      opt.value = key;
+      opt.textContent = getPartyName(pMeta, currentLanguage);
+      if (key === currentValue) opt.selected = true;
+      select.appendChild(opt);
+    });
+    
+    const optInd = document.createElement('option');
+    optInd.value = 'independent';
+    optInd.textContent = str.independent;
+    if (currentValue === 'independent') optInd.selected = true;
+    select.appendChild(optInd);
   }
 };
 
@@ -1330,6 +1771,51 @@ window.renderResults = function() {
     }
   }
 
+  // Localize static results headings
+  const partyAlignHeading = document.getElementById('heading-party-alignment');
+  if (partyAlignHeading && tObj.partyAlignment) partyAlignHeading.textContent = tObj.partyAlignment;
+
+  const compassHeading = document.getElementById('heading-compass-title');
+  if (compassHeading && tObj.compassTitle) compassHeading.textContent = tObj.compassTitle;
+
+  const svgCompassAuth = document.getElementById('svg-compass-auth');
+  if (svgCompassAuth && tObj.compassAuth) svgCompassAuth.textContent = tObj.compassAuth;
+
+  const svgCompassLib = document.getElementById('svg-compass-lib');
+  if (svgCompassLib && tObj.compassLib) svgCompassLib.textContent = tObj.compassLib;
+
+  const svgCompassLeft = document.getElementById('svg-compass-left');
+  if (svgCompassLeft && tObj.compassLeft) svgCompassLeft.textContent = tObj.compassLeft;
+
+  const svgCompassRight = document.getElementById('svg-compass-right');
+  if (svgCompassRight && tObj.compassRight) svgCompassRight.textContent = tObj.compassRight;
+
+  const axisEconLabel = document.getElementById('axis-econ-label');
+  if (axisEconLabel && tObj.axisEcon) axisEconLabel.textContent = tObj.axisEcon;
+
+  const axisGovLabel = document.getElementById('axis-gov-label');
+  if (axisGovLabel && tObj.axisGov) axisGovLabel.textContent = tObj.axisGov;
+
+  const biasCardEyebrow = document.getElementById('bias-card-eyebrow');
+  if (biasCardEyebrow && tObj.biasCardEyebrow) biasCardEyebrow.textContent = tObj.biasCardEyebrow;
+
+  const heatmapTitle = document.getElementById('heading-topic-heatmap');
+  if (heatmapTitle && tObj.topicHeatmapTitle) heatmapTitle.textContent = tObj.topicHeatmapTitle;
+
+  const heatmapDesc = document.getElementById('desc-topic-heatmap');
+  if (heatmapDesc && tObj.topicHeatmapDesc) heatmapDesc.textContent = tObj.topicHeatmapDesc;
+
+  const shareTitle = document.getElementById('heading-share-results');
+  if (shareTitle && tObj.shareResultsTitle) shareTitle.textContent = tObj.shareResultsTitle;
+
+  const shareBtn = document.getElementById('share-btn');
+  if (shareBtn && tObj.shareBtn) shareBtn.textContent = tObj.shareBtn;
+
+  const booksWrap = document.getElementById('explore-books-wrap');
+  if (booksWrap && tObj.exploreBooksPre && tObj.exploreBooksLink) {
+    booksWrap.innerHTML = `${tObj.exploreBooksPre}<a href="/books" style="color:var(--navy);font-weight:600;text-decoration:none;border-bottom:1px solid var(--navy-subtle);">${tObj.exploreBooksLink} &rarr;</a>`;
+  }
+
   // --- Render 2D SVG Compass Dot & Axis Sliders ---
   const cDot = document.getElementById('cdot');
   const cDotRing = document.getElementById('cdot-ring');
@@ -1740,11 +2226,6 @@ window.enhanceNationalityPicker = function() {
   });
 };
 
-// Inject a "party you identify with" dropdown into the demographics form so
-// political_id gets captured. Built in JS from the portal's PARTY_META so it
-// appears on every party portal without editing each portal's HTML. Portals
-// with no parties (e.g. the general test) render nothing. Value stored is the
-// party id (matching archetype), so it stays consistent downstream.
 window.enhancePartyPicker = function() {
   if (typeof PARTY_META === 'undefined' || !PARTY_META) return;
   const parties = Object.entries(PARTY_META);
@@ -1753,17 +2234,25 @@ window.enhancePartyPicker = function() {
   const fields = document.querySelector('.demo-fields');
   if (!fields) return;
 
+  const currentLang = window.currentLang || 'en';
+  const str = typeof PARTY_PICKER_STRINGS !== 'undefined' ? (PARTY_PICKER_STRINGS[currentLang] || PARTY_PICKER_STRINGS.en) : { placeholder: 'Select...', independent: 'Independent' };
+
   const wrap = document.createElement('div');
   const label = document.createElement('div');
   label.className = 'field-label';
-  label.innerHTML = 'Party you identify with <span>(optional)</span>';
+  label.id = 'lbl-party';
+  
+  const partyLabelText = (typeof STATIC_TRANSLATIONS !== 'undefined' && STATIC_TRANSLATIONS[currentLang] && STATIC_TRANSLATIONS[currentLang].lblParty)
+    || 'Party you identify with <span>(optional)</span>';
+  label.innerHTML = partyLabelText;
 
   const sel = document.createElement('select');
   sel.id = 'd-party';
-  sel.add(new Option('Select...', ''));
+  sel.add(new Option(str.placeholder, ''));
   parties.forEach(([id, meta]) => {
-    sel.add(new Option((meta && meta.name) || id, id));
+    sel.add(new Option(typeof getPartyName === 'function' ? (getPartyName(meta, currentLang) || id) : ((meta && meta.name) || id), id));
   });
+  sel.add(new Option(str.independent, 'independent'));
 
   wrap.appendChild(label);
   wrap.appendChild(sel);
@@ -1789,15 +2278,18 @@ window.saveResults = async function() {
   const statusEl = document.getElementById('save-status');
   if (!emailInput || !statusEl) return;
 
+  const lang = window.currentLang || 'en';
+  const tObj = ENGINE_TRANSLATIONS[lang] || ENGINE_TRANSLATIONS['en'];
+
   const email = emailInput.value.trim();
   if (!email || !email.includes('@')) {
     statusEl.style.color = 'var(--red)';
-    statusEl.textContent = 'Please enter a valid email.';
+    statusEl.textContent = tObj.saveEmailInvalid || 'Please enter a valid email.';
     return;
   }
 
   statusEl.style.color = 'var(--ink-muted)';
-  statusEl.textContent = 'Saving...';
+  statusEl.textContent = tObj.saving || 'Saving...';
   
   const { partyScores, eScore, gScore, overallBias } = window.score();
   const stances = window.calculateTopicStances(answers);
@@ -1806,12 +2298,14 @@ window.saveResults = async function() {
   const biasBreakdown = hasParties ? { ...partyScores } : {};
   biasBreakdown.__overall_bias = overallBias;
   biasBreakdown.__stances = stances;
+  biasBreakdown.__lang = lang;
   if (gender) biasBreakdown.__gender = gender;
   if (nationality) biasBreakdown.__nationality = nationality;
 
   const payload = {
     email,
     mode: window.portalCode || 'general',
+    lang,
     e_score: parseFloat(eScore.toFixed(4)),
     g_score: parseFloat(gScore.toFixed(4)),
     age,
@@ -1837,11 +2331,12 @@ window.saveResults = async function() {
     window.savedResultId = data.id;
 
     statusEl.style.color = 'var(--green)';
-    statusEl.textContent = `Saved successfully! We have emailed your diagnostic report to ${email}.`;
+    const successTemplate = tObj.saveSuccess || 'Saved successfully! We have emailed your diagnostic report to {email}.';
+    statusEl.textContent = successTemplate.replace('{email}', email);
   } catch (err) {
     console.error("Database save failed:", err);
     statusEl.style.color = 'var(--red)';
-    statusEl.textContent = 'Something went wrong. Please try again.';
+    statusEl.textContent = tObj.saveError || 'Something went wrong. Please try again.';
   }
 };
 
@@ -1853,6 +2348,7 @@ window.getCurrentCountryName = function() {
 };
 
 window.autoSaveAnonymousResults = async function() {
+  const lang = window.currentLang || 'en';
   const { partyScores, eScore, gScore, overallBias } = window.score();
   const stances = window.calculateTopicStances(answers);
   const { hasParties, age, gender, country, political_id, nationality } = window.collectDemographics();
@@ -1860,11 +2356,13 @@ window.autoSaveAnonymousResults = async function() {
   const biasBreakdown = hasParties ? { ...partyScores } : {};
   biasBreakdown.__overall_bias = overallBias;
   biasBreakdown.__stances = stances;
+  biasBreakdown.__lang = lang;
   if (gender) biasBreakdown.__gender = gender;
   if (nationality) biasBreakdown.__nationality = nationality;
 
   const payload = {
     mode: window.portalCode || 'general',
+    lang,
     e_score: parseFloat(eScore.toFixed(4)),
     g_score: parseFloat(gScore.toFixed(4)),
     age,

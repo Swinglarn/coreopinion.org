@@ -125,6 +125,7 @@ const englishHeroTexts = {
     demoSub: "A few quick questions before your results. Everything is anonymous.",
     seeResultsBtn: "See my results",
     lblAge: "Age",
+    lblParty: "Party you identify with <span>(optional)</span>",
     lblGender: "Gender <span>(optional)</span>",
     lblNat: "Nationality <span>(optional)</span>",
     optSelect: "Select...",
@@ -184,6 +185,7 @@ const englishHeroTexts = {
     demoSub: "Einige kurze Fragen vor deinen Ergebnissen. Alles ist vollkommen anonym.",
     seeResultsBtn: "Ergebnisse ansehen",
     lblAge: "Alter",
+    lblParty: "Partei, mit der du dich identifizierst <span>(optional)</span>",
     lblGender: "Geschlecht <span>(optional)</span>",
     lblNat: "Nationalität <span>(optional)</span>",
     optSelect: "Auswählen...",
@@ -243,6 +245,7 @@ const englishHeroTexts = {
     demoSub: "Quelques questions rapides avant vos résultats. Tout est anonyme.",
     seeResultsBtn: "Voir mes résultats",
     lblAge: "Âge",
+    lblParty: "Parti auquel vous vous identifiez <span>(facultatif)</span>",
     lblGender: "Genre <span>(facultatif)</span>",
     lblNat: "Nationalité <span>(facultatif)</span>",
     optSelect: "Sélectionner...",
@@ -302,6 +305,7 @@ const englishHeroTexts = {
     demoSub: "Unas pocas preguntas rápidas antes de ver tus resultados. Todo es anónimo.",
     seeResultsBtn: "Ver mis resultados",
     lblAge: "Edad",
+    lblParty: "Partido con el que te identificas <span>(opcional)</span>",
     lblGender: "Género <span>(opcional)</span>",
     lblNat: "Nacionalidad <span>(opcional)</span>",
     optSelect: "Seleccionar...",
@@ -361,6 +365,7 @@ const englishHeroTexts = {
     demoSub: "Qualche rapida domanda prima dei tuoi risultati. Tutto è anonimo.",
     seeResultsBtn: "Vedi i miei risultati",
     lblAge: "Età",
+    lblParty: "Partito con cui ti identifichi <span>(opzionale)</span>",
     lblGender: "Genere <span>(opzionale)</span>",
     lblNat: "Nazionalità <span>(opzionale)</span>",
     optSelect: "Seleziona...",
@@ -420,6 +425,7 @@ const englishHeroTexts = {
     demoSub: "Een paar snelle vragen voor je resultaten. Alles is anoniem.",
     seeResultsBtn: "Bekijk mijn resultaten",
     lblAge: "Leeftijd",
+    lblParty: "Partij waarmee je je identificeert <span>(optioneel)</span>",
     lblGender: "Geslacht <span>(optioneel)</span>",
     lblNat: "Nationaliteit <span>(optioneel)</span>",
     optSelect: "Selecteer...",
@@ -479,6 +485,7 @@ const englishHeroTexts = {
     demoSub: "Några snabba frågor innan dina resultat. Allt är anonymt.",
     seeResultsBtn: "Se mina resultat",
     lblAge: "Ålder",
+    lblParty: "Parti du identifierar dig med <span>(valfritt)</span>",
     lblGender: "Kön <span>(valfritt)</span>",
     lblNat: "Nationalitet <span>(valfritt)</span>",
     optSelect: "Välj...",
@@ -538,6 +545,7 @@ const englishHeroTexts = {
     demoSub: "Et par hurtige spørgsmål før dine resultater. Alt er anonymt.",
     seeResultsBtn: "Se mine resultater",
     lblAge: "Alder",
+    lblParty: "Parti du identificerer dig med <span>(valgfrit)</span>",
     lblGender: "Køn <span>(valgfrit)</span>",
     lblNat: "Nationalitet <span>(valgfrit)</span>",
     optSelect: "Vælg...",
@@ -600,6 +608,7 @@ const englishHeroTexts = {
     demoSub: "Noen raske spørsmål før resultatene dine. Alt er anonymt.",
     seeResultsBtn: "Se mine resultater",
     lblAge: "Alder",
+    lblParty: "Parti du identifiserer deg med <span>(valgfritt)</span>",
     lblGender: "Kjønn <span>(valgfritt)</span>",
     lblNat: "Nasjonalitet <span>(valgfritt)</span>",
     optSelect: "Velg...",
@@ -662,6 +671,7 @@ const englishHeroTexts = {
     demoSub: "Muutamia nopeita kysymyksiä ennen tuloksiasi. Kaikki on anonyymiä.",
     seeResultsBtn: "Katso tulokseni",
     lblAge: "Ikä",
+    lblParty: "Puolue, johon samaistut <span>(valinnainen)</span>",
     lblGender: "Sukupuoli <span>(valinnainen)</span>",
     lblNat: "Kansalaisuus <span>(valinnainen)</span>",
     optSelect: "Valitse...",
@@ -925,6 +935,7 @@ function toggleLang() {
   window.currentLang = currentLang;
   applyLang();
   if (document.getElementById('page-test').classList.contains('active')) renderQ();
+  if (document.getElementById('page-results').classList.contains('active') && typeof renderResults === 'function') renderResults();
 }
 
 function t(en, local) { return currentLang === 'en' ? en : local; }
@@ -1062,7 +1073,11 @@ function applyLang() {
   if (lblCountry) lblCountry.innerHTML = strings.lblCountry;
 
   const lblParty = document.getElementById('d-party')?.previousElementSibling;
-  if (lblParty) lblParty.innerHTML = strings.lblParty;
+  if (lblParty && strings.lblParty) lblParty.innerHTML = strings.lblParty;
+
+  if (typeof window.updatePartyPickerLang === 'function') {
+    window.updatePartyPickerLang(currentLang);
+  }
 
   const lblGender = document.getElementById('d-gender')?.previousElementSibling;
   if (lblGender) lblGender.innerHTML = strings.lblGender;
@@ -1084,13 +1099,6 @@ function applyLang() {
     for (let i = 1; i < genderSelect.options.length; i++) {
       if (strings.genderSelectOpts[i - 1]) genderSelect.options[i].textContent = strings.genderSelectOpts[i - 1];
     }
-  }
-
-  const partySelect = document.getElementById('d-party');
-  if (partySelect) {
-    partySelect.options[0].textContent = strings.optPreferNot;
-    const lastOpt = partySelect.options[partySelect.options.length - 1];
-    if (lastOpt) lastOpt.textContent = strings.optInd;
   }
 
   const countrySelect = document.getElementById('d-country') || document.getElementById('d-county');

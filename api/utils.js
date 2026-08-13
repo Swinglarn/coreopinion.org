@@ -158,6 +158,29 @@ function safeJsonForScript(obj) {
     .replace(/[\u2028\u2029]/g, ch => '\\u' + ch.charCodeAt(0).toString(16));
 }
 
+const COUNTRY_NAMES = {
+  en: { us: "United States", uk: "United Kingdom", ca: "Canada", au: "Australia", nz: "New Zealand", de: "Germany", at: "Austria", fr: "France", es: "Spain", it: "Italy", se: "Sweden", ie: "Ireland", nl: "Netherlands", dk: "Denmark", no: "Norway", fi: "Finland" },
+  sv: { us: "USA", uk: "Storbritannien", ca: "Kanada", au: "Australien", nz: "Nya Zeeland", de: "Tyskland", at: "Österrike", fr: "Frankrike", es: "Spanien", it: "Italien", se: "Sverige", ie: "Irland", nl: "Nederländerna", dk: "Danmark", no: "Norge", fi: "Finland" },
+  de: { us: "Vereinigte Staaten", uk: "Großbritannien", ca: "Kanada", au: "Australien", nz: "Neuseeland", de: "Deutschland", at: "Österreich", fr: "Frankreich", es: "Spanien", it: "Italien", se: "Schweden", ie: "Irland", nl: "Niederlande", dk: "Dänemark", no: "Norwegen", fi: "Finnland" },
+  fr: { us: "États-Unis", uk: "Royaume-Uni", ca: "Canada", au: "Australie", nz: "Nouvelle-Zélande", de: "Allemagne", at: "Autriche", fr: "France", es: "Espagne", it: "Italie", se: "Suède", ie: "Irlande", nl: "Pays-Bas", dk: "Danemark", no: "Norvège", fi: "Finlande" },
+  es: { us: "Estados Unidos", uk: "Reino Unido", ca: "Canadá", au: "Australia", nz: "Nueva Zelanda", de: "Alemania", at: "Austria", fr: "Francia", es: "España", it: "Italia", se: "Suecia", ie: "Irlanda", nl: "Países Bajos", dk: "Dinamarca", no: "Noruega", fi: "Finlandia" },
+  it: { us: "Stati Uniti", uk: "Regno Unito", ca: "Canada", au: "Australia", nz: "Nuova Zelanda", de: "Germania", at: "Austria", fr: "Francia", es: "Spagna", it: "Italia", se: "Svezia", ie: "Irlanda", nl: "Paesi Bassi", dk: "Danimarca", no: "Norvegia", fi: "Finlandia" },
+  nl: { us: "Verenigde Staten", uk: "Verenigd Koninkrijk", ca: "Canada", au: "Australië", nz: "Nieuw-Zeeland", de: "Duitsland", at: "Oostenrijk", fr: "Frankrijk", es: "Spanje", it: "Italië", se: "Zweden", ie: "Ierland", nl: "Nederland", dk: "Denemarken", no: "Noorwegen", fi: "Finland" },
+  da: { us: "USA", uk: "Storbritannien", ca: "Canada", au: "Australien", nz: "New Zealand", de: "Tyskland", at: "Østrig", fr: "Frankrig", es: "Spanien", it: "Italien", se: "Sverige", ie: "Irland", nl: "Holland", dk: "Danmark", no: "Norge", fi: "Finland" },
+  no: { us: "USA", uk: "Storbritannia", ca: "Canada", au: "Australia", nz: "New Zealand", de: "Tyskland", at: "Østerrike", fr: "Frankrike", es: "Spania", it: "Italia", se: "Sverige", ie: "Irland", nl: "Nederland", dk: "Danmark", no: "Norge", fi: "Finland" },
+  fi: { us: "Yhdysvallat", uk: "Yhdistynyt kuningaskunta", ca: "Kanada", au: "Australia", nz: "Uusi-Seelanti", de: "Saksa", at: "Itävalta", fr: "Ranska", es: "Espanja", it: "Italia", se: "Ruotsi", ie: "Irlanti", nl: "Alankomaat", dk: "Tanska", no: "Norja", fi: "Suomi" }
+};
+
+function resolveLang(result) {
+  if (!result) return 'en';
+  const bias = result.bias_breakdown;
+  const langCandidate = (bias && bias.__lang) || result.lang;
+  if (langCandidate && ['en', 'de', 'fr', 'es', 'it', 'nl', 'sv', 'da', 'no', 'fi'].includes(langCandidate)) {
+    return langCandidate;
+  }
+  return modeToLang[result.mode] || 'en';
+}
+
 // Clamp a value to a finite number in [min, max], or null.
 function toNumberOrNull(v, min, max) {
   const n = typeof v === 'number' ? v : parseFloat(v);
@@ -197,7 +220,7 @@ function sanitizeResultPayload(payload) {
         biasBreakdown[key] = v; // opaque nested object, never rendered as HTML
       } else if (key === '__overall_bias') {
         biasBreakdown[key] = toNumberOrNull(v, 0, 100) ?? 0;
-      } else if (key === '__gender' || key === '__nationality') {
+      } else if (key === '__gender' || key === '__nationality' || key === '__lang') {
         biasBreakdown[key] = toStringOrNull(v, 64);
       } else {
         // Party score: must be a number, otherwise drop the key entirely.
@@ -205,6 +228,11 @@ function sanitizeResultPayload(payload) {
         if (n !== null) biasBreakdown[key] = n;
       }
     }
+  }
+
+  const langRaw = toStringOrNull(payload.lang || (biasBreakdown && biasBreakdown.__lang), 16);
+  if (biasBreakdown && !biasBreakdown.__lang && langRaw) {
+    biasBreakdown.__lang = langRaw;
   }
 
   const emailRaw = toStringOrNull(payload.email, 254);
@@ -270,6 +298,8 @@ module.exports = {
   supabase,
   nationalityMap,
   modeToLang,
+  COUNTRY_NAMES,
+  resolveLang,
   PROFILES,
   VALID_MODES,
   PUBLIC_RESULT_COLUMNS,

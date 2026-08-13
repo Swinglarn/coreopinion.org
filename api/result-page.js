@@ -1,4 +1,4 @@
-const { supabase, nationalityMap, modeToLang, PROFILES, escapeHtml, safeJsonForScript } = require('./utils');
+const { supabase, nationalityMap, modeToLang, COUNTRY_NAMES, resolveLang, PROFILES, escapeHtml, safeJsonForScript } = require('./utils');
 const fs = require('fs');
 const path = require('path');
 
@@ -54,7 +54,7 @@ module.exports = async function handler(req, res) {
     else if (overallBias <= 85) profileKey = 'weathervane';
     else profileKey = 'mirror';
 
-    const lang = result.mode && modeToLang[result.mode] ? modeToLang[result.mode] : 'en';
+    const lang = resolveLang(result);
     const profile = (PROFILES[lang] && PROFILES[lang][profileKey]) ? PROFILES[lang][profileKey] : PROFILES['en'][profileKey];
     const profileName = `${profile.name} ${profile.icon}`;
 
@@ -68,13 +68,13 @@ module.exports = async function handler(req, res) {
           const config = JSON.parse(fs.readFileSync(countryConfigPath, 'utf8'));
           const partyMeta = config.partyMeta || {};
           const topPartyEntry = Object.entries(biasBreakdown)
-            .filter(([k]) => k !== '__overall_bias' && k !== '__stances' && k !== '__gender' && k !== '__nationality')
+            .filter(([k]) => !k.startsWith('__'))
             .sort((a, b) => b[1] - a[1])[0];
           if (topPartyEntry && partyMeta[topPartyEntry[0]]) {
             const pMeta = partyMeta[topPartyEntry[0]];
             const rawName = pMeta.name;
-            const partyName = typeof rawName === 'object' ? (rawName.en || Object.values(rawName)[0]) : rawName;
-            const countryName = nationalityMap[result.mode] || result.mode.toUpperCase();
+            const partyName = typeof rawName === 'object' ? (rawName[lang] || rawName.en || Object.values(rawName)[0]) : rawName;
+            const countryName = (COUNTRY_NAMES[lang] && COUNTRY_NAMES[lang][result.mode]) || nationalityMap[result.mode] || result.mode.toUpperCase();
             title = `${countryName}: ${Math.round(topPartyEntry[1])}% ${partyName} Alignment`;
             description = `Cognitive Profile: ${profileName} | Framing Bias: ${overallBias}% | Explore my detailed alignment heatmap and compass coordinates!`;
           }

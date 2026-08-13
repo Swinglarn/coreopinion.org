@@ -1,4 +1,4 @@
-const { supabase, nationalityMap, modeToLang, PROFILES } = require('./utils');
+const { supabase, nationalityMap, modeToLang, resolveLang, PROFILES } = require('./utils');
 const { Resvg } = require('@resvg/resvg-js');
 const fs = require('fs');
 const path = require('path');
@@ -33,7 +33,7 @@ module.exports = async function handler(req, res) {
     }
 
     // Determine lang
-    const lang = modeToLang[result.mode] || 'en';
+    const lang = resolveLang(result);
     const tObj = PROFILES[lang] || PROFILES['en'];
 
     // Get cognitive profile key & details
@@ -57,7 +57,7 @@ module.exports = async function handler(req, res) {
           const config = JSON.parse(fs.readFileSync(countryConfigPath, 'utf8'));
           const partyMeta = config.partyMeta || {};
           const topPartyEntry = Object.entries(biasBreakdown)
-            .filter(([k]) => k !== '__overall_bias' && k !== '__stances' && k !== '__gender' && k !== '__nationality')
+            .filter(([k]) => !k.startsWith('__'))
             .sort((a, b) => b[1] - a[1])[0];
           if (topPartyEntry && partyMeta[topPartyEntry[0]]) {
             const pMeta = partyMeta[topPartyEntry[0]];
