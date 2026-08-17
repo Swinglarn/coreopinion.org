@@ -767,6 +767,19 @@ const configFiles = fs.readdirSync(countriesDir).filter(f => f.endsWith('.json')
 
 console.log(`Found ${configFiles.length} country configurations. Starting build...`);
 
+// Fallback "how it works" copy for the English portals. Localised country
+// configs override this via an infoBlocks array of { h, p } objects.
+const DEFAULT_INFO_BLOCKS = [
+  {
+    h: 'Statements, asked twice',
+    p: 'You take a position on sharp political and ideological statements using a six-point agreement scale. Key positions appear twice with opposite framing, once sympathetic and once critical. How much your answer shifts between the two framings becomes your framing bias score.'
+  },
+  {
+    h: 'Alignment, not loyalty',
+    p: "The result shows how closely your answers match each position across all issues, not just the ones you feel strongly about. You might find you align with a party or ideology you didn't expect, or that you're genuinely split between two."
+  }
+];
+
 configFiles.forEach(file => {
   const filePath = path.join(countriesDir, file);
   const config = JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -784,6 +797,26 @@ configFiles.forEach(file => {
   html = html.replace(/\{\{KEYWORDS\}\}/g, config.keywords || '');
   html = html.replace(/\{\{CANONICAL\}\}/g, config.canonical || '');
   html = html.replace(/\{\{NAME\}\}/g, config.name || '');
+  // Hero eyebrow. Localised pages set eyebrowLabel; without it the label read
+  // "<Country> Political Test" in English on top of otherwise translated copy.
+  html = html.replace(
+    /\{\{EYEBROW\}\}/g,
+    config.eyebrowLabel || ((config.name || '') + ' Political Test').trim()
+  );
+  // "How it works" pair above the country context. Localised configs supply
+  // infoBlocks; English portals fall back to the original copy.
+  const infoBlocks = (config.infoBlocks && config.infoBlocks.length)
+    ? config.infoBlocks
+    : DEFAULT_INFO_BLOCKS;
+  html = html.replace(
+    /\{\{INFO_BLOCKS\}\}/g,
+    infoBlocks.map(b =>
+      '    <div class="info-block">\n' +
+      '      <h3>' + b.h + '</h3>\n' +
+      '      <p>' + b.p + '</p>\n' +
+      '    </div>\n'
+    ).join('')
+  );
 
   // Country flag images (WebP). Skip the general test, which has no country.
   const flagCountry = nationalityMap[config.code];

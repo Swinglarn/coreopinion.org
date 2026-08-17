@@ -378,6 +378,83 @@
       return text.split('\n\n').map(function(p) { return '<p>' + p.trim() + '</p>'; }).join('');
     }
 
+    // Five-statement alignment quiz. Mirrors renderIdeologyQuiz() in
+    // prerender.js so the client render matches the static HTML.
+    function quizHTML(d) {
+      if (!d.quiz || !d.quiz.length) return '';
+      var lower = d.name.toLowerCase();
+      var items = d.quiz.map(function(q, i) {
+        return '<li class="quiz-item" data-dir="' + q.dir + '">' +
+            '<p class="quiz-statement">' + q.s + '</p>' +
+            '<div class="quiz-options" role="group" aria-label="Response to statement ' + (i + 1) + '">' +
+              '<button type="button" class="quiz-opt" data-val="1" aria-pressed="false">Agree</button>' +
+              '<button type="button" class="quiz-opt" data-val="0" aria-pressed="false">Neutral</button>' +
+              '<button type="button" class="quiz-opt" data-val="-1" aria-pressed="false">Disagree</button>' +
+            '</div>' +
+          '</li>';
+      }).join('');
+      return '<section id="quiz" class="ideology-quiz">' +
+          '<h2>How close are you to ' + lower + '?</h2>' +
+          '<p class="quiz-intro">' + d.quiz.length + ' statements drawn from the core of ' + lower +
+            '. Answer each one to see how far your instincts track this ideology.</p>' +
+          '<ol class="quiz-list">' + items + '</ol>' +
+          '<p class="quiz-progress" aria-live="polite"><span class="quiz-answered">0</span> of ' + d.quiz.length + ' answered</p>' +
+          '<div class="quiz-result" hidden>' +
+            '<div class="quiz-score"><span class="quiz-pct"></span></div>' +
+            '<p class="quiz-verdict"></p>' +
+            '<a href="/" class="btn-primary" style="text-decoration:none">Take the full test</a>' +
+          '</div>' +
+        '</section>';
+    }
+
+    function quizVerdict(pct, name) {
+      var lower = name.toLowerCase();
+      if (pct >= 80) return 'Strong alignment. The core commitments of ' + lower + ' clearly land with you.';
+      if (pct >= 60) return 'Broad alignment with reservations. You share much of the outlook of ' + lower + ' but not all of it.';
+      if (pct >= 40) return 'Mixed. You agree with ' + lower + ' on some points and part company on others.';
+      if (pct >= 20) return 'Limited alignment. Most of what defines ' + lower + ' does not match your instincts.';
+      return 'Little alignment. Your views run counter to ' + lower + ' on nearly every point.';
+    }
+
+    function initQuiz(d) {
+      var sec = document.getElementById('quiz');
+      if (!sec || !d.quiz || !d.quiz.length) return;
+      var items = sec.querySelectorAll('.quiz-item');
+      var result = sec.querySelector('.quiz-result');
+      var pctEl = sec.querySelector('.quiz-pct');
+      var verdictEl = sec.querySelector('.quiz-verdict');
+      var answeredEl = sec.querySelector('.quiz-answered');
+      var answers = {};
+
+      sec.addEventListener('click', function(e) {
+        var btn = e.target.closest ? e.target.closest('.quiz-opt') : null;
+        if (!btn || !sec.contains(btn)) return;
+        var li = btn.closest('.quiz-item');
+        var idx = Array.prototype.indexOf.call(items, li);
+        if (idx < 0) return;
+
+        Array.prototype.forEach.call(li.querySelectorAll('.quiz-opt'), function(b) {
+          b.classList.remove('selected');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('selected');
+        btn.setAttribute('aria-pressed', 'true');
+
+        answers[idx] = parseInt(btn.getAttribute('data-val'), 10) *
+                       parseInt(li.getAttribute('data-dir'), 10);
+
+        var keys = Object.keys(answers);
+        answeredEl.textContent = keys.length;
+        if (keys.length < items.length) return;
+
+        var score = keys.reduce(function(a, k) { return a + answers[k]; }, 0);
+        var pct = Math.round(((score + items.length) / (items.length * 2)) * 100);
+        pctEl.textContent = pct + '% aligned with ' + d.name.toLowerCase();
+        verdictEl.textContent = quizVerdict(pct, d.name);
+        result.hidden = false;
+      });
+    }
+
     // Render article
     var article = document.getElementById('ideology-article');
     article.innerHTML =
@@ -396,6 +473,7 @@
           '<a href="#economic-policy" class="toc-link">Economic Policy</a>' +
           '<a href="#governance" class="toc-link">Governance and Freedom</a>' +
           '<a href="#compass" class="toc-link">Political Compass Position</a>' +
+          (data.quiz && data.quiz.length ? '<a href="#quiz" class="toc-link">Quick Quiz</a>' : '') +
           '<a href="#notable-figures" class="toc-link">Notable Figures</a>' +
           '<a href="#reading" class="toc-link">Recommended Reading</a>' +
         '</aside>' +
@@ -449,6 +527,8 @@
             '<p class="compass-caption">The highlighted dot shows where ' + data.name.toLowerCase() + ' sits relative to other major political ideologies on the two-axis compass (economic left-right, governance authoritarian-libertarian).</p>' +
           '</section>' +
 
+          quizHTML(data) +
+
           '<section id="notable-figures">' +
             '<h2>Notable Figures in ' + data.name + '</h2>' +
             '<div class="figures-grid">' + figuresHTML + '</div>' +
@@ -474,6 +554,8 @@
           '</section>' +
         '</div>' +
       '</div>';
+
+    initQuiz(data);
 
     // TOC active state on scroll
     var tocLinks = document.querySelectorAll('.toc-link');

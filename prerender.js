@@ -416,6 +416,39 @@ function buildPartyIndex(shell) {
 
 // --- Ideology profile ---------------------------------------------------
 
+/**
+ * Five-statement alignment quiz. Emitted as readable statements so the static
+ * HTML carries the content; the shell script wires up scoring on load.
+ * Ideologies without a `quiz` array (national socialism) render nothing.
+ */
+function renderIdeologyQuiz(data) {
+  if (!data.quiz || !data.quiz.length) return '';
+  const n = data.quiz.length;
+  const lower = esc(data.name.toLowerCase());
+  const items = data.quiz.map((q, i) =>
+    '<li class="quiz-item" data-dir="' + q.dir + '">' +
+      '<p class="quiz-statement">' + esc(q.s) + '</p>' +
+      '<div class="quiz-options" role="group" aria-label="Response to statement ' + (i + 1) + '">' +
+        '<button type="button" class="quiz-opt" data-val="1" aria-pressed="false">Agree</button>' +
+        '<button type="button" class="quiz-opt" data-val="0" aria-pressed="false">Neutral</button>' +
+        '<button type="button" class="quiz-opt" data-val="-1" aria-pressed="false">Disagree</button>' +
+      '</div>' +
+    '</li>'
+  ).join('');
+  return '<section id="quiz" class="ideology-quiz">' +
+      '<h2>How close are you to ' + lower + '?</h2>' +
+      '<p class="quiz-intro">' + n + ' statements drawn from the core of ' + lower +
+        '. Answer each one to see how far your instincts track this ideology.</p>' +
+      '<ol class="quiz-list">' + items + '</ol>' +
+      '<p class="quiz-progress" aria-live="polite"><span class="quiz-answered">0</span> of ' + n + ' answered</p>' +
+      '<div class="quiz-result" hidden>' +
+        '<div class="quiz-score"><span class="quiz-pct"></span></div>' +
+        '<p class="quiz-verdict"></p>' +
+        '<a href="/" class="btn-primary" style="text-decoration:none">Take the full test</a>' +
+      '</div>' +
+    '</section>';
+}
+
 function renderIdeologyArticle(data, key) {
   const figures = (data.figures || []).map(f => {
     let dates = f.born < 0 ? (Math.abs(f.born) + ' BC') : f.born;
@@ -465,6 +498,7 @@ function renderIdeologyArticle(data, key) {
         '<a href="#economic-policy" class="toc-link">Economic Policy</a>' +
         '<a href="#governance" class="toc-link">Governance and Freedom</a>' +
         '<a href="#compass" class="toc-link">Political Compass Position</a>' +
+        (data.quiz && data.quiz.length ? '<a href="#quiz" class="toc-link">Quick Quiz</a>' : '') +
         '<a href="#notable-figures" class="toc-link">Notable Figures</a>' +
         '<a href="#reading" class="toc-link">Recommended Reading</a>' +
       '</aside>' +
@@ -488,6 +522,7 @@ function renderIdeologyArticle(data, key) {
           (data.g >= 0 ? '+' : '') + data.g + '</strong> (' + gWord + ').</p>' +
           '<p class="compass-caption">The highlighted dot shows where ' + esc(data.name.toLowerCase()) + ' sits relative to other major political ideologies on the two-axis compass (economic left-right, governance authoritarian-libertarian).</p>' +
         '</section>' +
+        renderIdeologyQuiz(data) +
         '<section id="notable-figures"><h2>Notable Figures in ' + esc(data.name) + '</h2>' +
           '<div class="figures-grid">' + figures + '</div></section>' +
         '<section id="reading"><h2>Recommended Reading</h2>' +
