@@ -13,6 +13,36 @@ let lastScore = null;
 // 6-point Likert response values (index matches rendered button order)
 const LIKERT_VALUES = [3, 2, 1, -1, -2, -3];
 
+const TOPIC_I18N = {
+  sv: { "Climate": "Klimat", "Culture and identity": "Kultur och identitet", "Defence": "Försvar", "Drug policy": "Narkotikapolitik", "EU": "EU", "Education": "Utbildning", "Energy": "Energi", "Family and equality": "Familj och jämställdhet", "Healthcare": "Sjukvård", "Housing": "Bostäder", "Immigration": "Invandring", "Labour market": "Arbetsmarknad", "Law and order": "Lag och ordning", "Media": "Media", "Monarchy": "Monarki", "Religion": "Religion", "Rural Sweden": "Landsbygden", "Taxes": "Skatter", "Welfare": "Välfärd" },
+  de: { "Climate": "Klima", "Corruption": "Korruption", "Cost of living": "Lebenshaltungskosten", "Crime": "Kriminalität", "Culture and identity": "Kultur und Identität", "Defence": "Verteidigung", "Democracy": "Demokratie", "Drugs": "Drogen", "Economy": "Wirtschaft", "Education": "Bildung", "Energy": "Energie", "Environment and industry": "Umwelt und Industrie", "Europe": "Europa", "Foreign policy": "Außenpolitik", "Housing": "Wohnen", "Identity and rights": "Identität und Rechte", "Immigration": "Zuwanderung", "Media": "Medien", "Neutrality": "Neutralität", "Pensions": "Renten", "Philosophy and values": "Philosophie und Werte", "Privacy": "Privatsphäre", "Religion": "Religion", "Rights": "Rechte", "Tax": "Steuern", "Trade and globalisation": "Handel und Globalisierung", "Transport": "Verkehr", "Welfare": "Sozialstaat", "Work and labour": "Arbeit" },
+  fr: { "Agriculture": "Agriculture", "Climate": "Climat", "Crime": "Criminalité", "Culture and identity": "Culture et identité", "Democracy": "Démocratie", "Drugs": "Drogues", "Economy": "Économie", "Energy": "Énergie", "Europe": "Europe", "Foreign policy": "Politique étrangère", "Housing": "Logement", "Identity and rights": "Identité et droits", "Immigration": "Immigration", "Institutions": "Institutions", "Pensions": "Retraites", "Philosophy and values": "Philosophie et valeurs", "Public services": "Services publics", "Religion": "Religion", "Rights": "Droits", "Secularism": "Laïcité", "Security": "Sécurité", "Tax": "Impôts", "Trade and globalisation": "Commerce et mondialisation", "Welfare": "Protection sociale", "Work and labour": "Travail" },
+  es: { "Agriculture": "Agricultura", "Climate": "Clima", "Crime": "Delincuencia", "Culture and identity": "Cultura e identidad", "Defence": "Defensa", "Democracy": "Democracia", "Drugs": "Drogas", "Economy": "Economía", "Environment and industry": "Medio ambiente e industria", "Europe": "Europa", "Foreign policy": "Política exterior", "Gender": "Género", "Healthcare": "Sanidad", "Historical memory": "Memoria histórica", "Housing": "Vivienda", "Identity and rights": "Identidad y derechos", "Immigration": "Inmigración", "Media": "Medios", "Monarchy": "Monarquía", "Pensions": "Pensiones", "Philosophy and values": "Filosofía y valores", "Religion": "Religión", "Rights": "Derechos", "Tax": "Impuestos", "Territorial unity": "Unidad territorial", "Welfare": "Estado del bienestar", "Work and labour": "Trabajo" },
+  it: { "Citizenship": "Cittadinanza", "Climate": "Clima", "Crime": "Criminalità", "Culture and identity": "Cultura e identità", "Defence": "Difesa", "Drugs": "Droghe", "Economy": "Economia", "Environment and industry": "Ambiente e industria", "Europe": "Europa", "Foreign policy": "Politica estera", "Healthcare": "Sanità", "History": "Storia", "Housing": "Casa", "Identity and rights": "Identità e diritti", "Immigration": "Immigrazione", "Institutions": "Istituzioni", "Justice": "Giustizia", "Media": "Media", "Philosophy and values": "Filosofia e valori", "Regions": "Regioni", "Religion": "Religione", "Rights": "Diritti", "South": "Mezzogiorno", "Tax": "Tasse", "Trade and globalisation": "Commercio e globalizzazione", "Welfare": "Welfare", "Work and labour": "Lavoro" },
+  nl: { "Agriculture": "Landbouw", "Climate": "Klimaat", "Cost of living": "Kosten van levensonderhoud", "Crime": "Criminaliteit", "Culture and identity": "Cultuur en identiteit", "Defence": "Defensie", "Democracy": "Democratie", "Drugs": "Drugs", "Economy": "Economie", "Energy": "Energie", "Environment and industry": "Milieu en industrie", "Europe": "Europa", "Governance": "Bestuur", "Groningen": "Groningen", "Healthcare": "Zorg", "Housing": "Wonen", "Identity and rights": "Identiteit en rechten", "Immigration": "Immigratie", "Media": "Media", "Nexit": "Nexit", "Pensions": "Pensioenen", "Philosophy and values": "Filosofie en waarden", "Religion": "Religie", "Rights": "Rechten", "Tax": "Belastingen", "Trade and globalisation": "Handel en globalisering", "Welfare": "Sociale zekerheid", "Work and labour": "Werk" },
+  da: { "Business": "Erhvervsliv", "Climate": "Klima", "Crime": "Kriminalitet", "Culture and identity": "Kultur og identitet", "Defence": "Forsvar", "Democracy": "Demokrati", "Drugs": "Narkotika", "Economy": "Økonomi", "Environment and industry": "Miljø og industri", "Europe": "Europa", "Foreign policy": "Udenrigspolitik", "Healthcare": "Sundhed", "Housing": "Boliger", "Identity and rights": "Identitet og rettigheder", "Immigration": "Indvandring", "Labour market": "Arbejdsmarked", "Media": "Medier", "Pensions": "Pension", "Philosophy and values": "Filosofi og værdier", "Religion": "Religion", "Rights": "Rettigheder", "Tax": "Skat", "Trade and globalisation": "Handel og globalisering", "Welfare": "Velfærd", "Work and labour": "Arbejde" },
+  no: { "Alcohol": "Alkohol", "Business": "Næringsliv", "Climate": "Klima", "Cost of living": "Levekostnader", "Crime": "Kriminalitet", "Culture and identity": "Kultur og identitet", "Defence": "Forsvar", "Democracy": "Demokrati", "Districts": "Distriktene", "Drugs": "Narkotika", "Education": "Utdanning", "Electricity": "Strøm", "Energy": "Energi", "Environment and industry": "Miljø og industri", "Europe": "Europa", "Healthcare": "Helse", "Housing": "Bolig", "Identity and rights": "Identitet og rettigheter", "Immigration": "Innvandring", "Media": "Medier", "Philosophy and values": "Filosofi og verdier", "Predators": "Rovdyr", "Religion": "Religion", "Rights": "Rettigheter", "Sami": "Samiske spørsmål", "Tax": "Skatt", "Tolls": "Bompenger", "Trade and globalisation": "Handel og globalisering", "Welfare": "Velferd", "Work and labour": "Arbeid" },
+  fi: { "Alcohol": "Alkoholi", "Business": "Elinkeinoelämä", "Climate": "Ilmasto", "Crime": "Rikollisuus", "Culture and identity": "Kulttuuri ja identiteetti", "Defence": "Puolustus", "Democracy": "Demokratia", "Drugs": "Huumeet", "Economy": "Talous", "Education": "Koulutus", "Environment and industry": "Ympäristö ja teollisuus", "Europe": "Eurooppa", "Healthcare": "Terveydenhuolto", "Identity and rights": "Identiteetti ja oikeudet", "Immigration": "Maahanmuutto", "Labour market": "Työmarkkinat", "Language": "Kieli", "Media": "Media", "Philosophy and values": "Filosofia ja arvot", "Racism": "Rasismi", "Regions": "Alueet", "Religion": "Uskonto", "Rights": "Oikeudet", "Russia": "Venäjä", "Tax": "Verot", "Trade and globalisation": "Kauppa ja globalisaatio", "Welfare": "Hyvinvointi" },
+};
+
+// Runtime map from node code -> its human topic label (nl), built from BANK
+let NODE_TO_NL = null;
+function buildNodeToNl() {
+  NODE_TO_NL = {};
+  if (typeof BANK === 'undefined' || !Array.isArray(BANK)) return;
+  BANK.forEach(q => { if (q && q.node && q.nl && !NODE_TO_NL[q.node]) NODE_TO_NL[q.node] = q.nl; });
+}
+// Localise a topic label or node code for display (falls back to the input)
+window.topicDisplay = function(key, lang) {
+  if (key == null) return '';
+  lang = lang || window.currentLang || 'en';
+  if (NODE_TO_NL === null) buildNodeToNl();
+  const label = (NODE_TO_NL && NODE_TO_NL[key]) ? NODE_TO_NL[key] : key;
+  const dict = TOPIC_I18N[lang];
+  return (dict && dict[label]) ? dict[label] : label;
+};
+
+
 function isLikertQ(q) { return q && q.type === 'l'; }
 function isLikertBank(bank) { return Array.isArray(bank) && bank.length > 0 && bank[0].type === 'l'; }
 
@@ -1914,7 +1944,7 @@ window.renderResults = function() {
       
       row.style.cssText = 'display:flex;align-items:center;gap:16px;cursor:pointer;padding:8px 12px;border-radius:6px;transition:all 0.2s;';
       row.innerHTML = `
-        <div style="font-size:13px;color:var(--ink-soft);min-width:180px;font-weight:400">${topic}</div>
+        <div style="font-size:13px;color:var(--ink-soft);min-width:180px;font-weight:400">${window.topicDisplay ? window.topicDisplay(topic, lang) : topic}</div>
         <div style="flex:1;height:6px;background:var(--parchment-warm);border-radius:3px;overflow:hidden">
           <div style="height:100%;width:0%;background:${color};border-radius:3px;transition:width 1.1s cubic-bezier(0.22,1,0.36,1)" data-w="${scoreVal}%"></div>
         </div>
@@ -1986,7 +2016,7 @@ window.showBiasFaceoff = function(topic) {
   const skippedText = tObj.skippedText;
   const noPairsText = tObj.noPairsText;
 
-  let html = `<div style="font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink);margin-bottom:16px;">🔍 ${faceoffHeader}: ${topic}</div>`;
+  let html = `<div style="font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink);margin-bottom:16px;">🔍 ${faceoffHeader}: ${window.topicDisplay ? window.topicDisplay(topic, lang) : topic}</div>`;
   let hasPairs = false;
 
   Object.entries(pairs).forEach(([pairId, qsInPair]) => {
@@ -2782,7 +2812,7 @@ window.renderTopicHeatmap = function(stances) {
     
     const nameDiv = document.createElement('div');
     nameDiv.className = 'topic-heatmap-name';
-    nameDiv.textContent = topic;
+    nameDiv.textContent = window.topicDisplay ? window.topicDisplay(topic, lang) : topic;
     item.appendChild(nameDiv);
     
     if (stance.e !== null) {
