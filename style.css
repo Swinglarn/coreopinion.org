@@ -2865,6 +2865,23 @@ body:has(#flags-grid) .content-shell {
   line-height: 1.6;
   max-width: 680px;
 }
+.article-byline {
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink-muted);
+  opacity: 0.85;
+}
+.article-byline a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s;
+}
+.article-byline a:hover {
+  color: var(--ink);
+}
 .ideology-icon-badge {
   display: inline-flex;
   align-items: center;

@@ -112,6 +112,12 @@ function applyMeta(html, { title, desc, keywords, url }) {
   return html;
 }
 
+// Visible attribution on every generated guide. Points at the editorial
+// standards section of /about so each page is tied to a stated policy on
+// sourcing, neutrality and corrections.
+const BYLINE = '<p class="article-byline">Written and reviewed by the '
+  + '<a href="/about#editorial-standards">CoreOpinion editorial team</a></p>';
+
 const WEBSITE_NODE = {
   '@type': 'WebSite',
   '@id': SITE + '/#website',
@@ -204,6 +210,7 @@ function renderPartyArticle(data) {
       '<div class="ideology-icon-badge" style="background:' + esc(data.color) + '20; color:' + esc(data.color) + '">' + esc(data.position) + '</div>' +
       '<h1>' + esc(data.name) + '</h1>' +
       '<p class="ideology-subtitle">' + esc(data.metaDesc) + '</p>' +
+      BYLINE +
     '</header>' +
     '<div class="ideology-layout">' +
       '<aside class="toc" id="toc">' +
@@ -488,6 +495,7 @@ function renderIdeologyArticle(data, key) {
       '<div class="ideology-icon-badge" style="background:' + esc(data.color) + '20; color:' + esc(data.color) + '">' + data.icon + ' ' + esc(data.quadrant) + '</div>' +
       '<h1>' + esc(data.name) + '</h1>' +
       '<p class="ideology-subtitle">' + esc(data.metaDesc) + '</p>' +
+      BYLINE +
     '</header>' +
     '<div class="ideology-layout">' +
       '<aside class="toc" id="toc">' +
@@ -620,13 +628,12 @@ function buildIdeologyIndex(shell) {
   return setArticle(html, article);
 }
 
-// --- Affiliate grids (books, flags) -------------------------------------
+// --- Affiliate grid (books) ---------------------------------------------
 //
-// books.html and flags.html ship an empty grid div that the client fills from
-// books-data.js / flags-data.js. Left alone they are thin affiliate pages with
-// roughly 140 words of real text. We seed the default (US) region server-side
-// so the descriptions are in the HTML; the client still re-renders on load and
-// swaps in the reader's regional store.
+// books.html ships an empty grid div that the client fills from books-data.js.
+// We seed the default (US) region server-side so the descriptions are in the
+// HTML; the client still re-renders on load and swaps in the reader's regional
+// store.
 
 function fmtYear(y) { return y < 0 ? Math.abs(y) + ' BC' : String(y); }
 
@@ -665,21 +672,6 @@ function prerenderBooks() {
   return seedGrid('books.html', 'books-grid', cards);
 }
 
-function prerenderFlags() {
-  const { FLAGS_DATA } = loadGlobals('flags-data.js', ['FLAGS_DATA']);
-  if (!FLAGS_DATA) return false;
-  const cards = FLAGS_DATA.map(f => {
-    const link = affiliateLink(f, f.name);
-    return '<a href="' + esc(link) + '" target="_blank" rel="noopener noreferrer sponsored" class="book-card flag-card">' +
-      '<div class="flag-cover-wrap"><img src="/images/flags/' + esc(f.code) + '.webp" alt="' + esc(f.name) + '" loading="lazy"></div>' +
-      '<div class="book-info">' +
-        '<h3 class="book-title">' + esc(f.name) + '</h3>' +
-        '<p class="book-desc">' + esc(f.description) + '</p>' +
-        '<span class="book-cta">View on Amazon</span>' +
-      '</div></a>';
-  }).join('');
-  return seedGrid('flags.html', 'flags-grid', cards);
-}
 
 // --- Run ----------------------------------------------------------------
 
@@ -712,7 +704,6 @@ function main() {
   count++;
 
   if (prerenderBooks()) count++;
-  if (prerenderFlags()) count++;
 
   console.log(`Prerendered ${count} pages (${Object.keys(PARTY_DATA).length} parties, ` +
     `${Object.keys(PARTY_COUNTRIES).length} country hubs, ${Object.keys(IDEOLOGY_DATA).length} ideologies, 3 index pages).`);
